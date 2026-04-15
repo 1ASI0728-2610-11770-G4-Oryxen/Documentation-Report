@@ -9,7 +9,7 @@
 
 <p align="center">
     <strong>"Informe del Trabajo Final"</strong><br>
-    <br><strong>Startup: </strong><br>
+    <br><strong>Startup: GrassFarming</strong><br>
     <br><strong>Producto: Oryxen</strong><br><br>
 </p>
 
@@ -116,14 +116,14 @@ URL de la organización del proyecto:
 - [4.1. Strategic-Level Attribute-Driven Design](#41-strategic-level-attribute-driven-design)  
     - [4.1.1. Design Purpose.](#411-design-purpose)  
     - [4.1.2. Attribute-Driven Design Inputs](#412-attribute-driven-design-inputs)  
-        - [4.1.2.1. Primary Functionality (Primary User Stories)](#4121-primary-functionality)  
-        - [4.1.2.2. Quality attribute Scenarios](#4122-quality-attribute-scenario)  
+        - [4.1.2.1. Primary Functionality (Primary User Stories)](#4121-primary-functionality-primary-user-stories)  
+        - [4.1.2.2. Quality attribute Scenarios](#4122-quality-attribute-scenarios)  
         - [4.1.2.3. Constraints](#4123-constraints)  
         - [4.1.3. Architectural Drivers Backlog](#413-architectural-drivers-backlog)  
         - [4.1.4. Architectural Design Decisions](#414-architectural-design-decisions)  
         - [4.1.5. Quality Attribute Scenario Refinements](#415-quality-attribute-scenario-refinements)  
-- [4.2. Strategic-Level Domain-Driven Design.](#42-strategic-level-domain-driven-design)  
-    - [4.2.1. EventStorming.](#421-eventstorming)  
+- [4.2. Strategic-Level Domain-Driven Design](#42-strategic-level-domain-driven-design)  
+    - [4.2.1. EventStorming](#421-eventstorming)  
     - [4.2.2. Candidate Context Discovery](#422-candidate-context-discovery)  
     - [4.2.3. Domain Message Flows Modeling](#423-domain-message-flows-modeling)  
     - [4.2.4. Bounded Context Canvases](#424-bounded-context-canvases)  
