@@ -1,5 +1,5 @@
 <div align="center">    
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png"></img><br><strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
+    <img src="./assets/logo-upc.png" alt="Logo UPC" width="200" height="200"></img><br><strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
     <br><p>Ingeniería de Software</p>
     <p>8vo Ciclo</p>
     <br><strong>Arquitecturas de Software Emergentes</strong><br>
