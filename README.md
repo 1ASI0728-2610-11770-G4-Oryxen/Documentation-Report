@@ -180,6 +180,9 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
+| Integrante | Descripción | Conocimientos |
+| ---------- | ----------- | ------------- |
+| **Pedro Jesús Nanfuñay Liza - u202215462** <img src="./assets/Chapter-1/Perfil_PedroNanfuñay.jpeg"> | Mi nombre es Pedro Jesús Nanfuñay Liza, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Me considero una persona creativa, responsable, perseverante y siempre dispuesto a trabajar en equipo. Espero aportar de manera positiva al equipo y cumplir con los objetivos establecidos. | Tengo conocimientos en lenguajes de programación como C++, Java y Python; en el desarrollo web con frameworks Angular y Primevue, y en base de datos relacionales y no relacionales como SQL y MongoDB. |
 
 ## 1.2. Solution Profile
 
