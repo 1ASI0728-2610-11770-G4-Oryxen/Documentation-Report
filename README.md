@@ -286,6 +286,7 @@ Cuando al menos el 50% de los usuarios interactúe con el chatbot y más del 75%
 
 #### 1.2.2.4. Lean UX Canvas
 
+![LeanUXCanvas-Oryxen](./assets/Chapter-1/LeanUXCanvas-Oryxen.png)
 
 ## 1.3. Segmentos Objetivo
 
