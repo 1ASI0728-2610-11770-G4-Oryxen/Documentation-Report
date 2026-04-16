@@ -263,6 +263,27 @@ Estas suposiciones de alta prioridad serán las primeras en validarse mediante e
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
+- **Hypothesis Statement 01:** <br>
+Creemos que los usuarios amantes de la jardinería con agendas ocupadas y los adultos mayores buscan una forma simple de mantener sus plantas saludables sin depender del riego manual.
+Sabremos que esto es cierto al medir la frecuencia con la que usan la app para revisar el estado de sus plantas.
+Cuando al menos el 60% de los usuarios activos consulte la plataforma 3 veces por semana o más durante el primer mes.
+
+- **Hypothesis Statement 02:** <br>
+Creemos que la automatización del riego reducirá significativamente la cantidad de plantas muertas en comparación con el cuidado manual.
+Sabremos que esto es cierto al comparar el número de plantas marchitas o muertas antes y después de usar la solución.
+Cuando los usuarios reporten una reducción de al menos 30% en plantas perdidas en los primeros 3 meses.
+
+- **Hypothesis Statement 03:** <br>
+Creemos que los usuarios valorarán una interfaz donde puedan ver el estado de todas sus plantas en un solo lugar.
+Sabremos que esto es cierto al analizar las ocasiones y el tiempo en el que permanecen los usuarios dentro de la aplicación.
+Cuando al menos el 70% de los usuarios activos utilice la pantalla de resumen de plantas y la califique como útil.
+
+- **Hypothesis Statement 04:** <br>
+Creemos que un chatbot con IA aumentará la confianza del usuario al brindar recomendaciones claras y oportunas sobre el cuidado de sus plantas.
+Sabremos que esto es cierto al analizar el uso del chatbot y la satisfacción percibida por los usuarios.
+Cuando al menos el 50% de los usuarios interactúe con el chatbot y más del 75% declare que sus recomendaciones fueron útiles.
+
+
 #### 1.2.2.4. Lean UX Canvas
 
 
