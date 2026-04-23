@@ -849,6 +849,11 @@ Al cierre de la sesión, se evalúan los logros alcanzados:
 # Capítulo III: Requirements Specification
 
 ## 3.1. To-be Scenario Mapping
+To-Be Scenario Map 1- Segmento de : Personas Ocupadas
+[![To-be-mapping-1.jpg](https://i.postimg.cc/qBzFHd9w/To-be-mapping-1.jpg)](https://postimg.cc/grbs31cL)
+
+To-Be Scenario Map 2- Segmento de : Aficionados
+[![To-be-mapping-2.jpg](https://i.postimg.cc/13cF8k1v/To-be-mapping-2.jpg)](https://postimg.cc/sMxx80XW)
 
 ## 3.2 User Stories
 
