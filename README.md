@@ -25,7 +25,7 @@
         </tr>
         <tr>
             <td style="text-align:center;">Estrada Cajamune, Abraham Andrés</td>
-            <td style="text-align:center;">U</td>
+            <td style="text-align:center;">U202112164</td>
         </tr>
         <tr>
             <td style="text-align:center;">Nanfuñay Liza, Pedro Jesús</td>
