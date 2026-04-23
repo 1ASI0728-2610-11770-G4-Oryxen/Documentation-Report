@@ -599,7 +599,41 @@ Objetivo: descubrir su nivel de compromiso, el detalle con el que cuidan sus pla
 
 ### 2.2.2. Registro de entrevistas
 
-*Sección en desarrollo. Los registros completos de las entrevistas (grabaciones, transcripciones y fichas individuales de cada entrevistado) se incorporarán en la siguiente entrega.*
+#### Segmento 1: Personas ocupadas
+
+#### Segmento 2: Aficionados a la jardinería
+
+**Entrevista 1:**
+
+- Nombres y apellidos: Renzo Fabricio Abad La Torre
+- Edad: 21 años
+- Distrito de residencia: Comas, Lima
+- Ocupación: Estudiante universitario
+- Estado civil: Soltero
+- Composición familiar: Vive con sus padres
+- Inicio de la entrevista: 0:03
+- Fin de la entrevista: 4:23
+
+**Registro visual de la entrevista:**
+
+![Evidencia-Entrevista1-Segmento2](/assets/Chapter-2/Evidencia-Entrevista1-Segmento2.png)
+
+**Resumen descriptivo de la entrevista:**
+
+El entrevistado, Renzo Fabricio Abad La Torre , es un estudiante universitario que nos comparte su afición hacia el cuidado de plantas. Él nos comenta el proceso por el que pasa para cuidar de manera correcta de sus plantas de interiores, contanto actualmente con 10 de este tipo, que aunque sea de su agrado, considera que le toma más tiempo del que le gustaría.
+
+En relación al cuidado de sus plantas, indica que riegua un aprox de 3-4 veces al día. Así mismo, considera que el mayor reto que enfrenta es encontrar un lugar idóneo para el crecimiento de sus plantas y monitorear su salud manualmente. Además, indica que tuvo plantas que se marchitaron debido al descuido por atender sus demás responsabilidades.
+
+Respecto al seguimiento de cuidado de plantas, considera que sería una útil para él una aplicación que lo apoye en este proceso a través de una interfaz general para que sea más sencillo y rápido leer la información. Así mismo, considera que herramientas como los sensores impulsados con IAs son herramientas muy útiles y confía en este tipo de herramientas. Por lo que estaría dispuesto a considerar el punto de vista de la IA. Estos datos nos indican que tiene interés en este tipo de herramientas y en nuestra solución.
+
+**Características identificadas a partir de la entrevista:**
+
+- Practica el cuidado de plantas como hobby.
+- Mantiene un cuidado manual para sus plantas de interiores.
+- Ha experimentado dificultades para monitorear la salud de sus plantas.
+- Busca optimizar el proceso de cuidado para que sea más sencillo y rápido.
+- Valora herramientas impulsadas con IA.
+- Considera importante la simplicidad y diseño de en una aplicación.
 
 ### 2.2.3. Análisis de entrevistas
 
