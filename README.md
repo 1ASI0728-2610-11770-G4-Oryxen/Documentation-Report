@@ -947,8 +947,27 @@ To-Be Scenario Map 2- Segmento de : Aficionados
 
 <div style="page-break-after: always;"></div>
 
-
 ## 3.3 Impact Mapping
+
+### Segmento 1: Personas ocupadas
+
+Para el segmento de este usuario se elaboró un Impact Mapping con el objetivo de aumentar la participación activa en la plataforma y reducir la incertidumbre sobre el cuidado de las plantas. Esta herramienta nos permitió identificar los comportamientos clave que se desean promover en los usuarios, como consultar el estado de la humedad y configurar recordatorios automáticos de riego. A partir de ello, se definieron deliverables y user stories que guían el desarrollo de funcionalidades útiles y alineadas con las necesidades reales de los jóvenes universitarios que buscan mantener sus plantas sanas pese a su rutina ocupada.
+
+**Enlace para visualizar el Impact Map en UXPressia:**
+[https://uxpressia.com/w/KPfTT/i/OYO5E](https://uxpressia.com/w/KPfTT/i/OYO5E)
+
+[![Paolo-Loayza-4.png](https://i.postimg.cc/yYZ1fn4M/Paolo-Loayza-4.png)](https://postimg.cc/qzpHqs7w)
+
+### Segmento 2: Aficionados 
+
+Para el segmento del usuario aficionado se elaboró un Impact Mapping con el objetivo de incrementar el control sobre el cuidado de múltiples plantas y reducir la pérdida de macetas por riego inadecuado. Esta herramienta permitió identificar los comportamientos clave que se desean promover en los usuarios, como registrar cada planta en la plataforma y consultar el historial de riego y humedad. A partir de ello, se definieron deliverables y user stories que guían el desarrollo de funcionalidades prácticas y alineadas con las necesidades reales de personas que ven en el cuidado de plantas un pasatiempo y una fuente de satisfacción personal.
+
+**Enlace para visualizar el Impact Map en UXPressia:**
+[https://uxpressia.com/w/KPfTT/i/ZTr9f](https://uxpressia.com/w/KPfTT/i/ZTr9f)
+
+[![Luz-Ramos-4.png](https://i.postimg.cc/TPXJykff/Luz-Ramos-4.png)](https://postimg.cc/WdXkCwdH)
+
+<div style="page-break-after: always;"></div>
 
 ## 3.4. Product Backlog
 
