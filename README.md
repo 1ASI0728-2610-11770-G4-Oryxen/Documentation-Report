@@ -232,7 +232,27 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 ## 4.1.	Strategic-Level Attribute-Driven Design
 
+En esta sección, se evidencia la aplicación del método Attribute-Driven Design (ADD) para la arquitectura de la solución. Este proceso sistemático permite diseñar una arquitectura de software centrada en la satisfacción de los requisitos de calidad y los objetivos comerciales.
+
 ### 4.1.1. Design Purpose
+
+El propósito de diseño de esta arquitectura es transformar la interacción tradicional entre las personas y el cuidado de la naturaleza a través de la tecnología. Buscando resolver la problemática de la alta tasa de mortalidad de plantas domésticas en entornos urbanos, donde la falta de tiempo y de conocimiento técnico son los principales causantes.
+
+A continuación, se detallan los ejes centrales que orientan este proceso de diseño:
+
+**Facilitar una Experiencia de Usuario Intuitiva y Natural** <br>
+El diseño busca ofrecer una plataforma tecnológica que sea tan simple de usar como regar una maceta. Nos enfocamos en eliminar barreras técnicas como la vinculación de sensores mediante códigos QR y la interpretación de datos de telemetría sin usar tecnicismos complejos. El objetivo central es permitir que cualquier persona comprenda y sienta que tiene el control total del estado de sus plantas desde cualquier dispositivo.
+
+**Automatización Inteligente para Aumentar la Productividad** <br>
+El diseño arquitectónico busca que el sistema sea lo suficientemente inteligente para actuar por su cuenta y mandar avisos al usuario cuando sea necesario. Al automatizar tareas críticas como el riego basado en umbrales de humedad y la predicción climática, el sistema garantiza una mayor eficiencia, asegurando que los recursos (como el agua y fertilizantes) se utilicen de manera óptima, reduciendo el esfuerzo manual y minimizando el error humano.
+
+**Soluciones pensadas para el usuario y para el negocio** <br>
+La arquitectura está diseñada para ser flexible y escalar junto con las necesidades de nuestros usuarios, tomando en cuenta nuestros dos segmentos objetivos identificados:
+
+- **Segmento Objetivo 1 - Personas Ocupadas:** Enfocado en soluciones eficientes y la autonomía (riego automático y alertas críticas).
+- **Segmento Objetivo 2 - Aficionados a la jardinería:** Enfocado en analizar datos y gráficos, y ofrecer un aprendizaje contínuo a través de un asistente que permita aplicar los conocimientos y acciones recomendadas en sus plantas.
+
+Desde la perspectiva del negocio, el diseño permite un modelo de crecimiento modular, facilitando la integración de nuevas especies en el catálogo botánico y la monetización a través de servicios premium (analítica avanzada y reportes), garantizando así la viabilidad técnica y comercial de la solución.
 
 ### 4.1.2. Attribute-Driven Design Inputs
 
