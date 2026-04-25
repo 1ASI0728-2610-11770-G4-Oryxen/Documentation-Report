@@ -256,9 +256,44 @@ Desde la perspectiva del negocio, el diseño permite un modelo de crecimiento mo
 
 ### 4.1.2. Attribute-Driven Design Inputs
 
+En esta sección, identificamos los puntos críticos que tienen mayor relevancia y que guiarán el proceso de diseño. Estos se dividen en la funcionalidad primaria (lo que el sistema debe hacer), los atributos de calidad (cómo de bien debe hacerlo) y las restricciones técnicas (los límites dentro de los cuales debemos operar).
+
 #### 4.1.2.1. Primary Functionality (Primary User Stories)
 
+- Vinculación simplificada de dispositivo (US-042): Esta funcionalidad es el punto de entrada al ecosistema IoT. Técnicamente, nos obliga a diseñar un servicio de aprovisionamiento capaz de validar identidades únicas (IDs de sensores) y mapearlas de forma segura a perfiles de plantas específicos. La arquitectura debe garantizar que esta "llave de entrada" sea infalible y que la relación entre el hardware físico y el gemelo digital en la nube sea consistente desde el primer segundo.
+
+- Recepción de datos en tiempo real (US-044): Monitorear una planta cada 30 segundos parece sencillo, pero cuando multiplicamos esto por miles de usuarios, nos enfrentamos a un reto de ingesta masiva de datos. Esta historia impacta la arquitectura al exigir un protocolo de comunicación ligero (como MQTT) y un backend capaz de procesar flujos de telemetría constantes sin latencia, asegurando que lo que el usuario ve en su pantalla sea el estado actual de su planta y no una foto del pasado.
+
+- Alertas con diagnóstico integrado e IA (US-036): Aquí es donde el sistema deja de ser un termómetro y se convierte en un experto. Esta historia obliga a la arquitectura a integrar un "motor de reglas" y servicios de inferencia de Inteligencia Artificial. El sistema no solo debe enviar una notificación, sino que debe consultar simultáneamente variables históricas, condiciones climáticas actuales y modelos de visión artificial para ofrecer un diagnóstico. Esto impacta directamente en cómo se interconectan los microservicios de notificación con los de analítica.
+
+- Gestión de Riego Autónomo (US-051): Al ser una solución que busca la autonomía total, esta historia define la comunicación bidireccional. La arquitectura no solo debe recibir datos, sino también "hablar" de vuelta al hardware para accionar bombas de agua. Esto introduce la necesidad de un sistema de alta disponibilidad: si el servicio de riego falla o pierde conexión, la lógica de seguridad debe estar integrada tanto en la nube como en el dispositivo físico (Edge Computing).
+
 #### 4.1.2.2. Quality attribute Scenarios
+
+| ID | Atributo | Fuente | Estímulo | Artefacto | Entorno | Respuesta | Medida |
+| -- | -------- | ------ | -------- | --------- | ------- | --------- | ------ |
+| QA-01 | Disponibilidad | Sensor IoT | Pérdida de conexión Wi-Fi o fallo de energía | Backend | Operación normal del sistema | El sistema detecta la pérdida de conexión y notifica al usuario del estado offline. | Notificación enviada en menos de 60 segundos tras la pérdida de señal. |
+| QA-02 | Rendimiento | Sensores del sistema | Servicio de captura y transmisión de datos de múltiples usuarios | Message Broker (MQTT) | Carga pico de usuarios activos | El sistema procesa las lecturas y actualiza los dashboards en tiempo real sin bloquear el hilo principal. | Latencia menor a 2 segundos desde el sensor físico hasta la aplicación. |
+| QA-03 | Seguridad | Usuario final | Carga de fotografía a la comunidad | Microservicio de procesamiento de imágenes | Sesión activa de usuario | El sistema analiza la imagen y elimina metadatos EXIF y coordenadas GPS automáticamente. | 100% de las fotos publicadas deben haber eliminado datos sensibles antes de que la imagen sea pública. |
+| QA-04 | Usabilidad | Usuario nuevo | Vinculación de un nuevo sensor mediante código QR | Interfaz de usuario (App Móvil) o Servicio de Registro | Proceso de configuración inicial | El sistema reconoce el hardware, valida su identidad y completa el registro de la planta. | El proceso completo de vinculación debe completarse en menos de 30 segundos por el 95% de los usuarios. |
+| QA-05 | Confiabilidad | Motor de Reglas IA | Decisión de riego automático basada en sensores | Actuador (Bomba de agua) | Operación autónoma | El sistema ejecuta el riego solo si los datos son consistentes y el clima lo permite. | 0 incidencias de riego accidental por fallos de lógica o lecturas erróneas de sensores. |
+
+
+- **QA-01:**
+En un sistema de cuidado de plantas, este debe ser capaz de detectar cuando un dispositivo pierde conexión. Esto garantiza que el usuario reciba una alerta en menos de 60 segundos que indica que debe intervenir manualmente en dicha maceta.
+
+- **QA-02:**
+La experiencia de flujo de datos de los sensores hasta la pltaforma debe ser constante. Por lo que, nuestra arquitectura debe soportar gran cantidades de datos de múltiples sensores simultáneamente, manteniendo una respuesta visual en la aplicación menor a 2 segundos.
+
+- **QA-03:**
+Al permitir que los usuarios compartan fotos de sus plantas, el sistema debe garantizar que ninguna imagen contenga información confidencial como coordenadas GPS o información del dispostivio que pueda vulnerar la seguridad del usuario.
+
+- **QA-04:**
+Al utilizar tecnologías IoT, debemos simplificar el proceso de su uso para que cualquier usuario pueda entender como funciona y darle el uso que necesite, como el monitoreo de sus plantas.
+
+- **QA-05:**
+Al automatizar procesos de cuidado como el riego impulsado por una IA, la precisión de estas acciones deben ser altas. Por lo que, el sistema debe
+Cuando le delegamos a una IA la decisión de regar, la precisión es cruzar las lecturas del sensor de humedad con el pronóstico del clima (API meteorológica) para evitar excesos de agua. Evitando errores de ejecución y asegurando la autonomía del servicio.
 
 #### 4.1.2.3. Constraints
 
