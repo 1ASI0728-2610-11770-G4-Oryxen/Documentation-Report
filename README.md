@@ -318,19 +318,19 @@ Los diagramas de arquitectura de software nos ayudan a plantear el sistema de nu
 
 Este diagrama representa todos los actores y sistemas del ecosistema Oryxen en un solo nivel: usuarios, Oryxen, servicios externos (Google OAuth2, Stripe), y el dispositivo IoT.
 
-![LandscapeDiagram.png](../assets/C4-landscape.png)
+![LandscapeDiagram.png](assets/C4-landscape.png)
 
 ### 4.3.2.	Software Architecture Context Level Diagrams
 
 Este diagrama muestra el sistema Oryxen en su entorno, destacando las interacciones con los distintos usuarios (profesionales ocupados, aficionados y desarrolladores), los servicios externos (Google OAuth2 y Plants API) y el dispositivo IoT.
 
-![ContextDiagram.png](../assets/C4-context.png)
+![ContextDiagram.png](assets/C4-context.png)
 
 ### 4.3.3.	Software Architecture Container Level Diagrams
 
 Detalla la arquitectura interna de Oryxen en términos de contenedores: aplicación web, aplicación móvil, backend, bases de datos (web y móvil) y la Edge App para el dispositivo IoT. También muestra cómo se conectan entre sí y con sistemas externos.
 
-![ContainersDiagram.png](../assets/C4-containerrs.png)
+![ContainersDiagram.png](assets/C4-containerrs.png)
 
 ### 4.3.4.	Software Architecture Deployment Diagrams
 
