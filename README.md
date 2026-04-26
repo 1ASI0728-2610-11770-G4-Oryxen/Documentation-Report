@@ -376,6 +376,91 @@ Para la elaboración del EventStorming, el equipo se organizó para encontrar un
 
 ### 4.2.2. Candidate Context Discovery
 
+ A partir del EventStorming realizado en Miro, nuestro equipo llevó a cabo una sesión de Candidate Context
+ Discovery para identificar los bounded contexts de nuestra solución. Utilizamos principalmente la técnica
+ look-for-pivotal-events durante la sesión.
+ 
+ 
+ **Proceso de identificación**
+ Comenzamos revisando el modelo completo que habíamos construido, prestando especial atención a los
+ eventos pivote y agregados identificados
+
+[![Event-Storming-oryxen-2.jpg](https://i.postimg.cc/NMbdfBD0/Event-Storming-plantcare-2.jpg)](https://postimg.cc/Q99QfLRL)
+
+
+Detección de agrupaciones naturales: Identificamos patrones y agrupaciones naturales de comandos, eventos
+ y políticas que trabajaban sobre las mismas entidades o procesos. 
+
+ [![Event-Storming-oryxen-6.jpg](https://i.postimg.cc/pVhGzh2f/Event-Storming-plantcare-6.jpg)](https://postimg.cc/G9Rx1pTt)
+
+ Una vez relacionado todo el event storming hacemos la agrupacion para infetificar y aplicar el contexto de los bouded context 
+
+ **1. Start-with-Value**
+
+Comenzamos identificando las áreas core del dominio, es decir, aquellas con mayor impacto en la propuesta de valor del sistema.
+
+- Core: Plant Management, Device Management (IoT), Data Telemetry, Analytics.
+
+- Supporting: Auth & Identity,  Subscription, Notification .
+
+- generic: , Community.
+
+**2.- Start-with-Simple**
+
+Para no perdernos en la complejidad, descompusimos el flujo en pasos secuenciales simples, lo que permitió distinguir qué parte del sistema debía encargarse de cada responsabilidad.
+
+**3.- Look-for-Pivotal-Events**
+Identificamos eventos clave que marcaban transiciones entre subsistemas. Ejemplos:
+
+- “Sensor data received” → frontera entre Device Management y Data Telemetry.
+
+- “Subscription activated” → frontera entre Billing y Platform.
+
+- “Rule triggered” → frontera entre Notification Engine y Plant Management.
+
+[![Event-Storming-oryxen-31.jpg](https://i.postimg.cc/FRxQH5Zh/Event-Storming-plantcare-31.jpg)](https://postimg.cc/5YjrsrTr)
+
+
+__Primer agrupamiento__ 
+Se delimitaron los contextos básicos de Auth & Identity y Device Management (IoT). Estos responden a responsabilidades claras: autenticación de usuarios y control de hardware. 
+
+[![Event-Storming-oryxen-9.jpg](https://i.postimg.cc/DyCPN7yv/Event-Storming-plantcare-9.jpg)](https://postimg.cc/qz3KhV3S)
+
+__Segundo agrupamiento__
+
+Se aislaron los contextos centrales de negocio: Plant Management y Data Telemetry. Aquí ubicamos la lógica principal sobre cuidado y monitoreo de plantas.
+
+
+[![Event-Storming-oryxen-10.jpg](https://i.postimg.cc/kXZt8Ggb/Event-Storming-plantcare-10.jpg)](https://postimg.cc/Mv7TJWR6)
+
+
+__Tercer agrupamiento__ 
+
+Se añadieron los contextos complementarios: Notification y Community, encargados de interacción y comunicación entre usuarios y el sistema.
+
+[![Event-Storming-oryxen-32.jpg](https://i.postimg.cc/XY5mv6jP/Event-Storming-plantcare-32.jpg)](https://postimg.cc/bZz36M20)
+
+Consolidación final
+El resultado fue un mapa de 8 bounded contexts:
+
+- Auth & Identity
+
+- Device Management (IoT)
+
+- Subscription
+
+- Plant Management
+
+- Data Telemetry
+
+- Analytics
+
+- Notification 
+
+- Community 
+
+Cada uno de ellos tiene responsabilidades y fronteras bien definidas, reduciendo la complejidad y facilitando la futura arquitectura basada en microservicios o módulos independientes.
+
 ### 4.2.3.	Domain Message Flows Modeling
 
 ### 4.2.4.	Bounded Context Canvases
