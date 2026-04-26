@@ -635,6 +635,38 @@ Respecto al seguimiento de cuidado de plantas, considera que sería una útil pa
 - Valora herramientas impulsadas con IA.
 - Considera importante la simplicidad y diseño de en una aplicación.
 
+**Entrevista 2:**
+
+- Nombres y apellidos: Miguel Alexander Rojas
+- Edad: 23 años
+- Distrito de residencia: San Miguel, Lima
+- Ocupación: Estudiante universitario
+- Estado civil: Soltero
+- Composición familiar: Vive con sus padres
+- Inicio de la entrevista: 0:06
+- Fin de la entrevista: 4:62
+
+**Registro visual de la entrevista:**
+
+![Evidencia-Entrevista2-Segmento2](/assets/Chapter-2/Evidencia-Entrevista2-Segmento2.png)
+
+**Resumen descriptivo de la entrevista:**
+
+El entrevistado, Miguel Alexander Rojas, es un estudiante universitario que nos comenta que el cuidado de plantas se ha convertido en una actividad recurrente dentro de su rutina diaria. Actualmente cuenta con alrededor de 12 plantas, en su mayoría suculentas y plantas de interior, las cuales mantiene distribuidas entre su habitación y la sala de su casa. Indica que disfruta esta actividad porque le ayuda a desconectarse del estrés académico, aunque reconoce que organizar el cuidado de tantas plantas a la vez le resulta complicado.
+
+En relación al cuidado de sus plantas, menciona que el riego lo realiza de forma manual entre 2 y 3 veces por semana, dependiendo del tipo de planta y de las condiciones climáticas. Comenta que el mayor reto que enfrenta es identificar de manera oportuna cuándo una planta presenta problemas de humedad o exposición a la luz, ya que muchas veces se da cuenta cuando el daño ya está avanzado. Además, indica que en el pasado perdió algunas plantas debido al exceso de riego y a no haber detectado a tiempo señales de enfermedad.
+
+Respecto al seguimiento del cuidado de plantas, considera que una aplicación que le permita registrar el historial de cada planta, visualizar datos en tiempo real (humedad, temperatura) y recibir recomendaciones personalizadas sería de gran utilidad. Asimismo, manifiesta una alta confianza en herramientas basadas en IA, siempre y cuando las recomendaciones se sustenten en datos concretos. Estaría dispuesto a instalar sensores en sus macetas y a pagar por funciones avanzadas mediante una suscripción mensual, siempre que el costo sea razonable. Estos datos confirman su interés en una solución como la que ofrece Oryxen.
+
+**Características identificadas a partir de la entrevista:**
+
+- Cuida sus plantas como hobby y método de relajación.
+- Mantiene una colección variada de plantas de interior.
+- Presenta dificultades para detectar a tiempo problemas de salud en sus plantas.
+- Ha perdido plantas por errores de riego y falta de monitoreo.
+- Valora el uso de sensores y herramientas con IA para optimizar el cuidado.
+- Está dispuesto a pagar por una suscripción mensual con beneficios claros.
+
 ### 2.2.3. Análisis de entrevistas
 
 **Análisis del Segmento 1 – Personas ocupadas:**
