@@ -173,10 +173,11 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 **Logotipo de la Startup:**
 
-
+![Logo_GrassFarming](/assets/Chapter-1/Logo_GrassFarming.png)
 
 **Logotipo de la Solución:**
 
+![Logo_Oryxen](/assets/Chapter-1/Logo_Oryxen.png)
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
