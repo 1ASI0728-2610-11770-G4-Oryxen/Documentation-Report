@@ -317,6 +317,63 @@ A continuación, se presentan los constraints representados mediante Technical S
 
 ### 4.2.1. EventStorming
 
+Para la elaboración del EventStorming, el equipo se organizó para encontrar una primera aproximación al
+ modelado del dominio de nuestro proyecto. Durante este proceso seguimos una serie de 9 pasos
+
+
+ **Paso 1: Collect Domain Events** En este primer paso, identificamos todos los eventos relevantes del dominio
+ que ocurren en nuestro sistema. Estos eventos representan hechos importantes que suceden durante el
+ proceso de negocio y los capturamos con post-its de color naranja
+
+ [![Event-Storming-oryxen-22.jpg](https://i.postimg.cc/bJx2R8fZ/Event-Storming-plantcare-22.jpg)](https://postimg.cc/CBK1F310)
+
+ **Paso 2: Timeline** Organizamos todos los eventos identificados en una línea temporal, colocándolos en orden
+ cronológico para visualizar mejor el flujo del proceso y entender la secuencia natural de acciones en el
+ sistema.
+
+[![Event-Storming-oryxen-23.jpg](https://i.postimg.cc/gkn2zdtp/Event-Storming-plantcare-23.jpg)](https://postimg.cc/dLcYnMKN)
+
+**Paso 3: Pain and Pivotal points** Identificamos los puntos problemáticos (pain points) y los momentos clave
+ (pivotal points) en nuestro proceso. Estos representan áreas que requieren atención especial o que son críticas
+ para el funcionamiento del sistema.
+
+
+[![Event-Storming-oryxen-24.jpg](https://i.postimg.cc/D0tkyVmq/Event-Storming-plantcare-24.jpg)](https://postimg.cc/hQb3p5Lj)
+
+ **Paso 4: Commands** Agregamos los comandos (representados con post-its azules) que desencadenan los
+ eventos. Estos comandos son las acciones que los usuarios o sistemas externos realizan para provocar
+ cambios en el sistema
+
+[![Event-Storming-oryxen-25.jpg](https://i.postimg.cc/zGq5Lr0W/Event-Storming-plantcare-25.jpg)](https://postimg.cc/VdZ2T3yL)
+
+**Paso 5: Policies** Definimos las políticas o reglas de negocio (con post-its morados) que reaccionan a ciertos
+ eventos y generan nuevos eventos como resultado. Estas políticas automatizan decisiones basadas en eventos
+ previos.
+
+[![Event-Storming-oryxen-26.jpg](https://i.postimg.cc/fLcBS6Hb/Event-Storming-plantcare-26.jpg)](https://postimg.cc/0MNpLH1g)
+
+**Paso 6: Read models**  Identificamos los modelos de lectura o vistas que los usuarios necesitan para tomar
+ decisiones. Estos representan la información que debe estar disponible en determinados puntos del proceso.
+
+ [![Event-Storming-oryxen-27.jpg](https://i.postimg.cc/x8dMj7BX/Event-Storming-plantcare-27.jpg)](https://postimg.cc/Fd27DPrv)
+
+  **Paso 7: External System** Marcamos los sistemas externos (con post-its rosados) que interactúan con nuestra
+ solución. Estos son componentes fuera de nuestro control directo pero que tienen influencia en el proceso
+
+[![Event-Storming-oryxen-28.jpg](https://i.postimg.cc/76tb9LQZ/Event-Storming-plantcare-28.jpg)](https://postimg.cc/1n695yQk)
+
+
+**Paso 8: Aggregates** Agrupamos los comandos y eventos relacionados en unidades lógicas llamadas
+ agregados (representados con post-its amarillos). Cada agregado encapsula un conjunto coherente de
+ funcionalidades. 
+
+ [![Event-Storming-oryxen-29.jpg](https://i.postimg.cc/sfZZmYy4/Event-Storming-plantcare-29.jpg)](https://postimg.cc/grmJk6xx)
+
+  **Paso 9: Bounded Context** Finalmente, identificamos los contextos delimitados o bounded contexts, que son
+ áreas de responsabilidad distintas dentro del sistema.
+
+ [![Event-Storming-oryxen-31.jpg](https://i.postimg.cc/FRxQH5Zh/Event-Storming-plantcare-31.jpg)](https://postimg.cc/5YjrsrTr)
+
 ### 4.2.2. Candidate Context Discovery
 
 ### 4.2.3.	Domain Message Flows Modeling
@@ -324,7 +381,6 @@ A continuación, se presentan los constraints representados mediante Technical S
 ### 4.2.4.	Bounded Context Canvases
 
 ### 4.2.5.	Context Mapping
-
 
 ## 4.3.	Software Architecture
 Los diagramas de arquitectura de software nos ayudan a plantear el sistema de nuestro software, basándonos en el enfoque de desarrollo de Domain Driven Design.
