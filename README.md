@@ -330,11 +330,11 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td colspan="5"></td>
   </tr>
   <tr>
-    <th>(En la cabecera colocar por cada competidor nombre y logo)</th>
-    <th>Oryxen (GrassFarming)</th>
-    <th>Competidor 1: Planta</th>
-    <th>Competidor 2: Click & Grow</th>
-    <th>Competidor 3: Gardyn</th>
+    <th></th>
+    <th><img src="./assets/Chapter-2/Logo_Oryxen.png"></th>
+    <th><img src="./assets/Chapter-2/Logo_Planta.jpg"></th>
+    <th><img src="./assets/Chapter-2/Logo_Click&Grow.png"></th>
+    <th><img src="./assets/Chapter-2/Logo_Gardyn.png"></th>
   </tr>
 
   <tr>
