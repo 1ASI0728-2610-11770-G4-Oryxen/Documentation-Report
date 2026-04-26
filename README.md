@@ -591,6 +591,7 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 ## Conclusiones y recomendaciones
 
+- **TB1:** Para este primer avance del TB1, todos los integrantes del equipo desarrollaron con éxito la entrega inicial del trabajo final, logrando plantear una solución tecnológica que optimice el proceso del cuidado de plantas mediante un sistema que usa sensores para el monitoreo de la salud de una planta, así como la implementación de funciones con IA para recomendar acciones al usuario según el estado de la planta. Además, se implementaron detalladamente los requisitos funcionales y técnicos a través de un product backlog y se sentaron las bases de una arquitectura estratégica mediante el método Attribute-Driven Design (ADD), garantizando que el sistema sea capaz de soportar atributos de calidad como la alta disponibilidad, el rendimiento en tiempo real y la seguridad de los datos desde su fase conceptual <br> **Recomendaciones:** Como recomendaciones para la continuidad del proyecto, se sugiere mantener una coherencia entre las historias de usuario definidas y los diagramas de arquitectura que se desarrollarán en las siguientes etapas. De esta manera, garantizamos que todas nuestras decisiones estén justificados por los escenarios de calidad. Además, profundizar en la estructuración de los modelos de datos para garantizar que la integración entre los servicios de Inteligencia Artificial y la telemetría de los sensores sea fluida, segura y altamente escalable.
 
 # Bibliografía
 
