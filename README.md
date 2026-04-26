@@ -800,8 +800,10 @@ Es un taller colaborativo diseñado para que un grupo de personas (desarrollador
 
 ***1. Preparing the room***
 
-Para garantizar comodidad, eficiencia y colaboración en tiempo real, elegimos la plataforma Discord como entorno virtual para nuestro primer encuentro. Allí, nos reunimos con el objetivo de alinear la comprensión del negocio, identificar dudas clave, mapear problemas recurrentes y fomentar un ambiente de confianza y comunicación abierta basado en el dominio del problema: el cuidado automatizado de plantas en entornos domésticos y de oficina con Oryxen.
+Para garantizar comodidad, eficiencia y colaboración en tiempo real, elegimos la plataforma Google Meets como entorno virtual para nuestro primer encuentro. Allí, nos reunimos con el objetivo de alinear la comprensión del negocio, identificar dudas clave, mapear problemas recurrentes y fomentar un ambiente de confianza y comunicación abierta basado en el dominio del problema: el cuidado automatizado de plantas en entornos domésticos y de oficina con Oryxen.
 
+![Meeting 1](/assets/Chapter-2/meeting-1.png)
+![Meeting 2](/assets/Chapter-2/meeting-2.png)
 
 
 ***2. Energizing the audience***
