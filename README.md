@@ -52,12 +52,12 @@
 
 | Versión | Fecha | Autor | Descripción de Modificación |
 | ----------- | ----------- | ----------- | ----------- |
-| TB1 | 15/04/2026 |  |  |
+| TB1 | 15/04/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | Se han incluido los siguientes capítulos: <br> - Capítulo I: Introducción <br> - Capítulo II: Requirements Elicitation & Analysis <br> - Capítulo III: Requirements Specification <br> - Capítulo IV: Strategic-Level Software Design |
 
 # Project Report Collaboration Insights
 
-URL de la organización del proyecto:
-
+**URL de la organización del proyecto:** https://github.com/1ASI0728-2610-11770-G4-Oryxen
+**URL del repositorio del informe:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report
 
 
 **TB1**
@@ -153,9 +153,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico | Acciones Realizadas | Conclusiones |
 | ------------------- | ------------------- | ------------ |
-| **Alejandro Alberto Pachas Chavez: **<br>
-TB1: Realicé el modelado EventStorming y DDD. Traduccí de los conceptos de negocio en un modelo técnico coherente. | |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | |
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Demostré capacidad de comunicar mi comprensión de la problemática que abordamos; así como, el planteamiento de una solución tecnológica que la resuelva. Además, de exponer los fundamentos técnicos y requisitos funcionales para la solución, usando un lenguaje empático para los distintos grupos de usuarios. | |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Redacté la documentación con un enfoque en los objetivos de nuestra solución, garantizando que la coherencia y claridad de la información sea recepcionada por los usuarios en relación en lo que consiste nuestra plataforma y sobre los resultados de la arquitectura ADD. | |
 
 <br>
 
@@ -166,7 +165,7 @@ TB1: Realicé el modelado EventStorming y DDD. Traduccí de los conceptos de neg
 
 ### 1.1.1. Descripción de la Startup
 
-Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de plantas mediante una solución inteligente que automatiza tareas esenciales y brinda asistencia continua al usuario. Con nuestra plataforma **"Oryxen"**, nos centramos en ayudar a personas amantes de la jardinería con agendas ocupadas y a adultos mayores, quienes suelen enfrentar dificultades para mantener sus plantas saludables debido al olvido o la falta de tiempo. La solución integra funciones de riego automático, monitoreo con sensores y un chatbot inteligente que brinda recomendaciones personalizadas. A través de la interfaz, los usuarios podrán visualizar fácilmente el estado de todas sus plantas, recibir alertas y gestionar su cuidado de manera práctica y confiable. Con ello, se busca reducir la pérdida de plantas, mejorar la experiencia del usuario y aumentar su satisfacción.
+Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de plantas mediante una solución inteligente que automatiza tareas esenciales y brinda asistencia continua al usuario. Con nuestra plataforma **"Oryxen"**, nos centramos en ayudar a personas amantes de la jardinería y personas con agendas ocupadas, quienes suelen enfrentar dificultades para mantener sus plantas saludables debido al olvido o la falta de tiempo. La solución integra funciones de riego automático, monitoreo con sensores y un chatbot inteligente que brinda recomendaciones personalizadas. A través de la interfaz, los usuarios podrán visualizar fácilmente el estado de todas sus plantas, recibir alertas y gestionar su cuidado de manera práctica y confiable. Con ello, se busca reducir la pérdida de plantas, mejorar la experiencia del usuario y aumentar su satisfacción.
 
 **Misión:** Facilitar el cuidado de plantas mediante automatización e inteligencia artificial, ofreciendo una experiencia más accesible, práctica y confiable.
 
@@ -196,7 +195,7 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 | LAS 5W y 2H | Pregunta | Descripción |
 | ----------- | -------- | ----------- |
-| What? | ¿Cuál es el problema? | Personas ocupadas, aficionados a la jardinería y adultos mayores no logran mantener un nivel de salud óptima en sus plantas (humedad, luz solar, etc.) por falta de tiempo u olvidos, lo que provoca plantas marchitas o muertas, frustración y menor bienestar. |
+| What? | ¿Cuál es el problema? | Personas ocupadas y aficionados a la jardinería no logran mantener un nivel de salud óptima en sus plantas (humedad, luz solar, etc.) por falta de tiempo u olvidos, lo que provoca plantas marchitas o muertas, frustración y menor bienestar. |
 | When? | ¿Cuándo sucede el problema? | Ocurre de forma recurrente, especialmente durante semanas de alta carga laboral, viajes y en épocas de clima cambiante.                                                       |
 | Where?  | ¿Dónde sucede el problema? | Principalmente en hogares, departamentos, oficinas, entre otros espacios, donde hay variedad de plantas y el control manual resulte complicado. |
 | Why? | ¿Por qué sucede el problema? | Por la combinación de múltiples factores como la falta de tiempo, ausencia de recordatorios útiles y desconocimiento de necesidades específicas de riego y cuidado de cada especie. |
@@ -210,7 +209,7 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 Oryxen fue diseñado para ayudar a los usuarios a mantener sus plantas saludables mediante sensores que registran parámetros como la humedad, oxígeno, etc; para automatizar procesos de cuidado y brindar asistencia inteligente, reduciendo la carga del cuidado manual. 
 
-Hemos observado que los usuarios, especialmente personas con agendas ocupadas y adultos mayores, no logran mantener un cuidado constante, lo que provoca la pérdida de plantas, frustración y una menor continuidad en la creación de áreas verdes.
+Hemos observado que los usuarios, especialmente personas con agendas ocupadas y aficionados a la jardinería, no logran mantener un cuidado constante, lo que provoca la pérdida de plantas, frustración y una menor continuidad en la creación de áreas verdes.
 
 ¿Cómo podríamos mejorar Oryxen para que nuestros clientes tengan más éxito según su disponibilidad de tiempo y conocimientos previos en el cuidado de plantas, incrementando el interés de las personas por cultivar más plantas y reduciendo la carga de cuidado manual?
 
@@ -220,7 +219,7 @@ Hemos observado que los usuarios, especialmente personas con agendas ocupadas y 
 
 1. Creo que mis clientes necesitan mantener sus plantas saludables sin depender de recordatorios manuales o tiempo constante.
 2. Estas necesidades puede ser solucionadas con un sistema inteligente que automatice los cuidados y monitoree las plantas mediante sensores e IA.
-3. Mis primeros clientes son (o serán) personas con agendas ocupadas, adultos mayores y aficionados a la jardinería.
+3. Mis primeros clientes son (o serán) personas con agendas ocupadas y aficionados a la jardinería.
 4. El valor número 1 que un cliente quiere obtener de mi servicio es mantener sus plantas vivas sin esfuerzo y ver su estado mediante un panel de control.
 5. El cliente también puede obtener estos beneficios adicionales: Automatizar procesos de cuidado, ahorrar tiempo, obtener bienestar y aprender sobre el cuidado de plantas.
 6. Obtendré la mayoría de mis clientes a través de redes sociales, recomendaciones (boca a boca) y marketplaces de tecnología/hogar inteligente.
@@ -233,7 +232,7 @@ Hemos observado que los usuarios, especialmente personas con agendas ocupadas y 
 
 **User Assumptions:**
 
-1. ¿Quién es el usuario? Personas ocupadas, amantes de la jardinería y personas de la tercera edad que desean gestionar de manera efectiva la salud de sus plantas.
+1. ¿Quién es el usuario? Personas ocupadas y amantes de la jardinería que desean gestionar de manera efectiva la salud de sus plantas.
 2. ¿Dónde encaja nuestro producto en su trabajo o vida? Se integra en el flujo de vida diaria de cada cliente, permitiendo revisar y analizar la información de sus plantas cuando lo deseen.
 3. ¿Qué problemas tiene nuestro producto y cómo los resolvemos? Problema: Arduo cuidado manual y uso de tiempo para el cuidado de plantas. Solución: Plataforma unificada con automatización y acceso centralizado a toda la información.
 4. ¿Cuándo y cómo es usado nuestro producto? Durante el hábito de cultivar plantas, donde los clientes buscan mantener saludables a sus plantas.
@@ -270,7 +269,7 @@ Estas suposiciones de alta prioridad serán las primeras en validarse mediante e
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
 - **Hypothesis Statement 01:** <br>
-Creemos que los usuarios amantes de la jardinería con agendas ocupadas y los adultos mayores buscan una forma simple de mantener sus plantas saludables sin depender del riego manual.
+Creemos que los usuarios amantes de la jardinería y personas con agendas ocupadas buscan una forma simple de mantener sus plantas saludables sin depender del riego manual.
 Sabremos que esto es cierto al medir la frecuencia con la que usan la app para revisar el estado de sus plantas.
 Cuando al menos el 60% de los usuarios activos consulte la plataforma 3 veces por semana o más durante el primer mes.
 
