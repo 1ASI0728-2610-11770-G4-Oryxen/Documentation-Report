@@ -153,7 +153,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico | Acciones Realizadas | Conclusiones |
 | ------------------- | ------------------- | ------------ |
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | |
+| **Alejandro Alberto Pachas Chavez: **<br>
+TB1: Realicé el modelado EventStorming y DDD. Traduccí de los conceptos de negocio en un modelo técnico coherente. | |
 | Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | |
 
 <br>
