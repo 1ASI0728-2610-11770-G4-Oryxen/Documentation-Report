@@ -1450,5 +1450,20 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 # Bibliografía
 
+Client challenge. (s. f.). Scribd. https://es.scribd.com/document/794400266/Lean-UX-2013-001-050-en-es
+
+Conventional Commits. (s. f.). Conventional Commits v1.0.0. https://www.conventionalcommits.org/en/v1.0.0/
+
+Domain driven design. (s. f.). Open Practice Library. https://openpracticelibrary.com/perspective/domain-driven-design/
+
+El cuidado de las plantas de jardín. (s. f.). Google Books. https://books.google.com.pe/books?id=k1w_mc6NLOQC
+
+EventStorming Resources. (2025, 17 de marzo). EventStorming. https://www.eventstorming.com/resources/
+
+Mendoza, C. M. H., Rubio, J. P. S., Carillo, A. M., Vidal, L. M. R., & Guzmán, R. H. (2022). Sistema IoT para el cuidado de plantas ornamentales. Polo del Conocimiento: Revista científico-profesional, 7(9), 1188-1202. https://dialnet.unirioja.es/servlet/articulo?codigo=8652919
+
+Preston-Werner, T. (s. f.). Semantic Versioning 2.0.0. Semantic Versioning. https://semver.org/
+
+Sairyss. (2022, 29 de diciembre). Domain-Driven Hexagon: Guide on Domain-Driven Design, Hexagonal architecture, best practices (TypeScript and NestJS examples). DEV Community. https://dev.to/sairyss/domain-driven-hexagon-18g5
 
 # Anexos
