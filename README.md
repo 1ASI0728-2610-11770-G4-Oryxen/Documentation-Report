@@ -302,19 +302,20 @@ Para asegurar el éxito de Oryxen, hemos identificado dos segmentos clave que se
 
 ## 2.1. Competidores
 
-En el mercado de soluciones digitales para el cuidado de plantas, se han identificado tres competidores representativos que cubren distintos frentes de valor: desde aplicaciones móviles con IA hasta electrodomésticos de jardinería inteligente. Cada uno aborda parcialmente el problema que **Oryxen** resuelve de forma integral, lo que permite posicionar con claridad las ventajas de nuestra propuesta.
+En el mercado de jardinería inteligente, existen soluciones que van desde aplicaciones móviles con funciones básicas de seguimiento hasta ecosistemas avanzados de automatización y monitoreo. Hemos identificado tres frentes competitivos que nos permiten definir nuestra estrategia de diferenciación, lo que permitiría a **Oryxen** destacar en el ámbito tecnológico y económico, especialmente considerando las limitaciones de adopción de hardware en LATAM.
 
-**Planta (Strömming & Löf AB)**  
-Aplicación móvil sueca con más de 10 millones de descargas que asiste a los usuarios en el cuidado de sus plantas mediante recordatorios, identificación por foto con IA, medidor de luz con la cámara del celular y una extensa base de datos de especies. Es un competidor directo en el plano **software** pero no integra hardware, por lo que depende de la memoria y disciplina del usuario para ejecutar cada tarea. Su plan premium se comercializa por suscripción anual a bajo costo.
 
-**Click & Grow (Smart Garden 3 / 9 / 25)**  
-Compañía estonia que ofrece jardines inteligentes de interior en formato de electrodoméstico: una maceta cerrada con riego automatizado, luces LED de crecimiento y cápsulas propietarias ("plant pods") con semillas preparadas. Es un competidor **hardware** de gama media-alta, pero orientado exclusivamente al cultivo de hierbas, vegetales y flores dentro de su propio ecosistema cerrado; no permite monitorear las plantas que el usuario ya tiene en casa.
+**Planta (Strömming & Löf AB)**
+Es una aplicación móvil enfocada en el cuidado de plantas. Permite identificar plantas por foto, crear recordatorios personalizados, usar un medidor de luz y recibir recomendaciones y diagnósticos de problemas comunes. Su fortaleza está en el software y en la facilidad de uso, pero depende por completo de que el usuario ejecute las acciones manualmente. Por eso, compite con Oryxen en la parte de acompañamiento digital, aunque no automatiza el cuidado físico de la planta. <br>
+**Diferenciación:** Oryxen elimina el error humano y la disciplina requerida, pasando de un "recordatorio" a una "acción automatizada".
+
+**Xiaomi Mi Flora / Smart Home Ecosystem**  
+Xiaomi representa la mayor amenaza debido a su capacidad de escala y precios agresivos. Sus sensores de suelo son económicos y se integran a ecosistemas de hogar inteligente como Xiaomi Home y Google Home. Sus dispositivos permiten monitorear variables como humedad, temperatura y luz, ofreciendo datos básicos sobre el estado de las plantas. <br>
+**Diferenciación:** Oryxen no solo recibe datos, los interpreta, ejecuta y explica las acciones que realiza impulsado por IA.
 
 **Gardyn (Home Kit 3.0 con Kelby AI)**  
-Startup estadounidense que vende un huerto vertical hidropónico para el hogar, controlado por una IA propia llamada **Kelby** que utiliza cámaras integradas para detectar el estado de cada planta y recomendar acciones. Funciona con un modelo de suscripción ("Gardyn Membership") que incluye envío recurrente de yCubes (semillas) y soporte. Representa el segmento **premium + IA** y es el competidor más cercano en filosofía, aunque a un precio muy elevado y atado a su propio formato de cultivo.
-
-**¿Por qué llevar a cabo este análisis?**  
-**Pregunta clave:** ¿Cómo se posiciona **Oryxen** frente a una app popular sin hardware (Planta), un electrodoméstico de cultivo cerrado (Click & Grow) y una solución premium con IA y cámara (Gardyn), considerando propuesta de valor, mercado objetivo, modelo de negocio y capacidades tecnológicas?
+Es el referente tecnológico con visión artificial. Sin embargo, su costo superior a los $700 USD y su formato cerrado lo hacen inviable para el mercado masivo en LATAM. Utiliza una IA propia llamada **Kelby** que utiliza cámaras integradas para detectar el estado de cada planta y recomendar acciones. Funciona con un modelo de suscripción ("Gardyn Membership") que incluye envío recurrente de yCubes (semillas) y soporte. <br>
+**Diferenciación:** Oryxen propone una solución modular y más accesible, enfocada en las macetas y plantas que el usuario ya posee, integrando automatización e IA sin requerir un sistema de cultivo propietario, reduciendo el costo de entrada en un 80%.
 
 ### 2.1.1. Análisis competitivo
 
