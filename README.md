@@ -56,11 +56,19 @@
 
 # Project Report Collaboration Insights
 
-**URL de la organización del proyecto:** https://github.com/1ASI0728-2610-11770-G4-Oryxen
+**URL de la organización del proyecto:** https://github.com/1ASI0728-2610-11770-G4-Oryxen<br>
 **URL del repositorio del informe:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report
 
 
-**TB1**
+**TB1** <br>
+Las tareas asignadas a la TB1 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega se redactaron los contenidos correspondientes utilizando formato Markdown, y se realizaron "Conventional Commits" para documentar el avance en el repositorio. Así mismo, se generaron los recursos necesarios y se añadieron las imágenes al repositorio en la carpeta "assets" correspondiente a cada rama del informe.
+
+![PulseTB1](./assets/Chapter-1/PulseTB1.png)
+![ContributorsTB1](./assets/Chapter-1/ContributorsTB1.png)
+![NetworkGraphTB1](./assets/Chapter-1/NetworkGraphTB1.png)
+![InsightsPeopleTB1](./assets/Chapter-1/InsightsPeopleTB1.png)
 
 
 # Contenido
@@ -173,11 +181,11 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 **Logotipo de la Startup:**
 
-![Logo_GrassFarming](/assets/Chapter-1/Logo_GrassFarming.png)
+![Logo_GrassFarming](./assets/Chapter-1/Logo_GrassFarming.png)
 
 **Logotipo de la Solución:**
 
-![Logo_Oryxen](/assets/Chapter-1/Logo_Oryxen.png)
+![Logo_Oryxen](./assets/Chapter-1/Logo_Oryxen.png)
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
