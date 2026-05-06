@@ -325,7 +325,7 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
   </tr>
   <tr>
     <td>¿Por qué llevar a cabo este análisis?</td>
-    <td colspan="4">Identificar fortalezas y debilidades frente a competidores de software (apps de cuidado con IA), electrodomésticos de cultivo cerrado y huertos inteligentes premium, con el fin de posicionar a Oryxen como la única solución modular que convierte las plantas que el usuario ya posee en plantas inteligentes, combinando sensores, riego automático y un chatbot con IA a un precio accesible.</td>
+    <td colspan="4">Identificar fortalezas, debilidades y oportunidades frente a competidores de software, ecosistemas IoT y soluciones premium de jardinería inteligente, con el fin de posicionar a Oryxen como una alternativa modular y accesible para el mercado latinoamericano, enfocada en automatización, monitoreo y asistencia inteligente sobre las plantas que el usuario ya posee.</td>
   </tr>
   <tr>
     <td colspan="5"></td>
@@ -334,7 +334,7 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
     <th></th>
     <th><img src="./assets/Chapter-2/Logo_Oryxen.png"></th>
     <th><img src="./assets/Chapter-2/Logo_Planta.jpg"></th>
-    <th><img src="./assets/Chapter-2/Logo_Click&Grow.png"></th>
+    <th><img src="./assets/Chapter-2/Logo_Xiaomi.jpg"></th>
     <th><img src="./assets/Chapter-2/Logo_Gardyn.png"></th>
   </tr>
 
@@ -343,24 +343,24 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
   </tr>
   <tr>
     <td>Overview</td>
-    <td>Solución IoT modular que convierte las macetas existentes del usuario en plantas inteligentes mediante sensores, riego automático, chatbot con IA y panel de control web/móvil.</td>
-    <td>Aplicación móvil con recordatorios, identificación de plantas por foto, medidor de luz vía cámara y base de datos de especies. Solo software.</td>
-    <td>Electrodoméstico de jardinería indoor con riego automatizado, luces LED y cápsulas propietarias de semillas.</td>
-    <td>Huerto vertical hidropónico premium con IA "Kelby" y cámaras integradas, controlado desde una app.</td>
+    <td>Plataforma modular de jardinería inteligente que combina sensores IoT, automatización de riego, IA visual y chatbot conversacional para ayudar a usuarios urbanos a cuidar las plantas que ya poseen.</td>
+    <td>Aplicación móvil enfocada en recordatorios, identificación de plantas y recomendaciones de cuidado mediante IA.</td>
+    <td>Ecosistema IoT de hogar inteligente con sensores accesibles para monitorear variables como humedad, temperatura y luz.</td>
+    <td>Sistema premium de jardinería indoor que combina automatización, cámaras y visión artificial mediante su IA “Kelby”.</td>
   </tr>
   <tr>
     <td>Ventaja competitiva</td>
-    <td>Combina automatización + IA conversacional sobre las plantas que el usuario ya tiene. Sensores modulares de bajo costo y chatbot entrenado para asistir de forma personalizada.</td>
-    <td>Enorme base de usuarios, marca consolidada y una experiencia de app pulida con identificación de plantas por IA.</td>
-    <td>Jardín llave en mano: el usuario solo conecta el aparato y añade agua cada varias semanas.</td>
-    <td>IA con visión por cámara que detecta en tiempo real el estado de cada planta; experiencia "set and forget" de gama alta.</td>
+    <td>Integra monitoreo, automatización e IA sobre macetas existentes sin obligar al usuario a migrar a un ecosistema cerrado o realizar una inversión inicial elevada.</td>
+    <td>Facilidad de uso, gran base de usuarios y experiencia digital enfocada en usuarios principiantes.</td>
+    <td>Sensores de bajo costo e integración con ecosistemas de smart home ampliamente utilizados.</td>
+    <td>Alto nivel de automatización y monitoreo avanzado mediante visión artificial e IA.</td>
   </tr>
   <tr>
     <td>¿Qué valor ofrece a los clientes?</td>
-    <td>Tranquilidad, ahorro de tiempo y reducción de pérdidas para las plantas que ya poseen, con acompañamiento por IA al nivel de un experto.</td>
-    <td>Educación básica y recordatorios para usuarios principiantes, a un costo muy bajo.</td>
-    <td>Posibilidad de cultivar hierbas y vegetales frescos en casa sin experiencia previa.</td>
-    <td>Producción de alimentos en casa con mínimo esfuerzo y una experiencia tech-premium guiada por IA.</td>
+    <td>Reduce el esfuerzo manual, disminuye pérdidas de plantas y ayuda a usuarios con poco tiempo mediante automatización progresiva y recomendaciones personalizadas./td>
+    <td>Ayuda a recordar tareas de cuidado y aprender conceptos básicos de jardinería.</td>
+    <td>Permite monitorear variables ambientales de manera económica y sencilla.</td>
+    <td>Ofrece una experiencia premium de cultivo indoor con mínima intervención del usuario.</td>
   </tr>
 
   <tr>
@@ -368,17 +368,17 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
   </tr>
   <tr>
     <td>Mercado objetivo</td>
-    <td>Personas ocupadas (25–45) y aficionados a la jardinería en zonas urbanas, así como adultos mayores que buscan asistencia continua para sus plantas ya existentes.</td>
-    <td>Usuarios principiantes y casuales que quieren recordatorios y aprender sobre sus plantas desde el celular.</td>
-    <td>Usuarios de clase media-alta interesados en cocina casera, hierbas frescas y decoración indoor.</td>
-    <td>Hogares tech-premium y foodies interesados en autoabastecimiento y hidroponia en EE. UU.</td>
+    <td>Personas ocupadas y aficionados a la jardinería en zonas urbanas que buscan reducir el tiempo y esfuerzo del cuidado manual.</td>
+    <td>Usuarios casuales o principiantes interesados en aprender sobre cuidado de plantas.</td>
+    <td>Usuarios interesados en automatización del hogar y dispositivos inteligentes accesibles.</td>
+    <td>Usuarios premium interesados en cultivo indoor automatizado y tecnología avanzada.</td>
   </tr>
   <tr>
     <td>Estrategias de marketing</td>
-    <td>Redes sociales, creadores de contenido de jardinería, alianzas con viveros locales y campañas en marketplaces de hogar inteligente.</td>
-    <td>App store optimization, freemium agresivo y marketing viral en TikTok/Instagram.</td>
-    <td>E-commerce propio, presencia en retailers de diseño y campañas en sostenibilidad.</td>
-    <td>Publicidad digital, ferias tecnológicas (CES) y modelo D2C con membresía.</td>
+    <td>Redes sociales, contenido educativo, alianzas con viveros locales y marketplaces de hogar inteligente.</td>
+    <td>Freemium, posicionamiento en App Store/Google Play y contenido viral en redes sociales.</td>
+    <td>Ecosistema Xiaomi Home, precios competitivos y distribución global masiva.</td>
+    <td>Marketing premium, modelo D2C y posicionamiento tecnológico.</td>
   </tr>
 
   <tr>
@@ -386,24 +386,24 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
   </tr>
   <tr>
     <td>Productos & Servicios</td>
-    <td>Kit de sensores IoT modulares + módulo de riego automático + aplicación móvil/web + chatbot con IA + planes básico y premium por suscripción.</td>
-    <td>Aplicación móvil iOS/Android con plan gratuito y Planta Premium.</td>
-    <td>Jardín inteligente cerrado (Smart Garden 3/9/25) + cápsulas de semillas recurrentes.</td>
-    <td>Home Kit 3.0 hidropónico + Gardyn Membership + yCubes (semillas) + IA Kelby.</td>
+    <td>App móvil/web + IA visual + chatbot + sensores opcionales + riego automático modular + dashboard centralizado.</td>
+    <td>Aplicación móvil con recordatorios y recomendaciones de cuidado.</td>
+    <td>Sensores inteligentes y dispositivos integrados a Xiaomi Home.</td>
+    <td>Home Kit hidropónico + IA Kelby + cámaras + membresía premium.</td>
   </tr>
   <tr>
     <td>Precios & Costos</td>
-    <td>Kit inicial accesible + suscripción mensual (plan básico gratuito, premium con IA y sensores adicionales).</td>
-    <td>App gratuita + Planta Premium ≈ USD 30/año.</td>
-    <td>USD 100–600 según tamaño + cápsulas de semillas recurrentes (USD 10–30 por set).</td>
-    <td>USD 700+ por el Home Kit + membresía mensual con yCubes incluidos.</td>
+    <td>Bajo costo de entrada: acceso inicial sin hardware obligatorio y posibilidad de escalar progresivamente./td>
+    <td>Bajo costo anual mediante suscripción móvil.</td>
+    <td>Hardware económico orientado al mercado masivo.</td>
+    <td>Alto costo inicial y suscripción recurrente.</td>
   </tr>
   <tr>
     <td>Canales de distribución</td>
-    <td>App móvil + Plataforma web + alianzas con viveros y tiendas de hogar inteligente en Perú/LATAM.</td>
-    <td>App Store y Google Play (global).</td>
-    <td>Sitio propio, Amazon y retail de decoración (internacional).</td>
-    <td>Sitio propio D2C (principalmente EE. UU.).</td>
+    <td>Aplicación móvil/web, marketplaces y alianzas con viveros y tiendas tecnológicas locales.</td>
+    <td>App Store y Google Play.</td>
+    <td>E-commerce y retail tecnológico global.</td>
+    <td>Venta directa mediante plataforma propia.</td>
   </tr>
 
   <tr>
@@ -413,31 +413,31 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
     <td>Fortalezas</td>
     <td>
       <ul>
-        <li>Único que combina sensores + riego automático + chatbot con IA</li>
-        <li>Trabaja sobre las plantas y macetas que el usuario ya posee</li>
-        <li>Sensores modulares de bajo costo</li>
-        <li>Plan freemium accesible para LATAM</li>
+        <li>Entrada progresiva sin hardware obligatorio</li>
+        <li>Automatización + IA conversacional + monitoreo</li>
+        <li>Compatible con macetas existentes</li>
+        <li>Enfoque económico y modular para LATAM</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Marca consolidada y comunidad grande</li>
-        <li>IA de identificación por foto muy madura</li>
-        <li>Costo mínimo para el usuario final</li>
+        <li>Gran comunidad de usuarios</li>
+        <li>Experiencia intuitiva</li>
+        <li>Barrera de entrada mínima</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Automatización total del cultivo</li>
-        <li>Diseño atractivo y llave en mano</li>
-        <li>Experiencia educativa para principiantes</li>
+        <li>Precios accesibles</li>
+        <li>Integración smart home consolidada</li>
+        <li>Amplia disponibilidad</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Visión por cámara + IA para diagnóstico</li>
-        <li>Modelo de suscripción recurrente consolidado</li>
-        <li>Branding tecnológico premium</li>
+        <li>Automatización avanzada</li>
+        <li>IA basada en visión artificial</li>
+        <li>Experiencia premium consolidada</li>
       </ul>
     </td>
   </tr>
@@ -445,29 +445,28 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
     <td>Debilidades</td>
     <td>
       <ul>
-        <li>Startup nueva sin posicionamiento consolidado</li>
-        <li>Presupuesto de marketing inicial limitado</li>
-        <li>Requiere validación del hardware a mayor escala</li>
+        <li>Startup sin posicionamiento consolidado</li>
+        <li>Necesita validar confianza en IA y automatización</li>
+        <li>Dependencia inicial de adquisición de usuarios</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>No tiene hardware: depende totalmente del usuario para ejecutar tareas</li>
-        <li>No riega, no mide humedad real del suelo</li>
+        <li>No automatiza acciones físicas</li>
+        <li>Depende totalmente del usuario</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Ecosistema cerrado: solo funciona con sus cápsulas</li>
-        <li>No sirve para las plantas existentes del usuario</li>
-        <li>Costo recurrente de semillas propietarias</li>
+        <li>Monitoreo limitado</li>
+        <li>No incluye IA especializada en jardinería</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Precio muy elevado</li>
-        <li>Disponibilidad geográfica restringida</li>
-        <li>Formato único (no se adapta a macetas)</li>
+        <li>Precio elevado</li>
+        <li>Ecosistema cerrado</li>
+        <li>Baja accesibilidad para LATAM</li>
       </ul>
     </td>
   </tr>
@@ -475,27 +474,27 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
     <td>Oportunidades</td>
     <td>
       <ul>
-        <li>Crecimiento del hogar inteligente en LATAM</li>
-        <li>Auge de la jardinería urbana post-pandemia</li>
-        <li>Adopción masiva de asistentes con IA</li>
+        <li>Crecimiento del smart home en LATAM</li>
+        <li>Aumento de jardinería urbana post-pandemia</li>
+        <li>Mayor adopción de IA conversacional</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Monetizar su base con funciones premium</li>
-        <li>Extender hacia integraciones con hardware de terceros</li>
+        <li>Expandirse hacia automatización física</li>
+        <li>Integración con hardware de terceros</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Tendencia "grow your own food"</li>
-        <li>Expansión a mercados emergentes</li>
+        <li>Integración con hardware de terceros</li>
+        <li>Nuevos sensores domésticos</li>
       </ul>
     </td>
     <td>
       <ul>
         <li>Expansión internacional</li>
-        <li>Alianzas con retailers de alimentos orgánicos</li>
+        <li>Crecimiento de agricultura indoor</li>
       </ul>
     </td>
   </tr>
@@ -503,27 +502,27 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
     <td>Amenazas</td>
     <td>
       <ul>
-        <li>Entrada de grandes players (Xiaomi, Google Home) al segmento</li>
-        <li>Fallas de hardware que erosionen la confianza del usuario</li>
-        <li>Apps gratuitas con IA como alternativa "suficiente"</li>
+        <li>Competencia de ecosistemas IoT consolidados</li>
+        <li>Percepción de bajo valor frente a apps gratuitas</li>
+        <li>Sensibilidad al precio del hardware en LATAM</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Aparición de competidores con hardware integrado</li>
+        <li>Ingreso de competidores con automatización</li>
         <li>Fatiga de suscripciones</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Usuarios que prefieren soluciones abiertas y modulares</li>
-        <li>Alternativas más baratas en Amazon</li>
+        <li>Competidores especializados con IA</li>
+        <li>Dependencia del ecosistema Xiaomi</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Competencia de soluciones modulares más económicas</li>
-        <li>Sensibilidad al precio en contextos de recesión</li>
+        <li>Mercado reducido fuera del segmento premium</li>
+        <li>Alta barrera económica</li>
       </ul>
     </td>
   </tr>
