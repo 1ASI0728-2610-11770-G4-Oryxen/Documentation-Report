@@ -530,21 +530,54 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-**Estrategias generales de Oryxen**
-- Diferenciación por la **integración de automatización + IA conversacional** aplicada sobre las plantas que el usuario ya posee, sin obligarlo a migrar a un ecosistema cerrado.
-- Ecosistema **hardware + software modular**: sensores independientes, riego automatizado y panel centralizado accesible desde web y móvil.
-- Modelo de negocio **freemium** con un plan gratuito para usuarios nuevos y un plan premium con chatbot avanzado y sensores adicionales.
-- Posicionamiento como un **aliado cotidiano** para hogares ocupados y aficionados latinoamericanos, con precios adaptados al mercado regional.
+Hemos identificado diversas estrategias y tácticas para diferenciarnos y competir de manera efectiva dentro del mercado de jardinería inteligente y automatización del hogar. Oryxen busca posicionarse como una solución accesible y especializada para el cuidado de plantas en entornos urbanos, combinando automatización, monitoreo e inteligencia artificial en una sola plataforma.
 
----
+**1. Estrategias de Diferenciación:** <br>
 
-**Tácticas frente a competidores**
+**Automatización Integral del Cuidado:**
+A diferencia de competidores como Planta, que se limitan a la gestión de software y recordatorios. Oryxen incorpora sensores y módulos de riego que permiten automatizar tareas de cuidado y reducir la dependencia del usuario en actividades repetitivas.
 
-| Competidor | Estrategia | Táctica |
-|------------|------------|---------|
-| **Planta** | Complementar y superar el "solo software" con hardware | Mostrar que los recordatorios sin sensores siguen dependiendo del usuario; Oryxen ejecuta, no solo recuerda. Ofrecer importación de especies desde apps de recordatorio como puente de migración. |
-| **Click & Grow** | Diferenciarse del ecosistema cerrado | Comunicar que Oryxen funciona con cualquier maceta y planta que el usuario ya tenga, sin depender de cápsulas propietarias ni de un solo tipo de cultivo. |
-| **Gardyn** | Competir por valor frente a una solución premium y regional | Ofrecer capacidades de IA equivalentes (diagnóstico conversacional por especie) a una fracción del costo y con disponibilidad en LATAM, sin obligar al usuario a comprar un huerto vertical completo. |
+**IA especializada en jardinería:**
+Oryxen integra chatbot conversacional y diagnóstico visual por IA para interpretar el estado de las plantas y recomendar acciones específicas según la especie, el entorno y las condiciones detectadas por los sensores. Esto permite ofrecer una experiencia más personalizada que los sistemas IoT tradicionales.
+
+**Dashboard centralizado y monitoreo inteligente:**
+La plataforma permite visualizar el estado de todas las plantas desde una sola interfaz, incluyendo historial de riego, humedad, alertas y recomendaciones automáticas. Esto brinda mayor control a usuarios con múltiples plantas o poco tiempo disponible.
+
+
+**2. Tácticas de Marketing:** <br>
+
+**Contenido educativo y redes sociales:**
+Se implementarán campañas digitales orientadas a hogares urbanos y adultos mayores, utilizando contenido educativo sobre cuidado de plantas, automatización e IA aplicada al hogar.
+
+**Alianzas con viveros y tiendas tecnológicas:**
+Oryxen buscará colaborar con viveros locales y marketplaces tecnológicos para aumentar visibilidad, facilitar pruebas del producto y fortalecer la confianza del usuario en etapas tempranas.
+
+**Demostraciones y onboarding simplificado:**
+Se priorizará una experiencia de configuración sencilla y demostraciones prácticas del monitoreo y diagnóstico por IA, reduciendo la percepción de complejidad tecnológica asociada al hardware IoT.
+
+
+**3. Estrategias de Precios:** <br>
+
+**Modelo freemium con adopción progresiva:**
+Los usuarios podrán iniciar utilizando funciones gratuitas como chatbot básico, monitoreo manual y diagnóstico visual, sin necesidad de adquirir hardware desde el inicio. Posteriormente podrán incorporar sensores o automatización según sus necesidades y presupuesto.
+
+**Planes escalables según cantidad de plantas:**
+Se ofrecerán planes premium orientados a usuarios con múltiples macetas o necesidades avanzadas, incluyendo automatización inteligente, historial avanzado y análisis personalizados.
+
+**Hardware modular de bajo costo:**
+A diferencia de soluciones premium cerradas, Oryxen priorizará sensores independientes y compatibles con diferentes tipos de macetas, permitiendo reducir costos y facilitar el acceso en el mercado latinoamericano.
+
+
+**4. Expansión y Adaptabilidad:** <br>
+
+**Enfoque inicial en Lima Metropolitana:**
+La startup comenzará enfocándose en usuarios urbanos de Lima Metropolitana, donde existe un crecimiento sostenido en el uso de plantas ornamentales y dispositivos smart home. Posteriormente se evaluará la expansión nacional e internacional.
+
+**Compatibilidad con ecosistemas existentes:**
+Oryxen buscará integrarse progresivamente con plataformas de hogar inteligente y asistentes virtuales, permitiendo aumentar compatibilidad y competitividad frente a ecosistemas consolidados como Xiaomi o Google Home.
+
+**Aprendizaje continuo mediante feedback del usuario:**
+El sistema utilizará interacciones y retroalimentación de los usuarios para mejorar la precisión de alertas, recomendaciones y diagnósticos visuales, fortaleciendo la confianza en la plataforma con el tiempo.
 
 
 <div style="page-break-after: always;"></div>
