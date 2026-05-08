@@ -564,21 +564,21 @@ Los diagramas de arquitectura de software nos ayudan a plantear el sistema de nu
 
 ### 4.3.1.	Software Architecture System Landscape Diagram
 
-Este diagrama representa todos los actores y sistemas del ecosistema Oryxen en un solo nivel: usuarios, Oryxen, servicios externos (Google OAuth2, Stripe), y el dispositivo IoT.
+El System Landscape Diagram presenta una vista general del ecosistema de Oryxen dentro de su entorno tecnológico y de negocio. Se identifican los principales actores que interactúan con la plataforma, así como los sistemas externos integrados, incluyendo servicios de autenticación, pagos, inteligencia artificial y dispositivos IoT. Este diagrama permite comprender cómo Oryxen se posiciona dentro de un ecosistema de jardinería inteligente conectado y orientado a la automatización.
 
-![LandscapeDiagram.png](assets/C4-landscape.png)
+![SystemLandscapeDiagram_Oryxen](./assets/SystemLandscapeDiagram_Oryxen.png)
 
 ### 4.3.2.	Software Architecture Context Level Diagrams
 
-Este diagrama muestra el sistema Oryxen en su entorno, destacando las interacciones con los distintos usuarios (profesionales ocupados, aficionados y desarrolladores), los servicios externos (Google OAuth2 y Plants API) y el dispositivo IoT.
+El Context Level Diagram muestra a Oryxen como un sistema central y explica cómo se relaciona con los usuarios y servicios externos. El objetivo de este diagrama es representar claramente el alcance funcional del sistema y visualizar las dependencias externas necesarias para su operación.
 
-![ContextDiagram.png](assets/C4-context.png)
+![SystemContextDiagram_Oryxen](./assets/SystemContextDiagram_Oryxen.png)
 
 ### 4.3.3.	Software Architecture Container Level Diagrams
 
-Detalla la arquitectura interna de Oryxen en términos de contenedores: aplicación web, aplicación móvil, backend, bases de datos (web y móvil) y la Edge App para el dispositivo IoT. También muestra cómo se conectan entre sí y con sistemas externos.
+El Container Level Diagram presenta la arquitectura interna de Oryxen, mostrando cómo se distribuyen las responsabilidades entre aplicaciones cliente, servicios backend, componentes IoT y la capa de datos. La solución incorpora un API Gateway como punto centralizado de acceso y múltiples servicios especializados alineados a los distintos dominios del negocio, como identidad, gestión de plantas, analíticas, comunidad, notificaciones y suscripciones. Asimismo, se diferencian bases de datos operacionales, analíticas y de telemetría IoT para garantizar escalabilidad y modularidad orientada a la automatización inteligente del cuidado de plantas.
 
-![ContainersDiagram.png](assets/C4-containerrs.png)
+![ContainerDiagram_Oryxen](./assets/ContainerDiagram_Oryxen.png)
 
 ### 4.3.4.	Software Architecture Deployment Diagrams
 
