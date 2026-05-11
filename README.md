@@ -1470,6 +1470,564 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 ![DeploymentDiagram.png](https://i.ibb.co/ycVyb5k0/C4-deployment.png)
 
+---
+
+# Capítulo V: Tactical-Level Software Design
+
+## 5.4. Bounded Context: Artificial Intelligence (AI)
+
+El bounded context de **Artificial Intelligence (AI)** representa el núcleo inteligente de la plataforma Oryxen. Este permite al sistema ser capaz de dar diagnóstico visual, recomendaciones automatizadas y asistencia conversacional mediante modelos de inteligencia artificial aplicados al cuidado de plantas. Este contexto permite analizar imágenes, interpretar métricas provenientes de sensores IoT y ofrecer recomendaciones personalizadas a los usuarios.
+
+### 5.4.1. Domain Layer
+
+La capa de dominio del bounded context **Artificial Intelligence** contiene las clases que modelan el comportamiento inteligente del sistema, incluyendo diagnósticos visuales, recomendaciones automáticas y conversaciones generadas mediante IA.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `PlantDiagnosis`
+
+**Paquete: `com.oryxen.ai.domain.model.aggregates`
+
+**Propósito:** Representa el resultado de un diagnóstico inteligente realizado sobre una planta utilizando imágenes y datos de sensores. Constituye el agregado raíz del bounded context AI.
+
+**Atributos:**
+
+- `diagnosisId: Long` → Identificador único del diagnóstico.
+- `plantId: Long` → Identificador de la planta analizada.
+- `imageUrl: String` → URL de la imagen procesada.
+- `healthStatus: HealthStatus` → Estado de salud detectado.
+- `detectedDisease: String` → Enfermedad o problema identificado.
+- `recommendation: String` → Recomendación generada por IA.
+- `createdAt: DateTime` → Fecha de creación del diagnóstico.
+
+**Métodos:**
+
+- `generateDiagnosis()` → Genera un nuevo diagnóstico inteligente.
+- `updateRecommendation()` → Actualiza recomendaciones generadas.
+- `markAsReviewed()` → Marca el diagnóstico como revisado.
+
+**Relaciones:**
+
+- Un `PlantDiagnosis` pertenece a una sola planta.
+- Una planta puede tener múltiples diagnósticos históricos.
+
+
+**b. Referencias externas del dominio:**
+
+Dentro del contexto AI se utilizan entidades provenientes de otros bounded contexts.
+
+**Plant**
+
+- Origen: `Plant Management`
+- Propósito: Representa la planta analizada por la IA.
+- Atributos relevantes:
+  - `plantId`
+  - `species`
+  - `nickname`
+
+**SensorMetrics**
+
+- Origen: `IoT`
+- Propósito: Representa métricas provenientes de sensores IoT.
+- Atributos relevantes:
+  - `humidity`
+  - `temperature`
+  - `lightLevel`
+
+
+**c. Value Objects:**
+
+`HealthStatus`
+
+Representa el estado de salud detectado en la planta.
+
+- `HEALTHY`
+- `LOW_WATER`
+- `DISEASE_DETECTED`
+- `CRITICAL`
+
+
+**d. Commands del dominio:**
+
+`GenerateDiagnosisCommand`
+
+**Paquete:** `com.oryxen.ai.domain.model.commands`
+
+**Propósito:** Representa la intención de generar un diagnóstico inteligente.
+
+**Atributos:**
+
+- `plantId: Long`
+- `imageUrl: String`
+
+
+`GenerateRecommendationCommand`
+
+**Propósito:** Generar recomendaciones automáticas basadas en métricas y diagnósticos.
+
+**Atributos:**
+
+- `plantId: Long`
+- `diagnosisId: Long`
+
+
+**e. Queries del dominio:**
+
+`GetDiagnosisByIdQuery`
+
+**Propósito:** Obtener un diagnóstico específico.
+
+**Atributos:**
+
+- `diagnosisId: Long`
+
+
+`GetPlantDiagnosisHistoryQuery`
+
+**Propósito:** Obtener el historial de diagnósticos de una planta.
+
+**Atributos:**
+
+- `plantId: Long`
+
+
+**f. Domain Services:**
+
+`DiagnosisCommandService`
+
+**Paquete:** `com.oryxen.ai.domain.services`
+
+**Propósito:** Define las operaciones de escritura relacionadas al diagnóstico inteligente.
+
+**Operaciones:**
+
+- `handle(GenerateDiagnosisCommand)`
+- `handle(GenerateRecommendationCommand)`
+
+
+`DiagnosisQueryService`
+
+**Propósito:** Define las operaciones de lectura del contexto AI.
+
+**Operaciones:**
+
+- `handle(GetDiagnosisByIdQuery)`
+- `handle(GetPlantDiagnosisHistoryQuery)`
+
+
+**g. Repository:**
+
+`PlantDiagnosisRepository`
+
+**Paquete:** `com.oryxen.ai.infrastructure.persistence.jpa.repositories`
+
+**Propósito:** Permite acceder a la persistencia de diagnósticos inteligentes.
+
+**Operaciones:**
+
+- `save(PlantDiagnosis)`
+- `findById(Long)`
+- `findByPlantId(Long)`
+- `findAll()`
+
+
+### 5.4.2. Interface Layer
+
+La Interface Layer del bounded context **Artificial Intelligence** contiene las clases responsables de exponer las funcionalidades relacionadas al diagnóstico inteligente y chatbot IA mediante endpoints REST consumidos por las aplicaciones móviles y web.
+
+**a. AIController**
+
+**Paquete:** `com.oryxen.ai.interfaces.rest`
+
+**Propósito:** Exponer los endpoints relacionados con diagnósticos IA y recomendaciones inteligentes.
+
+**Dependencias:**
+
+- `DiagnosisCommandService`
+- `DiagnosisQueryService`
+
+**Endpoints expuestos:**
+
+- `POST /api/v1/ai/diagnosis`
+- `GET /api/v1/ai/diagnosis/{id}`
+- `GET /api/v1/ai/plants/{id}/history`
+- `POST /api/v1/ai/recommendations`
+
+
+**b. Resources / DTOs:**
+
+`PlantDiagnosisResource`
+
+**Propósito:** Representar la información del diagnóstico enviada al frontend.
+
+**Atributos:**
+
+- `diagnosisId`
+- `plantId`
+- `healthStatus`
+- `detectedDisease`
+- `recommendation`
+- `createdAt`
+
+
+`GenerateDiagnosisResource`
+
+**Propósito:** Representar los datos necesarios para generar un diagnóstico.
+
+**Atributos:**
+
+- `plantId`
+- `imageUrl`
+
+
+**c. Assemblers:**
+
+`DiagnosisResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `PlantDiagnosis` en recursos consumibles por frontend.
+
+
+`GenerateDiagnosisCommandFromResourceAssembler`
+
+**Propósito:** Transformar un `GenerateDiagnosisResource` en `GenerateDiagnosisCommand`.
+
+
+### 5.4.3. Application Layer
+
+La Application Layer del bounded context **Artificial Intelligence** coordina los procesos relacionados con análisis inteligente, recomendaciones automáticas y consultas de diagnósticos.
+
+**Capacidades principales del contexto:**
+
+- Generar diagnósticos inteligentes.
+- Generar recomendaciones automáticas.
+- Consultar historial de diagnósticos.
+- Integrar modelos IA externos.
+
+
+**a. Command Handlers / Command Services:**
+
+`DiagnosisCommandServiceImpl`
+
+**Paquete:** `com.oryxen.ai.application.internal.commandservices`
+
+**Dependencias:**
+
+- `PlantDiagnosisRepository`
+- `PlantRepository`
+- `OpenAIClient`
+
+**Operaciones que maneja:**
+
+`handle(GenerateDiagnosisCommand command)`
+
+- Valida que la planta exista.
+- Envía la imagen al modelo IA.
+- Procesa la respuesta del modelo.
+- Genera un nuevo `PlantDiagnosis`.
+- Persiste el resultado.
+
+`handle(GenerateRecommendationCommand command)`
+
+- Analiza métricas históricas.
+- Genera recomendaciones personalizadas.
+- Actualiza el diagnóstico asociado.
+
+
+**b. Query Handlers / Query Services:**
+
+`DiagnosisQueryServiceImpl`
+
+**Propósito:** Gestionar operaciones de lectura relacionadas a diagnósticos.
+
+**Dependencias:**
+
+- `PlantDiagnosisRepository`
+
+**Operaciones:**
+
+- `handle(GetDiagnosisByIdQuery)`
+- `handle(GetPlantDiagnosisHistoryQuery)`
+
+
+**c. Flujos principales del negocio:**
+
+**Flujo de diagnóstico inteligente:**
+
+- El frontend envía una imagen.
+- Se construye `GenerateDiagnosisCommand`.
+- `DiagnosisCommandServiceImpl` valida la planta.
+- La imagen es enviada al modelo IA externo.
+- Se genera el diagnóstico.
+- Se persiste mediante `PlantDiagnosisRepository`.
+- Se retorna el resultado al cliente.
+
+
+**Flujo de consulta de historial:**
+
+- El frontend solicita historial de diagnósticos.
+- Se ejecuta `GetPlantDiagnosisHistoryQuery`.
+- El repositorio recupera diagnósticos históricos.
+- Se transforman a recursos REST.
+- Se retorna la respuesta.
+
+
+### 5.4.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context `Artificial Intelligence` contiene los componentes encargados de persistencia e integración con servicios externos de IA.
+
+
+**a. Repositorio de persistencia:**
+
+`PlantDiagnosisRepository`
+
+**Paquete:** `com.oryxen.ai.infrastructure.persistence.jpa.repositories`
+
+**Propósito:** Gestionar persistencia mediante Spring Data JPA.
+
+**Operaciones disponibles:**
+
+- `save`
+- `findById`
+- `findByPlantId`
+- `findAll`
+
+
+**b. Persistencia de la entidad PlantDiagnosis:**
+
+La entidad `PlantDiagnosis` está mapeada como entidad JPA utilizando:
+
+- `@Entity`
+- `@Table(name = "plant_diagnosis")`
+- `@Id`
+- `@GeneratedValue(strategy = GenerationType.IDENTITY)`
+
+
+**c. Diseño de persistencia:**
+
+**Tabla principal:** `plant_diagnosis`
+
+**Columnas:**
+
+- `diagnosis_id`
+- `plant_id`
+- `image_url`
+- `health_status`
+- `detected_disease`
+- `recommendation`
+- `created_at`
+
+**Restricciones:**
+
+- `diagnosis_id` → Primary Key
+- `plant_id` → Foreign Key hacia `plants.plant_id`
+
+**Campos obligatorios:**
+
+- `plant_id`
+- `health_status`
+- `created_at`
+
+
+**d. Integración con otros bounded contexts:**
+
+La infraestructura del contexto AI depende de:
+
+- `PlantRepository` del bounded context `Plant Management`
+- `IoT Metrics Service` del bounded context `IoT`
+- `OpenAI API` como servicio externo de IA
+
+
+### 5.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Artificial Intelligence` representa la descomposición del contenedor backend encargado de diagnósticos inteligentes y recomendaciones automatizadas.
+
+**Componentes principales:**
+
+**AI REST API Component:**
+
+Expone endpoints REST relacionados a IA mediante `AIController`.
+
+**Responsabilidades:**
+
+- Recibir solicitudes del frontend.
+- Gestionar diagnósticos.
+- Retornar recomendaciones.
+
+
+**AI Transformation Component:**
+
+Encargado de transformar datos entre DTOs, commands y entidades.
+
+**Incluye:**
+
+- `PlantDiagnosisResource`
+- `GenerateDiagnosisResource`
+- Assemblers
+
+
+**AI Command Processing Component**
+
+Implementado por `DiagnosisCommandServiceImpl`.
+
+**Responsabilidades:**
+
+- Ejecutar diagnósticos IA.
+- Procesar recomendaciones.
+- Coordinar integración con OpenAI.
+
+
+**AI Query Processing Component:**
+
+Implementado por `DiagnosisQueryServiceImpl`.
+
+**Responsabilidades:**
+
+- Consultar diagnósticos.
+- Recuperar historial.
+
+
+**AI Domain Component**
+
+Representa el núcleo del dominio.
+
+### Incluye:
+
+- `PlantDiagnosis`
+- `HealthStatus`
+
+
+**AI Persistence Component:**
+
+Gestiona persistencia mediante `PlantDiagnosisRepository`.
+
+
+**External AI Integration Component:**
+
+Representa integración con servicios externos IA.
+
+**Incluye:**
+
+- `OpenAIClient`
+- APIs de análisis visual
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_AI](./assets/Chapter-5/ComponentsDiagram_AI.png)
+
+
+**Relaciones entre componentes:**
+
+- `AI REST API Component → AI Transformation Component`
+- `AI REST API Component → AI Command Processing Component`
+- `AI REST API Component → AI Query Processing Component`
+- `AI Command Processing Component → External AI Integration Component`
+- `AI Command Processing Component → AI Domain Component`
+- `AI Command Processing Component → AI Persistence Component`
+- `AI Query Processing Component → AI Persistence Component`
+
+
+### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Artificial Intelligence`, permitiendo visualizar el detalle del dominio y persistencia del contexto.
+
+
+#### 5.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Artificial Intelligence` muestra al agregado principal `PlantDiagnosis`, encargado de representar diagnósticos inteligentes asociados a plantas.
+
+Además, se incluyen:
+
+- `HealthStatus` como Value Object.
+- Commands y Queries.
+- Servicios del dominio.
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_AI](./assets/Chapter-5/UMLClassDiagram_AI.png)
+
+
+**Relaciones:**
+
+- `PlantDiagnosis` es el Aggregate Root del contexto.
+- `PlantDiagnosis` pertenece a una sola planta.
+- `HealthStatus` representa el estado de salud de la planta.
+- `DiagnosisCommandService` utiliza `PlantDiagnosisRepository`.
+- `DiagnosisQueryService` utiliza `PlantDiagnosisRepository`.
+
+
+#### 5.4.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Artificial Intelligence` representa la estructura relacional utilizada para almacenar diagnósticos y recomendaciones inteligentes.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_AI](./assets/Chapter-5/ERDDiagram_AI.png)
+
+
+**Tabla principal:** `plant_diagnosis`
+
+**Atributos:**
+
+- `diagnosis_id`
+- `plant_id`
+- `image_url`
+- `health_status`
+- `detected_disease`
+- `recommendation`
+- `created_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`diagnosis_id`)
+- FOREIGN KEY (`plant_id`) → `plants(plant_id)`
+- NOT NULL en:
+  - `plant_id`
+  - `health_status`
+  - `created_at`
+
+
+**Tabla relacionada:** `plants`
+
+Representa las plantas registradas dentro del bounded context Plant Management.
+
+**Atributos relevantes:**
+
+- `plant_id`
+- `species`
+- `nickname`
+
+**Constraints:**
+
+- PRIMARY KEY (`plant_id`)
+
+
+**Tabla relacionada:** `sensor_metrics`
+
+Representa métricas ambientales obtenidas desde sensores IoT utilizados para complementar los diagnósticos inteligentes.
+
+**Atributos:**
+
+- `metric_id`
+- `plant_id`
+- `humidity`
+- `temperature`
+- `light_level`
+- `recorded_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`metric_id`)
+- FOREIGN KEY (`plant_id`) → plants(`plant_id`)
+
+
+**Relaciones entre tablas:**
+
+- `plants (1) ──── (*) plant_diagnosis`
+- `plants (1) ──── (*) sensor_metrics`
+
+---
 
 # Conclusiones
 
