@@ -1486,7 +1486,7 @@ La capa de dominio del bounded context **Artificial Intelligence** contiene las 
 
 **Nombre de la clase:** `PlantDiagnosis`
 
-**Paquete: `com.oryxen.ai.domain.model.aggregates`
+**Paquete: `com.upc.oryxen.ai.domain.model.aggregates`
 
 **Propósito:** Representa el resultado de un diagnóstico inteligente realizado sobre una planta utilizando imágenes y datos de sensores. Constituye el agregado raíz del bounded context AI.
 
@@ -1551,7 +1551,7 @@ Representa el estado de salud detectado en la planta.
 
 `GenerateDiagnosisCommand`
 
-**Paquete:** `com.oryxen.ai.domain.model.commands`
+**Paquete:** `com.upc.oryxen.ai.domain.model.commands`
 
 **Propósito:** Representa la intención de generar un diagnóstico inteligente.
 
@@ -1595,7 +1595,7 @@ Representa el estado de salud detectado en la planta.
 
 `DiagnosisCommandService`
 
-**Paquete:** `com.oryxen.ai.domain.services`
+**Paquete:** `com.upc.oryxen.ai.domain.services`
 
 **Propósito:** Define las operaciones de escritura relacionadas al diagnóstico inteligente.
 
@@ -1619,7 +1619,7 @@ Representa el estado de salud detectado en la planta.
 
 `PlantDiagnosisRepository`
 
-**Paquete:** `com.oryxen.ai.infrastructure.persistence.jpa.repositories`
+**Paquete:** `com.upc.oryxen.ai.infrastructure.persistence.jpa.repositories`
 
 **Propósito:** Permite acceder a la persistencia de diagnósticos inteligentes.
 
@@ -1637,7 +1637,7 @@ La Interface Layer del bounded context **Artificial Intelligence** contiene las 
 
 **a. AIController**
 
-**Paquete:** `com.oryxen.ai.interfaces.rest`
+**Paquete:** `com.upc.oryxen.ai.interfaces.rest`
 
 **Propósito:** Exponer los endpoints relacionados con diagnósticos IA y recomendaciones inteligentes.
 
@@ -1708,7 +1708,7 @@ La Application Layer del bounded context **Artificial Intelligence** coordina lo
 
 `DiagnosisCommandServiceImpl`
 
-**Paquete:** `com.oryxen.ai.application.internal.commandservices`
+**Paquete:** `com.upc.oryxen.ai.application.internal.commandservices`
 
 **Dependencias:**
 
@@ -1780,7 +1780,7 @@ La Infrastructure Layer del bounded context `Artificial Intelligence` contiene l
 
 `PlantDiagnosisRepository`
 
-**Paquete:** `com.oryxen.ai.infrastructure.persistence.jpa.repositories`
+**Paquete:** `com.upc.oryxen.ai.infrastructure.persistence.jpa.repositories`
 
 **Propósito:** Gestionar persistencia mediante Spring Data JPA.
 
@@ -2026,6 +2026,870 @@ Representa métricas ambientales obtenidas desde sensores IoT utilizados para co
 
 - `plants (1) ──── (*) plant_diagnosis`
 - `plants (1) ──── (*) sensor_metrics`
+
+
+---
+
+## 5.6. Bounded Context: Notification
+
+El bounded context **Notification** representa la capacidad de Oryxen para enviar alertas, recordatorios y notificaciones personalizadas a los usuarios, con el objetivo de mantener informados a los usuarios sobre eventos relevantes del sistema, como necesidades de riego, diagnósticos generados por IA, cambios en el estado de una planta o actualizaciones importantes de la plataforma.
+
+
+### 5.6.1. Domain Layer
+
+La capa de dominio del bounded context **Notification** contiene las clases que modelan el comportamiento principal relacionado con el envío y gestión de notificaciones dentro de la plataforma. En esta capa se definen las reglas de negocio asociadas a la generación, programación, lectura y configuración de notificaciones.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `Notification`  
+**Paquete:** `com.upc.oryxen.notification.domain.model.aggregates`
+
+**Propósito:**  
+Representa una notificación generada por el sistema para informar a un usuario sobre un evento relevante. Constituye el agregado raíz del bounded context Notification.
+
+**Atributos:**
+
+- `notificationId: Long` → Identificador único de la notificación.
+- `userId: Long` → Identificador del usuario destinatario.
+- `plantId: Long?` → Identificador de la planta asociada, si aplica.
+- `type: NotificationType` → Tipo de notificación.
+- `channel: NotificationChannel` → Canal por el cual se enviará la notificación.
+- `title: String` → Título corto de la notificación.
+- `message: String` → Mensaje descriptivo.
+- `status: NotificationStatus` → Estado actual de la notificación.
+- `scheduledAt: DateTime?` → Fecha programada de envío.
+- `sentAt: DateTime?` → Fecha en que fue enviada.
+- `readAt: DateTime?` → Fecha en que fue leída.
+- `createdAt: DateTime` → Fecha de creación.
+
+**Métodos:**
+
+- `createNotification()` → Crea una nueva notificación en estado inicial.
+- `scheduleNotification()` → Programa el envío de una notificación.
+- `markAsSent()` → Marca la notificación como enviada.
+- `markAsRead()` → Marca la notificación como leída.
+- `cancelNotification()` → Cancela una notificación programada.
+
+**Relaciones:**
+
+- Una `Notification` pertenece a un solo usuario.
+- Una notificación puede estar asociada a una planta.
+- Un usuario puede tener múltiples notificaciones.
+
+
+**b. Entity:**
+
+**Nombre de la clase:** `NotificationPreference`  
+**Paquete:** `com.upc.oryxen.notification.domain.model.entities`  
+
+**Propósito:**  
+Representa las preferencias de notificación configuradas por el usuario, como canales habilitados, tipos de alertas recibidas y horarios silenciosos.
+
+**Atributos:**
+
+- `preferenceId: Long` → Identificador único.
+- `userId: Long` → Identificador del usuario.
+- `pushEnabled: Boolean` → Indica si las notificaciones push están habilitadas.
+- `diagnosisAlertsEnabled: Boolean` → Habilita alertas por diagnósticos IA.
+- `wateringAlertsEnabled: Boolean` → Habilita alertas por riego.
+- `communityAlertsEnabled: Boolean` → Habilita alertas de comunidad.
+- `quietHoursStart: LocalTime?` → Hora de inicio del modo silencioso.
+- `quietHoursEnd: LocalTime?` → Hora de fin del modo silencioso.
+- `createdAt: DateTime` → Fecha de creación.
+- `updatedAt: DateTime` → Fecha de actualización.
+
+**Métodos:**
+
+- `updatePreferences()` → Actualiza la configuración del usuario.
+- `enablePushNotifications()` → Activa el canal push.
+- `disablePushNotifications()` → Desactiva el canal push.
+
+
+**c. Entity:**
+
+**Nombre de la clase:** `DeviceToken`  
+**Paquete:** `com.upc.oryxen.notification.domain.model.entities`  
+
+**Propósito:**  
+Representa el token de un dispositivo móvil registrado para recibir notificaciones push.
+
+**Atributos:**
+
+- `tokenId: Long` → Identificador único.
+- `userId: Long` → Usuario propietario del token.
+- `deviceToken: String` → Token generado por FCM.
+- `platform: String` → Plataforma del dispositivo (Android/iOS).
+- `active: Boolean` → Indica si el token sigue activo.
+- `createdAt: DateTime` → Fecha de registro.
+- `lastUsedAt: DateTime?` → Última vez que el token fue usado.
+
+**Métodos:**
+
+- `registerToken()` → Registra un nuevo token.
+- `deactivateToken()` → Desactiva un token inválido.
+- `updateLastUsed()` → Actualiza el último uso.
+
+
+**d. Referencias externas del dominio:**
+
+Dentro del contexto Notification se utilizan entidades provenientes de otros bounded contexts:
+
+**UserProfile**
+- Origen: `Identity & Access`
+- Propósito: Representa al usuario receptor de la notificación.
+- Atributos relevantes:
+  - `userId`
+  - `name`
+  - `email`
+
+**Plant**
+- Origen: `Plant Management`
+- Propósito: Representa la planta asociada a la notificación.
+- Atributos relevantes:
+  - `plantId`
+  - `species`
+  - `nickname`
+
+
+**e. Value Objects:**
+
+**`NotificationType`**
+
+Representa el tipo de notificación generada por el sistema.
+
+- `WATERING_REMINDER`
+- `DIAGNOSIS_ALERT`
+- `SYSTEM_ALERT`
+- `COMMUNITY_UPDATE`
+
+**`NotificationChannel`**
+
+Representa el canal de entrega de la notificación.
+
+- `PUSH`
+- `EMAIL`
+- `IN_APP`
+
+**`NotificationStatus`**
+
+Representa el estado de la notificación.
+
+- `PENDING`
+- `SENT`
+- `READ`
+- `CANCELLED`
+- `FAILED`
+
+
+**f. Commands del dominio:**
+
+**`SendNotificationCommand`**  
+**Paquete:** `com.upc.oryxen.notification.domain.model.commands`
+
+**Propósito:**  
+Representa la intención de enviar una notificación inmediata.
+
+**Atributos:**
+
+- `userId: Long`
+- `plantId: Long?`
+- `type: NotificationType`
+- `channel: NotificationChannel`
+- `title: String`
+- `message: String`
+
+
+**`ScheduleNotificationCommand`**  
+
+**Propósito:**  
+Representa la intención de programar una notificación para una fecha futura.
+
+**Atributos:**
+
+- `userId: Long`
+- `plantId: Long?`
+- `type: NotificationType`
+- `channel: NotificationChannel`
+- `title: String`
+- `message: String`
+- `scheduledAt: DateTime`
+
+
+**`MarkNotificationAsReadCommand`**
+
+**Propósito:**  
+Marca una notificación como leída por el usuario.
+
+**Atributos:**
+
+- `notificationId: Long`
+
+
+**`UpdateNotificationPreferencesCommand`**
+
+**Propósito:**  
+Actualiza la configuración de preferencias de notificación del usuario.
+
+**Atributos:**
+
+- `userId: Long`
+- `pushEnabled: Boolean`
+- `diagnosisAlertsEnabled: Boolean`
+- `wateringAlertsEnabled: Boolean`
+- `communityAlertsEnabled: Boolean`
+- `quietHoursStart: LocalTime?`
+- `quietHoursEnd: LocalTime?`
+
+
+**g. Queries del dominio:**
+
+**`GetNotificationsByUserQuery`**
+
+**Propósito:**  
+Obtener todas las notificaciones de un usuario.
+
+**Atributos:**
+
+- `userId: Long`
+
+
+**`GetUnreadNotificationsQuery`**
+
+**Propósito:**  
+Obtener las notificaciones no leídas de un usuario.
+
+**Atributos:**
+
+- `userId: Long`
+
+
+**`GetNotificationPreferencesQuery`**
+
+**Propósito:**  
+Obtener las preferencias de notificación de un usuario.
+
+**Atributos:**
+
+- `userId: Long`
+
+
+**h. Domain Services:**
+
+**`NotificationCommandService`**  
+**Paquete:** `com.upc.oryxen.notification.domain.services`
+
+**Propósito:**  
+Define las operaciones de escritura relacionadas con el envío y configuración de notificaciones.
+
+**Operaciones:**
+
+- `handle(SendNotificationCommand)`
+- `handle(ScheduleNotificationCommand)`
+- `handle(MarkNotificationAsReadCommand)`
+- `handle(UpdateNotificationPreferencesCommand)`
+
+
+**`NotificationQueryService`**
+
+**Propósito:**  
+Define las operaciones de lectura del contexto Notification.
+
+**Operaciones:**
+
+- `handle(GetNotificationsByUserQuery)`
+- `handle(GetUnreadNotificationsQuery)`
+- `handle(GetNotificationPreferencesQuery)`
+
+
+**i. Repository:**
+
+**`NotificationRepository`**  
+**Paquete:** `com.upc.oryxen.notification.infrastructure.persistence.jpa.repositories`
+
+**Propósito:**  
+Permite acceder a la persistencia de notificaciones.
+
+**Operaciones:**
+
+- `save(Notification)`
+- `findById(Long)`
+- `findByUserId(Long)`
+- `findByStatus(NotificationStatus)`
+- `findAll()`
+
+
+**`NotificationPreferenceRepository`**  
+
+**Propósito:**  
+Permite acceder a la persistencia de preferencias de notificación.
+
+**Operaciones:**
+
+- `save(NotificationPreference)`
+- `findByUserId(Long)`
+
+
+**`DeviceTokenRepository`**  
+
+**Propósito:**  
+Permite persistir y recuperar tokens de dispositivos móviles.
+
+**Operaciones:**
+
+- `save(DeviceToken)`
+- `findByUserId(Long)`
+- `findByDeviceToken(String)
+
+
+### 5.6.2. Interface Layer
+
+La Interface Layer del bounded context **Notification** contiene las clases responsables de exponer las funcionalidades relacionadas con alertas, recordatorios y preferencias de notificación a través de endpoints REST consumidos por las aplicaciones móviles y web.
+
+**a. `NotificationController`**
+
+**Paquete:** `com.upc.oryxen.notification.interfaces.rest`
+
+**Propósito:**  
+Exponer los endpoints HTTP para crear, consultar y actualizar notificaciones y preferencias.
+
+**Dependencias:**
+
+- `NotificationCommandService`
+- `NotificationQueryService`
+
+**Endpoints expuestos:**
+
+- `POST /api/v1/notifications` → enviar notificación
+- `POST /api/v1/notifications/schedule` → programar notificación
+- `GET /api/v1/notifications/users/{userId}` → listar notificaciones de un usuario
+- `GET /api/v1/notifications/users/{userId}/unread` → listar notificaciones no leídas
+- `PUT /api/v1/notifications/{id}/read` → marcar como leída
+- `GET /api/v1/notifications/preferences/{userId}` → obtener preferencias
+- `PUT /api/v1/notifications/preferences/{userId}` → actualizar preferencias
+
+
+**b. Resources / DTOs:**
+
+**`NotificationResource`**
+
+**Propósito:**  
+Representar la información de una notificación enviada al frontend.
+
+**Atributos:**
+
+- `notificationId`
+- `userId`
+- `plantId`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `scheduledAt`
+- `sentAt`
+- `readAt`
+- `createdAt`
+
+
+**`SendNotificationResource`**
+
+**Propósito:**  
+Representar los datos necesarios para crear una notificación.
+
+**Atributos:**
+
+- `userId`
+- `plantId`
+- `type`
+- `channel`
+- `title`
+- `message`
+
+
+**`NotificationPreferenceResource`**
+
+**Propósito:**  
+Representar la configuración de preferencias del usuario.
+
+**Atributos:**
+
+- `userId`
+- `pushEnabled`
+- `diagnosisAlertsEnabled`
+- `wateringAlertsEnabled`
+- `communityAlertsEnabled`
+- `quietHoursStart`
+- `quietHoursEnd`
+
+
+**c. Assemblers:**
+
+**`NotificationResourceFromEntityAssembler`**  
+**Propósito:**  
+Transformar una entidad `Notification` en un `NotificationResource`.
+
+
+**`SendNotificationCommandFromResourceAssembler`**  
+**Propósito:**  
+Transformar un `SendNotificationResource` en un `SendNotificationCommand`.
+
+
+**`NotificationPreferenceResourceFromEntityAssembler`**  
+**Propósito:**  
+Transformar una entidad `NotificationPreference` en un `NotificationPreferenceResource`.
+
+
+**`UpdateNotificationPreferencesCommandFromResourceAssembler`**  
+**Propósito:**  
+Transformar un `NotificationPreferenceResource` en un `UpdateNotificationPreferencesCommand`.
+
+
+### 5.6.3. Application Layer
+
+La Application Layer del bounded context **Notification** coordina los procesos de negocio relacionados con el envío de alertas, la programación de recordatorios y la administración de preferencias del usuario.
+
+**Capacidades principales:**
+
+- Enviar notificaciones inmediatas.
+- Programar recordatorios.
+- Marcar notificaciones como leídas.
+- Consultar historial de notificaciones.
+- Configurar preferencias de entrega.
+
+
+**a. Command Handlers / Command Services:**
+
+**`NotificationCommandServiceImpl`**  
+**Paquete:** `com.upc.oryxen.notification.application.internal.commandservices`
+
+**Dependencias:**
+
+- `NotificationRepository`
+- `NotificationPreferenceRepository`
+- `DeviceTokenRepository`
+- `PlantRepository`
+- `FirebaseNotificationAdapter`
+
+**Operaciones que maneja:**
+
+**`handle(SendNotificationCommand command)`**
+- Valida que el usuario exista.
+- Valida preferencias del usuario.
+- Genera la notificación.
+- La envía por el canal correspondiente.
+- Persiste el registro en base de datos.
+
+**`handle(ScheduleNotificationCommand command)`**
+- Programa la notificación para una fecha futura.
+- Registra el evento en estado `PENDING`.
+- Deja la ejecución a un scheduler.
+
+**`handle(MarkNotificationAsReadCommand command)`**
+- Busca la notificación.
+- Cambia su estado a `READ`.
+- Guarda la actualización.
+
+**`handle(UpdateNotificationPreferencesCommand command)`**
+- Recupera las preferencias del usuario.
+- Actualiza canales y horarios.
+- Persiste la nueva configuración.
+
+---
+
+**b. Query Handlers / Query Services:**
+
+**`NotificationQueryServiceImpl`**  
+**Propósito:**  
+Gestionar operaciones de lectura relacionadas con notificaciones y preferencias.
+
+**Dependencias:**
+
+- `NotificationRepository`
+- `NotificationPreferenceRepository`
+
+**Operaciones:**
+
+- `handle(GetNotificationsByUserQuery)`
+- `handle(GetUnreadNotificationsQuery)`
+- `handle(GetNotificationPreferencesQuery)`
+
+
+**c. Flujos principales del negocio:**
+
+**Flujo de notificación por riego o alerta:**
+- El backend detecta un evento desde IoT o IA.
+- Se construye un `SendNotificationCommand`.
+- `NotificationCommandServiceImpl` valida preferencias.
+- La notificación se envía al usuario por FCM.
+- La notificación queda persistida con estado `SENT`.
+
+**Flujo de recordatorio programado:**
+- El frontend o un servicio interno solicita programar una alerta.
+- Se crea `ScheduleNotificationCommand`.
+- El scheduler ejecuta el envío en el momento indicado.
+- La notificación se marca como `SENT`.
+
+**Flujo de lectura de notificaciones:**
+- El usuario consulta su bandeja de alertas.
+- Se ejecuta `GetNotificationsByUserQuery`.
+- Se devuelven los recursos al frontend.
+- Si el usuario abre una notificación, se ejecuta `MarkNotificationAsReadCommand`.
+
+
+### 5.6.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context **Notification** contiene los componentes encargados del acceso a base de datos, la integración con Firebase Cloud Messaging y la ejecución de tareas programadas.
+
+**a. Repositorios de persistencia:**
+
+**`NotificationRepository`**  
+**Paquete:** `com.oryxen.notification.infrastructure.persistence.jpa.repositories`
+
+**Propósito:**  
+Gestionar la persistencia y recuperación de notificaciones mediante Spring Data JPA.
+
+**Operaciones disponibles:**
+
+- `save`
+- `findById`
+- `findByUserId`
+- `findByStatus`
+- `findAll()`
+
+
+**`NotificationPreferenceRepository`**
+
+**Propósito:**  
+Gestionar la persistencia de preferencias del usuario.
+
+**Operaciones:**
+
+- `save`
+- `findByUserId`
+
+
+**`DeviceTokenRepository`**
+
+**Propósito:**  
+Gestionar tokens de dispositivos registrados para push notifications.
+
+**Operaciones:**
+
+- `save`
+- `findByUserId`
+- `findByDeviceToken`
+
+
+**b. Persistencia de la entidad Notification:**
+
+La entidad `Notification` está mapeada como entidad JPA con las siguientes características:
+
+- `@Entity`
+- `@Table(name = "notifications")`
+- `@Id`
+- `@GeneratedValue(strategy = GenerationType.IDENTITY)`
+
+
+**c. Diseño de persistencia:**
+
+**Tabla principal: `notifications`**
+
+**Columnas:**
+
+- `notification_id`
+- `user_id`
+- `plant_id`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `scheduled_at`
+- `sent_at`
+- `read_at`
+- `created_at`
+
+**Restricciones:**
+
+- `notification_id` → Primary Key
+- `user_id` → Foreign Key hacia `user_profiles.id`
+- `plant_id` → Foreign Key hacia `plants.plant_id` (nullable)
+
+**Campos obligatorios:**
+
+- `user_id`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `created_at`
+
+
+**Tabla relacionada: `notification_preferences`**
+
+**Columnas:**
+
+- `preference_id`
+- `user_id`
+- `push_enabled`
+- `diagnosis_alerts_enabled`
+- `watering_alerts_enabled`
+- `community_alerts_enabled`
+- `quiet_hours_start`
+- `quiet_hours_end`
+- `created_at`
+- `updated_at`
+
+**Constraints:**
+
+- `preference_id` → Primary Key
+- `user_id` → Foreign Key hacia `user_profiles.id`
+- `user_id` → Unique
+
+
+**Tabla relacionada: `device_tokens`**
+
+**Columnas:**
+
+- `token_id`
+- `user_id`
+- `device_token`
+- `platform`
+- `active`
+- `created_at`
+- `last_used_at`
+
+**Constraints:**
+
+- `token_id` → Primary Key
+- `user_id` → Foreign Key hacia `user_profiles.id`
+- `device_token` → Unique
+
+
+**d. Integración con otros bounded contexts:**
+
+La infraestructura del contexto Notification depende de:
+
+- `UserProfileRepository` del bounded context `Identity & Access`
+- `PlantRepository` del bounded context `Plant Management`
+- `Firebase Cloud Messaging` como servicio externo para push notifications
+- `Scheduler` interno para notificaciones programadas
+
+
+### 5.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context **Notification** representa la descomposición de los procesos para el envío de alertas y gestión de preferencias.
+
+**Componentes principales:**
+
+**Notification REST API Component**  
+Expone endpoints REST relacionados con notificaciones mediante `NotificationController`.
+
+**Responsabilidades:**
+
+- Recibir solicitudes del frontend.
+- Gestionar envío y consulta de notificaciones.
+- Retornar respuestas estructuradas.
+
+
+**Notification Transformation Component**  
+Encargado de transformar datos entre DTOs, commands y entidades.
+
+**Incluye:**
+
+- `NotificationResource`
+- `SendNotificationResource`
+- `NotificationPreferenceResource`
+- Assemblers
+
+
+**Notification Command Processing Component**  
+Implementado por `NotificationCommandServiceImpl`.
+
+**Responsabilidades:**
+
+- Enviar notificaciones.
+- Programar alertas.
+- Marcar como leídas.
+- Actualizar preferencias.
+
+
+**Notification Query Processing Component**  
+Implementado por `NotificationQueryServiceImpl`.
+
+**Responsabilidades:**
+
+- Consultar notificaciones.
+- Obtener preferencias.
+- Recuperar historial.
+
+
+**Notification Domain Component**  
+Representa el núcleo del dominio.
+
+**Incluye:**
+
+- `Notification`
+- `NotificationPreference`
+- `DeviceToken`
+- `NotificationType`
+- `NotificationChannel`
+- `NotificationStatus`
+
+
+**Notification Persistence Component**  
+Gestiona persistencia mediante repositorios JPA.
+
+**Incluye:**
+
+- `NotificationRepository`
+- `NotificationPreferenceRepository`
+- `DeviceTokenRepository`
+
+
+**External Notification Integration Component**  
+Representa integración con servicios externos de mensajería.
+
+**Incluye:**
+
+- `FirebaseNotificationAdapter`
+- `Scheduler`
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_Notification](./assets/Chapter-5/ComponentsDiagram_Notification.png)
+
+
+**Relaciones entre componentes:**
+
+- `Notification REST API Component → Notification Transformation Component`
+- `Notification REST API Component → Notification Command Processing Component`
+- `Notification REST API Component → Notification Query Processing Component`
+- `Notification Command Processing Component → External Notification Integration Component`
+- `Notification Command Processing Component → Notification Domain Component`
+- `Notification Command Processing Component → Notification Persistence Component`
+- `Notification Query Processing Component → Notification Persistence Component`
+
+
+### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Notification`, permitiendo visualizar el detalle del dominio y la persistencia del contexto.
+
+### 5.6.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Notification` muestra el aggregate principal `Notification`, encargado de representar alertas y recordatorios generados por el sistema.
+
+Además, se incluyen:
+
+- `NotificationPreference`
+- `DeviceToken`
+- `NotificationType`
+- `NotificationChannel`
+- `NotificationStatus`
+- Commands y Queries
+- Servicios del dominio
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_Notification](./assets/Chapter-5/UMLClassDiagram_Notification.png)
+
+
+**Relaciones:**
+
+- `Notification` es el Aggregate Root del contexto.
+- `Notification` pertenece a un solo usuario.
+- `Notification` puede estar asociada a una planta.
+- `NotificationPreference` pertenece a un solo usuario.
+- `DeviceToken` pertenece a un solo usuario.
+- `NotificationCommandService` utiliza `NotificationRepository`, `NotificationPreferenceRepository` y `DeviceTokenRepository`.
+- `NotificationQueryService` utiliza `NotificationRepository` y `NotificationPreferenceRepository`.
+
+
+### 5.6.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Notification` representa la estructura relacional utilizada para almacenar notificaciones, preferencias y tokens de dispositivos.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_Notification](./assets/Chapter-5/ERDDiagram_Notification.png)
+
+
+**Tabla principal: `notifications`**
+
+**Atributos:**
+
+- `notification_id`
+- `user_id`
+- `plant_id`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `scheduled_at`
+- `sent_at`
+- `read_at`
+- `created_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`notification_id`)
+- FOREIGN KEY (`user_id`) → `user_profiles(id)`
+- FOREIGN KEY (`plant_id`) → `plants(plant_id)`
+<br>
+
+
+**Tabla relacionada: `notification_preferences`**
+
+**Atributos:**
+
+- `preference_id`
+- `user_id`
+- `push_enabled`
+- `diagnosis_alerts_enabled`
+- `watering_alerts_enabled`
+- `community_alerts_enabled`
+- `quiet_hours_start`
+- `quiet_hours_end`
+- `created_at`
+- `updated_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`preference_id`)
+- FOREIGN KEY (`user_id`) → `user_profiles(id)`
+- UNIQUE (`user_id`)
+
+
+**Tabla relacionada: `device_tokens`**
+
+**Atributos:**
+
+- `token_id`
+- `user_id`
+- `device_token`
+- `platform`
+- `active`
+- `created_at`
+- `last_used_at`
+
+
+**Constraints:**
+
+- PRIMARY KEY (`token_id`)
+- FOREIGN KEY (`user_id`) → `user_profiles(id)`
+- UNIQUE (`device_token`)
+
+
+**Relaciones entre tablas:**
+
+- `user_profiles (1) ──── (*) notifications`
+- `plants (1) ──── (*) notifications`
+- `user_profiles (1) ──── (1) notification_preferences`
+- `user_profiles (1) ──── (*) device_tokens`
 
 ---
 
