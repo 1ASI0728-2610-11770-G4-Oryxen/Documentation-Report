@@ -1470,6 +1470,31 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 ![DeploymentDiagram.png](https://i.ibb.co/ycVyb5k0/C4-deployment.png)
 
+---
+
+# Capítulo VI: Solution UX Design
+
+## 6.1. Style Guidelines
+
+En esta sección se presentan los estilos establecidos, con el fin de garantizar consistencia, claridad y una experiencia de usuario coherente en todas las plataformas y componentes desarrollados.
+
+### 6.1.1. General Style Guidelines
+
+**Branding:** <br> El branding de Oryxen está diseñado para transmitir bienestar, conexión con la naturaleza y compromiso con el cuidado responsable de las plantas. La identidad visual busca reflejar un enfoque accesible, amigable y moderno, orientado a personas que desean mejorar el mantenimiento de sus plantas. Se utilizan elementos gráficos que evocan crecimiento, frescura y equilibrio, creando una imagen visual clara, cercana y fácil de reconocer para usuarios interesados en el autocuidado verde y la sostenibilidad.
+
+**Typography:** <br> La tipografía seleccionada es Raleway, una fuente moderna, estilizada y de alta legibilidad, que aporta un aspecto limpio y profesional a la interfaz. Se utilizará Raleway tanto para encabezados como para el cuerpo de texto, aprovechando su versatilidad en diferentes pesos tipográficos para marcar jerarquías visuales claras. Esta elección equilibra seriedad y cercanía, manteniendo una apariencia accesible y coherente con el enfoque natural y amigable de la aplicación Oryxen.
+
+![Raleway_Font](./assets/Chapter-6/Raleway_Font.png)
+
+**Colors:** <br> La paleta de colores de Oryxen está compuesta por tonos verdes y cremas, cuidadosamente seleccionados para reflejar la esencia de la naturaleza y promover una experiencia visual tranquila y confiable. Los tonos verdes comunican frescura, crecimiento y sostenibilidad, valores clave en el cuidado de plantas. Por su parte, los tonos crema aportan calidez y naturalidad, generando una conexión visual con la tierra y el entorno orgánico. Estos colores se aplicarán estratégicamente en la interfaz para garantizar una experiencia armoniosa, accesible y agradable en todo tipo de dispositivos, especialmente móviles.
+
+![Oryxen_ColorPalette](./assets/Chapter-6/Oryxen_ColorPalette.png)
+
+**Spacing:** <br> Se utilizó un espaciado apropiado en toda la interfaz para evitar la saturación de elementos, facilitando así una navegación clara y confortable. Los márgenes y las separaciones entre los distintos componentes se planificaron con detalle para lograr un diseño armónico y bien estructurado.
+
+**Tono de Comunicación y Lenguaje Aplicado:** <br> El tono de comunicación de Oryxen será cercano, motivador y accesible, con el objetivo de acompañar al usuario en el cuidado de sus plantas de forma clara y positiva. El lenguaje aplicado se define como divertido, casual, respetuoso y entusiasta. Este enfoque busca generar una experiencia amigable, que inspire confianza y fomente una conexión genuina con la naturaleza a través del uso cotidiano de la aplicación.
+
+
 ### 6.1.2. Web, Mobile & Devices Style Guidelines
 
 Para garantizar una experiencia de usuario (UX) consistente, intuitiva y fluida a través de todo el ecosistema de **Oryxen**, se han establecido lineamientos de estilo y comportamiento específicos para cada plataforma. Estas directrices aseguran que la transición desde la *Landing Page* hasta la aplicación móvil y la interacción física con el hardware (Sensor Lite) se perciba como un solo producto unificado, respetando las convenciones nativas de cada sistema operativo.
