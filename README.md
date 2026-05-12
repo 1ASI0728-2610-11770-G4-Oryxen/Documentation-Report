@@ -1474,6 +1474,237 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 # Capítulo V: Tactical-Level Software Design
 
+## 5.2. Bounded Context: Plant Management
+
+El bounded context de **Plant Management** representa el núcleo encargado de la gestión del catálogo de plantas de los usuarios dentro de la plataforma Oryxen. Este contexto permite registrar nuevas plantas, editar perfiles, definir configuraciones y parámetros esenciales (como umbrales de humedad), y ofrecer una visualización unificada del estado de salud de toda la colección botánica del usuario.
+
+### 5.2.1. Domain Layer
+
+La capa de dominio del bounded context **Plant Management** contiene las clases que modelan el comportamiento principal relacionado con la creación y administración de los perfiles de plantas, garantizando las reglas de negocio del inventario botánico.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `PlantProfile`
+**Paquete:** `com.upc.oryxen.plantmanagement.domain.model.aggregates`
+
+**Propósito:** Representa el perfil de una planta registrada por un usuario, agrupando su información taxonómica, ubicación y estado. Constituye el Aggregate Root del bounded context.
+
+**Atributos:**
+*   `plantId: Long` → Identificador único de la planta.
+*   `userId: Long` → Identificador del usuario propietario.
+*   `name: String` → Nombre asignado a la planta.
+*   `species: String` → Especie botánica de la planta.
+*   `location: String` → Ubicación física (ej. sala, balcón).
+*   `status: PlantStatus` → Estado del perfil (Activo, Archivado).
+*   `createdAt: DateTime` → Fecha de registro.
+*   `updatedAt: DateTime` → Última modificación.
+
+**Métodos:**
+*   `updateProfile(name, species, location)` → Actualiza la información básica de la planta.
+*   `archive()` → Marca la planta como eliminada lógicamente.
+
+**Relaciones:**
+*   Un `PlantProfile` pertenece a un solo `UserAccount`.
+*   Un `PlantProfile` tiene una única `PlantConfiguration`.
+
+**b. Entities del dominio:**
+
+**Nombre de la clase:** `PlantConfiguration`
+**Propósito:** Representa los parámetros y umbrales de cuidado específicos para el perfil de una planta.
+
+**c. Value Objects:**
+
+**Nombre de la clase:** `PlantStatus`
+**Propósito:** Representa el estado en el que se encuentra el registro de la planta en el sistema.
+**Valores posibles:**
+*   `ACTIVE`
+*   `ARCHIVED`
+
+**d. Referencias externas del dominio:**
+
+Dentro del contexto Plant Management se utilizan entidades provenientes de otros bounded contexts.
+
+*   **UserAccount** (Origen: Auth & Identity): Representa al propietario de las plantas.
+*   **Device** (Origen: Device Management IoT): Representa el sensor físico vinculado para su monitoreo.
+
+**e. Commands del dominio:**
+
+**Paquete:** `com.upc.oryxen.plantmanagement.domain.model.commands`
+*   `CreatePlantProfileCommand`: Representa la intención de registrar una nueva planta.
+*   `UpdatePlantProfileCommand`: Representa la intención de editar información básica.
+*   `DeletePlantProfileCommand`: Representa la intención de archivar una planta.
+*   `ConfigurePlantParametersCommand`: Representa la intención de definir umbrales de humedad.
+
+**f. Queries del dominio:**
+
+*   `GetPlantProfileByIdQuery`: Obtener una planta específica.
+*   `GetAllPlantsByUserIdQuery`: Obtener el catálogo completo de plantas de un usuario.
+
+**g. Domain Services:**
+
+*   `PlantCommandService`: Define las operaciones de escritura relacionadas a la gestión de plantas.
+*   `PlantQueryService`: Define las operaciones de lectura del catálogo de plantas.
+
+**h. Repository:**
+
+*   `IPlantProfileRepository`: Interfaz para gestionar la persistencia y ciclo de vida de los perfiles.
+
+### 5.2.2. Interface Layer
+
+La Interface Layer contiene los controladores REST responsables de exponer las funcionalidades de gestión de plantas consumidas por las aplicaciones móviles y web.
+
+**a. PlantController**
+
+**Paquete:** `com.upc.oryxen.plantmanagement.interfaces.rest`
+**Propósito:** Exponer endpoints relacionados con el catálogo de plantas.
+
+**Dependencias:**
+*   `PlantCommandService`
+*   `PlantQueryService`
+
+**Endpoints expuestos:**
+*   `POST /api/v1/plants` → Registrar nueva planta.
+*   `PUT /api/v1/plants/{plantId}` → Actualizar información de la planta.
+*   `DELETE /api/v1/plants/{plantId}` → Eliminar (archivar) planta.
+*   `PUT /api/v1/plants/{plantId}/configuration` → Configurar parámetros básicos.
+*   `GET /api/v1/users/{userId}/plants` → Obtener dashboard unificado de plantas.
+
+**b. Resources / DTOs:**
+
+*   `PlantProfileResource`: Representa la información de la planta enviada al frontend.
+*   `CreatePlantProfileResource`: Representa los datos requeridos para registrar una planta.
+*   `PlantConfigurationResource`: Representa la estructura de los umbrales paramétricos.
+
+**c. Assemblers:**
+
+*   `PlantProfileResourceFromEntityAssembler`: Transforma la entidad `PlantProfile` en un recurso REST.
+*   `CreatePlantProfileCommandFromResourceAssembler`: Transforma el request REST en comando de dominio.
+
+### 5.2.3. Application Layer
+
+Coordina los casos de uso para administrar la colección de plantas del usuario.
+
+**Capacidades principales del contexto:**
+*   Registrar perfiles de plantas.
+*   Editar y archivar plantas existentes.
+*   Configurar umbrales vitales (ej. humedad).
+*   Listar las plantas en una vista consolidada.
+
+**a. Command Handlers / Command Services:**
+
+`PlantCommandServiceImpl` maneja:
+*   `handle(CreatePlantProfileCommand)`: Valida campos, crea la entidad `PlantProfile` y persiste.
+*   `handle(UpdatePlantProfileCommand)`: Busca la planta, aplica cambios, modifica `updatedAt` y guarda.
+*   `handle(DeletePlantProfileCommand)`: Ejecuta un borrado lógico cambiando el `PlantStatus` a `ARCHIVED`.
+
+**b. Query Handlers / Query Services:**
+
+`PlantQueryServiceImpl` maneja:
+*   `handle(GetAllPlantsByUserIdQuery)`: Retorna la lista organizada de plantas para el usuario autenticado.
+
+**c. Flujos principales del negocio:**
+
+**Flujo de creación de perfil de planta:**
+*   El frontend envía los datos básicos de la nueva planta.
+*   Se construye `CreatePlantProfileCommand`.
+*   `PlantCommandServiceImpl` valida que el usuario no exceda su límite de plantas (según plan).
+*   Se crea la entidad `PlantProfile`.
+*   Se persiste mediante `IPlantProfileRepository`.
+*   Se retorna el recurso creado al cliente.
+
+### 5.2.4. Infrastructure Layer
+
+Contiene los componentes responsables de la persistencia de datos del catálogo botánico y la integración con otras áreas de la arquitectura.
+
+**a. Repositorios de persistencia:**
+*   `PlantProfileRepositoryImpl`: Implementa la persistencia de los perfiles.
+*   `PlantConfigurationRepositoryImpl`: Implementa la persistencia de las configuraciones paramétricas.
+
+**b. ORM Context:**
+*   `PlantDbContext`: Punto central de acceso a base de datos (mediante Entity Framework Core) para plantas y configuraciones.
+
+**c. Persistencia de entidades:**
+Las entidades del contexto se encuentran mapeadas utilizando tecnologías ORM.
+**Entidades persistidas:**
+*   `PlantProfile`
+*   `PlantConfiguration`
+
+**d. Diseño de persistencia:**
+
+**Tabla principal:** `plant_profiles`
+**Columnas:**
+*   `plant_id` (PK)
+*   `user_id` (FK)
+*   `name`
+*   `species`
+*   `location`
+*   `status`
+*   `created_at`
+*   `updated_at`
+
+**Tabla relacionada:** `plant_configurations`
+**Columnas:**
+*   `config_id` (PK)
+*   `plant_id` (FK hacia `plant_profiles`)
+*   `min_humidity`
+*   `max_humidity`
+
+**e. Integración con otros bounded contexts:**
+*   **Identity and Access Management:** Para validación de usuarios propietarios mediante tokens.
+*   **Device Management IoT:** Para asociar el perfil de planta creado con su hardware respectivo.
+*   **Analysis & Reporting:** Exportación de inventario para reportes de largo plazo.
+
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context Plant Management representa la descomposición del contenedor backend encargado del registro y administración del catálogo botánico.
+
+**Componentes principales:**
+
+*   **Plant REST API Component**: Expone endpoints REST relacionados a plantas mediante `PlantController`.
+*   **Plant Transformation Component**: Encargado de transformar datos entre DTOs (`PlantProfileResource`), comandos y entidades mediante *Assemblers*.
+*   **Plant Command Processing Component**: Implementado por `PlantCommandServiceImpl`. Orquesta la creación y edición.
+*   **Plant Query Processing Component**: Implementado por `PlantQueryServiceImpl`. Gestiona las consultas al dashboard.
+*   **Plant Domain Component**: Representa el núcleo del dominio, albergando el agregado `PlantProfile`.
+*   **Plant Persistence Component**: Gestiona la persistencia en base de datos mediante repositorios ORM.
+
+**Relaciones entre componentes:**
+*   `Plant REST API Component` → `Plant Transformation Component`
+*   `Plant REST API Component` → `Plant Command Processing Component`
+*   `Plant REST API Component` → `Plant Query Processing Component`
+*   `Plant Command Processing Component` → `Plant Domain Component`
+*   `Plant Command Processing Component` → `Plant Persistence Component`
+
+**Diagrama de Componentes:**
+`![Component Diagram - Plant Management](C4_component_diagram.png)`
+
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context Plant Management, visualizando el detalle del dominio y la persistencia de las plantas.
+
+**5.2.6.1. Bounded Context Domain Layer Class Diagrams**
+
+El diagrama UML del Domain Layer muestra al agregado principal `PlantProfile`, vinculando sus configuraciones, validaciones de interfaz y servicios de dominio.
+
+**Relaciones:**
+*   `PlantProfile` es el Aggregate Root del contexto.
+*   `PlantProfile` contiene una única `PlantConfiguration`.
+*   `PlantCommandService` utiliza `IPlantProfileRepository`.
+*   `PlantStatus` representa el estado de vida del registro.
+
+**Diagrama UML de Clases (Domain Layer):**
+`![UML Class Diagram - Plant Management](UML_diagram.png)`
+
+**5.2.6.2. Bounded Context Database Design Diagram**
+
+El diagrama de base de datos representa la estructura relacional (ERD) utilizada para almacenar los perfiles y umbrales de humedad.
+
+**Relaciones entre tablas:**
+*   `user_profiles (1)` ──── `(*) plant_profiles`
+*   `plant_profiles (1)` ──── `(1) plant_configurations`
+
+**Diagrama de base de datos (ERD):**
+`![ERD - Plant Management](ERD_diagram.png)`
+
 ## 5.3. Bounded Context: Device Management IoT
 
 El bounded context de **Device Management IoT** representa el núcleo encargado de la administración de dispositivos IoT, sensores y telemetría dentro de la plataforma. Este contexto permite registrar dispositivos, emparejarlos con cuentas de usuario, gestionar sensores asociados, recolectar lecturas en tiempo real y ejecutar procesos de monitoreo y diagnóstico.
