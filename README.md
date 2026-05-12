@@ -1692,7 +1692,7 @@ El diagrama UML del Domain Layer muestra al agregado principal `PlantProfile`, v
 *   `PlantStatus` representa el estado de vida del registro.
 
 **Diagrama UML de Clases (Domain Layer):**
-`![UML Class Diagram - Plant Management](UML_planManagement.png)`
+![UML Class Diagram - Plant Management](./assets/Chapter-5/UML_planManagement.png)
 
 **5.2.6.2. Bounded Context Database Design Diagram**
 
@@ -1703,7 +1703,7 @@ El diagrama de base de datos representa la estructura relacional (ERD) utilizada
 *   `plant_profiles (1)` ──── `(1) plant_configurations`
 
 **Diagrama de base de datos (ERD):**
-`![ERD - Plant Management](ERD_plantManagement.png)`
+![ERD - Plant Management](./assets/Chapter-5/ERD_plantManagement.png)
 
 ## 5.3. Bounded Context: Device Management IoT
 
