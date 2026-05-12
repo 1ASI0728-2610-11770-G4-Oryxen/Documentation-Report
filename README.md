@@ -1575,6 +1575,76 @@ Los sistemas de organización en Oryxen estructuran la información y funcionali
 
 - **Según Audiencia:** La plataforma adapta funciones según el perfil del usuario como una visualización simplificada con consejos básicos de la IA para planes gratuitos; y acceso a dashboards técnicos detallados y configuraciones avanzadas de automatización para múltiples zonas de cultivo para planes con suscripción premium.
 
+### 6.2.2. Labeling Systems
+
+Los sistemas de etiquetado en **Oryxen** definen la forma en que se nombran las secciones, acciones, estados y mensajes dentro de la Landing Page, la Aplicación Web y la Aplicación Móvil. Su objetivo es utilizar términos claros, consistentes y comprensibles para que el usuario pueda reconocer rápidamente qué información está viendo y qué acciones puede realizar, incluso si no posee conocimientos técnicos sobre jardinería, IA o dispositivos IoT.
+
+#### A. Navigation Labels
+
+Las etiquetas de navegación agrupan las principales áreas funcionales del ecosistema Oryxen, facilitando el desplazamiento del usuario entre módulos.
+
+- **Inicio:** Vista general del estado de las plantas registradas y accesos rápidos.
+- **Mis Plantas:** Inventario personal de plantas vinculadas al usuario.
+- **Asistente IA:** Espacio para consultas, diagnósticos y recomendaciones personalizadas.
+- **Comunidad:** Sección de interacción entre usuarios, consejos y experiencias compartidas.
+- **Dispositivos:** Gestión de sensores IoT, vinculación de hardware y estado de conexión.
+- **Analíticas:** Visualización de métricas históricas, tendencias y reportes avanzados.
+- **Perfil:** Configuración de cuenta, preferencias, notificaciones y suscripción.
+
+#### B. Action Labels
+
+Las etiquetas de acción se redactan con verbos directos para indicar de forma inmediata la tarea que ejecutará el sistema.
+
+- **Agregar planta:** Permite registrar una nueva planta en el inventario.
+- **Vincular sensor:** Inicia el flujo de conexión de un dispositivo IoT mediante QR o configuración manual.
+- **Regar ahora:** Activa una acción de riego inmediata cuando el hardware lo permite.
+- **Consultar IA:** Abre el asistente para recibir recomendaciones o diagnósticos.
+- **Guardar cambios:** Confirma la actualización de datos o configuraciones.
+- **Ver historial:** Muestra registros anteriores de riego, alertas, diagnósticos e intervenciones.
+
+#### C. Status and Alert Labels
+
+Las etiquetas de estado permiten comunicar de forma rápida la condición de una planta, un sensor o una acción del sistema.
+
+- **Saludable:** La planta se encuentra dentro de los rangos recomendados.
+- **Requiere atención:** Se detectó una condición que necesita revisión del usuario.
+- **Humedad baja:** El nivel de humedad está por debajo del umbral definido.
+- **Sensor desconectado:** El dispositivo no está enviando información al sistema.
+- **Riego programado:** Existe una acción automática planificada.
+- **Diagnóstico disponible:** La IA generó una recomendación o análisis reciente.
+
+#### D. Form and Data Labels
+
+Los formularios utilizan etiquetas descriptivas para evitar ambigüedad durante el registro de plantas, configuración de sensores y personalización de preferencias.
+
+- **Nombre de la planta:** Identificador personalizado asignado por el usuario.
+- **Tipo de planta:** Categoría o especie seleccionada para aplicar recomendaciones adecuadas.
+- **Ubicación:** Espacio físico donde se encuentra la planta, como sala, balcón o jardín.
+- **Frecuencia de riego:** Intervalo recomendado o personalizado para el cuidado.
+- **Nivel de humedad:** Valor medido por el sensor o ingresado manualmente.
+- **Preferencias de notificación:** Canales y frecuencia de alertas que desea recibir el usuario.
+
+#### E. Search and Filter Labels
+
+Las etiquetas de búsqueda y filtrado ayudan a localizar información específica dentro de inventarios, historiales y analíticas.
+
+- **Buscar planta:** Campo para ubicar una planta por nombre o tipo.
+- **Filtrar por estado:** Permite mostrar plantas saludables, en riesgo o con alertas activas.
+- **Filtrar por dispositivo:** Muestra plantas vinculadas a sensores específicos.
+- **Ordenar por última actividad:** Organiza registros según la actualización más reciente.
+- **Rango de fechas:** Delimita la consulta de historiales y reportes.
+
+#### F. Feedback Labels
+
+Las etiquetas de retroalimentación confirman el resultado de una acción o informan errores de manera clara y accionable.
+
+- **Planta agregada correctamente:** Confirma el registro exitoso.
+- **Sensor vinculado con éxito:** Indica que el dispositivo quedó asociado a la cuenta.
+- **No se pudo conectar el sensor:** Informa una falla de conexión y orienta a revisar la red o el código QR.
+- **Cambios guardados:** Confirma que la configuración fue actualizada.
+- **No hay resultados disponibles:** Comunica que la búsqueda o filtro aplicado no encontró coincidencias.
+- **Recomendación actualizada:** Indica que el asistente IA generó una nueva sugerencia.
+
 ### 6.2.3. Searching Systems.
 
 Los sistemas de búsqueda permiten a los usuarios localizar información específica de manera rápida y eficiente dentro de la aplicación, optimizando el acceso al contenido y mejorando la experiencia de uso.
@@ -1583,6 +1653,49 @@ Los sistemas de búsqueda permiten a los usuarios localizar información especí
 - **Resultados presentados con etiquetas visuales**, íconos e información clave como el nombre de la planta, humedad actual, último riego y estado general.
 
 Estos sistemas hacen que la gestión y monitoreo de las plantas sea más ágil, especialmente útil para usuarios con múltiples registros o sensores activos.
+
+### 6.2.4. SEO Tags and Meta Tags
+
+Las etiquetas SEO y meta tags de **Oryxen** permiten mejorar la visibilidad de la solución en motores de búsqueda, redes sociales y tiendas de aplicaciones. Su uso busca comunicar de manera clara la propuesta de valor del producto: cuidado inteligente de plantas mediante IA, sensores IoT, automatización y recomendaciones personalizadas para usuarios ocupados y aficionados a la jardinería.
+
+#### A. Landing Page
+
+La *Landing Page* está orientada a atraer visitantes, explicar el valor del ecosistema Oryxen y convertirlos en usuarios registrados.
+
+- **Title:** Oryxen | Cuidado inteligente de plantas con IA e IoT
+- **Description:** Oryxen ayuda a cuidar plantas desde una plataforma inteligente que combina monitoreo con sensores, riego automatizado, alertas y recomendaciones personalizadas mediante IA.
+- **Keywords:** Oryxen, GrassFarming, cuidado de plantas, jardinería inteligente, sensores IoT, riego automático, monitoreo de plantas, asistente IA para plantas
+- **Author:** GrassFarming
+- **Robots:** index, follow
+- **Viewport:** width=device-width, initial-scale=1.0
+- **Open Graph Title:** Oryxen - Cuidado inteligente para tus plantas
+- **Open Graph Description:** Automatiza y mejora el cuidado de tus plantas con sensores IoT, alertas y recomendaciones inteligentes.
+- **Open Graph Type:** website
+- **Open Graph Image:** Imagen principal de Oryxen mostrando la aplicación, el Sensor Lite y plantas saludables.
+
+#### B. Web Application
+
+La aplicación web está enfocada en usuarios que desean gestionar sus plantas, revisar analíticas, consultar historiales y administrar su suscripción o hardware asociado.
+
+- **Title:** Oryxen Dashboard | Monitoreo y analíticas de plantas
+- **Description:** Panel web de Oryxen para visualizar el estado de las plantas, revisar diagnósticos de IA, analizar historiales de cuidado y gestionar sensores inteligentes.
+- **Keywords:** dashboard Oryxen, monitoreo de plantas, analíticas de jardinería, historial de riego, diagnóstico IA, sensores inteligentes, cuidado automatizado
+- **Author:** GrassFarming
+- **Robots:** noindex, nofollow
+- **Viewport:** width=device-width, initial-scale=1.0
+
+#### C. Mobile Application
+
+La aplicación móvil está orientada al uso diario, permitiendo que el usuario reciba alertas, consulte el estado de sus plantas, interactúe con el asistente IA y vincule dispositivos IoT de forma rápida.
+
+- **Title:** Oryxen App | Cuida tus plantas desde tu celular
+- **Description:** Aplicación móvil de Oryxen para recibir alertas, registrar plantas, consultar recomendaciones de IA y controlar sensores IoT desde cualquier lugar.
+- **Keywords:** app Oryxen, cuidado de plantas móvil, alertas de riego, asistente IA, sensor para plantas, jardinería en casa, monitoreo móvil
+- **Author:** GrassFarming
+- **Robots:** index, follow
+- **Viewport:** width=device-width, initial-scale=1.0
+- **App Name:** Oryxen
+- **Theme Color:** Verde natural asociado a la identidad visual de Oryxen.
 
 ### 6.2.5. Navigation Systems
 
