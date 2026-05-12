@@ -536,7 +536,7 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
 **Estrategias generales de Oryxen**
 - Diferenciación por la **integración de automatización + IA conversacional** aplicada sobre las plantas que el usuario ya posee, sin obligarlo a migrar a un ecosistema cerrado.
 - Ecosistema **hardware + software modular**: sensores independientes, riego automatizado y panel centralizado accesible desde web y móvil.
-- Modelo de negocio **freemium** con un plan gratuito para usuarios nuevos y un plan premium con chatbot avanzado y sensores adicionales.
+- Modelo de negocio Freemium 100% software para eliminar la barrera de entrada al hardware en LATAM, escalable mediante la venta de un 'Sensor Lite' básico de bajo costo, y un Plan Premium que rentabiliza el negocio bloqueando funciones avanzadas de IA e historial completo de datos..
 - Posicionamiento como un **aliado cotidiano** para hogares ocupados y aficionados latinoamericanos, con precios adaptados al mercado regional.
 
 ---
