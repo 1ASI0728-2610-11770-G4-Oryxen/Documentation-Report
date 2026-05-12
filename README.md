@@ -1548,6 +1548,33 @@ El hardware utiliza un patrón de comunicación semántico basado en un único i
 *   **Rojo (parpadeo rápido):** Error crítico (batería extremadamente baja o desconexión de red superior a 5 minutos).
 *   **Apagado (por defecto):** Para ahorrar energía, el dispositivo no emite luz durante la operación normal de recolección de datos, dejando las alertas detalladas y predictivas al sistema de notificaciones *push* de la app.
 
+
+## 6.2. Information Architecture
+
+En esta sección se presenta la arquitectura de la información de Oryxen, el cual es un elemento clave en el diseño y la facilidad de uso de un sistema digital, que garantize que el usuario, independientemente de su nivel de conocimiento técnico, comprenda y utilice el contenido de forma clara y eficaz.
+
+### 6.2.1. Organization Systems
+
+Los sistemas de organización en Oryxen estructuran la información y funcionalidades para que la navegación sea intuitiva, eficiente y centrada en el usuario. Se aplican los siguientes enfoques:
+
+**Visual Organization Systems (Esquemas Visuales):**
+
+- **Jerárquica (Visual Hierarchy):** Se aplica principalmente en el Dashboard central de la aplicación móvil. Donde se priorizan que los indicadores sean completamente visibles e identificables rápidamente por el usuario, a través de el uso de colores y tamaños de fuente destacados.
+
+- **Secuencial (Step-by-step):** Se utiliza en la vinculación de dispositivos IoT, donde el usuario es guiado paso a paso para vincular estas herramientas a la red Wi-Fi y asignar una especie botánica específica, asegurando que la configuración técnica sea exitosa antes de permitir el acceso al monitoreo.
+
+- **Matricial:** Se aplica en el panel de analíticas avanzadas de la plataforma Web, donde el usuario puede comparar variables (ej. Humedad, Crecimiento, Clima externo) para obtener una visión acerca del rendimiento de su jardín inteligente.
+
+<br>
+
+**Categorization Schemes (Esquemas de Categorización):**
+
+- **Por Tópicos:** El contenido se agrupa en áreas funcionales claras como: Asistente IA, Comunidad, Configuración y Dispositivos, etc.
+
+- **Cronológico:** Se presenta en la sección de Historial de Cuidado, donde se registran de forma temporal los riegos automáticos realizados, las alertas detectadas y las intervenciones del usuario, permitiendo auditar la evolución de la planta a lo largo del tiempo.
+
+- **Según Audiencia:** La plataforma adapta funciones según el perfil del usuario como una visualización simplificada con consejos básicos de la IA para planes gratuitos; y acceso a dashboards técnicos detallados y configuraciones avanzadas de automatización para múltiples zonas de cultivo para planes con suscripción premium.
+
 ### 6.2.3. Searching Systems.
 
 Los sistemas de búsqueda permiten a los usuarios localizar información específica de manera rápida y eficiente dentro de la aplicación, optimizando el acceso al contenido y mejorando la experiencia de uso.
