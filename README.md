@@ -1474,6 +1474,1073 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 # Capítulo V: Tactical-Level Software Design
 
+## 5.3. Bounded Context: Device Management IoT
+
+El bounded context de **Device Management IoT** representa el núcleo encargado de la administración de dispositivos IoT, sensores y telemetría dentro de la plataforma. Este contexto permite registrar dispositivos, emparejarlos con cuentas de usuario, gestionar sensores asociados, recolectar lecturas en tiempo real y ejecutar procesos de monitoreo y diagnóstico.
+
+Asimismo, este bounded context garantiza la operación segura, confiable y consistente de los dispositivos IoT mediante servicios de sincronización, control de conectividad, sesiones de diagnóstico y persistencia de datos de sensores.
+
+### 5.3.1. Domain Layer
+
+La capa de dominio del bounded context **Device Management IoT** contiene las clases que modelan el comportamiento principal de dispositivos IoT, sensores, lecturas y sesiones de diagnóstico.
+
+Aquí residen las reglas de negocio relacionadas con el ciclo de vida de los dispositivos, la administración de sensores y la validación de lecturas recolectadas en tiempo real.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `Device`
+
+**Paquete:** `com.upc.iot.device.domain.model.aggregates`
+
+**Propósito:** Representa un dispositivo IoT registrado, emparejado con una cuenta y encargado de administrar sensores asociados.
+
+**Atributos:**
+
+- `deviceId: DeviceId` → Identificador único del dispositivo.
+- `ownerId: Guid` → Identificador del usuario propietario.
+- `name: String` → Nombre asignado al dispositivo.
+- `status: DeviceStatus` → Estado del dispositivo.
+- `pairedAt: DateTime` → Fecha de emparejamiento.
+- `lastSyncAt: DateTime` → Última sincronización de datos.
+
+**Métodos:**
+
+- `pairWithAccount()` → Empareja el dispositivo con una cuenta.
+- `unpair()` → Desempareja el dispositivo.
+- `activate()` → Activa el dispositivo.
+- `deactivate()` → Desactiva el dispositivo.
+- `updateFirmware()` → Aplica una actualización de firmware.
+- `restoreConnection()` → Restaura la conexión perdida.
+- `openDiagnosticSession()` → Inicia una sesión de monitoreo o diagnóstico.
+
+**Relaciones:**
+
+- Un `Device` puede contener múltiples sensores.
+- Un `Device` puede generar múltiples lecturas de sensores.
+- Un `Device` puede tener múltiples sesiones de diagnóstico.
+
+
+**b. Referencias externas del dominio:**
+
+Dentro del contexto Device Management IoT se utilizan referencias provenientes de otros bounded contexts.
+
+**User Account**
+
+- Origen: `Identity and Access Management`
+- Propósito: Representa al propietario del dispositivo.
+- Atributos relevantes:
+  - `ownerId`
+  - `email`
+  - `fullName`
+
+**Cloud Monitoring Service**
+
+- Origen: `Infrastructure Services`
+- Propósito: Sincronizar telemetría y lecturas con la nube.
+- Atributos relevantes:
+  - `connectionStatus`
+  - `syncTimestamp`
+
+
+**c. Value Objects:**
+
+`DeviceId`
+
+Representa el identificador único de un dispositivo IoT.
+
+**Atributos:**
+
+- `value: Guid/Long`
+
+
+`SensorId`
+
+Representa el identificador único de un sensor dentro de un dispositivo.
+
+**Atributos:**
+
+- `value: Guid/Long`
+
+
+`DeviceStatus`
+
+Representa el estado operativo del dispositivo.
+
+- `ACTIVE`
+- `DISCONNECTED`
+- `SUSPENDED`
+
+
+`SensorStatus`
+
+Representa el estado operativo de un sensor.
+
+- `ACTIVE`
+- `CALIBRATED`
+- `ERROR`
+
+
+**d. Entities:**
+
+`Sensor`
+
+**Propósito:** Representa un sensor IoT instalado en un dispositivo.
+
+**Atributos:**
+
+- `sensorId: SensorId`
+- `type: SensorType`
+- `status: SensorStatus`
+- `lastCalibrationAt: DateTime`
+- `lastReadingAt: DateTime`
+
+
+`SensorReading`
+
+**Propósito:** Representa una lectura tomada por un sensor en tiempo real.
+
+**Atributos:**
+
+- `readingId: Guid`
+- `sensorId: SensorId`
+- `value: Decimal`
+- `unit: String`
+- `timestamp: DateTime`
+- `errorFlag: Boolean`
+
+
+`DiagnosticSession`
+
+**Propósito:** Representa una sesión de monitoreo o diagnóstico en tiempo real.
+
+**Atributos:**
+
+- `sessionId: Guid`
+- `deviceId: DeviceId`
+- `startedAt: DateTime`
+- `endedAt: DateTime`
+- `isActive: Boolean`
+
+
+**e. Commands del dominio:**
+
+`RegisterDeviceCommand`
+
+**Paquete:** `com.upc.iot.device.domain.model.commands`
+
+**Propósito:** Representa la intención de registrar un nuevo dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+- `ownerId`
+- `name`
+
+
+`PairDeviceCommand`
+
+**Propósito:** Emparejar un dispositivo con una cuenta.
+
+**Atributos:**
+
+- `deviceId`
+- `ownerId`
+
+
+`ActivateDeviceCommand`
+
+**Propósito:** Activar un dispositivo IoT.
+
+**Atributos:**
+
+- `deviceId`
+
+
+`UpdateFirmwareCommand`
+
+**Propósito:** Aplicar una actualización de firmware.
+
+**Atributos:**
+
+- `deviceId`
+- `firmwareVersion`
+
+
+`AddSensorCommand`
+
+**Propósito:** Agregar un sensor a un dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+- `sensorType`
+
+
+`SubmitSensorReadingCommand`
+
+**Propósito:** Registrar una lectura enviada por un sensor.
+
+**Atributos:**
+
+- `sensorId`
+- `value`
+- `unit`
+- `timestamp`
+
+
+`OpenDiagnosticSessionCommand`
+
+**Propósito:** Abrir una sesión de diagnóstico.
+
+**Atributos:**
+
+- `deviceId`
+
+
+**f. Queries del dominio:**
+
+`GetDeviceByIdQuery`
+
+**Propósito:** Obtener un dispositivo por identificador.
+
+**Atributos:**
+
+- `deviceId`
+
+
+`GetSensorsByDeviceQuery`
+
+**Propósito:** Obtener sensores asociados a un dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+
+
+`GetLatestReadingQuery`
+
+**Propósito:** Obtener la última lectura de un sensor.
+
+**Atributos:**
+
+- `sensorId`
+
+
+`GetSensorReadingsQuery`
+
+**Propósito:** Consultar el historial de lecturas de un sensor.
+
+**Atributos:**
+
+- `sensorId`
+
+
+`GetDeviceStatusQuery`
+
+**Propósito:** Obtener el estado y diagnóstico de un dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+
+
+**g. Domain Services:**
+
+`SensorMonitor`
+
+**Paquete:** `com.upc.iot.device.domain.services`
+
+**Propósito:** Gestionar la recolección y validación de datos de sensores en tiempo real.
+
+**Operaciones:**
+
+- `collectReading()`
+- `validateReading()`
+- `syncData()`
+
+
+**h. Repository:**
+
+`IDeviceRepository`
+
+**Paquete:** `com.upc.iot.device.infrastructure.persistence.repositories`
+
+**Propósito:** Gestionar persistencia y ciclo de vida de dispositivos IoT.
+
+**Operaciones:**
+
+- `getByIdAsync()`
+- `saveAsync()`
+- `deleteAsync()`
+
+
+`ISensorRepository`
+
+**Propósito:** Gestionar persistencia de sensores asociados.
+
+**Operaciones:**
+
+- `getByIdAsync()`
+- `saveAsync()`
+- `deleteAsync()`
+
+
+`ISensorReadingRepository`
+
+**Propósito:** Almacenar y recuperar lecturas de sensores.
+
+**Operaciones:**
+
+- `getBySensorId()`
+- `saveAsync()`
+- `deleteOldReadings()`
+
+
+### 5.3.2. Interface Layer
+
+La Interface Layer del bounded context **Device Management IoT** contiene las clases responsables de exponer funcionalidades relacionadas con dispositivos IoT, sensores, lecturas y diagnósticos mediante endpoints REST consumidos por aplicaciones web y móviles.
+
+**a. DeviceController**
+
+**Paquete:** `com.upc.iot.device.interfaces.rest`
+
+**Propósito:** Exponer endpoints relacionados con la gestión de dispositivos IoT.
+
+**Dependencias:**
+
+- `DeviceCommandService`
+- `DeviceQueryService`
+
+**Endpoints expuestos:**
+
+- `GET /api/devices/{deviceId}`
+- `POST /api/devices/register`
+- `POST /api/devices/{deviceId}/pair`
+- `POST /api/devices/{deviceId}/unpair`
+- `POST /api/devices/{deviceId}/activate`
+- `POST /api/devices/{deviceId}/deactivate`
+- `POST /api/devices/{deviceId}/firmware`
+
+
+**b. SensorController**
+
+**Propósito:** Gestionar sensores asociados a dispositivos.
+
+**Endpoints expuestos:**
+
+- `GET /api/sensors/{sensorId}`
+- `POST /api/sensors/device/{deviceId}/add`
+- `DELETE /api/sensors/{sensorId}/remove`
+- `POST /api/sensors/{sensorId}/calibrate`
+- `GET /api/sensors/device/{deviceId}`
+
+
+**c. SensorReadingController**
+
+**Propósito:** Gestionar lecturas de sensores IoT en tiempo real.
+
+**Endpoints expuestos:**
+
+- `GET /api/readings/sensor/{sensorId}/latest`
+- `GET /api/readings/sensor/{sensorId}/history`
+- `POST /api/readings/sensor/{sensorId}/submit`
+- `DELETE /api/readings/sensor/{sensorId}/cleanup`
+
+
+**d. DiagnosticController**
+
+**Propósito:** Gestionar sesiones de diagnóstico y monitoreo.
+
+**Endpoints expuestos:**
+
+- `POST /api/diagnostics/device/{deviceId}/open`
+- `POST /api/diagnostics/session/{sessionId}/close`
+- `GET /api/diagnostics/device/{deviceId}/status`
+- `POST /api/diagnostics/device/{deviceId}/test`
+
+
+**e. Resources / DTOs:**
+
+`DeviceResource`
+
+**Propósito:** Representar información de dispositivos IoT enviada al frontend.
+
+**Atributos:**
+
+- `deviceId`
+- `ownerId`
+- `name`
+- `status`
+- `pairedAt`
+- `lastSyncAt`
+
+
+`SensorResource`
+
+**Propósito:** Representar información de sensores asociados.
+
+**Atributos:**
+
+- `sensorId`
+- `deviceId`
+- `type`
+- `status`
+
+
+`SensorReadingResource`
+
+**Propósito:** Representar lecturas de sensores enviadas al frontend.
+
+**Atributos:**
+
+- `readingId`
+- `sensorId`
+- `value`
+- `unit`
+- `timestamp`
+- `errorFlag`
+
+
+**f. Assemblers:**
+
+`DeviceResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `Device` en recursos REST consumibles por frontend.
+
+
+`RegisterDeviceCommandFromResourceAssembler`
+
+**Propósito:** Transformar recursos REST en `RegisterDeviceCommand`.
+
+
+### 5.3.3. Application Layer
+
+La Application Layer del bounded context **Device Management IoT** coordina los procesos relacionados con dispositivos IoT, sensores, firmware, lecturas y diagnósticos.
+
+**Capacidades principales del contexto:**
+
+- Registrar dispositivos IoT.
+- Emparejar dispositivos con cuentas.
+- Gestionar sensores.
+- Registrar lecturas en tiempo real.
+- Ejecutar diagnósticos y monitoreo.
+- Gestionar sincronización y firmware.
+
+**a. Command Handlers / Command Services:**
+
+`DeviceRegisterCommandHandler`
+
+**Paquete:** `com.upc.iot.device.application.internal.commandservices`
+
+**Propósito:** Registrar un nuevo dispositivo IoT.
+
+**Comando que maneja:**
+
+- `RegisterDeviceCommand`
+
+
+`DevicePairCommandHandler`
+
+**Propósito:** Emparejar un dispositivo con una cuenta.
+
+**Comando que maneja:**
+
+- `PairDeviceCommand`
+
+
+`DeviceUnpairCommandHandler`
+
+**Propósito:** Desemparejar un dispositivo.
+
+**Comando que maneja:**
+
+- `UnpairDeviceCommand`
+
+
+`DeviceActivateCommandHandler`
+
+**Propósito:** Activar un dispositivo IoT.
+
+**Comando que maneja:**
+
+- `ActivateDeviceCommand`
+
+
+`DeviceDeactivateCommandHandler`
+
+**Propósito:** Desactivar un dispositivo IoT.
+
+**Comando que maneja:**
+
+- `DeactivateDeviceCommand`
+
+
+`UpdateFirmwareCommandHandler`
+
+**Propósito:** Aplicar actualización de firmware.
+
+**Comando que maneja:**
+
+- `UpdateFirmwareCommand`
+
+
+`AddSensorCommandHandler`
+
+**Propósito:** Agregar sensores a un dispositivo.
+
+**Comando que maneja:**
+
+- `AddSensorCommand`
+
+
+`RemoveSensorCommandHandler`
+
+**Propósito:** Eliminar sensores asociados.
+
+**Comando que maneja:**
+
+- `RemoveSensorCommand`
+
+
+`CalibrateSensorCommandHandler`
+
+**Propósito:** Calibrar sensores IoT.
+
+**Comando que maneja:**
+
+- `CalibrateSensorCommand`
+
+
+`SubmitSensorReadingCommandHandler`
+
+**Propósito:** Registrar nuevas lecturas de sensores.
+
+**Comando que maneja:**
+
+- `SubmitSensorReadingCommand`
+
+
+`OpenDiagnosticSessionCommandHandler`
+
+**Propósito:** Abrir sesiones de diagnóstico.
+
+**Comando que maneja:**
+
+- `OpenDiagnosticSessionCommand`
+
+
+`CloseDiagnosticSessionCommandHandler`
+
+**Propósito:** Cerrar sesiones de diagnóstico.
+
+**Comando que maneja:**
+
+- `CloseDiagnosticSessionCommand`
+
+
+**b. Query Handlers / Query Services:**
+
+`GetDeviceByIdQueryHandler`
+
+**Propósito:** Obtener dispositivos por identificador.
+
+**Query que maneja:**
+
+- `GetDeviceByIdQuery`
+
+
+`GetSensorsByDeviceQueryHandler`
+
+**Propósito:** Obtener sensores asociados a dispositivos.
+
+**Query que maneja:**
+
+- `GetSensorsByDeviceQuery`
+
+
+`GetLatestReadingQueryHandler`
+
+**Propósito:** Obtener la última lectura registrada de un sensor.
+
+**Query que maneja:**
+
+- `GetLatestReadingQuery`
+
+
+`GetSensorReadingsQueryHandler`
+
+**Propósito:** Consultar historial de lecturas.
+
+**Query que maneja:**
+
+- `GetSensorReadingsQuery`
+
+
+`GetDeviceStatusQueryHandler`
+
+**Propósito:** Obtener estado y diagnóstico de dispositivos.
+
+**Query que maneja:**
+
+- `GetDeviceStatusQuery`
+
+
+**c. Event Handlers:**
+
+`DeviceRegisteredEventHandler`
+
+**Propósito:** Gestionar acciones posteriores al registro de dispositivos.
+
+**Evento:**
+
+- `DeviceRegisteredEvent`
+
+
+`DevicePairedEventHandler`
+
+**Propósito:** Ejecutar acciones posteriores al emparejamiento.
+
+**Evento:**
+
+- `DevicePairedEvent`
+
+
+`DeviceUnpairedEventHandler`
+
+**Propósito:** Ejecutar acciones posteriores al desemparejamiento.
+
+**Evento:**
+
+- `DeviceUnpairedEvent`
+
+
+`FirmwareUpdatedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores a actualización de firmware.
+
+**Evento:**
+
+- `FirmwareUpdatedEvent`
+
+
+`SensorCalibratedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores a calibración de sensores.
+
+**Evento:**
+
+- `SensorCalibratedEvent`
+
+
+`SensorReadingSubmittedEventHandler`
+
+**Propósito:** Gestionar sincronización posterior al envío de lecturas.
+
+**Evento:**
+
+- `SensorReadingSubmittedEvent`
+
+
+`DiagnosticSessionOpenedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores a apertura de sesión.
+
+**Evento:**
+
+- `DiagnosticSessionOpenedEvent`
+
+
+`DiagnosticSessionClosedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores al cierre de sesión.
+
+**Evento:**
+
+- `DiagnosticSessionClosedEvent`
+
+
+**d. Flujos principales del negocio:**
+
+**Flujo de registro y emparejamiento:**
+
+- El frontend registra un nuevo dispositivo.
+- Se construye `RegisterDeviceCommand`.
+- `DeviceRegisterCommandHandler` valida los datos.
+- Se persiste el dispositivo.
+- Se ejecuta `DeviceRegisteredEvent`.
+- El dispositivo puede ser emparejado mediante `PairDeviceCommand`.
+- Se activa monitoreo y sincronización.
+
+
+**Flujo de recolección de lecturas:**
+
+- El sensor envía una nueva lectura.
+- Se ejecuta `SubmitSensorReadingCommand`.
+- `SensorMonitor` valida la lectura.
+- Se persiste `SensorReading`.
+- Se sincroniza telemetría con la nube.
+- Se notifica al sistema de monitoreo.
+
+
+**Flujo de diagnóstico:**
+
+- El usuario inicia una sesión de diagnóstico.
+- Se ejecuta `OpenDiagnosticSessionCommand`.
+- Se crea `DiagnosticSession`.
+- El sistema monitorea sensores en tiempo real.
+- Se generan resultados y estado del dispositivo.
+- La sesión puede cerrarse mediante `CloseDiagnosticSessionCommand`.
+
+
+### 5.3.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context `Device Management IoT` contiene los componentes responsables de persistencia, conectividad IoT y sincronización de telemetría.
+
+Esta capa implementa repositorios, contextos ORM y mecanismos de integración con protocolos y servicios externos.
+
+**a. Repositorios de persistencia:**
+
+`DeviceRepository`
+
+**Paquete:** `com.upc.iot.device.infrastructure.persistence.repositories`
+
+**Propósito:** Persistir y consultar entidades `Device`.
+
+**Interfaz implementada:**
+
+- `IDeviceRepository`
+
+
+`TelemetryRepository`
+
+**Propósito:** Persistir y consultar datos de telemetría.
+
+**Interfaz implementada:**
+
+- `ITelemetryRepository`
+
+
+`ConnectivityRepository`
+
+**Propósito:** Gestionar estados de conectividad de dispositivos.
+
+**Interfaz implementada:**
+
+- `IConnectivityRepository`
+
+
+**b. ORM Context:**
+
+`DeviceDbContext`
+
+**Propósito:** Punto central de acceso a base de datos para dispositivos, sensores y telemetría.
+
+
+**c. Persistencia de entidades:**
+
+Las entidades del contexto se encuentran mapeadas utilizando tecnologías ORM.
+
+**Entidades persistidas:**
+
+- `Device`
+- `Sensor`
+- `SensorReading`
+- `DiagnosticSession`
+
+
+**d. Diseño de persistencia:**
+
+**Tabla principal:** `devices`
+
+**Columnas:**
+
+- `device_id`
+- `owner_id`
+- `name`
+- `status`
+- `paired_at`
+- `last_sync_at`
+
+**Restricciones:**
+
+- `device_id` → Primary Key
+- `owner_id` → Foreign Key
+
+**Campos obligatorios:**
+
+- `owner_id`
+- `name`
+- `status`
+
+
+**Tabla relacionada:** `sensors`
+
+**Columnas:**
+
+- `sensor_id`
+- `device_id`
+- `type`
+- `status`
+- `last_calibration_at`
+- `last_reading_at`
+
+
+**Tabla relacionada:** `sensor_readings`
+
+**Columnas:**
+
+- `reading_id`
+- `sensor_id`
+- `value`
+- `unit`
+- `timestamp`
+- `error_flag`
+
+
+**Tabla relacionada:** `diagnostic_sessions`
+
+**Columnas:**
+
+- `session_id`
+- `device_id`
+- `started_at`
+- `ended_at`
+- `is_active`
+
+
+**e. Integración con otros bounded contexts:**
+
+La infraestructura del contexto Device Management IoT depende de:
+
+- `Cloud Monitoring Service`
+- `MQTT Broker`
+- `IoT Gateway`
+- `Identity and Access Management`
+- Servicios de sincronización en tiempo real
+
+
+### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Device Management IoT` representa la descomposición del contenedor backend encargado de la administración de dispositivos, sensores y telemetría IoT.
+
+**Componentes principales:**
+
+**IoT REST API Component:**
+
+Expone endpoints REST relacionados con dispositivos, sensores y diagnósticos.
+
+**Responsabilidades:**
+
+- Recibir solicitudes del frontend.
+- Gestionar dispositivos IoT.
+- Gestionar sensores y lecturas.
+- Retornar información de monitoreo.
+
+
+**IoT Transformation Component:**
+
+Encargado de transformar DTOs, commands y entidades.
+
+**Incluye:**
+
+- `DeviceResource`
+- `SensorResource`
+- `SensorReadingResource`
+- Assemblers
+
+
+**IoT Command Processing Component:**
+
+Implementado por los distintos `CommandHandlers`.
+
+**Responsabilidades:**
+
+- Procesar comandos de dispositivos.
+- Gestionar firmware.
+- Ejecutar diagnósticos.
+- Registrar lecturas.
+
+
+**IoT Query Processing Component:**
+
+Implementado por los `QueryHandlers`.
+
+**Responsabilidades:**
+
+- Consultar dispositivos.
+- Recuperar sensores.
+- Obtener telemetría y lecturas.
+
+
+**IoT Domain Component:**
+
+Representa el núcleo del dominio.
+
+### Incluye:
+
+- `Device`
+- `Sensor`
+- `SensorReading`
+- `DiagnosticSession`
+- `DeviceStatus`
+- `SensorStatus`
+
+
+**IoT Persistence Component:**
+
+Gestiona persistencia mediante repositorios y ORM.
+
+
+**IoT Connectivity Component:**
+
+Representa integración con infraestructura y conectividad IoT.
+
+**Incluye:**
+
+- `MQTT Broker`
+- `IoT Gateway`
+- `Cloud Monitoring Service`
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_DeviceManagementIoT](https://i.postimg.cc/1Xpzd1k2/structurizr-106438-Container-001-2.png)
+
+
+**Relaciones entre componentes:**
+
+- `IoT REST API Component → IoT Transformation Component`
+- `IoT REST API Component → IoT Command Processing Component`
+- `IoT REST API Component → IoT Query Processing Component`
+- `IoT Command Processing Component → IoT Domain Component`
+- `IoT Command Processing Component → IoT Persistence Component`
+- `IoT Command Processing Component → IoT Connectivity Component`
+- `IoT Query Processing Component → IoT Persistence Component`
+
+
+### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Device Management IoT`, permitiendo visualizar el detalle del dominio, persistencia y relaciones entre dispositivos, sensores y telemetría.
+
+
+#### 5.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Device Management IoT` muestra al agregado principal `Device`, encargado de representar dispositivos IoT y su relación con sensores, lecturas y sesiones de diagnóstico.
+
+Además, se incluyen:
+
+- `Sensor`
+- `SensorReading`
+- `DiagnosticSession`
+- Value Objects.
+- Commands y Queries.
+- Servicios del dominio.
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_DeviceManagementIoT](https://i.postimg.cc/QdF2NJtx/VLJDRjiy4-Bph-AGXVll-WBx-A9-N8-Gt-Y9ar-X8460-E6-ZF6sc-ZR46-H0hbo-OBHzzqh-Kqf0bm-Zd4ukp-FZc-QMkl4-CZjj-QPqoi-KUse-RZIz4-PRg.png)
+
+
+**Relaciones:**
+
+- `Device` es el Aggregate Root del contexto.
+- `Device` contiene múltiples sensores.
+- `Sensor` genera múltiples `SensorReading`.
+- `Device` puede abrir múltiples `DiagnosticSession`.
+- `SensorMonitor` utiliza `ISensorReadingRepository`.
+- Los CommandHandlers interactúan con repositorios del dominio.
+
+
+#### 5.3.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Device Management IoT` representa la estructura relacional utilizada para almacenar dispositivos, sensores, lecturas y sesiones de diagnóstico.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_DeviceManagementIoT](https://i.postimg.cc/MK6yNRHs/2.png)
+
+
+**Tabla principal:** `devices`
+
+**Atributos:**
+
+- `device_id`
+- `owner_id`
+- `name`
+- `status`
+- `paired_at`
+- `last_sync_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`device_id`)
+- FOREIGN KEY (`owner_id`)
+- NOT NULL en:
+  - `owner_id`
+  - `name`
+  - `status`
+
+
+**Tabla relacionada:** `sensors`
+
+**Atributos:**
+
+- `sensor_id`
+- `device_id`
+- `type`
+- `status`
+- `last_calibration_at`
+- `last_reading_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`sensor_id`)
+- FOREIGN KEY (`device_id`) → `devices(device_id)`
+
+
+**Tabla relacionada:** `sensor_readings`
+
+**Atributos:**
+
+- `reading_id`
+- `sensor_id`
+- `value`
+- `unit`
+- `timestamp`
+- `error_flag`
+
+**Constraints:**
+
+- PRIMARY KEY (`reading_id`)
+- FOREIGN KEY (`sensor_id`) → `sensors(sensor_id)`
+
+
+**Tabla relacionada:** `diagnostic_sessions`
+
+**Atributos:**
+
+- `session_id`
+- `device_id`
+- `started_at`
+- `ended_at`
+- `is_active`
+
+**Constraints:**
+
+- PRIMARY KEY (`session_id`)
+- FOREIGN KEY (`device_id`) → `devices(device_id)`
+
+
+**Relaciones entre tablas:**
+
+- `devices (1) ──── (*) sensors`
+- `sensors (1) ──── (*) sensor_readings`
+- `devices (1) ──── (*) diagnostic_sessions`
+
+
+---
+
 ## 5.4. Bounded Context: Artificial Intelligence (AI)
 
 El bounded context de **Artificial Intelligence (AI)** representa el núcleo inteligente de la plataforma Oryxen. Este permite al sistema ser capaz de dar diagnóstico visual, recomendaciones automatizadas y asistencia conversacional mediante modelos de inteligencia artificial aplicados al cuidado de plantas. Este contexto permite analizar imágenes, interpretar métricas provenientes de sensores IoT y ofrecer recomendaciones personalizadas a los usuarios.
