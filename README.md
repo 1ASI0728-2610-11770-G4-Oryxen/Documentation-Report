@@ -1470,6 +1470,200 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 ![DeploymentDiagram.png](https://i.ibb.co/ycVyb5k0/C4-deployment.png)
 
+### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+Para garantizar una experiencia de usuario (UX) consistente, intuitiva y fluida a través de todo el ecosistema de **Oryxen**, se han establecido lineamientos de estilo y comportamiento específicos para cada plataforma. Estas directrices aseguran que la transición desde la *Landing Page* hasta la aplicación móvil y la interacción física con el hardware (Sensor Lite) se perciba como un solo producto unificado, respetando las convenciones nativas de cada sistema operativo.
+
+Además, alineados con los objetivos de internacionalización (i18n) y accesibilidad (a11y), todas las interfaces web y móviles tienen como idioma por defecto el inglés (`en_US`), con soporte completo para español latinoamericano (`es_419`), e integran atributos ARIA para garantizar que la plataforma sea inclusiva para todos los usuarios.
+
+#### A. Web Style Guidelines (Landing Page & Web App)
+
+Las interfaces web de Oryxen (tanto la página de aterrizaje comercial como el *Dashboard* de la aplicación web) están diseñadas bajo el paradigma **Mobile-First** y construidas utilizando **Vue 3** con la biblioteca de componentes **PrimeVue / Vuetify**, basándose estrictamente en las directrices de **Material Design**.
+
+**1. Responsive Grid System:**
+Se utiliza un sistema de cuadrícula fluida de 12 columnas que se adapta dinámicamente al *viewport* del usuario para garantizar la legibilidad de la información (como los gráficos del historial de telemetría y diagnósticos de IA):
+*   **Desktop (≥ 1024px):** Layout expandido que aprovecha el espacio horizontal, mostrando el menú de navegación lateral fijo y paneles de métricas detallados.
+*   **Tablet (768px - 1023px):** Los paneles de información se reorganizan en 2 columnas. El menú lateral se vuelve colapsable.
+*   **Mobile (≤ 767px):** Las tarjetas de las plantas ocupan el 100% del ancho (1 columna). La navegación principal pasa a un *Bottom Navigation Bar* o un menú hamburguesa para no restar espacio al contenido.
+
+**2. Interacción y Comportamiento Web:**
+*   **Micro-interacciones:** Los botones *Call-to-Action* (CTAs), como la actualización a planes Premium o la vinculación de un nuevo sensor, cuentan con un estado *hover* (elevación de sombra y cambio de opacidad) que indica claramente su interactividad.
+*   **Accesibilidad (a11y):** Los contrastes de color cumplen con la normativa WCAG 2.1 nivel AA. Todos los formularios web y botones iconográficos (ej. botón de "Regar ahora") cuentan con etiquetas `aria-label` y soporte para navegación exclusiva por teclado.
+
+*(Añadir captura de pantalla ilustrando la guía de estilos web responsiva)*
+`![Web Style Guidelines - Responsive Grid & Components](../assets/images/ux-web-guidelines.png)`
+
+#### B. Mobile Style Guidelines (Native iOS & Android)
+
+Dado que la aplicación móvil es el punto de contacto principal para los usuarios del plan básico gratuito y los aficionados, el rendimiento y la naturalidad son críticos. Siguiendo nuestras restricciones arquitectónicas, el desarrollo se realiza de forma **nativa** (Swift para iOS y Kotlin para Android), por lo que las interfaces respetan las guías oficiales de cada plataforma, unificadas por el *branding* de Oryxen.
+
+**1. Android (Kotlin) - Material 3 Design:**
+*   **Navegación:** Uso de un *Bottom Navigation Bar* para el acceso rápido a: *Dashboard* (Mis Plantas), Comunidad, Alertas IA y Ajustes. 
+*   **Acciones Principales:** Se emplea un *Floating Action Button* (FAB) anclado en la esquina inferior derecha para la acción más importante: "Agregar Planta" (escaneo de código QR).
+*   **Feedback Visual:** Implementación del efecto *Ripple* de Material Design al tocar elementos interactivos.
+
+**2. iOS (Swift) - Human Interface Guidelines (HIG):**
+*   **Navegación:** Uso del *Tab Bar* estándar de iOS con iconografía lineal o sólida (SF Symbols) según el estado activo. La navegación jerárquica utiliza el *Navigation Bar* nativo con el botón "Atrás" en la esquina superior izquierda.
+*   **Gestos:** Soporte nativo para deslizar (*Swipe-to-go-back*) y menús contextuales en las tarjetas de las plantas (ej. deslizar a la izquierda sobre una planta en la lista para "Archivar" o "Editar").
+
+**3. Ergonomía y Touch Targets (Común para móviles):**
+Para garantizar que personas de la tercera edad u ocupadas interactúen sin frustración, el tamaño mínimo de cualquier botón o elemento interactivo es de **48x48 dp/pt**, con un margen de separación adecuado para evitar toques accidentales.
+
+*(Añadir captura de pantalla ilustrando los componentes nativos de iOS y Android)*
+`![Mobile Style Guidelines - Native Components](../assets/images/ux-mobile-guidelines.png)`
+
+#### C. Devices (IoT Hardware) Style & Feedback Guidelines
+
+Aunque el hardware físico (*Sensor Lite* y el módulo de riego) carece de pantallas digitales complejas, su experiencia de usuario debe estar perfectamente orquestada con la aplicación móvil. El diseño del hardware sigue un principio de "tecnología silenciosa", siendo minimalista para integrarse estéticamente en macetas de hogares y oficinas.
+
+**1. Retroalimentación Visual (Indicadores LED):**
+El hardware utiliza un patrón de comunicación semántico basado en un único indicador LED multicolor para informar su estado operativo sin depender del móvil:
+*   **Azul (parpadeo lento):** Modo de emparejamiento (Bluetooth/WiFi activo), esperando escaneo de código QR desde la App.
+*   **Verde (fijo por 3 seg):** Conexión exitosa al entorno de nube de Oryxen.
+*   **Rojo (parpadeo rápido):** Error crítico (batería extremadamente baja o desconexión de red superior a 5 minutos).
+*   **Apagado (por defecto):** Para ahorrar energía, el dispositivo no emite luz durante la operación normal de recolección de datos, dejando las alertas detalladas y predictivas al sistema de notificaciones *push* de la app.
+
+
+### 6.2.5. Navigation Systems
+
+El sistema de navegación de **Oryxen** está diseñado para guiar a los usuarios de manera intuitiva y sin fricciones a través de todo el ecosistema (Landing Page, Aplicación Web y Aplicación Móvil). La estructura de navegación se centra en facilitar la consecución de las metas del usuario (como registrar plantas, consultar diagnósticos de IA o interactuar con la comunidad), utilizando patrones familiares que reducen la carga cognitiva y promueven la adopción de nuestro modelo de adopción progresiva (Freemium a Premium/Hardware).
+
+#### A. Landing Page Navigation
+
+La página de aterrizaje comercial tiene como objetivo principal la conversión, educando al visitante sobre el ecosistema Oryxen y dirigiéndolo hacia el registro gratuito.
+
+*   **Global Navigation (Sticky Header):** Se utiliza una barra de navegación superior fija que acompaña al usuario durante el *scroll*. Incluye enlaces ancla a las secciones clave: *Beneficios*, *Cómo Funciona*, *Planes* (mostrando la estrategia de Sensor Lite) y *Comunidad*. 
+*   **Sequential & Scroll Navigation:** El contenido está organizado para contar una historia (Storytelling). A medida que el usuario hace *scroll* vertical, avanza secuencialmente desde la identificación del problema (plantas marchitas por falta de tiempo/conocimiento) hasta la solución (IA y automatización).
+*   **Call-to-Action (CTA) Routing:** Para facilitar el objetivo principal de negocio, se utilizan botones de acción claros y contrastantes (ej. "Comienza Gratis") ubicados estratégicamente en el *Hero Section* y al final de la página, los cuales enrutan directamente al flujo de *Sign Up*.
+
+*(Añadir captura de pantalla ilustrando el flujo de navegación de la Landing Page)*
+`![Navigation Systems - Landing Page](../assets/images/nav-landing-page.png)`
+
+#### B. Web Application Navigation (Dashboard)
+
+La aplicación web está pensada para sesiones más largas, donde los usuarios aficionados o administradores revisan analíticas profundas, historiales y gestionan sus suscripciones.
+
+*   **Left Sidebar Navigation (Navegación Global):** El menú principal se ubica en el lateral izquierdo, permitiendo una jerarquía clara de módulos. Los ítems principales incluyen:
+    *   *Dashboard* (Vista general).
+    *   *Mis Plantas* (Inventario).
+    *   *Analíticas e Historial* (Exclusivo para evaluar métricas profundas).
+    *   *Comunidad* (Foro y consejos).
+    *   *Suscripción y Hardware* (Gestión del plan y compra del Sensor Lite).
+*   **Local Navigation (Pestañas/Tabs):** Dentro del detalle de una planta específica, se utilizan pestañas horizontales para cambiar entre *Información Básica*, *Diagnósticos IA* y *Configuración de Sensores*, evitando recargas de página completas (comportamiento SPA con Vue.js).
+*   **Breadcrumbs:** Se implementan "migas de pan" en la parte superior (ej. `Mis Plantas > Monstera Deliciosa > Diagnósticos`) para que el usuario conozca su ubicación exacta dentro de la jerarquía profunda y pueda retroceder un nivel fácilmente.
+
+*(Añadir captura de pantalla ilustrando el Left Sidebar y Breadcrumbs de la Web App)*
+`![Navigation Systems - Web App](../assets/images/nav-webapp.png)`
+
+#### C. Mobile Application Navigation
+
+La aplicación móvil es el canal principal para la gestión diaria. Su navegación debe ser ergonómica para el uso con una sola mano y ofrecer acceso ultrarrápido a acciones críticas.
+
+*   **Bottom Navigation Bar (Navegación Principal):** Reemplaza al menú hamburguesa para las secciones de mayor uso, manteniéndolas a un toque de distancia en la parte inferior de la pantalla. Las opciones son:
+    *   *Inicio* (Tarjetas de estado rápido de las plantas).
+    *   *Comunidad* (Feed social).
+    *   *Asistente IA* (Acceso directo al chatbot).
+    *   *Perfil* (Ajustes y notificaciones).
+*   **Floating Action Button (FAB):** Para la acción más frecuente y crítica del negocio (agregar una planta al inventario o vincular un Sensor Lite mediante código QR), se utiliza un FAB prominente anclado sobre la navegación inferior.
+*   **Hierarchical Navigation (Stack de Vistas):** Cuando un usuario selecciona una planta desde el *Inicio*, ingresa a una vista de detalle (Drill-down). La navegación superior nativa (Navigation Bar en iOS / Top App Bar en Android) mostrará el nombre de la planta y una flecha clara de "Atrás" para regresar al nivel superior.
+*   **In-context Navigation (Swipe & Gestures):** Se soportan gestos nativos, como deslizar tarjetas horizontalmente para revelar acciones rápidas (ej. "Regar ahora" o "Archivar planta"), acelerando el flujo de tareas repetitivas.
+
+*(Añadir captura de pantalla ilustrando el Bottom Navigation Bar y el FAB de la App Móvil)*
+`![Navigation Systems - Mobile App](../assets/images/nav-mobileapp.png)`
+
+
+### 6.3. Landing Page UI Design
+
+El diseño de la interfaz de usuario (UI) de la *Landing Page* de Oryxen tiene un propósito fundamental: **la conversión y educación del cliente**. Al ser un producto innovador que combina software (IA) y hardware (IoT), el diseño visual debe transmitir confianza, simplicidad y accesibilidad, derribando el mito de que la tecnología para el hogar es costosa o difícil de instalar.
+
+Para lograrlo, la interfaz se apoya en los siguientes principios de diseño:
+*   **Identidad Visual Orgánica y Tecnológica:** Se utiliza una paleta de colores que combina tonos tierra y verdes (representando la naturaleza y el crecimiento) con blancos y grises claros (aportando el minimalismo y limpieza del sector tecnológico).
+*   **Jerarquía Tipográfica Clara:** Uso de fuentes *Sans-Serif* modernas que facilitan la lectura rápida de los beneficios y características, guiando el ojo del usuario hacia los botones de llamada a la acción (CTAs).
+*   **Enfoque en la Adopción Progresiva:** El diseño UI prioriza mostrar que el usuario puede empezar a usar Oryxen de forma 100% gratuita (solo software), para luego presentar los planes Premium y el "Sensor Lite" como expansiones naturales de la experiencia.
+
+#### 6.3.1. Landing Page Wireframe
+
+Los *wireframes* de la Landing Page representan la estructura esquelética (baja fidelidad) del sitio web, priorizando la arquitectura de la información y la distribución del contenido antes de aplicar el diseño visual final. Se ha diseñado bajo el enfoque *Mobile-First* para asegurar la accesibilidad, escalando luego a la versión de escritorio (*Desktop*).
+
+La estructura secuencial del *wireframe* es la siguiente:
+
+1.  **Hero Section (Primer impacto):** 
+    *   **Titular principal:** Enfocado en el beneficio final (ej. "Plantas siempre vivas, sin esfuerzo").
+    *   **Subtitular:** Explica brevemente la combinación de IA y monitoreo.
+    *   **CTA Principal:** Un botón de alto contraste con el texto "Comienza Gratis" (enrutando al registro de la aplicación web).
+    *   **Imagen hero heroica:** Espacio para un *mockup* de la aplicación móvil interactuando con una planta real.
+
+2.  **Problem / Solution Section (Empatía):**
+    *   Sección dividida en dos columnas. Una ilustra el "dolor" (plantas marchitas, falta de tiempo, estrés) y la otra ilustra la solución de Oryxen (tranquilidad, notificaciones inteligentes, automatización).
+
+3.  **Features Section (Cómo funciona):**
+    *   Tres tarjetas (*cards*) principales con iconos representativos: 
+        1. *App Inteligente y Chatbot IA* (Gratis/Premium).
+        2. *Monitoreo IoT con Sensor Lite*.
+        3. *Riego Automático* (Módulo avanzado).
+
+4.  **Pricing Section (Modelo Freemium):**
+    *   Una tabla de precios clara adaptada al mercado de LATAM.
+    *   Columna 1: **Plan Básico** ($0 - App y recordatorios).
+    *   Columna 2: **Plan Premium** (Suscripción mensual - Diagnósticos visuales y Chatbot IA). Destacada visualmente.
+    *   Columna 3: **Kit Hardware** (Sensor Lite + Meses de Premium incluidos).
+
+5.  **Testimonial Section (Prueba Social):**
+    *   Carrusel de testimonios segmentados. Muestra opiniones tanto de personas con agendas ocupadas como de aficionados a la jardinería para que el visitante se identifique con su perfil.
+
+6.  **Footer:**
+    *   Enlaces de navegación secundarios, términos de servicio, políticas de privacidad y enlaces a redes sociales.
+
+*(Añadir captura de pantalla de los wireframes en versión Desktop y Mobile)*
+`![Landing Page Wireframe - Desktop & Mobile](../assets/images/wireframe-landing-page.png)`
+
+### 6.4.3. Applications User Flow Diagrams
+
+Los diagramas de flujo de usuario (*User Flows*) mapean el recorrido paso a paso que realiza un consumidor dentro de las aplicaciones (Web y Móvil) de Oryxen para completar tareas específicas. Estos flujos han sido diseñados minimizando la fricción cognitiva y apoyando nuestra estrategia de adopción progresiva: permitiendo al usuario experimentar valor inmediato en el plan gratuito y facilitando transiciones naturales hacia la compra de hardware (Sensor Lite) o la suscripción Premium.
+
+A continuación, se detallan los tres flujos críticos del negocio:
+
+#### A. Flujo 1: Onboarding y Registro Manual de Planta (Plan Básico / Freemium)
+Este es el primer contacto del usuario con la aplicación. El objetivo es que registre su primera planta lo más rápido posible, experimentando el valor de tener un inventario centralizado, sin requerir hardware físico inicial.
+
+1.  **Inicio:** El usuario abre la aplicación móvil.
+2.  **Autenticación:** Pantalla de *Sign Up* / *Login*. El usuario elige autenticarse rápidamente vía Google (OAuth2) o correo electrónico.
+3.  **Pantalla de Bienvenida:** El sistema detecta que el usuario no tiene plantas y muestra un *Empty State* con un CTA principal: "Añadir mi primera planta".
+4.  **Formulario de Registro:** El usuario ingresa la información básica (Nombre, Especie, Ubicación). 
+5.  **Configuración de Umbrales:** El sistema sugiere parámetros predeterminados de humedad según la especie seleccionada. El usuario acepta.
+6.  **Fin (Éxito):** El usuario es redirigido al *Dashboard* principal, donde visualiza la tarjeta de su nueva planta recién agregada.
+
+*(Añadir captura de pantalla del diagrama de flujo: Onboarding y Registro de Planta)*
+`![User Flow - Onboarding & Plant Registration](../assets/images/userflow-onboarding.png)`
+
+#### B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)
+Este flujo representa el momento en que un usuario decide automatizar su monitoreo tras adquirir el hardware de entrada de Oryxen. Destaca la restricción de usabilidad (QA-04) que exige una vinculación en menos de 30 segundos.
+
+1.  **Inicio:** Desde el *Dashboard*, el usuario presiona el *Floating Action Button* (FAB) y selecciona "Vincular Dispositivo".
+2.  **Permisos:** La aplicación solicita acceso a la cámara y Bluetooth.
+3.  **Escaneo QR:** El usuario escanea el código QR ubicado en la base del *Sensor Lite*.
+4.  **Validación y Emparejamiento:** El sistema reconoce el ID del sensor, lo registra en el backend y lo enlaza a la red WiFi local mediante Bluetooth (BLE).
+5.  **Asignación:** La app pregunta: "¿A qué planta pertenece este sensor?". El usuario selecciona una planta previamente registrada (ej. "Monstera de la Sala").
+6.  **Fin (Éxito):** Pantalla de confirmación animada. El *Dashboard* se actualiza y la tarjeta de la planta ahora muestra la métrica de humedad y temperatura en tiempo real.
+
+*(Añadir captura de pantalla del diagrama de flujo: Vinculación de Hardware)*
+`![User Flow - Hardware Pairing](../assets/images/userflow-hardware.png)`
+
+#### C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)
+Este flujo ilustra cómo un usuario interactúa con la característica estrella de la aplicación para resolver un problema complejo de salud en su planta.
+
+1.  **Inicio:** El usuario nota hojas amarillas en su planta. Ingresa a la app y selecciona la planta desde el *Dashboard*.
+2.  **Llamada a la Acción:** En la vista de detalle, presiona el botón "Diagnóstico con IA".
+3.  **Captura de Imagen:** Se abre la cámara integrada. El usuario toma una fotografía de la hoja afectada.
+4.  **Procesamiento (Loading):** Pantalla de carga mientras la imagen es sanitizada (eliminación de GPS/EXIF) y procesada por el motor de visión artificial en el backend.
+5.  **Resultados y Recomendación:** El sistema muestra una alerta contextual con el problema detectado (ej. "Falta de nutrientes / Clorosis") y una lista de acciones correctivas inmediatas y a largo plazo.
+6.  **Fin (Seguimiento):** El usuario presiona el botón "Aplicar recomendación". El sistema programa automáticamente un recordatorio de seguimiento para evaluar la mejora en 7 días.
+
+*(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
+`![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
+
+
+
 
 # Conclusiones
 
