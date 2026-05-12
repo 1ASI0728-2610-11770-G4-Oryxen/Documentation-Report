@@ -1675,7 +1675,7 @@ El Component Diagram del bounded context Plant Management representa la descompo
 *   `Plant Command Processing Component` → `Plant Persistence Component`
 
 **Diagrama de Componentes:**
-`![Component Diagram - Plant Management](C4_component_plantManagement.png)`
+![Component Diagram - Plant Management](./assets/Chapter-5/C4_component_plantManagement.png)
 
 ### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -5244,7 +5244,7 @@ El Component Diagram del bounded context Community representa la descomposición
 
 **Diagrama de Componentes:**
 
-`![Component Diagram - Community](./assets/c4_components_community.png)`
+![Component Diagram - Community](./assets/Chapter-5/c4_components_community.png)
 
 ### 5.8.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -5262,7 +5262,7 @@ El diagrama UML del Domain Layer muestra al agregado principal `CommunityPost`, 
 
 **Diagrama UML de Clases (Domain Layer):**
 
-`![UML Class Diagram - Community](./assets/UML_community.png)`
+![UML Class Diagram - Community](./assets/Chapter-5/UML_community.png)
 
 **5.8.6.2. Bounded Context Database Design Diagram**
 
@@ -5274,7 +5274,7 @@ El diagrama de base de datos representa la estructura relacional (ERD) utilizada
 *   `plants (1)` ──── `(*) community_posts` (Relación opcional si la publicación etiqueta una especie).
 
 **Diagrama de base de datos (ERD):**
-`![ERD - Community](./assets/erd_community.png)`
+![ERD - Community](./assets/Chapter-5/erd_community.png)
 ---
 
 # Conclusiones
