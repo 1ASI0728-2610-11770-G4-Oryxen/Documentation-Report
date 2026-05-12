@@ -1677,6 +1677,18 @@ La estructura secuencial del *wireframe* es la siguiente:
 *(Añadir captura de pantalla de los wireframes en versión Desktop y Mobile)*
 `![Landing Page Wireframe - Desktop & Mobile](../assets/images/wireframe-landing-page.png)`
 
+## 6.4. Applications UX/UI Design
+
+El sistema de navegación de **Oryxen** está orientado a brindar una experiencia intuitiva, accesible y consistente tanto en plataformas mobile como web. La interfaz busca facilitar la interacción de los usuarios con las funcionalidades del sistema, permitiendo un uso sencillo y eficiente de las herramientas de monitoreo, automatización y gestión inteligente.
+
+El diseño de las aplicaciones considera los siguientes principios:
+
+*   **Experiencia de Usuario Intuitiva:** Las interfaces están diseñadas para que los usuarios puedan navegar y utilizar las funcionalidades principales de manera simple, reduciendo la complejidad de aprendizaje.
+*   **Consistencia entre Plataformas:** Tanto la aplicación móvil como la aplicación web mantienen una identidad visual unificada, garantizando coherencia en los componentes, colores, tipografías y patrones de interacción.
+*   **Diseño Responsivo y Accesible:** La interfaz se adapta a diferentes tamaños de pantalla y dispositivos, asegurando una experiencia fluida tanto en computadoras como en dispositivos móviles.
+*   **Jerarquía Visual y Organización de Información:** Se prioriza una distribución clara de los elementos visuales y funcionalidades, facilitando el acceso rápido a información relevante y acciones principales del sistema.
+*   **Enfoque en la Interacción del Usuario:** El diseño UI incorpora componentes visuales modernos y minimalistas que favorecen la interacción continua y mejoran la percepción de usabilidad de la plataforma.
+
 ### 6.4.3. Applications User Flow Diagrams
 
 Los diagramas de flujo de usuario (*User Flows*) mapean el recorrido paso a paso que realiza un consumidor dentro de las aplicaciones (Web y Móvil) de Oryxen para completar tareas específicas. Estos flujos han sido diseñados minimizando la fricción cognitiva y apoyando nuestra estrategia de adopción progresiva: permitiendo al usuario experimentar valor inmediato en el plan gratuito y facilitando transiciones naturales hacia la compra de hardware (Sensor Lite) o la suscripción Premium.
