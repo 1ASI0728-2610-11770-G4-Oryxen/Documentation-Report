@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Analytics Component Diagram</title>
+  <desc id="desc">Component level diagram for the Oryxen Analytics bounded context.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f3a33"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #1f2a24; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 17px; font-weight: 700; }
+      .small { font-size: 14px; }
+      .box { fill: #f5fbf5; stroke: #2f7d46; stroke-width: 2; rx: 10; }
+      .client { fill: #eef7ff; stroke: #2f6ea3; }
+      .service { fill: #fff9ed; stroke: #b97818; }
+      .repo { fill: #f7f1ff; stroke: #7c56a3; }
+      .external { fill: #fff1f1; stroke: #b85050; }
+      .db { fill: #eef2f0; stroke: #5c6b62; }
+      .line { stroke: #2f3a33; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text class="title" x="40" y="55">Analytics - Component Level Diagram</text>
+
+  <rect class="box client" x="50" y="120" width="190" height="70"/>
+  <text class="label" x="86" y="150">Web App</text>
+  <text class="small" x="77" y="173">dashboard reports</text>
+
+  <rect class="box client" x="50" y="255" width="190" height="70"/>
+  <text class="label" x="78" y="285">Mobile App</text>
+  <text class="small" x="85" y="308">insights and alerts</text>
+
+  <rect class="box" x="315" y="105" width="235" height="80"/>
+  <text class="label" x="360" y="138">AnalyticsController</text>
+  <text class="small" x="358" y="162">metrics and reports</text>
+
+  <rect class="box" x="315" y="250" width="235" height="80"/>
+  <text class="label" x="372" y="283">InsightsController</text>
+  <text class="small" x="372" y="307">recommendations</text>
+
+  <rect class="box service" x="635" y="80" width="235" height="70"/>
+  <text class="label" x="690" y="112">AnalyticsService</text>
+  <text class="small" x="682" y="134">reports and summaries</text>
+
+  <rect class="box service" x="635" y="190" width="235" height="70"/>
+  <text class="label" x="672" y="222">TrendAnalysisService</text>
+  <text class="small" x="695" y="244">trend detection</text>
+
+  <rect class="box service" x="635" y="300" width="235" height="70"/>
+  <text class="label" x="700" y="332">InsightService</text>
+  <text class="small" x="685" y="354">actionable insights</text>
+
+  <rect class="box repo" x="930" y="90" width="245" height="70"/>
+  <text class="label" x="960" y="122">AnalyticsReportRepository</text>
+  <text class="small" x="1000" y="144">report persistence</text>
+
+  <rect class="box repo" x="930" y="205" width="245" height="70"/>
+  <text class="label" x="956" y="237">MetricSnapshotRepository</text>
+  <text class="small" x="998" y="259">aggregated metrics</text>
+
+  <rect class="box external" x="930" y="320" width="245" height="70"/>
+  <text class="label" x="990" y="352">Data Telemetry</text>
+  <text class="small" x="984" y="374">sensor time series</text>
+
+  <rect class="box external" x="930" y="435" width="245" height="70"/>
+  <text class="label" x="982" y="467">Plant Management</text>
+  <text class="small" x="986" y="489">profiles and thresholds</text>
+
+  <rect class="box db" x="930" y="580" width="245" height="70"/>
+  <text class="label" x="986" y="612">Analytics Database</text>
+  <text class="small" x="970" y="634">reports, snapshots, insights</text>
+
+  <path class="line" d="M240 155 H315"/>
+  <path class="line" d="M240 290 H315"/>
+  <path class="line" d="M550 145 H635"/>
+  <path class="line" d="M550 290 H610 C620 290 620 335 635 335"/>
+  <path class="line" d="M870 115 H930"/>
+  <path class="line" d="M870 225 H930"/>
+  <path class="line" d="M870 335 C900 335 900 355 930 355"/>
+  <path class="line" d="M870 335 C905 335 895 470 930 470"/>
+  <path class="line" d="M1052 160 V580"/>
+  <path class="line" d="M1052 275 V580"/>
+</svg>

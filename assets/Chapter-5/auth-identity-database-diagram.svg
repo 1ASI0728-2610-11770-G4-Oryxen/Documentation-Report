@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Auth and Identity Integration Database Design Diagram</title>
+  <desc id="desc">Database design diagram for the Oryxen Auth and Identity Integration bounded context.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f3a33"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #1f2a24; }
+      .title { font-size: 30px; font-weight: 700; }
+      .tableTitle { font-size: 19px; font-weight: 700; }
+      .field { font-size: 15px; }
+      .table { fill: #fbfefb; stroke: #2f7d46; stroke-width: 2; rx: 8; }
+      .header { fill: #dff0e3; stroke: #2f7d46; stroke-width: 2; }
+      .line { stroke: #2f3a33; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1280" height="760" fill="#ffffff"/>
+  <text class="title" x="40" y="55">Auth &amp; Identity Integration - Database Design Diagram</text>
+
+  <g transform="translate(470,120)">
+    <rect class="table" width="340" height="310"/>
+    <rect class="header" width="340" height="50" rx="8"/>
+    <text class="tableTitle" x="132" y="32">USERS</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">full_name: string</text>
+    <text class="field" x="22" y="138">UK email: string</text>
+    <text class="field" x="22" y="166">external_iam_id: string</text>
+    <text class="field" x="22" y="194">FK role_id: uuid</text>
+    <text class="field" x="22" y="222">FK auth_provider_id: uuid</text>
+    <text class="field" x="22" y="250">status: string</text>
+    <text class="field" x="22" y="278">created_at: datetime</text>
+  </g>
+
+  <g transform="translate(90,135)">
+    <rect class="table" width="290" height="175"/>
+    <rect class="header" width="290" height="50" rx="8"/>
+    <text class="tableTitle" x="110" y="32">ROLES</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">UK name: string</text>
+    <text class="field" x="22" y="138">description: string</text>
+  </g>
+
+  <g transform="translate(90,440)">
+    <rect class="table" width="290" height="175"/>
+    <rect class="header" width="290" height="50" rx="8"/>
+    <text class="tableTitle" x="55" y="32">AUTH_PROVIDERS</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">provider_name: string</text>
+    <text class="field" x="22" y="138">external_provider_id: string</text>
+  </g>
+
+  <g transform="translate(900,260)">
+    <rect class="table" width="310" height="230"/>
+    <rect class="header" width="310" height="50" rx="8"/>
+    <text class="tableTitle" x="45" y="32">USER_ACCESS_GRANTS</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">FK user_id: uuid</text>
+    <text class="field" x="22" y="138">claim_name: string</text>
+    <text class="field" x="22" y="166">claim_value: string</text>
+    <text class="field" x="22" y="194">expires_at: datetime</text>
+  </g>
+
+  <path class="line" d="M470 215 H380"/>
+  <text class="field" x="395" y="202">N:1</text>
+  <path class="line" d="M470 520 H380"/>
+  <text class="field" x="395" y="507">N:1</text>
+  <path class="line" d="M810 295 H900"/>
+  <text class="field" x="825" y="282">1:N</text>
+</svg>

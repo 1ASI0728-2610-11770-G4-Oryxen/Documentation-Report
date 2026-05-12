@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">Auth and Identity Integration Component Diagram</title>
+  <desc id="desc">Component level diagram for the Oryxen Auth and Identity Integration bounded context with an external IAM provider.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f3a33"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #1f2a24; }
+      .title { font-size: 30px; font-weight: 700; }
+      .label { font-size: 17px; font-weight: 700; }
+      .small { font-size: 14px; }
+      .box { fill: #f5fbf5; stroke: #2f7d46; stroke-width: 2; rx: 10; }
+      .client { fill: #eef7ff; stroke: #2f6ea3; }
+      .service { fill: #fff9ed; stroke: #b97818; }
+      .repo { fill: #f7f1ff; stroke: #7c56a3; }
+      .external { fill: #fff1f1; stroke: #b85050; }
+      .db { fill: #eef2f0; stroke: #5c6b62; }
+      .line { stroke: #2f3a33; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text class="title" x="40" y="55">Auth &amp; Identity Integration - Component Level Diagram</text>
+
+  <rect class="box client" x="50" y="130" width="190" height="70"/>
+  <text class="label" x="86" y="160">Web App</text>
+  <text class="small" x="75" y="183">Vue / Browser</text>
+
+  <rect class="box client" x="50" y="260" width="190" height="70"/>
+  <text class="label" x="78" y="290">Mobile App</text>
+  <text class="small" x="78" y="313">iOS / Android</text>
+
+  <rect class="box" x="320" y="120" width="230" height="80"/>
+  <text class="label" x="374" y="153">AuthController</text>
+  <text class="small" x="344" y="177">IAM flow and callback</text>
+
+  <rect class="box" x="320" y="250" width="230" height="80"/>
+  <text class="label" x="342" y="283">UserIdentityController</text>
+  <text class="small" x="360" y="307">profile and account</text>
+
+  <rect class="box service" x="640" y="100" width="220" height="70"/>
+  <text class="label" x="692" y="132">AuthService</text>
+  <text class="small" x="676" y="154">authentication rules</text>
+
+  <rect class="box service" x="640" y="210" width="220" height="70"/>
+  <text class="label" x="672" y="242">IamTokenValidator</text>
+  <text class="small" x="680" y="264">external JWT validation</text>
+
+  <rect class="box service" x="640" y="320" width="220" height="70"/>
+  <text class="label" x="692" y="352">UserService</text>
+  <text class="small" x="678" y="374">identity operations</text>
+
+  <rect class="box service" x="640" y="430" width="220" height="70"/>
+  <text class="label" x="660" y="462">AuthorizationService</text>
+  <text class="small" x="690" y="484">roles and access</text>
+
+  <rect class="box repo" x="930" y="120" width="230" height="70"/>
+  <text class="label" x="965" y="152">UserRepository</text>
+  <text class="small" x="986" y="174">EF Core persistence</text>
+
+  <rect class="box repo" x="930" y="230" width="230" height="70"/>
+  <text class="label" x="953" y="262">AccessGrantRepository</text>
+  <text class="small" x="970" y="284">local claims mapping</text>
+
+  <rect class="box external" x="930" y="340" width="230" height="70"/>
+  <text class="label" x="970" y="372">External IAM Provider</text>
+  <text class="small" x="970" y="394">credentials, roles, tokens</text>
+
+  <rect class="box external" x="930" y="450" width="230" height="70"/>
+  <text class="label" x="1000" y="482">Email Provider</text>
+  <text class="small" x="978" y="504">transactional emails</text>
+
+  <rect class="box db" x="930" y="580" width="230" height="70"/>
+  <text class="label" x="970" y="612">Identity Database</text>
+  <text class="small" x="970" y="634">users and access grants</text>
+
+  <path class="line" d="M240 165 H320"/>
+  <path class="line" d="M240 295 H320"/>
+  <path class="line" d="M550 160 H640"/>
+  <path class="line" d="M550 160 C590 160 600 245 640 245"/>
+  <path class="line" d="M550 290 H610 C620 290 620 355 640 355"/>
+  <path class="line" d="M550 290 C600 290 600 465 640 465"/>
+  <path class="line" d="M860 135 H930"/>
+  <path class="line" d="M860 245 H930"/>
+  <path class="line" d="M860 135 C900 135 890 375 930 375"/>
+  <path class="line" d="M860 135 C900 135 890 485 930 485"/>
+  <path class="line" d="M1045 190 V580"/>
+  <path class="line" d="M1045 300 V580"/>
+</svg>
