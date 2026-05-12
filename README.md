@@ -1675,7 +1675,7 @@ El Component Diagram del bounded context Plant Management representa la descompo
 *   `Plant Command Processing Component` → `Plant Persistence Component`
 
 **Diagrama de Componentes:**
-`![Component Diagram - Plant Management](C4_component_diagram.png)`
+`![Component Diagram - Plant Management](C4_component_plantManagement.png)`
 
 ### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1692,7 +1692,7 @@ El diagrama UML del Domain Layer muestra al agregado principal `PlantProfile`, v
 *   `PlantStatus` representa el estado de vida del registro.
 
 **Diagrama UML de Clases (Domain Layer):**
-`![UML Class Diagram - Plant Management](UML_diagram.png)`
+`![UML Class Diagram - Plant Management](UML_planManagement.png)`
 
 **5.2.6.2. Bounded Context Database Design Diagram**
 
@@ -1703,7 +1703,7 @@ El diagrama de base de datos representa la estructura relacional (ERD) utilizada
 *   `plant_profiles (1)` ──── `(1) plant_configurations`
 
 **Diagrama de base de datos (ERD):**
-`![ERD - Plant Management](ERD_diagram.png)`
+`![ERD - Plant Management](ERD_plantManagement.png)`
 
 ## 5.3. Bounded Context: Device Management IoT
 
@@ -5041,6 +5041,240 @@ El diagrama de base de datos del bounded context `Billing and Subscription` repr
 - `customers (1) ──── (1) customer_billing_accounts`
 
 
+## 5.8. Bounded Context: Community
+
+El bounded context de **Community** representa el espacio social y colaborativo de la plataforma Oryxen. Este contexto permite a los usuarios compartir el progreso de sus plantas, intercambiar consejos, interactuar mediante comentarios y acceder a un *feed* personalizado. Además, incorpora reglas críticas de negocio y privacidad, como la moderación de contenido y la sanitización automática de metadatos (EXIF/GPS) en las fotografías para proteger la seguridad de los usuarios.
+
+### 5.8.1. Domain Layer
+
+La capa de dominio del bounded context **Community** contiene las clases que modelan el comportamiento central de la interacción social, garantizando las reglas de publicación, límites de interacción y estados de moderación.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `CommunityPost`
+**Paquete:** `com.upc.oryxen.community.domain.model.aggregates`
+
+**Propósito:** Representa una publicación realizada por un usuario en el foro o *feed* comunitario. Constituye el Aggregate Root del bounded context, encapsulando el contenido, las imágenes y su estado de moderación.
+
+**Atributos:**
+*   `postId: Long` → Identificador único de la publicación.
+*   `authorId: Long` → Identificador del usuario creador.
+*   `plantId: Long?` → (Opcional) Identificador de la planta etiquetada.
+*   `content: String` → Texto del consejo o actualización.
+*   `imageUrl: String?` → URL de la fotografía compartida (previamente sanitizada).
+*   `status: PostStatus` → Estado de la publicación (Activa, Moderada).
+*   `createdAt: DateTime` → Fecha de la publicación.
+*   `updatedAt: DateTime` → Última modificación.
+
+**Métodos:**
+*   `updateContent(newContent)` → Modifica el texto de la publicación validando políticas.
+*   `markAsModerated()` → Cambia el estado de la publicación si infringe las normas.
+*   `archive()` → Oculta la publicación lógicamente.
+
+**Relaciones:**
+*   Un `CommunityPost` tiene múltiples `Comment`.
+*   Un `CommunityPost` puede tener múltiples `Reaction`.
+
+**b. Entities del dominio:**
+
+**Nombre de la clase:** `Comment`
+**Propósito:** Representa las respuestas que los usuarios dejan en una publicación principal. Según las reglas de negocio, su contenido no puede exceder los 300 caracteres ni contener enlaces externos no permitidos.
+
+**c. Value Objects:**
+
+**Nombre de la clase:** `PostStatus`
+**Propósito:** Representa el estado de moderación y visibilidad de una publicación en la comunidad.
+**Valores posibles:**
+*   `ACTIVE`
+*   `REPORTED`
+*   `MODERATED`
+*   `ARCHIVED`
+
+**Nombre de la clase:** `ReactionType`
+**Propósito:** Define el tipo de interacción de un usuario frente a un post.
+**Valores posibles:**
+*   `LIKE`
+*   `HELPFUL`
+
+**d. Referencias externas del dominio:**
+
+*   **UserAccount** (Origen: Auth & Identity): Representa al autor de la publicación o comentario.
+*   **PlantProfile** (Origen: Plant Management): Representa la especie etiquetada en la publicación para nutrir el algoritmo del feed personalizado.
+
+**e. Commands del dominio:**
+
+**Paquete:** `com.upc.oryxen.community.domain.model.commands`
+*   `CreatePostCommand`: Representa la intención de crear una nueva publicación (gatilla la sanitización de imagen).
+*   `AddCommentCommand`: Representa la intención de comentar en una publicación.
+*   `AddReactionCommand`: Representa la intención de reaccionar a un post.
+*   `ModeratePostCommand`: Representa la intención de un administrador de restringir contenido reportado.
+
+**f. Queries del dominio:**
+
+*   `GetPersonalizedFeedQuery`: Obtener publicaciones relevantes basadas en el inventario de plantas del usuario activo.
+*   `GetPostByIdQuery`: Obtener el detalle de un post y sus comentarios anidados.
+
+**g. Domain Services:**
+
+*   `CommunityInteractionService`: Valida las operaciones de interacción social (ej. validación de límites de caracteres, filtro de palabras prohibidas).
+
+**h. Repository:**
+
+*   `IPostRepository`: Interfaz para gestionar la persistencia y ciclo de vida de las publicaciones.
+*   `ICommentRepository`: Interfaz para persistir los comentarios asociados.
+
+### 5.8.2. Interface Layer
+
+La Interface Layer expone las capacidades sociales a través de endpoints REST que el frontend (Web y Móvil) utilizará para construir el *feed* y gestionar las interacciones.
+
+**a. CommunityController**
+
+**Paquete:** `com.upc.oryxen.community.interfaces.rest`
+**Propósito:** Exponer los endpoints para gestionar el flujo de la comunidad y moderación.
+
+**Dependencias:**
+*   `CommunityCommandService`
+*   `CommunityQueryService`
+
+**Endpoints expuestos:**
+*   `GET /api/v1/community/feed` → Obtiene el *feed* personalizado.
+*   `POST /api/v1/community/posts` → Crear una nueva publicación (recibe payload e imagen).
+*   `GET /api/v1/community/posts/{postId}` → Ver detalles de un post.
+*   `POST /api/v1/community/posts/{postId}/comments` → Agregar un comentario.
+*   `PUT /api/v1/community/moderation/{postId}` → Endpoint de moderación para administradores.
+
+**b. Resources / DTOs:**
+
+*   `PostResource`: Representa la estructura de la publicación enviada al cliente.
+*   `CreatePostResource`: Payload requerido para compartir una experiencia.
+*   `CommentResource`: Datos estructurados de los comentarios.
+
+**c. Assemblers:**
+
+*   `PostResourceFromEntityAssembler`: Transforma la entidad `CommunityPost` en un recurso REST.
+*   `CreatePostCommandFromResourceAssembler`: Mapea el request del cliente al comando de dominio.
+
+### 5.8.3. Application Layer
+
+Esta capa orquesta los casos de uso para la interacción social, garantizando las validaciones de privacidad correspondientes antes de interactuar con el dominio.
+
+**a. Command Handlers / Command Services:**
+
+`CommunityCommandServiceImpl` maneja:
+*   `handle(CreatePostCommand)`: Coordina la llamada al servicio de infraestructura para limpiar los metadatos de la imagen (EXIF/GPS), crea la entidad `CommunityPost` y la persiste.
+*   `handle(AddCommentCommand)`: Utiliza `CommunityInteractionService` para validar que el texto sea menor a 300 caracteres y sin enlaces, luego guarda el `Comment`.
+*   `handle(ModeratePostCommand)`: Evalúa un reporte y cambia el `PostStatus` a `MODERATED`.
+
+**b. Query Handlers / Query Services:**
+
+`CommunityQueryServiceImpl` maneja:
+*   `handle(GetPersonalizedFeedQuery)`: Cruza la información del usuario autenticado con las etiquetas de plantas para devolver publicaciones priorizadas.
+
+**c. Flujos principales del negocio:**
+
+**Flujo de publicación segura (con sanitización):**
+*   El usuario envía texto y una fotografía desde el frontend.
+*   Se construye `CreatePostCommand`.
+*   `CommunityCommandServiceImpl` intercepta la imagen y llama al servicio externo de sanitización para eliminar coordenadas GPS (garantizando la privacidad).
+*   Una vez limpia, la imagen se sube al Cloud Storage y se genera una URL segura.
+*   Se crea la entidad `CommunityPost` con la URL segura.
+*   Se persiste mediante `IPostRepository` y se retorna el recurso publicado al feed.
+
+### 5.8.4. Infrastructure Layer
+
+Maneja la persistencia en la base de datos relacional y las integraciones críticas con servicios de procesamiento de archivos para garantizar la privacidad.
+
+**a. Repositorios de persistencia:**
+*   `PostRepositoryImpl`: Implementa la persistencia de las publicaciones.
+*   `CommentRepositoryImpl`: Implementa la persistencia de los comentarios.
+
+**b. ORM Context:**
+*   `CommunityDbContext`: Punto central de acceso a la base de datos de la comunidad mediante Entity Framework Core / Spring Data JPA.
+
+**c. Persistencia de entidades:**
+**Entidades persistidas:**
+*   `CommunityPost`
+*   `Comment`
+
+**d. Diseño de persistencia:**
+
+**Tabla principal:** `community_posts`
+**Columnas:**
+*   `post_id` (PK)
+*   `author_id` (FK hacia Auth & Identity)
+*   `plant_id` (FK hacia Plant Management, Nullable)
+*   `content` (TEXT)
+*   `image_url` (VARCHAR)
+*   `status` (VARCHAR)
+*   `created_at` (TIMESTAMP)
+
+**Tabla relacionada:** `comments`
+**Columnas:**
+*   `comment_id` (PK)
+*   `post_id` (FK hacia `community_posts`)
+*   `author_id` (FK)
+*   `content` (VARCHAR 300)
+*   `created_at` (TIMESTAMP)
+
+**e. Integración con otros bounded contexts y servicios:**
+*   **Privacy & Sanitization Service:** Servicio de infraestructura que procesa el archivo binario de la foto para eliminar datos EXIF antes de subirlo al Cloud Storage.
+*   **Auth & Identity:** Para validar el perfil del autor y su reputación.
+*   **Plant Management:** Para cruzar los intereses del usuario y alimentar el algoritmo del *feed*.
+
+### 5.8.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context Community representa la descomposición del contenedor backend encargado de gestionar la red social interna de Oryxen y el procesamiento seguro de sus recursos visuales.
+
+**Componentes principales:**
+
+*   **Community REST API Component**: Expone endpoints REST para feed, posts y comentarios mediante `CommunityController`.
+*   **Community Transformation Component**: Encargado de transformar datos entre DTOs y comandos mediante *Assemblers*.
+*   **Community Command Processing Component**: Implementado por `CommunityCommandServiceImpl`. Orquesta la creación de posts y delega el filtrado de imágenes.
+*   **Community Query Processing Component**: Implementado por `CommunityQueryServiceImpl`. Genera el feed.
+*   **Sanitization Service Component (Infrastructure):** Encargado de procesar y limpiar metadatos de imágenes.
+*   **Community Domain Component**: Representa el núcleo del dominio, albergando el agregado `CommunityPost` y la entidad `Comment`.
+*   **Community Persistence Component**: Gestiona la persistencia en base de datos mediante repositorios ORM.
+
+**Relaciones entre componentes:**
+*   `Community REST API` → `Community Transformation Component`
+*   `Community REST API` → `Community Command Processing Component`
+*   `Community Command Processing Component` → `Sanitization Service Component`
+*   `Community Command Processing Component` → `Community Domain Component`
+*   `Community Command Processing Component` → `Community Persistence Component`
+
+**Diagrama de Componentes:**
+
+`![Component Diagram - Community](./assets/c4_components_community.png)`
+
+### 5.8.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context Community, visualizando el detalle del dominio social y la persistencia de las interacciones.
+
+**5.8.6.1. Bounded Context Domain Layer Class Diagrams**
+
+El diagrama UML del Domain Layer muestra al agregado principal `CommunityPost`, vinculando sus comentarios, tipos de reacciones, estados de moderación y servicios de interacción.
+
+**Relaciones:**
+*   `CommunityPost` es el Aggregate Root del contexto.
+*   `CommunityPost` tiene una relación de uno a muchos (*1..**) hacia la entidad `Comment`.
+*   `PostStatus` (Value Object) representa la viabilidad del post (Activo, Moderado).
+*   `CommunityCommandService` interactúa con `IPostRepository` e `ICommentRepository`.
+
+**Diagrama UML de Clases (Domain Layer):**
+
+`![UML Class Diagram - Community](./assets/UML_community.png)`
+
+**5.8.6.2. Bounded Context Database Design Diagram**
+
+El diagrama de base de datos representa la estructura relacional (ERD) utilizada para almacenar el historial de publicaciones y las interacciones de los usuarios.
+
+**Relaciones entre tablas:**
+*   `user_profiles (1)` ──── `(*) community_posts`
+*   `community_posts (1)` ──── `(*) comments`
+*   `plants (1)` ──── `(*) community_posts` (Relación opcional si la publicación etiqueta una especie).
+
+**Diagrama de base de datos (ERD):**
+`![ERD - Community](./assets/erd_community.png)`
 ---
 
 # Conclusiones
