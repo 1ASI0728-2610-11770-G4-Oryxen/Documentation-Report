@@ -3959,6 +3959,858 @@ El diagrama de base de datos del bounded context `Notification` representa la es
 - `user_profiles (1) ──── (*) device_tokens`
 
 ---
+## 5.7. Bounded Context: Billing and Subscription
+
+El bounded context de **Billing and Subscription** representa el núcleo encargado de la gestión de suscripciones, planes y procesos de facturación dentro de la plataforma. Este contexto permite administrar el ciclo de vida de las suscripciones de los clientes, el control de planes disponibles y la gestión de cuentas de facturación, garantizando consistencia financiera y automatización de procesos de cobro.
+
+### 5.7.1. Domain Layer
+
+La capa de dominio del bounded context **Billing and Subscription** contiene las clases responsables de modelar el comportamiento relacionado con suscripciones, cuentas de facturación y planes comerciales.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `Subscription`
+
+**Paquete:** `com.upc.billing.domain.model.aggregates`
+
+**Propósito:** Representa la suscripción activa de un cliente a un plan específico. Constituye el Aggregate Root del bounded context Billing and Subscription.
+
+**Atributos:**
+
+- `id: UUID` → Identificador único de la suscripción.
+- `customerId: UUID` → Identificador del cliente propietario de la suscripción.
+- `planId: UUID` → Identificador del plan contratado.
+- `status: SubscriptionStatus` → Estado actual de la suscripción.
+- `startDate: DateTime` → Fecha de inicio de la suscripción.
+- `endDate: DateTime` → Fecha de finalización de la suscripción.
+- `nextBillingDate: DateTime` → Próxima fecha de facturación.
+- `trialEndDate: DateTime` → Fecha de finalización del periodo de prueba.
+
+**Métodos:**
+
+- `activate()` → Activa la suscripción.
+- `cancel(effectiveDate)` → Cancela la suscripción.
+- `changePlan(newPlanId, changeDate)` → Cambia el plan contratado.
+- `isActive()` → Verifica si la suscripción se encuentra activa.
+- `suspend(reason)` → Suspende temporalmente la suscripción.
+
+**Relaciones:**
+
+- Una `Subscription` pertenece a un único cliente.
+- Un cliente puede poseer múltiples suscripciones históricas.
+- Una `Subscription` se encuentra asociada a un único `Plan`.
+
+
+**b. Entities del dominio:**
+
+`CustomerBillingAccount`
+
+**Propósito:** Representa la cuenta de facturación asociada a un cliente.
+
+**Atributos:**
+
+- `id: UUID`
+- `customerId: UUID`
+- `balance: float`
+- `createdAt: DateTime`
+- `updatedAt: DateTime`
+
+**Métodos:**
+
+- `getBalance()` → Retorna el balance actual.
+
+
+`Plan`
+
+**Propósito:** Representa un plan comercial disponible para contratación.
+
+**Atributos:**
+
+- `id: UUID`
+- `name: String`
+- `description: String`
+- `price: float`
+- `features: List<String>`
+- `isActive: boolean`
+
+**Métodos:**
+
+- `activate()` → Activa el plan.
+- `deactivate()` → Desactiva el plan.
+
+
+**c. Value Objects:**
+
+`BillingPeriod`
+
+Representa un intervalo de facturación asociado a una suscripción.
+
+**Atributos:**
+
+- `start: DateTime`
+- `end: DateTime`
+
+**Métodos:**
+
+- `contains(date)` → Verifica si una fecha pertenece al periodo.
+- `overlapsWith(other)` → Verifica superposición de periodos.
+- `days()` → Retorna la cantidad de días del periodo.
+
+
+`SubscriptionStatus`
+
+Representa el estado de una suscripción.
+
+**Valores posibles:**
+
+- `PENDING`
+- `ACTIVE`
+- `SUSPENDED`
+- `CANCELLED`
+- `EXPIRED`
+
+
+**d. Commands del dominio:**
+
+`CreateSubscriptionCommand`
+
+**Paquete:** `com.upc.billing.domain.model.commands`
+
+**Propósito:** Representa la intención de crear una nueva suscripción.
+
+**Atributos:**
+
+- `customerId: UUID`
+- `planId: UUID`
+
+
+`ChangePlanCommand`
+
+**Propósito:** Cambiar el plan asociado a una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+- `newPlanId: UUID`
+
+
+`CancelSubscriptionCommand`
+
+**Propósito:** Cancelar una suscripción activa.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+- `effectiveDate: DateTime`
+
+
+`ActivateSubscriptionCommand`
+
+**Propósito:** Activar una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+
+
+`SuspendSubscriptionCommand`
+
+**Propósito:** Suspender temporalmente una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+- `reason: String`
+
+
+`CreatePlanCommand`
+
+**Propósito:** Registrar un nuevo plan.
+
+**Atributos:**
+
+- `name: String`
+- `description: String`
+- `price: float`
+
+
+**e. Queries del dominio:**
+
+`GetSubscriptionQuery`
+
+**Propósito:** Obtener información de una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+
+
+`ListSubscriptionsQuery`
+
+**Propósito:** Obtener suscripciones asociadas a un cliente.
+
+**Atributos:**
+
+- `customerId: UUID`
+
+
+`GetCustomerBillingAccountQuery`
+
+**Propósito:** Obtener la cuenta de facturación de un cliente.
+
+**Atributos:**
+
+- `customerId: UUID`
+
+
+`GetCustomerBalanceQuery`
+
+**Propósito:** Obtener balance actual del cliente.
+
+**Atributos:**
+
+- `customerId: UUID`
+
+
+`GetPlanQuery`
+
+**Propósito:** Obtener información de un plan.
+
+**Atributos:**
+
+- `planId: UUID`
+
+
+`ListPlansQuery`
+
+**Propósito:** Obtener lista de planes disponibles.
+
+
+**f. Domain Services:**
+
+`SubscriptionApplicationService`
+
+**Paquete:** `com.upc.billing.domain.services`
+
+**Propósito:** Coordinar operaciones relacionadas con suscripciones.
+
+**Operaciones:**
+
+- `handle(CreateSubscriptionCommand)`
+- `handle(ChangePlanCommand)`
+- `handle(CancelSubscriptionCommand)`
+- `handle(ActivateSubscriptionCommand)`
+- `handle(SuspendSubscriptionCommand)`
+- `handle(GetSubscriptionQuery)`
+- `handle(ListSubscriptionsQuery)`
+
+
+`PlanApplicationService`
+
+**Propósito:** Gestionar operaciones relacionadas con planes.
+
+**Operaciones:**
+
+- `handle(CreatePlanCommand)`
+- `handle(UpdatePlanCommand)`
+- `handle(ActivatePlanCommand)`
+- `handle(DeactivatePlanCommand)`
+- `handle(ListPlansQuery)`
+- `handle(GetPlanQuery)`
+
+
+`CustomerBillingAccountApplicationService`
+
+**Propósito:** Gestionar consultas relacionadas con cuentas de facturación.
+
+**Operaciones:**
+
+- `handle(GetCustomerBillingAccountQuery)`
+- `handle(GetCustomerBalanceQuery)`
+
+
+**g. Repositories:**
+
+`SubscriptionRepository`
+
+**Paquete:** `com.upc.billing.infrastructure.persistence.repositories`
+
+**Propósito:** Gestionar persistencia de suscripciones.
+
+**Operaciones:**
+
+- `save(Subscription)`
+- `findById(UUID)`
+- `findActiveByCustomer(UUID)`
+
+
+`CustomerBillingAccountRepository`
+
+**Propósito:** Gestionar persistencia de cuentas de facturación.
+
+**Operaciones:**
+
+- `findByCustomerId(UUID)`
+- `updateBalance()`
+
+
+`PlanRepository`
+
+**Propósito:** Gestionar persistencia de planes.
+
+**Operaciones:**
+
+- `save(Plan)`
+- `findById(UUID)`
+- `findActive()`
+- `list()`
+
+
+### 5.7.2. Interface Layer
+
+La Interface Layer del bounded context **Billing and Subscription** contiene los controladores REST responsables de exponer funcionalidades relacionadas con suscripciones, cuentas de facturación y planes comerciales.
+
+**a. SubscriptionController**
+
+**Paquete:** `com.upc.billing.interfaces.rest`
+
+**Propósito:** Exponer endpoints relacionados con la gestión de suscripciones.
+
+**Dependencias:**
+
+- `SubscriptionApplicationService`
+
+**Endpoints expuestos:**
+
+- `POST /api/v1/subscriptions`
+- `GET /api/v1/subscriptions/{subscriptionId}`
+- `GET /api/v1/customers/{customerId}/subscriptions`
+- `PUT /api/v1/subscriptions/{subscriptionId}/change-plan`
+- `PUT /api/v1/subscriptions/{subscriptionId}/cancel`
+- `POST /api/v1/subscriptions/{subscriptionId}/activate`
+- `POST /api/v1/subscriptions/{subscriptionId}/suspend`
+- `GET /api/v1/subscriptions/{subscriptionId}/status`
+
+
+**b. CustomerBillingAccountController**
+
+**Propósito:** Exponer operaciones relacionadas con facturación del cliente.
+
+**Endpoints expuestos:**
+
+- `GET /api/v1/customers/{customerId}/billing-account`
+- `GET /api/v1/customers/{customerId}/billing-account/balance`
+
+
+**c. PlanController**
+
+**Propósito:** Gestionar endpoints relacionados con planes.
+
+**Endpoints expuestos:**
+
+- `GET /api/v1/plans`
+- `GET /api/v1/plans/{planId}`
+- `POST /api/v1/plans`
+- `PUT /api/v1/plans/{planId}`
+- `POST /api/v1/plans/{planId}/activate`
+- `POST /api/v1/plans/{planId}/deactivate`
+
+
+**d. Resources / DTOs:**
+
+`SubscriptionResource`
+
+**Propósito:** Representar información de suscripciones enviada al frontend.
+
+**Atributos:**
+
+- `id`
+- `customerId`
+- `planId`
+- `status`
+- `startDate`
+- `nextBillingDate`
+
+
+`PlanResource`
+
+**Propósito:** Representar información de planes comerciales.
+
+**Atributos:**
+
+- `id`
+- `name`
+- `description`
+- `price`
+- `features`
+- `isActive`
+
+
+`CustomerBillingAccountResource`
+
+**Propósito:** Representar información financiera del cliente.
+
+**Atributos:**
+
+- `id`
+- `customerId`
+- `balance`
+
+
+**e. Assemblers:**
+
+`SubscriptionResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `Subscription` en recursos REST.
+
+
+`SubscriptionCommandFromResourceAssembler`
+
+**Propósito:** Transformar requests REST en commands del dominio.
+
+
+`PlanResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `Plan` en recursos consumibles.
+
+
+### 5.7.3. Application Layer
+
+La Application Layer del bounded context **Billing and Subscription** coordina procesos relacionados con suscripciones, planes y facturación.
+
+**Capacidades principales del contexto:**
+
+- Crear suscripciones.
+- Cancelar y suspender suscripciones.
+- Gestionar cambios de plan.
+- Consultar balances y cuentas de facturación.
+- Administrar planes comerciales.
+
+
+**a. Command Handlers / Command Services:**
+
+`SubscriptionApplicationService`
+
+**Paquete:** `com.upc.billing.application.internal.commandservices`
+
+**Dependencias:**
+
+- `SubscriptionRepository`
+- `PlanRepository`
+- `CustomerBillingAccountRepository`
+
+**Operaciones que maneja:**
+
+`handle(CreateSubscriptionCommand command)`
+
+- Valida existencia del cliente.
+- Verifica disponibilidad del plan.
+- Genera nueva suscripción.
+- Persiste la suscripción.
+
+`handle(ChangePlanCommand command)`
+
+- Obtiene suscripción activa.
+- Valida nuevo plan.
+- Calcula ajustes de facturación.
+- Actualiza suscripción.
+
+`handle(CancelSubscriptionCommand command)`
+
+- Cancela suscripción.
+- Actualiza estado.
+- Registra fecha efectiva.
+
+
+`PlanApplicationService`
+
+**Dependencias:**
+
+- `PlanRepository`
+
+**Operaciones que maneja:**
+
+- `handle(CreatePlanCommand)`
+- `handle(UpdatePlanCommand)`
+- `handle(ActivatePlanCommand)`
+- `handle(DeactivatePlanCommand)`
+
+
+**b. Query Handlers / Query Services:**
+
+`CustomerBillingAccountApplicationService`
+
+**Propósito:** Gestionar consultas relacionadas con facturación.
+
+**Dependencias:**
+
+- `CustomerBillingAccountRepository`
+
+**Operaciones:**
+
+- `handle(GetCustomerBillingAccountQuery)`
+- `handle(GetCustomerBalanceQuery)`
+
+
+`SubscriptionQueryService`
+
+**Propósito:** Gestionar consultas relacionadas con suscripciones.
+
+**Dependencias:**
+
+- `SubscriptionRepository`
+
+**Operaciones:**
+
+- `handle(GetSubscriptionQuery)`
+- `handle(ListSubscriptionsQuery)`
+
+
+**c. Event Handlers:**
+
+`SubscriptionEventHandlers`
+
+**Propósito:** Gestionar eventos relacionados con suscripciones.
+
+**Eventos manejados:**
+
+- `SubscriptionCancelledEvent`
+- `SubscriptionActivatedEvent`
+
+
+**d. Flujos principales del negocio:**
+
+**Flujo de creación de suscripción:**
+
+- El frontend solicita una nueva suscripción.
+- Se construye `CreateSubscriptionCommand`.
+- Se valida el cliente y el plan.
+- Se crea la entidad `Subscription`.
+- Se persiste la información.
+- Se retorna el resultado al cliente.
+
+
+**Flujo de cambio de plan:**
+
+- El usuario solicita cambiar de plan.
+- Se ejecuta `ChangePlanCommand`.
+- Se validan reglas de facturación.
+- Se actualiza la suscripción.
+- Se recalculan fechas de cobro.
+
+
+**Flujo de consulta de balance:**
+
+- El frontend solicita balance del cliente.
+- Se ejecuta `GetCustomerBalanceQuery`.
+- Se obtiene información desde `CustomerBillingAccountRepository`.
+- Se transforma la respuesta a recurso REST.
+- Se retorna el balance al cliente.
+
+
+### 5.7.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context `Billing and Subscription` contiene los componentes responsables de persistencia y gestión de datos relacionados con suscripciones y facturación.
+
+**a. Repositorios de persistencia:**
+
+`SubscriptionRepositoryImpl`
+
+**Paquete:** `com.upc.billing.infrastructure.persistence.jpa.repositories`
+
+**Propósito:** Implementar persistencia de `Subscription`.
+
+**Interfaz implementada:**
+
+- `SubscriptionRepository`
+
+
+`CustomerBillingAccountRepositoryImpl`
+
+**Propósito:** Persistir y consultar cuentas de facturación.
+
+**Interfaz implementada:**
+
+- `CustomerBillingAccountRepository`
+
+
+`PlanRepositoryImpl`
+
+**Propósito:** Persistir y consultar planes comerciales.
+
+**Interfaz implementada:**
+
+- `PlanRepository`
+
+
+**b. Persistencia de entidades:**
+
+Las entidades del contexto están mapeadas mediante tecnologías ORM.
+
+**Entidades persistidas:**
+
+- `Subscription`
+- `CustomerBillingAccount`
+- `Plan`
+
+
+**c. Diseño de persistencia:**
+
+**Tabla principal:** `subscriptions`
+
+**Columnas:**
+
+- `id`
+- `customer_id`
+- `plan_id`
+- `status`
+- `start_date`
+- `end_date`
+- `next_billing_date`
+- `trial_end_date`
+
+**Restricciones:**
+
+- `id` → Primary Key
+- `customer_id` → Foreign Key
+- `plan_id` → Foreign Key
+
+**Campos obligatorios:**
+
+- `customer_id`
+- `plan_id`
+- `status`
+- `start_date`
+
+
+**Tabla relacionada:** `customer_billing_accounts`
+
+**Columnas:**
+
+- `id`
+- `customer_id`
+- `balance`
+- `created_at`
+- `updated_at`
+
+
+**Tabla relacionada:** `plans`
+
+**Columnas:**
+
+- `id`
+- `name`
+- `description`
+- `price`
+- `is_active`
+
+
+**d. Integración con otros bounded contexts:**
+
+La infraestructura del contexto Billing and Subscription depende de:
+
+- `Identity and Access Management`
+- `Payment Gateway`
+- `Notification Service`
+- Servicios de facturación externa
+
+
+### 5.7.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Billing and Subscription` representa la descomposición del backend encargado de suscripciones y facturación.
+
+**Componentes principales:**
+
+**Billing REST API Component:**
+
+Expone endpoints REST relacionados con suscripciones y planes.
+
+**Responsabilidades:**
+
+- Gestionar suscripciones.
+- Gestionar cuentas de facturación.
+- Gestionar planes.
+
+
+**Billing Transformation Component:**
+
+Encargado de transformar DTOs, commands y entidades.
+
+**Incluye:**
+
+- `SubscriptionResource`
+- `PlanResource`
+- Assemblers
+
+
+**Billing Command Processing Component:**
+
+Implementado por `SubscriptionApplicationService` y `PlanApplicationService`.
+
+**Responsabilidades:**
+
+- Procesar suscripciones.
+- Gestionar cambios de plan.
+- Procesar cancelaciones.
+- Administrar planes.
+
+
+**Billing Query Processing Component:**
+
+Implementado por Query Services.
+
+**Responsabilidades:**
+
+- Consultar balances.
+- Consultar suscripciones.
+- Consultar planes.
+
+
+**Billing Domain Component:**
+
+Representa el núcleo del dominio.
+
+### Incluye:
+
+- `Subscription`
+- `CustomerBillingAccount`
+- `Plan`
+- `BillingPeriod`
+- `SubscriptionStatus`
+
+
+**Billing Persistence Component:**
+
+Gestiona persistencia mediante repositorios ORM.
+
+
+**External Billing Integration Component:**
+
+Representa integración con servicios externos.
+
+**Incluye:**
+
+- `Payment Gateway`
+- `Notification Service`
+- Facturación externa
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_BillingSubscription](https://i.postimg.cc/7ZhBqdGN/Billing-Subscription-Component.png)
+
+
+**Relaciones entre componentes:**
+
+- `Billing REST API Component → Billing Transformation Component`
+- `Billing REST API Component → Billing Command Processing Component`
+- `Billing REST API Component → Billing Query Processing Component`
+- `Billing Command Processing Component → Billing Domain Component`
+- `Billing Command Processing Component → Billing Persistence Component`
+- `Billing Command Processing Component → External Billing Integration Component`
+- `Billing Query Processing Component → Billing Persistence Component`
+
+
+### 5.7.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Billing and Subscription`, permitiendo visualizar la estructura del dominio, persistencia y relaciones entre suscripciones, cuentas y planes.
+
+
+#### 5.7.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Billing and Subscription` muestra al agregado principal `Subscription`, encargado de representar la gestión de suscripciones dentro del sistema.
+
+Además, se incluyen:
+
+- `CustomerBillingAccount`
+- `Plan`
+- `BillingPeriod`
+- Commands y Queries.
+- Servicios del dominio.
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_BillingSubscription](https://i.postimg.cc/j5Hc8rmR/Billing-Subscription-Class-Diagram.png)
+
+
+**Relaciones:**
+
+- `Subscription` es el Aggregate Root del contexto.
+- `Subscription` pertenece a un cliente.
+- `Subscription` referencia un `Plan`.
+- `CustomerBillingAccount` administra balances del cliente.
+- `PlanApplicationService` utiliza `PlanRepository`.
+- `SubscriptionApplicationService` utiliza `SubscriptionRepository`.
+
+
+#### 5.7.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Billing and Subscription` representa la estructura relacional utilizada para almacenar suscripciones, cuentas de facturación y planes comerciales.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_BillingSubscription](https://i.postimg.cc/d3nBYjJX/Billing-Subscription-Design-Diagram.png)
+
+
+**Tabla principal:** `subscriptions`
+
+**Atributos:**
+
+- `id`
+- `customer_id`
+- `plan_id`
+- `status`
+- `start_date`
+- `end_date`
+- `next_billing_date`
+- `trial_end_date`
+
+**Constraints:**
+
+- PRIMARY KEY (`id`)
+- FOREIGN KEY (`customer_id`)
+- FOREIGN KEY (`plan_id`)
+
+**Tabla relacionada:** `customer_billing_accounts`
+
+**Atributos:**
+
+- `id`
+- `customer_id`
+- `balance`
+- `created_at`
+- `updated_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`id`)
+- FOREIGN KEY (`customer_id`)
+
+
+**Tabla relacionada:** `plans`
+
+**Atributos:**
+
+- `id`
+- `name`
+- `description`
+- `price`
+- `is_active`
+
+**Constraints:**
+
+- PRIMARY KEY (`id`)
+
+
+**Relaciones entre tablas:**
+
+- `customers (1) ──── (*) subscriptions`
+- `plans (1) ──── (*) subscriptions`
+- `customers (1) ──── (1) customer_billing_accounts`
+
+
+---
 
 # Conclusiones
 
