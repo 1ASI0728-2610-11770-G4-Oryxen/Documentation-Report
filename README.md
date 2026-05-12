@@ -142,6 +142,27 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
     - [4.3.3. Software Architecture Container Level Diagrams](#433-software-architecture-container-level-diagrams)  
     - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
 
+### [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
+
+- [5.1. Bounded Context: Auth & Identity Integration](#51-bounded-context-auth--identity-integration)
+    - [5.1.1. Domain Layer](#511-domain-layer)
+    - [5.1.2. Interface Layer](#512-interface-layer)
+    - [5.1.3. Application Layer](#513-application-layer)
+    - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
+    - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+    - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+        - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+        - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+- [5.2. Bounded Context: Analysis & Reporting](#52-bounded-context-analysis--reporting)
+    - [5.2.1. Domain Layer](#521-domain-layer)
+    - [5.2.2. Interface Layer](#522-interface-layer)
+    - [5.2.3. Application Layer](#523-application-layer)
+    - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
+    - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
+    - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
+        - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
+        - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
+
 #### [Conclusiones](#conclusiones)  
 - [Conclusiones y recomendaciones.](#conclusiones-y-recomendaciones)  
 
@@ -1283,9 +1304,9 @@ Detección de agrupaciones naturales: Identificamos patrones y agrupaciones natu
 
 Comenzamos identificando las áreas core del dominio, es decir, aquellas con mayor impacto en la propuesta de valor del sistema.
 
-- Core: Plant Management, Device Management (IoT), Data Telemetry, Analytics.
+- Core: Plant Management, Device Management (IoT), Data Telemetry, Analysis & Reporting.
 
-- Supporting: Auth & Identity,  Subscription, Notification .
+- Supporting: Auth & Identity Integration, Subscription, Notification.
 
 - generic: , Community.
 
@@ -1306,7 +1327,7 @@ Identificamos eventos clave que marcaban transiciones entre subsistemas. Ejemplo
 
 
 __Primer agrupamiento__ 
-Se delimitaron los contextos básicos de Auth & Identity y Device Management (IoT). Estos responden a responsabilidades claras: autenticación de usuarios y control de hardware. 
+Se delimitaron los contextos básicos de Auth & Identity Integration y Device Management (IoT). Estos responden a responsabilidades claras: integración con el proveedor externo de IAM para autenticación y autorización de usuarios, junto con la administración de hardware. 
 
 [![Event-Storming-oryxen-9.jpg](https://i.postimg.cc/DyCPN7yv/Event-Storming-plantcare-9.jpg)](https://postimg.cc/qz3KhV3S)
 
@@ -1327,7 +1348,7 @@ Se añadieron los contextos complementarios: Notification y Community, encargado
 Consolidación final
 El resultado fue un mapa de 8 bounded contexts:
 
-- Auth & Identity
+- Auth & Identity Integration
 
 - Device Management (IoT)
 
@@ -1337,7 +1358,7 @@ El resultado fue un mapa de 8 bounded contexts:
 
 - Data Telemetry
 
-- Analytics
+- Analysis & Reporting
 
 - Notification 
 
@@ -1471,6 +1492,531 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 ![DeploymentDiagram.png](https://i.ibb.co/ycVyb5k0/C4-deployment.png)
 
 ---
+
+# Capítulo V: Tactical-Level Software Design
+
+## 5.1. Bounded Context: Auth & Identity Integration
+
+**Descripción:** Este bounded context se encarga de integrar el backend de **Oryxen** con un servicio externo de **IAM (Identity and Access Management)**, similar a una solución administrada como AWS IAM/Cognito, Auth0 o Firebase Authentication. La autenticación, federación OAuth2, emisión de tokens, gestión de credenciales, roles, claims y sesiones no se implementan directamente dentro del backend de Oryxen, sino que se delegan al proveedor externo de IAM. El backend conserva únicamente la información de perfil necesaria para el dominio, el identificador externo del usuario y las reglas de autorización que conectan la identidad validada con los bounded contexts de Plant Management, Device Management, Subscription, Notification y Community.
+
+### 5.1.1. Domain Layer
+
+#### Aggregate 1: User
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| User | Entity/Aggregate Root | Modela la referencia local de un usuario de Oryxen, almacenando el identificador entregado por el IAM externo, datos de perfil y preferencias básicas del dominio. |
+
+**Atributos de User:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| id | UUID | Private | Identificador único del usuario. |
+| fullName | String | Private | Nombre completo mostrado en la aplicación. |
+| email | String | Private | Correo electrónico único asociado a la cuenta. |
+| externalIamId | String | Private | Identificador único del usuario en el proveedor externo de IAM. |
+| authProvider | AuthProvider | Private | Proveedor de autenticación federado mediante el IAM externo. |
+| role | Role | Private | Rol o claim sincronizado desde el IAM externo para controlar accesos en Oryxen. |
+| status | AccountStatus | Private | Estado local de la cuenta dentro del dominio de Oryxen. |
+| createdAt | DateTime | Private | Fecha de creación de la cuenta. |
+| lastLoginAt | DateTime | Private | Fecha del último acceso exitoso. |
+
+**Métodos de User:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Construye una entidad User con los datos requeridos. |
+| linkExternalIdentity | Void | Public | Asocia el usuario local con el identificador entregado por el IAM externo. |
+| updateProfile | Void | Public | Actualiza información básica del perfil. |
+| assignRole | Void | Public | Asigna o modifica el rol del usuario. |
+| activateAccount | Void | Public | Cambia el estado de la cuenta a activo. |
+| deactivateAccount | Void | Public | Deshabilita temporalmente la cuenta. |
+| registerLogin | Void | Public | Registra la fecha y hora del último inicio de sesión. |
+
+#### Value Object 1: Role
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| Role | Value Object | Define el nivel de acceso del usuario dentro de Oryxen y habilita permisos según su tipo de cuenta. |
+
+**Atributos de Role:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del rol: FREE_USER, PREMIUM_USER o ADMIN. |
+
+**Métodos de Role:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un rol con un valor permitido. |
+| equals | Boolean | Public | Compara el rol actual con otro rol. |
+| canAccessPremiumFeatures | Boolean | Public | Determina si el rol puede acceder a funcionalidades premium. |
+
+#### Value Object 2: AuthProvider
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthProvider | Value Object | Identifica el proveedor federado utilizado por el IAM externo para autenticar al usuario. |
+
+**Atributos de AuthProvider:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del proveedor: GOOGLE, EMAIL, APPLE u otro proveedor habilitado en el IAM externo. |
+| externalProviderId | String | Private | Identificador entregado por el proveedor externo, cuando aplica. |
+
+**Métodos de AuthProvider:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un proveedor de autenticación válido. |
+| isExternal | Boolean | Public | Indica si la autenticación proviene de un proveedor externo. |
+
+#### Entity 1: UserAccessGrant
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserAccessGrant | Entity | Representa una autorización local derivada de los roles o claims emitidos por el IAM externo para habilitar funcionalidades de Oryxen. |
+
+**Atributos de UserAccessGrant:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| id | UUID | Private | Identificador único del permiso local. |
+| userId | UUID | Private | Usuario propietario del permiso. |
+| claimName | String | Private | Nombre del claim recibido desde el IAM externo. |
+| claimValue | String | Private | Valor del claim utilizado para autorización local. |
+| expiresAt | DateTime | Private | Fecha de expiración del permiso sincronizado. |
+
+**Métodos de UserAccessGrant:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un permiso local asociado a un usuario. |
+| isExpired | Boolean | Public | Evalúa si el permiso sincronizado ya venció. |
+| grantsAccessTo | Boolean | Public | Verifica si el claim habilita una funcionalidad específica de Oryxen. |
+
+#### Value Object 3: AccountStatus
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AccountStatus | Value Object | Controla el estado operativo de una cuenta de usuario en Oryxen. |
+
+**Atributos de AccountStatus:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del estado: ACTIVE, PENDING_VERIFICATION, SUSPENDED o DELETED. |
+
+**Métodos de AccountStatus:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un estado de cuenta válido. |
+| allowsLogin | Boolean | Public | Indica si la cuenta puede iniciar sesión. |
+
+### 5.1.2. Interface Layer
+
+#### Controller 1: AuthController
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthController | Controller | Expone endpoints para iniciar flujos de autenticación y validar callbacks/tokens emitidos por el IAM externo. |
+
+**Atributos de AuthController:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| authService | AuthService | Private | Servicio encargado de coordinar la integración con el IAM externo. |
+| iamTokenValidator | IamTokenValidator | Private | Servicio responsable de validar tokens emitidos por el proveedor externo de IAM. |
+| userMapper | UserMapper | Private | Convierte entidades de dominio en DTOs de respuesta. |
+
+**Métodos de AuthController:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startLogin | ResponseEntity | Public | Redirige o inicializa el flujo de autenticación administrado por el IAM externo. |
+| handleCallback | ResponseEntity | Public | Procesa el callback del IAM externo y sincroniza la identidad local. |
+| validateSession | ResponseEntity | Public | Valida el token recibido desde clientes web o móviles. |
+| logout | ResponseEntity | Public | Solicita el cierre de sesión al IAM externo cuando corresponde. |
+
+#### Controller 2: UserIdentityController
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserIdentityController | Controller | Gestiona operaciones relacionadas con el perfil de identidad, consulta de usuario autenticado y administración de estado de cuenta. |
+
+**Atributos de UserIdentityController:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userService | UserService | Private | Servicio encargado de la gestión de datos de identidad. |
+| authorizationService | AuthorizationService | Private | Servicio para validar roles y permisos. |
+
+**Métodos de UserIdentityController:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| getCurrentUser | ResponseEntity | Public | Retorna los datos del usuario autenticado. |
+| updateProfile | ResponseEntity | Public | Actualiza datos básicos del perfil. |
+| changeRole | ResponseEntity | Public | Modifica el rol de un usuario, restringido a administradores. |
+| deactivateAccount | ResponseEntity | Public | Desactiva la cuenta del usuario. |
+
+### 5.1.3. Application Layer
+
+#### Service 1: AuthService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthService | Service | Coordina la sincronización entre Oryxen y el proveedor externo de IAM, sin administrar credenciales directamente. |
+
+**Atributos de AuthService:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userRepository | UserRepository | Private | Repositorio para consultar y persistir usuarios. |
+| userAccessGrantRepository | UserAccessGrantRepository | Private | Repositorio para persistir permisos locales derivados de claims externos. |
+| externalIamService | ExternalIamService | Private | Servicio externo encargado de autenticar, federar y emitir tokens. |
+| iamTokenValidator | IamTokenValidator | Private | Servicio para validar JWTs, roles y claims emitidos por el IAM externo. |
+
+**Métodos de AuthService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startAuthentication | AuthRedirect | Public | Solicita al IAM externo el inicio del flujo de autenticación. |
+| synchronizeExternalUser | User | Public | Crea o actualiza el perfil local a partir de la identidad validada por el IAM. |
+| synchronizeClaims | Void | Public | Sincroniza roles o claims externos como permisos locales de Oryxen. |
+| validateSession | AuthResult | Public | Valida una sesión con base en el token emitido por el IAM externo. |
+| logout | Void | Public | Coordina el cierre de sesión con el proveedor externo cuando aplica. |
+
+#### Service 2: UserService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserService | Service | Gestiona operaciones de perfil, estado de cuenta y asignación de roles de usuario. |
+
+**Atributos de UserService:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userRepository | UserRepository | Private | Repositorio para recuperar y actualizar usuarios. |
+| authorizationService | AuthorizationService | Private | Servicio para validar permisos de operación. |
+
+**Métodos de UserService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| getUserById | User | Public | Recupera un usuario por identificador. |
+| getUserByEmail | User | Public | Recupera un usuario por correo electrónico. |
+| updateProfile | User | Public | Actualiza información de perfil. |
+| assignRole | User | Public | Asigna un rol a un usuario existente. |
+| deactivateAccount | Void | Public | Desactiva una cuenta de usuario. |
+
+#### Service 3: IamTokenValidator
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| IamTokenValidator | Service | Valida tokens JWT emitidos por el proveedor externo de IAM y extrae claims necesarios para autorización local. |
+
+**Atributos de IamTokenValidator:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| iamSettings | IamSettings | Private | Configuración del issuer, audience y JWKS del proveedor externo. |
+| externalIamService | ExternalIamService | Private | Cliente para recuperar llaves públicas y metadatos del IAM. |
+
+**Métodos de IamTokenValidator:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| validateAccessToken | ClaimsPrincipal | Public | Valida firma, expiración, issuer, audience y claims del JWT externo. |
+| extractExternalUserId | String | Public | Obtiene el identificador de usuario emitido por el IAM. |
+| extractRoles | List | Public | Obtiene roles o grupos definidos en el IAM externo. |
+
+### 5.1.4. Infrastructure Layer
+
+#### Repository 1: UserRepositoryImpl
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserRepositoryImpl | Repository | Implementa la persistencia de usuarios usando Entity Framework Core y la base de datos relacional de Oryxen. |
+
+**Métodos de UserRepositoryImpl:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| findById | User | Public | Recupera un usuario por su identificador. |
+| findByEmail | User | Public | Recupera un usuario por correo electrónico. |
+| existsByEmail | Boolean | Public | Verifica si una cuenta ya existe. |
+| save | User | Public | Persiste una nueva cuenta de usuario. |
+| update | User | Public | Actualiza datos de identidad existentes. |
+
+#### Repository 2: UserAccessGrantRepositoryImpl
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserAccessGrantRepositoryImpl | Repository | Gestiona la persistencia de permisos locales derivados de roles o claims emitidos por el IAM externo. |
+
+**Métodos de UserAccessGrantRepositoryImpl:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| findByUserId | List | Public | Recupera permisos locales asociados a un usuario. |
+| save | UserAccessGrant | Public | Guarda un permiso local sincronizado desde el IAM externo. |
+| replaceByUserId | Void | Public | Reemplaza los permisos locales al recibir claims actualizados. |
+| deleteExpired | Void | Public | Elimina permisos expirados según política de seguridad. |
+
+### External Services
+
+#### Service 1: ExternalIamService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| ExternalIamService | External Service | Servicio administrado externo de IAM encargado de autenticar usuarios, federar proveedores OAuth2, emitir tokens, administrar roles/claims y controlar sesiones. |
+
+**Métodos de ExternalIamService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startAuthenticationFlow | AuthRedirect | Public | Inicializa el flujo de autenticación en el proveedor IAM. |
+| validateAuthorizationCode | ExternalUserInfo | Public | Valida el código OAuth2 y obtiene el perfil externo. |
+| validateAccessToken | ClaimsPrincipal | Public | Verifica un token emitido por el proveedor IAM. |
+| logoutSession | Void | Public | Cierra o revoca la sesión administrada externamente. |
+
+#### Service 2: EmailService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| EmailService | External Service | Envía correos transaccionales propios de Oryxen, como alertas de seguridad o notificaciones de actividad asociadas a la cuenta. La verificación de correo y recuperación de contraseña pertenecen al IAM externo. |
+
+**Métodos de EmailService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| sendAccountLinkedEmail | Void | Public | Notifica que una identidad externa fue vinculada correctamente a Oryxen. |
+| sendSecuritySummaryEmail | Void | Public | Envía un resumen de actividad sensible asociada a la cuenta. |
+| sendSecurityAlert | Void | Public | Notifica eventos sensibles, como inicio de sesión desde un nuevo dispositivo. |
+
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El componente **Auth & Identity Integration** centraliza la comunicación entre Oryxen y el proveedor externo de **IAM**. Los clientes Web App y Mobile App consumen el **AuthController** y el **UserIdentityController**, mientras que el backend valida tokens externos, sincroniza el perfil local y transforma roles/claims del IAM en permisos de dominio. La autenticación, emisión de tokens, credenciales y sesiones permanecen bajo responsabilidad del servicio IAM externo.
+
+![image](https://github.com/user-attachments/assets/3178abf8-7494-4cde-8c7a-14583a51c3ef)
+
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+A continuación se presentan los diagramas de nivel de código para el bounded context **Auth & Identity Integration**, incluyendo la estructura de clases principales del dominio y el diseño de base de datos que soporta referencias de usuarios, proveedores federados y permisos locales derivados del IAM externo.
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama de clases del dominio muestra a **User** como aggregate root local. Este agregado contiene objetos de valor como **Role**, **AuthProvider** y **AccountStatus**, además de relacionarse con **UserAccessGrant** para representar permisos locales derivados de claims externos. Los servicios de aplicación, como **AuthService** e **IamTokenValidator**, coordinan la validación de identidad contra el IAM externo sin emitir ni almacenar credenciales en Oryxen.
+
+![image](https://github.com/user-attachments/assets/7870fb53-32b9-449f-944c-dad16c11f427)
+
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+El diseño de base de datos del contexto **Auth & Identity Integration** mantiene únicamente referencias locales necesarias para Oryxen: usuarios, proveedores federados y permisos derivados. Las credenciales, refresh tokens y sesiones se mantienen en el proveedor externo de IAM.
+
+![image](https://github.com/user-attachments/assets/5be6bc52-8caf-4531-b0da-45991ff25087)
+
+## 5.2. Bounded Context: Analysis & Reporting  
+
+**Descripción:** Este bounded context se encarga de generar reportes, datasets agregados y visualizaciones a partir de la telemetría producida por los dispositivos IoT de **Oryxen**. Su responsabilidad principal es convertir datos históricos de sensores en información consultable, descargable y comprensible para el usuario, permitiendo analizar tendencias, revisar métricas relevantes y exportar resultados en formatos útiles como PDF o CSV.
+
+### 5.2.1. Domain Layer  
+
+#### Report  
+
+_Tabla de Report_  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | Report                                                                                      |
+| **Categoría** | Aggregate Root                                                                              |
+| **Propósito** | Representa un reporte generado a partir de la telemetría de los dispositivos IoT.           |
+
+_Tabla de atributos de Report_  
+
+| Nombre       | Tipo de dato      | Visibilidad | Descripción                                    |
+|--------------|------------------|-------------|------------------------------------------------|
+| id           | UUID             | Private     | Identificador único del reporte.               |
+| user_id      | UUID             | Private     | FK al usuario dueño del reporte.               |
+| device_id    | UUID (nullable)  | Private     | FK al dispositivo si es un reporte específico. |
+| type         | VARCHAR(50)      | Public      | Tipo: `summary`, `trend`, `custom`.            |
+| title        | VARCHAR(150)     | Public      | Título descriptivo del reporte.                |
+| description  | TEXT             | Public      | Descripción opcional del reporte.              |
+| status       | VARCHAR(20)      | Public      | Estado: `generated`, `pending`, `failed`.      |
+| created_at   | TIMESTAMP        | Private     | Fecha de creación.                             |
+| generated_at | TIMESTAMP NULL   | Private     | Fecha en que se generó el reporte.             |
+
+_Tabla de métodos de Report_  
+
+| Nombre            | Tipo de retorno | Visibilidad | Descripción                                   |
+|-------------------|-----------------|-------------|-----------------------------------------------|
+| generate()        | Report          | Public      | Inicia el proceso de generación.              |
+| markAsFailed()    | void            | Private     | Marca el reporte como fallido.                |
+| updateTitle(title)| void            | Public      | Cambia título o descripción del reporte.      |
+
+---
+
+#### ReportDataSet  
+
+_Tabla de ReportDataSet_  
+
+| Propiedad     | Valor                                                                 |
+|---------------|-----------------------------------------------------------------------|
+| **Nombre**    | ReportDataSet                                                         |
+| **Categoría** | Entity                                                                |
+| **Propósito** | Representa un conjunto de métricas asociadas a un reporte específico. |
+
+_Tabla de atributos de ReportDataSet_  
+
+| Nombre       | Tipo de dato   | Visibilidad | Descripción                                       |
+|--------------|---------------|-------------|---------------------------------------------------|
+| id           | UUID          | Private     | Identificador del dataset.                        |
+| report_id    | UUID          | Private     | FK a `Report`.                                    |
+| metric_type  | VARCHAR(50)   | Public      | Tipo de métrica (`temperature`, `humidity`).      |
+| aggregated   | JSON/Object   | Public      | Datos agregados (promedio, min, max, std dev).    |
+| generated_at | TIMESTAMP     | Private     | Fecha de generación del dataset.                  |
+
+_Tabla de métodos de ReportDataSet_  
+
+| Nombre            | Tipo de retorno | Visibilidad | Descripción                                         |
+|-------------------|-----------------|-------------|-----------------------------------------------------|
+| calculateStats()  | void            | Public      | Aplica funciones de agregación sobre los registros. |
+| attachToReport()  | void            | Private     | Vincula dataset con un reporte.                     |
+
+---
+
+#### Visualization  
+
+_Tabla de Visualization_  
+
+| Propiedad     | Valor                                                                  |
+|---------------|------------------------------------------------------------------------|
+| **Nombre**    | Visualization                                                          |
+| **Categoría** | Entity                                                                 |
+| **Propósito** | Representa una vista gráfica generada a partir de un dataset.          |
+
+_Tabla de atributos de Visualization_  
+
+| Nombre      | Tipo de dato   | Visibilidad | Descripción                                         |
+|-------------|---------------|-------------|-----------------------------------------------------|
+| id          | UUID          | Private     | Identificador único de la visualización.            |
+| dataset_id  | UUID          | Private     | FK a `ReportDataSet`.                               |
+| chart_type  | VARCHAR(30)   | Public      | Tipo: `line`, `bar`, `pie`, `heatmap`.              |
+| config      | JSON          | Public      | Configuración del gráfico (colores, ejes, filtros). |
+| created_at  | TIMESTAMP     | Private     | Fecha de creación.                                  |
+
+_Tabla de métodos de Visualization_  
+
+| Nombre               | Tipo de retorno | Visibilidad | Descripción                                    |
+|----------------------|-----------------|-------------|------------------------------------------------|
+| render()             | JSON            | Public      | Devuelve configuración lista para frontend.    |
+| updateConfig(config) | void            | Public      | Modifica parámetros de visualización.          |
+
+---
+
+### 5.2.2. Interface Layer  
+
+#### Report API  
+
+_Tabla de Report API_  
+
+| Propiedad     | Valor                                                                         |
+|---------------|-------------------------------------------------------------------------------|
+| **Nombre**    | ReportController                                                              |
+| **Categoría** | API / Resource                                                                |
+| **Propósito** | Exponer endpoints para creación, consulta y descarga de reportes.             |
+| **Ruta**      | `/api/reports`                                                                |
+
+_Tabla de métodos de Report API_  
+
+| Nombre        | Ruta                             | Acción                                  | Handle                          |
+|---------------|----------------------------------|-----------------------------------------|---------------------------------|
+| createReport  | POST /api/reports                | Crear un nuevo reporte                   | CreateReportCommandHandler      |
+| getReport     | GET /api/reports/{id}            | Obtener detalles de un reporte           | GetReportQueryHandler           |
+| listReports   | GET /api/reports                 | Listar reportes de un usuario            | ListReportsQueryHandler         |
+| downloadReport| GET /api/reports/{id}/download   | Descargar reporte generado (PDF/CSV)     | DownloadReportQueryHandler      |
+
+---
+
+### 5.2.3. Application Layer  
+
+#### Command Handlers  
+
+| Nombre                       | Categoría       | Propósito                                     | Comando                 |
+|------------------------------|-----------------|-----------------------------------------------|-------------------------|
+| CreateReportCommandHandler   | Command Handler | Crear y persistir un nuevo reporte            | CreateReportCommand     |
+| GenerateReportCommandHandler | Command Handler | Orquestar la creación de datasets y gráficos  | GenerateReportCommand   |
+
+#### Query Handlers  
+
+| Nombre                       | Categoría     | Propósito                                   | Query                  |
+|------------------------------|---------------|---------------------------------------------|------------------------|
+| GetReportQueryHandler        | Query Handler | Obtener datos detallados de un reporte      | GetReportQuery         |
+| ListReportsQueryHandler      | Query Handler | Listar reportes asociados a un usuario      | ListReportsQuery       |
+| DownloadReportQueryHandler   | Query Handler | Exportar y retornar reporte en un formato   | DownloadReportQuery    |
+
+#### Event Handlers  
+
+| Nombre                   | Categoría     | Propósito                                   | Evento                 |
+|--------------------------|---------------|---------------------------------------------|------------------------|
+| ReportGeneratedHandler   | Event Handler | Notificar al usuario/reporting system        | ReportGeneratedEvent   |
+| ReportFailedHandler      | Event Handler | Manejar fallos en generación de reportes    | ReportFailedEvent      |
+
+---
+
+### 5.2.4. Infrastructure Layer  
+
+#### ReportRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | ReportRepository                                                                            |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Persistir y consultar reportes en base de datos.                                            |
+| **Interfaz**  | IReportRepository (`save(report)`, `findById(id)`, `listByUser(userId)`)                     |
+
+#### DataSetRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | DataSetRepository                                                                           |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Almacenar y recuperar datasets asociados a reportes.                                        |
+| **Interfaz**  | IDataSetRepository (`save(dataset)`, `findByReport(reportId)`)                              |
+
+#### VisualizationRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | VisualizationRepository                                                                     |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Guardar y consultar configuraciones de visualizaciones.                                     |
+| **Interfaz**  | IVisualizationRepository (`save(viz)`, `findByDataset(datasetId)`)                          |
+
+#### ReportingDbContext  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | ReportingDbContext                                                                          |
+| **Categoría** | ORM Context                                                                                 |
+| **Propósito** | Proveer acceso a tablas de reportes, datasets y visualizaciones.                            |
+ 
+
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams. 
+[![Analysis-Reporting-Component-Diagram.png](https://i.postimg.cc/hj12jvNM/Analysis-Reporting-Component-Diagram.png)](https://postimg.cc/MMX7366j)
+
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams. 
+
+#### 5.2.6.1. Bounded Context Domain Layer Class Diagrams. 
+[![Analysis-Reporting-Class-Diagram.png](https://i.postimg.cc/s2Fm45rw/image.png)](https://postimg.cc/rDJ580zr)
+
+#### 5.2.6.2. Bounded Context Database Design Diagram.
+[![Analysis-Reporting-Class-DB.png](https://i.postimg.cc/zBvyLPcM/image.png)](https://postimg.cc/JDwrvKmc)
 
 # Capítulo VI: Solution UX Design
 
