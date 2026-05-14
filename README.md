@@ -2336,6 +2336,40 @@ La estructura secuencial del *wireframe* es la siguiente:
 *(Añadir captura de pantalla de los wireframes en versión Desktop y Mobile)*
 `![Landing Page Wireframe - Desktop & Mobile](../assets/images/wireframe-landing-page.png)`
 
+
+#### 6.3.1. Landing Page Mock-up
+
+En esta sección se detallan los Mock-ups de la Landing Page de Oryxen, diseñados bajo un enfoque responsive para asegurar una visualización óptima tanto en navegadores web de escritorio como en dispositivos móviles. El diseño busca convertir visitantes en usuarios mediante una narrativa visual clara y una navegación intuitiva.
+
+El diseño implementa rigurosamente el Design System establecido, utilizando la tipografía Raleway en distintos pesos para marcar una jerarquía visual clara y una paleta cromática basada en tonos crema y verdes que evocan equilibrio y sostenibilidad.
+
+A continuación se presentan las evidencias de los mock-ups:
+
+**Home:**
+![Home_LandingPageTP1](./assets/Chapter-6/Home_LandingPageTP1.png)
+
+**About The Product:**
+![AboutTheProduct_LandingPageTP1](./assets/Chapter-6/AboutTheProduct_LandingPageTP1.png)
+
+**How It Works:**
+![HowItWorks_LandingPageTP1](./assets/Chapter-6/HowItWorks_LandingPageTP1.png)
+
+**Benefits:**
+![Benefits_LandingPageTP1](./assets/Chapter-6/Benefits_LandingPageTP1.png)
+
+**Team:**
+![Team_LandingPageTP1](./assets/Chapter-6/Team_LandingPageTP1.png)
+
+**Plans:**
+![Plans_LandingPageTP1](./assets/Chapter-6/Plans_LandingPageTP1.png)
+
+**Testimonials:**
+![Testimonials_LandingPageTP1](./assets/Chapter-6/Testimonials_LandingPageTP1.png)
+
+**Footer:**
+![Footer_LandingPageTP1](./assets/Chapter-6/Footer_LandingPageTP1.png)
+
+
 ## 6.4. Applications UX/UI Design
 
 El sistema de navegación de **Oryxen** está orientado a brindar una experiencia intuitiva, accesible y consistente tanto en plataformas mobile como web. La interfaz busca facilitar la interacción de los usuarios con las funcionalidades del sistema, permitiendo un uso sencillo y eficiente de las herramientas de monitoreo, automatización y gestión inteligente.
