@@ -2382,6 +2382,79 @@ El diseño de las aplicaciones considera los siguientes principios:
 *   **Jerarquía Visual y Organización de Información:** Se prioriza una distribución clara de los elementos visuales y funcionalidades, facilitando el acceso rápido a información relevante y acciones principales del sistema.
 *   **Enfoque en la Interacción del Usuario:** El diseño UI incorpora componentes visuales modernos y minimalistas que favorecen la interacción continua y mejoran la percepción de usabilidad de la plataforma.
 
+
+### 6.4.2. Applications Mock-ups
+
+En esta sección se presentan los mock-ups para las aplicaciones móvil y web de Oryxen, diseñados para ofrecer una experiencia de usuario intuitiva y eficiente. Estas interfaces son la representación directa del Design System establecido, utilizando la tipografía Raleway para asegurar una lectura clara y una paleta de colores en tonos verdes y cremas que proyecta la identidad tecnológica y orgánica de la plataforma.
+
+La arquitectura de la información se basa en una jerarquía visual que prioriza los estados críticos del jardín inteligente; el dashboard central destaca métricas de humedad y alertas urgentes, permitiendo una respuesta inmediata del usuario. Bajo principios de diseño inclusivo, se han optimizado los contrastes de color siguiendo las pautas de accesibilidad y se ha implementado una navegación táctil simplificada con amplios espacios en blanco para reducir la fatiga visual.
+
+A continuación se presentan los mock-ups para la aplicación web y móvil:
+
+**Aplicación Web:**
+
+**On Board:**
+![OnBoard_WebMockup](./assets/Chapter-6/OnBoard_WebMockup.png)
+
+**Sign Up:**
+![SignUp_WebMockup](./assets/Chapter-6/SignUp_WebMockup.png)
+
+**Sign In:**
+![SignIn_WebMockup](./assets/Chapter-6/SignIn_WebMockup.png)
+
+**Dashboard:**
+![Dashboard_WebMockup](./assets/Chapter-6/Dashboard_WebMockup.png)
+
+**Plant Grid:**
+![PlantGrid_WebMockup](./assets/Chapter-6/PlantGrid_WebMockup.png)
+
+**Plant Details:**
+![PlantDetails_WebMockup](./assets/Chapter-6/PlantDetails_WebMockup.png)
+
+**History:**
+![History_WebMockup](./assets/Chapter-6/History_WebMockup.png)
+
+**Analytics:**
+![Analytics_WebMockup](./assets/Chapter-6/Analytics_WebMockup.png)
+
+**Community:**
+![Community_WebMockup](./assets/Chapter-6/Community_WebMockup.png)
+
+**Settings:**
+![Settings_WebMockup](./assets/Chapter-6/Settings_WebMockup.png)
+
+
+
+**Aplicación Móvil:**
+
+**On Board:** <br>
+![OnBoard_MobileMockup](./assets/Chapter-6/OnBoard_MobileMockup.png)
+
+**Sign Up:**<br>
+![SignUp_MobileMockup](./assets/Chapter-6/SignUp_MobileMockup.png)
+
+**Sign In:**<br>
+![SignIn_MobileMockup](./assets/Chapter-6/SignIn_MobileMockup.png)
+
+**Dashboard:**<br>
+![Dashboard_MobileMockup](./assets/Chapter-6/Dashboard_MobileMockup.png)
+
+**Plants:**<br>
+![Plants_MobileMockup](./assets/Chapter-6/Plants_MobileMockup.png)
+
+**Plant Details:**<br>
+![PlantDetails_MobileMockup](./assets/Chapter-6/PlantDetails_MobileMockup.png)
+
+**History:**<br>
+![History_MobileMockup](./assets/Chapter-6/History_MobileMockup.png)
+
+**Settings:**<br>
+![Settings_MobileMockup](./assets/Chapter-6/Settings_MobileMockup.png)
+
+**Dark Mode:**<br>
+![DarkMode_MobileMockup](./assets/Chapter-6/DarkMode_MobileMockup.png)
+
+
 ### 6.4.3. Applications User Flow Diagrams
 
 Los diagramas de flujo de usuario (*User Flows*) mapean el recorrido paso a paso que realiza un consumidor dentro de las aplicaciones (Web y Móvil) de Oryxen para completar tareas específicas. Estos flujos han sido diseñados minimizando la fricción cognitiva y apoyando nuestra estrategia de adopción progresiva: permitiendo al usuario experimentar valor inmediato en el plan gratuito y facilitando transiciones naturales hacia la compra de hardware (Sensor Lite) o la suscripción Premium.
