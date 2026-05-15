@@ -175,9 +175,19 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de plantas mediante una solución inteligente que automatiza tareas esenciales y brinda asistencia continua al usuario. Con nuestra plataforma **"Oryxen"**, nos centramos en ayudar a personas amantes de la jardinería y personas con agendas ocupadas, quienes suelen enfrentar dificultades para mantener sus plantas saludables debido al olvido o la falta de tiempo. La solución integra funciones de riego automático, monitoreo con sensores y un chatbot inteligente que brinda recomendaciones personalizadas. A través de la interfaz, los usuarios podrán visualizar fácilmente el estado de todas sus plantas, recibir alertas y gestionar su cuidado de manera práctica y confiable. Con ello, se busca reducir la pérdida de plantas, mejorar la experiencia del usuario y aumentar su satisfacción.
 
-**Misión:** Facilitar el cuidado de plantas mediante automatización e inteligencia artificial, ofreciendo una experiencia más accesible, práctica y confiable.
+La propuesta de valor de Oryxen se basa en tres pilares diferenciales:
 
-**Visión:** Convertirnos en una solución líder en el cuidado inteligente de plantas, promoviendo hogares más saludables y conectados con la naturaleza.
+- **Automatización inteligente:** El sistema automatiza tareas esenciales como el monitoreo constante y el riego de las plantas mediante sensores IoT y módulos de riego automático, reduciendo la dependencia de recordatorios manuales.
+- **IA visual y asistencia personalizada:** Oryxen incorpora inteligencia artificial capaz de analizar imágenes y datos de las plantas para detectar posibles problemas, interpretar su estado y brindar recomendaciones personalizadas mediante un chatbot inteligente.
+- **Seguimiento centralizado:** Los usuarios pueden visualizar en una sola plataforma el estado de todas sus plantas en tiempo real, recibiendo alertas, recomendaciones y métricas de cuidado desde cualquier dispositivo.
+
+A diferencia de soluciones tradicionales que solo recuerdan tareas o funcionan dentro de ecosistemas cerrados, Oryxen transforma las plantas y macetas que el usuario ya posee en un sistema inteligente, accesible y escalable.
+
+Con ello, se busca reducir la pérdida de plantas, disminuir la carga del cuidado manual, optimizar el tiempo de los usuarios y mejorar la experiencia general del cuidado de plantas.
+
+**Misión:** Facilitar el cuidado de plantas mediante automatización, inteligencia artificial visual y monitoreo inteligente, ofreciendo una experiencia accesible, práctica y confiable.
+
+**Visión:** Convertirnos en la solución líder de cuidado inteligente de plantas en Latinoamérica, integrando automatización e inteligencia artificial para promover hogares más saludables y conectados con la naturaleza.
 
 **Logotipo de la Startup:**
 
@@ -191,7 +201,7 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 | Integrante | Descripción | Conocimientos |
 | ---------- | ----------- | ------------- |
-| **Alejandro Alberto Pachas Chávez - u201917598** <img src="./assets/Chapter-1/perfil_alejandro.png"> | Mi nombre es Alejandro Alberto Pachas Chávez, tengo 24 años y actualmente curso la carrera de Ingeniería de Software. Me describo como una persona creativa, responsable y constante, con una fuerte disposición para colaborar en equipo. Mi objetivo es contribuir positivamente al grupo y alcanzar las metas propuestas. | Cuento con experiencia en lenguajes de programación como JavaScript, TypeScript y Go; además de desarrollo web utilizando frameworks como React y Next.js, y manejo de bases de datos tanto relacionales como no relacionales, incluyendo PostgreSQL y Firebase.  |
+| **Alejandro Alberto Pachas Chávez - u201917598** <img src="./assets/Chapter-1/perfil_alejandro.png"> | Mi nombre es Alejandro Alberto Pachas Chávez, tengo 24 años y actualmente curso la carrera de Ingeniería de Software. Me describo como una persona creativa, responsable y constante, con una fuerte disposición para colaborar en equipo. Mi objetivo es contribuir positivamente al grupo y alcanzar las metas propuestas. | Cuento con experiencia en lenguajes de programación como JavaScript, TypeScript y Go; además de desarrollo web utilizando frameworks como React y Next.js, y manejo de bases de datos tanto relacionales como no relacionales, incluyendo PostgreSQL y Firebase. |
 | **Pedro Jesús Nanfuñay Liza - u202215462** <img src="./assets/Chapter-1/Perfil_PedroNanfuñay.jpeg"> | Mi nombre es Pedro Jesús Nanfuñay Liza, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Me considero una persona creativa, responsable, perseverante y siempre dispuesto a trabajar en equipo. Espero aportar de manera positiva al equipo y cumplir con los objetivos establecidos. | Tengo conocimientos en lenguajes de programación como C++, Java y Python; en el desarrollo web con frameworks Angular y Primevue, y en base de datos relacionales y no relacionales como SQL y MongoDB. |
 | **Zevallos Linares, Alessandro Netto - u202216035** <img src="https://github.com/user-attachments/assets/6e621406-9662-4f9f-964c-249eb7cb17a1"> | Mi nombre es Alessandro Netto Zevallos Linares, tengo 22 años y soy estudiante de Ingeniería de Software con un fuerte interés en el desarrollo de productos digitales y la tecnología. En mi tiempo libre, me gusta jugar videojuegos. También tengo un interés especial en la música, lo que me ayuda a equilibrar mi vida académica y personal. | Tengo conocimientos en JavaScript, React, Next.js, Angular, Vue, Java, Flutter, Kotlin, y en base de datos como SQL y MongoDB. |
 | **Abraham Andres Estrada Cajamune - U202112164** <img src="./assets/Chapter-1/Abraham.jpg"> | Mi nombre es Abraham Andres Estrada Cajamune, tengo 22 años y soy estudiante de la carrera de Ingeniería de Software, cursando el 9no ciclo. Me califico como una persona responsable, trabajando a presión y con buena disposición en trabajar en equipo. Mi interés está en el desarrollo web y movil. |  A lo largo de mis estudios universitarios he adquirido las bases sólidas en lenguajes de programación como Java, C++, Python, utilizando Frameworks como Angular y Vue y un fuerte conocimiento en el manejo de bases de datos. |
@@ -215,37 +225,39 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-Oryxen fue diseñado para ayudar a los usuarios a mantener sus plantas saludables mediante sensores que registran parámetros como la humedad, oxígeno, etc; para automatizar procesos de cuidado y brindar asistencia inteligente, reduciendo la carga del cuidado manual. 
+Oryxen fue diseñado para ayudar a los usuarios a mantener sus plantas saludables mediante la integración de automatización inteligente, inteligencia artificial visual y seguimiento centralizado. La solución utiliza sensores IoT, módulos de riego automático y análisis visual asistido por IA para monitorear continuamente el estado de las plantas y reducir la carga del cuidado manual.
 
 Hemos observado que los usuarios, especialmente personas con agendas ocupadas y aficionados a la jardinería, no logran mantener un cuidado constante, lo que provoca la pérdida de plantas, frustración y una menor continuidad en la creación de áreas verdes.
 
-¿Cómo podríamos mejorar Oryxen para que nuestros clientes tengan más éxito según su disponibilidad de tiempo y conocimientos previos en el cuidado de plantas, incrementando el interés de las personas por cultivar más plantas y reduciendo la carga de cuidado manual?
+Además, las soluciones existentes suelen enfocarse únicamente en recordatorios manuales o en ecosistemas cerrados de hardware, sin ofrecer una experiencia integral que combine automatización, diagnóstico inteligente y monitoreo unificado.
+
+¿Cómo podríamos mejorar Oryxen para que nuestros clientes tengan más éxito según su disponibilidad de tiempo y conocimientos previos en el cuidado de plantas, utilizando automatización, IA visual y seguimiento centralizado para reducir la carga de cuidado manual y aumentar la supervivencia de las plantas?
 
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions:**
 
-1. Creo que mis clientes necesitan mantener sus plantas saludables sin depender de recordatorios manuales o tiempo constante.
-2. Estas necesidades puede ser solucionadas con un sistema inteligente que automatice los cuidados y monitoree las plantas mediante sensores e IA.
-3. Mis primeros clientes son (o serán) personas con agendas ocupadas y aficionados a la jardinería.
-4. El valor número 1 que un cliente quiere obtener de mi servicio es mantener sus plantas vivas sin esfuerzo y ver su estado mediante un panel de control.
-5. El cliente también puede obtener estos beneficios adicionales: Automatizar procesos de cuidado, ahorrar tiempo, obtener bienestar y aprender sobre el cuidado de plantas.
-6. Obtendré la mayoría de mis clientes a través de redes sociales, recomendaciones (boca a boca) y marketplaces de tecnología/hogar inteligente.
-7. Ganaré dinero a través de planes premium y paquetes con objetos que ayudarán al cliente a entender mejor el proceso de cuidado de plantas.
-8. Mi principal competencia en el mercado serán aplicaciones de recordatorio de riego y sistemas básicos de riego automático.
-9. Los venceremos por integrar automatización de cuidado con sensores y la implementación de un chatbot impulsado con IA en una sola solución simple y accesible.
-10. Mi mayor riesgo de producto es que los usuarios no perciban suficiente valor frente a soluciones más simples o no adopten el hardware.
-11. Resolveremos esto a través de una experiencia fácil de usar, funciones claras e intuitivas, soporte técnico constante y demostración de los resultados de la solución en casos reales.
-12. Otras suposiciones que tenemos que podrían resultar falsas serían que los usuarios no estén dispuestos a pagar por los planes premium de la solución y o que confíen demasiado en la automatización para el cuidado de sus plantas.
+1. Creo que mis clientes necesitan mantener sus plantas saludables sin depender constantemente de supervisión manual.
+2. Estas necesidades pueden ser solucionadas mediante una plataforma que combine automatización, IA visual y monitoreo centralizado.
+3. Mis primeros clientes serán personas con agendas ocupadas y aficionados a la jardinería.
+4. El valor número 1 que un cliente quiere obtener de mi servicio es tranquilidad al saber que sus plantas están siendo monitoreadas y cuidadas automáticamente.
+5. El cliente también puede obtener beneficios adicionales como ahorro de tiempo, recomendaciones inteligentes y reducción de pérdida de plantas.
+6. Obtendré la mayoría de mis clientes a través de redes sociales, recomendaciones y marketplaces de hogar inteligente.
+7. Ganaré dinero a través de planes premium, venta de sensores y módulos inteligentes.
+8. Mi principal competencia en el mercado serán aplicaciones de cuidado de plantas y sistemas de automatización básica.
+9. Los venceremos al integrar automatización, IA visual y seguimiento centralizado en una sola solución accesible y adaptable.
+10. Mi mayor riesgo de producto es que los usuarios no perciban suficiente valor diferencial frente a soluciones más simples.
+11. Resolveremos esto demostrando resultados reales mediante monitoreo inteligente y automatización efectiva.
+12. Otra posible suposición falsa es que algunos usuarios no estén dispuestos a adoptar hardware inteligente en sus hogares.
 
 **User Assumptions:**
 
-1. ¿Quién es el usuario? Personas ocupadas y amantes de la jardinería que desean gestionar de manera efectiva la salud de sus plantas.
-2. ¿Dónde encaja nuestro producto en su trabajo o vida? Se integra en el flujo de vida diaria de cada cliente, permitiendo revisar y analizar la información de sus plantas cuando lo deseen.
-3. ¿Qué problemas tiene nuestro producto y cómo los resolvemos? Problema: Arduo cuidado manual y uso de tiempo para el cuidado de plantas. Solución: Plataforma unificada con automatización y acceso centralizado a toda la información.
-4. ¿Cuándo y cómo es usado nuestro producto? Durante el hábito de cultivar plantas, donde los clientes buscan mantener saludables a sus plantas.
-5. ¿Qué características son importantes? Interfaz intuitiva y responsive, sincronización en tiempo real e integración con sistemas existentes.
-6. ¿Cómo debe verse y comportarse nuestro producto? Diseño limpio y profesional, navegación simple, tiempo de respuesta rápido y accesible desde múltiples dispositivos.
+1. ¿Quién es el usuario? Personas ocupadas y amantes de la jardinería que desean gestionar la salud de sus plantas de forma eficiente.
+2. ¿Dónde encaja nuestro producto en su vida? En el cuidado diario de plantas dentro del hogar, oficinas y espacios personales.
+3. ¿Qué problemas tiene nuestro producto y cómo los resolvemos? Problema: cuidado manual complejo y pérdida frecuente de plantas. Solución: automatización inteligente, IA visual y acceso centralizado a la información.
+4. ¿Cuándo y cómo es usado nuestro producto? Durante el cuidado cotidiano de plantas, monitoreando su estado desde cualquier dispositivo.
+5. ¿Qué características son importantes? Automatización confiable, visualización centralizada, análisis inteligente y facilidad de uso.
+6. ¿Cómo debe verse y comportarse nuestro producto? Diseño limpio, intuitivo, rápido y accesible desde múltiples dispositivos.
 
 **Priorización de suposiciones:**
 
@@ -253,49 +265,48 @@ Siguiendo la metodología Lean UX de Jeff Gothelf, priorizamos nuestras suposici
 
 **Suposiciones de Alta Prioridad (Alto Riesgo + Bajo Conocimiento):**
 
-1. Los usuarios realmente adoptarán una solución de cuidado automático si perciben que les ahorra tiempo y reduce el trabajo manual.
-2. Los adultos mayores y personas con agendas ocupadas confiarán en un sistema automatizado para el cuidado de sus plantas.
-3. Los usuarios valorarán una interfaz que muestre el estado de todas sus plantas de forma clara y centralizada.
-4. La integración de sensores, riego automático y funciones con IA será percibida como útil y no como compleja.
+1. Los usuarios adoptarán una solución de automatización inteligente si perciben una reducción real del trabajo manual.
+2. Los usuarios confiarán en recomendaciones generadas mediante IA visual para el cuidado de sus plantas.
+3. Los usuarios valorarán una plataforma centralizada que les permita monitorear todas sus plantas desde un solo lugar.
+4. La combinación de automatización, IA visual y monitoreo centralizado será percibida como una propuesta diferencial y útil.
 
 **Suposiciones de prioridad media (Riesgo medio + conocimiento medio):**
 
-5. Los usuarios estarán dispuestos a leer notificaciones y alertas frecuentes para monitorear sus plantas.
-6. La solución será útil tanto para personas con pocas plantas como para quienes tienen varias.
-7. Los usuarios confiarán en las recomendaciones del chatbot para tomar decisiones de cuidado.
-8. La automatización del riego será suficiente para reducir significativamente la cantidad de plantas muertas.
+5. Los usuarios estarán dispuestos a recibir alertas y recomendaciones frecuentes.
+6. La solución será útil tanto para usuarios principiantes como avanzados.
+7. Los usuarios confiarán en las recomendaciones generadas por el chatbot inteligente.
+8. La automatización reducirá significativamente la pérdida de plantas.
 
 **Suposiciones de baja prioridad (Bajo riesgo + alto conocimiento):**
 
-9. Los usuarios prefieren interfaces simples, intuitivas y fáciles de entender.
-10. La visualización del estado de las plantas en una sola plataforma mejora la experiencia de uso.
-11. Los usuarios valoran recibir recordatorios y recomendaciones personalizadas.
-12. Los dispositivos móviles y la conectividad a internet son accesibles para la mayoría de nuestros usuarios.
+9. Los usuarios prefieren interfaces simples e intuitivas.
+10. La centralización de información mejora la experiencia de uso.
+11. Los usuarios valoran recomendaciones personalizadas.
+12. Los dispositivos móviles y el acceso a internet son accesibles para la mayoría de usuarios.
 
-Estas suposiciones de alta prioridad serán las primeras en validarse mediante entrevistas, pruebas de concepto y prototipos, antes de proceder con el desarrollo completo de Oryxen.
+Estas suposiciones de alta prioridad serán las primeras en validarse mediante entrevistas, pruebas de concepto y prototipos antes de proceder con el desarrollo completo de Oryxen.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-- **Hypothesis Statement 01:** <br>
-Creemos que los usuarios amantes de la jardinería y personas con agendas ocupadas buscan una forma simple de mantener sus plantas saludables sin depender del riego manual.
-Sabremos que esto es cierto al medir la frecuencia con la que usan la app para revisar el estado de sus plantas.
-Cuando al menos el 60% de los usuarios activos consulte la plataforma 3 veces por semana o más durante el primer mes.
+- **Hypothesis Statement 01:**  
+Creemos que los usuarios con agendas ocupadas buscarán automatizar el cuidado de sus plantas para reducir tiempo y esfuerzo manual.  
+Sabremos que esto es cierto al medir la frecuencia con la que utilizan las funciones automáticas de monitoreo y riego.  
+Cuando al menos el 60% de los usuarios activos mantenga activadas las funciones automáticas durante el primer mes.
 
-- **Hypothesis Statement 02:** <br>
-Creemos que la automatización del riego reducirá significativamente la cantidad de plantas muertas en comparación con el cuidado manual.
-Sabremos que esto es cierto al comparar el número de plantas marchitas o muertas antes y después de usar la solución.
-Cuando los usuarios reporten una reducción de al menos 30% en plantas perdidas en los primeros 3 meses.
+- **Hypothesis Statement 02:**  
+Creemos que la integración de IA visual permitirá detectar problemas de salud en las plantas de manera más eficiente que el cuidado manual tradicional.  
+Sabremos que esto es cierto al analizar la percepción de utilidad y precisión de las recomendaciones generadas por la IA.  
+Cuando más del 70% de los usuarios califique las recomendaciones visuales como útiles y precisas.
 
-- **Hypothesis Statement 03:** <br>
-Creemos que los usuarios valorarán una interfaz donde puedan ver el estado de todas sus plantas en un solo lugar.
-Sabremos que esto es cierto al analizar las ocasiones y el tiempo en el que permanecen los usuarios dentro de la aplicación.
-Cuando al menos el 70% de los usuarios activos utilice la pantalla de resumen de plantas y la califique como útil.
+- **Hypothesis Statement 03:**  
+Creemos que los usuarios valorarán una plataforma centralizada donde puedan visualizar el estado de todas sus plantas en tiempo real.  
+Sabremos que esto es cierto al analizar el uso de la pantalla principal de monitoreo.  
+Cuando al menos el 75% de los usuarios utilice frecuentemente el panel centralizado de seguimiento.
 
-- **Hypothesis Statement 04:** <br>
-Creemos que un chatbot con IA aumentará la confianza del usuario al brindar recomendaciones claras y oportunas sobre el cuidado de sus plantas.
-Sabremos que esto es cierto al analizar el uso del chatbot y la satisfacción percibida por los usuarios.
-Cuando al menos el 50% de los usuarios interactúe con el chatbot y más del 75% declare que sus recomendaciones fueron útiles.
-
+- **Hypothesis Statement 04:**  
+Creemos que la combinación de automatización, IA visual y seguimiento centralizado aumentará la confianza y satisfacción del usuario.  
+Sabremos que esto es cierto mediante encuestas de satisfacción y retención de usuarios.  
+Cuando más del 80% de los usuarios considere que Oryxen facilita significativamente el cuidado de sus plantas.
 
 #### 1.2.2.4. Lean UX Canvas
 
