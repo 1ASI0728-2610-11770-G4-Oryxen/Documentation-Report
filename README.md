@@ -56,11 +56,19 @@
 
 # Project Report Collaboration Insights
 
-**URL de la organización del proyecto:** https://github.com/1ASI0728-2610-11770-G4-Oryxen
+**URL de la organización del proyecto:** https://github.com/1ASI0728-2610-11770-G4-Oryxen<br>
 **URL del repositorio del informe:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report
 
 
-**TB1**
+**TB1** <br>
+Las tareas asignadas a la TB1 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega se redactaron los contenidos correspondientes utilizando formato Markdown, y se realizaron "Conventional Commits" para documentar el avance en el repositorio. Así mismo, se generaron los recursos necesarios y se añadieron las imágenes al repositorio en la carpeta "assets" correspondiente a cada rama del informe.
+
+![PulseTB1](./assets/Chapter-1/PulseTB1.png)
+![ContributorsTB1](./assets/Chapter-1/ContributorsTB1.png)
+![NetworkGraphTB1](./assets/Chapter-1/NetworkGraphTB1.png)
+![InsightsPeopleTB1](./assets/Chapter-1/InsightsPeopleTB1.png)
 
 
 # Contenido
@@ -134,6 +142,27 @@
     - [4.3.3. Software Architecture Container Level Diagrams](#433-software-architecture-container-level-diagrams)  
     - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
 
+### [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
+
+- [5.1. Bounded Context: Auth & Identity Integration](#51-bounded-context-auth--identity-integration)
+    - [5.1.1. Domain Layer](#511-domain-layer)
+    - [5.1.2. Interface Layer](#512-interface-layer)
+    - [5.1.3. Application Layer](#513-application-layer)
+    - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
+    - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+    - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+        - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+        - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+- [5.2. Bounded Context: Analysis & Reporting](#52-bounded-context-analysis--reporting)
+    - [5.2.1. Domain Layer](#521-domain-layer)
+    - [5.2.2. Interface Layer](#522-interface-layer)
+    - [5.2.3. Application Layer](#523-application-layer)
+    - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
+    - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
+    - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
+        - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
+        - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
+
 #### [Conclusiones](#conclusiones)  
 - [Conclusiones y recomendaciones.](#conclusiones-y-recomendaciones)  
 
@@ -167,23 +196,33 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de plantas mediante una solución inteligente que automatiza tareas esenciales y brinda asistencia continua al usuario. Con nuestra plataforma **"Oryxen"**, nos centramos en ayudar a personas amantes de la jardinería y personas con agendas ocupadas, quienes suelen enfrentar dificultades para mantener sus plantas saludables debido al olvido o la falta de tiempo. La solución integra funciones de riego automático, monitoreo con sensores y un chatbot inteligente que brinda recomendaciones personalizadas. A través de la interfaz, los usuarios podrán visualizar fácilmente el estado de todas sus plantas, recibir alertas y gestionar su cuidado de manera práctica y confiable. Con ello, se busca reducir la pérdida de plantas, mejorar la experiencia del usuario y aumentar su satisfacción.
 
-**Misión:** Facilitar el cuidado de plantas mediante automatización e inteligencia artificial, ofreciendo una experiencia más accesible, práctica y confiable.
+La propuesta de valor de Oryxen se basa en tres pilares diferenciales:
 
-**Visión:** Convertirnos en una solución líder en el cuidado inteligente de plantas, promoviendo hogares más saludables y conectados con la naturaleza.
+- **Automatización inteligente:** El sistema automatiza tareas esenciales como el monitoreo constante y el riego de las plantas mediante sensores IoT y módulos de riego automático, reduciendo la dependencia de recordatorios manuales.
+- **IA visual y asistencia personalizada:** Oryxen incorpora inteligencia artificial capaz de analizar imágenes y datos de las plantas para detectar posibles problemas, interpretar su estado y brindar recomendaciones personalizadas mediante un chatbot inteligente.
+- **Seguimiento centralizado:** Los usuarios pueden visualizar en una sola plataforma el estado de todas sus plantas en tiempo real, recibiendo alertas, recomendaciones y métricas de cuidado desde cualquier dispositivo.
+
+A diferencia de soluciones tradicionales que solo recuerdan tareas o funcionan dentro de ecosistemas cerrados, Oryxen transforma las plantas y macetas que el usuario ya posee en un sistema inteligente, accesible y escalable.
+
+Con ello, se busca reducir la pérdida de plantas, disminuir la carga del cuidado manual, optimizar el tiempo de los usuarios y mejorar la experiencia general del cuidado de plantas.
+
+**Misión:** Facilitar el cuidado de plantas mediante automatización, inteligencia artificial visual y monitoreo inteligente, ofreciendo una experiencia accesible, práctica y confiable.
+
+**Visión:** Convertirnos en la solución líder de cuidado inteligente de plantas en Latinoamérica, integrando automatización e inteligencia artificial para promover hogares más saludables y conectados con la naturaleza.
 
 **Logotipo de la Startup:**
 
-![Logo_GrassFarming](/assets/Chapter-1/Logo_GrassFarming.png)
+![Logo_GrassFarming](./assets/Chapter-1/Logo_GrassFarming.png)
 
 **Logotipo de la Solución:**
 
-![Logo_Oryxen](/assets/Chapter-1/Logo_Oryxen.png)
+![Logo_Oryxen](./assets/Chapter-1/Logo_Oryxen.png)
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
 | Integrante | Descripción | Conocimientos |
 | ---------- | ----------- | ------------- |
-| **Alejandro Alberto Pachas Chávez - u201917598** <img src="./assets/Chapter-1/perfil_alejandro.png"> | Mi nombre es Alejandro Alberto Pachas Chávez, tengo 24 años y actualmente curso la carrera de Ingeniería de Software. Me describo como una persona creativa, responsable y constante, con una fuerte disposición para colaborar en equipo. Mi objetivo es contribuir positivamente al grupo y alcanzar las metas propuestas. | Cuento con experiencia en lenguajes de programación como JavaScript, TypeScript y Go; además de desarrollo web utilizando frameworks como React y Next.js, y manejo de bases de datos tanto relacionales como no relacionales, incluyendo PostgreSQL y Firebase.  |
+| **Alejandro Alberto Pachas Chávez - u201917598** <img src="./assets/Chapter-1/perfil_alejandro.png"> | Mi nombre es Alejandro Alberto Pachas Chávez, tengo 24 años y actualmente curso la carrera de Ingeniería de Software. Me describo como una persona creativa, responsable y constante, con una fuerte disposición para colaborar en equipo. Mi objetivo es contribuir positivamente al grupo y alcanzar las metas propuestas. | Cuento con experiencia en lenguajes de programación como JavaScript, TypeScript y Go; además de desarrollo web utilizando frameworks como React y Next.js, y manejo de bases de datos tanto relacionales como no relacionales, incluyendo PostgreSQL y Firebase. |
 | **Pedro Jesús Nanfuñay Liza - u202215462** <img src="./assets/Chapter-1/Perfil_PedroNanfuñay.jpeg"> | Mi nombre es Pedro Jesús Nanfuñay Liza, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Me considero una persona creativa, responsable, perseverante y siempre dispuesto a trabajar en equipo. Espero aportar de manera positiva al equipo y cumplir con los objetivos establecidos. | Tengo conocimientos en lenguajes de programación como C++, Java y Python; en el desarrollo web con frameworks Angular y Primevue, y en base de datos relacionales y no relacionales como SQL y MongoDB. |
 | **Zevallos Linares, Alessandro Netto - u202216035** <img src="https://github.com/user-attachments/assets/6e621406-9662-4f9f-964c-249eb7cb17a1"> | Mi nombre es Alessandro Netto Zevallos Linares, tengo 22 años y soy estudiante de Ingeniería de Software con un fuerte interés en el desarrollo de productos digitales y la tecnología. En mi tiempo libre, me gusta jugar videojuegos. También tengo un interés especial en la música, lo que me ayuda a equilibrar mi vida académica y personal. | Tengo conocimientos en JavaScript, React, Next.js, Angular, Vue, Java, Flutter, Kotlin, y en base de datos como SQL y MongoDB. |
 | **Abraham Andres Estrada Cajamune - U202112164** <img src="./assets/Chapter-1/Abraham.jpg"> | Mi nombre es Abraham Andres Estrada Cajamune, tengo 22 años y soy estudiante de la carrera de Ingeniería de Software, cursando el 9no ciclo. Me califico como una persona responsable, trabajando a presión y con buena disposición en trabajar en equipo. Mi interés está en el desarrollo web y movil. |  A lo largo de mis estudios universitarios he adquirido las bases sólidas en lenguajes de programación como Java, C++, Python, utilizando Frameworks como Angular y Vue y un fuerte conocimiento en el manejo de bases de datos. |
@@ -207,37 +246,39 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-Oryxen fue diseñado para ayudar a los usuarios a mantener sus plantas saludables mediante sensores que registran parámetros como la humedad, oxígeno, etc; para automatizar procesos de cuidado y brindar asistencia inteligente, reduciendo la carga del cuidado manual. 
+Oryxen fue diseñado para ayudar a los usuarios a mantener sus plantas saludables mediante la integración de automatización inteligente, inteligencia artificial visual y seguimiento centralizado. La solución utiliza sensores IoT, módulos de riego automático y análisis visual asistido por IA para monitorear continuamente el estado de las plantas y reducir la carga del cuidado manual.
 
 Hemos observado que los usuarios, especialmente personas con agendas ocupadas y aficionados a la jardinería, no logran mantener un cuidado constante, lo que provoca la pérdida de plantas, frustración y una menor continuidad en la creación de áreas verdes.
 
-¿Cómo podríamos mejorar Oryxen para que nuestros clientes tengan más éxito según su disponibilidad de tiempo y conocimientos previos en el cuidado de plantas, incrementando el interés de las personas por cultivar más plantas y reduciendo la carga de cuidado manual?
+Además, las soluciones existentes suelen enfocarse únicamente en recordatorios manuales o en ecosistemas cerrados de hardware, sin ofrecer una experiencia integral que combine automatización, diagnóstico inteligente y monitoreo unificado.
+
+¿Cómo podríamos mejorar Oryxen para que nuestros clientes tengan más éxito según su disponibilidad de tiempo y conocimientos previos en el cuidado de plantas, utilizando automatización, IA visual y seguimiento centralizado para reducir la carga de cuidado manual y aumentar la supervivencia de las plantas?
 
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions:**
 
-1. Creo que mis clientes necesitan mantener sus plantas saludables sin depender de recordatorios manuales o tiempo constante.
-2. Estas necesidades puede ser solucionadas con un sistema inteligente que automatice los cuidados y monitoree las plantas mediante sensores e IA.
-3. Mis primeros clientes son (o serán) personas con agendas ocupadas y aficionados a la jardinería.
-4. El valor número 1 que un cliente quiere obtener de mi servicio es mantener sus plantas vivas sin esfuerzo y ver su estado mediante un panel de control.
-5. El cliente también puede obtener estos beneficios adicionales: Automatizar procesos de cuidado, ahorrar tiempo, obtener bienestar y aprender sobre el cuidado de plantas.
-6. Obtendré la mayoría de mis clientes a través de redes sociales, recomendaciones (boca a boca) y marketplaces de tecnología/hogar inteligente.
-7. Ganaré dinero a través de planes premium y paquetes con objetos que ayudarán al cliente a entender mejor el proceso de cuidado de plantas.
-8. Mi principal competencia en el mercado serán aplicaciones de recordatorio de riego y sistemas básicos de riego automático.
-9. Los venceremos por integrar automatización de cuidado con sensores y la implementación de un chatbot impulsado con IA en una sola solución simple y accesible.
-10. Mi mayor riesgo de producto es que los usuarios no perciban suficiente valor frente a soluciones más simples o no adopten el hardware.
-11. Resolveremos esto a través de una experiencia fácil de usar, funciones claras e intuitivas, soporte técnico constante y demostración de los resultados de la solución en casos reales.
-12. Otras suposiciones que tenemos que podrían resultar falsas serían que los usuarios no estén dispuestos a pagar por los planes premium de la solución y o que confíen demasiado en la automatización para el cuidado de sus plantas.
+1. Creo que mis clientes necesitan mantener sus plantas saludables sin depender constantemente de supervisión manual.
+2. Estas necesidades pueden ser solucionadas mediante una plataforma que combine automatización, IA visual y monitoreo centralizado.
+3. Mis primeros clientes serán personas con agendas ocupadas y aficionados a la jardinería.
+4. El valor número 1 que un cliente quiere obtener de mi servicio es tranquilidad al saber que sus plantas están siendo monitoreadas y cuidadas automáticamente.
+5. El cliente también puede obtener beneficios adicionales como ahorro de tiempo, recomendaciones inteligentes y reducción de pérdida de plantas.
+6. Obtendré la mayoría de mis clientes a través de redes sociales, recomendaciones y marketplaces de hogar inteligente.
+7. Ganaré dinero a través de planes premium, venta de sensores y módulos inteligentes.
+8. Mi principal competencia en el mercado serán aplicaciones de cuidado de plantas y sistemas de automatización básica.
+9. Los venceremos al integrar automatización, IA visual y seguimiento centralizado en una sola solución accesible y adaptable.
+10. Mi mayor riesgo de producto es que los usuarios no perciban suficiente valor diferencial frente a soluciones más simples.
+11. Resolveremos esto demostrando resultados reales mediante monitoreo inteligente y automatización efectiva.
+12. Otra posible suposición falsa es que algunos usuarios no estén dispuestos a adoptar hardware inteligente en sus hogares.
 
 **User Assumptions:**
 
-1. ¿Quién es el usuario? Personas ocupadas y amantes de la jardinería que desean gestionar de manera efectiva la salud de sus plantas.
-2. ¿Dónde encaja nuestro producto en su trabajo o vida? Se integra en el flujo de vida diaria de cada cliente, permitiendo revisar y analizar la información de sus plantas cuando lo deseen.
-3. ¿Qué problemas tiene nuestro producto y cómo los resolvemos? Problema: Arduo cuidado manual y uso de tiempo para el cuidado de plantas. Solución: Plataforma unificada con automatización y acceso centralizado a toda la información.
-4. ¿Cuándo y cómo es usado nuestro producto? Durante el hábito de cultivar plantas, donde los clientes buscan mantener saludables a sus plantas.
-5. ¿Qué características son importantes? Interfaz intuitiva y responsive, sincronización en tiempo real e integración con sistemas existentes.
-6. ¿Cómo debe verse y comportarse nuestro producto? Diseño limpio y profesional, navegación simple, tiempo de respuesta rápido y accesible desde múltiples dispositivos.
+1. ¿Quién es el usuario? Personas ocupadas y amantes de la jardinería que desean gestionar la salud de sus plantas de forma eficiente.
+2. ¿Dónde encaja nuestro producto en su vida? En el cuidado diario de plantas dentro del hogar, oficinas y espacios personales.
+3. ¿Qué problemas tiene nuestro producto y cómo los resolvemos? Problema: cuidado manual complejo y pérdida frecuente de plantas. Solución: automatización inteligente, IA visual y acceso centralizado a la información.
+4. ¿Cuándo y cómo es usado nuestro producto? Durante el cuidado cotidiano de plantas, monitoreando su estado desde cualquier dispositivo.
+5. ¿Qué características son importantes? Automatización confiable, visualización centralizada, análisis inteligente y facilidad de uso.
+6. ¿Cómo debe verse y comportarse nuestro producto? Diseño limpio, intuitivo, rápido y accesible desde múltiples dispositivos.
 
 **Priorización de suposiciones:**
 
@@ -245,49 +286,48 @@ Siguiendo la metodología Lean UX de Jeff Gothelf, priorizamos nuestras suposici
 
 **Suposiciones de Alta Prioridad (Alto Riesgo + Bajo Conocimiento):**
 
-1. Los usuarios realmente adoptarán una solución de cuidado automático si perciben que les ahorra tiempo y reduce el trabajo manual.
-2. Los adultos mayores y personas con agendas ocupadas confiarán en un sistema automatizado para el cuidado de sus plantas.
-3. Los usuarios valorarán una interfaz que muestre el estado de todas sus plantas de forma clara y centralizada.
-4. La integración de sensores, riego automático y funciones con IA será percibida como útil y no como compleja.
+1. Los usuarios adoptarán una solución de automatización inteligente si perciben una reducción real del trabajo manual.
+2. Los usuarios confiarán en recomendaciones generadas mediante IA visual para el cuidado de sus plantas.
+3. Los usuarios valorarán una plataforma centralizada que les permita monitorear todas sus plantas desde un solo lugar.
+4. La combinación de automatización, IA visual y monitoreo centralizado será percibida como una propuesta diferencial y útil.
 
 **Suposiciones de prioridad media (Riesgo medio + conocimiento medio):**
 
-5. Los usuarios estarán dispuestos a leer notificaciones y alertas frecuentes para monitorear sus plantas.
-6. La solución será útil tanto para personas con pocas plantas como para quienes tienen varias.
-7. Los usuarios confiarán en las recomendaciones del chatbot para tomar decisiones de cuidado.
-8. La automatización del riego será suficiente para reducir significativamente la cantidad de plantas muertas.
+5. Los usuarios estarán dispuestos a recibir alertas y recomendaciones frecuentes.
+6. La solución será útil tanto para usuarios principiantes como avanzados.
+7. Los usuarios confiarán en las recomendaciones generadas por el chatbot inteligente.
+8. La automatización reducirá significativamente la pérdida de plantas.
 
 **Suposiciones de baja prioridad (Bajo riesgo + alto conocimiento):**
 
-9. Los usuarios prefieren interfaces simples, intuitivas y fáciles de entender.
-10. La visualización del estado de las plantas en una sola plataforma mejora la experiencia de uso.
-11. Los usuarios valoran recibir recordatorios y recomendaciones personalizadas.
-12. Los dispositivos móviles y la conectividad a internet son accesibles para la mayoría de nuestros usuarios.
+9. Los usuarios prefieren interfaces simples e intuitivas.
+10. La centralización de información mejora la experiencia de uso.
+11. Los usuarios valoran recomendaciones personalizadas.
+12. Los dispositivos móviles y el acceso a internet son accesibles para la mayoría de usuarios.
 
-Estas suposiciones de alta prioridad serán las primeras en validarse mediante entrevistas, pruebas de concepto y prototipos, antes de proceder con el desarrollo completo de Oryxen.
+Estas suposiciones de alta prioridad serán las primeras en validarse mediante entrevistas, pruebas de concepto y prototipos antes de proceder con el desarrollo completo de Oryxen.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-- **Hypothesis Statement 01:** <br>
-Creemos que los usuarios amantes de la jardinería y personas con agendas ocupadas buscan una forma simple de mantener sus plantas saludables sin depender del riego manual.
-Sabremos que esto es cierto al medir la frecuencia con la que usan la app para revisar el estado de sus plantas.
-Cuando al menos el 60% de los usuarios activos consulte la plataforma 3 veces por semana o más durante el primer mes.
+- **Hypothesis Statement 01:**  
+Creemos que los usuarios con agendas ocupadas buscarán automatizar el cuidado de sus plantas para reducir tiempo y esfuerzo manual.  
+Sabremos que esto es cierto al medir la frecuencia con la que utilizan las funciones automáticas de monitoreo y riego.  
+Cuando al menos el 60% de los usuarios activos mantenga activadas las funciones automáticas durante el primer mes.
 
-- **Hypothesis Statement 02:** <br>
-Creemos que la automatización del riego reducirá significativamente la cantidad de plantas muertas en comparación con el cuidado manual.
-Sabremos que esto es cierto al comparar el número de plantas marchitas o muertas antes y después de usar la solución.
-Cuando los usuarios reporten una reducción de al menos 30% en plantas perdidas en los primeros 3 meses.
+- **Hypothesis Statement 02:**  
+Creemos que la integración de IA visual permitirá detectar problemas de salud en las plantas de manera más eficiente que el cuidado manual tradicional.  
+Sabremos que esto es cierto al analizar la percepción de utilidad y precisión de las recomendaciones generadas por la IA.  
+Cuando más del 70% de los usuarios califique las recomendaciones visuales como útiles y precisas.
 
-- **Hypothesis Statement 03:** <br>
-Creemos que los usuarios valorarán una interfaz donde puedan ver el estado de todas sus plantas en un solo lugar.
-Sabremos que esto es cierto al analizar las ocasiones y el tiempo en el que permanecen los usuarios dentro de la aplicación.
-Cuando al menos el 70% de los usuarios activos utilice la pantalla de resumen de plantas y la califique como útil.
+- **Hypothesis Statement 03:**  
+Creemos que los usuarios valorarán una plataforma centralizada donde puedan visualizar el estado de todas sus plantas en tiempo real.  
+Sabremos que esto es cierto al analizar el uso de la pantalla principal de monitoreo.  
+Cuando al menos el 75% de los usuarios utilice frecuentemente el panel centralizado de seguimiento.
 
-- **Hypothesis Statement 04:** <br>
-Creemos que un chatbot con IA aumentará la confianza del usuario al brindar recomendaciones claras y oportunas sobre el cuidado de sus plantas.
-Sabremos que esto es cierto al analizar el uso del chatbot y la satisfacción percibida por los usuarios.
-Cuando al menos el 50% de los usuarios interactúe con el chatbot y más del 75% declare que sus recomendaciones fueron útiles.
-
+- **Hypothesis Statement 04:**  
+Creemos que la combinación de automatización, IA visual y seguimiento centralizado aumentará la confianza y satisfacción del usuario.  
+Sabremos que esto es cierto mediante encuestas de satisfacción y retención de usuarios.  
+Cuando más del 80% de los usuarios considere que Oryxen facilita significativamente el cuidado de sus plantas.
 
 #### 1.2.2.4. Lean UX Canvas
 
@@ -305,19 +345,20 @@ Para asegurar el éxito de Oryxen, hemos identificado dos segmentos clave que se
 
 ## 2.1. Competidores
 
-En el mercado de soluciones digitales para el cuidado de plantas, se han identificado tres competidores representativos que cubren distintos frentes de valor: desde aplicaciones móviles con IA hasta electrodomésticos de jardinería inteligente. Cada uno aborda parcialmente el problema que **Oryxen** resuelve de forma integral, lo que permite posicionar con claridad las ventajas de nuestra propuesta.
+En el mercado de jardinería inteligente, existen soluciones que van desde aplicaciones móviles con funciones básicas de seguimiento hasta ecosistemas avanzados de automatización y monitoreo. Hemos identificado tres frentes competitivos que nos permiten definir nuestra estrategia de diferenciación, lo que permitiría a **Oryxen** destacar en el ámbito tecnológico y económico, especialmente considerando las limitaciones de adopción de hardware en LATAM.
 
-**Planta (Strömming & Löf AB)**  
-Aplicación móvil sueca con más de 10 millones de descargas que asiste a los usuarios en el cuidado de sus plantas mediante recordatorios, identificación por foto con IA, medidor de luz con la cámara del celular y una extensa base de datos de especies. Es un competidor directo en el plano **software** pero no integra hardware, por lo que depende de la memoria y disciplina del usuario para ejecutar cada tarea. Su plan premium se comercializa por suscripción anual a bajo costo.
 
-**Click & Grow (Smart Garden 3 / 9 / 25)**  
-Compañía estonia que ofrece jardines inteligentes de interior en formato de electrodoméstico: una maceta cerrada con riego automatizado, luces LED de crecimiento y cápsulas propietarias ("plant pods") con semillas preparadas. Es un competidor **hardware** de gama media-alta, pero orientado exclusivamente al cultivo de hierbas, vegetales y flores dentro de su propio ecosistema cerrado; no permite monitorear las plantas que el usuario ya tiene en casa.
+**Planta (Strömming & Löf AB)**
+Es una aplicación móvil enfocada en el cuidado de plantas. Permite identificar plantas por foto, crear recordatorios personalizados, usar un medidor de luz y recibir recomendaciones y diagnósticos de problemas comunes. Su fortaleza está en el software y en la facilidad de uso, pero depende por completo de que el usuario ejecute las acciones manualmente. Por eso, compite con Oryxen en la parte de acompañamiento digital, aunque no automatiza el cuidado físico de la planta. <br>
+**Diferenciación:** Oryxen elimina el error humano y la disciplina requerida, pasando de un "recordatorio" a una "acción automatizada".
+
+**Xiaomi Mi Flora / Smart Home Ecosystem**  
+Xiaomi representa la mayor amenaza debido a su capacidad de escala y precios agresivos. Sus sensores de suelo son económicos y se integran a ecosistemas de hogar inteligente como Xiaomi Home y Google Home. Sus dispositivos permiten monitorear variables como humedad, temperatura y luz, ofreciendo datos básicos sobre el estado de las plantas. <br>
+**Diferenciación:** Oryxen no solo recibe datos, los interpreta, ejecuta y explica las acciones que realiza impulsado por IA.
 
 **Gardyn (Home Kit 3.0 con Kelby AI)**  
-Startup estadounidense que vende un huerto vertical hidropónico para el hogar, controlado por una IA propia llamada **Kelby** que utiliza cámaras integradas para detectar el estado de cada planta y recomendar acciones. Funciona con un modelo de suscripción ("Gardyn Membership") que incluye envío recurrente de yCubes (semillas) y soporte. Representa el segmento **premium + IA** y es el competidor más cercano en filosofía, aunque a un precio muy elevado y atado a su propio formato de cultivo.
-
-**¿Por qué llevar a cabo este análisis?**  
-**Pregunta clave:** ¿Cómo se posiciona **Oryxen** frente a una app popular sin hardware (Planta), un electrodoméstico de cultivo cerrado (Click & Grow) y una solución premium con IA y cámara (Gardyn), considerando propuesta de valor, mercado objetivo, modelo de negocio y capacidades tecnológicas?
+Es el referente tecnológico con visión artificial. Sin embargo, su costo superior a los $700 USD y su formato cerrado lo hacen inviable para el mercado masivo en LATAM. Utiliza una IA propia llamada **Kelby** que utiliza cámaras integradas para detectar el estado de cada planta y recomendar acciones. Funciona con un modelo de suscripción ("Gardyn Membership") que incluye envío recurrente de yCubes (semillas) y soporte. <br>
+**Diferenciación:** Oryxen propone una solución modular y más accesible, enfocada en las macetas y plantas que el usuario ya posee, integrando automatización e IA sin requerir un sistema de cultivo propietario, reduciendo el costo de entrada en un 80%.
 
 ### 2.1.1. Análisis competitivo
 
@@ -327,7 +368,7 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>¿Por qué llevar a cabo este análisis?</td>
-    <td colspan="4">Identificar fortalezas y debilidades frente a competidores de software (apps de cuidado con IA), electrodomésticos de cultivo cerrado y huertos inteligentes premium, con el fin de posicionar a Oryxen como la única solución modular que convierte las plantas que el usuario ya posee en plantas inteligentes, combinando sensores, riego automático y un chatbot con IA a un precio accesible.</td>
+    <td colspan="4">Identificar fortalezas, debilidades y oportunidades frente a competidores de software, ecosistemas IoT y soluciones premium de jardinería inteligente, con el fin de posicionar a Oryxen como una alternativa modular y accesible para el mercado latinoamericano, enfocada en automatización, monitoreo y asistencia inteligente sobre las plantas que el usuario ya posee.</td>
   </tr>
   <tr>
     <td colspan="5"></td>
@@ -336,7 +377,7 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <th></th>
     <th><img src="./assets/Chapter-2/Logo_Oryxen.png"></th>
     <th><img src="./assets/Chapter-2/Logo_Planta.jpg"></th>
-    <th><img src="./assets/Chapter-2/Logo_Click&Grow.png"></th>
+    <th><img src="./assets/Chapter-2/Logo_Xiaomi.jpg"></th>
     <th><img src="./assets/Chapter-2/Logo_Gardyn.png"></th>
   </tr>
 
@@ -345,24 +386,24 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>Overview</td>
-    <td>Solución IoT modular que convierte las macetas existentes del usuario en plantas inteligentes mediante sensores, riego automático, chatbot con IA y panel de control web/móvil.</td>
-    <td>Aplicación móvil con recordatorios, identificación de plantas por foto, medidor de luz vía cámara y base de datos de especies. Solo software.</td>
-    <td>Electrodoméstico de jardinería indoor con riego automatizado, luces LED y cápsulas propietarias de semillas.</td>
-    <td>Huerto vertical hidropónico premium con IA "Kelby" y cámaras integradas, controlado desde una app.</td>
+    <td>Plataforma modular de jardinería inteligente que combina sensores IoT, automatización de riego, IA visual y chatbot conversacional para ayudar a usuarios urbanos a cuidar las plantas que ya poseen.</td>
+    <td>Aplicación móvil enfocada en recordatorios, identificación de plantas y recomendaciones de cuidado mediante IA.</td>
+    <td>Ecosistema IoT de hogar inteligente con sensores accesibles para monitorear variables como humedad, temperatura y luz.</td>
+    <td>Sistema premium de jardinería indoor que combina automatización, cámaras y visión artificial mediante su IA “Kelby”.</td>
   </tr>
   <tr>
     <td>Ventaja competitiva</td>
-    <td>Combina automatización + IA conversacional sobre las plantas que el usuario ya tiene. Sensores modulares de bajo costo y chatbot entrenado para asistir de forma personalizada.</td>
-    <td>Enorme base de usuarios, marca consolidada y una experiencia de app pulida con identificación de plantas por IA.</td>
-    <td>Jardín llave en mano: el usuario solo conecta el aparato y añade agua cada varias semanas.</td>
-    <td>IA con visión por cámara que detecta en tiempo real el estado de cada planta; experiencia "set and forget" de gama alta.</td>
+    <td>Integra monitoreo, automatización e IA sobre macetas existentes sin obligar al usuario a migrar a un ecosistema cerrado o realizar una inversión inicial elevada.</td>
+    <td>Facilidad de uso, gran base de usuarios y experiencia digital enfocada en usuarios principiantes.</td>
+    <td>Sensores de bajo costo e integración con ecosistemas de smart home ampliamente utilizados.</td>
+    <td>Alto nivel de automatización y monitoreo avanzado mediante visión artificial e IA.</td>
   </tr>
   <tr>
     <td>¿Qué valor ofrece a los clientes?</td>
-    <td>Tranquilidad, ahorro de tiempo y reducción de pérdidas para las plantas que ya poseen, con acompañamiento por IA al nivel de un experto.</td>
-    <td>Educación básica y recordatorios para usuarios principiantes, a un costo muy bajo.</td>
-    <td>Posibilidad de cultivar hierbas y vegetales frescos en casa sin experiencia previa.</td>
-    <td>Producción de alimentos en casa con mínimo esfuerzo y una experiencia tech-premium guiada por IA.</td>
+    <td>Reduce el esfuerzo manual, disminuye pérdidas de plantas y ayuda a usuarios con poco tiempo mediante automatización progresiva y recomendaciones personalizadas./td>
+    <td>Ayuda a recordar tareas de cuidado y aprender conceptos básicos de jardinería.</td>
+    <td>Permite monitorear variables ambientales de manera económica y sencilla.</td>
+    <td>Ofrece una experiencia premium de cultivo indoor con mínima intervención del usuario.</td>
   </tr>
 
   <tr>
@@ -370,17 +411,17 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>Mercado objetivo</td>
-    <td>Personas ocupadas (25–45) y aficionados a la jardinería en zonas urbanas, así como adultos mayores que buscan asistencia continua para sus plantas ya existentes.</td>
-    <td>Usuarios principiantes y casuales que quieren recordatorios y aprender sobre sus plantas desde el celular.</td>
-    <td>Usuarios de clase media-alta interesados en cocina casera, hierbas frescas y decoración indoor.</td>
-    <td>Hogares tech-premium y foodies interesados en autoabastecimiento y hidroponia en EE. UU.</td>
+    <td>Personas ocupadas y aficionados a la jardinería en zonas urbanas que buscan reducir el tiempo y esfuerzo del cuidado manual.</td>
+    <td>Usuarios casuales o principiantes interesados en aprender sobre cuidado de plantas.</td>
+    <td>Usuarios interesados en automatización del hogar y dispositivos inteligentes accesibles.</td>
+    <td>Usuarios premium interesados en cultivo indoor automatizado y tecnología avanzada.</td>
   </tr>
   <tr>
     <td>Estrategias de marketing</td>
-    <td>Redes sociales, creadores de contenido de jardinería, alianzas con viveros locales y campañas en marketplaces de hogar inteligente.</td>
-    <td>App store optimization, freemium agresivo y marketing viral en TikTok/Instagram.</td>
-    <td>E-commerce propio, presencia en retailers de diseño y campañas en sostenibilidad.</td>
-    <td>Publicidad digital, ferias tecnológicas (CES) y modelo D2C con membresía.</td>
+    <td>Redes sociales, contenido educativo, alianzas con viveros locales y marketplaces de hogar inteligente.</td>
+    <td>Freemium, posicionamiento en App Store/Google Play y contenido viral en redes sociales.</td>
+    <td>Ecosistema Xiaomi Home, precios competitivos y distribución global masiva.</td>
+    <td>Marketing premium, modelo D2C y posicionamiento tecnológico.</td>
   </tr>
 
   <tr>
@@ -388,24 +429,24 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>Productos & Servicios</td>
-    <td>Kit de sensores IoT modulares + módulo de riego automático + aplicación móvil/web + chatbot con IA + planes básico y premium por suscripción.</td>
-    <td>Aplicación móvil iOS/Android con plan gratuito y Planta Premium.</td>
-    <td>Jardín inteligente cerrado (Smart Garden 3/9/25) + cápsulas de semillas recurrentes.</td>
-    <td>Home Kit 3.0 hidropónico + Gardyn Membership + yCubes (semillas) + IA Kelby.</td>
+    <td>App móvil/web + IA visual + chatbot + sensores opcionales + riego automático modular + dashboard centralizado.</td>
+    <td>Aplicación móvil con recordatorios y recomendaciones de cuidado.</td>
+    <td>Sensores inteligentes y dispositivos integrados a Xiaomi Home.</td>
+    <td>Home Kit hidropónico + IA Kelby + cámaras + membresía premium.</td>
   </tr>
   <tr>
     <td>Precios & Costos</td>
-    <td>Kit inicial accesible + suscripción mensual (plan básico gratuito, premium con IA y sensores adicionales).</td>
-    <td>App gratuita + Planta Premium ≈ USD 30/año.</td>
-    <td>USD 100–600 según tamaño + cápsulas de semillas recurrentes (USD 10–30 por set).</td>
-    <td>USD 700+ por el Home Kit + membresía mensual con yCubes incluidos.</td>
+    <td>Bajo costo de entrada: acceso inicial sin hardware obligatorio y posibilidad de escalar progresivamente./td>
+    <td>Bajo costo anual mediante suscripción móvil.</td>
+    <td>Hardware económico orientado al mercado masivo.</td>
+    <td>Alto costo inicial y suscripción recurrente.</td>
   </tr>
   <tr>
     <td>Canales de distribución</td>
-    <td>App móvil + Plataforma web + alianzas con viveros y tiendas de hogar inteligente en Perú/LATAM.</td>
-    <td>App Store y Google Play (global).</td>
-    <td>Sitio propio, Amazon y retail de decoración (internacional).</td>
-    <td>Sitio propio D2C (principalmente EE. UU.).</td>
+    <td>Aplicación móvil/web, marketplaces y alianzas con viveros y tiendas tecnológicas locales.</td>
+    <td>App Store y Google Play.</td>
+    <td>E-commerce y retail tecnológico global.</td>
+    <td>Venta directa mediante plataforma propia.</td>
   </tr>
 
   <tr>
@@ -415,31 +456,31 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Fortalezas</td>
     <td>
       <ul>
-        <li>Único que combina sensores + riego automático + chatbot con IA</li>
-        <li>Trabaja sobre las plantas y macetas que el usuario ya posee</li>
-        <li>Sensores modulares de bajo costo</li>
-        <li>Plan freemium accesible para LATAM</li>
+        <li>Entrada progresiva sin hardware obligatorio</li>
+        <li>Automatización + IA conversacional + monitoreo</li>
+        <li>Compatible con macetas existentes</li>
+        <li>Enfoque económico y modular para LATAM</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Marca consolidada y comunidad grande</li>
-        <li>IA de identificación por foto muy madura</li>
-        <li>Costo mínimo para el usuario final</li>
+        <li>Gran comunidad de usuarios</li>
+        <li>Experiencia intuitiva</li>
+        <li>Barrera de entrada mínima</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Automatización total del cultivo</li>
-        <li>Diseño atractivo y llave en mano</li>
-        <li>Experiencia educativa para principiantes</li>
+        <li>Precios accesibles</li>
+        <li>Integración smart home consolidada</li>
+        <li>Amplia disponibilidad</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Visión por cámara + IA para diagnóstico</li>
-        <li>Modelo de suscripción recurrente consolidado</li>
-        <li>Branding tecnológico premium</li>
+        <li>Automatización avanzada</li>
+        <li>IA basada en visión artificial</li>
+        <li>Experiencia premium consolidada</li>
       </ul>
     </td>
   </tr>
@@ -447,29 +488,28 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Debilidades</td>
     <td>
       <ul>
-        <li>Startup nueva sin posicionamiento consolidado</li>
-        <li>Presupuesto de marketing inicial limitado</li>
-        <li>Requiere validación del hardware a mayor escala</li>
+        <li>Startup sin posicionamiento consolidado</li>
+        <li>Necesita validar confianza en IA y automatización</li>
+        <li>Dependencia inicial de adquisición de usuarios</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>No tiene hardware: depende totalmente del usuario para ejecutar tareas</li>
-        <li>No riega, no mide humedad real del suelo</li>
+        <li>No automatiza acciones físicas</li>
+        <li>Depende totalmente del usuario</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Ecosistema cerrado: solo funciona con sus cápsulas</li>
-        <li>No sirve para las plantas existentes del usuario</li>
-        <li>Costo recurrente de semillas propietarias</li>
+        <li>Monitoreo limitado</li>
+        <li>No incluye IA especializada en jardinería</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Precio muy elevado</li>
-        <li>Disponibilidad geográfica restringida</li>
-        <li>Formato único (no se adapta a macetas)</li>
+        <li>Precio elevado</li>
+        <li>Ecosistema cerrado</li>
+        <li>Baja accesibilidad para LATAM</li>
       </ul>
     </td>
   </tr>
@@ -477,27 +517,27 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Oportunidades</td>
     <td>
       <ul>
-        <li>Crecimiento del hogar inteligente en LATAM</li>
-        <li>Auge de la jardinería urbana post-pandemia</li>
-        <li>Adopción masiva de asistentes con IA</li>
+        <li>Crecimiento del smart home en LATAM</li>
+        <li>Aumento de jardinería urbana post-pandemia</li>
+        <li>Mayor adopción de IA conversacional</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Monetizar su base con funciones premium</li>
-        <li>Extender hacia integraciones con hardware de terceros</li>
+        <li>Expandirse hacia automatización física</li>
+        <li>Integración con hardware de terceros</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Tendencia "grow your own food"</li>
-        <li>Expansión a mercados emergentes</li>
+        <li>Integración con hardware de terceros</li>
+        <li>Nuevos sensores domésticos</li>
       </ul>
     </td>
     <td>
       <ul>
         <li>Expansión internacional</li>
-        <li>Alianzas con retailers de alimentos orgánicos</li>
+        <li>Crecimiento de agricultura indoor</li>
       </ul>
     </td>
   </tr>
@@ -505,27 +545,27 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Amenazas</td>
     <td>
       <ul>
-        <li>Entrada de grandes players (Xiaomi, Google Home) al segmento</li>
-        <li>Fallas de hardware que erosionen la confianza del usuario</li>
-        <li>Apps gratuitas con IA como alternativa "suficiente"</li>
+        <li>Competencia de ecosistemas IoT consolidados</li>
+        <li>Percepción de bajo valor frente a apps gratuitas</li>
+        <li>Sensibilidad al precio del hardware en LATAM</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Aparición de competidores con hardware integrado</li>
+        <li>Ingreso de competidores con automatización</li>
         <li>Fatiga de suscripciones</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Usuarios que prefieren soluciones abiertas y modulares</li>
-        <li>Alternativas más baratas en Amazon</li>
+        <li>Competidores especializados con IA</li>
+        <li>Dependencia del ecosistema Xiaomi</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Competencia de soluciones modulares más económicas</li>
-        <li>Sensibilidad al precio en contextos de recesión</li>
+        <li>Mercado reducido fuera del segmento premium</li>
+        <li>Alta barrera económica</li>
       </ul>
     </td>
   </tr>
@@ -538,16 +578,54 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
 - Ecosistema **hardware + software modular**: sensores independientes, riego automatizado y panel centralizado accesible desde web y móvil.
 - Modelo de negocio Freemium 100% software para eliminar la barrera de entrada al hardware en LATAM, escalable mediante la venta de un 'Sensor Lite' básico de bajo costo, y un Plan Premium que rentabiliza el negocio bloqueando funciones avanzadas de IA e historial completo de datos..
 - Posicionamiento como un **aliado cotidiano** para hogares ocupados y aficionados latinoamericanos, con precios adaptados al mercado regional.
+Hemos identificado diversas estrategias y tácticas para diferenciarnos y competir de manera efectiva dentro del mercado de jardinería inteligente y automatización del hogar. Oryxen busca posicionarse como una solución accesible y especializada para el cuidado de plantas en entornos urbanos, combinando automatización, monitoreo e inteligencia artificial en una sola plataforma.
 
----
+**1. Estrategias de Diferenciación:** <br>
 
-**Tácticas frente a competidores**
+**Automatización Integral del Cuidado:**
+A diferencia de competidores como Planta, que se limitan a la gestión de software y recordatorios. Oryxen incorpora sensores y módulos de riego que permiten automatizar tareas de cuidado y reducir la dependencia del usuario en actividades repetitivas.
 
-| Competidor | Estrategia | Táctica |
-|------------|------------|---------|
-| **Planta** | Complementar y superar el "solo software" con hardware | Mostrar que los recordatorios sin sensores siguen dependiendo del usuario; Oryxen ejecuta, no solo recuerda. Ofrecer importación de especies desde apps de recordatorio como puente de migración. |
-| **Click & Grow** | Diferenciarse del ecosistema cerrado | Comunicar que Oryxen funciona con cualquier maceta y planta que el usuario ya tenga, sin depender de cápsulas propietarias ni de un solo tipo de cultivo. |
-| **Gardyn** | Competir por valor frente a una solución premium y regional | Ofrecer capacidades de IA equivalentes (diagnóstico conversacional por especie) a una fracción del costo y con disponibilidad en LATAM, sin obligar al usuario a comprar un huerto vertical completo. |
+**IA especializada en jardinería:**
+Oryxen integra chatbot conversacional y diagnóstico visual por IA para interpretar el estado de las plantas y recomendar acciones específicas según la especie, el entorno y las condiciones detectadas por los sensores. Esto permite ofrecer una experiencia más personalizada que los sistemas IoT tradicionales.
+
+**Dashboard centralizado y monitoreo inteligente:**
+La plataforma permite visualizar el estado de todas las plantas desde una sola interfaz, incluyendo historial de riego, humedad, alertas y recomendaciones automáticas. Esto brinda mayor control a usuarios con múltiples plantas o poco tiempo disponible.
+
+
+**2. Tácticas de Marketing:** <br>
+
+**Contenido educativo y redes sociales:**
+Se implementarán campañas digitales orientadas a hogares urbanos y adultos mayores, utilizando contenido educativo sobre cuidado de plantas, automatización e IA aplicada al hogar.
+
+**Alianzas con viveros y tiendas tecnológicas:**
+Oryxen buscará colaborar con viveros locales y marketplaces tecnológicos para aumentar visibilidad, facilitar pruebas del producto y fortalecer la confianza del usuario en etapas tempranas.
+
+**Demostraciones y onboarding simplificado:**
+Se priorizará una experiencia de configuración sencilla y demostraciones prácticas del monitoreo y diagnóstico por IA, reduciendo la percepción de complejidad tecnológica asociada al hardware IoT.
+
+
+**3. Estrategias de Precios:** <br>
+
+**Modelo freemium con adopción progresiva:**
+Los usuarios podrán iniciar utilizando funciones gratuitas como chatbot básico, monitoreo manual y diagnóstico visual, sin necesidad de adquirir hardware desde el inicio. Posteriormente podrán incorporar sensores o automatización según sus necesidades y presupuesto.
+
+**Planes escalables según cantidad de plantas:**
+Se ofrecerán planes premium orientados a usuarios con múltiples macetas o necesidades avanzadas, incluyendo automatización inteligente, historial avanzado y análisis personalizados.
+
+**Hardware modular de bajo costo:**
+A diferencia de soluciones premium cerradas, Oryxen priorizará sensores independientes y compatibles con diferentes tipos de macetas, permitiendo reducir costos y facilitar el acceso en el mercado latinoamericano.
+
+
+**4. Expansión y Adaptabilidad:** <br>
+
+**Enfoque inicial en Lima Metropolitana:**
+La startup comenzará enfocándose en usuarios urbanos de Lima Metropolitana, donde existe un crecimiento sostenido en el uso de plantas ornamentales y dispositivos smart home. Posteriormente se evaluará la expansión nacional e internacional.
+
+**Compatibilidad con ecosistemas existentes:**
+Oryxen buscará integrarse progresivamente con plataformas de hogar inteligente y asistentes virtuales, permitiendo aumentar compatibilidad y competitividad frente a ecosistemas consolidados como Xiaomi o Google Home.
+
+**Aprendizaje continuo mediante feedback del usuario:**
+El sistema utilizará interacciones y retroalimentación de los usuarios para mejorar la precisión de alertas, recomendaciones y diagnósticos visuales, fortaleciendo la confianza en la plataforma con el tiempo.
 
 
 <div style="page-break-after: always;"></div>
@@ -926,7 +1004,7 @@ To-Be Scenario Map 2- Segmento de : Aficionados
 | EPIC 006 | Comunidad y Colaboración entre Usuarios |Como usuario, quiero participar en una comunidad donde pueda compartir experiencias, recibir consejos de otros cuidadores y colaborar en el cuidado de plantas, para enriquecer mi conocimiento y sentirme parte de una red de apoyo. |**Escenario 01: Experiencia comunitaria integrada**<br>- Dado que un usuario completa el registro básico<br>- Cuando accede por primera vez a la comunidad<br>- Entonces encuentra contenido relevante según sus tipos de plantas<br>- Y puede interactuar inmediatamente con otros usuarios afines**Escenario 02: Valor educativo continuo**<br>- Dado que un usuario participa regularmente en la comunidad<br>- Cuando comparte y recibe feedback<br>- Entonces acumula conocimiento aplicable a sus plantas<br>- Y mejora progresivamente sus técnicas de cuidado<br>**Reglas de Comunidad:**<br>- Usuarios nuevos no pueden publicar enlaces externos hasta tener 10 reputación<br>- Las fotos compartidas no pueden exceder 5MB ni contener metadatos de ubicación<br>- El contenido se modera automáticamente con lista de palabras prohibidas<br>- Usuarios pueden reportar contenido, con 3 reportes se suspende publicación automáticamente    | N/A|
 | EPIC 007 | Alertas Inteligentes Contextuales|Como usuario, quiero recibir alertas contextuales que me indiquen no solo el problema sino también causas posibles y soluciones, para tomar acciones informadas rápidamente.|**Escenario 01: Alerta con diagnóstico**<br>- Dado que la humedad del suelo baja críticamente<br>- Cuando se genera la alerta<br>- Entonces incluye posible causa (temperatura alta, suelo muy drenante, maceta pequeña)<br>- Y sugiere acciones específicas (regar inmediatamente, mover a sombra, transplantar)<br>**Escenario 02: Alertas preventivas**<br>- Dado que una planta muestra tendencia descendente en salud<br>- Cuando el sistema detecta patrón de deterioro<br>- Entonces envía alerta preventiva antes de llegar a estado crítico<br>- Y recomienda acciones correctivas tempranas<br>**Reglas de Alertas:**<br>- Las alertas preventivas requieren tendencia consistente de 72 horas<br>- El diagnóstico automático considera máximo 3 causas probables por alerta<br>- Las soluciones sugeridas deben estar validadas por al menos 10 casos exitosos en la comunidad<br>- No se generan alertas por fluctuaciones menores al 5% en rangos normales|N/A|
 | EPIC 008 | Configuración Inteligente de Dispositivos|Como usuario, quiero vincular y configurar fácilmente mis sensores IoT con perfiles predefinidos según mi tipo de planta y ubicación, para que el dispositivo comience a monitorear automáticamente sin necesidad de configuración técnica compleja.|**Escenario 01: Vinculación simplificada**<br>- Dado que un usuario adquiere un nuevo sensor<br>- Cuando escanea el código QR del dispositivo<br>- Entonces el sistema lo detecta automáticamente<br>- Y guía al usuario en asignarlo a una planta específica<br>**Escenario 02: Configuración automática por tipo de planta**<br>- Dado que un usuario selecciona "Suculenta" al registrar planta<br>- Cuando vincula el sensor<br>- Entonces el sistema aplica automáticamente umbrales de humedad para suculentas<br>- Y configura frecuencias de monitoreo adecuadas<br>**Reglas de Dispositivos:**<br>- Máximo 3 dispositivos por usuario en plan básico, ilimitado en premium<br>- Los dispositivos deben recertificar conexión cada 24 horas<br>- La batería crítica se define como menor al 15% de capacidad<br>- Los datos de sensores se muestran con precisión de ±2% para humedad, ±0.5°C para temperatura|N/A| 
-| EPIC 009 | Gestión de suscripciones|Como usuario, quiero elegir entre diferentes modelos de pago (compra única de hardware o suscripción mensual con servicios premium) según mis necesidades y presupuesto, para acceder a las funcionalidades que más valoro.|**Escenario 01: Opción de compra única**<br>- Dado que un usuario prefiere pago único<br>- Cuando selecciona el plan básico<br>- Entonces accede a funciones esenciales de monitoreo<br>- Y no tiene compromisos de pago recurrentes<br>**Escenario 02: Suscripción premium**<br>- Dado que un usuario quiere funcionalidades avanzadas<br>- Cuando elige suscripción mensual<br>- Entonces desbloquea diagnósticos avanzados, historiales extensos e integración con clima<br>- Y puede cancelar en cualquier momento<br>**Reglas de Facturación:**<br>- Las suscripciones se renuevan automáticamente 24 horas antes del vencimiento<br>- Período de gracia de 7 días para pagos fallidos antes de suspensión<br>- Reembolsos completos dentro de primeros 14 días de suscripción<br>- Los cambios de plan premium a básico mantienen funciones hasta fin de período pagado|N/A|
+| EPIC 009 | Gestión de suscripciones|Como usuario, quiero elegir entre diferentes modelos de adopción progresiva (plan básico gratuito, suscripción premium de software o compra de hardware modular) según mis necesidades y presupuesto, para acceder a las funcionalidades que más valoro sin barreras de entrada altas.|**Escenario 01: Plan Básico Gratuito**<br>- Dado que un usuario prefiere probar la plataforma sin costo inicial<br>- Cuando selecciona el plan Básico<br>-Entonces accede a funciones esenciales de monitoreo y registro manual de plantas y no tiene compromisos de pagos recurrentes ni requiere comprar hardware<br> **Escenario 02: Suscripción premium (Solo Software)** <br>- Dado que un usuario quiere funcionalidades avanzadas sin comprar sensores<br>- Cuando elige la suscripción mensual premium<br>- Entonces desbloquea diagnósticos con IA, historial extenso y soporte avanzado.<br>- Y puede cancelar en cualquier momento<br> **Escenario 03: compra de Hardware Modular (Sensor Lite)** <br>- Dado que un usuario desea automatizar su monitoreo<br>- Cuando adquiere el Sensor Lite de entrada<br>- Entonces integra los datos automáticos a su plan y recibe meses de suscripción premium incluidos.<br>**Reglas de Facturación:**<br>- Las suscripciones se renuevan automáticamente 24 horas antes del vencimiento<br>- Período de gracia de 7 días para pagos fallidos antes de suspensión<br>- Reembolsos completos dentro de primeros 14 días de suscripción<br>- Los cambios de plan premium a básico mantienen funciones hasta fin de período pagado|N/A|
 | EPIC 010 | Gestión de Riego 100% Autónomo | Como usuario, quiero que el sistema gestione de forma autónoma el riego de mis plantas, para asegurar su hidratación óptima sin necesidad de intervención manual o supervisión constante. | **Escenario 01: Ejecución de riego por demanda**<br> - Dado que el sensor detecta que la humedad del suelo es inferior al umbral de la especie <br> - Cuando el sistema valida que no ha habido riego reciente <br> - Entonces activa automáticamente la bomba de agua hasta alcanzar el nivel ideal <br> - Y registra el volumen de agua consumido. <br> **Escenario 02: Suspensión inteligente de riego**  <br> - Dado que el sistema tiene programado un riego <br> - Cuando la predicción climática local indica lluvia inminente (>80% probabilidad) <br> - Entonces el sistema pospone el riego autónomo para ahorrar agua y evitar sobrehidratación. <br> **Reglas de Negocio:** <br>- El sistema debe enviar un reporte diario de acciones autónomas realizadas. <br> - Existe un ""Failsafe"" que corta el riego si el sensor no detecta cambios en 60 segundos (evitar inundaciones por fuga). <br> - Los registros de riego deben guardarse por 12 meses. | N/A |
 | EPIC 011 | Diagnóstico por Visión Artificial | Como usuario, quiero capturar imágenes de mis plantas para que una IA identifique automáticamente plagas, enfermedades o deficiencias nutricionales de forma inmediata. | **Escenario 01: Identificación de anomalías** <br> - Dado que un usuario toma una foto de una hoja con manchas o decoloración- Cuando el motor de IA procesa la imagen- Entonces identifica la posible enfermedad con un porcentaje de certeza- Y sugiere un tratamiento específico (insecticida, fertilizante, etc.). **Escenario 02: Seguimiento de crecimiento** <br> - Dado que el usuario toma fotos periódicas <br> - Cuando accede al módulo de salud <br> - Entonces la IA compara las imágenes para determinar la tasa de crecimiento y vigorosidad. <br> **Reglas de Negocio:** <br> - El procesamiento de imagen (Inferencia) debe completarse en menos de 5 segundos. <br> - Se requiere una certeza mínima del 85% para dar una recomendación de producto químico. <br> - Las imágenes se almacenan en un bucket optimizado para análisis histórico. | N/A |
 | EPIC 012 | Asistente Virtual (Chatbot) | Como usuario, quiero interactuar con un asistente inteligente que conozca el estado real de mis plantas, para resolver dudas técnicas y recibir consejos personalizados mediante lenguaje natural. | **Escenario 01: Consulta de estado** <br> - Dado que un usuario pregunta "¿Cómo están mis plantas hoy?" <br> - Cuando el chatbot analiza los datos de los sensores y el historial de riego <br> - Entonces responde con un resumen ejecutivo sobre la salud general de su jardín. <br> **Escenario 02: Resolución de dudas sobre cuidados** <br> - Dado que un usuario tiene una duda sobre una especie nueva <br> - Cuando consulta al chatbot sobre cuidados de luz o sustrato <br> - Entonces el asistente brinda información técnica validada por su base de conocimientos. <br> **Reglas de Negocio:** <br> - El chatbot debe mantener el contexto de la conversación durante al menos 10 minutos. <br> - Las respuestas deben ser personalizadas según el inventario de plantas del usuario. <br> - El tiempo de respuesta inicial del bot debe ser inferior a 2 segundos. | N/A |
@@ -981,7 +1059,7 @@ To-Be Scenario Map 2- Segmento de : Aficionados
 | US-043          | Configuración inteligente por perfil de planta | Como usuario, quiero que el sistema configure automáticamente los parámetros del dispositivo según el tipo de planta, para optimizar el monitoreo sin requerir conocimiento técnico.                  | **Escenario 01: Aplicación de perfiles predefinidos**<br>- Dado que un usuario selecciona "Orquídea" al registrar una planta<br>- Cuando vincula un sensor a esa planta<br>- Entonces el sistema aplica parámetros específicos para orquídeas (humedad alta, luz indirecta)<br>- Y ajusta sensibilidad de alertas según necesidades de la especie<br><br>**Escenario 02: Personalización de parámetros automáticos**<br>- Dado que un usuario tiene configuración automática activa<br>- Cuando el sistema detecta condiciones ambientales locales<br>- Entonces ajusta umbrales considerando clima y estación<br>- Y notifica al usuario sobre los ajustes aplicados <br>**Reglas de negocio:**<br>- Los perfiles predefinidos de planta deben estar almacenados en una base de conocimiento estandarizada (catálogo de especies)<br> -El sistema debe aplicar automáticamente umbrales y sensibilidades según la especie seleccionada.| EPIC 008                   |
 | US-044          | Recepción de datos en tiempo real         | Como usuario, quiero ver las lecturas de mis sensores actualizarse en tiempo real, para monitorear el estado actual de mis plantas instantáneamente.                                                | **Escenario 01: Actualización continua**<br>- Dado que un dispositivo está transmitiendo datos<br>- Cuando el usuario visualiza el dashboard de una planta<br>- Entonces los valores de humedad, temperatura y luz se actualizan cada 30 segundos<br>- Y los cambios se reflejan sin necesidad de recargar manualmente<br><br>**Escenario 02: Indicadores de estado de conexión**<br>- Dado que un dispositivo está operativo<br>- Cuando el usuario revisa el estado del sensor<br>- Entonces ve indicador visual de "Conectado" y última actualización<br>- Y puede ver historial de estabilidad de conexión <br>**Reglas de negocio:**<br>-Los dispositivos deben enviar lecturas en intervalos de 30 segundos por defecto, ajustables por configuración.<br>- Si un dispositivo no envía datos durante más de 2 minutos, debe marcarse como “en riesgo de desconexión”.| EPIC 008                   |
 | US-045          | Gestión proactiva de conectividad         | Como usuario, quiero ser notificado proactivamente sobre problemas de conexión del dispositivo, para mantener el monitoreo continuo de mis plantas.                                                 |**Escenario 01: Alerta de desconexión**<br>- Dado que un dispositivo vinculado pierde conexión<br>- Cuando el sistema detecta falta de comunicación por 5 minutos<br>- Entonces envía notificación push informando la desconexión<br>- Y sugiere verificar batería, WiFi o posición del dispositivo<br>**Escenario 02: Reconexión automática**<br>- Dado que un dispositivo se reconecta después de falla<br>- Cuando restablece comunicación con el servidor<br>- Entonces el sistema notifica la reconexión exitosa<br>- Y sincroniza datos acumulados durante el período offline<br>**Reglas de negocio:**<br>- Una alerta de desconexión se genera tras 5 minutos consecutivos sin comunicación con el servidor.<br> - El sistema debe intentar reconexión automática antes de emitir alerta al usuario.| EPIC 008                   |
-| US-046          | Selección flexible de planes              | Como usuario, quiero elegir entre diferentes modelos de pago según mis necesidades, para acceder a las funcionalidades que mejor se adapten a mi presupuesto y nivel de uso.                        | **Escenario 01: Opción de compra única**<br>- Dado que un usuario prefiere evitar suscripciones recurrentes<br>- Cuando selecciona el plan "Básico" de pago único<br>- Entonces accede a funciones esenciales de monitoreo permanente<br>- Y no tiene compromisos de pago mensuales recurrentes<br><br>**Escenario 02: Suscripción premium**<br>- Dado que un usuario quiere funcionalidades avanzadas<br>- Cuando elige suscripción mensual o anual<br>- Entonces desbloquea inmediatamente diagnósticos avanzados e historiales extensos<br>- Y puede probar todas las funciones premium durante el período de pago <br>**Reglas de negocio:**<br>- Los planes disponibles deben estar definidos en un catálogo dinámico administrable desde backend. <br>- Los beneficios de cada plan deben actualizarse inmediatamente tras el pago o cambio.| EPIC 009                   |
+| US-046          | Selección flexible de planes              | Como usuario, quiero elegir entre diferentes modelos de pago según mis necesidades, para acceder a las funcionalidades que mejor se adapten a mi presupuesto y nivel de uso.                        | **Escenario 01: Selección del Plan Básico Gratuito**<br>- Dado que un usuario no deseaa invertir dinero incialmente<br>- Cuando selecciona el plan "Básico" en la pantalla de suscripciones<br>- Entonces  el sistema le otorga acceso a la gestión manual de plantas y no le solicita información de tarjetas de crédito <br><br>**Escenario 02: Selección de Suscripción premium**<br>- Dado que un usuario necesita diágnosticos automatizados por IA <br>- Cuando selecciona el plan "Premium" y completa el pago<br>- Entonces el sistema desbloquea el chatbot experto y la visión artificial en su cuenta.<br> **Escenario 03: Expansión con Kit de Hardware**<br>- Dado que un usuario quiere dejar de medir la humedad manualmente <br>- Cuando compra el 'Sensor Lite' desde la plataforma <br>- Entonces el sistema vincula el sensor a su cuenta y se activa la recolección de datos en tiempo real. <br>**Reglas de negocio:**<br>- Los planes disponibles deben estar definidos en un catálogo dinámico administrable desde backend. <br>- Los beneficios de cada plan deben actualizarse inmediatamente tras el pago o cambio.| EPIC 009                   |
 | US-047          | Gestión segura de métodos de pago         | Como usuario, quiero administrar mi información de pago de forma segura, para mantener mis suscripciones activas y actualizadas.                                                                    | **Escenario 01: Actualización de tarjeta**<br>- Dado que un usuario necesita actualizar su método de pago<br>- Cuando agrega nueva tarjeta en la sección de facturación<br>- Entonces el sistema valida y tokeniza la información de forma segura<br>- Y confirma que el nuevo método está disponible para futuros cobros<br><br>**Escenario 02: Rotación segura de credenciales**<br>- Dado que un usuario reemplaza su método de pago principal<br>- Cuando el sistema procesa el cambio<br>- Entonces invalida los tokens anteriores inmediatamente<br>- Y notifica sobre la actualización exitosa <br>**Reglas de negocio:**<br>- Los datos de tarjetas deben ser tokenizados y nunca almacenados directamente por el sistema.| EPIC 009                   |
 | US-048          | Cancelación flexible de suscripciones     | Como usuario, quiero poder cancelar mi suscripción en cualquier momento, para tener control total sobre mis gastos recurrentes.                                                                    | **Escenario 01: Cancelación inmediata con acceso hasta fin de período**<br>- Dado que un usuario decide cancelar su suscripción<br>- Cuando confirma la cancelación en la app<br>- Entonces el acceso premium se mantiene hasta el final del período pagado<br>- Y no se realizan cobros recurrentes adicionales<br><br>**Escenario 02: Confirmación de cancelación**<br>- Dado que un usuario completa el proceso de cancelación<br>- Cuando el sistema procesa la solicitud<br>- Entonces envía comprobante de cancelación por email<br>- Y muestra confirmación en la app con fecha de finalización <br>**Reglas de negocio:**<br>- La cancelación debe poder realizarse sin intervención del soporte técnico.<br>- Tras cancelar, el acceso premium se mantiene hasta el final del período ya pagado.| EPIC 009                   |
 | US-049          | Transparencia en historial de pagos       | Como usuario, quiero consultar mi historial completo de transacciones, para tener control y registro de todos mis pagos y suscripciones.                                                            | **Escenario 01: Consulta de historial financiero**<br>- Dado que un usuario accede a su historial de pagos<br>- Cuando navega por las transacciones<br>- Entonces ve fecha, monto, método de pago y concepto de cada cargo<br>- Y puede filtrar por tipo de transacción (suscripción, compra única, etc.)<br><br>**Escenario 02: Descarga de comprobantes**<br>- Dado que un usuario necesita un comprobante específico<br>- Cuando selecciona descargar recibo de pago<br>- Entonces genera PDF con detalles completos de la transacción<br>- Y el documento incluye información fiscal requerida <br>**Reglas de negocio:**<br>-Todas las transacciones deben registrarse con número único, monto, fecha y método de pago.<br>- El historial debe conservar al menos 12 meses de registros accesibles para el usuario.| EPIC 009                   |
@@ -1085,7 +1163,7 @@ Para el segmento del usuario aficionado se elaboró un Impact Mapping con el obj
 | 33 | US-002 | Secciones informativas diferenciadas | Como visitante, quiero ver secciones que muestren cómo el producto beneficia tanto a personas ocupadas como a aficionados | 3 |
 | 34 | US-003 | Call to Action contextual | Como visitante, quiero encontrar botones de acción claros y contextualizados según mis intereses | 2 |
 | 35 | US-004 | Testimonios segmentados | Como visitante, quiero ver testimonios de usuarios reales que representen diferentes perfiles | 3 |
-| 36 | US-046 | Selección flexible de planes | Como usuario, quiero elegir entre diferentes modelos de pago según mis necesidades | 3 |
+| 36 | US-046 | Selección flexible de planes | Como usuario, quiero elegir entre diferentes modelos de suscripción y hardwaresegún mis necesidades | 3 |
 | 37 | US-047 | Gestión segura de métodos de pago | Como usuario, quiero administrar mi información de pago de forma segura | 3 |
 | 38 | US-048 | Cancelación flexible de suscripciones | Como usuario, quiero poder cancelar mi suscripción en cualquier momento | 2 |
 | 39 | US-049 | Transparencia en historial de pagos | Como usuario, quiero consultar mi historial completo de transacciones | 3 |
@@ -1182,7 +1260,7 @@ A continuación, se presentan los constraints representados mediante Technical S
 | **CON-01** | Backend Framework | Como Arquitecto de Software, requiero que el desarrollo del backend se realice utilizando el framework .NET con C#, para garantizar un alto rendimiento en el procesamiento de datos concurrentes y estandarizar el código. | **Escenario 01: Verificación de tecnología backend**<br>Dado que un desarrollador debe crear un nuevo microservicio para Oryxen,<br>Cuando se selecciona el stack tecnológico,<br>Entonces se debe utilizar C# sobre el framework .NET 8 o superior.<br><br>**Escenario 02: Implementación de la persistencia**<br>Dado que el sistema requiere almacenar datos de telemetría,<br>Cuando se define la capa de acceso a datos,<br>Entonces se debe implementar Entity Framework Core como ORM oficial. | |
 | **CON-02** | Frontend Framework | Como Líder Técnico, requiero que las aplicaciones web se desarrollen utilizando el framework Vue.js, para asegurar una experiencia de usuario reactiva y cumplir con los lineamientos tecnológicos del proyecto. | **Escenario 01: Implementación del Dashboard Web**<br>Dado que un desarrollador frontend inicia la construcción del panel de control,<br>Cuando se define la estructura del proyecto web,<br>Entonces se debe utilizar Vue 3 para gestionar los componentes de la interfaz.<br><br>**Escenario 02: Integración de componentes UI**<br>Dado que el equipo de diseño requiere una interfaz responsiva,<br>Cuando se integran bibliotecas de componentes,<br>Entonces se deben utilizar PrimeVue o Vuetify compatibles con Vue.js. | |
 | **CON-03** | Mobile Native Strategy | Como Desarrollador Móvil, requiero que las aplicaciones móviles se construyan con tecnologías nativas (Kotlin para Android, Swift para iOS), para evitar cuellos de botella en rendimiento y aprovechar al máximo el hardware del dispositivo. | **Escenario 01: Desarrollo del módulo Android**<br>Dado que se inicia el desarrollo de la aplicación para smartphones Android,<br>Cuando se selecciona el lenguaje de programación en el IDE,<br>Entonces se debe utilizar estrictamente Kotlin.<br><br>**Escenario 02: Desarrollo del módulo iOS**<br>Dado que se inicia el desarrollo de la aplicación para dispositivos Apple,<br>Cuando se compila el código fuente móvil,<br>Entonces se debe utilizar Swift, descartando cualquier framework de desarrollo híbrido. | |
-| **CON-04** | Cloud Deployment | Como Ingeniero DevOps, requiero que la infraestructura se despliegue en contenedores dentro de una plataforma de nube pública, para garantizar la disponibilidad, el auto-escalado y la fácil gestión de los picos de tráfico. | **Escenario 01: Contenerización de microservicios**<br>Dado que el código de un servicio ha pasado las pruebas de integración,<br>Cuando se inicia el flujo de despliegue continuo,<br>Entonces el sistema debe empaquetar el servicio en una imagen Docker.<br><br>**Escenario 02: Orquestación en Nube Pública**<br>Dado que las imágenes de los contenedores están listas en el registro,<br>Cuando se realiza el despliegue a producción,<br>Entonces se deben alojar en servicios administrados de AWS, Azure o Google Cloud. ||
+| **CON-04** | Cloud Deployment | Como Ingeniero DevOps, requiero que la infraestructura se despliegue en contenedores dentro de una plataforma de nube pública, para garantizar la disponibilidad, el auto-escalado y la fácil gestión de los picos de tráfico. | **Escenario 01: Contenerización de microservicios**<br>Dado que el código de un servicio ha pasado las pruebas de integración,<br>Cuando se inicia el flujo de despliegue continuo,<br>Entonces el sistema debe empaquetar el servicio en una imagen Docker.<br><br>**Escenario 02: Orquestación en Nube Pública**<br>Dado que las imágenes de los contenedores están listas en el registro,<br>Cuando se realiza el despliegue a producción,<br>Entonces se deben alojar exclusivamente en servicios administrados de Amazon Web Services (AWS)||
 | **CON-05** | IoT Communication Protocol | Como Ingeniero IoT, requiero que la comunicación entre los sensores físicos y la nube utilice el protocolo MQTT, para asegurar una transmisión de telemetría ligera y estable. | **Escenario 01: Envío de telemetría desde sensores**<br>Dado que un sensor IoT detecta un cambio en la humedad del suelo,<br>Cuando el dispositivo intenta enviar la información a la nube,<br>Entonces el mensaje debe publicarse a través de un tópico MQTT hacia el Broker central.<br><br>**Escenario 02: Recepción de comandos de riego**<br>Dado que el sistema decide activar una bomba de agua autónoma,<br>Cuando se envía la orden desde el backend,<br>Entonces el dispositivo debe recibir el comando mediante una suscripción activa al protocolo MQTT. ||
 | **CON-06** | Authentication Standard | Como Arquitecto de Seguridad, requiero que la autenticación y autorización de usuarios se gestione mediante el estándar OAuth 2.0 y tokens JWT, para asegurar un acceso sin estado (stateless) seguro entre microservicios. | **Escenario 01: Generación de token seguro**<br>Dado que un usuario ingresa credenciales válidas en el login,<br>Cuando el servidor de identidad procesa la solicitud,<br>Entonces el sistema debe emitir un token JWT firmado criptográficamente con una expiración definida.<br><br>**Escenario 02: Acceso a rutas protegidas**<br>Dado que un cliente (Web o Móvil) intenta consumir un endpoint protegido,<br>Cuando envía la solicitud HTTP,<br>Entonces debe incluir el token JWT en el header de Autorización (Bearer) para que el API Gateway permita el paso. | |
 | **CON-07** | API Documentation | Como Desarrollador Frontend/Móvil, requiero que todas las APIs RESTful expuestas por el backend estén documentadas bajo la especificación OpenAPI (Swagger), para garantizar un contrato claro y facilitar la integración entre equipos. | **Escenario 01: Exposición del contrato API**<br>Dado que el equipo backend despliega un nuevo microservicio,<br>Cuando el servicio se inicia en el entorno de desarrollo,<br>Entonces debe autogenerar y exponer una interfaz Swagger accesible vía navegador.<br><br>**Escenario 02: Consumo por parte del cliente**<br>Dado que un desarrollador frontend necesita integrar la vista de "Mis Plantas",<br>Cuando consulta la documentación de la API,<br>Entonces debe visualizar claramente los schemas exactos de los request y responses esperados. | |
@@ -1275,9 +1353,9 @@ Detección de agrupaciones naturales: Identificamos patrones y agrupaciones natu
 
 Comenzamos identificando las áreas core del dominio, es decir, aquellas con mayor impacto en la propuesta de valor del sistema.
 
-- Core: Plant Management, Device Management (IoT), Data Telemetry, Analytics.
+- Core: Plant Management, Device Management (IoT), Data Telemetry, Analysis & Reporting.
 
-- Supporting: Auth & Identity,  Subscription, Notification .
+- Supporting: Auth & Identity Integration, Subscription, Notification.
 
 - generic: , Community.
 
@@ -1298,7 +1376,7 @@ Identificamos eventos clave que marcaban transiciones entre subsistemas. Ejemplo
 
 
 __Primer agrupamiento__ 
-Se delimitaron los contextos básicos de Auth & Identity y Device Management (IoT). Estos responden a responsabilidades claras: autenticación de usuarios y control de hardware. 
+Se delimitaron los contextos básicos de Auth & Identity Integration y Device Management (IoT). Estos responden a responsabilidades claras: integración con el proveedor externo de IAM para autenticación y autorización de usuarios, junto con la administración de hardware. 
 
 [![Event-Storming-oryxen-9.jpg](https://i.postimg.cc/DyCPN7yv/Event-Storming-plantcare-9.jpg)](https://postimg.cc/qz3KhV3S)
 
@@ -1319,7 +1397,7 @@ Se añadieron los contextos complementarios: Notification y Community, encargado
 Consolidación final
 El resultado fue un mapa de 8 bounded contexts:
 
-- Auth & Identity
+- Auth & Identity Integration
 
 - Device Management (IoT)
 
@@ -1329,7 +1407,7 @@ El resultado fue un mapa de 8 bounded contexts:
 
 - Data Telemetry
 
-- Analytics
+- Analysis & Reporting
 
 - Notification 
 
@@ -1440,27 +1518,1038 @@ Los diagramas de arquitectura de software nos ayudan a plantear el sistema de nu
 
 ### 4.3.1.	Software Architecture System Landscape Diagram
 
-Este diagrama representa todos los actores y sistemas del ecosistema Oryxen en un solo nivel: usuarios, Oryxen, servicios externos (Google OAuth2, Stripe), y el dispositivo IoT.
+El System Landscape Diagram presenta una vista general del ecosistema de Oryxen dentro de su entorno tecnológico y de negocio. Se identifican los principales actores que interactúan con la plataforma, así como los sistemas externos integrados, incluyendo servicios de autenticación, pagos, inteligencia artificial y dispositivos IoT. Este diagrama permite comprender cómo Oryxen se posiciona dentro de un ecosistema de jardinería inteligente conectado y orientado a la automatización.
 
-![LandscapeDiagram.png](assets/C4-landscape.png)
+![SystemLandscapeDiagram_Oryxen](./assets/SystemLandscapeDiagram_Oryxen.png)
 
 ### 4.3.2.	Software Architecture Context Level Diagrams
 
-Este diagrama muestra el sistema Oryxen en su entorno, destacando las interacciones con los distintos usuarios (profesionales ocupados, aficionados y desarrolladores), los servicios externos (Google OAuth2 y Plants API) y el dispositivo IoT.
+El Context Level Diagram muestra a Oryxen como un sistema central y explica cómo se relaciona con los usuarios y servicios externos. El objetivo de este diagrama es representar claramente el alcance funcional del sistema y visualizar las dependencias externas necesarias para su operación.
 
-![ContextDiagram.png](assets/C4-context.png)
+![SystemContextDiagram_Oryxen](./assets/SystemContextDiagram_Oryxen.png)
 
 ### 4.3.3.	Software Architecture Container Level Diagrams
 
-Detalla la arquitectura interna de Oryxen en términos de contenedores: aplicación web, aplicación móvil, backend, bases de datos (web y móvil) y la Edge App para el dispositivo IoT. También muestra cómo se conectan entre sí y con sistemas externos.
+El Container Level Diagram presenta la arquitectura interna de Oryxen, mostrando cómo se distribuyen las responsabilidades entre aplicaciones cliente, servicios backend, componentes IoT y la capa de datos. La solución incorpora un API Gateway como punto centralizado de acceso y múltiples servicios especializados alineados a los distintos dominios del negocio, como identidad, gestión de plantas, analíticas, comunidad, notificaciones y suscripciones. Asimismo, se diferencian bases de datos operacionales, analíticas y de telemetría IoT para garantizar escalabilidad y modularidad orientada a la automatización inteligente del cuidado de plantas.
 
-![ContainersDiagram.png](assets/C4-containerrs.png)
+![ContainerDiagram_Oryxen](./assets/ContainerDiagram_Oryxen.png)
 
 ### 4.3.4.	Software Architecture Deployment Diagrams
 
 Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Server, App Server, Database Server), dispositivos móviles de los usuarios y el dispositivo IoT físico. Cada contenedor está ubicado en el nodo correspondiente.
 
-![DeploymentDiagram.png](https://i.ibb.co/ycVyb5k0/C4-deployment.png)
+![DeploymentDiagram.png](./assets/C4-deployment.png)
+
+---
+
+# Capítulo V: Tactical-Level Software Design
+
+## 5.1. Bounded Context: Auth & Identity Integration
+
+**Descripción:** Este bounded context se encarga de integrar el backend de **Oryxen** con un servicio externo de **IAM (Identity and Access Management)**, similar a una solución administrada como AWS IAM/Cognito, Auth0 o Firebase Authentication. La autenticación, federación OAuth2, emisión de tokens, gestión de credenciales, roles, claims y sesiones no se implementan directamente dentro del backend de Oryxen, sino que se delegan al proveedor externo de IAM. El backend conserva únicamente la información de perfil necesaria para el dominio, el identificador externo del usuario y las reglas de autorización que conectan la identidad validada con los bounded contexts de Plant Management, Device Management, Subscription, Notification y Community.
+
+### 5.1.1. Domain Layer
+
+#### Aggregate 1: User
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| User | Entity/Aggregate Root | Modela la referencia local de un usuario de Oryxen, almacenando el identificador entregado por el IAM externo, datos de perfil y preferencias básicas del dominio. |
+
+**Atributos de User:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| id | UUID | Private | Identificador único del usuario. |
+| fullName | String | Private | Nombre completo mostrado en la aplicación. |
+| email | String | Private | Correo electrónico único asociado a la cuenta. |
+| externalIamId | String | Private | Identificador único del usuario en el proveedor externo de IAM. |
+| authProvider | AuthProvider | Private | Proveedor de autenticación federado mediante el IAM externo. |
+| role | Role | Private | Rol o claim sincronizado desde el IAM externo para controlar accesos en Oryxen. |
+| status | AccountStatus | Private | Estado local de la cuenta dentro del dominio de Oryxen. |
+| createdAt | DateTime | Private | Fecha de creación de la cuenta. |
+| lastLoginAt | DateTime | Private | Fecha del último acceso exitoso. |
+
+**Métodos de User:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Construye una entidad User con los datos requeridos. |
+| linkExternalIdentity | Void | Public | Asocia el usuario local con el identificador entregado por el IAM externo. |
+| updateProfile | Void | Public | Actualiza información básica del perfil. |
+| assignRole | Void | Public | Asigna o modifica el rol del usuario. |
+| activateAccount | Void | Public | Cambia el estado de la cuenta a activo. |
+| deactivateAccount | Void | Public | Deshabilita temporalmente la cuenta. |
+| registerLogin | Void | Public | Registra la fecha y hora del último inicio de sesión. |
+
+#### Value Object 1: Role
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| Role | Value Object | Define el nivel de acceso del usuario dentro de Oryxen y habilita permisos según su tipo de cuenta. |
+
+**Atributos de Role:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del rol: FREE_USER, PREMIUM_USER o ADMIN. |
+
+**Métodos de Role:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un rol con un valor permitido. |
+| equals | Boolean | Public | Compara el rol actual con otro rol. |
+| canAccessPremiumFeatures | Boolean | Public | Determina si el rol puede acceder a funcionalidades premium. |
+
+#### Value Object 2: AuthProvider
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthProvider | Value Object | Identifica el proveedor federado utilizado por el IAM externo para autenticar al usuario. |
+
+**Atributos de AuthProvider:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del proveedor: GOOGLE, EMAIL, APPLE u otro proveedor habilitado en el IAM externo. |
+| externalProviderId | String | Private | Identificador entregado por el proveedor externo, cuando aplica. |
+
+**Métodos de AuthProvider:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un proveedor de autenticación válido. |
+| isExternal | Boolean | Public | Indica si la autenticación proviene de un proveedor externo. |
+
+#### Entity 1: UserAccessGrant
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserAccessGrant | Entity | Representa una autorización local derivada de los roles o claims emitidos por el IAM externo para habilitar funcionalidades de Oryxen. |
+
+**Atributos de UserAccessGrant:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| id | UUID | Private | Identificador único del permiso local. |
+| userId | UUID | Private | Usuario propietario del permiso. |
+| claimName | String | Private | Nombre del claim recibido desde el IAM externo. |
+| claimValue | String | Private | Valor del claim utilizado para autorización local. |
+| expiresAt | DateTime | Private | Fecha de expiración del permiso sincronizado. |
+
+**Métodos de UserAccessGrant:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un permiso local asociado a un usuario. |
+| isExpired | Boolean | Public | Evalúa si el permiso sincronizado ya venció. |
+| grantsAccessTo | Boolean | Public | Verifica si el claim habilita una funcionalidad específica de Oryxen. |
+
+#### Value Object 3: AccountStatus
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AccountStatus | Value Object | Controla el estado operativo de una cuenta de usuario en Oryxen. |
+
+**Atributos de AccountStatus:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del estado: ACTIVE, PENDING_VERIFICATION, SUSPENDED o DELETED. |
+
+**Métodos de AccountStatus:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un estado de cuenta válido. |
+| allowsLogin | Boolean | Public | Indica si la cuenta puede iniciar sesión. |
+
+### 5.1.2. Interface Layer
+
+#### Controller 1: AuthController
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthController | Controller | Expone endpoints para iniciar flujos de autenticación y validar callbacks/tokens emitidos por el IAM externo. |
+
+**Atributos de AuthController:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| authService | AuthService | Private | Servicio encargado de coordinar la integración con el IAM externo. |
+| iamTokenValidator | IamTokenValidator | Private | Servicio responsable de validar tokens emitidos por el proveedor externo de IAM. |
+| userMapper | UserMapper | Private | Convierte entidades de dominio en DTOs de respuesta. |
+
+**Métodos de AuthController:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startLogin | ResponseEntity | Public | Redirige o inicializa el flujo de autenticación administrado por el IAM externo. |
+| handleCallback | ResponseEntity | Public | Procesa el callback del IAM externo y sincroniza la identidad local. |
+| validateSession | ResponseEntity | Public | Valida el token recibido desde clientes web o móviles. |
+| logout | ResponseEntity | Public | Solicita el cierre de sesión al IAM externo cuando corresponde. |
+
+#### Controller 2: UserIdentityController
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserIdentityController | Controller | Gestiona operaciones relacionadas con el perfil de identidad, consulta de usuario autenticado y administración de estado de cuenta. |
+
+**Atributos de UserIdentityController:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userService | UserService | Private | Servicio encargado de la gestión de datos de identidad. |
+| authorizationService | AuthorizationService | Private | Servicio para validar roles y permisos. |
+
+**Métodos de UserIdentityController:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| getCurrentUser | ResponseEntity | Public | Retorna los datos del usuario autenticado. |
+| updateProfile | ResponseEntity | Public | Actualiza datos básicos del perfil. |
+| changeRole | ResponseEntity | Public | Modifica el rol de un usuario, restringido a administradores. |
+| deactivateAccount | ResponseEntity | Public | Desactiva la cuenta del usuario. |
+
+### 5.1.3. Application Layer
+
+#### Service 1: AuthService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthService | Service | Coordina la sincronización entre Oryxen y el proveedor externo de IAM, sin administrar credenciales directamente. |
+
+**Atributos de AuthService:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userRepository | UserRepository | Private | Repositorio para consultar y persistir usuarios. |
+| userAccessGrantRepository | UserAccessGrantRepository | Private | Repositorio para persistir permisos locales derivados de claims externos. |
+| externalIamService | ExternalIamService | Private | Servicio externo encargado de autenticar, federar y emitir tokens. |
+| iamTokenValidator | IamTokenValidator | Private | Servicio para validar JWTs, roles y claims emitidos por el IAM externo. |
+
+**Métodos de AuthService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startAuthentication | AuthRedirect | Public | Solicita al IAM externo el inicio del flujo de autenticación. |
+| synchronizeExternalUser | User | Public | Crea o actualiza el perfil local a partir de la identidad validada por el IAM. |
+| synchronizeClaims | Void | Public | Sincroniza roles o claims externos como permisos locales de Oryxen. |
+| validateSession | AuthResult | Public | Valida una sesión con base en el token emitido por el IAM externo. |
+| logout | Void | Public | Coordina el cierre de sesión con el proveedor externo cuando aplica. |
+
+#### Service 2: UserService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserService | Service | Gestiona operaciones de perfil, estado de cuenta y asignación de roles de usuario. |
+
+**Atributos de UserService:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userRepository | UserRepository | Private | Repositorio para recuperar y actualizar usuarios. |
+| authorizationService | AuthorizationService | Private | Servicio para validar permisos de operación. |
+
+**Métodos de UserService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| getUserById | User | Public | Recupera un usuario por identificador. |
+| getUserByEmail | User | Public | Recupera un usuario por correo electrónico. |
+| updateProfile | User | Public | Actualiza información de perfil. |
+| assignRole | User | Public | Asigna un rol a un usuario existente. |
+| deactivateAccount | Void | Public | Desactiva una cuenta de usuario. |
+
+#### Service 3: IamTokenValidator
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| IamTokenValidator | Service | Valida tokens JWT emitidos por el proveedor externo de IAM y extrae claims necesarios para autorización local. |
+
+**Atributos de IamTokenValidator:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| iamSettings | IamSettings | Private | Configuración del issuer, audience y JWKS del proveedor externo. |
+| externalIamService | ExternalIamService | Private | Cliente para recuperar llaves públicas y metadatos del IAM. |
+
+**Métodos de IamTokenValidator:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| validateAccessToken | ClaimsPrincipal | Public | Valida firma, expiración, issuer, audience y claims del JWT externo. |
+| extractExternalUserId | String | Public | Obtiene el identificador de usuario emitido por el IAM. |
+| extractRoles | List | Public | Obtiene roles o grupos definidos en el IAM externo. |
+
+### 5.1.4. Infrastructure Layer
+
+#### Repository 1: UserRepositoryImpl
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserRepositoryImpl | Repository | Implementa la persistencia de usuarios usando Entity Framework Core y la base de datos relacional de Oryxen. |
+
+**Métodos de UserRepositoryImpl:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| findById | User | Public | Recupera un usuario por su identificador. |
+| findByEmail | User | Public | Recupera un usuario por correo electrónico. |
+| existsByEmail | Boolean | Public | Verifica si una cuenta ya existe. |
+| save | User | Public | Persiste una nueva cuenta de usuario. |
+| update | User | Public | Actualiza datos de identidad existentes. |
+
+#### Repository 2: UserAccessGrantRepositoryImpl
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserAccessGrantRepositoryImpl | Repository | Gestiona la persistencia de permisos locales derivados de roles o claims emitidos por el IAM externo. |
+
+**Métodos de UserAccessGrantRepositoryImpl:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| findByUserId | List | Public | Recupera permisos locales asociados a un usuario. |
+| save | UserAccessGrant | Public | Guarda un permiso local sincronizado desde el IAM externo. |
+| replaceByUserId | Void | Public | Reemplaza los permisos locales al recibir claims actualizados. |
+| deleteExpired | Void | Public | Elimina permisos expirados según política de seguridad. |
+
+### External Services
+
+#### Service 1: ExternalIamService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| ExternalIamService | External Service | Servicio administrado externo de IAM encargado de autenticar usuarios, federar proveedores OAuth2, emitir tokens, administrar roles/claims y controlar sesiones. |
+
+**Métodos de ExternalIamService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startAuthenticationFlow | AuthRedirect | Public | Inicializa el flujo de autenticación en el proveedor IAM. |
+| validateAuthorizationCode | ExternalUserInfo | Public | Valida el código OAuth2 y obtiene el perfil externo. |
+| validateAccessToken | ClaimsPrincipal | Public | Verifica un token emitido por el proveedor IAM. |
+| logoutSession | Void | Public | Cierra o revoca la sesión administrada externamente. |
+
+#### Service 2: EmailService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| EmailService | External Service | Envía correos transaccionales propios de Oryxen, como alertas de seguridad o notificaciones de actividad asociadas a la cuenta. La verificación de correo y recuperación de contraseña pertenecen al IAM externo. |
+
+**Métodos de EmailService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| sendAccountLinkedEmail | Void | Public | Notifica que una identidad externa fue vinculada correctamente a Oryxen. |
+| sendSecuritySummaryEmail | Void | Public | Envía un resumen de actividad sensible asociada a la cuenta. |
+| sendSecurityAlert | Void | Public | Notifica eventos sensibles, como inicio de sesión desde un nuevo dispositivo. |
+
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El componente **Auth & Identity Integration** centraliza la comunicación entre Oryxen y el proveedor externo de **IAM**. Los clientes Web App y Mobile App consumen el **AuthController** y el **UserIdentityController**, mientras que el backend valida tokens externos, sincroniza el perfil local y transforma roles/claims del IAM en permisos de dominio. La autenticación, emisión de tokens, credenciales y sesiones permanecen bajo responsabilidad del servicio IAM externo.
+
+![image](https://github.com/user-attachments/assets/3178abf8-7494-4cde-8c7a-14583a51c3ef)
+
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+A continuación se presentan los diagramas de nivel de código para el bounded context **Auth & Identity Integration**, incluyendo la estructura de clases principales del dominio y el diseño de base de datos que soporta referencias de usuarios, proveedores federados y permisos locales derivados del IAM externo.
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama de clases del dominio muestra a **User** como aggregate root local. Este agregado contiene objetos de valor como **Role**, **AuthProvider** y **AccountStatus**, además de relacionarse con **UserAccessGrant** para representar permisos locales derivados de claims externos. Los servicios de aplicación, como **AuthService** e **IamTokenValidator**, coordinan la validación de identidad contra el IAM externo sin emitir ni almacenar credenciales en Oryxen.
+
+![image](https://github.com/user-attachments/assets/7870fb53-32b9-449f-944c-dad16c11f427)
+
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+El diseño de base de datos del contexto **Auth & Identity Integration** mantiene únicamente referencias locales necesarias para Oryxen: usuarios, proveedores federados y permisos derivados. Las credenciales, refresh tokens y sesiones se mantienen en el proveedor externo de IAM.
+
+![image](https://github.com/user-attachments/assets/5be6bc52-8caf-4531-b0da-45991ff25087)
+
+## 5.2. Bounded Context: Analysis & Reporting  
+
+**Descripción:** Este bounded context se encarga de generar reportes, datasets agregados y visualizaciones a partir de la telemetría producida por los dispositivos IoT de **Oryxen**. Su responsabilidad principal es convertir datos históricos de sensores en información consultable, descargable y comprensible para el usuario, permitiendo analizar tendencias, revisar métricas relevantes y exportar resultados en formatos útiles como PDF o CSV.
+
+### 5.2.1. Domain Layer  
+
+#### Report  
+
+_Tabla de Report_  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | Report                                                                                      |
+| **Categoría** | Aggregate Root                                                                              |
+| **Propósito** | Representa un reporte generado a partir de la telemetría de los dispositivos IoT.           |
+
+_Tabla de atributos de Report_  
+
+| Nombre       | Tipo de dato      | Visibilidad | Descripción                                    |
+|--------------|------------------|-------------|------------------------------------------------|
+| id           | UUID             | Private     | Identificador único del reporte.               |
+| user_id      | UUID             | Private     | FK al usuario dueño del reporte.               |
+| device_id    | UUID (nullable)  | Private     | FK al dispositivo si es un reporte específico. |
+| type         | VARCHAR(50)      | Public      | Tipo: `summary`, `trend`, `custom`.            |
+| title        | VARCHAR(150)     | Public      | Título descriptivo del reporte.                |
+| description  | TEXT             | Public      | Descripción opcional del reporte.              |
+| status       | VARCHAR(20)      | Public      | Estado: `generated`, `pending`, `failed`.      |
+| created_at   | TIMESTAMP        | Private     | Fecha de creación.                             |
+| generated_at | TIMESTAMP NULL   | Private     | Fecha en que se generó el reporte.             |
+
+_Tabla de métodos de Report_  
+
+| Nombre            | Tipo de retorno | Visibilidad | Descripción                                   |
+|-------------------|-----------------|-------------|-----------------------------------------------|
+| generate()        | Report          | Public      | Inicia el proceso de generación.              |
+| markAsFailed()    | void            | Private     | Marca el reporte como fallido.                |
+| updateTitle(title)| void            | Public      | Cambia título o descripción del reporte.      |
+
+---
+
+#### ReportDataSet  
+
+_Tabla de ReportDataSet_  
+
+| Propiedad     | Valor                                                                 |
+|---------------|-----------------------------------------------------------------------|
+| **Nombre**    | ReportDataSet                                                         |
+| **Categoría** | Entity                                                                |
+| **Propósito** | Representa un conjunto de métricas asociadas a un reporte específico. |
+
+_Tabla de atributos de ReportDataSet_  
+
+| Nombre       | Tipo de dato   | Visibilidad | Descripción                                       |
+|--------------|---------------|-------------|---------------------------------------------------|
+| id           | UUID          | Private     | Identificador del dataset.                        |
+| report_id    | UUID          | Private     | FK a `Report`.                                    |
+| metric_type  | VARCHAR(50)   | Public      | Tipo de métrica (`temperature`, `humidity`).      |
+| aggregated   | JSON/Object   | Public      | Datos agregados (promedio, min, max, std dev).    |
+| generated_at | TIMESTAMP     | Private     | Fecha de generación del dataset.                  |
+
+_Tabla de métodos de ReportDataSet_  
+
+| Nombre            | Tipo de retorno | Visibilidad | Descripción                                         |
+|-------------------|-----------------|-------------|-----------------------------------------------------|
+| calculateStats()  | void            | Public      | Aplica funciones de agregación sobre los registros. |
+| attachToReport()  | void            | Private     | Vincula dataset con un reporte.                     |
+
+---
+
+#### Visualization  
+
+_Tabla de Visualization_  
+
+| Propiedad     | Valor                                                                  |
+|---------------|------------------------------------------------------------------------|
+| **Nombre**    | Visualization                                                          |
+| **Categoría** | Entity                                                                 |
+| **Propósito** | Representa una vista gráfica generada a partir de un dataset.          |
+
+_Tabla de atributos de Visualization_  
+
+| Nombre      | Tipo de dato   | Visibilidad | Descripción                                         |
+|-------------|---------------|-------------|-----------------------------------------------------|
+| id          | UUID          | Private     | Identificador único de la visualización.            |
+| dataset_id  | UUID          | Private     | FK a `ReportDataSet`.                               |
+| chart_type  | VARCHAR(30)   | Public      | Tipo: `line`, `bar`, `pie`, `heatmap`.              |
+| config      | JSON          | Public      | Configuración del gráfico (colores, ejes, filtros). |
+| created_at  | TIMESTAMP     | Private     | Fecha de creación.                                  |
+
+_Tabla de métodos de Visualization_  
+
+| Nombre               | Tipo de retorno | Visibilidad | Descripción                                    |
+|----------------------|-----------------|-------------|------------------------------------------------|
+| render()             | JSON            | Public      | Devuelve configuración lista para frontend.    |
+| updateConfig(config) | void            | Public      | Modifica parámetros de visualización.          |
+
+---
+
+### 5.2.2. Interface Layer  
+
+#### Report API  
+
+_Tabla de Report API_  
+
+| Propiedad     | Valor                                                                         |
+|---------------|-------------------------------------------------------------------------------|
+| **Nombre**    | ReportController                                                              |
+| **Categoría** | API / Resource                                                                |
+| **Propósito** | Exponer endpoints para creación, consulta y descarga de reportes.             |
+| **Ruta**      | `/api/reports`                                                                |
+
+_Tabla de métodos de Report API_  
+
+| Nombre        | Ruta                             | Acción                                  | Handle                          |
+|---------------|----------------------------------|-----------------------------------------|---------------------------------|
+| createReport  | POST /api/reports                | Crear un nuevo reporte                   | CreateReportCommandHandler      |
+| getReport     | GET /api/reports/{id}            | Obtener detalles de un reporte           | GetReportQueryHandler           |
+| listReports   | GET /api/reports                 | Listar reportes de un usuario            | ListReportsQueryHandler         |
+| downloadReport| GET /api/reports/{id}/download   | Descargar reporte generado (PDF/CSV)     | DownloadReportQueryHandler      |
+
+---
+
+### 5.2.3. Application Layer  
+
+#### Command Handlers  
+
+| Nombre                       | Categoría       | Propósito                                     | Comando                 |
+|------------------------------|-----------------|-----------------------------------------------|-------------------------|
+| CreateReportCommandHandler   | Command Handler | Crear y persistir un nuevo reporte            | CreateReportCommand     |
+| GenerateReportCommandHandler | Command Handler | Orquestar la creación de datasets y gráficos  | GenerateReportCommand   |
+
+#### Query Handlers  
+
+| Nombre                       | Categoría     | Propósito                                   | Query                  |
+|------------------------------|---------------|---------------------------------------------|------------------------|
+| GetReportQueryHandler        | Query Handler | Obtener datos detallados de un reporte      | GetReportQuery         |
+| ListReportsQueryHandler      | Query Handler | Listar reportes asociados a un usuario      | ListReportsQuery       |
+| DownloadReportQueryHandler   | Query Handler | Exportar y retornar reporte en un formato   | DownloadReportQuery    |
+
+#### Event Handlers  
+
+| Nombre                   | Categoría     | Propósito                                   | Evento                 |
+|--------------------------|---------------|---------------------------------------------|------------------------|
+| ReportGeneratedHandler   | Event Handler | Notificar al usuario/reporting system        | ReportGeneratedEvent   |
+| ReportFailedHandler      | Event Handler | Manejar fallos en generación de reportes    | ReportFailedEvent      |
+
+---
+
+### 5.2.4. Infrastructure Layer  
+
+#### ReportRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | ReportRepository                                                                            |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Persistir y consultar reportes en base de datos.                                            |
+| **Interfaz**  | IReportRepository (`save(report)`, `findById(id)`, `listByUser(userId)`)                     |
+
+#### DataSetRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | DataSetRepository                                                                           |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Almacenar y recuperar datasets asociados a reportes.                                        |
+| **Interfaz**  | IDataSetRepository (`save(dataset)`, `findByReport(reportId)`)                              |
+
+#### VisualizationRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | VisualizationRepository                                                                     |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Guardar y consultar configuraciones de visualizaciones.                                     |
+| **Interfaz**  | IVisualizationRepository (`save(viz)`, `findByDataset(datasetId)`)                          |
+
+#### ReportingDbContext  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | ReportingDbContext                                                                          |
+| **Categoría** | ORM Context                                                                                 |
+| **Propósito** | Proveer acceso a tablas de reportes, datasets y visualizaciones.                            |
+ 
+
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams. 
+[![Analysis-Reporting-Component-Diagram.png](https://i.postimg.cc/hj12jvNM/Analysis-Reporting-Component-Diagram.png)](https://postimg.cc/MMX7366j)
+
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams. 
+
+#### 5.2.6.1. Bounded Context Domain Layer Class Diagrams. 
+[![Analysis-Reporting-Class-Diagram.png](https://i.postimg.cc/s2Fm45rw/image.png)](https://postimg.cc/rDJ580zr)
+
+#### 5.2.6.2. Bounded Context Database Design Diagram.
+[![Analysis-Reporting-Class-DB.png](https://i.postimg.cc/zBvyLPcM/image.png)](https://postimg.cc/JDwrvKmc)
+
+# Capítulo VI: Solution UX Design
+
+## 6.1. Style Guidelines
+
+En esta sección se presentan los estilos establecidos, con el fin de garantizar consistencia, claridad y una experiencia de usuario coherente en todas las plataformas y componentes desarrollados.
+
+### 6.1.1. General Style Guidelines
+
+**Branding:** <br> El branding de Oryxen está diseñado para transmitir bienestar, conexión con la naturaleza y compromiso con el cuidado responsable de las plantas. La identidad visual busca reflejar un enfoque accesible, amigable y moderno, orientado a personas que desean mejorar el mantenimiento de sus plantas. Se utilizan elementos gráficos que evocan crecimiento, frescura y equilibrio, creando una imagen visual clara, cercana y fácil de reconocer para usuarios interesados en el autocuidado verde y la sostenibilidad.
+
+**Typography:** <br> La tipografía seleccionada es Raleway, una fuente moderna, estilizada y de alta legibilidad, que aporta un aspecto limpio y profesional a la interfaz. Se utilizará Raleway tanto para encabezados como para el cuerpo de texto, aprovechando su versatilidad en diferentes pesos tipográficos para marcar jerarquías visuales claras. Esta elección equilibra seriedad y cercanía, manteniendo una apariencia accesible y coherente con el enfoque natural y amigable de la aplicación Oryxen.
+
+![Raleway_Font](./assets/Chapter-6/Raleway_Font.png)
+
+**Colors:** <br> La paleta de colores de Oryxen está compuesta por tonos verdes y cremas, cuidadosamente seleccionados para reflejar la esencia de la naturaleza y promover una experiencia visual tranquila y confiable. Los tonos verdes comunican frescura, crecimiento y sostenibilidad, valores clave en el cuidado de plantas. Por su parte, los tonos crema aportan calidez y naturalidad, generando una conexión visual con la tierra y el entorno orgánico. Estos colores se aplicarán estratégicamente en la interfaz para garantizar una experiencia armoniosa, accesible y agradable en todo tipo de dispositivos, especialmente móviles.
+
+![Oryxen_ColorPalette](./assets/Chapter-6/Oryxen_ColorPalette.png)
+
+**Spacing:** <br> Se utilizó un espaciado apropiado en toda la interfaz para evitar la saturación de elementos, facilitando así una navegación clara y confortable. Los márgenes y las separaciones entre los distintos componentes se planificaron con detalle para lograr un diseño armónico y bien estructurado.
+
+**Tono de Comunicación y Lenguaje Aplicado:** <br> El tono de comunicación de Oryxen será cercano, motivador y accesible, con el objetivo de acompañar al usuario en el cuidado de sus plantas de forma clara y positiva. El lenguaje aplicado se define como divertido, casual, respetuoso y entusiasta. Este enfoque busca generar una experiencia amigable, que inspire confianza y fomente una conexión genuina con la naturaleza a través del uso cotidiano de la aplicación.
+
+
+### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+Para garantizar una experiencia de usuario (UX) consistente, intuitiva y fluida a través de todo el ecosistema de **Oryxen**, se han establecido lineamientos de estilo y comportamiento específicos para cada plataforma. Estas directrices aseguran que la transición desde la *Landing Page* hasta la aplicación móvil y la interacción física con el hardware (Sensor Lite) se perciba como un solo producto unificado, respetando las convenciones nativas de cada sistema operativo.
+
+Además, alineados con los objetivos de internacionalización (i18n) y accesibilidad (a11y), todas las interfaces web y móviles tienen como idioma por defecto el inglés (`en_US`), con soporte completo para español latinoamericano (`es_419`), e integran atributos ARIA para garantizar que la plataforma sea inclusiva para todos los usuarios.
+
+#### A. Web Style Guidelines (Landing Page & Web App)
+
+Las interfaces web de Oryxen (tanto la página de aterrizaje comercial como el *Dashboard* de la aplicación web) están diseñadas bajo el paradigma **Mobile-First** y construidas utilizando **Vue 3** con la biblioteca de componentes **PrimeVue / Vuetify**, basándose estrictamente en las directrices de **Material Design**.
+
+**1. Responsive Grid System:**
+Se utiliza un sistema de cuadrícula fluida de 12 columnas que se adapta dinámicamente al *viewport* del usuario para garantizar la legibilidad de la información (como los gráficos del historial de telemetría y diagnósticos de IA):
+*   **Desktop (≥ 1024px):** Layout expandido que aprovecha el espacio horizontal, mostrando el menú de navegación lateral fijo y paneles de métricas detallados.
+*   **Tablet (768px - 1023px):** Los paneles de información se reorganizan en 2 columnas. El menú lateral se vuelve colapsable.
+*   **Mobile (≤ 767px):** Las tarjetas de las plantas ocupan el 100% del ancho (1 columna). La navegación principal pasa a un *Bottom Navigation Bar* o un menú hamburguesa para no restar espacio al contenido.
+
+**2. Interacción y Comportamiento Web:**
+*   **Micro-interacciones:** Los botones *Call-to-Action* (CTAs), como la actualización a planes Premium o la vinculación de un nuevo sensor, cuentan con un estado *hover* (elevación de sombra y cambio de opacidad) que indica claramente su interactividad.
+*   **Accesibilidad (a11y):** Los contrastes de color cumplen con la normativa WCAG 2.1 nivel AA. Todos los formularios web y botones iconográficos (ej. botón de "Regar ahora") cuentan con etiquetas `aria-label` y soporte para navegación exclusiva por teclado.
+
+*(Añadir captura de pantalla ilustrando la guía de estilos web responsiva)*
+`![Web Style Guidelines - Responsive Grid & Components](../assets/images/ux-web-guidelines.png)`
+
+#### B. Mobile Style Guidelines (Native iOS & Android)
+
+Dado que la aplicación móvil es el punto de contacto principal para los usuarios del plan básico gratuito y los aficionados, el rendimiento y la naturalidad son críticos. Siguiendo nuestras restricciones arquitectónicas, el desarrollo se realiza de forma **nativa** (Swift para iOS y Kotlin para Android), por lo que las interfaces respetan las guías oficiales de cada plataforma, unificadas por el *branding* de Oryxen.
+
+**1. Android (Kotlin) - Material 3 Design:**
+*   **Navegación:** Uso de un *Bottom Navigation Bar* para el acceso rápido a: *Dashboard* (Mis Plantas), Comunidad, Alertas IA y Ajustes. 
+*   **Acciones Principales:** Se emplea un *Floating Action Button* (FAB) anclado en la esquina inferior derecha para la acción más importante: "Agregar Planta" (escaneo de código QR).
+*   **Feedback Visual:** Implementación del efecto *Ripple* de Material Design al tocar elementos interactivos.
+
+**2. iOS (Swift) - Human Interface Guidelines (HIG):**
+*   **Navegación:** Uso del *Tab Bar* estándar de iOS con iconografía lineal o sólida (SF Symbols) según el estado activo. La navegación jerárquica utiliza el *Navigation Bar* nativo con el botón "Atrás" en la esquina superior izquierda.
+*   **Gestos:** Soporte nativo para deslizar (*Swipe-to-go-back*) y menús contextuales en las tarjetas de las plantas (ej. deslizar a la izquierda sobre una planta en la lista para "Archivar" o "Editar").
+
+**3. Ergonomía y Touch Targets (Común para móviles):**
+Para garantizar que personas de la tercera edad u ocupadas interactúen sin frustración, el tamaño mínimo de cualquier botón o elemento interactivo es de **48x48 dp/pt**, con un margen de separación adecuado para evitar toques accidentales.
+
+*(Añadir captura de pantalla ilustrando los componentes nativos de iOS y Android)*
+`![Mobile Style Guidelines - Native Components](../assets/images/ux-mobile-guidelines.png)`
+
+#### C. Devices (IoT Hardware) Style & Feedback Guidelines
+
+Aunque el hardware físico (*Sensor Lite* y el módulo de riego) carece de pantallas digitales complejas, su experiencia de usuario debe estar perfectamente orquestada con la aplicación móvil. El diseño del hardware sigue un principio de "tecnología silenciosa", siendo minimalista para integrarse estéticamente en macetas de hogares y oficinas.
+
+**1. Retroalimentación Visual (Indicadores LED):**
+El hardware utiliza un patrón de comunicación semántico basado en un único indicador LED multicolor para informar su estado operativo sin depender del móvil:
+*   **Azul (parpadeo lento):** Modo de emparejamiento (Bluetooth/WiFi activo), esperando escaneo de código QR desde la App.
+*   **Verde (fijo por 3 seg):** Conexión exitosa al entorno de nube de Oryxen.
+*   **Rojo (parpadeo rápido):** Error crítico (batería extremadamente baja o desconexión de red superior a 5 minutos).
+*   **Apagado (por defecto):** Para ahorrar energía, el dispositivo no emite luz durante la operación normal de recolección de datos, dejando las alertas detalladas y predictivas al sistema de notificaciones *push* de la app.
+
+
+## 6.2. Information Architecture
+
+En esta sección se presenta la arquitectura de la información de Oryxen, el cual es un elemento clave en el diseño y la facilidad de uso de un sistema digital, que garantize que el usuario, independientemente de su nivel de conocimiento técnico, comprenda y utilice el contenido de forma clara y eficaz.
+
+### 6.2.1. Organization Systems
+
+Los sistemas de organización en Oryxen estructuran la información y funcionalidades para que la navegación sea intuitiva, eficiente y centrada en el usuario. Se aplican los siguientes enfoques:
+
+**Visual Organization Systems (Esquemas Visuales):**
+
+- **Jerárquica (Visual Hierarchy):** Se aplica principalmente en el Dashboard central de la aplicación móvil. Donde se priorizan que los indicadores sean completamente visibles e identificables rápidamente por el usuario, a través de el uso de colores y tamaños de fuente destacados.
+
+- **Secuencial (Step-by-step):** Se utiliza en la vinculación de dispositivos IoT, donde el usuario es guiado paso a paso para vincular estas herramientas a la red Wi-Fi y asignar una especie botánica específica, asegurando que la configuración técnica sea exitosa antes de permitir el acceso al monitoreo.
+
+- **Matricial:** Se aplica en el panel de analíticas avanzadas de la plataforma Web, donde el usuario puede comparar variables (ej. Humedad, Crecimiento, Clima externo) para obtener una visión acerca del rendimiento de su jardín inteligente.
+
+<br>
+
+**Categorization Schemes (Esquemas de Categorización):**
+
+- **Por Tópicos:** El contenido se agrupa en áreas funcionales claras como: Asistente IA, Comunidad, Configuración y Dispositivos, etc.
+
+- **Cronológico:** Se presenta en la sección de Historial de Cuidado, donde se registran de forma temporal los riegos automáticos realizados, las alertas detectadas y las intervenciones del usuario, permitiendo auditar la evolución de la planta a lo largo del tiempo.
+
+- **Según Audiencia:** La plataforma adapta funciones según el perfil del usuario como una visualización simplificada con consejos básicos de la IA para planes gratuitos; y acceso a dashboards técnicos detallados y configuraciones avanzadas de automatización para múltiples zonas de cultivo para planes con suscripción premium.
+
+### 6.2.2. Labeling Systems
+
+Los sistemas de etiquetado en **Oryxen** definen la forma en que se nombran las secciones, acciones, estados y mensajes dentro de la Landing Page, la Aplicación Web y la Aplicación Móvil. Su objetivo es utilizar términos claros, consistentes y comprensibles para que el usuario pueda reconocer rápidamente qué información está viendo y qué acciones puede realizar, incluso si no posee conocimientos técnicos sobre jardinería, IA o dispositivos IoT.
+
+#### A. Navigation Labels
+
+Las etiquetas de navegación agrupan las principales áreas funcionales del ecosistema Oryxen, facilitando el desplazamiento del usuario entre módulos.
+
+- **Inicio:** Vista general del estado de las plantas registradas y accesos rápidos.
+- **Mis Plantas:** Inventario personal de plantas vinculadas al usuario.
+- **Asistente IA:** Espacio para consultas, diagnósticos y recomendaciones personalizadas.
+- **Comunidad:** Sección de interacción entre usuarios, consejos y experiencias compartidas.
+- **Dispositivos:** Gestión de sensores IoT, vinculación de hardware y estado de conexión.
+- **Analíticas:** Visualización de métricas históricas, tendencias y reportes avanzados.
+- **Perfil:** Configuración de cuenta, preferencias, notificaciones y suscripción.
+
+#### B. Action Labels
+
+Las etiquetas de acción se redactan con verbos directos para indicar de forma inmediata la tarea que ejecutará el sistema.
+
+- **Agregar planta:** Permite registrar una nueva planta en el inventario.
+- **Vincular sensor:** Inicia el flujo de conexión de un dispositivo IoT mediante QR o configuración manual.
+- **Regar ahora:** Activa una acción de riego inmediata cuando el hardware lo permite.
+- **Consultar IA:** Abre el asistente para recibir recomendaciones o diagnósticos.
+- **Guardar cambios:** Confirma la actualización de datos o configuraciones.
+- **Ver historial:** Muestra registros anteriores de riego, alertas, diagnósticos e intervenciones.
+
+#### C. Status and Alert Labels
+
+Las etiquetas de estado permiten comunicar de forma rápida la condición de una planta, un sensor o una acción del sistema.
+
+- **Saludable:** La planta se encuentra dentro de los rangos recomendados.
+- **Requiere atención:** Se detectó una condición que necesita revisión del usuario.
+- **Humedad baja:** El nivel de humedad está por debajo del umbral definido.
+- **Sensor desconectado:** El dispositivo no está enviando información al sistema.
+- **Riego programado:** Existe una acción automática planificada.
+- **Diagnóstico disponible:** La IA generó una recomendación o análisis reciente.
+
+#### D. Form and Data Labels
+
+Los formularios utilizan etiquetas descriptivas para evitar ambigüedad durante el registro de plantas, configuración de sensores y personalización de preferencias.
+
+- **Nombre de la planta:** Identificador personalizado asignado por el usuario.
+- **Tipo de planta:** Categoría o especie seleccionada para aplicar recomendaciones adecuadas.
+- **Ubicación:** Espacio físico donde se encuentra la planta, como sala, balcón o jardín.
+- **Frecuencia de riego:** Intervalo recomendado o personalizado para el cuidado.
+- **Nivel de humedad:** Valor medido por el sensor o ingresado manualmente.
+- **Preferencias de notificación:** Canales y frecuencia de alertas que desea recibir el usuario.
+
+#### E. Search and Filter Labels
+
+Las etiquetas de búsqueda y filtrado ayudan a localizar información específica dentro de inventarios, historiales y analíticas.
+
+- **Buscar planta:** Campo para ubicar una planta por nombre o tipo.
+- **Filtrar por estado:** Permite mostrar plantas saludables, en riesgo o con alertas activas.
+- **Filtrar por dispositivo:** Muestra plantas vinculadas a sensores específicos.
+- **Ordenar por última actividad:** Organiza registros según la actualización más reciente.
+- **Rango de fechas:** Delimita la consulta de historiales y reportes.
+
+#### F. Feedback Labels
+
+Las etiquetas de retroalimentación confirman el resultado de una acción o informan errores de manera clara y accionable.
+
+- **Planta agregada correctamente:** Confirma el registro exitoso.
+- **Sensor vinculado con éxito:** Indica que el dispositivo quedó asociado a la cuenta.
+- **No se pudo conectar el sensor:** Informa una falla de conexión y orienta a revisar la red o el código QR.
+- **Cambios guardados:** Confirma que la configuración fue actualizada.
+- **No hay resultados disponibles:** Comunica que la búsqueda o filtro aplicado no encontró coincidencias.
+- **Recomendación actualizada:** Indica que el asistente IA generó una nueva sugerencia.
+
+### 6.2.3. Searching Systems.
+
+Los sistemas de búsqueda permiten a los usuarios localizar información específica de manera rápida y eficiente dentro de la aplicación, optimizando el acceso al contenido y mejorando la experiencia de uso.
+
+- **Filtros personalizados** para el historial y planta.
+- **Resultados presentados con etiquetas visuales**, íconos e información clave como el nombre de la planta, humedad actual, último riego y estado general.
+
+Estos sistemas hacen que la gestión y monitoreo de las plantas sea más ágil, especialmente útil para usuarios con múltiples registros o sensores activos.
+
+### 6.2.4. SEO Tags and Meta Tags
+
+Las etiquetas SEO y meta tags de **Oryxen** permiten mejorar la visibilidad de la solución en motores de búsqueda, redes sociales y tiendas de aplicaciones. Su uso busca comunicar de manera clara la propuesta de valor del producto: cuidado inteligente de plantas mediante IA, sensores IoT, automatización y recomendaciones personalizadas para usuarios ocupados y aficionados a la jardinería.
+
+#### A. Landing Page
+
+La *Landing Page* está orientada a atraer visitantes, explicar el valor del ecosistema Oryxen y convertirlos en usuarios registrados.
+
+- **Title:** Oryxen | Cuidado inteligente de plantas con IA e IoT
+- **Description:** Oryxen ayuda a cuidar plantas desde una plataforma inteligente que combina monitoreo con sensores, riego automatizado, alertas y recomendaciones personalizadas mediante IA.
+- **Keywords:** Oryxen, GrassFarming, cuidado de plantas, jardinería inteligente, sensores IoT, riego automático, monitoreo de plantas, asistente IA para plantas
+- **Author:** GrassFarming
+- **Robots:** index, follow
+- **Viewport:** width=device-width, initial-scale=1.0
+- **Open Graph Title:** Oryxen - Cuidado inteligente para tus plantas
+- **Open Graph Description:** Automatiza y mejora el cuidado de tus plantas con sensores IoT, alertas y recomendaciones inteligentes.
+- **Open Graph Type:** website
+- **Open Graph Image:** Imagen principal de Oryxen mostrando la aplicación, el Sensor Lite y plantas saludables.
+
+#### B. Web Application
+
+La aplicación web está enfocada en usuarios que desean gestionar sus plantas, revisar analíticas, consultar historiales y administrar su suscripción o hardware asociado.
+
+- **Title:** Oryxen Dashboard | Monitoreo y analíticas de plantas
+- **Description:** Panel web de Oryxen para visualizar el estado de las plantas, revisar diagnósticos de IA, analizar historiales de cuidado y gestionar sensores inteligentes.
+- **Keywords:** dashboard Oryxen, monitoreo de plantas, analíticas de jardinería, historial de riego, diagnóstico IA, sensores inteligentes, cuidado automatizado
+- **Author:** GrassFarming
+- **Robots:** noindex, nofollow
+- **Viewport:** width=device-width, initial-scale=1.0
+
+#### C. Mobile Application
+
+La aplicación móvil está orientada al uso diario, permitiendo que el usuario reciba alertas, consulte el estado de sus plantas, interactúe con el asistente IA y vincule dispositivos IoT de forma rápida.
+
+- **Title:** Oryxen App | Cuida tus plantas desde tu celular
+- **Description:** Aplicación móvil de Oryxen para recibir alertas, registrar plantas, consultar recomendaciones de IA y controlar sensores IoT desde cualquier lugar.
+- **Keywords:** app Oryxen, cuidado de plantas móvil, alertas de riego, asistente IA, sensor para plantas, jardinería en casa, monitoreo móvil
+- **Author:** GrassFarming
+- **Robots:** index, follow
+- **Viewport:** width=device-width, initial-scale=1.0
+- **App Name:** Oryxen
+- **Theme Color:** Verde natural asociado a la identidad visual de Oryxen.
+
+### 6.2.5. Navigation Systems
+
+El sistema de navegación de **Oryxen** está diseñado para guiar a los usuarios de manera intuitiva y sin fricciones a través de todo el ecosistema (Landing Page, Aplicación Web y Aplicación Móvil). La estructura de navegación se centra en facilitar la consecución de las metas del usuario (como registrar plantas, consultar diagnósticos de IA o interactuar con la comunidad), utilizando patrones familiares que reducen la carga cognitiva y promueven la adopción de nuestro modelo de adopción progresiva (Freemium a Premium/Hardware).
+
+#### A. Landing Page Navigation
+
+La página de aterrizaje comercial tiene como objetivo principal la conversión, educando al visitante sobre el ecosistema Oryxen y dirigiéndolo hacia el registro gratuito.
+
+*   **Global Navigation (Sticky Header):** Se utiliza una barra de navegación superior fija que acompaña al usuario durante el *scroll*. Incluye enlaces ancla a las secciones clave: *Beneficios*, *Cómo Funciona*, *Planes* (mostrando la estrategia de Sensor Lite) y *Comunidad*. 
+*   **Sequential & Scroll Navigation:** El contenido está organizado para contar una historia (Storytelling). A medida que el usuario hace *scroll* vertical, avanza secuencialmente desde la identificación del problema (plantas marchitas por falta de tiempo/conocimiento) hasta la solución (IA y automatización).
+*   **Call-to-Action (CTA) Routing:** Para facilitar el objetivo principal de negocio, se utilizan botones de acción claros y contrastantes (ej. "Comienza Gratis") ubicados estratégicamente en el *Hero Section* y al final de la página, los cuales enrutan directamente al flujo de *Sign Up*.
+
+*(Añadir captura de pantalla ilustrando el flujo de navegación de la Landing Page)*
+`![Navigation Systems - Landing Page](../assets/images/nav-landing-page.png)`
+
+#### B. Web Application Navigation (Dashboard)
+
+La aplicación web está pensada para sesiones más largas, donde los usuarios aficionados o administradores revisan analíticas profundas, historiales y gestionan sus suscripciones.
+
+*   **Left Sidebar Navigation (Navegación Global):** El menú principal se ubica en el lateral izquierdo, permitiendo una jerarquía clara de módulos. Los ítems principales incluyen:
+    *   *Dashboard* (Vista general).
+    *   *Mis Plantas* (Inventario).
+    *   *Analíticas e Historial* (Exclusivo para evaluar métricas profundas).
+    *   *Comunidad* (Foro y consejos).
+    *   *Suscripción y Hardware* (Gestión del plan y compra del Sensor Lite).
+*   **Local Navigation (Pestañas/Tabs):** Dentro del detalle de una planta específica, se utilizan pestañas horizontales para cambiar entre *Información Básica*, *Diagnósticos IA* y *Configuración de Sensores*, evitando recargas de página completas (comportamiento SPA con Vue.js).
+*   **Breadcrumbs:** Se implementan "migas de pan" en la parte superior (ej. `Mis Plantas > Monstera Deliciosa > Diagnósticos`) para que el usuario conozca su ubicación exacta dentro de la jerarquía profunda y pueda retroceder un nivel fácilmente.
+
+*(Añadir captura de pantalla ilustrando el Left Sidebar y Breadcrumbs de la Web App)*
+`![Navigation Systems - Web App](../assets/images/nav-webapp.png)`
+
+#### C. Mobile Application Navigation
+
+La aplicación móvil es el canal principal para la gestión diaria. Su navegación debe ser ergonómica para el uso con una sola mano y ofrecer acceso ultrarrápido a acciones críticas.
+
+*   **Bottom Navigation Bar (Navegación Principal):** Reemplaza al menú hamburguesa para las secciones de mayor uso, manteniéndolas a un toque de distancia en la parte inferior de la pantalla. Las opciones son:
+    *   *Inicio* (Tarjetas de estado rápido de las plantas).
+    *   *Comunidad* (Feed social).
+    *   *Asistente IA* (Acceso directo al chatbot).
+    *   *Perfil* (Ajustes y notificaciones).
+*   **Floating Action Button (FAB):** Para la acción más frecuente y crítica del negocio (agregar una planta al inventario o vincular un Sensor Lite mediante código QR), se utiliza un FAB prominente anclado sobre la navegación inferior.
+*   **Hierarchical Navigation (Stack de Vistas):** Cuando un usuario selecciona una planta desde el *Inicio*, ingresa a una vista de detalle (Drill-down). La navegación superior nativa (Navigation Bar en iOS / Top App Bar en Android) mostrará el nombre de la planta y una flecha clara de "Atrás" para regresar al nivel superior.
+*   **In-context Navigation (Swipe & Gestures):** Se soportan gestos nativos, como deslizar tarjetas horizontalmente para revelar acciones rápidas (ej. "Regar ahora" o "Archivar planta"), acelerando el flujo de tareas repetitivas.
+
+*(Añadir captura de pantalla ilustrando el Bottom Navigation Bar y el FAB de la App Móvil)*
+`![Navigation Systems - Mobile App](../assets/images/nav-mobileapp.png)`
+
+
+### 6.3. Landing Page UI Design
+
+El diseño de la interfaz de usuario (UI) de la *Landing Page* de Oryxen tiene un propósito fundamental: **la conversión y educación del cliente**. Al ser un producto innovador que combina software (IA) y hardware (IoT), el diseño visual debe transmitir confianza, simplicidad y accesibilidad, derribando el mito de que la tecnología para el hogar es costosa o difícil de instalar.
+
+Para lograrlo, la interfaz se apoya en los siguientes principios de diseño:
+*   **Identidad Visual Orgánica y Tecnológica:** Se utiliza una paleta de colores que combina tonos tierra y verdes (representando la naturaleza y el crecimiento) con blancos y grises claros (aportando el minimalismo y limpieza del sector tecnológico).
+*   **Jerarquía Tipográfica Clara:** Uso de fuentes *Sans-Serif* modernas que facilitan la lectura rápida de los beneficios y características, guiando el ojo del usuario hacia los botones de llamada a la acción (CTAs).
+*   **Enfoque en la Adopción Progresiva:** El diseño UI prioriza mostrar que el usuario puede empezar a usar Oryxen de forma 100% gratuita (solo software), para luego presentar los planes Premium y el "Sensor Lite" como expansiones naturales de la experiencia.
+
+#### 6.3.1. Landing Page Wireframe
+
+Los *wireframes* de la Landing Page representan la estructura esquelética (baja fidelidad) del sitio web, priorizando la arquitectura de la información y la distribución del contenido antes de aplicar el diseño visual final. Se ha diseñado bajo el enfoque *Mobile-First* para asegurar la accesibilidad, escalando luego a la versión de escritorio (*Desktop*).
+
+La estructura secuencial del *wireframe* es la siguiente:
+
+1.  **Hero Section (Primer impacto):** 
+    *   **Titular principal:** Enfocado en el beneficio final (ej. "Plantas siempre vivas, sin esfuerzo").
+    *   **Subtitular:** Explica brevemente la combinación de IA y monitoreo.
+    *   **CTA Principal:** Un botón de alto contraste con el texto "Comienza Gratis" (enrutando al registro de la aplicación web).
+    *   **Imagen hero heroica:** Espacio para un *mockup* de la aplicación móvil interactuando con una planta real.
+
+2.  **Problem / Solution Section (Empatía):**
+    *   Sección dividida en dos columnas. Una ilustra el "dolor" (plantas marchitas, falta de tiempo, estrés) y la otra ilustra la solución de Oryxen (tranquilidad, notificaciones inteligentes, automatización).
+
+3.  **Features Section (Cómo funciona):**
+    *   Tres tarjetas (*cards*) principales con iconos representativos: 
+        1. *App Inteligente y Chatbot IA* (Gratis/Premium).
+        2. *Monitoreo IoT con Sensor Lite*.
+        3. *Riego Automático* (Módulo avanzado).
+
+4.  **Pricing Section (Modelo Freemium):**
+    *   Una tabla de precios clara adaptada al mercado de LATAM.
+    *   Columna 1: **Plan Básico** ($0 - App y recordatorios).
+    *   Columna 2: **Plan Premium** (Suscripción mensual - Diagnósticos visuales y Chatbot IA). Destacada visualmente.
+    *   Columna 3: **Kit Hardware** (Sensor Lite + Meses de Premium incluidos).
+
+5.  **Testimonial Section (Prueba Social):**
+    *   Carrusel de testimonios segmentados. Muestra opiniones tanto de personas con agendas ocupadas como de aficionados a la jardinería para que el visitante se identifique con su perfil.
+
+6.  **Footer:**
+    *   Enlaces de navegación secundarios, términos de servicio, políticas de privacidad y enlaces a redes sociales.
+
+*(Añadir captura de pantalla de los wireframes en versión Desktop y Mobile)*
+`![Landing Page Wireframe - Desktop & Mobile](../assets/images/wireframe-landing-page.png)`
+
+
+#### 6.3.1. Landing Page Mock-up
+
+En esta sección se detallan los Mock-ups de la Landing Page de Oryxen, diseñados bajo un enfoque responsive para asegurar una visualización óptima tanto en navegadores web de escritorio como en dispositivos móviles. El diseño busca convertir visitantes en usuarios mediante una narrativa visual clara y una navegación intuitiva.
+
+El diseño implementa rigurosamente el Design System establecido, utilizando la tipografía Raleway en distintos pesos para marcar una jerarquía visual clara y una paleta cromática basada en tonos crema y verdes que evocan equilibrio y sostenibilidad.
+
+A continuación se presentan las evidencias de los mock-ups:
+
+**Home:**
+![Home_LandingPageTP1](./assets/Chapter-6/Home_LandingPageTP1.png)
+
+**About The Product:**
+![AboutTheProduct_LandingPageTP1](./assets/Chapter-6/AboutTheProduct_LandingPageTP1.png)
+
+**How It Works:**
+![HowItWorks_LandingPageTP1](./assets/Chapter-6/HowItWorks_LandingPageTP1.png)
+
+**Benefits:**
+![Benefits_LandingPageTP1](./assets/Chapter-6/Benefits_LandingPageTP1.png)
+
+**Team:**
+![Team_LandingPageTP1](./assets/Chapter-6/Team_LandingPageTP1.png)
+
+**Plans:**
+![Plans_LandingPageTP1](./assets/Chapter-6/Plans_LandingPageTP1.png)
+
+**Testimonials:**
+![Testimonials_LandingPageTP1](./assets/Chapter-6/Testimonials_LandingPageTP1.png)
+
+**Footer:**
+![Footer_LandingPageTP1](./assets/Chapter-6/Footer_LandingPageTP1.png)
+
+
+## 6.4. Applications UX/UI Design
+
+El sistema de navegación de **Oryxen** está orientado a brindar una experiencia intuitiva, accesible y consistente tanto en plataformas mobile como web. La interfaz busca facilitar la interacción de los usuarios con las funcionalidades del sistema, permitiendo un uso sencillo y eficiente de las herramientas de monitoreo, automatización y gestión inteligente.
+
+El diseño de las aplicaciones considera los siguientes principios:
+
+*   **Experiencia de Usuario Intuitiva:** Las interfaces están diseñadas para que los usuarios puedan navegar y utilizar las funcionalidades principales de manera simple, reduciendo la complejidad de aprendizaje.
+*   **Consistencia entre Plataformas:** Tanto la aplicación móvil como la aplicación web mantienen una identidad visual unificada, garantizando coherencia en los componentes, colores, tipografías y patrones de interacción.
+*   **Diseño Responsivo y Accesible:** La interfaz se adapta a diferentes tamaños de pantalla y dispositivos, asegurando una experiencia fluida tanto en computadoras como en dispositivos móviles.
+*   **Jerarquía Visual y Organización de Información:** Se prioriza una distribución clara de los elementos visuales y funcionalidades, facilitando el acceso rápido a información relevante y acciones principales del sistema.
+*   **Enfoque en la Interacción del Usuario:** El diseño UI incorpora componentes visuales modernos y minimalistas que favorecen la interacción continua y mejoran la percepción de usabilidad de la plataforma.
+
+
+### 6.4.2. Applications Mock-ups
+
+En esta sección se presentan los mock-ups para las aplicaciones móvil y web de Oryxen, diseñados para ofrecer una experiencia de usuario intuitiva y eficiente. Estas interfaces son la representación directa del Design System establecido, utilizando la tipografía Raleway para asegurar una lectura clara y una paleta de colores en tonos verdes y cremas que proyecta la identidad tecnológica y orgánica de la plataforma.
+
+La arquitectura de la información se basa en una jerarquía visual que prioriza los estados críticos del jardín inteligente; el dashboard central destaca métricas de humedad y alertas urgentes, permitiendo una respuesta inmediata del usuario. Bajo principios de diseño inclusivo, se han optimizado los contrastes de color siguiendo las pautas de accesibilidad y se ha implementado una navegación táctil simplificada con amplios espacios en blanco para reducir la fatiga visual.
+
+A continuación se presentan los mock-ups para la aplicación web y móvil:
+
+**Aplicación Web:**
+
+**On Board:**
+![OnBoard_WebMockup](./assets/Chapter-6/OnBoard_WebMockup.png)
+
+**Sign Up:**
+![SignUp_WebMockup](./assets/Chapter-6/SignUp_WebMockup.png)
+
+**Sign In:**
+![SignIn_WebMockup](./assets/Chapter-6/SignIn_WebMockup.png)
+
+**Dashboard:**
+![Dashboard_WebMockup](./assets/Chapter-6/Dashboard_WebMockup.png)
+
+**Plant Grid:**
+![PlantGrid_WebMockup](./assets/Chapter-6/PlantGrid_WebMockup.png)
+
+**Plant Details:**
+![PlantDetails_WebMockup](./assets/Chapter-6/PlantDetails_WebMockup.png)
+
+**History:**
+![History_WebMockup](./assets/Chapter-6/History_WebMockup.png)
+
+**Analytics:**
+![Analytics_WebMockup](./assets/Chapter-6/Analytics_WebMockup.png)
+
+**Community:**
+![Community_WebMockup](./assets/Chapter-6/Community_WebMockup.png)
+
+**Settings:**
+![Settings_WebMockup](./assets/Chapter-6/Settings_WebMockup.png)
+
+
+
+**Aplicación Móvil:**
+
+**On Board:** <br>
+![OnBoard_MobileMockup](./assets/Chapter-6/OnBoard_MobileMockup.png)
+
+**Sign Up:**<br>
+![SignUp_MobileMockup](./assets/Chapter-6/SignUp_MobileMockup.png)
+
+**Sign In:**<br>
+![SignIn_MobileMockup](./assets/Chapter-6/SignIn_MobileMockup.png)
+
+**Dashboard:**<br>
+![Dashboard_MobileMockup](./assets/Chapter-6/Dashboard_MobileMockup.png)
+
+**Plants:**<br>
+![Plants_MobileMockup](./assets/Chapter-6/Plants_MobileMockup.png)
+
+**Plant Details:**<br>
+![PlantDetails_MobileMockup](./assets/Chapter-6/PlantDetails_MobileMockup.png)
+
+**History:**<br>
+![History_MobileMockup](./assets/Chapter-6/History_MobileMockup.png)
+
+**Settings:**<br>
+![Settings_MobileMockup](./assets/Chapter-6/Settings_MobileMockup.png)
+
+**Dark Mode:**<br>
+![DarkMode_MobileMockup](./assets/Chapter-6/DarkMode_MobileMockup.png)
+
+
+### 6.4.3. Applications User Flow Diagrams
+
+Los diagramas de flujo de usuario (*User Flows*) mapean el recorrido paso a paso que realiza un consumidor dentro de las aplicaciones (Web y Móvil) de Oryxen para completar tareas específicas. Estos flujos han sido diseñados minimizando la fricción cognitiva y apoyando nuestra estrategia de adopción progresiva: permitiendo al usuario experimentar valor inmediato en el plan gratuito y facilitando transiciones naturales hacia la compra de hardware (Sensor Lite) o la suscripción Premium.
+
+A continuación, se detallan los tres flujos críticos del negocio:
+
+#### A. Flujo 1: Onboarding y Registro Manual de Planta (Plan Básico / Freemium)
+Este es el primer contacto del usuario con la aplicación. El objetivo es que registre su primera planta lo más rápido posible, experimentando el valor de tener un inventario centralizado, sin requerir hardware físico inicial.
+
+1.  **Inicio:** El usuario abre la aplicación móvil.
+2.  **Autenticación:** Pantalla de *Sign Up* / *Login*. El usuario elige autenticarse rápidamente vía Google (OAuth2) o correo electrónico.
+3.  **Pantalla de Bienvenida:** El sistema detecta que el usuario no tiene plantas y muestra un *Empty State* con un CTA principal: "Añadir mi primera planta".
+4.  **Formulario de Registro:** El usuario ingresa la información básica (Nombre, Especie, Ubicación). 
+5.  **Configuración de Umbrales:** El sistema sugiere parámetros predeterminados de humedad según la especie seleccionada. El usuario acepta.
+6.  **Fin (Éxito):** El usuario es redirigido al *Dashboard* principal, donde visualiza la tarjeta de su nueva planta recién agregada.
+
+*(Añadir captura de pantalla del diagrama de flujo: Onboarding y Registro de Planta)*
+`![User Flow - Onboarding & Plant Registration](../assets/images/userflow-onboarding.png)`
+
+#### B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)
+Este flujo representa el momento en que un usuario decide automatizar su monitoreo tras adquirir el hardware de entrada de Oryxen. Destaca la restricción de usabilidad (QA-04) que exige una vinculación en menos de 30 segundos.
+
+1.  **Inicio:** Desde el *Dashboard*, el usuario presiona el *Floating Action Button* (FAB) y selecciona "Vincular Dispositivo".
+2.  **Permisos:** La aplicación solicita acceso a la cámara y Bluetooth.
+3.  **Escaneo QR:** El usuario escanea el código QR ubicado en la base del *Sensor Lite*.
+4.  **Validación y Emparejamiento:** El sistema reconoce el ID del sensor, lo registra en el backend y lo enlaza a la red WiFi local mediante Bluetooth (BLE).
+5.  **Asignación:** La app pregunta: "¿A qué planta pertenece este sensor?". El usuario selecciona una planta previamente registrada (ej. "Monstera de la Sala").
+6.  **Fin (Éxito):** Pantalla de confirmación animada. El *Dashboard* se actualiza y la tarjeta de la planta ahora muestra la métrica de humedad y temperatura en tiempo real.
+
+*(Añadir captura de pantalla del diagrama de flujo: Vinculación de Hardware)*
+`![User Flow - Hardware Pairing](../assets/images/userflow-hardware.png)`
+
+#### C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)
+Este flujo ilustra cómo un usuario interactúa con la característica estrella de la aplicación para resolver un problema complejo de salud en su planta.
+
+1.  **Inicio:** El usuario nota hojas amarillas en su planta. Ingresa a la app y selecciona la planta desde el *Dashboard*.
+2.  **Llamada a la Acción:** En la vista de detalle, presiona el botón "Diagnóstico con IA".
+3.  **Captura de Imagen:** Se abre la cámara integrada. El usuario toma una fotografía de la hoja afectada.
+4.  **Procesamiento (Loading):** Pantalla de carga mientras la imagen es sanitizada (eliminación de GPS/EXIF) y procesada por el motor de visión artificial en el backend.
+5.  **Resultados y Recomendación:** El sistema muestra una alerta contextual con el problema detectado (ej. "Falta de nutrientes / Clorosis") y una lista de acciones correctivas inmediatas y a largo plazo.
+6.  **Fin (Seguimiento):** El usuario presiona el botón "Aplicar recomendación". El sistema programa automáticamente un recordatorio de seguimiento para evaluar la mejora en 7 días.
+
+*(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
+`![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
+
+
 
 
 # Conclusiones
