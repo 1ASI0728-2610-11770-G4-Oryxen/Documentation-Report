@@ -163,6 +163,25 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
         - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
         - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
 
+## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
+  - [6.1. Style Guidelines](#61-style-guidelines)
+    - [6.1.1. General Style Guidelines](#611-general-style-guidelines)
+    - [6.1.2. Web, Mobile & Devices Style Guidelines](#612-web-mobile--devices-style-guidelines)
+  - [6.2. Information Architecture](#62-information-architecture)
+    - [6.2.2. Labeling Systems](#622-labeling-systems)
+    - [6.2.3. Searching Systems](#623-searching-systems)
+    - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
+    - [6.2.5. Navigation Systems](#625-navigation-systems)
+  - [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+    - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
+    - [6.3.2. Landing Page Mock-up](#632-landing-page-mock-up)
+  - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
+    - [6.4.1. Applications Wireframes](#641-applications-wireframes)
+    - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
+    - [6.4.3. Applications Mock-ups](#642-applications-mock-ups)
+    - [6.4.4. Applications User Flow Diagrams](#643-applications-user-flow-diagrams)
+  - [6.5. Applications Prototyping](#65-applications-prototyping)
+
 #### [Conclusiones](#conclusiones)  
 - [Conclusiones y recomendaciones.](#conclusiones-y-recomendaciones)  
 
@@ -2431,8 +2450,106 @@ El diseño de las aplicaciones considera los siguientes principios:
 *   **Jerarquía Visual y Organización de Información:** Se prioriza una distribución clara de los elementos visuales y funcionalidades, facilitando el acceso rápido a información relevante y acciones principales del sistema.
 *   **Enfoque en la Interacción del Usuario:** El diseño UI incorpora componentes visuales modernos y minimalistas que favorecen la interacción continua y mejoran la percepción de usabilidad de la plataforma.
 
+### 6.4.1. Applications Wireframes
 
-### 6.4.2. Applications Mock-ups
+Aquí se muestran los wireframes desarrollados para la aplicación web y móvil SecurOn.
+
+**Wireframes Web Application:**
+
+![Wireframes Web App](./assets/Chapter-6/wireframe-web.png)
+
+
+**Wireframes Web Application Responsive:**
+![Wireframes Web App Responsive](./assets/Chapter-6/wireframe-mobile.png)
+
+
+**Wireframes Mobile:**
+
+![Wireframes Mobile App](./assets/Chapter-6/wireframe-mobile.png)
+
+[Enlace para acceder al Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/SecurOn?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
+
+### 6.4.2. Applications Wireflow Diagrams
+
+En esta sección, se presentan los Wireflows de Oryxen, donde se muestran las rutas que los usuarios pueden seguir al interactuar con la aplicación web y móvil. Estos flujos reflejan los principales casos de uso de la plataforma: registro e inicio de sesión, gestión de plantas, vinculación de hardware y diagnóstico con inteligencia artificial. Para su realización se utilizó la herramienta LucidChart.
+
+***
+**Wireflow Diagrams Web Application:**
+
+**User goal: Usuario se registra e inicia sesión**
+
+**Descripción:**
+Al acceder a la aplicación web, el usuario visualiza la pantalla de bienvenida (OnBoard) con las opciones de iniciar sesión o registrarse. Si no tiene cuenta, completa el formulario de Sign Up con su nombre, correo electrónico y contraseña. Una vez autenticado, es redirigido al Dashboard principal donde puede ver el estado de sus plantas.
+
+![Wireflow Web 1 - Registro e Inicio de Sesión](./assets/Chapter-6/wireflows/wireflow-web-01-login.png)
+
+---
+
+**User goal: Usuario registra una nueva planta manualmente**
+
+**Descripción:**
+Desde el Dashboard, el usuario accede a la sección Plant Grid y selecciona la opción para añadir una nueva planta. Completa el formulario con el nombre, la especie y la ubicación. El sistema sugiere automáticamente los umbrales de humedad recomendados según la especie elegida. Al confirmar, la planta aparece como una nueva tarjeta en el Dashboard.
+
+![Wireflow Web 2 - Registro de Planta](./assets/Chapter-6/wireflows/wireflow-web-02-planta.png)
+
+---
+
+**User goal: Usuario visualiza detalles y métricas de una planta**
+
+**Descripción:**
+El usuario selecciona una planta desde el Dashboard o desde Plant Grid. Se muestra la vista Plant Details con las métricas actuales del sensor (humedad, temperatura), el historial de lecturas y las alertas activas. Desde esta vista puede acceder al historial completo en la sección History o ver analítica avanzada en Analytics.
+
+![Wireflow Web 3 - Detalles y Métricas de Planta](./assets/Chapter-6/wireflows/wireflow-web-03-detalles.png)
+
+---
+
+**User goal: Usuario explora la comunidad y analítica**
+
+**Descripción:**
+El usuario navega desde el menú principal hacia la sección Community, donde puede compartir experiencias con otros usuarios y ver publicaciones de la comunidad. También accede a Analytics para visualizar gráficas históricas del comportamiento de sus plantas. Desde Settings puede ajustar preferencias de notificación y datos de su cuenta.
+
+![Wireflow Web 4 - Comunidad, Analítica y Configuración](./assets/Chapter-6/wireflows/wireflow-web-04-comunidad.png)
+
+---
+
+**Wireflow Diagrams Mobile Application:**
+
+**User goal: Usuario se registra e inicia sesión**
+
+**Descripción:**
+Al abrir la aplicación móvil, el usuario ve la pantalla de OnBoard con las opciones de Sign Up y Sign In. Puede autenticarse mediante correo electrónico o Google (OAuth2). Una vez autenticado sin plantas registradas, el sistema muestra un estado vacío con el llamado a la acción "Añadir mi primera planta" y lo redirige al Dashboard al completar el registro.
+
+![Wireflow Mobile 1 - Registro e Inicio de Sesión](./assets/Chapter-6/wireflows/wireflow-mobile-01-login.png)
+
+---
+
+**User goal: Usuario vincula el hardware Sensor Lite**
+
+**Descripción:**
+Desde el Dashboard móvil, el usuario presiona el botón de acción flotante (FAB) y selecciona "Vincular Dispositivo". La aplicación solicita permisos de cámara y Bluetooth. El usuario escanea el código QR del Sensor Lite; el sistema lo registra y lo enlaza a la red WiFi local. Finalmente, el usuario asigna el sensor a una planta existente y el Dashboard se actualiza mostrando los datos en tiempo real.
+
+![Wireflow Mobile 2 - Vinculación del Sensor Lite](./assets/Chapter-6/wireflows/wireflow-mobile-02-sensor.png)
+
+---
+
+**User goal: Usuario solicita diagnóstico de IA para su planta**
+
+**Descripción:**
+El usuario, al notar un problema en su planta, ingresa a Plant Details desde el Dashboard y presiona el botón "Diagnóstico con IA". Se abre la cámara para capturar una fotografía de la hoja afectada. Tras el procesamiento en el backend, la app muestra el problema detectado (ej. clorosis, hongos) junto con las recomendaciones correctivas. El usuario puede aplicar la recomendación y programar un recordatorio de seguimiento automático.
+
+![Wireflow Mobile 3 - Diagnóstico con IA](./assets/Chapter-6/wireflows/wireflow-mobile-03-ia.png)
+
+---
+
+**User goal: Usuario consulta el historial y ajusta configuración**
+
+**Descripción:**
+Desde el menú inferior de la app, el usuario accede a la sección History para revisar el registro histórico de lecturas de humedad y temperatura de sus plantas. Desde Settings puede activar o desactivar notificaciones de alertas, cambiar entre el modo claro y oscuro (Dark Mode) y gestionar los datos de su cuenta.
+
+![Wireflow Mobile 4 - Historial y Configuración](./assets/Chapter-6/wireflows/wireflow-mobile-04-historial.png)
+
+
+### 6.4.3. Applications Mock-ups
 
 En esta sección se presentan los mock-ups para las aplicaciones móvil y web de Oryxen, diseñados para ofrecer una experiencia de usuario intuitiva y eficiente. Estas interfaces son la representación directa del Design System establecido, utilizando la tipografía Raleway para asegurar una lectura clara y una paleta de colores en tonos verdes y cremas que proyecta la identidad tecnológica y orgánica de la plataforma.
 
@@ -2504,7 +2621,7 @@ A continuación se presentan los mock-ups para la aplicación web y móvil:
 ![DarkMode_MobileMockup](./assets/Chapter-6/DarkMode_MobileMockup.png)
 
 
-### 6.4.3. Applications User Flow Diagrams
+### 6.4.4. Applications User Flow Diagrams
 
 Los diagramas de flujo de usuario (*User Flows*) mapean el recorrido paso a paso que realiza un consumidor dentro de las aplicaciones (Web y Móvil) de Oryxen para completar tareas específicas. Estos flujos han sido diseñados minimizando la fricción cognitiva y apoyando nuestra estrategia de adopción progresiva: permitiendo al usuario experimentar valor inmediato en el plan gratuito y facilitando transiciones naturales hacia la compra de hardware (Sensor Lite) o la suscripción Premium.
 
