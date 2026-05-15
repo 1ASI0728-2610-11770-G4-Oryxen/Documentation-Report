@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+  <title id="title">Auth and Identity Integration Domain Class Diagram</title>
+  <desc id="desc">Domain class diagram for the Oryxen Auth and Identity Integration bounded context.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f3a33"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #1f2a24; }
+      .title { font-size: 30px; font-weight: 700; }
+      .className { font-size: 19px; font-weight: 700; }
+      .member { font-size: 14px; }
+      .classBox { fill: #fbfefb; stroke: #2f7d46; stroke-width: 2; rx: 8; }
+      .serviceBox { fill: #fff9ed; stroke: #b97818; stroke-width: 2; rx: 8; }
+      .section { stroke: #2f7d46; stroke-width: 1; }
+      .line { stroke: #2f3a33; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1280" height="820" fill="#ffffff"/>
+  <text class="title" x="40" y="55">Auth &amp; Identity Integration - Domain Layer Class Diagram</text>
+
+  <g transform="translate(430,95)">
+    <rect class="classBox" width="330" height="330"/>
+    <text class="className" x="137" y="34">User</text>
+    <line class="section" x1="0" y1="52" x2="330" y2="52"/>
+    <text class="member" x="18" y="80">- id: UUID</text>
+    <text class="member" x="18" y="104">- fullName: String</text>
+    <text class="member" x="18" y="128">- email: String</text>
+    <text class="member" x="18" y="152">- externalIamId: String</text>
+    <text class="member" x="18" y="176">- authProvider: AuthProvider</text>
+    <text class="member" x="18" y="200">- role: Role</text>
+    <text class="member" x="18" y="224">- status: AccountStatus</text>
+    <text class="member" x="18" y="248">- createdAt: DateTime</text>
+    <line class="section" x1="0" y1="266" x2="330" y2="266"/>
+    <text class="member" x="18" y="292">+ linkExternalIdentity()</text>
+    <text class="member" x="170" y="292">+ updateProfile()</text>
+    <text class="member" x="18" y="316">+ assignRole()</text>
+    <text class="member" x="170" y="316">+ registerLogin()</text>
+  </g>
+
+  <g transform="translate(70,130)">
+    <rect class="classBox" width="250" height="145"/>
+    <text class="className" x="101" y="34">Role</text>
+    <line class="section" x1="0" y1="52" x2="250" y2="52"/>
+    <text class="member" x="18" y="82">- value: String</text>
+    <line class="section" x1="0" y1="100" x2="250" y2="100"/>
+    <text class="member" x="18" y="126">+ canAccessPremiumFeatures()</text>
+  </g>
+
+  <g transform="translate(70,345)">
+    <rect class="classBox" width="250" height="165"/>
+    <text class="className" x="62" y="34">AuthProvider</text>
+    <line class="section" x1="0" y1="52" x2="250" y2="52"/>
+    <text class="member" x="18" y="82">- value: String</text>
+    <text class="member" x="18" y="106">- externalProviderId: String</text>
+    <line class="section" x1="0" y1="124" x2="250" y2="124"/>
+    <text class="member" x="18" y="150">+ isExternal()</text>
+  </g>
+
+  <g transform="translate(850,130)">
+    <rect class="classBox" width="270" height="145"/>
+    <text class="className" x="70" y="34">AccountStatus</text>
+    <line class="section" x1="0" y1="52" x2="270" y2="52"/>
+    <text class="member" x="18" y="82">- value: String</text>
+    <line class="section" x1="0" y1="100" x2="270" y2="100"/>
+    <text class="member" x="18" y="126">+ allowsLogin()</text>
+  </g>
+
+  <g transform="translate(850,345)">
+    <rect class="classBox" width="270" height="190"/>
+    <text class="className" x="66" y="34">UserAccessGrant</text>
+    <line class="section" x1="0" y1="52" x2="270" y2="52"/>
+    <text class="member" x="18" y="82">- id: UUID</text>
+    <text class="member" x="18" y="106">- userId: UUID</text>
+    <text class="member" x="18" y="130">- claimName: String</text>
+    <text class="member" x="18" y="154">- expiresAt: DateTime</text>
+    <line class="section" x1="0" y1="166" x2="270" y2="166"/>
+    <text class="member" x="18" y="184">+ grantsAccessTo()</text>
+  </g>
+
+  <g transform="translate(260,620)">
+    <rect class="serviceBox" width="280" height="130"/>
+    <text class="className" x="84" y="34">AuthService</text>
+    <line class="section" x1="0" y1="52" x2="280" y2="52"/>
+    <text class="member" x="18" y="82">+ startAuthentication()</text>
+    <text class="member" x="18" y="106">+ synchronizeExternalUser()</text>
+  </g>
+
+  <g transform="translate(710,620)">
+    <rect class="serviceBox" width="280" height="130"/>
+    <text class="className" x="62" y="34">IamTokenValidator</text>
+    <line class="section" x1="0" y1="52" x2="280" y2="52"/>
+    <text class="member" x="18" y="82">+ validateAccessToken()</text>
+    <text class="member" x="18" y="106">+ extractRoles()</text>
+  </g>
+
+  <path class="line" d="M430 190 H320"/>
+  <path class="line" d="M430 370 H320"/>
+  <path class="line" d="M760 190 H850"/>
+  <path class="line" d="M760 370 H850"/>
+  <path class="line" d="M400 620 C410 540 485 470 560 425"/>
+  <path class="line" d="M850 620 C830 540 760 470 670 425"/>
+  <path class="line" d="M540 685 H710"/>
+</svg>

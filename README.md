@@ -163,6 +163,25 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
         - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
         - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
 
+## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
+  - [6.1. Style Guidelines](#61-style-guidelines)
+    - [6.1.1. General Style Guidelines](#611-general-style-guidelines)
+    - [6.1.2. Web, Mobile & Devices Style Guidelines](#612-web-mobile--devices-style-guidelines)
+  - [6.2. Information Architecture](#62-information-architecture)
+    - [6.2.2. Labeling Systems](#622-labeling-systems)
+    - [6.2.3. Searching Systems](#623-searching-systems)
+    - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
+    - [6.2.5. Navigation Systems](#625-navigation-systems)
+  - [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+    - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
+    - [6.3.2. Landing Page Mock-up](#632-landing-page-mock-up)
+  - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
+    - [6.4.1. Applications Wireframes](#641-applications-wireframes)
+    - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
+    - [6.4.3. Applications Mock-ups](#642-applications-mock-ups)
+    - [6.4.4. Applications User Flow Diagrams](#643-applications-user-flow-diagrams)
+  - [6.5. Applications Prototyping](#65-applications-prototyping)
+
 #### [Conclusiones](#conclusiones)  
 - [Conclusiones y recomendaciones.](#conclusiones-y-recomendaciones)  
 
@@ -183,7 +202,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 | Criterio específico | Acciones Realizadas | Conclusiones |
 | ------------------- | ------------------- | ------------ |
 | Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Demostré capacidad de comunicar mi comprensión de la problemática que abordamos; así como, el planteamiento de una solución tecnológica que la resuelva. Además, de exponer los fundamentos técnicos y requisitos funcionales para la solución, usando un lenguaje empático para los distintos grupos de usuarios.<br>**Alejandro Alberto Pachas Chavez**<br> **TB1** <br>Realicé el modelado EventStorming y DDD. Traduccí de los conceptos de negocio en un modelo técnico coherente.<br> **Abraham Andres Estrada Cajamune**<br>**TB1:** Dirigió la comunicación con los usuarios finales durante la etapa de investigación, realizando el registro y moderación de las entrevistas para extraer necesidades críticas de los segmentos objetivo. Asimismo, sustentó oralmente ante el equipo y el docente las decisiones técnicas del Capítulo IV, traduciendo requerimientos de negocio en restricciones arquitectónicas viables. <br> **Alessandro Netto Zevallos Linares**<br>**TB1:** Durante el desarrollo del TB1, aporté la idea principal del proyecto y participé en su explicación, comunicando la problemática identificada y la solución propuesta de manera clara y estructurada, considerando la comprensión de distintos tipos de audiencia. | **TB1:** Como equipo, concluimos que la facultad de adaptar el discurso según la audiencia es una competencia crítica para el éxito del proyecto. La interacción directa con usuarios no técnicos en el **Capítulo II** nos permitió validar la problemática de Oryxen desde una perspectiva humana y empática. Por otro lado, la defensa de los perfiles de la startup (**Capítulo I**) y de la arquitectura estratégica (**Capítulo IV**) ante el docente, demostró nuestra capacidad de emplear un lenguaje técnico-formal para sustentar la viabilidad de una solución de ingeniería ante niveles jerárquicos de evaluación. |
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Redacté la documentación con un enfoque en los objetivos de nuestra solución, garantizando que la coherencia y claridad de la información sea recepcionada por los usuarios en relación en lo que consiste nuestra plataforma y sobre los resultados de la arquitectura ADD. <br> **Alejandro Alberto Pachas Chavez**<br> **TB1** <br>Documentó de manera detallada el registro de las entrevistas en el Capítulo II, sintetizando los hallazgos cualitativos<br> **Abraham Andres Estrada Cajamune**<br>**TB1:** Además, fue responsable de la especificación de 10 Technical Stories para los Constraints en el Capítulo IV, utilizando la sintaxis Gherkin (Given-When-Then) para comunicar de forma objetiva las reglas técnicas a desarrolladores y stakeholders.<br> **Alessandro Netto Zevallos Linares**<br>**TB1:** Me encargué de la redacción del documento del proyecto, organizando la información de manera clara y coherente, describiendo la idea principal, los objetivos y la propuesta de solución, utilizando un lenguaje adecuado para facilitar la comprensión por parte de distintos públicos. | **TB1:** El equipo concluye que la documentación formal y estructurada es el pilar de la transparencia en ingeniería de software. A través de la redacción del Lean UX Canvas (**Capítulo I**), los artefactos de Needfinding (**Capítulo II**) y el Software Design de nivel estratégico (**Capítulo IV**), logramos sintetizar información compleja en documentos claros y trazables. El uso de estándares como **Gherkin** y el modelo **C4** en el diseño de software asegura que la comunicación escrita sea objetiva, permitiendo que tanto stakeholders de negocio como desarrolladores técnicos comprendan el ecosistema de Oryxen sin ambigüedades. | |
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Redacté la documentación con un enfoque en los objetivos de nuestra solución, garantizando que la coherencia y claridad de la información sea recepcionada por los usuarios en relación en lo que consiste nuestra plataforma y sobre los resultados de la arquitectura ADD. <br> **Alejandro Alberto Pachas Chavez**<br> **TB1** <br>Documentó de manera detallada el registro de las entrevistas en el Capítulo II, sintetizando los hallazgos cualitativos<br> **Abraham Andres Estrada Cajamune**<br>**TB1:** Además, fue responsable de la especificación de 10 Technical Stories para los Constraints en el Capítulo IV, utilizando la sintaxis Gherkin (Given-When-Then) para comunicar de forma objetiva las reglas técnicas a desarrolladores y stakeholders.<br> **Alessandro Netto Zevallos Linares**<br>**TB1:** Me encargué de la redacción del documento del proyecto, organizando la información de manera clara y coherente, describiendo la idea principal, los objetivos y la propuesta de solución, utilizando un lenguaje adecuado para facilitar la comprensión por parte de distintos públicos. | **TB1:** El equipo concluye que la documentación formal y estructurada es el pilar de la transparencia en ingeniería de software. A través de la redacción del Lean UX Canvas (**Capítulo I**), los artefactos de Needfinding (**Capítulo II**) y el Software Design de nivel estratégico (**Capítulo IV**), logramos sintetizar información compleja en documentos claros y trazables. El uso de estándares como **Gherkin** y el modelo **C4** en el diseño de software asegura que la comunicación escrita sea objetiva, permitiendo que tanto stakeholders de negocio como desarrolladores técnicos comprendan el ecosistema de Oryxen sin ambigüedades | |
 
 <br>
 
@@ -1542,530 +1561,3812 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 ---
 
+
+
 # Capítulo V: Tactical-Level Software Design
 
-## 5.1. Bounded Context: Auth & Identity Integration
+## 5.2. Bounded Context: Plant Management
 
-**Descripción:** Este bounded context se encarga de integrar el backend de **Oryxen** con un servicio externo de **IAM (Identity and Access Management)**, similar a una solución administrada como AWS IAM/Cognito, Auth0 o Firebase Authentication. La autenticación, federación OAuth2, emisión de tokens, gestión de credenciales, roles, claims y sesiones no se implementan directamente dentro del backend de Oryxen, sino que se delegan al proveedor externo de IAM. El backend conserva únicamente la información de perfil necesaria para el dominio, el identificador externo del usuario y las reglas de autorización que conectan la identidad validada con los bounded contexts de Plant Management, Device Management, Subscription, Notification y Community.
+El bounded context de **Plant Management** representa el núcleo encargado de la gestión del catálogo de plantas de los usuarios dentro de la plataforma Oryxen. Este contexto permite registrar nuevas plantas, editar perfiles, definir configuraciones y parámetros esenciales (como umbrales de humedad), y ofrecer una visualización unificada del estado de salud de toda la colección botánica del usuario.
 
-### 5.1.1. Domain Layer
+### 5.2.1. Domain Layer
 
-#### Aggregate 1: User
+La capa de dominio del bounded context **Plant Management** contiene las clases que modelan el comportamiento principal relacionado con la creación y administración de los perfiles de plantas, garantizando las reglas de negocio del inventario botánico.
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| User | Entity/Aggregate Root | Modela la referencia local de un usuario de Oryxen, almacenando el identificador entregado por el IAM externo, datos de perfil y preferencias básicas del dominio. |
+**a. Entity / Aggregate Root:**
 
-**Atributos de User:**
+**Nombre de la clase:** `PlantProfile`
+**Paquete:** `com.upc.oryxen.plantmanagement.domain.model.aggregates`
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| id | UUID | Private | Identificador único del usuario. |
-| fullName | String | Private | Nombre completo mostrado en la aplicación. |
-| email | String | Private | Correo electrónico único asociado a la cuenta. |
-| externalIamId | String | Private | Identificador único del usuario en el proveedor externo de IAM. |
-| authProvider | AuthProvider | Private | Proveedor de autenticación federado mediante el IAM externo. |
-| role | Role | Private | Rol o claim sincronizado desde el IAM externo para controlar accesos en Oryxen. |
-| status | AccountStatus | Private | Estado local de la cuenta dentro del dominio de Oryxen. |
-| createdAt | DateTime | Private | Fecha de creación de la cuenta. |
-| lastLoginAt | DateTime | Private | Fecha del último acceso exitoso. |
+**Propósito:** Representa el perfil de una planta registrada por un usuario, agrupando su información taxonómica, ubicación y estado. Constituye el Aggregate Root del bounded context.
 
-**Métodos de User:**
+**Atributos:**
+*   `plantId: Long` → Identificador único de la planta.
+*   `userId: Long` → Identificador del usuario propietario.
+*   `name: String` → Nombre asignado a la planta.
+*   `species: String` → Especie botánica de la planta.
+*   `location: String` → Ubicación física (ej. sala, balcón).
+*   `status: PlantStatus` → Estado del perfil (Activo, Archivado).
+*   `createdAt: DateTime` → Fecha de registro.
+*   `updatedAt: DateTime` → Última modificación.
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| Constructor | Void | Public | Construye una entidad User con los datos requeridos. |
-| linkExternalIdentity | Void | Public | Asocia el usuario local con el identificador entregado por el IAM externo. |
-| updateProfile | Void | Public | Actualiza información básica del perfil. |
-| assignRole | Void | Public | Asigna o modifica el rol del usuario. |
-| activateAccount | Void | Public | Cambia el estado de la cuenta a activo. |
-| deactivateAccount | Void | Public | Deshabilita temporalmente la cuenta. |
-| registerLogin | Void | Public | Registra la fecha y hora del último inicio de sesión. |
+**Métodos:**
+*   `updateProfile(name, species, location)` → Actualiza la información básica de la planta.
+*   `archive()` → Marca la planta como eliminada lógicamente.
 
-#### Value Object 1: Role
+**Relaciones:**
+*   Un `PlantProfile` pertenece a un solo `UserAccount`.
+*   Un `PlantProfile` tiene una única `PlantConfiguration`.
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| Role | Value Object | Define el nivel de acceso del usuario dentro de Oryxen y habilita permisos según su tipo de cuenta. |
+**b. Entities del dominio:**
 
-**Atributos de Role:**
+**Nombre de la clase:** `PlantConfiguration`
+**Propósito:** Representa los parámetros y umbrales de cuidado específicos para el perfil de una planta.
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| value | String | Private | Valor del rol: FREE_USER, PREMIUM_USER o ADMIN. |
+**c. Value Objects:**
 
-**Métodos de Role:**
+**Nombre de la clase:** `PlantStatus`
+**Propósito:** Representa el estado en el que se encuentra el registro de la planta en el sistema.
+**Valores posibles:**
+*   `ACTIVE`
+*   `ARCHIVED`
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| Constructor | Void | Public | Crea un rol con un valor permitido. |
-| equals | Boolean | Public | Compara el rol actual con otro rol. |
-| canAccessPremiumFeatures | Boolean | Public | Determina si el rol puede acceder a funcionalidades premium. |
+**d. Referencias externas del dominio:**
 
-#### Value Object 2: AuthProvider
+Dentro del contexto Plant Management se utilizan entidades provenientes de otros bounded contexts.
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| AuthProvider | Value Object | Identifica el proveedor federado utilizado por el IAM externo para autenticar al usuario. |
+*   **UserAccount** (Origen: Auth & Identity): Representa al propietario de las plantas.
+*   **Device** (Origen: Device Management IoT): Representa el sensor físico vinculado para su monitoreo.
 
-**Atributos de AuthProvider:**
+**e. Commands del dominio:**
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| value | String | Private | Valor del proveedor: GOOGLE, EMAIL, APPLE u otro proveedor habilitado en el IAM externo. |
-| externalProviderId | String | Private | Identificador entregado por el proveedor externo, cuando aplica. |
+**Paquete:** `com.upc.oryxen.plantmanagement.domain.model.commands`
+*   `CreatePlantProfileCommand`: Representa la intención de registrar una nueva planta.
+*   `UpdatePlantProfileCommand`: Representa la intención de editar información básica.
+*   `DeletePlantProfileCommand`: Representa la intención de archivar una planta.
+*   `ConfigurePlantParametersCommand`: Representa la intención de definir umbrales de humedad.
 
-**Métodos de AuthProvider:**
+**f. Queries del dominio:**
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| Constructor | Void | Public | Crea un proveedor de autenticación válido. |
-| isExternal | Boolean | Public | Indica si la autenticación proviene de un proveedor externo. |
+*   `GetPlantProfileByIdQuery`: Obtener una planta específica.
+*   `GetAllPlantsByUserIdQuery`: Obtener el catálogo completo de plantas de un usuario.
 
-#### Entity 1: UserAccessGrant
+**g. Domain Services:**
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| UserAccessGrant | Entity | Representa una autorización local derivada de los roles o claims emitidos por el IAM externo para habilitar funcionalidades de Oryxen. |
+*   `PlantCommandService`: Define las operaciones de escritura relacionadas a la gestión de plantas.
+*   `PlantQueryService`: Define las operaciones de lectura del catálogo de plantas.
 
-**Atributos de UserAccessGrant:**
+**h. Repository:**
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| id | UUID | Private | Identificador único del permiso local. |
-| userId | UUID | Private | Usuario propietario del permiso. |
-| claimName | String | Private | Nombre del claim recibido desde el IAM externo. |
-| claimValue | String | Private | Valor del claim utilizado para autorización local. |
-| expiresAt | DateTime | Private | Fecha de expiración del permiso sincronizado. |
+*   `IPlantProfileRepository`: Interfaz para gestionar la persistencia y ciclo de vida de los perfiles.
 
-**Métodos de UserAccessGrant:**
+### 5.2.2. Interface Layer
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| Constructor | Void | Public | Crea un permiso local asociado a un usuario. |
-| isExpired | Boolean | Public | Evalúa si el permiso sincronizado ya venció. |
-| grantsAccessTo | Boolean | Public | Verifica si el claim habilita una funcionalidad específica de Oryxen. |
+La Interface Layer contiene los controladores REST responsables de exponer las funcionalidades de gestión de plantas consumidas por las aplicaciones móviles y web.
 
-#### Value Object 3: AccountStatus
+**a. PlantController**
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| AccountStatus | Value Object | Controla el estado operativo de una cuenta de usuario en Oryxen. |
+**Paquete:** `com.upc.oryxen.plantmanagement.interfaces.rest`
+**Propósito:** Exponer endpoints relacionados con el catálogo de plantas.
 
-**Atributos de AccountStatus:**
+**Dependencias:**
+*   `PlantCommandService`
+*   `PlantQueryService`
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| value | String | Private | Valor del estado: ACTIVE, PENDING_VERIFICATION, SUSPENDED o DELETED. |
+**Endpoints expuestos:**
+*   `POST /api/v1/plants` → Registrar nueva planta.
+*   `PUT /api/v1/plants/{plantId}` → Actualizar información de la planta.
+*   `DELETE /api/v1/plants/{plantId}` → Eliminar (archivar) planta.
+*   `PUT /api/v1/plants/{plantId}/configuration` → Configurar parámetros básicos.
+*   `GET /api/v1/users/{userId}/plants` → Obtener dashboard unificado de plantas.
 
-**Métodos de AccountStatus:**
+**b. Resources / DTOs:**
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| Constructor | Void | Public | Crea un estado de cuenta válido. |
-| allowsLogin | Boolean | Public | Indica si la cuenta puede iniciar sesión. |
+*   `PlantProfileResource`: Representa la información de la planta enviada al frontend.
+*   `CreatePlantProfileResource`: Representa los datos requeridos para registrar una planta.
+*   `PlantConfigurationResource`: Representa la estructura de los umbrales paramétricos.
 
-### 5.1.2. Interface Layer
+**c. Assemblers:**
 
-#### Controller 1: AuthController
+*   `PlantProfileResourceFromEntityAssembler`: Transforma la entidad `PlantProfile` en un recurso REST.
+*   `CreatePlantProfileCommandFromResourceAssembler`: Transforma el request REST en comando de dominio.
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| AuthController | Controller | Expone endpoints para iniciar flujos de autenticación y validar callbacks/tokens emitidos por el IAM externo. |
+### 5.2.3. Application Layer
 
-**Atributos de AuthController:**
+Coordina los casos de uso para administrar la colección de plantas del usuario.
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| authService | AuthService | Private | Servicio encargado de coordinar la integración con el IAM externo. |
-| iamTokenValidator | IamTokenValidator | Private | Servicio responsable de validar tokens emitidos por el proveedor externo de IAM. |
-| userMapper | UserMapper | Private | Convierte entidades de dominio en DTOs de respuesta. |
+**Capacidades principales del contexto:**
+*   Registrar perfiles de plantas.
+*   Editar y archivar plantas existentes.
+*   Configurar umbrales vitales (ej. humedad).
+*   Listar las plantas en una vista consolidada.
 
-**Métodos de AuthController:**
+**a. Command Handlers / Command Services:**
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| startLogin | ResponseEntity | Public | Redirige o inicializa el flujo de autenticación administrado por el IAM externo. |
-| handleCallback | ResponseEntity | Public | Procesa el callback del IAM externo y sincroniza la identidad local. |
-| validateSession | ResponseEntity | Public | Valida el token recibido desde clientes web o móviles. |
-| logout | ResponseEntity | Public | Solicita el cierre de sesión al IAM externo cuando corresponde. |
+`PlantCommandServiceImpl` maneja:
+*   `handle(CreatePlantProfileCommand)`: Valida campos, crea la entidad `PlantProfile` y persiste.
+*   `handle(UpdatePlantProfileCommand)`: Busca la planta, aplica cambios, modifica `updatedAt` y guarda.
+*   `handle(DeletePlantProfileCommand)`: Ejecuta un borrado lógico cambiando el `PlantStatus` a `ARCHIVED`.
 
-#### Controller 2: UserIdentityController
+**b. Query Handlers / Query Services:**
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| UserIdentityController | Controller | Gestiona operaciones relacionadas con el perfil de identidad, consulta de usuario autenticado y administración de estado de cuenta. |
+`PlantQueryServiceImpl` maneja:
+*   `handle(GetAllPlantsByUserIdQuery)`: Retorna la lista organizada de plantas para el usuario autenticado.
 
-**Atributos de UserIdentityController:**
+**c. Flujos principales del negocio:**
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| userService | UserService | Private | Servicio encargado de la gestión de datos de identidad. |
-| authorizationService | AuthorizationService | Private | Servicio para validar roles y permisos. |
+**Flujo de creación de perfil de planta:**
+*   El frontend envía los datos básicos de la nueva planta.
+*   Se construye `CreatePlantProfileCommand`.
+*   `PlantCommandServiceImpl` valida que el usuario no exceda su límite de plantas (según plan).
+*   Se crea la entidad `PlantProfile`.
+*   Se persiste mediante `IPlantProfileRepository`.
+*   Se retorna el recurso creado al cliente.
 
-**Métodos de UserIdentityController:**
+### 5.2.4. Infrastructure Layer
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| getCurrentUser | ResponseEntity | Public | Retorna los datos del usuario autenticado. |
-| updateProfile | ResponseEntity | Public | Actualiza datos básicos del perfil. |
-| changeRole | ResponseEntity | Public | Modifica el rol de un usuario, restringido a administradores. |
-| deactivateAccount | ResponseEntity | Public | Desactiva la cuenta del usuario. |
+Contiene los componentes responsables de la persistencia de datos del catálogo botánico y la integración con otras áreas de la arquitectura.
 
-### 5.1.3. Application Layer
+**a. Repositorios de persistencia:**
+*   `PlantProfileRepositoryImpl`: Implementa la persistencia de los perfiles.
+*   `PlantConfigurationRepositoryImpl`: Implementa la persistencia de las configuraciones paramétricas.
 
-#### Service 1: AuthService
+**b. ORM Context:**
+*   `PlantDbContext`: Punto central de acceso a base de datos (mediante Entity Framework Core) para plantas y configuraciones.
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| AuthService | Service | Coordina la sincronización entre Oryxen y el proveedor externo de IAM, sin administrar credenciales directamente. |
+**c. Persistencia de entidades:**
+Las entidades del contexto se encuentran mapeadas utilizando tecnologías ORM.
+**Entidades persistidas:**
+*   `PlantProfile`
+*   `PlantConfiguration`
 
-**Atributos de AuthService:**
+**d. Diseño de persistencia:**
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| userRepository | UserRepository | Private | Repositorio para consultar y persistir usuarios. |
-| userAccessGrantRepository | UserAccessGrantRepository | Private | Repositorio para persistir permisos locales derivados de claims externos. |
-| externalIamService | ExternalIamService | Private | Servicio externo encargado de autenticar, federar y emitir tokens. |
-| iamTokenValidator | IamTokenValidator | Private | Servicio para validar JWTs, roles y claims emitidos por el IAM externo. |
+**Tabla principal:** `plant_profiles`
+**Columnas:**
+*   `plant_id` (PK)
+*   `user_id` (FK)
+*   `name`
+*   `species`
+*   `location`
+*   `status`
+*   `created_at`
+*   `updated_at`
 
-**Métodos de AuthService:**
+**Tabla relacionada:** `plant_configurations`
+**Columnas:**
+*   `config_id` (PK)
+*   `plant_id` (FK hacia `plant_profiles`)
+*   `min_humidity`
+*   `max_humidity`
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| startAuthentication | AuthRedirect | Public | Solicita al IAM externo el inicio del flujo de autenticación. |
-| synchronizeExternalUser | User | Public | Crea o actualiza el perfil local a partir de la identidad validada por el IAM. |
-| synchronizeClaims | Void | Public | Sincroniza roles o claims externos como permisos locales de Oryxen. |
-| validateSession | AuthResult | Public | Valida una sesión con base en el token emitido por el IAM externo. |
-| logout | Void | Public | Coordina el cierre de sesión con el proveedor externo cuando aplica. |
+**e. Integración con otros bounded contexts:**
+*   **Identity and Access Management:** Para validación de usuarios propietarios mediante tokens.
+*   **Device Management IoT:** Para asociar el perfil de planta creado con su hardware respectivo.
+*   **Analysis & Reporting:** Exportación de inventario para reportes de largo plazo.
 
-#### Service 2: UserService
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| UserService | Service | Gestiona operaciones de perfil, estado de cuenta y asignación de roles de usuario. |
+El Component Diagram del bounded context Plant Management representa la descomposición del contenedor backend encargado del registro y administración del catálogo botánico.
 
-**Atributos de UserService:**
+**Componentes principales:**
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| userRepository | UserRepository | Private | Repositorio para recuperar y actualizar usuarios. |
-| authorizationService | AuthorizationService | Private | Servicio para validar permisos de operación. |
+*   **Plant REST API Component**: Expone endpoints REST relacionados a plantas mediante `PlantController`.
+*   **Plant Transformation Component**: Encargado de transformar datos entre DTOs (`PlantProfileResource`), comandos y entidades mediante *Assemblers*.
+*   **Plant Command Processing Component**: Implementado por `PlantCommandServiceImpl`. Orquesta la creación y edición.
+*   **Plant Query Processing Component**: Implementado por `PlantQueryServiceImpl`. Gestiona las consultas al dashboard.
+*   **Plant Domain Component**: Representa el núcleo del dominio, albergando el agregado `PlantProfile`.
+*   **Plant Persistence Component**: Gestiona la persistencia en base de datos mediante repositorios ORM.
 
-**Métodos de UserService:**
+**Relaciones entre componentes:**
+*   `Plant REST API Component` → `Plant Transformation Component`
+*   `Plant REST API Component` → `Plant Command Processing Component`
+*   `Plant REST API Component` → `Plant Query Processing Component`
+*   `Plant Command Processing Component` → `Plant Domain Component`
+*   `Plant Command Processing Component` → `Plant Persistence Component`
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| getUserById | User | Public | Recupera un usuario por identificador. |
-| getUserByEmail | User | Public | Recupera un usuario por correo electrónico. |
-| updateProfile | User | Public | Actualiza información de perfil. |
-| assignRole | User | Public | Asigna un rol a un usuario existente. |
-| deactivateAccount | Void | Public | Desactiva una cuenta de usuario. |
+**Diagrama de Componentes:**
+![Component Diagram - Plant Management](./assets/Chapter-5/C4_component_plantManagement.png)
 
-#### Service 3: IamTokenValidator
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| IamTokenValidator | Service | Valida tokens JWT emitidos por el proveedor externo de IAM y extrae claims necesarios para autorización local. |
+En esta sección se presentan los diagramas a nivel de código del bounded context Plant Management, visualizando el detalle del dominio y la persistencia de las plantas.
 
-**Atributos de IamTokenValidator:**
+**5.2.6.1. Bounded Context Domain Layer Class Diagrams**
 
-| Nombre | Tipo de dato | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| iamSettings | IamSettings | Private | Configuración del issuer, audience y JWKS del proveedor externo. |
-| externalIamService | ExternalIamService | Private | Cliente para recuperar llaves públicas y metadatos del IAM. |
+El diagrama UML del Domain Layer muestra al agregado principal `PlantProfile`, vinculando sus configuraciones, validaciones de interfaz y servicios de dominio.
 
-**Métodos de IamTokenValidator:**
+**Relaciones:**
+*   `PlantProfile` es el Aggregate Root del contexto.
+*   `PlantProfile` contiene una única `PlantConfiguration`.
+*   `PlantCommandService` utiliza `IPlantProfileRepository`.
+*   `PlantStatus` representa el estado de vida del registro.
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| validateAccessToken | ClaimsPrincipal | Public | Valida firma, expiración, issuer, audience y claims del JWT externo. |
-| extractExternalUserId | String | Public | Obtiene el identificador de usuario emitido por el IAM. |
-| extractRoles | List | Public | Obtiene roles o grupos definidos en el IAM externo. |
+**Diagrama UML de Clases (Domain Layer):**
+![UML Class Diagram - Plant Management](./assets/Chapter-5/UML_planManagement.png)
 
-### 5.1.4. Infrastructure Layer
+**5.2.6.2. Bounded Context Database Design Diagram**
 
-#### Repository 1: UserRepositoryImpl
+El diagrama de base de datos representa la estructura relacional (ERD) utilizada para almacenar los perfiles y umbrales de humedad.
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| UserRepositoryImpl | Repository | Implementa la persistencia de usuarios usando Entity Framework Core y la base de datos relacional de Oryxen. |
+**Relaciones entre tablas:**
+*   `user_profiles (1)` ──── `(*) plant_profiles`
+*   `plant_profiles (1)` ──── `(1) plant_configurations`
 
-**Métodos de UserRepositoryImpl:**
+**Diagrama de base de datos (ERD):**
+![ERD - Plant Management](./assets/Chapter-5/ERD_plantManagement.png)
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| findById | User | Public | Recupera un usuario por su identificador. |
-| findByEmail | User | Public | Recupera un usuario por correo electrónico. |
-| existsByEmail | Boolean | Public | Verifica si una cuenta ya existe. |
-| save | User | Public | Persiste una nueva cuenta de usuario. |
-| update | User | Public | Actualiza datos de identidad existentes. |
+## 5.3. Bounded Context: Device Management IoT
 
-#### Repository 2: UserAccessGrantRepositoryImpl
+El bounded context de **Device Management IoT** representa el núcleo encargado de la administración de dispositivos IoT, sensores y telemetría dentro de la plataforma. Este contexto permite registrar dispositivos, emparejarlos con cuentas de usuario, gestionar sensores asociados, recolectar lecturas en tiempo real y ejecutar procesos de monitoreo y diagnóstico.
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| UserAccessGrantRepositoryImpl | Repository | Gestiona la persistencia de permisos locales derivados de roles o claims emitidos por el IAM externo. |
+Asimismo, este bounded context garantiza la operación segura, confiable y consistente de los dispositivos IoT mediante servicios de sincronización, control de conectividad, sesiones de diagnóstico y persistencia de datos de sensores.
 
-**Métodos de UserAccessGrantRepositoryImpl:**
+### 5.3.1. Domain Layer
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| findByUserId | List | Public | Recupera permisos locales asociados a un usuario. |
-| save | UserAccessGrant | Public | Guarda un permiso local sincronizado desde el IAM externo. |
-| replaceByUserId | Void | Public | Reemplaza los permisos locales al recibir claims actualizados. |
-| deleteExpired | Void | Public | Elimina permisos expirados según política de seguridad. |
+La capa de dominio del bounded context **Device Management IoT** contiene las clases que modelan el comportamiento principal de dispositivos IoT, sensores, lecturas y sesiones de diagnóstico.
 
-### External Services
+Aquí residen las reglas de negocio relacionadas con el ciclo de vida de los dispositivos, la administración de sensores y la validación de lecturas recolectadas en tiempo real.
 
-#### Service 1: ExternalIamService
+**a. Entity / Aggregate Root:**
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| ExternalIamService | External Service | Servicio administrado externo de IAM encargado de autenticar usuarios, federar proveedores OAuth2, emitir tokens, administrar roles/claims y controlar sesiones. |
+**Nombre de la clase:** `Device`
 
-**Métodos de ExternalIamService:**
+**Paquete:** `com.upc.iot.device.domain.model.aggregates`
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| startAuthenticationFlow | AuthRedirect | Public | Inicializa el flujo de autenticación en el proveedor IAM. |
-| validateAuthorizationCode | ExternalUserInfo | Public | Valida el código OAuth2 y obtiene el perfil externo. |
-| validateAccessToken | ClaimsPrincipal | Public | Verifica un token emitido por el proveedor IAM. |
-| logoutSession | Void | Public | Cierra o revoca la sesión administrada externamente. |
+**Propósito:** Representa un dispositivo IoT registrado, emparejado con una cuenta y encargado de administrar sensores asociados.
 
-#### Service 2: EmailService
+**Atributos:**
 
-| Nombre | Categoría | Propósito |
-| --- | --- | --- |
-| EmailService | External Service | Envía correos transaccionales propios de Oryxen, como alertas de seguridad o notificaciones de actividad asociadas a la cuenta. La verificación de correo y recuperación de contraseña pertenecen al IAM externo. |
+- `deviceId: DeviceId` → Identificador único del dispositivo.
+- `ownerId: Guid` → Identificador del usuario propietario.
+- `name: String` → Nombre asignado al dispositivo.
+- `status: DeviceStatus` → Estado del dispositivo.
+- `pairedAt: DateTime` → Fecha de emparejamiento.
+- `lastSyncAt: DateTime` → Última sincronización de datos.
 
-**Métodos de EmailService:**
+**Métodos:**
 
-| Nombre | Tipo de retorno | Visibilidad | Descripción |
-| --- | --- | --- | --- |
-| sendAccountLinkedEmail | Void | Public | Notifica que una identidad externa fue vinculada correctamente a Oryxen. |
-| sendSecuritySummaryEmail | Void | Public | Envía un resumen de actividad sensible asociada a la cuenta. |
-| sendSecurityAlert | Void | Public | Notifica eventos sensibles, como inicio de sesión desde un nuevo dispositivo. |
+- `pairWithAccount()` → Empareja el dispositivo con una cuenta.
+- `unpair()` → Desempareja el dispositivo.
+- `activate()` → Activa el dispositivo.
+- `deactivate()` → Desactiva el dispositivo.
+- `updateFirmware()` → Aplica una actualización de firmware.
+- `restoreConnection()` → Restaura la conexión perdida.
+- `openDiagnosticSession()` → Inicia una sesión de monitoreo o diagnóstico.
 
-### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+**Relaciones:**
 
-El componente **Auth & Identity Integration** centraliza la comunicación entre Oryxen y el proveedor externo de **IAM**. Los clientes Web App y Mobile App consumen el **AuthController** y el **UserIdentityController**, mientras que el backend valida tokens externos, sincroniza el perfil local y transforma roles/claims del IAM en permisos de dominio. La autenticación, emisión de tokens, credenciales y sesiones permanecen bajo responsabilidad del servicio IAM externo.
+- Un `Device` puede contener múltiples sensores.
+- Un `Device` puede generar múltiples lecturas de sensores.
+- Un `Device` puede tener múltiples sesiones de diagnóstico.
 
-![image](https://github.com/user-attachments/assets/3178abf8-7494-4cde-8c7a-14583a51c3ef)
 
-### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+**b. Referencias externas del dominio:**
 
-A continuación se presentan los diagramas de nivel de código para el bounded context **Auth & Identity Integration**, incluyendo la estructura de clases principales del dominio y el diseño de base de datos que soporta referencias de usuarios, proveedores federados y permisos locales derivados del IAM externo.
+Dentro del contexto Device Management IoT se utilizan referencias provenientes de otros bounded contexts.
 
-#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+**User Account**
 
-El diagrama de clases del dominio muestra a **User** como aggregate root local. Este agregado contiene objetos de valor como **Role**, **AuthProvider** y **AccountStatus**, además de relacionarse con **UserAccessGrant** para representar permisos locales derivados de claims externos. Los servicios de aplicación, como **AuthService** e **IamTokenValidator**, coordinan la validación de identidad contra el IAM externo sin emitir ni almacenar credenciales en Oryxen.
+- Origen: `Identity and Access Management`
+- Propósito: Representa al propietario del dispositivo.
+- Atributos relevantes:
+  - `ownerId`
+  - `email`
+  - `fullName`
 
-![image](https://github.com/user-attachments/assets/7870fb53-32b9-449f-944c-dad16c11f427)
+**Cloud Monitoring Service**
 
+- Origen: `Infrastructure Services`
+- Propósito: Sincronizar telemetría y lecturas con la nube.
+- Atributos relevantes:
+  - `connectionStatus`
+  - `syncTimestamp`
 
-#### 5.1.6.2. Bounded Context Database Design Diagram
 
-El diseño de base de datos del contexto **Auth & Identity Integration** mantiene únicamente referencias locales necesarias para Oryxen: usuarios, proveedores federados y permisos derivados. Las credenciales, refresh tokens y sesiones se mantienen en el proveedor externo de IAM.
+**c. Value Objects:**
 
-![image](https://github.com/user-attachments/assets/5be6bc52-8caf-4531-b0da-45991ff25087)
+`DeviceId`
 
-## 5.2. Bounded Context: Analysis & Reporting  
+Representa el identificador único de un dispositivo IoT.
 
-**Descripción:** Este bounded context se encarga de generar reportes, datasets agregados y visualizaciones a partir de la telemetría producida por los dispositivos IoT de **Oryxen**. Su responsabilidad principal es convertir datos históricos de sensores en información consultable, descargable y comprensible para el usuario, permitiendo analizar tendencias, revisar métricas relevantes y exportar resultados en formatos útiles como PDF o CSV.
+**Atributos:**
 
-### 5.2.1. Domain Layer  
+- `value: Guid/Long`
 
-#### Report  
 
-_Tabla de Report_  
+`SensorId`
 
-| Propiedad     | Valor                                                                                       |
-|---------------|---------------------------------------------------------------------------------------------|
-| **Nombre**    | Report                                                                                      |
-| **Categoría** | Aggregate Root                                                                              |
-| **Propósito** | Representa un reporte generado a partir de la telemetría de los dispositivos IoT.           |
+Representa el identificador único de un sensor dentro de un dispositivo.
 
-_Tabla de atributos de Report_  
+**Atributos:**
 
-| Nombre       | Tipo de dato      | Visibilidad | Descripción                                    |
-|--------------|------------------|-------------|------------------------------------------------|
-| id           | UUID             | Private     | Identificador único del reporte.               |
-| user_id      | UUID             | Private     | FK al usuario dueño del reporte.               |
-| device_id    | UUID (nullable)  | Private     | FK al dispositivo si es un reporte específico. |
-| type         | VARCHAR(50)      | Public      | Tipo: `summary`, `trend`, `custom`.            |
-| title        | VARCHAR(150)     | Public      | Título descriptivo del reporte.                |
-| description  | TEXT             | Public      | Descripción opcional del reporte.              |
-| status       | VARCHAR(20)      | Public      | Estado: `generated`, `pending`, `failed`.      |
-| created_at   | TIMESTAMP        | Private     | Fecha de creación.                             |
-| generated_at | TIMESTAMP NULL   | Private     | Fecha en que se generó el reporte.             |
+- `value: Guid/Long`
 
-_Tabla de métodos de Report_  
 
-| Nombre            | Tipo de retorno | Visibilidad | Descripción                                   |
-|-------------------|-----------------|-------------|-----------------------------------------------|
-| generate()        | Report          | Public      | Inicia el proceso de generación.              |
-| markAsFailed()    | void            | Private     | Marca el reporte como fallido.                |
-| updateTitle(title)| void            | Public      | Cambia título o descripción del reporte.      |
+`DeviceStatus`
+
+Representa el estado operativo del dispositivo.
+
+- `ACTIVE`
+- `DISCONNECTED`
+- `SUSPENDED`
+
+
+`SensorStatus`
+
+Representa el estado operativo de un sensor.
+
+- `ACTIVE`
+- `CALIBRATED`
+- `ERROR`
+
+
+**d. Entities:**
+
+`Sensor`
+
+**Propósito:** Representa un sensor IoT instalado en un dispositivo.
+
+**Atributos:**
+
+- `sensorId: SensorId`
+- `type: SensorType`
+- `status: SensorStatus`
+- `lastCalibrationAt: DateTime`
+- `lastReadingAt: DateTime`
+
+
+`SensorReading`
+
+**Propósito:** Representa una lectura tomada por un sensor en tiempo real.
+
+**Atributos:**
+
+- `readingId: Guid`
+- `sensorId: SensorId`
+- `value: Decimal`
+- `unit: String`
+- `timestamp: DateTime`
+- `errorFlag: Boolean`
+
+
+`DiagnosticSession`
+
+**Propósito:** Representa una sesión de monitoreo o diagnóstico en tiempo real.
+
+**Atributos:**
+
+- `sessionId: Guid`
+- `deviceId: DeviceId`
+- `startedAt: DateTime`
+- `endedAt: DateTime`
+- `isActive: Boolean`
+
+
+**e. Commands del dominio:**
+
+`RegisterDeviceCommand`
+
+**Paquete:** `com.upc.iot.device.domain.model.commands`
+
+**Propósito:** Representa la intención de registrar un nuevo dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+- `ownerId`
+- `name`
+
+
+`PairDeviceCommand`
+
+**Propósito:** Emparejar un dispositivo con una cuenta.
+
+**Atributos:**
+
+- `deviceId`
+- `ownerId`
+
+
+`ActivateDeviceCommand`
+
+**Propósito:** Activar un dispositivo IoT.
+
+**Atributos:**
+
+- `deviceId`
+
+
+`UpdateFirmwareCommand`
+
+**Propósito:** Aplicar una actualización de firmware.
+
+**Atributos:**
+
+- `deviceId`
+- `firmwareVersion`
+
+
+`AddSensorCommand`
+
+**Propósito:** Agregar un sensor a un dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+- `sensorType`
+
+
+`SubmitSensorReadingCommand`
+
+**Propósito:** Registrar una lectura enviada por un sensor.
+
+**Atributos:**
+
+- `sensorId`
+- `value`
+- `unit`
+- `timestamp`
+
+
+`OpenDiagnosticSessionCommand`
+
+**Propósito:** Abrir una sesión de diagnóstico.
+
+**Atributos:**
+
+- `deviceId`
+
+
+**f. Queries del dominio:**
+
+`GetDeviceByIdQuery`
+
+**Propósito:** Obtener un dispositivo por identificador.
+
+**Atributos:**
+
+- `deviceId`
+
+
+`GetSensorsByDeviceQuery`
+
+**Propósito:** Obtener sensores asociados a un dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+
+
+`GetLatestReadingQuery`
+
+**Propósito:** Obtener la última lectura de un sensor.
+
+**Atributos:**
+
+- `sensorId`
+
+
+`GetSensorReadingsQuery`
+
+**Propósito:** Consultar el historial de lecturas de un sensor.
+
+**Atributos:**
+
+- `sensorId`
+
+
+`GetDeviceStatusQuery`
+
+**Propósito:** Obtener el estado y diagnóstico de un dispositivo.
+
+**Atributos:**
+
+- `deviceId`
+
+
+**g. Domain Services:**
+
+`SensorMonitor`
+
+**Paquete:** `com.upc.iot.device.domain.services`
+
+**Propósito:** Gestionar la recolección y validación de datos de sensores en tiempo real.
+
+**Operaciones:**
+
+- `collectReading()`
+- `validateReading()`
+- `syncData()`
+
+
+**h. Repository:**
+
+`IDeviceRepository`
+
+**Paquete:** `com.upc.iot.device.infrastructure.persistence.repositories`
+
+**Propósito:** Gestionar persistencia y ciclo de vida de dispositivos IoT.
+
+**Operaciones:**
+
+- `getByIdAsync()`
+- `saveAsync()`
+- `deleteAsync()`
+
+
+`ISensorRepository`
+
+**Propósito:** Gestionar persistencia de sensores asociados.
+
+**Operaciones:**
+
+- `getByIdAsync()`
+- `saveAsync()`
+- `deleteAsync()`
+
+
+`ISensorReadingRepository`
+
+**Propósito:** Almacenar y recuperar lecturas de sensores.
+
+**Operaciones:**
+
+- `getBySensorId()`
+- `saveAsync()`
+- `deleteOldReadings()`
+
+
+### 5.3.2. Interface Layer
+
+La Interface Layer del bounded context **Device Management IoT** contiene las clases responsables de exponer funcionalidades relacionadas con dispositivos IoT, sensores, lecturas y diagnósticos mediante endpoints REST consumidos por aplicaciones web y móviles.
+
+**a. DeviceController**
+
+**Paquete:** `com.upc.iot.device.interfaces.rest`
+
+**Propósito:** Exponer endpoints relacionados con la gestión de dispositivos IoT.
+
+**Dependencias:**
+
+- `DeviceCommandService`
+- `DeviceQueryService`
+
+**Endpoints expuestos:**
+
+- `GET /api/devices/{deviceId}`
+- `POST /api/devices/register`
+- `POST /api/devices/{deviceId}/pair`
+- `POST /api/devices/{deviceId}/unpair`
+- `POST /api/devices/{deviceId}/activate`
+- `POST /api/devices/{deviceId}/deactivate`
+- `POST /api/devices/{deviceId}/firmware`
+
+
+**b. SensorController**
+
+**Propósito:** Gestionar sensores asociados a dispositivos.
+
+**Endpoints expuestos:**
+
+- `GET /api/sensors/{sensorId}`
+- `POST /api/sensors/device/{deviceId}/add`
+- `DELETE /api/sensors/{sensorId}/remove`
+- `POST /api/sensors/{sensorId}/calibrate`
+- `GET /api/sensors/device/{deviceId}`
+
+
+**c. SensorReadingController**
+
+**Propósito:** Gestionar lecturas de sensores IoT en tiempo real.
+
+**Endpoints expuestos:**
+
+- `GET /api/readings/sensor/{sensorId}/latest`
+- `GET /api/readings/sensor/{sensorId}/history`
+- `POST /api/readings/sensor/{sensorId}/submit`
+- `DELETE /api/readings/sensor/{sensorId}/cleanup`
+
+
+**d. DiagnosticController**
+
+**Propósito:** Gestionar sesiones de diagnóstico y monitoreo.
+
+**Endpoints expuestos:**
+
+- `POST /api/diagnostics/device/{deviceId}/open`
+- `POST /api/diagnostics/session/{sessionId}/close`
+- `GET /api/diagnostics/device/{deviceId}/status`
+- `POST /api/diagnostics/device/{deviceId}/test`
+
+
+**e. Resources / DTOs:**
+
+`DeviceResource`
+
+**Propósito:** Representar información de dispositivos IoT enviada al frontend.
+
+**Atributos:**
+
+- `deviceId`
+- `ownerId`
+- `name`
+- `status`
+- `pairedAt`
+- `lastSyncAt`
+
+
+`SensorResource`
+
+**Propósito:** Representar información de sensores asociados.
+
+**Atributos:**
+
+- `sensorId`
+- `deviceId`
+- `type`
+- `status`
+
+
+`SensorReadingResource`
+
+**Propósito:** Representar lecturas de sensores enviadas al frontend.
+
+**Atributos:**
+
+- `readingId`
+- `sensorId`
+- `value`
+- `unit`
+- `timestamp`
+- `errorFlag`
+
+
+**f. Assemblers:**
+
+`DeviceResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `Device` en recursos REST consumibles por frontend.
+
+
+`RegisterDeviceCommandFromResourceAssembler`
+
+**Propósito:** Transformar recursos REST en `RegisterDeviceCommand`.
+
+
+### 5.3.3. Application Layer
+
+La Application Layer del bounded context **Device Management IoT** coordina los procesos relacionados con dispositivos IoT, sensores, firmware, lecturas y diagnósticos.
+
+**Capacidades principales del contexto:**
+
+- Registrar dispositivos IoT.
+- Emparejar dispositivos con cuentas.
+- Gestionar sensores.
+- Registrar lecturas en tiempo real.
+- Ejecutar diagnósticos y monitoreo.
+- Gestionar sincronización y firmware.
+
+**a. Command Handlers / Command Services:**
+
+`DeviceRegisterCommandHandler`
+
+**Paquete:** `com.upc.iot.device.application.internal.commandservices`
+
+**Propósito:** Registrar un nuevo dispositivo IoT.
+
+**Comando que maneja:**
+
+- `RegisterDeviceCommand`
+
+
+`DevicePairCommandHandler`
+
+**Propósito:** Emparejar un dispositivo con una cuenta.
+
+**Comando que maneja:**
+
+- `PairDeviceCommand`
+
+
+`DeviceUnpairCommandHandler`
+
+**Propósito:** Desemparejar un dispositivo.
+
+**Comando que maneja:**
+
+- `UnpairDeviceCommand`
+
+
+`DeviceActivateCommandHandler`
+
+**Propósito:** Activar un dispositivo IoT.
+
+**Comando que maneja:**
+
+- `ActivateDeviceCommand`
+
+
+`DeviceDeactivateCommandHandler`
+
+**Propósito:** Desactivar un dispositivo IoT.
+
+**Comando que maneja:**
+
+- `DeactivateDeviceCommand`
+
+
+`UpdateFirmwareCommandHandler`
+
+**Propósito:** Aplicar actualización de firmware.
+
+**Comando que maneja:**
+
+- `UpdateFirmwareCommand`
+
+
+`AddSensorCommandHandler`
+
+**Propósito:** Agregar sensores a un dispositivo.
+
+**Comando que maneja:**
+
+- `AddSensorCommand`
+
+
+`RemoveSensorCommandHandler`
+
+**Propósito:** Eliminar sensores asociados.
+
+**Comando que maneja:**
+
+- `RemoveSensorCommand`
+
+
+`CalibrateSensorCommandHandler`
+
+**Propósito:** Calibrar sensores IoT.
+
+**Comando que maneja:**
+
+- `CalibrateSensorCommand`
+
+
+`SubmitSensorReadingCommandHandler`
+
+**Propósito:** Registrar nuevas lecturas de sensores.
+
+**Comando que maneja:**
+
+- `SubmitSensorReadingCommand`
+
+
+`OpenDiagnosticSessionCommandHandler`
+
+**Propósito:** Abrir sesiones de diagnóstico.
+
+**Comando que maneja:**
+
+- `OpenDiagnosticSessionCommand`
+
+
+`CloseDiagnosticSessionCommandHandler`
+
+**Propósito:** Cerrar sesiones de diagnóstico.
+
+**Comando que maneja:**
+
+- `CloseDiagnosticSessionCommand`
+
+
+**b. Query Handlers / Query Services:**
+
+`GetDeviceByIdQueryHandler`
+
+**Propósito:** Obtener dispositivos por identificador.
+
+**Query que maneja:**
+
+- `GetDeviceByIdQuery`
+
+
+`GetSensorsByDeviceQueryHandler`
+
+**Propósito:** Obtener sensores asociados a dispositivos.
+
+**Query que maneja:**
+
+- `GetSensorsByDeviceQuery`
+
+
+`GetLatestReadingQueryHandler`
+
+**Propósito:** Obtener la última lectura registrada de un sensor.
+
+**Query que maneja:**
+
+- `GetLatestReadingQuery`
+
+
+`GetSensorReadingsQueryHandler`
+
+**Propósito:** Consultar historial de lecturas.
+
+**Query que maneja:**
+
+- `GetSensorReadingsQuery`
+
+
+`GetDeviceStatusQueryHandler`
+
+**Propósito:** Obtener estado y diagnóstico de dispositivos.
+
+**Query que maneja:**
+
+- `GetDeviceStatusQuery`
+
+
+**c. Event Handlers:**
+
+`DeviceRegisteredEventHandler`
+
+**Propósito:** Gestionar acciones posteriores al registro de dispositivos.
+
+**Evento:**
+
+- `DeviceRegisteredEvent`
+
+
+`DevicePairedEventHandler`
+
+**Propósito:** Ejecutar acciones posteriores al emparejamiento.
+
+**Evento:**
+
+- `DevicePairedEvent`
+
+
+`DeviceUnpairedEventHandler`
+
+**Propósito:** Ejecutar acciones posteriores al desemparejamiento.
+
+**Evento:**
+
+- `DeviceUnpairedEvent`
+
+
+`FirmwareUpdatedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores a actualización de firmware.
+
+**Evento:**
+
+- `FirmwareUpdatedEvent`
+
+
+`SensorCalibratedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores a calibración de sensores.
+
+**Evento:**
+
+- `SensorCalibratedEvent`
+
+
+`SensorReadingSubmittedEventHandler`
+
+**Propósito:** Gestionar sincronización posterior al envío de lecturas.
+
+**Evento:**
+
+- `SensorReadingSubmittedEvent`
+
+
+`DiagnosticSessionOpenedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores a apertura de sesión.
+
+**Evento:**
+
+- `DiagnosticSessionOpenedEvent`
+
+
+`DiagnosticSessionClosedEventHandler`
+
+**Propósito:** Gestionar acciones posteriores al cierre de sesión.
+
+**Evento:**
+
+- `DiagnosticSessionClosedEvent`
+
+
+**d. Flujos principales del negocio:**
+
+**Flujo de registro y emparejamiento:**
+
+- El frontend registra un nuevo dispositivo.
+- Se construye `RegisterDeviceCommand`.
+- `DeviceRegisterCommandHandler` valida los datos.
+- Se persiste el dispositivo.
+- Se ejecuta `DeviceRegisteredEvent`.
+- El dispositivo puede ser emparejado mediante `PairDeviceCommand`.
+- Se activa monitoreo y sincronización.
+
+
+**Flujo de recolección de lecturas:**
+
+- El sensor envía una nueva lectura.
+- Se ejecuta `SubmitSensorReadingCommand`.
+- `SensorMonitor` valida la lectura.
+- Se persiste `SensorReading`.
+- Se sincroniza telemetría con la nube.
+- Se notifica al sistema de monitoreo.
+
+
+**Flujo de diagnóstico:**
+
+- El usuario inicia una sesión de diagnóstico.
+- Se ejecuta `OpenDiagnosticSessionCommand`.
+- Se crea `DiagnosticSession`.
+- El sistema monitorea sensores en tiempo real.
+- Se generan resultados y estado del dispositivo.
+- La sesión puede cerrarse mediante `CloseDiagnosticSessionCommand`.
+
+
+### 5.3.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context `Device Management IoT` contiene los componentes responsables de persistencia, conectividad IoT y sincronización de telemetría.
+
+Esta capa implementa repositorios, contextos ORM y mecanismos de integración con protocolos y servicios externos.
+
+**a. Repositorios de persistencia:**
+
+`DeviceRepository`
+
+**Paquete:** `com.upc.iot.device.infrastructure.persistence.repositories`
+
+**Propósito:** Persistir y consultar entidades `Device`.
+
+**Interfaz implementada:**
+
+- `IDeviceRepository`
+
+
+`TelemetryRepository`
+
+**Propósito:** Persistir y consultar datos de telemetría.
+
+**Interfaz implementada:**
+
+- `ITelemetryRepository`
+
+
+`ConnectivityRepository`
+
+**Propósito:** Gestionar estados de conectividad de dispositivos.
+
+**Interfaz implementada:**
+
+- `IConnectivityRepository`
+
+
+**b. ORM Context:**
+
+`DeviceDbContext`
+
+**Propósito:** Punto central de acceso a base de datos para dispositivos, sensores y telemetría.
+
+
+**c. Persistencia de entidades:**
+
+Las entidades del contexto se encuentran mapeadas utilizando tecnologías ORM.
+
+**Entidades persistidas:**
+
+- `Device`
+- `Sensor`
+- `SensorReading`
+- `DiagnosticSession`
+
+
+**d. Diseño de persistencia:**
+
+**Tabla principal:** `devices`
+
+**Columnas:**
+
+- `device_id`
+- `owner_id`
+- `name`
+- `status`
+- `paired_at`
+- `last_sync_at`
+
+**Restricciones:**
+
+- `device_id` → Primary Key
+- `owner_id` → Foreign Key
+
+**Campos obligatorios:**
+
+- `owner_id`
+- `name`
+- `status`
+
+
+**Tabla relacionada:** `sensors`
+
+**Columnas:**
+
+- `sensor_id`
+- `device_id`
+- `type`
+- `status`
+- `last_calibration_at`
+- `last_reading_at`
+
+
+**Tabla relacionada:** `sensor_readings`
+
+**Columnas:**
+
+- `reading_id`
+- `sensor_id`
+- `value`
+- `unit`
+- `timestamp`
+- `error_flag`
+
+
+**Tabla relacionada:** `diagnostic_sessions`
+
+**Columnas:**
+
+- `session_id`
+- `device_id`
+- `started_at`
+- `ended_at`
+- `is_active`
+
+
+**e. Integración con otros bounded contexts:**
+
+La infraestructura del contexto Device Management IoT depende de:
+
+- `Cloud Monitoring Service`
+- `MQTT Broker`
+- `IoT Gateway`
+- `Identity and Access Management`
+- Servicios de sincronización en tiempo real
+
+
+### 5.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Device Management IoT` representa la descomposición del contenedor backend encargado de la administración de dispositivos, sensores y telemetría IoT.
+
+**Componentes principales:**
+
+**IoT REST API Component:**
+
+Expone endpoints REST relacionados con dispositivos, sensores y diagnósticos.
+
+**Responsabilidades:**
+
+- Recibir solicitudes del frontend.
+- Gestionar dispositivos IoT.
+- Gestionar sensores y lecturas.
+- Retornar información de monitoreo.
+
+
+**IoT Transformation Component:**
+
+Encargado de transformar DTOs, commands y entidades.
+
+**Incluye:**
+
+- `DeviceResource`
+- `SensorResource`
+- `SensorReadingResource`
+- Assemblers
+
+
+**IoT Command Processing Component:**
+
+Implementado por los distintos `CommandHandlers`.
+
+**Responsabilidades:**
+
+- Procesar comandos de dispositivos.
+- Gestionar firmware.
+- Ejecutar diagnósticos.
+- Registrar lecturas.
+
+
+**IoT Query Processing Component:**
+
+Implementado por los `QueryHandlers`.
+
+**Responsabilidades:**
+
+- Consultar dispositivos.
+- Recuperar sensores.
+- Obtener telemetría y lecturas.
+
+
+**IoT Domain Component:**
+
+Representa el núcleo del dominio.
+
+### Incluye:
+
+- `Device`
+- `Sensor`
+- `SensorReading`
+- `DiagnosticSession`
+- `DeviceStatus`
+- `SensorStatus`
+
+
+**IoT Persistence Component:**
+
+Gestiona persistencia mediante repositorios y ORM.
+
+
+**IoT Connectivity Component:**
+
+Representa integración con infraestructura y conectividad IoT.
+
+**Incluye:**
+
+- `MQTT Broker`
+- `IoT Gateway`
+- `Cloud Monitoring Service`
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_DeviceManagementIoT](https://i.postimg.cc/1Xpzd1k2/structurizr-106438-Container-001-2.png)
+
+
+**Relaciones entre componentes:**
+
+- `IoT REST API Component → IoT Transformation Component`
+- `IoT REST API Component → IoT Command Processing Component`
+- `IoT REST API Component → IoT Query Processing Component`
+- `IoT Command Processing Component → IoT Domain Component`
+- `IoT Command Processing Component → IoT Persistence Component`
+- `IoT Command Processing Component → IoT Connectivity Component`
+- `IoT Query Processing Component → IoT Persistence Component`
+
+
+### 5.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Device Management IoT`, permitiendo visualizar el detalle del dominio, persistencia y relaciones entre dispositivos, sensores y telemetría.
+
+
+#### 5.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Device Management IoT` muestra al agregado principal `Device`, encargado de representar dispositivos IoT y su relación con sensores, lecturas y sesiones de diagnóstico.
+
+Además, se incluyen:
+
+- `Sensor`
+- `SensorReading`
+- `DiagnosticSession`
+- Value Objects.
+- Commands y Queries.
+- Servicios del dominio.
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_DeviceManagementIoT](https://i.postimg.cc/QdF2NJtx/VLJDRjiy4-Bph-AGXVll-WBx-A9-N8-Gt-Y9ar-X8460-E6-ZF6sc-ZR46-H0hbo-OBHzzqh-Kqf0bm-Zd4ukp-FZc-QMkl4-CZjj-QPqoi-KUse-RZIz4-PRg.png)
+
+
+**Relaciones:**
+
+- `Device` es el Aggregate Root del contexto.
+- `Device` contiene múltiples sensores.
+- `Sensor` genera múltiples `SensorReading`.
+- `Device` puede abrir múltiples `DiagnosticSession`.
+- `SensorMonitor` utiliza `ISensorReadingRepository`.
+- Los CommandHandlers interactúan con repositorios del dominio.
+
+
+#### 5.3.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Device Management IoT` representa la estructura relacional utilizada para almacenar dispositivos, sensores, lecturas y sesiones de diagnóstico.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_DeviceManagementIoT](https://i.postimg.cc/MK6yNRHs/2.png)
+
+
+**Tabla principal:** `devices`
+
+**Atributos:**
+
+- `device_id`
+- `owner_id`
+- `name`
+- `status`
+- `paired_at`
+- `last_sync_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`device_id`)
+- FOREIGN KEY (`owner_id`)
+- NOT NULL en:
+  - `owner_id`
+  - `name`
+  - `status`
+
+
+**Tabla relacionada:** `sensors`
+
+**Atributos:**
+
+- `sensor_id`
+- `device_id`
+- `type`
+- `status`
+- `last_calibration_at`
+- `last_reading_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`sensor_id`)
+- FOREIGN KEY (`device_id`) → `devices(device_id)`
+
+
+**Tabla relacionada:** `sensor_readings`
+
+**Atributos:**
+
+- `reading_id`
+- `sensor_id`
+- `value`
+- `unit`
+- `timestamp`
+- `error_flag`
+
+**Constraints:**
+
+- PRIMARY KEY (`reading_id`)
+- FOREIGN KEY (`sensor_id`) → `sensors(sensor_id)`
+
+
+**Tabla relacionada:** `diagnostic_sessions`
+
+**Atributos:**
+
+- `session_id`
+- `device_id`
+- `started_at`
+- `ended_at`
+- `is_active`
+
+**Constraints:**
+
+- PRIMARY KEY (`session_id`)
+- FOREIGN KEY (`device_id`) → `devices(device_id)`
+
+
+**Relaciones entre tablas:**
+
+- `devices (1) ──── (*) sensors`
+- `sensors (1) ──── (*) sensor_readings`
+- `devices (1) ──── (*) diagnostic_sessions`
+
 
 ---
 
-#### ReportDataSet  
+## 5.4. Bounded Context: Artificial Intelligence (AI)
 
-_Tabla de ReportDataSet_  
+El bounded context de **Artificial Intelligence (AI)** representa el núcleo inteligente de la plataforma Oryxen. Este permite al sistema ser capaz de dar diagnóstico visual, recomendaciones automatizadas y asistencia conversacional mediante modelos de inteligencia artificial aplicados al cuidado de plantas. Este contexto permite analizar imágenes, interpretar métricas provenientes de sensores IoT y ofrecer recomendaciones personalizadas a los usuarios.
 
-| Propiedad     | Valor                                                                 |
-|---------------|-----------------------------------------------------------------------|
-| **Nombre**    | ReportDataSet                                                         |
-| **Categoría** | Entity                                                                |
-| **Propósito** | Representa un conjunto de métricas asociadas a un reporte específico. |
+### 5.4.1. Domain Layer
 
-_Tabla de atributos de ReportDataSet_  
+La capa de dominio del bounded context **Artificial Intelligence** contiene las clases que modelan el comportamiento inteligente del sistema, incluyendo diagnósticos visuales, recomendaciones automáticas y conversaciones generadas mediante IA.
 
-| Nombre       | Tipo de dato   | Visibilidad | Descripción                                       |
-|--------------|---------------|-------------|---------------------------------------------------|
-| id           | UUID          | Private     | Identificador del dataset.                        |
-| report_id    | UUID          | Private     | FK a `Report`.                                    |
-| metric_type  | VARCHAR(50)   | Public      | Tipo de métrica (`temperature`, `humidity`).      |
-| aggregated   | JSON/Object   | Public      | Datos agregados (promedio, min, max, std dev).    |
-| generated_at | TIMESTAMP     | Private     | Fecha de generación del dataset.                  |
+**a. Entity / Aggregate Root:**
 
-_Tabla de métodos de ReportDataSet_  
+**Nombre de la clase:** `PlantDiagnosis`
 
-| Nombre            | Tipo de retorno | Visibilidad | Descripción                                         |
-|-------------------|-----------------|-------------|-----------------------------------------------------|
-| calculateStats()  | void            | Public      | Aplica funciones de agregación sobre los registros. |
-| attachToReport()  | void            | Private     | Vincula dataset con un reporte.                     |
+**Paquete: `com.upc.oryxen.ai.domain.model.aggregates`
+
+**Propósito:** Representa el resultado de un diagnóstico inteligente realizado sobre una planta utilizando imágenes y datos de sensores. Constituye el agregado raíz del bounded context AI.
+
+**Atributos:**
+
+- `diagnosisId: Long` → Identificador único del diagnóstico.
+- `plantId: Long` → Identificador de la planta analizada.
+- `imageUrl: String` → URL de la imagen procesada.
+- `healthStatus: HealthStatus` → Estado de salud detectado.
+- `detectedDisease: String` → Enfermedad o problema identificado.
+- `recommendation: String` → Recomendación generada por IA.
+- `createdAt: DateTime` → Fecha de creación del diagnóstico.
+
+**Métodos:**
+
+- `generateDiagnosis()` → Genera un nuevo diagnóstico inteligente.
+- `updateRecommendation()` → Actualiza recomendaciones generadas.
+- `markAsReviewed()` → Marca el diagnóstico como revisado.
+
+**Relaciones:**
+
+- Un `PlantDiagnosis` pertenece a una sola planta.
+- Una planta puede tener múltiples diagnósticos históricos.
+
+
+**b. Referencias externas del dominio:**
+
+Dentro del contexto AI se utilizan entidades provenientes de otros bounded contexts.
+
+**Plant**
+
+- Origen: `Plant Management`
+- Propósito: Representa la planta analizada por la IA.
+- Atributos relevantes:
+  - `plantId`
+  - `species`
+  - `nickname`
+
+**SensorMetrics**
+
+- Origen: `IoT`
+- Propósito: Representa métricas provenientes de sensores IoT.
+- Atributos relevantes:
+  - `humidity`
+  - `temperature`
+  - `lightLevel`
+
+
+**c. Value Objects:**
+
+`HealthStatus`
+
+Representa el estado de salud detectado en la planta.
+
+- `HEALTHY`
+- `LOW_WATER`
+- `DISEASE_DETECTED`
+- `CRITICAL`
+
+
+**d. Commands del dominio:**
+
+`GenerateDiagnosisCommand`
+
+**Paquete:** `com.upc.oryxen.ai.domain.model.commands`
+
+**Propósito:** Representa la intención de generar un diagnóstico inteligente.
+
+**Atributos:**
+
+- `plantId: Long`
+- `imageUrl: String`
+
+
+`GenerateRecommendationCommand`
+
+**Propósito:** Generar recomendaciones automáticas basadas en métricas y diagnósticos.
+
+**Atributos:**
+
+- `plantId: Long`
+- `diagnosisId: Long`
+
+
+**e. Queries del dominio:**
+
+`GetDiagnosisByIdQuery`
+
+**Propósito:** Obtener un diagnóstico específico.
+
+**Atributos:**
+
+- `diagnosisId: Long`
+
+
+`GetPlantDiagnosisHistoryQuery`
+
+**Propósito:** Obtener el historial de diagnósticos de una planta.
+
+**Atributos:**
+
+- `plantId: Long`
+
+
+**f. Domain Services:**
+
+`DiagnosisCommandService`
+
+**Paquete:** `com.upc.oryxen.ai.domain.services`
+
+**Propósito:** Define las operaciones de escritura relacionadas al diagnóstico inteligente.
+
+**Operaciones:**
+
+- `handle(GenerateDiagnosisCommand)`
+- `handle(GenerateRecommendationCommand)`
+
+
+`DiagnosisQueryService`
+
+**Propósito:** Define las operaciones de lectura del contexto AI.
+
+**Operaciones:**
+
+- `handle(GetDiagnosisByIdQuery)`
+- `handle(GetPlantDiagnosisHistoryQuery)`
+
+
+**g. Repository:**
+
+`PlantDiagnosisRepository`
+
+**Paquete:** `com.upc.oryxen.ai.infrastructure.persistence.jpa.repositories`
+
+**Propósito:** Permite acceder a la persistencia de diagnósticos inteligentes.
+
+**Operaciones:**
+
+- `save(PlantDiagnosis)`
+- `findById(Long)`
+- `findByPlantId(Long)`
+- `findAll()`
+
+
+### 5.4.2. Interface Layer
+
+La Interface Layer del bounded context **Artificial Intelligence** contiene las clases responsables de exponer las funcionalidades relacionadas al diagnóstico inteligente y chatbot IA mediante endpoints REST consumidos por las aplicaciones móviles y web.
+
+**a. AIController**
+
+**Paquete:** `com.upc.oryxen.ai.interfaces.rest`
+
+**Propósito:** Exponer los endpoints relacionados con diagnósticos IA y recomendaciones inteligentes.
+
+**Dependencias:**
+
+- `DiagnosisCommandService`
+- `DiagnosisQueryService`
+
+**Endpoints expuestos:**
+
+- `POST /api/v1/ai/diagnosis`
+- `GET /api/v1/ai/diagnosis/{id}`
+- `GET /api/v1/ai/plants/{id}/history`
+- `POST /api/v1/ai/recommendations`
+
+
+**b. Resources / DTOs:**
+
+`PlantDiagnosisResource`
+
+**Propósito:** Representar la información del diagnóstico enviada al frontend.
+
+**Atributos:**
+
+- `diagnosisId`
+- `plantId`
+- `healthStatus`
+- `detectedDisease`
+- `recommendation`
+- `createdAt`
+
+
+`GenerateDiagnosisResource`
+
+**Propósito:** Representar los datos necesarios para generar un diagnóstico.
+
+**Atributos:**
+
+- `plantId`
+- `imageUrl`
+
+
+**c. Assemblers:**
+
+`DiagnosisResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `PlantDiagnosis` en recursos consumibles por frontend.
+
+
+`GenerateDiagnosisCommandFromResourceAssembler`
+
+**Propósito:** Transformar un `GenerateDiagnosisResource` en `GenerateDiagnosisCommand`.
+
+
+### 5.4.3. Application Layer
+
+La Application Layer del bounded context **Artificial Intelligence** coordina los procesos relacionados con análisis inteligente, recomendaciones automáticas y consultas de diagnósticos.
+
+**Capacidades principales del contexto:**
+
+- Generar diagnósticos inteligentes.
+- Generar recomendaciones automáticas.
+- Consultar historial de diagnósticos.
+- Integrar modelos IA externos.
+
+
+**a. Command Handlers / Command Services:**
+
+`DiagnosisCommandServiceImpl`
+
+**Paquete:** `com.upc.oryxen.ai.application.internal.commandservices`
+
+**Dependencias:**
+
+- `PlantDiagnosisRepository`
+- `PlantRepository`
+- `OpenAIClient`
+
+**Operaciones que maneja:**
+
+`handle(GenerateDiagnosisCommand command)`
+
+- Valida que la planta exista.
+- Envía la imagen al modelo IA.
+- Procesa la respuesta del modelo.
+- Genera un nuevo `PlantDiagnosis`.
+- Persiste el resultado.
+
+`handle(GenerateRecommendationCommand command)`
+
+- Analiza métricas históricas.
+- Genera recomendaciones personalizadas.
+- Actualiza el diagnóstico asociado.
+
+
+**b. Query Handlers / Query Services:**
+
+`DiagnosisQueryServiceImpl`
+
+**Propósito:** Gestionar operaciones de lectura relacionadas a diagnósticos.
+
+**Dependencias:**
+
+- `PlantDiagnosisRepository`
+
+**Operaciones:**
+
+- `handle(GetDiagnosisByIdQuery)`
+- `handle(GetPlantDiagnosisHistoryQuery)`
+
+
+**c. Flujos principales del negocio:**
+
+**Flujo de diagnóstico inteligente:**
+
+- El frontend envía una imagen.
+- Se construye `GenerateDiagnosisCommand`.
+- `DiagnosisCommandServiceImpl` valida la planta.
+- La imagen es enviada al modelo IA externo.
+- Se genera el diagnóstico.
+- Se persiste mediante `PlantDiagnosisRepository`.
+- Se retorna el resultado al cliente.
+
+
+**Flujo de consulta de historial:**
+
+- El frontend solicita historial de diagnósticos.
+- Se ejecuta `GetPlantDiagnosisHistoryQuery`.
+- El repositorio recupera diagnósticos históricos.
+- Se transforman a recursos REST.
+- Se retorna la respuesta.
+
+
+### 5.4.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context `Artificial Intelligence` contiene los componentes encargados de persistencia e integración con servicios externos de IA.
+
+
+**a. Repositorio de persistencia:**
+
+`PlantDiagnosisRepository`
+
+**Paquete:** `com.upc.oryxen.ai.infrastructure.persistence.jpa.repositories`
+
+**Propósito:** Gestionar persistencia mediante Spring Data JPA.
+
+**Operaciones disponibles:**
+
+- `save`
+- `findById`
+- `findByPlantId`
+- `findAll`
+
+
+**b. Persistencia de la entidad PlantDiagnosis:**
+
+La entidad `PlantDiagnosis` está mapeada como entidad JPA utilizando:
+
+- `@Entity`
+- `@Table(name = "plant_diagnosis")`
+- `@Id`
+- `@GeneratedValue(strategy = GenerationType.IDENTITY)`
+
+
+**c. Diseño de persistencia:**
+
+**Tabla principal:** `plant_diagnosis`
+
+**Columnas:**
+
+- `diagnosis_id`
+- `plant_id`
+- `image_url`
+- `health_status`
+- `detected_disease`
+- `recommendation`
+- `created_at`
+
+**Restricciones:**
+
+- `diagnosis_id` → Primary Key
+- `plant_id` → Foreign Key hacia `plants.plant_id`
+
+**Campos obligatorios:**
+
+- `plant_id`
+- `health_status`
+- `created_at`
+
+
+**d. Integración con otros bounded contexts:**
+
+La infraestructura del contexto AI depende de:
+
+- `PlantRepository` del bounded context `Plant Management`
+- `IoT Metrics Service` del bounded context `IoT`
+- `OpenAI API` como servicio externo de IA
+
+
+### 5.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Artificial Intelligence` representa la descomposición del contenedor backend encargado de diagnósticos inteligentes y recomendaciones automatizadas.
+
+**Componentes principales:**
+
+**AI REST API Component:**
+
+Expone endpoints REST relacionados a IA mediante `AIController`.
+
+**Responsabilidades:**
+
+- Recibir solicitudes del frontend.
+- Gestionar diagnósticos.
+- Retornar recomendaciones.
+
+
+**AI Transformation Component:**
+
+Encargado de transformar datos entre DTOs, commands y entidades.
+
+**Incluye:**
+
+- `PlantDiagnosisResource`
+- `GenerateDiagnosisResource`
+- Assemblers
+
+
+**AI Command Processing Component**
+
+Implementado por `DiagnosisCommandServiceImpl`.
+
+**Responsabilidades:**
+
+- Ejecutar diagnósticos IA.
+- Procesar recomendaciones.
+- Coordinar integración con OpenAI.
+
+
+**AI Query Processing Component:**
+
+Implementado por `DiagnosisQueryServiceImpl`.
+
+**Responsabilidades:**
+
+- Consultar diagnósticos.
+- Recuperar historial.
+
+
+**AI Domain Component**
+
+Representa el núcleo del dominio.
+
+### Incluye:
+
+- `PlantDiagnosis`
+- `HealthStatus`
+
+
+**AI Persistence Component:**
+
+Gestiona persistencia mediante `PlantDiagnosisRepository`.
+
+
+**External AI Integration Component:**
+
+Representa integración con servicios externos IA.
+
+**Incluye:**
+
+- `OpenAIClient`
+- APIs de análisis visual
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_AI](./assets/Chapter-5/ComponentsDiagram_AI.png)
+
+
+**Relaciones entre componentes:**
+
+- `AI REST API Component → AI Transformation Component`
+- `AI REST API Component → AI Command Processing Component`
+- `AI REST API Component → AI Query Processing Component`
+- `AI Command Processing Component → External AI Integration Component`
+- `AI Command Processing Component → AI Domain Component`
+- `AI Command Processing Component → AI Persistence Component`
+- `AI Query Processing Component → AI Persistence Component`
+
+
+### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Artificial Intelligence`, permitiendo visualizar el detalle del dominio y persistencia del contexto.
+
+
+#### 5.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Artificial Intelligence` muestra al agregado principal `PlantDiagnosis`, encargado de representar diagnósticos inteligentes asociados a plantas.
+
+Además, se incluyen:
+
+- `HealthStatus` como Value Object.
+- Commands y Queries.
+- Servicios del dominio.
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_AI](./assets/Chapter-5/UMLClassDiagram_AI.png)
+
+
+**Relaciones:**
+
+- `PlantDiagnosis` es el Aggregate Root del contexto.
+- `PlantDiagnosis` pertenece a una sola planta.
+- `HealthStatus` representa el estado de salud de la planta.
+- `DiagnosisCommandService` utiliza `PlantDiagnosisRepository`.
+- `DiagnosisQueryService` utiliza `PlantDiagnosisRepository`.
+
+
+#### 5.4.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Artificial Intelligence` representa la estructura relacional utilizada para almacenar diagnósticos y recomendaciones inteligentes.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_AI](./assets/Chapter-5/ERDDiagram_AI.png)
+
+
+**Tabla principal:** `plant_diagnosis`
+
+**Atributos:**
+
+- `diagnosis_id`
+- `plant_id`
+- `image_url`
+- `health_status`
+- `detected_disease`
+- `recommendation`
+- `created_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`diagnosis_id`)
+- FOREIGN KEY (`plant_id`) → `plants(plant_id)`
+- NOT NULL en:
+  - `plant_id`
+  - `health_status`
+  - `created_at`
+
+
+**Tabla relacionada:** `plants`
+
+Representa las plantas registradas dentro del bounded context Plant Management.
+
+**Atributos relevantes:**
+
+- `plant_id`
+- `species`
+- `nickname`
+
+**Constraints:**
+
+- PRIMARY KEY (`plant_id`)
+
+
+**Tabla relacionada:** `sensor_metrics`
+
+Representa métricas ambientales obtenidas desde sensores IoT utilizados para complementar los diagnósticos inteligentes.
+
+**Atributos:**
+
+- `metric_id`
+- `plant_id`
+- `humidity`
+- `temperature`
+- `light_level`
+- `recorded_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`metric_id`)
+- FOREIGN KEY (`plant_id`) → plants(`plant_id`)
+
+
+**Relaciones entre tablas:**
+
+- `plants (1) ──── (*) plant_diagnosis`
+- `plants (1) ──── (*) sensor_metrics`
+
 
 ---
 
-#### Visualization  
+## 5.6. Bounded Context: Notification
 
-_Tabla de Visualization_  
+El bounded context **Notification** representa la capacidad de Oryxen para enviar alertas, recordatorios y notificaciones personalizadas a los usuarios, con el objetivo de mantener informados a los usuarios sobre eventos relevantes del sistema, como necesidades de riego, diagnósticos generados por IA, cambios en el estado de una planta o actualizaciones importantes de la plataforma.
 
-| Propiedad     | Valor                                                                  |
-|---------------|------------------------------------------------------------------------|
-| **Nombre**    | Visualization                                                          |
-| **Categoría** | Entity                                                                 |
-| **Propósito** | Representa una vista gráfica generada a partir de un dataset.          |
 
-_Tabla de atributos de Visualization_  
+### 5.6.1. Domain Layer
 
-| Nombre      | Tipo de dato   | Visibilidad | Descripción                                         |
-|-------------|---------------|-------------|-----------------------------------------------------|
-| id          | UUID          | Private     | Identificador único de la visualización.            |
-| dataset_id  | UUID          | Private     | FK a `ReportDataSet`.                               |
-| chart_type  | VARCHAR(30)   | Public      | Tipo: `line`, `bar`, `pie`, `heatmap`.              |
-| config      | JSON          | Public      | Configuración del gráfico (colores, ejes, filtros). |
-| created_at  | TIMESTAMP     | Private     | Fecha de creación.                                  |
+La capa de dominio del bounded context **Notification** contiene las clases que modelan el comportamiento principal relacionado con el envío y gestión de notificaciones dentro de la plataforma. En esta capa se definen las reglas de negocio asociadas a la generación, programación, lectura y configuración de notificaciones.
 
-_Tabla de métodos de Visualization_  
+**a. Entity / Aggregate Root:**
 
-| Nombre               | Tipo de retorno | Visibilidad | Descripción                                    |
-|----------------------|-----------------|-------------|------------------------------------------------|
-| render()             | JSON            | Public      | Devuelve configuración lista para frontend.    |
-| updateConfig(config) | void            | Public      | Modifica parámetros de visualización.          |
+**Nombre de la clase:** `Notification`  
+**Paquete:** `com.upc.oryxen.notification.domain.model.aggregates`
+
+**Propósito:**  
+Representa una notificación generada por el sistema para informar a un usuario sobre un evento relevante. Constituye el agregado raíz del bounded context Notification.
+
+**Atributos:**
+
+- `notificationId: Long` → Identificador único de la notificación.
+- `userId: Long` → Identificador del usuario destinatario.
+- `plantId: Long?` → Identificador de la planta asociada, si aplica.
+- `type: NotificationType` → Tipo de notificación.
+- `channel: NotificationChannel` → Canal por el cual se enviará la notificación.
+- `title: String` → Título corto de la notificación.
+- `message: String` → Mensaje descriptivo.
+- `status: NotificationStatus` → Estado actual de la notificación.
+- `scheduledAt: DateTime?` → Fecha programada de envío.
+- `sentAt: DateTime?` → Fecha en que fue enviada.
+- `readAt: DateTime?` → Fecha en que fue leída.
+- `createdAt: DateTime` → Fecha de creación.
+
+**Métodos:**
+
+- `createNotification()` → Crea una nueva notificación en estado inicial.
+- `scheduleNotification()` → Programa el envío de una notificación.
+- `markAsSent()` → Marca la notificación como enviada.
+- `markAsRead()` → Marca la notificación como leída.
+- `cancelNotification()` → Cancela una notificación programada.
+
+**Relaciones:**
+
+- Una `Notification` pertenece a un solo usuario.
+- Una notificación puede estar asociada a una planta.
+- Un usuario puede tener múltiples notificaciones.
+
+
+**b. Entity:**
+
+**Nombre de la clase:** `NotificationPreference`  
+**Paquete:** `com.upc.oryxen.notification.domain.model.entities`  
+
+**Propósito:**  
+Representa las preferencias de notificación configuradas por el usuario, como canales habilitados, tipos de alertas recibidas y horarios silenciosos.
+
+**Atributos:**
+
+- `preferenceId: Long` → Identificador único.
+- `userId: Long` → Identificador del usuario.
+- `pushEnabled: Boolean` → Indica si las notificaciones push están habilitadas.
+- `diagnosisAlertsEnabled: Boolean` → Habilita alertas por diagnósticos IA.
+- `wateringAlertsEnabled: Boolean` → Habilita alertas por riego.
+- `communityAlertsEnabled: Boolean` → Habilita alertas de comunidad.
+- `quietHoursStart: LocalTime?` → Hora de inicio del modo silencioso.
+- `quietHoursEnd: LocalTime?` → Hora de fin del modo silencioso.
+- `createdAt: DateTime` → Fecha de creación.
+- `updatedAt: DateTime` → Fecha de actualización.
+
+**Métodos:**
+
+- `updatePreferences()` → Actualiza la configuración del usuario.
+- `enablePushNotifications()` → Activa el canal push.
+- `disablePushNotifications()` → Desactiva el canal push.
+
+
+**c. Entity:**
+
+**Nombre de la clase:** `DeviceToken`  
+**Paquete:** `com.upc.oryxen.notification.domain.model.entities`  
+
+**Propósito:**  
+Representa el token de un dispositivo móvil registrado para recibir notificaciones push.
+
+**Atributos:**
+
+- `tokenId: Long` → Identificador único.
+- `userId: Long` → Usuario propietario del token.
+- `deviceToken: String` → Token generado por FCM.
+- `platform: String` → Plataforma del dispositivo (Android/iOS).
+- `active: Boolean` → Indica si el token sigue activo.
+- `createdAt: DateTime` → Fecha de registro.
+- `lastUsedAt: DateTime?` → Última vez que el token fue usado.
+
+**Métodos:**
+
+- `registerToken()` → Registra un nuevo token.
+- `deactivateToken()` → Desactiva un token inválido.
+- `updateLastUsed()` → Actualiza el último uso.
+
+
+**d. Referencias externas del dominio:**
+
+Dentro del contexto Notification se utilizan entidades provenientes de otros bounded contexts:
+
+**UserProfile**
+- Origen: `Identity & Access`
+- Propósito: Representa al usuario receptor de la notificación.
+- Atributos relevantes:
+  - `userId`
+  - `name`
+  - `email`
+
+**Plant**
+- Origen: `Plant Management`
+- Propósito: Representa la planta asociada a la notificación.
+- Atributos relevantes:
+  - `plantId`
+  - `species`
+  - `nickname`
+
+
+**e. Value Objects:**
+
+**`NotificationType`**
+
+Representa el tipo de notificación generada por el sistema.
+
+- `WATERING_REMINDER`
+- `DIAGNOSIS_ALERT`
+- `SYSTEM_ALERT`
+- `COMMUNITY_UPDATE`
+
+**`NotificationChannel`**
+
+Representa el canal de entrega de la notificación.
+
+- `PUSH`
+- `EMAIL`
+- `IN_APP`
+
+**`NotificationStatus`**
+
+Representa el estado de la notificación.
+
+- `PENDING`
+- `SENT`
+- `READ`
+- `CANCELLED`
+- `FAILED`
+
+
+**f. Commands del dominio:**
+
+**`SendNotificationCommand`**  
+**Paquete:** `com.upc.oryxen.notification.domain.model.commands`
+
+**Propósito:**  
+Representa la intención de enviar una notificación inmediata.
+
+**Atributos:**
+
+- `userId: Long`
+- `plantId: Long?`
+- `type: NotificationType`
+- `channel: NotificationChannel`
+- `title: String`
+- `message: String`
+
+
+**`ScheduleNotificationCommand`**  
+
+**Propósito:**  
+Representa la intención de programar una notificación para una fecha futura.
+
+**Atributos:**
+
+- `userId: Long`
+- `plantId: Long?`
+- `type: NotificationType`
+- `channel: NotificationChannel`
+- `title: String`
+- `message: String`
+- `scheduledAt: DateTime`
+
+
+**`MarkNotificationAsReadCommand`**
+
+**Propósito:**  
+Marca una notificación como leída por el usuario.
+
+**Atributos:**
+
+- `notificationId: Long`
+
+
+**`UpdateNotificationPreferencesCommand`**
+
+**Propósito:**  
+Actualiza la configuración de preferencias de notificación del usuario.
+
+**Atributos:**
+
+- `userId: Long`
+- `pushEnabled: Boolean`
+- `diagnosisAlertsEnabled: Boolean`
+- `wateringAlertsEnabled: Boolean`
+- `communityAlertsEnabled: Boolean`
+- `quietHoursStart: LocalTime?`
+- `quietHoursEnd: LocalTime?`
+
+
+**g. Queries del dominio:**
+
+**`GetNotificationsByUserQuery`**
+
+**Propósito:**  
+Obtener todas las notificaciones de un usuario.
+
+**Atributos:**
+
+- `userId: Long`
+
+
+**`GetUnreadNotificationsQuery`**
+
+**Propósito:**  
+Obtener las notificaciones no leídas de un usuario.
+
+**Atributos:**
+
+- `userId: Long`
+
+
+**`GetNotificationPreferencesQuery`**
+
+**Propósito:**  
+Obtener las preferencias de notificación de un usuario.
+
+**Atributos:**
+
+- `userId: Long`
+
+
+**h. Domain Services:**
+
+**`NotificationCommandService`**  
+**Paquete:** `com.upc.oryxen.notification.domain.services`
+
+**Propósito:**  
+Define las operaciones de escritura relacionadas con el envío y configuración de notificaciones.
+
+**Operaciones:**
+
+- `handle(SendNotificationCommand)`
+- `handle(ScheduleNotificationCommand)`
+- `handle(MarkNotificationAsReadCommand)`
+- `handle(UpdateNotificationPreferencesCommand)`
+
+
+**`NotificationQueryService`**
+
+**Propósito:**  
+Define las operaciones de lectura del contexto Notification.
+
+**Operaciones:**
+
+- `handle(GetNotificationsByUserQuery)`
+- `handle(GetUnreadNotificationsQuery)`
+- `handle(GetNotificationPreferencesQuery)`
+
+
+**i. Repository:**
+
+**`NotificationRepository`**  
+**Paquete:** `com.upc.oryxen.notification.infrastructure.persistence.jpa.repositories`
+
+**Propósito:**  
+Permite acceder a la persistencia de notificaciones.
+
+**Operaciones:**
+
+- `save(Notification)`
+- `findById(Long)`
+- `findByUserId(Long)`
+- `findByStatus(NotificationStatus)`
+- `findAll()`
+
+
+**`NotificationPreferenceRepository`**  
+
+**Propósito:**  
+Permite acceder a la persistencia de preferencias de notificación.
+
+**Operaciones:**
+
+- `save(NotificationPreference)`
+- `findByUserId(Long)`
+
+
+**`DeviceTokenRepository`**  
+
+**Propósito:**  
+Permite persistir y recuperar tokens de dispositivos móviles.
+
+**Operaciones:**
+
+- `save(DeviceToken)`
+- `findByUserId(Long)`
+- `findByDeviceToken(String)
+
+
+### 5.6.2. Interface Layer
+
+La Interface Layer del bounded context **Notification** contiene las clases responsables de exponer las funcionalidades relacionadas con alertas, recordatorios y preferencias de notificación a través de endpoints REST consumidos por las aplicaciones móviles y web.
+
+**a. `NotificationController`**
+
+**Paquete:** `com.upc.oryxen.notification.interfaces.rest`
+
+**Propósito:**  
+Exponer los endpoints HTTP para crear, consultar y actualizar notificaciones y preferencias.
+
+**Dependencias:**
+
+- `NotificationCommandService`
+- `NotificationQueryService`
+
+**Endpoints expuestos:**
+
+- `POST /api/v1/notifications` → enviar notificación
+- `POST /api/v1/notifications/schedule` → programar notificación
+- `GET /api/v1/notifications/users/{userId}` → listar notificaciones de un usuario
+- `GET /api/v1/notifications/users/{userId}/unread` → listar notificaciones no leídas
+- `PUT /api/v1/notifications/{id}/read` → marcar como leída
+- `GET /api/v1/notifications/preferences/{userId}` → obtener preferencias
+- `PUT /api/v1/notifications/preferences/{userId}` → actualizar preferencias
+
+
+**b. Resources / DTOs:**
+
+**`NotificationResource`**
+
+**Propósito:**  
+Representar la información de una notificación enviada al frontend.
+
+**Atributos:**
+
+- `notificationId`
+- `userId`
+- `plantId`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `scheduledAt`
+- `sentAt`
+- `readAt`
+- `createdAt`
+
+
+**`SendNotificationResource`**
+
+**Propósito:**  
+Representar los datos necesarios para crear una notificación.
+
+**Atributos:**
+
+- `userId`
+- `plantId`
+- `type`
+- `channel`
+- `title`
+- `message`
+
+
+**`NotificationPreferenceResource`**
+
+**Propósito:**  
+Representar la configuración de preferencias del usuario.
+
+**Atributos:**
+
+- `userId`
+- `pushEnabled`
+- `diagnosisAlertsEnabled`
+- `wateringAlertsEnabled`
+- `communityAlertsEnabled`
+- `quietHoursStart`
+- `quietHoursEnd`
+
+
+**c. Assemblers:**
+
+**`NotificationResourceFromEntityAssembler`**  
+**Propósito:**  
+Transformar una entidad `Notification` en un `NotificationResource`.
+
+
+**`SendNotificationCommandFromResourceAssembler`**  
+**Propósito:**  
+Transformar un `SendNotificationResource` en un `SendNotificationCommand`.
+
+
+**`NotificationPreferenceResourceFromEntityAssembler`**  
+**Propósito:**  
+Transformar una entidad `NotificationPreference` en un `NotificationPreferenceResource`.
+
+
+**`UpdateNotificationPreferencesCommandFromResourceAssembler`**  
+**Propósito:**  
+Transformar un `NotificationPreferenceResource` en un `UpdateNotificationPreferencesCommand`.
+
+
+### 5.6.3. Application Layer
+
+La Application Layer del bounded context **Notification** coordina los procesos de negocio relacionados con el envío de alertas, la programación de recordatorios y la administración de preferencias del usuario.
+
+**Capacidades principales:**
+
+- Enviar notificaciones inmediatas.
+- Programar recordatorios.
+- Marcar notificaciones como leídas.
+- Consultar historial de notificaciones.
+- Configurar preferencias de entrega.
+
+
+**a. Command Handlers / Command Services:**
+
+**`NotificationCommandServiceImpl`**  
+**Paquete:** `com.upc.oryxen.notification.application.internal.commandservices`
+
+**Dependencias:**
+
+- `NotificationRepository`
+- `NotificationPreferenceRepository`
+- `DeviceTokenRepository`
+- `PlantRepository`
+- `FirebaseNotificationAdapter`
+
+**Operaciones que maneja:**
+
+**`handle(SendNotificationCommand command)`**
+- Valida que el usuario exista.
+- Valida preferencias del usuario.
+- Genera la notificación.
+- La envía por el canal correspondiente.
+- Persiste el registro en base de datos.
+
+**`handle(ScheduleNotificationCommand command)`**
+- Programa la notificación para una fecha futura.
+- Registra el evento en estado `PENDING`.
+- Deja la ejecución a un scheduler.
+
+**`handle(MarkNotificationAsReadCommand command)`**
+- Busca la notificación.
+- Cambia su estado a `READ`.
+- Guarda la actualización.
+
+**`handle(UpdateNotificationPreferencesCommand command)`**
+- Recupera las preferencias del usuario.
+- Actualiza canales y horarios.
+- Persiste la nueva configuración.
 
 ---
 
-### 5.2.2. Interface Layer  
+**b. Query Handlers / Query Services:**
 
-#### Report API  
+**`NotificationQueryServiceImpl`**  
+**Propósito:**  
+Gestionar operaciones de lectura relacionadas con notificaciones y preferencias.
 
-_Tabla de Report API_  
+**Dependencias:**
 
-| Propiedad     | Valor                                                                         |
-|---------------|-------------------------------------------------------------------------------|
-| **Nombre**    | ReportController                                                              |
-| **Categoría** | API / Resource                                                                |
-| **Propósito** | Exponer endpoints para creación, consulta y descarga de reportes.             |
-| **Ruta**      | `/api/reports`                                                                |
+- `NotificationRepository`
+- `NotificationPreferenceRepository`
 
-_Tabla de métodos de Report API_  
+**Operaciones:**
 
-| Nombre        | Ruta                             | Acción                                  | Handle                          |
-|---------------|----------------------------------|-----------------------------------------|---------------------------------|
-| createReport  | POST /api/reports                | Crear un nuevo reporte                   | CreateReportCommandHandler      |
-| getReport     | GET /api/reports/{id}            | Obtener detalles de un reporte           | GetReportQueryHandler           |
-| listReports   | GET /api/reports                 | Listar reportes de un usuario            | ListReportsQueryHandler         |
-| downloadReport| GET /api/reports/{id}/download   | Descargar reporte generado (PDF/CSV)     | DownloadReportQueryHandler      |
+- `handle(GetNotificationsByUserQuery)`
+- `handle(GetUnreadNotificationsQuery)`
+- `handle(GetNotificationPreferencesQuery)`
+
+
+**c. Flujos principales del negocio:**
+
+**Flujo de notificación por riego o alerta:**
+- El backend detecta un evento desde IoT o IA.
+- Se construye un `SendNotificationCommand`.
+- `NotificationCommandServiceImpl` valida preferencias.
+- La notificación se envía al usuario por FCM.
+- La notificación queda persistida con estado `SENT`.
+
+**Flujo de recordatorio programado:**
+- El frontend o un servicio interno solicita programar una alerta.
+- Se crea `ScheduleNotificationCommand`.
+- El scheduler ejecuta el envío en el momento indicado.
+- La notificación se marca como `SENT`.
+
+**Flujo de lectura de notificaciones:**
+- El usuario consulta su bandeja de alertas.
+- Se ejecuta `GetNotificationsByUserQuery`.
+- Se devuelven los recursos al frontend.
+- Si el usuario abre una notificación, se ejecuta `MarkNotificationAsReadCommand`.
+
+
+### 5.6.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context **Notification** contiene los componentes encargados del acceso a base de datos, la integración con Firebase Cloud Messaging y la ejecución de tareas programadas.
+
+**a. Repositorios de persistencia:**
+
+**`NotificationRepository`**  
+**Paquete:** `com.oryxen.notification.infrastructure.persistence.jpa.repositories`
+
+**Propósito:**  
+Gestionar la persistencia y recuperación de notificaciones mediante Spring Data JPA.
+
+**Operaciones disponibles:**
+
+- `save`
+- `findById`
+- `findByUserId`
+- `findByStatus`
+- `findAll()`
+
+
+**`NotificationPreferenceRepository`**
+
+**Propósito:**  
+Gestionar la persistencia de preferencias del usuario.
+
+**Operaciones:**
+
+- `save`
+- `findByUserId`
+
+
+**`DeviceTokenRepository`**
+
+**Propósito:**  
+Gestionar tokens de dispositivos registrados para push notifications.
+
+**Operaciones:**
+
+- `save`
+- `findByUserId`
+- `findByDeviceToken`
+
+
+**b. Persistencia de la entidad Notification:**
+
+La entidad `Notification` está mapeada como entidad JPA con las siguientes características:
+
+- `@Entity`
+- `@Table(name = "notifications")`
+- `@Id`
+- `@GeneratedValue(strategy = GenerationType.IDENTITY)`
+
+
+**c. Diseño de persistencia:**
+
+**Tabla principal: `notifications`**
+
+**Columnas:**
+
+- `notification_id`
+- `user_id`
+- `plant_id`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `scheduled_at`
+- `sent_at`
+- `read_at`
+- `created_at`
+
+**Restricciones:**
+
+- `notification_id` → Primary Key
+- `user_id` → Foreign Key hacia `user_profiles.id`
+- `plant_id` → Foreign Key hacia `plants.plant_id` (nullable)
+
+**Campos obligatorios:**
+
+- `user_id`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `created_at`
+
+
+**Tabla relacionada: `notification_preferences`**
+
+**Columnas:**
+
+- `preference_id`
+- `user_id`
+- `push_enabled`
+- `diagnosis_alerts_enabled`
+- `watering_alerts_enabled`
+- `community_alerts_enabled`
+- `quiet_hours_start`
+- `quiet_hours_end`
+- `created_at`
+- `updated_at`
+
+**Constraints:**
+
+- `preference_id` → Primary Key
+- `user_id` → Foreign Key hacia `user_profiles.id`
+- `user_id` → Unique
+
+
+**Tabla relacionada: `device_tokens`**
+
+**Columnas:**
+
+- `token_id`
+- `user_id`
+- `device_token`
+- `platform`
+- `active`
+- `created_at`
+- `last_used_at`
+
+**Constraints:**
+
+- `token_id` → Primary Key
+- `user_id` → Foreign Key hacia `user_profiles.id`
+- `device_token` → Unique
+
+
+**d. Integración con otros bounded contexts:**
+
+La infraestructura del contexto Notification depende de:
+
+- `UserProfileRepository` del bounded context `Identity & Access`
+- `PlantRepository` del bounded context `Plant Management`
+- `Firebase Cloud Messaging` como servicio externo para push notifications
+- `Scheduler` interno para notificaciones programadas
+
+
+### 5.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context **Notification** representa la descomposición de los procesos para el envío de alertas y gestión de preferencias.
+
+**Componentes principales:**
+
+**Notification REST API Component**  
+Expone endpoints REST relacionados con notificaciones mediante `NotificationController`.
+
+**Responsabilidades:**
+
+- Recibir solicitudes del frontend.
+- Gestionar envío y consulta de notificaciones.
+- Retornar respuestas estructuradas.
+
+
+**Notification Transformation Component**  
+Encargado de transformar datos entre DTOs, commands y entidades.
+
+**Incluye:**
+
+- `NotificationResource`
+- `SendNotificationResource`
+- `NotificationPreferenceResource`
+- Assemblers
+
+
+**Notification Command Processing Component**  
+Implementado por `NotificationCommandServiceImpl`.
+
+**Responsabilidades:**
+
+- Enviar notificaciones.
+- Programar alertas.
+- Marcar como leídas.
+- Actualizar preferencias.
+
+
+**Notification Query Processing Component**  
+Implementado por `NotificationQueryServiceImpl`.
+
+**Responsabilidades:**
+
+- Consultar notificaciones.
+- Obtener preferencias.
+- Recuperar historial.
+
+
+**Notification Domain Component**  
+Representa el núcleo del dominio.
+
+**Incluye:**
+
+- `Notification`
+- `NotificationPreference`
+- `DeviceToken`
+- `NotificationType`
+- `NotificationChannel`
+- `NotificationStatus`
+
+
+**Notification Persistence Component**  
+Gestiona persistencia mediante repositorios JPA.
+
+**Incluye:**
+
+- `NotificationRepository`
+- `NotificationPreferenceRepository`
+- `DeviceTokenRepository`
+
+
+**External Notification Integration Component**  
+Representa integración con servicios externos de mensajería.
+
+**Incluye:**
+
+- `FirebaseNotificationAdapter`
+- `Scheduler`
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_Notification](./assets/Chapter-5/ComponentsDiagram_Notification.png)
+
+
+**Relaciones entre componentes:**
+
+- `Notification REST API Component → Notification Transformation Component`
+- `Notification REST API Component → Notification Command Processing Component`
+- `Notification REST API Component → Notification Query Processing Component`
+- `Notification Command Processing Component → External Notification Integration Component`
+- `Notification Command Processing Component → Notification Domain Component`
+- `Notification Command Processing Component → Notification Persistence Component`
+- `Notification Query Processing Component → Notification Persistence Component`
+
+
+### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Notification`, permitiendo visualizar el detalle del dominio y la persistencia del contexto.
+
+### 5.6.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Notification` muestra el aggregate principal `Notification`, encargado de representar alertas y recordatorios generados por el sistema.
+
+Además, se incluyen:
+
+- `NotificationPreference`
+- `DeviceToken`
+- `NotificationType`
+- `NotificationChannel`
+- `NotificationStatus`
+- Commands y Queries
+- Servicios del dominio
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_Notification](./assets/Chapter-5/UMLClassDiagram_Notification.png)
+
+
+**Relaciones:**
+
+- `Notification` es el Aggregate Root del contexto.
+- `Notification` pertenece a un solo usuario.
+- `Notification` puede estar asociada a una planta.
+- `NotificationPreference` pertenece a un solo usuario.
+- `DeviceToken` pertenece a un solo usuario.
+- `NotificationCommandService` utiliza `NotificationRepository`, `NotificationPreferenceRepository` y `DeviceTokenRepository`.
+- `NotificationQueryService` utiliza `NotificationRepository` y `NotificationPreferenceRepository`.
+
+
+### 5.6.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Notification` representa la estructura relacional utilizada para almacenar notificaciones, preferencias y tokens de dispositivos.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_Notification](./assets/Chapter-5/ERDDiagram_Notification.png)
+
+
+**Tabla principal: `notifications`**
+
+**Atributos:**
+
+- `notification_id`
+- `user_id`
+- `plant_id`
+- `type`
+- `channel`
+- `title`
+- `message`
+- `status`
+- `scheduled_at`
+- `sent_at`
+- `read_at`
+- `created_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`notification_id`)
+- FOREIGN KEY (`user_id`) → `user_profiles(id)`
+- FOREIGN KEY (`plant_id`) → `plants(plant_id)`
+<br>
+
+
+**Tabla relacionada: `notification_preferences`**
+
+**Atributos:**
+
+- `preference_id`
+- `user_id`
+- `push_enabled`
+- `diagnosis_alerts_enabled`
+- `watering_alerts_enabled`
+- `community_alerts_enabled`
+- `quiet_hours_start`
+- `quiet_hours_end`
+- `created_at`
+- `updated_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`preference_id`)
+- FOREIGN KEY (`user_id`) → `user_profiles(id)`
+- UNIQUE (`user_id`)
+
+
+**Tabla relacionada: `device_tokens`**
+
+**Atributos:**
+
+- `token_id`
+- `user_id`
+- `device_token`
+- `platform`
+- `active`
+- `created_at`
+- `last_used_at`
+
+
+**Constraints:**
+
+- PRIMARY KEY (`token_id`)
+- FOREIGN KEY (`user_id`) → `user_profiles(id)`
+- UNIQUE (`device_token`)
+
+
+**Relaciones entre tablas:**
+
+- `user_profiles (1) ──── (*) notifications`
+- `plants (1) ──── (*) notifications`
+- `user_profiles (1) ──── (1) notification_preferences`
+- `user_profiles (1) ──── (*) device_tokens`
 
 ---
+## 5.7. Bounded Context: Billing and Subscription
 
-### 5.2.3. Application Layer  
+El bounded context de **Billing and Subscription** representa el núcleo encargado de la gestión de suscripciones, planes y procesos de facturación dentro de la plataforma. Este contexto permite administrar el ciclo de vida de las suscripciones de los clientes, el control de planes disponibles y la gestión de cuentas de facturación, garantizando consistencia financiera y automatización de procesos de cobro.
 
-#### Command Handlers  
+### 5.7.1. Domain Layer
 
-| Nombre                       | Categoría       | Propósito                                     | Comando                 |
-|------------------------------|-----------------|-----------------------------------------------|-------------------------|
-| CreateReportCommandHandler   | Command Handler | Crear y persistir un nuevo reporte            | CreateReportCommand     |
-| GenerateReportCommandHandler | Command Handler | Orquestar la creación de datasets y gráficos  | GenerateReportCommand   |
+La capa de dominio del bounded context **Billing and Subscription** contiene las clases responsables de modelar el comportamiento relacionado con suscripciones, cuentas de facturación y planes comerciales.
 
-#### Query Handlers  
+**a. Entity / Aggregate Root:**
 
-| Nombre                       | Categoría     | Propósito                                   | Query                  |
-|------------------------------|---------------|---------------------------------------------|------------------------|
-| GetReportQueryHandler        | Query Handler | Obtener datos detallados de un reporte      | GetReportQuery         |
-| ListReportsQueryHandler      | Query Handler | Listar reportes asociados a un usuario      | ListReportsQuery       |
-| DownloadReportQueryHandler   | Query Handler | Exportar y retornar reporte en un formato   | DownloadReportQuery    |
+**Nombre de la clase:** `Subscription`
 
-#### Event Handlers  
+**Paquete:** `com.upc.billing.domain.model.aggregates`
 
-| Nombre                   | Categoría     | Propósito                                   | Evento                 |
-|--------------------------|---------------|---------------------------------------------|------------------------|
-| ReportGeneratedHandler   | Event Handler | Notificar al usuario/reporting system        | ReportGeneratedEvent   |
-| ReportFailedHandler      | Event Handler | Manejar fallos en generación de reportes    | ReportFailedEvent      |
+**Propósito:** Representa la suscripción activa de un cliente a un plan específico. Constituye el Aggregate Root del bounded context Billing and Subscription.
 
+**Atributos:**
+
+- `id: UUID` → Identificador único de la suscripción.
+- `customerId: UUID` → Identificador del cliente propietario de la suscripción.
+- `planId: UUID` → Identificador del plan contratado.
+- `status: SubscriptionStatus` → Estado actual de la suscripción.
+- `startDate: DateTime` → Fecha de inicio de la suscripción.
+- `endDate: DateTime` → Fecha de finalización de la suscripción.
+- `nextBillingDate: DateTime` → Próxima fecha de facturación.
+- `trialEndDate: DateTime` → Fecha de finalización del periodo de prueba.
+
+**Métodos:**
+
+- `activate()` → Activa la suscripción.
+- `cancel(effectiveDate)` → Cancela la suscripción.
+- `changePlan(newPlanId, changeDate)` → Cambia el plan contratado.
+- `isActive()` → Verifica si la suscripción se encuentra activa.
+- `suspend(reason)` → Suspende temporalmente la suscripción.
+
+**Relaciones:**
+
+- Una `Subscription` pertenece a un único cliente.
+- Un cliente puede poseer múltiples suscripciones históricas.
+- Una `Subscription` se encuentra asociada a un único `Plan`.
+
+
+**b. Entities del dominio:**
+
+`CustomerBillingAccount`
+
+**Propósito:** Representa la cuenta de facturación asociada a un cliente.
+
+**Atributos:**
+
+- `id: UUID`
+- `customerId: UUID`
+- `balance: float`
+- `createdAt: DateTime`
+- `updatedAt: DateTime`
+
+**Métodos:**
+
+- `getBalance()` → Retorna el balance actual.
+
+
+`Plan`
+
+**Propósito:** Representa un plan comercial disponible para contratación.
+
+**Atributos:**
+
+- `id: UUID`
+- `name: String`
+- `description: String`
+- `price: float`
+- `features: List<String>`
+- `isActive: boolean`
+
+**Métodos:**
+
+- `activate()` → Activa el plan.
+- `deactivate()` → Desactiva el plan.
+
+
+**c. Value Objects:**
+
+`BillingPeriod`
+
+Representa un intervalo de facturación asociado a una suscripción.
+
+**Atributos:**
+
+- `start: DateTime`
+- `end: DateTime`
+
+**Métodos:**
+
+- `contains(date)` → Verifica si una fecha pertenece al periodo.
+- `overlapsWith(other)` → Verifica superposición de periodos.
+- `days()` → Retorna la cantidad de días del periodo.
+
+
+`SubscriptionStatus`
+
+Representa el estado de una suscripción.
+
+**Valores posibles:**
+
+- `PENDING`
+- `ACTIVE`
+- `SUSPENDED`
+- `CANCELLED`
+- `EXPIRED`
+
+
+**d. Commands del dominio:**
+
+`CreateSubscriptionCommand`
+
+**Paquete:** `com.upc.billing.domain.model.commands`
+
+**Propósito:** Representa la intención de crear una nueva suscripción.
+
+**Atributos:**
+
+- `customerId: UUID`
+- `planId: UUID`
+
+
+`ChangePlanCommand`
+
+**Propósito:** Cambiar el plan asociado a una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+- `newPlanId: UUID`
+
+
+`CancelSubscriptionCommand`
+
+**Propósito:** Cancelar una suscripción activa.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+- `effectiveDate: DateTime`
+
+
+`ActivateSubscriptionCommand`
+
+**Propósito:** Activar una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+
+
+`SuspendSubscriptionCommand`
+
+**Propósito:** Suspender temporalmente una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+- `reason: String`
+
+
+`CreatePlanCommand`
+
+**Propósito:** Registrar un nuevo plan.
+
+**Atributos:**
+
+- `name: String`
+- `description: String`
+- `price: float`
+
+
+**e. Queries del dominio:**
+
+`GetSubscriptionQuery`
+
+**Propósito:** Obtener información de una suscripción.
+
+**Atributos:**
+
+- `subscriptionId: UUID`
+
+
+`ListSubscriptionsQuery`
+
+**Propósito:** Obtener suscripciones asociadas a un cliente.
+
+**Atributos:**
+
+- `customerId: UUID`
+
+
+`GetCustomerBillingAccountQuery`
+
+**Propósito:** Obtener la cuenta de facturación de un cliente.
+
+**Atributos:**
+
+- `customerId: UUID`
+
+
+`GetCustomerBalanceQuery`
+
+**Propósito:** Obtener balance actual del cliente.
+
+**Atributos:**
+
+- `customerId: UUID`
+
+
+`GetPlanQuery`
+
+**Propósito:** Obtener información de un plan.
+
+**Atributos:**
+
+- `planId: UUID`
+
+
+`ListPlansQuery`
+
+**Propósito:** Obtener lista de planes disponibles.
+
+
+**f. Domain Services:**
+
+`SubscriptionApplicationService`
+
+**Paquete:** `com.upc.billing.domain.services`
+
+**Propósito:** Coordinar operaciones relacionadas con suscripciones.
+
+**Operaciones:**
+
+- `handle(CreateSubscriptionCommand)`
+- `handle(ChangePlanCommand)`
+- `handle(CancelSubscriptionCommand)`
+- `handle(ActivateSubscriptionCommand)`
+- `handle(SuspendSubscriptionCommand)`
+- `handle(GetSubscriptionQuery)`
+- `handle(ListSubscriptionsQuery)`
+
+
+`PlanApplicationService`
+
+**Propósito:** Gestionar operaciones relacionadas con planes.
+
+**Operaciones:**
+
+- `handle(CreatePlanCommand)`
+- `handle(UpdatePlanCommand)`
+- `handle(ActivatePlanCommand)`
+- `handle(DeactivatePlanCommand)`
+- `handle(ListPlansQuery)`
+- `handle(GetPlanQuery)`
+
+
+`CustomerBillingAccountApplicationService`
+
+**Propósito:** Gestionar consultas relacionadas con cuentas de facturación.
+
+**Operaciones:**
+
+- `handle(GetCustomerBillingAccountQuery)`
+- `handle(GetCustomerBalanceQuery)`
+
+
+**g. Repositories:**
+
+`SubscriptionRepository`
+
+**Paquete:** `com.upc.billing.infrastructure.persistence.repositories`
+
+**Propósito:** Gestionar persistencia de suscripciones.
+
+**Operaciones:**
+
+- `save(Subscription)`
+- `findById(UUID)`
+- `findActiveByCustomer(UUID)`
+
+
+`CustomerBillingAccountRepository`
+
+**Propósito:** Gestionar persistencia de cuentas de facturación.
+
+**Operaciones:**
+
+- `findByCustomerId(UUID)`
+- `updateBalance()`
+
+
+`PlanRepository`
+
+**Propósito:** Gestionar persistencia de planes.
+
+**Operaciones:**
+
+- `save(Plan)`
+- `findById(UUID)`
+- `findActive()`
+- `list()`
+
+
+### 5.7.2. Interface Layer
+
+La Interface Layer del bounded context **Billing and Subscription** contiene los controladores REST responsables de exponer funcionalidades relacionadas con suscripciones, cuentas de facturación y planes comerciales.
+
+**a. SubscriptionController**
+
+**Paquete:** `com.upc.billing.interfaces.rest`
+
+**Propósito:** Exponer endpoints relacionados con la gestión de suscripciones.
+
+**Dependencias:**
+
+- `SubscriptionApplicationService`
+
+**Endpoints expuestos:**
+
+- `POST /api/v1/subscriptions`
+- `GET /api/v1/subscriptions/{subscriptionId}`
+- `GET /api/v1/customers/{customerId}/subscriptions`
+- `PUT /api/v1/subscriptions/{subscriptionId}/change-plan`
+- `PUT /api/v1/subscriptions/{subscriptionId}/cancel`
+- `POST /api/v1/subscriptions/{subscriptionId}/activate`
+- `POST /api/v1/subscriptions/{subscriptionId}/suspend`
+- `GET /api/v1/subscriptions/{subscriptionId}/status`
+
+
+**b. CustomerBillingAccountController**
+
+**Propósito:** Exponer operaciones relacionadas con facturación del cliente.
+
+**Endpoints expuestos:**
+
+- `GET /api/v1/customers/{customerId}/billing-account`
+- `GET /api/v1/customers/{customerId}/billing-account/balance`
+
+
+**c. PlanController**
+
+**Propósito:** Gestionar endpoints relacionados con planes.
+
+**Endpoints expuestos:**
+
+- `GET /api/v1/plans`
+- `GET /api/v1/plans/{planId}`
+- `POST /api/v1/plans`
+- `PUT /api/v1/plans/{planId}`
+- `POST /api/v1/plans/{planId}/activate`
+- `POST /api/v1/plans/{planId}/deactivate`
+
+
+**d. Resources / DTOs:**
+
+`SubscriptionResource`
+
+**Propósito:** Representar información de suscripciones enviada al frontend.
+
+**Atributos:**
+
+- `id`
+- `customerId`
+- `planId`
+- `status`
+- `startDate`
+- `nextBillingDate`
+
+
+`PlanResource`
+
+**Propósito:** Representar información de planes comerciales.
+
+**Atributos:**
+
+- `id`
+- `name`
+- `description`
+- `price`
+- `features`
+- `isActive`
+
+
+`CustomerBillingAccountResource`
+
+**Propósito:** Representar información financiera del cliente.
+
+**Atributos:**
+
+- `id`
+- `customerId`
+- `balance`
+
+
+**e. Assemblers:**
+
+`SubscriptionResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `Subscription` en recursos REST.
+
+
+`SubscriptionCommandFromResourceAssembler`
+
+**Propósito:** Transformar requests REST en commands del dominio.
+
+
+`PlanResourceFromEntityAssembler`
+
+**Propósito:** Transformar entidades `Plan` en recursos consumibles.
+
+
+### 5.7.3. Application Layer
+
+La Application Layer del bounded context **Billing and Subscription** coordina procesos relacionados con suscripciones, planes y facturación.
+
+**Capacidades principales del contexto:**
+
+- Crear suscripciones.
+- Cancelar y suspender suscripciones.
+- Gestionar cambios de plan.
+- Consultar balances y cuentas de facturación.
+- Administrar planes comerciales.
+
+
+**a. Command Handlers / Command Services:**
+
+`SubscriptionApplicationService`
+
+**Paquete:** `com.upc.billing.application.internal.commandservices`
+
+**Dependencias:**
+
+- `SubscriptionRepository`
+- `PlanRepository`
+- `CustomerBillingAccountRepository`
+
+**Operaciones que maneja:**
+
+`handle(CreateSubscriptionCommand command)`
+
+- Valida existencia del cliente.
+- Verifica disponibilidad del plan.
+- Genera nueva suscripción.
+- Persiste la suscripción.
+
+`handle(ChangePlanCommand command)`
+
+- Obtiene suscripción activa.
+- Valida nuevo plan.
+- Calcula ajustes de facturación.
+- Actualiza suscripción.
+
+`handle(CancelSubscriptionCommand command)`
+
+- Cancela suscripción.
+- Actualiza estado.
+- Registra fecha efectiva.
+
+
+`PlanApplicationService`
+
+**Dependencias:**
+
+- `PlanRepository`
+
+**Operaciones que maneja:**
+
+- `handle(CreatePlanCommand)`
+- `handle(UpdatePlanCommand)`
+- `handle(ActivatePlanCommand)`
+- `handle(DeactivatePlanCommand)`
+
+
+**b. Query Handlers / Query Services:**
+
+`CustomerBillingAccountApplicationService`
+
+**Propósito:** Gestionar consultas relacionadas con facturación.
+
+**Dependencias:**
+
+- `CustomerBillingAccountRepository`
+
+**Operaciones:**
+
+- `handle(GetCustomerBillingAccountQuery)`
+- `handle(GetCustomerBalanceQuery)`
+
+
+`SubscriptionQueryService`
+
+**Propósito:** Gestionar consultas relacionadas con suscripciones.
+
+**Dependencias:**
+
+- `SubscriptionRepository`
+
+**Operaciones:**
+
+- `handle(GetSubscriptionQuery)`
+- `handle(ListSubscriptionsQuery)`
+
+
+**c. Event Handlers:**
+
+`SubscriptionEventHandlers`
+
+**Propósito:** Gestionar eventos relacionados con suscripciones.
+
+**Eventos manejados:**
+
+- `SubscriptionCancelledEvent`
+- `SubscriptionActivatedEvent`
+
+
+**d. Flujos principales del negocio:**
+
+**Flujo de creación de suscripción:**
+
+- El frontend solicita una nueva suscripción.
+- Se construye `CreateSubscriptionCommand`.
+- Se valida el cliente y el plan.
+- Se crea la entidad `Subscription`.
+- Se persiste la información.
+- Se retorna el resultado al cliente.
+
+
+**Flujo de cambio de plan:**
+
+- El usuario solicita cambiar de plan.
+- Se ejecuta `ChangePlanCommand`.
+- Se validan reglas de facturación.
+- Se actualiza la suscripción.
+- Se recalculan fechas de cobro.
+
+
+**Flujo de consulta de balance:**
+
+- El frontend solicita balance del cliente.
+- Se ejecuta `GetCustomerBalanceQuery`.
+- Se obtiene información desde `CustomerBillingAccountRepository`.
+- Se transforma la respuesta a recurso REST.
+- Se retorna el balance al cliente.
+
+
+### 5.7.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context `Billing and Subscription` contiene los componentes responsables de persistencia y gestión de datos relacionados con suscripciones y facturación.
+
+**a. Repositorios de persistencia:**
+
+`SubscriptionRepositoryImpl`
+
+**Paquete:** `com.upc.billing.infrastructure.persistence.jpa.repositories`
+
+**Propósito:** Implementar persistencia de `Subscription`.
+
+**Interfaz implementada:**
+
+- `SubscriptionRepository`
+
+
+`CustomerBillingAccountRepositoryImpl`
+
+**Propósito:** Persistir y consultar cuentas de facturación.
+
+**Interfaz implementada:**
+
+- `CustomerBillingAccountRepository`
+
+
+`PlanRepositoryImpl`
+
+**Propósito:** Persistir y consultar planes comerciales.
+
+**Interfaz implementada:**
+
+- `PlanRepository`
+
+
+**b. Persistencia de entidades:**
+
+Las entidades del contexto están mapeadas mediante tecnologías ORM.
+
+**Entidades persistidas:**
+
+- `Subscription`
+- `CustomerBillingAccount`
+- `Plan`
+
+
+**c. Diseño de persistencia:**
+
+**Tabla principal:** `subscriptions`
+
+**Columnas:**
+
+- `id`
+- `customer_id`
+- `plan_id`
+- `status`
+- `start_date`
+- `end_date`
+- `next_billing_date`
+- `trial_end_date`
+
+**Restricciones:**
+
+- `id` → Primary Key
+- `customer_id` → Foreign Key
+- `plan_id` → Foreign Key
+
+**Campos obligatorios:**
+
+- `customer_id`
+- `plan_id`
+- `status`
+- `start_date`
+
+
+**Tabla relacionada:** `customer_billing_accounts`
+
+**Columnas:**
+
+- `id`
+- `customer_id`
+- `balance`
+- `created_at`
+- `updated_at`
+
+
+**Tabla relacionada:** `plans`
+
+**Columnas:**
+
+- `id`
+- `name`
+- `description`
+- `price`
+- `is_active`
+
+
+**d. Integración con otros bounded contexts:**
+
+La infraestructura del contexto Billing and Subscription depende de:
+
+- `Identity and Access Management`
+- `Payment Gateway`
+- `Notification Service`
+- Servicios de facturación externa
+
+
+### 5.7.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Billing and Subscription` representa la descomposición del backend encargado de suscripciones y facturación.
+
+**Componentes principales:**
+
+**Billing REST API Component:**
+
+Expone endpoints REST relacionados con suscripciones y planes.
+
+**Responsabilidades:**
+
+- Gestionar suscripciones.
+- Gestionar cuentas de facturación.
+- Gestionar planes.
+
+
+**Billing Transformation Component:**
+
+Encargado de transformar DTOs, commands y entidades.
+
+**Incluye:**
+
+- `SubscriptionResource`
+- `PlanResource`
+- Assemblers
+
+
+**Billing Command Processing Component:**
+
+Implementado por `SubscriptionApplicationService` y `PlanApplicationService`.
+
+**Responsabilidades:**
+
+- Procesar suscripciones.
+- Gestionar cambios de plan.
+- Procesar cancelaciones.
+- Administrar planes.
+
+
+**Billing Query Processing Component:**
+
+Implementado por Query Services.
+
+**Responsabilidades:**
+
+- Consultar balances.
+- Consultar suscripciones.
+- Consultar planes.
+
+
+**Billing Domain Component:**
+
+Representa el núcleo del dominio.
+
+### Incluye:
+
+- `Subscription`
+- `CustomerBillingAccount`
+- `Plan`
+- `BillingPeriod`
+- `SubscriptionStatus`
+
+
+**Billing Persistence Component:**
+
+Gestiona persistencia mediante repositorios ORM.
+
+
+**External Billing Integration Component:**
+
+Representa integración con servicios externos.
+
+**Incluye:**
+
+- `Payment Gateway`
+- `Notification Service`
+- Facturación externa
+
+
+**Diagrama de Componentes:**
+
+![ComponentsDiagram_BillingSubscription](https://i.postimg.cc/7ZhBqdGN/Billing-Subscription-Component.png)
+
+
+**Relaciones entre componentes:**
+
+- `Billing REST API Component → Billing Transformation Component`
+- `Billing REST API Component → Billing Command Processing Component`
+- `Billing REST API Component → Billing Query Processing Component`
+- `Billing Command Processing Component → Billing Domain Component`
+- `Billing Command Processing Component → Billing Persistence Component`
+- `Billing Command Processing Component → External Billing Integration Component`
+- `Billing Query Processing Component → Billing Persistence Component`
+
+
+### 5.7.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Billing and Subscription`, permitiendo visualizar la estructura del dominio, persistencia y relaciones entre suscripciones, cuentas y planes.
+
+
+#### 5.7.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer del bounded context `Billing and Subscription` muestra al agregado principal `Subscription`, encargado de representar la gestión de suscripciones dentro del sistema.
+
+Además, se incluyen:
+
+- `CustomerBillingAccount`
+- `Plan`
+- `BillingPeriod`
+- Commands y Queries.
+- Servicios del dominio.
+
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UMLClassDiagram_BillingSubscription](https://i.postimg.cc/j5Hc8rmR/Billing-Subscription-Class-Diagram.png)
+
+
+**Relaciones:**
+
+- `Subscription` es el Aggregate Root del contexto.
+- `Subscription` pertenece a un cliente.
+- `Subscription` referencia un `Plan`.
+- `CustomerBillingAccount` administra balances del cliente.
+- `PlanApplicationService` utiliza `PlanRepository`.
+- `SubscriptionApplicationService` utiliza `SubscriptionRepository`.
+
+
+#### 5.7.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Billing and Subscription` representa la estructura relacional utilizada para almacenar suscripciones, cuentas de facturación y planes comerciales.
+
+**Diagrama de base de datos (ERD):**
+
+![ERDDiagram_BillingSubscription](https://i.postimg.cc/d3nBYjJX/Billing-Subscription-Design-Diagram.png)
+
+
+**Tabla principal:** `subscriptions`
+
+**Atributos:**
+
+- `id`
+- `customer_id`
+- `plan_id`
+- `status`
+- `start_date`
+- `end_date`
+- `next_billing_date`
+- `trial_end_date`
+
+**Constraints:**
+
+- PRIMARY KEY (`id`)
+- FOREIGN KEY (`customer_id`)
+- FOREIGN KEY (`plan_id`)
+
+**Tabla relacionada:** `customer_billing_accounts`
+
+**Atributos:**
+
+- `id`
+- `customer_id`
+- `balance`
+- `created_at`
+- `updated_at`
+
+**Constraints:**
+
+- PRIMARY KEY (`id`)
+- FOREIGN KEY (`customer_id`)
+
+
+**Tabla relacionada:** `plans`
+
+**Atributos:**
+
+- `id`
+- `name`
+- `description`
+- `price`
+- `is_active`
+
+**Constraints:**
+
+- PRIMARY KEY (`id`)
+
+
+**Relaciones entre tablas:**
+
+- `customers (1) ──── (*) subscriptions`
+- `plans (1) ──── (*) subscriptions`
+- `customers (1) ──── (1) customer_billing_accounts`
+
+
+## 5.8. Bounded Context: Community
+
+El bounded context de **Community** representa el espacio social y colaborativo de la plataforma Oryxen. Este contexto permite a los usuarios compartir el progreso de sus plantas, intercambiar consejos, interactuar mediante comentarios y acceder a un *feed* personalizado. Además, incorpora reglas críticas de negocio y privacidad, como la moderación de contenido y la sanitización automática de metadatos (EXIF/GPS) en las fotografías para proteger la seguridad de los usuarios.
+
+### 5.8.1. Domain Layer
+
+La capa de dominio del bounded context **Community** contiene las clases que modelan el comportamiento central de la interacción social, garantizando las reglas de publicación, límites de interacción y estados de moderación.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `CommunityPost`
+**Paquete:** `com.upc.oryxen.community.domain.model.aggregates`
+
+**Propósito:** Representa una publicación realizada por un usuario en el foro o *feed* comunitario. Constituye el Aggregate Root del bounded context, encapsulando el contenido, las imágenes y su estado de moderación.
+
+**Atributos:**
+*   `postId: Long` → Identificador único de la publicación.
+*   `authorId: Long` → Identificador del usuario creador.
+*   `plantId: Long?` → (Opcional) Identificador de la planta etiquetada.
+*   `content: String` → Texto del consejo o actualización.
+*   `imageUrl: String?` → URL de la fotografía compartida (previamente sanitizada).
+*   `status: PostStatus` → Estado de la publicación (Activa, Moderada).
+*   `createdAt: DateTime` → Fecha de la publicación.
+*   `updatedAt: DateTime` → Última modificación.
+
+**Métodos:**
+*   `updateContent(newContent)` → Modifica el texto de la publicación validando políticas.
+*   `markAsModerated()` → Cambia el estado de la publicación si infringe las normas.
+*   `archive()` → Oculta la publicación lógicamente.
+
+**Relaciones:**
+*   Un `CommunityPost` tiene múltiples `Comment`.
+*   Un `CommunityPost` puede tener múltiples `Reaction`.
+
+**b. Entities del dominio:**
+
+**Nombre de la clase:** `Comment`
+**Propósito:** Representa las respuestas que los usuarios dejan en una publicación principal. Según las reglas de negocio, su contenido no puede exceder los 300 caracteres ni contener enlaces externos no permitidos.
+
+**c. Value Objects:**
+
+**Nombre de la clase:** `PostStatus`
+**Propósito:** Representa el estado de moderación y visibilidad de una publicación en la comunidad.
+**Valores posibles:**
+*   `ACTIVE`
+*   `REPORTED`
+*   `MODERATED`
+*   `ARCHIVED`
+
+**Nombre de la clase:** `ReactionType`
+**Propósito:** Define el tipo de interacción de un usuario frente a un post.
+**Valores posibles:**
+*   `LIKE`
+*   `HELPFUL`
+
+**d. Referencias externas del dominio:**
+
+*   **UserAccount** (Origen: Auth & Identity): Representa al autor de la publicación o comentario.
+*   **PlantProfile** (Origen: Plant Management): Representa la especie etiquetada en la publicación para nutrir el algoritmo del feed personalizado.
+
+**e. Commands del dominio:**
+
+**Paquete:** `com.upc.oryxen.community.domain.model.commands`
+*   `CreatePostCommand`: Representa la intención de crear una nueva publicación (gatilla la sanitización de imagen).
+*   `AddCommentCommand`: Representa la intención de comentar en una publicación.
+*   `AddReactionCommand`: Representa la intención de reaccionar a un post.
+*   `ModeratePostCommand`: Representa la intención de un administrador de restringir contenido reportado.
+
+**f. Queries del dominio:**
+
+*   `GetPersonalizedFeedQuery`: Obtener publicaciones relevantes basadas en el inventario de plantas del usuario activo.
+*   `GetPostByIdQuery`: Obtener el detalle de un post y sus comentarios anidados.
+
+**g. Domain Services:**
+
+*   `CommunityInteractionService`: Valida las operaciones de interacción social (ej. validación de límites de caracteres, filtro de palabras prohibidas).
+
+**h. Repository:**
+
+*   `IPostRepository`: Interfaz para gestionar la persistencia y ciclo de vida de las publicaciones.
+*   `ICommentRepository`: Interfaz para persistir los comentarios asociados.
+
+### 5.8.2. Interface Layer
+
+La Interface Layer expone las capacidades sociales a través de endpoints REST que el frontend (Web y Móvil) utilizará para construir el *feed* y gestionar las interacciones.
+
+**a. CommunityController**
+
+**Paquete:** `com.upc.oryxen.community.interfaces.rest`
+**Propósito:** Exponer los endpoints para gestionar el flujo de la comunidad y moderación.
+
+**Dependencias:**
+*   `CommunityCommandService`
+*   `CommunityQueryService`
+
+**Endpoints expuestos:**
+*   `GET /api/v1/community/feed` → Obtiene el *feed* personalizado.
+*   `POST /api/v1/community/posts` → Crear una nueva publicación (recibe payload e imagen).
+*   `GET /api/v1/community/posts/{postId}` → Ver detalles de un post.
+*   `POST /api/v1/community/posts/{postId}/comments` → Agregar un comentario.
+*   `PUT /api/v1/community/moderation/{postId}` → Endpoint de moderación para administradores.
+
+**b. Resources / DTOs:**
+
+*   `PostResource`: Representa la estructura de la publicación enviada al cliente.
+*   `CreatePostResource`: Payload requerido para compartir una experiencia.
+*   `CommentResource`: Datos estructurados de los comentarios.
+
+**c. Assemblers:**
+
+*   `PostResourceFromEntityAssembler`: Transforma la entidad `CommunityPost` en un recurso REST.
+*   `CreatePostCommandFromResourceAssembler`: Mapea el request del cliente al comando de dominio.
+
+### 5.8.3. Application Layer
+
+Esta capa orquesta los casos de uso para la interacción social, garantizando las validaciones de privacidad correspondientes antes de interactuar con el dominio.
+
+**a. Command Handlers / Command Services:**
+
+`CommunityCommandServiceImpl` maneja:
+*   `handle(CreatePostCommand)`: Coordina la llamada al servicio de infraestructura para limpiar los metadatos de la imagen (EXIF/GPS), crea la entidad `CommunityPost` y la persiste.
+*   `handle(AddCommentCommand)`: Utiliza `CommunityInteractionService` para validar que el texto sea menor a 300 caracteres y sin enlaces, luego guarda el `Comment`.
+*   `handle(ModeratePostCommand)`: Evalúa un reporte y cambia el `PostStatus` a `MODERATED`.
+
+**b. Query Handlers / Query Services:**
+
+`CommunityQueryServiceImpl` maneja:
+*   `handle(GetPersonalizedFeedQuery)`: Cruza la información del usuario autenticado con las etiquetas de plantas para devolver publicaciones priorizadas.
+
+**c. Flujos principales del negocio:**
+
+**Flujo de publicación segura (con sanitización):**
+*   El usuario envía texto y una fotografía desde el frontend.
+*   Se construye `CreatePostCommand`.
+*   `CommunityCommandServiceImpl` intercepta la imagen y llama al servicio externo de sanitización para eliminar coordenadas GPS (garantizando la privacidad).
+*   Una vez limpia, la imagen se sube al Cloud Storage y se genera una URL segura.
+*   Se crea la entidad `CommunityPost` con la URL segura.
+*   Se persiste mediante `IPostRepository` y se retorna el recurso publicado al feed.
+
+### 5.8.4. Infrastructure Layer
+
+Maneja la persistencia en la base de datos relacional y las integraciones críticas con servicios de procesamiento de archivos para garantizar la privacidad.
+
+**a. Repositorios de persistencia:**
+*   `PostRepositoryImpl`: Implementa la persistencia de las publicaciones.
+*   `CommentRepositoryImpl`: Implementa la persistencia de los comentarios.
+
+**b. ORM Context:**
+*   `CommunityDbContext`: Punto central de acceso a la base de datos de la comunidad mediante Entity Framework Core / Spring Data JPA.
+
+**c. Persistencia de entidades:**
+**Entidades persistidas:**
+*   `CommunityPost`
+*   `Comment`
+
+**d. Diseño de persistencia:**
+
+**Tabla principal:** `community_posts`
+**Columnas:**
+*   `post_id` (PK)
+*   `author_id` (FK hacia Auth & Identity)
+*   `plant_id` (FK hacia Plant Management, Nullable)
+*   `content` (TEXT)
+*   `image_url` (VARCHAR)
+*   `status` (VARCHAR)
+*   `created_at` (TIMESTAMP)
+
+**Tabla relacionada:** `comments`
+**Columnas:**
+*   `comment_id` (PK)
+*   `post_id` (FK hacia `community_posts`)
+*   `author_id` (FK)
+*   `content` (VARCHAR 300)
+*   `created_at` (TIMESTAMP)
+
+**e. Integración con otros bounded contexts y servicios:**
+*   **Privacy & Sanitization Service:** Servicio de infraestructura que procesa el archivo binario de la foto para eliminar datos EXIF antes de subirlo al Cloud Storage.
+*   **Auth & Identity:** Para validar el perfil del autor y su reputación.
+*   **Plant Management:** Para cruzar los intereses del usuario y alimentar el algoritmo del *feed*.
+
+### 5.8.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context Community representa la descomposición del contenedor backend encargado de gestionar la red social interna de Oryxen y el procesamiento seguro de sus recursos visuales.
+
+**Componentes principales:**
+
+*   **Community REST API Component**: Expone endpoints REST para feed, posts y comentarios mediante `CommunityController`.
+*   **Community Transformation Component**: Encargado de transformar datos entre DTOs y comandos mediante *Assemblers*.
+*   **Community Command Processing Component**: Implementado por `CommunityCommandServiceImpl`. Orquesta la creación de posts y delega el filtrado de imágenes.
+*   **Community Query Processing Component**: Implementado por `CommunityQueryServiceImpl`. Genera el feed.
+*   **Sanitization Service Component (Infrastructure):** Encargado de procesar y limpiar metadatos de imágenes.
+*   **Community Domain Component**: Representa el núcleo del dominio, albergando el agregado `CommunityPost` y la entidad `Comment`.
+*   **Community Persistence Component**: Gestiona la persistencia en base de datos mediante repositorios ORM.
+
+**Relaciones entre componentes:**
+*   `Community REST API` → `Community Transformation Component`
+*   `Community REST API` → `Community Command Processing Component`
+*   `Community Command Processing Component` → `Sanitization Service Component`
+*   `Community Command Processing Component` → `Community Domain Component`
+*   `Community Command Processing Component` → `Community Persistence Component`
+
+**Diagrama de Componentes:**
+
+![Component Diagram - Community](./assets/Chapter-5/c4_components_community.png)
+
+### 5.8.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context Community, visualizando el detalle del dominio social y la persistencia de las interacciones.
+
+**5.8.6.1. Bounded Context Domain Layer Class Diagrams**
+
+El diagrama UML del Domain Layer muestra al agregado principal `CommunityPost`, vinculando sus comentarios, tipos de reacciones, estados de moderación y servicios de interacción.
+
+**Relaciones:**
+*   `CommunityPost` es el Aggregate Root del contexto.
+*   `CommunityPost` tiene una relación de uno a muchos (*1..**) hacia la entidad `Comment`.
+*   `PostStatus` (Value Object) representa la viabilidad del post (Activo, Moderado).
+*   `CommunityCommandService` interactúa con `IPostRepository` e `ICommentRepository`.
+
+**Diagrama UML de Clases (Domain Layer):**
+
+![UML Class Diagram - Community](./assets/Chapter-5/UML_community.png)
+
+**5.8.6.2. Bounded Context Database Design Diagram**
+
+El diagrama de base de datos representa la estructura relacional (ERD) utilizada para almacenar el historial de publicaciones y las interacciones de los usuarios.
+
+**Relaciones entre tablas:**
+*   `user_profiles (1)` ──── `(*) community_posts`
+*   `community_posts (1)` ──── `(*) comments`
+*   `plants (1)` ──── `(*) community_posts` (Relación opcional si la publicación etiqueta una especie).
+
+**Diagrama de base de datos (ERD):**
+![ERD - Community](./assets/Chapter-5/erd_community.png)
 ---
-
-### 5.2.4. Infrastructure Layer  
-
-#### ReportRepository  
-
-| Propiedad     | Valor                                                                                       |
-|---------------|---------------------------------------------------------------------------------------------|
-| **Nombre**    | ReportRepository                                                                            |
-| **Categoría** | Repository                                                                                  |
-| **Propósito** | Persistir y consultar reportes en base de datos.                                            |
-| **Interfaz**  | IReportRepository (`save(report)`, `findById(id)`, `listByUser(userId)`)                     |
-
-#### DataSetRepository  
-
-| Propiedad     | Valor                                                                                       |
-|---------------|---------------------------------------------------------------------------------------------|
-| **Nombre**    | DataSetRepository                                                                           |
-| **Categoría** | Repository                                                                                  |
-| **Propósito** | Almacenar y recuperar datasets asociados a reportes.                                        |
-| **Interfaz**  | IDataSetRepository (`save(dataset)`, `findByReport(reportId)`)                              |
-
-#### VisualizationRepository  
-
-| Propiedad     | Valor                                                                                       |
-|---------------|---------------------------------------------------------------------------------------------|
-| **Nombre**    | VisualizationRepository                                                                     |
-| **Categoría** | Repository                                                                                  |
-| **Propósito** | Guardar y consultar configuraciones de visualizaciones.                                     |
-| **Interfaz**  | IVisualizationRepository (`save(viz)`, `findByDataset(datasetId)`)                          |
-
-#### ReportingDbContext  
-
-| Propiedad     | Valor                                                                                       |
-|---------------|---------------------------------------------------------------------------------------------|
-| **Nombre**    | ReportingDbContext                                                                          |
-| **Categoría** | ORM Context                                                                                 |
-| **Propósito** | Proveer acceso a tablas de reportes, datasets y visualizaciones.                            |
- 
-
-### 5.2.5. Bounded Context Software Architecture Component Level Diagrams. 
-[![Analysis-Reporting-Component-Diagram.png](https://i.postimg.cc/hj12jvNM/Analysis-Reporting-Component-Diagram.png)](https://postimg.cc/MMX7366j)
-
-### 5.2.6. Bounded Context Software Architecture Code Level Diagrams. 
-
-#### 5.2.6.1. Bounded Context Domain Layer Class Diagrams. 
-[![Analysis-Reporting-Class-Diagram.png](https://i.postimg.cc/s2Fm45rw/image.png)](https://postimg.cc/rDJ580zr)
-
-#### 5.2.6.2. Bounded Context Database Design Diagram.
-[![Analysis-Reporting-Class-DB.png](https://i.postimg.cc/zBvyLPcM/image.png)](https://postimg.cc/JDwrvKmc)
 
 # Capítulo VI: Solution UX Design
 
@@ -2431,8 +5732,106 @@ El diseño de las aplicaciones considera los siguientes principios:
 *   **Jerarquía Visual y Organización de Información:** Se prioriza una distribución clara de los elementos visuales y funcionalidades, facilitando el acceso rápido a información relevante y acciones principales del sistema.
 *   **Enfoque en la Interacción del Usuario:** El diseño UI incorpora componentes visuales modernos y minimalistas que favorecen la interacción continua y mejoran la percepción de usabilidad de la plataforma.
 
+### 6.4.1. Applications Wireframes
 
-### 6.4.2. Applications Mock-ups
+Aquí se muestran los wireframes desarrollados para la aplicación web y móvil SecurOn.
+
+**Wireframes Web Application:**
+
+![Wireframes Web App](./assets/Chapter-6/wireframe-web.png)
+
+
+**Wireframes Web Application Responsive:**
+![Wireframes Web App Responsive](./assets/Chapter-6/wireframe-mobile.png)
+
+
+**Wireframes Mobile:**
+
+![Wireframes Mobile App](./assets/Chapter-6/wireframe-mobile.png)
+
+[Enlace para acceder al Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/SecurOn?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
+
+### 6.4.2. Applications Wireflow Diagrams
+
+En esta sección, se presentan los Wireflows de Oryxen, donde se muestran las rutas que los usuarios pueden seguir al interactuar con la aplicación web y móvil. Estos flujos reflejan los principales casos de uso de la plataforma: registro e inicio de sesión, gestión de plantas, vinculación de hardware y diagnóstico con inteligencia artificial. Para su realización se utilizó la herramienta LucidChart.
+
+***
+**Wireflow Diagrams Web Application:**
+
+**User goal: Usuario se registra e inicia sesión**
+
+**Descripción:**
+Al acceder a la aplicación web, el usuario visualiza la pantalla de bienvenida (OnBoard) con las opciones de iniciar sesión o registrarse. Si no tiene cuenta, completa el formulario de Sign Up con su nombre, correo electrónico y contraseña. Una vez autenticado, es redirigido al Dashboard principal donde puede ver el estado de sus plantas.
+
+![Wireflow Web 1 - Registro e Inicio de Sesión](./assets/Chapter-6/wireflows/wireflow-web-01-login.png)
+
+---
+
+**User goal: Usuario registra una nueva planta manualmente**
+
+**Descripción:**
+Desde el Dashboard, el usuario accede a la sección Plant Grid y selecciona la opción para añadir una nueva planta. Completa el formulario con el nombre, la especie y la ubicación. El sistema sugiere automáticamente los umbrales de humedad recomendados según la especie elegida. Al confirmar, la planta aparece como una nueva tarjeta en el Dashboard.
+
+![Wireflow Web 2 - Registro de Planta](./assets/Chapter-6/wireflows/wireflow-web-02-planta.png)
+
+---
+
+**User goal: Usuario visualiza detalles y métricas de una planta**
+
+**Descripción:**
+El usuario selecciona una planta desde el Dashboard o desde Plant Grid. Se muestra la vista Plant Details con las métricas actuales del sensor (humedad, temperatura), el historial de lecturas y las alertas activas. Desde esta vista puede acceder al historial completo en la sección History o ver analítica avanzada en Analytics.
+
+![Wireflow Web 3 - Detalles y Métricas de Planta](./assets/Chapter-6/wireflows/wireflow-web-03-detalles.png)
+
+---
+
+**User goal: Usuario explora la comunidad y analítica**
+
+**Descripción:**
+El usuario navega desde el menú principal hacia la sección Community, donde puede compartir experiencias con otros usuarios y ver publicaciones de la comunidad. También accede a Analytics para visualizar gráficas históricas del comportamiento de sus plantas. Desde Settings puede ajustar preferencias de notificación y datos de su cuenta.
+
+![Wireflow Web 4 - Comunidad, Analítica y Configuración](./assets/Chapter-6/wireflows/wireflow-web-04-comunidad.png)
+
+---
+
+**Wireflow Diagrams Mobile Application:**
+
+**User goal: Usuario se registra e inicia sesión**
+
+**Descripción:**
+Al abrir la aplicación móvil, el usuario ve la pantalla de OnBoard con las opciones de Sign Up y Sign In. Puede autenticarse mediante correo electrónico o Google (OAuth2). Una vez autenticado sin plantas registradas, el sistema muestra un estado vacío con el llamado a la acción "Añadir mi primera planta" y lo redirige al Dashboard al completar el registro.
+
+![Wireflow Mobile 1 - Registro e Inicio de Sesión](./assets/Chapter-6/wireflows/wireflow-mobile-01-login.png)
+
+---
+
+**User goal: Usuario vincula el hardware Sensor Lite**
+
+**Descripción:**
+Desde el Dashboard móvil, el usuario presiona el botón de acción flotante (FAB) y selecciona "Vincular Dispositivo". La aplicación solicita permisos de cámara y Bluetooth. El usuario escanea el código QR del Sensor Lite; el sistema lo registra y lo enlaza a la red WiFi local. Finalmente, el usuario asigna el sensor a una planta existente y el Dashboard se actualiza mostrando los datos en tiempo real.
+
+![Wireflow Mobile 2 - Vinculación del Sensor Lite](./assets/Chapter-6/wireflows/wireflow-mobile-02-sensor.png)
+
+---
+
+**User goal: Usuario solicita diagnóstico de IA para su planta**
+
+**Descripción:**
+El usuario, al notar un problema en su planta, ingresa a Plant Details desde el Dashboard y presiona el botón "Diagnóstico con IA". Se abre la cámara para capturar una fotografía de la hoja afectada. Tras el procesamiento en el backend, la app muestra el problema detectado (ej. clorosis, hongos) junto con las recomendaciones correctivas. El usuario puede aplicar la recomendación y programar un recordatorio de seguimiento automático.
+
+![Wireflow Mobile 3 - Diagnóstico con IA](./assets/Chapter-6/wireflows/wireflow-mobile-03-ia.png)
+
+---
+
+**User goal: Usuario consulta el historial y ajusta configuración**
+
+**Descripción:**
+Desde el menú inferior de la app, el usuario accede a la sección History para revisar el registro histórico de lecturas de humedad y temperatura de sus plantas. Desde Settings puede activar o desactivar notificaciones de alertas, cambiar entre el modo claro y oscuro (Dark Mode) y gestionar los datos de su cuenta.
+
+![Wireflow Mobile 4 - Historial y Configuración](./assets/Chapter-6/wireflows/wireflow-mobile-04-historial.png)
+
+
+### 6.4.3. Applications Mock-ups
 
 En esta sección se presentan los mock-ups para las aplicaciones móvil y web de Oryxen, diseñados para ofrecer una experiencia de usuario intuitiva y eficiente. Estas interfaces son la representación directa del Design System establecido, utilizando la tipografía Raleway para asegurar una lectura clara y una paleta de colores en tonos verdes y cremas que proyecta la identidad tecnológica y orgánica de la plataforma.
 
@@ -2504,7 +5903,7 @@ A continuación se presentan los mock-ups para la aplicación web y móvil:
 ![DarkMode_MobileMockup](./assets/Chapter-6/DarkMode_MobileMockup.png)
 
 
-### 6.4.3. Applications User Flow Diagrams
+### 6.4.4. Applications User Flow Diagrams
 
 Los diagramas de flujo de usuario (*User Flows*) mapean el recorrido paso a paso que realiza un consumidor dentro de las aplicaciones (Web y Móvil) de Oryxen para completar tareas específicas. Estos flujos han sido diseñados minimizando la fricción cognitiva y apoyando nuestra estrategia de adopción progresiva: permitiendo al usuario experimentar valor inmediato en el plan gratuito y facilitando transiciones naturales hacia la compra de hardware (Sensor Lite) o la suscripción Premium.
 
@@ -2549,7 +5948,15 @@ Este flujo ilustra cómo un usuario interactúa con la característica estrella 
 *(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
 `![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
 
+### 6.5. Applications Prototyping
 
+[![Protitipo-MOVIL.jpg](https://i.postimg.cc/8c68x7x3/Protitipo-MOVIL.jpg)](https://postimg.cc/YLMyWCrf)
+
+Link del video app movil: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQDQXbb_sP6gQbtmDmIo70zvAexpD0dW6jAVRMliIWUcS6A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8SMDbO
+
+[![Prototipo-WEB.jpg](https://i.postimg.cc/zvgm4y9m/Prototipo-WEB.jpg)](https://postimg.cc/0KPHwykZ)
+
+Link del video app web: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQD90adpuh2HRaN3xZ5TbRREAbDzTw7cJ7ru2NqoLsuGbEg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=c79d7N
 
 
 # Conclusiones
