@@ -142,6 +142,27 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
     - [4.3.3. Software Architecture Container Level Diagrams](#433-software-architecture-container-level-diagrams)  
     - [4.3.4. Software Architecture Deployment Diagrams](#434-software-architecture-deployment-diagrams)
 
+### [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
+
+- [5.1. Bounded Context: Auth & Identity Integration](#51-bounded-context-auth--identity-integration)
+    - [5.1.1. Domain Layer](#511-domain-layer)
+    - [5.1.2. Interface Layer](#512-interface-layer)
+    - [5.1.3. Application Layer](#513-application-layer)
+    - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
+    - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
+    - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
+        - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+        - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+- [5.2. Bounded Context: Analysis & Reporting](#52-bounded-context-analysis--reporting)
+    - [5.2.1. Domain Layer](#521-domain-layer)
+    - [5.2.2. Interface Layer](#522-interface-layer)
+    - [5.2.3. Application Layer](#523-application-layer)
+    - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
+    - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
+    - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
+        - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
+        - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
+
 #### [Conclusiones](#conclusiones)  
 - [Conclusiones y recomendaciones.](#conclusiones-y-recomendaciones)  
 
@@ -552,6 +573,11 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
+**Estrategias generales de Oryxen**
+- Diferenciación por la **integración de automatización + IA conversacional** aplicada sobre las plantas que el usuario ya posee, sin obligarlo a migrar a un ecosistema cerrado.
+- Ecosistema **hardware + software modular**: sensores independientes, riego automatizado y panel centralizado accesible desde web y móvil.
+- Modelo de negocio Freemium 100% software para eliminar la barrera de entrada al hardware en LATAM, escalable mediante la venta de un 'Sensor Lite' básico de bajo costo, y un Plan Premium que rentabiliza el negocio bloqueando funciones avanzadas de IA e historial completo de datos..
+- Posicionamiento como un **aliado cotidiano** para hogares ocupados y aficionados latinoamericanos, con precios adaptados al mercado regional.
 Hemos identificado diversas estrategias y tácticas para diferenciarnos y competir de manera efectiva dentro del mercado de jardinería inteligente y automatización del hogar. Oryxen busca posicionarse como una solución accesible y especializada para el cuidado de plantas en entornos urbanos, combinando automatización, monitoreo e inteligencia artificial en una sola plataforma.
 
 **1. Estrategias de Diferenciación:** <br>
@@ -1327,9 +1353,9 @@ Detección de agrupaciones naturales: Identificamos patrones y agrupaciones natu
 
 Comenzamos identificando las áreas core del dominio, es decir, aquellas con mayor impacto en la propuesta de valor del sistema.
 
-- Core: Plant Management, Device Management (IoT), Data Telemetry, Analytics.
+- Core: Plant Management, Device Management (IoT), Data Telemetry, Analysis & Reporting.
 
-- Supporting: Auth & Identity,  Subscription, Notification .
+- Supporting: Auth & Identity Integration, Subscription, Notification.
 
 - generic: , Community.
 
@@ -1350,7 +1376,7 @@ Identificamos eventos clave que marcaban transiciones entre subsistemas. Ejemplo
 
 
 __Primer agrupamiento__ 
-Se delimitaron los contextos básicos de Auth & Identity y Device Management (IoT). Estos responden a responsabilidades claras: autenticación de usuarios y control de hardware. 
+Se delimitaron los contextos básicos de Auth & Identity Integration y Device Management (IoT). Estos responden a responsabilidades claras: integración con el proveedor externo de IAM para autenticación y autorización de usuarios, junto con la administración de hardware. 
 
 [![Event-Storming-oryxen-9.jpg](https://i.postimg.cc/DyCPN7yv/Event-Storming-plantcare-9.jpg)](https://postimg.cc/qz3KhV3S)
 
@@ -1371,7 +1397,7 @@ Se añadieron los contextos complementarios: Notification y Community, encargado
 Consolidación final
 El resultado fue un mapa de 8 bounded contexts:
 
-- Auth & Identity
+- Auth & Identity Integration
 
 - Device Management (IoT)
 
@@ -1381,7 +1407,7 @@ El resultado fue un mapa de 8 bounded contexts:
 
 - Data Telemetry
 
-- Analytics
+- Analysis & Reporting
 
 - Notification 
 
@@ -1513,6 +1539,1017 @@ El Container Level Diagram presenta la arquitectura interna de Oryxen, mostrando
 Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Server, App Server, Database Server), dispositivos móviles de los usuarios y el dispositivo IoT físico. Cada contenedor está ubicado en el nodo correspondiente.
 
 ![DeploymentDiagram.png](./assets/C4-deployment.png)
+
+---
+
+# Capítulo V: Tactical-Level Software Design
+
+## 5.1. Bounded Context: Auth & Identity Integration
+
+**Descripción:** Este bounded context se encarga de integrar el backend de **Oryxen** con un servicio externo de **IAM (Identity and Access Management)**, similar a una solución administrada como AWS IAM/Cognito, Auth0 o Firebase Authentication. La autenticación, federación OAuth2, emisión de tokens, gestión de credenciales, roles, claims y sesiones no se implementan directamente dentro del backend de Oryxen, sino que se delegan al proveedor externo de IAM. El backend conserva únicamente la información de perfil necesaria para el dominio, el identificador externo del usuario y las reglas de autorización que conectan la identidad validada con los bounded contexts de Plant Management, Device Management, Subscription, Notification y Community.
+
+### 5.1.1. Domain Layer
+
+#### Aggregate 1: User
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| User | Entity/Aggregate Root | Modela la referencia local de un usuario de Oryxen, almacenando el identificador entregado por el IAM externo, datos de perfil y preferencias básicas del dominio. |
+
+**Atributos de User:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| id | UUID | Private | Identificador único del usuario. |
+| fullName | String | Private | Nombre completo mostrado en la aplicación. |
+| email | String | Private | Correo electrónico único asociado a la cuenta. |
+| externalIamId | String | Private | Identificador único del usuario en el proveedor externo de IAM. |
+| authProvider | AuthProvider | Private | Proveedor de autenticación federado mediante el IAM externo. |
+| role | Role | Private | Rol o claim sincronizado desde el IAM externo para controlar accesos en Oryxen. |
+| status | AccountStatus | Private | Estado local de la cuenta dentro del dominio de Oryxen. |
+| createdAt | DateTime | Private | Fecha de creación de la cuenta. |
+| lastLoginAt | DateTime | Private | Fecha del último acceso exitoso. |
+
+**Métodos de User:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Construye una entidad User con los datos requeridos. |
+| linkExternalIdentity | Void | Public | Asocia el usuario local con el identificador entregado por el IAM externo. |
+| updateProfile | Void | Public | Actualiza información básica del perfil. |
+| assignRole | Void | Public | Asigna o modifica el rol del usuario. |
+| activateAccount | Void | Public | Cambia el estado de la cuenta a activo. |
+| deactivateAccount | Void | Public | Deshabilita temporalmente la cuenta. |
+| registerLogin | Void | Public | Registra la fecha y hora del último inicio de sesión. |
+
+#### Value Object 1: Role
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| Role | Value Object | Define el nivel de acceso del usuario dentro de Oryxen y habilita permisos según su tipo de cuenta. |
+
+**Atributos de Role:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del rol: FREE_USER, PREMIUM_USER o ADMIN. |
+
+**Métodos de Role:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un rol con un valor permitido. |
+| equals | Boolean | Public | Compara el rol actual con otro rol. |
+| canAccessPremiumFeatures | Boolean | Public | Determina si el rol puede acceder a funcionalidades premium. |
+
+#### Value Object 2: AuthProvider
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthProvider | Value Object | Identifica el proveedor federado utilizado por el IAM externo para autenticar al usuario. |
+
+**Atributos de AuthProvider:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del proveedor: GOOGLE, EMAIL, APPLE u otro proveedor habilitado en el IAM externo. |
+| externalProviderId | String | Private | Identificador entregado por el proveedor externo, cuando aplica. |
+
+**Métodos de AuthProvider:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un proveedor de autenticación válido. |
+| isExternal | Boolean | Public | Indica si la autenticación proviene de un proveedor externo. |
+
+#### Entity 1: UserAccessGrant
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserAccessGrant | Entity | Representa una autorización local derivada de los roles o claims emitidos por el IAM externo para habilitar funcionalidades de Oryxen. |
+
+**Atributos de UserAccessGrant:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| id | UUID | Private | Identificador único del permiso local. |
+| userId | UUID | Private | Usuario propietario del permiso. |
+| claimName | String | Private | Nombre del claim recibido desde el IAM externo. |
+| claimValue | String | Private | Valor del claim utilizado para autorización local. |
+| expiresAt | DateTime | Private | Fecha de expiración del permiso sincronizado. |
+
+**Métodos de UserAccessGrant:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un permiso local asociado a un usuario. |
+| isExpired | Boolean | Public | Evalúa si el permiso sincronizado ya venció. |
+| grantsAccessTo | Boolean | Public | Verifica si el claim habilita una funcionalidad específica de Oryxen. |
+
+#### Value Object 3: AccountStatus
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AccountStatus | Value Object | Controla el estado operativo de una cuenta de usuario en Oryxen. |
+
+**Atributos de AccountStatus:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| value | String | Private | Valor del estado: ACTIVE, PENDING_VERIFICATION, SUSPENDED o DELETED. |
+
+**Métodos de AccountStatus:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| Constructor | Void | Public | Crea un estado de cuenta válido. |
+| allowsLogin | Boolean | Public | Indica si la cuenta puede iniciar sesión. |
+
+### 5.1.2. Interface Layer
+
+#### Controller 1: AuthController
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthController | Controller | Expone endpoints para iniciar flujos de autenticación y validar callbacks/tokens emitidos por el IAM externo. |
+
+**Atributos de AuthController:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| authService | AuthService | Private | Servicio encargado de coordinar la integración con el IAM externo. |
+| iamTokenValidator | IamTokenValidator | Private | Servicio responsable de validar tokens emitidos por el proveedor externo de IAM. |
+| userMapper | UserMapper | Private | Convierte entidades de dominio en DTOs de respuesta. |
+
+**Métodos de AuthController:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startLogin | ResponseEntity | Public | Redirige o inicializa el flujo de autenticación administrado por el IAM externo. |
+| handleCallback | ResponseEntity | Public | Procesa el callback del IAM externo y sincroniza la identidad local. |
+| validateSession | ResponseEntity | Public | Valida el token recibido desde clientes web o móviles. |
+| logout | ResponseEntity | Public | Solicita el cierre de sesión al IAM externo cuando corresponde. |
+
+#### Controller 2: UserIdentityController
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserIdentityController | Controller | Gestiona operaciones relacionadas con el perfil de identidad, consulta de usuario autenticado y administración de estado de cuenta. |
+
+**Atributos de UserIdentityController:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userService | UserService | Private | Servicio encargado de la gestión de datos de identidad. |
+| authorizationService | AuthorizationService | Private | Servicio para validar roles y permisos. |
+
+**Métodos de UserIdentityController:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| getCurrentUser | ResponseEntity | Public | Retorna los datos del usuario autenticado. |
+| updateProfile | ResponseEntity | Public | Actualiza datos básicos del perfil. |
+| changeRole | ResponseEntity | Public | Modifica el rol de un usuario, restringido a administradores. |
+| deactivateAccount | ResponseEntity | Public | Desactiva la cuenta del usuario. |
+
+### 5.1.3. Application Layer
+
+#### Service 1: AuthService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| AuthService | Service | Coordina la sincronización entre Oryxen y el proveedor externo de IAM, sin administrar credenciales directamente. |
+
+**Atributos de AuthService:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userRepository | UserRepository | Private | Repositorio para consultar y persistir usuarios. |
+| userAccessGrantRepository | UserAccessGrantRepository | Private | Repositorio para persistir permisos locales derivados de claims externos. |
+| externalIamService | ExternalIamService | Private | Servicio externo encargado de autenticar, federar y emitir tokens. |
+| iamTokenValidator | IamTokenValidator | Private | Servicio para validar JWTs, roles y claims emitidos por el IAM externo. |
+
+**Métodos de AuthService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startAuthentication | AuthRedirect | Public | Solicita al IAM externo el inicio del flujo de autenticación. |
+| synchronizeExternalUser | User | Public | Crea o actualiza el perfil local a partir de la identidad validada por el IAM. |
+| synchronizeClaims | Void | Public | Sincroniza roles o claims externos como permisos locales de Oryxen. |
+| validateSession | AuthResult | Public | Valida una sesión con base en el token emitido por el IAM externo. |
+| logout | Void | Public | Coordina el cierre de sesión con el proveedor externo cuando aplica. |
+
+#### Service 2: UserService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserService | Service | Gestiona operaciones de perfil, estado de cuenta y asignación de roles de usuario. |
+
+**Atributos de UserService:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| userRepository | UserRepository | Private | Repositorio para recuperar y actualizar usuarios. |
+| authorizationService | AuthorizationService | Private | Servicio para validar permisos de operación. |
+
+**Métodos de UserService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| getUserById | User | Public | Recupera un usuario por identificador. |
+| getUserByEmail | User | Public | Recupera un usuario por correo electrónico. |
+| updateProfile | User | Public | Actualiza información de perfil. |
+| assignRole | User | Public | Asigna un rol a un usuario existente. |
+| deactivateAccount | Void | Public | Desactiva una cuenta de usuario. |
+
+#### Service 3: IamTokenValidator
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| IamTokenValidator | Service | Valida tokens JWT emitidos por el proveedor externo de IAM y extrae claims necesarios para autorización local. |
+
+**Atributos de IamTokenValidator:**
+
+| Nombre | Tipo de dato | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| iamSettings | IamSettings | Private | Configuración del issuer, audience y JWKS del proveedor externo. |
+| externalIamService | ExternalIamService | Private | Cliente para recuperar llaves públicas y metadatos del IAM. |
+
+**Métodos de IamTokenValidator:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| validateAccessToken | ClaimsPrincipal | Public | Valida firma, expiración, issuer, audience y claims del JWT externo. |
+| extractExternalUserId | String | Public | Obtiene el identificador de usuario emitido por el IAM. |
+| extractRoles | List | Public | Obtiene roles o grupos definidos en el IAM externo. |
+
+### 5.1.4. Infrastructure Layer
+
+#### Repository 1: UserRepositoryImpl
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserRepositoryImpl | Repository | Implementa la persistencia de usuarios usando Entity Framework Core y la base de datos relacional de Oryxen. |
+
+**Métodos de UserRepositoryImpl:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| findById | User | Public | Recupera un usuario por su identificador. |
+| findByEmail | User | Public | Recupera un usuario por correo electrónico. |
+| existsByEmail | Boolean | Public | Verifica si una cuenta ya existe. |
+| save | User | Public | Persiste una nueva cuenta de usuario. |
+| update | User | Public | Actualiza datos de identidad existentes. |
+
+#### Repository 2: UserAccessGrantRepositoryImpl
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| UserAccessGrantRepositoryImpl | Repository | Gestiona la persistencia de permisos locales derivados de roles o claims emitidos por el IAM externo. |
+
+**Métodos de UserAccessGrantRepositoryImpl:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| findByUserId | List | Public | Recupera permisos locales asociados a un usuario. |
+| save | UserAccessGrant | Public | Guarda un permiso local sincronizado desde el IAM externo. |
+| replaceByUserId | Void | Public | Reemplaza los permisos locales al recibir claims actualizados. |
+| deleteExpired | Void | Public | Elimina permisos expirados según política de seguridad. |
+
+### External Services
+
+#### Service 1: ExternalIamService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| ExternalIamService | External Service | Servicio administrado externo de IAM encargado de autenticar usuarios, federar proveedores OAuth2, emitir tokens, administrar roles/claims y controlar sesiones. |
+
+**Métodos de ExternalIamService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| startAuthenticationFlow | AuthRedirect | Public | Inicializa el flujo de autenticación en el proveedor IAM. |
+| validateAuthorizationCode | ExternalUserInfo | Public | Valida el código OAuth2 y obtiene el perfil externo. |
+| validateAccessToken | ClaimsPrincipal | Public | Verifica un token emitido por el proveedor IAM. |
+| logoutSession | Void | Public | Cierra o revoca la sesión administrada externamente. |
+
+#### Service 2: EmailService
+
+| Nombre | Categoría | Propósito |
+| --- | --- | --- |
+| EmailService | External Service | Envía correos transaccionales propios de Oryxen, como alertas de seguridad o notificaciones de actividad asociadas a la cuenta. La verificación de correo y recuperación de contraseña pertenecen al IAM externo. |
+
+**Métodos de EmailService:**
+
+| Nombre | Tipo de retorno | Visibilidad | Descripción |
+| --- | --- | --- | --- |
+| sendAccountLinkedEmail | Void | Public | Notifica que una identidad externa fue vinculada correctamente a Oryxen. |
+| sendSecuritySummaryEmail | Void | Public | Envía un resumen de actividad sensible asociada a la cuenta. |
+| sendSecurityAlert | Void | Public | Notifica eventos sensibles, como inicio de sesión desde un nuevo dispositivo. |
+
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El componente **Auth & Identity Integration** centraliza la comunicación entre Oryxen y el proveedor externo de **IAM**. Los clientes Web App y Mobile App consumen el **AuthController** y el **UserIdentityController**, mientras que el backend valida tokens externos, sincroniza el perfil local y transforma roles/claims del IAM en permisos de dominio. La autenticación, emisión de tokens, credenciales y sesiones permanecen bajo responsabilidad del servicio IAM externo.
+
+![image](https://github.com/user-attachments/assets/3178abf8-7494-4cde-8c7a-14583a51c3ef)
+
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+A continuación se presentan los diagramas de nivel de código para el bounded context **Auth & Identity Integration**, incluyendo la estructura de clases principales del dominio y el diseño de base de datos que soporta referencias de usuarios, proveedores federados y permisos locales derivados del IAM externo.
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama de clases del dominio muestra a **User** como aggregate root local. Este agregado contiene objetos de valor como **Role**, **AuthProvider** y **AccountStatus**, además de relacionarse con **UserAccessGrant** para representar permisos locales derivados de claims externos. Los servicios de aplicación, como **AuthService** e **IamTokenValidator**, coordinan la validación de identidad contra el IAM externo sin emitir ni almacenar credenciales en Oryxen.
+
+![image](https://github.com/user-attachments/assets/7870fb53-32b9-449f-944c-dad16c11f427)
+
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+El diseño de base de datos del contexto **Auth & Identity Integration** mantiene únicamente referencias locales necesarias para Oryxen: usuarios, proveedores federados y permisos derivados. Las credenciales, refresh tokens y sesiones se mantienen en el proveedor externo de IAM.
+
+![image](https://github.com/user-attachments/assets/5be6bc52-8caf-4531-b0da-45991ff25087)
+
+## 5.2. Bounded Context: Analysis & Reporting  
+
+**Descripción:** Este bounded context se encarga de generar reportes, datasets agregados y visualizaciones a partir de la telemetría producida por los dispositivos IoT de **Oryxen**. Su responsabilidad principal es convertir datos históricos de sensores en información consultable, descargable y comprensible para el usuario, permitiendo analizar tendencias, revisar métricas relevantes y exportar resultados en formatos útiles como PDF o CSV.
+
+### 5.2.1. Domain Layer  
+
+#### Report  
+
+_Tabla de Report_  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | Report                                                                                      |
+| **Categoría** | Aggregate Root                                                                              |
+| **Propósito** | Representa un reporte generado a partir de la telemetría de los dispositivos IoT.           |
+
+_Tabla de atributos de Report_  
+
+| Nombre       | Tipo de dato      | Visibilidad | Descripción                                    |
+|--------------|------------------|-------------|------------------------------------------------|
+| id           | UUID             | Private     | Identificador único del reporte.               |
+| user_id      | UUID             | Private     | FK al usuario dueño del reporte.               |
+| device_id    | UUID (nullable)  | Private     | FK al dispositivo si es un reporte específico. |
+| type         | VARCHAR(50)      | Public      | Tipo: `summary`, `trend`, `custom`.            |
+| title        | VARCHAR(150)     | Public      | Título descriptivo del reporte.                |
+| description  | TEXT             | Public      | Descripción opcional del reporte.              |
+| status       | VARCHAR(20)      | Public      | Estado: `generated`, `pending`, `failed`.      |
+| created_at   | TIMESTAMP        | Private     | Fecha de creación.                             |
+| generated_at | TIMESTAMP NULL   | Private     | Fecha en que se generó el reporte.             |
+
+_Tabla de métodos de Report_  
+
+| Nombre            | Tipo de retorno | Visibilidad | Descripción                                   |
+|-------------------|-----------------|-------------|-----------------------------------------------|
+| generate()        | Report          | Public      | Inicia el proceso de generación.              |
+| markAsFailed()    | void            | Private     | Marca el reporte como fallido.                |
+| updateTitle(title)| void            | Public      | Cambia título o descripción del reporte.      |
+
+---
+
+#### ReportDataSet  
+
+_Tabla de ReportDataSet_  
+
+| Propiedad     | Valor                                                                 |
+|---------------|-----------------------------------------------------------------------|
+| **Nombre**    | ReportDataSet                                                         |
+| **Categoría** | Entity                                                                |
+| **Propósito** | Representa un conjunto de métricas asociadas a un reporte específico. |
+
+_Tabla de atributos de ReportDataSet_  
+
+| Nombre       | Tipo de dato   | Visibilidad | Descripción                                       |
+|--------------|---------------|-------------|---------------------------------------------------|
+| id           | UUID          | Private     | Identificador del dataset.                        |
+| report_id    | UUID          | Private     | FK a `Report`.                                    |
+| metric_type  | VARCHAR(50)   | Public      | Tipo de métrica (`temperature`, `humidity`).      |
+| aggregated   | JSON/Object   | Public      | Datos agregados (promedio, min, max, std dev).    |
+| generated_at | TIMESTAMP     | Private     | Fecha de generación del dataset.                  |
+
+_Tabla de métodos de ReportDataSet_  
+
+| Nombre            | Tipo de retorno | Visibilidad | Descripción                                         |
+|-------------------|-----------------|-------------|-----------------------------------------------------|
+| calculateStats()  | void            | Public      | Aplica funciones de agregación sobre los registros. |
+| attachToReport()  | void            | Private     | Vincula dataset con un reporte.                     |
+
+---
+
+#### Visualization  
+
+_Tabla de Visualization_  
+
+| Propiedad     | Valor                                                                  |
+|---------------|------------------------------------------------------------------------|
+| **Nombre**    | Visualization                                                          |
+| **Categoría** | Entity                                                                 |
+| **Propósito** | Representa una vista gráfica generada a partir de un dataset.          |
+
+_Tabla de atributos de Visualization_  
+
+| Nombre      | Tipo de dato   | Visibilidad | Descripción                                         |
+|-------------|---------------|-------------|-----------------------------------------------------|
+| id          | UUID          | Private     | Identificador único de la visualización.            |
+| dataset_id  | UUID          | Private     | FK a `ReportDataSet`.                               |
+| chart_type  | VARCHAR(30)   | Public      | Tipo: `line`, `bar`, `pie`, `heatmap`.              |
+| config      | JSON          | Public      | Configuración del gráfico (colores, ejes, filtros). |
+| created_at  | TIMESTAMP     | Private     | Fecha de creación.                                  |
+
+_Tabla de métodos de Visualization_  
+
+| Nombre               | Tipo de retorno | Visibilidad | Descripción                                    |
+|----------------------|-----------------|-------------|------------------------------------------------|
+| render()             | JSON            | Public      | Devuelve configuración lista para frontend.    |
+| updateConfig(config) | void            | Public      | Modifica parámetros de visualización.          |
+
+---
+
+### 5.2.2. Interface Layer  
+
+#### Report API  
+
+_Tabla de Report API_  
+
+| Propiedad     | Valor                                                                         |
+|---------------|-------------------------------------------------------------------------------|
+| **Nombre**    | ReportController                                                              |
+| **Categoría** | API / Resource                                                                |
+| **Propósito** | Exponer endpoints para creación, consulta y descarga de reportes.             |
+| **Ruta**      | `/api/reports`                                                                |
+
+_Tabla de métodos de Report API_  
+
+| Nombre        | Ruta                             | Acción                                  | Handle                          |
+|---------------|----------------------------------|-----------------------------------------|---------------------------------|
+| createReport  | POST /api/reports                | Crear un nuevo reporte                   | CreateReportCommandHandler      |
+| getReport     | GET /api/reports/{id}            | Obtener detalles de un reporte           | GetReportQueryHandler           |
+| listReports   | GET /api/reports                 | Listar reportes de un usuario            | ListReportsQueryHandler         |
+| downloadReport| GET /api/reports/{id}/download   | Descargar reporte generado (PDF/CSV)     | DownloadReportQueryHandler      |
+
+---
+
+### 5.2.3. Application Layer  
+
+#### Command Handlers  
+
+| Nombre                       | Categoría       | Propósito                                     | Comando                 |
+|------------------------------|-----------------|-----------------------------------------------|-------------------------|
+| CreateReportCommandHandler   | Command Handler | Crear y persistir un nuevo reporte            | CreateReportCommand     |
+| GenerateReportCommandHandler | Command Handler | Orquestar la creación de datasets y gráficos  | GenerateReportCommand   |
+
+#### Query Handlers  
+
+| Nombre                       | Categoría     | Propósito                                   | Query                  |
+|------------------------------|---------------|---------------------------------------------|------------------------|
+| GetReportQueryHandler        | Query Handler | Obtener datos detallados de un reporte      | GetReportQuery         |
+| ListReportsQueryHandler      | Query Handler | Listar reportes asociados a un usuario      | ListReportsQuery       |
+| DownloadReportQueryHandler   | Query Handler | Exportar y retornar reporte en un formato   | DownloadReportQuery    |
+
+#### Event Handlers  
+
+| Nombre                   | Categoría     | Propósito                                   | Evento                 |
+|--------------------------|---------------|---------------------------------------------|------------------------|
+| ReportGeneratedHandler   | Event Handler | Notificar al usuario/reporting system        | ReportGeneratedEvent   |
+| ReportFailedHandler      | Event Handler | Manejar fallos en generación de reportes    | ReportFailedEvent      |
+
+---
+
+### 5.2.4. Infrastructure Layer  
+
+#### ReportRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | ReportRepository                                                                            |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Persistir y consultar reportes en base de datos.                                            |
+| **Interfaz**  | IReportRepository (`save(report)`, `findById(id)`, `listByUser(userId)`)                     |
+
+#### DataSetRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | DataSetRepository                                                                           |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Almacenar y recuperar datasets asociados a reportes.                                        |
+| **Interfaz**  | IDataSetRepository (`save(dataset)`, `findByReport(reportId)`)                              |
+
+#### VisualizationRepository  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | VisualizationRepository                                                                     |
+| **Categoría** | Repository                                                                                  |
+| **Propósito** | Guardar y consultar configuraciones de visualizaciones.                                     |
+| **Interfaz**  | IVisualizationRepository (`save(viz)`, `findByDataset(datasetId)`)                          |
+
+#### ReportingDbContext  
+
+| Propiedad     | Valor                                                                                       |
+|---------------|---------------------------------------------------------------------------------------------|
+| **Nombre**    | ReportingDbContext                                                                          |
+| **Categoría** | ORM Context                                                                                 |
+| **Propósito** | Proveer acceso a tablas de reportes, datasets y visualizaciones.                            |
+ 
+
+### 5.2.5. Bounded Context Software Architecture Component Level Diagrams. 
+[![Analysis-Reporting-Component-Diagram.png](https://i.postimg.cc/hj12jvNM/Analysis-Reporting-Component-Diagram.png)](https://postimg.cc/MMX7366j)
+
+### 5.2.6. Bounded Context Software Architecture Code Level Diagrams. 
+
+#### 5.2.6.1. Bounded Context Domain Layer Class Diagrams. 
+[![Analysis-Reporting-Class-Diagram.png](https://i.postimg.cc/s2Fm45rw/image.png)](https://postimg.cc/rDJ580zr)
+
+#### 5.2.6.2. Bounded Context Database Design Diagram.
+[![Analysis-Reporting-Class-DB.png](https://i.postimg.cc/zBvyLPcM/image.png)](https://postimg.cc/JDwrvKmc)
+
+# Capítulo VI: Solution UX Design
+
+## 6.1. Style Guidelines
+
+En esta sección se presentan los estilos establecidos, con el fin de garantizar consistencia, claridad y una experiencia de usuario coherente en todas las plataformas y componentes desarrollados.
+
+### 6.1.1. General Style Guidelines
+
+**Branding:** <br> El branding de Oryxen está diseñado para transmitir bienestar, conexión con la naturaleza y compromiso con el cuidado responsable de las plantas. La identidad visual busca reflejar un enfoque accesible, amigable y moderno, orientado a personas que desean mejorar el mantenimiento de sus plantas. Se utilizan elementos gráficos que evocan crecimiento, frescura y equilibrio, creando una imagen visual clara, cercana y fácil de reconocer para usuarios interesados en el autocuidado verde y la sostenibilidad.
+
+**Typography:** <br> La tipografía seleccionada es Raleway, una fuente moderna, estilizada y de alta legibilidad, que aporta un aspecto limpio y profesional a la interfaz. Se utilizará Raleway tanto para encabezados como para el cuerpo de texto, aprovechando su versatilidad en diferentes pesos tipográficos para marcar jerarquías visuales claras. Esta elección equilibra seriedad y cercanía, manteniendo una apariencia accesible y coherente con el enfoque natural y amigable de la aplicación Oryxen.
+
+![Raleway_Font](./assets/Chapter-6/Raleway_Font.png)
+
+**Colors:** <br> La paleta de colores de Oryxen está compuesta por tonos verdes y cremas, cuidadosamente seleccionados para reflejar la esencia de la naturaleza y promover una experiencia visual tranquila y confiable. Los tonos verdes comunican frescura, crecimiento y sostenibilidad, valores clave en el cuidado de plantas. Por su parte, los tonos crema aportan calidez y naturalidad, generando una conexión visual con la tierra y el entorno orgánico. Estos colores se aplicarán estratégicamente en la interfaz para garantizar una experiencia armoniosa, accesible y agradable en todo tipo de dispositivos, especialmente móviles.
+
+![Oryxen_ColorPalette](./assets/Chapter-6/Oryxen_ColorPalette.png)
+
+**Spacing:** <br> Se utilizó un espaciado apropiado en toda la interfaz para evitar la saturación de elementos, facilitando así una navegación clara y confortable. Los márgenes y las separaciones entre los distintos componentes se planificaron con detalle para lograr un diseño armónico y bien estructurado.
+
+**Tono de Comunicación y Lenguaje Aplicado:** <br> El tono de comunicación de Oryxen será cercano, motivador y accesible, con el objetivo de acompañar al usuario en el cuidado de sus plantas de forma clara y positiva. El lenguaje aplicado se define como divertido, casual, respetuoso y entusiasta. Este enfoque busca generar una experiencia amigable, que inspire confianza y fomente una conexión genuina con la naturaleza a través del uso cotidiano de la aplicación.
+
+
+### 6.1.2. Web, Mobile & Devices Style Guidelines
+
+Para garantizar una experiencia de usuario (UX) consistente, intuitiva y fluida a través de todo el ecosistema de **Oryxen**, se han establecido lineamientos de estilo y comportamiento específicos para cada plataforma. Estas directrices aseguran que la transición desde la *Landing Page* hasta la aplicación móvil y la interacción física con el hardware (Sensor Lite) se perciba como un solo producto unificado, respetando las convenciones nativas de cada sistema operativo.
+
+Además, alineados con los objetivos de internacionalización (i18n) y accesibilidad (a11y), todas las interfaces web y móviles tienen como idioma por defecto el inglés (`en_US`), con soporte completo para español latinoamericano (`es_419`), e integran atributos ARIA para garantizar que la plataforma sea inclusiva para todos los usuarios.
+
+#### A. Web Style Guidelines (Landing Page & Web App)
+
+Las interfaces web de Oryxen (tanto la página de aterrizaje comercial como el *Dashboard* de la aplicación web) están diseñadas bajo el paradigma **Mobile-First** y construidas utilizando **Vue 3** con la biblioteca de componentes **PrimeVue / Vuetify**, basándose estrictamente en las directrices de **Material Design**.
+
+**1. Responsive Grid System:**
+Se utiliza un sistema de cuadrícula fluida de 12 columnas que se adapta dinámicamente al *viewport* del usuario para garantizar la legibilidad de la información (como los gráficos del historial de telemetría y diagnósticos de IA):
+*   **Desktop (≥ 1024px):** Layout expandido que aprovecha el espacio horizontal, mostrando el menú de navegación lateral fijo y paneles de métricas detallados.
+*   **Tablet (768px - 1023px):** Los paneles de información se reorganizan en 2 columnas. El menú lateral se vuelve colapsable.
+*   **Mobile (≤ 767px):** Las tarjetas de las plantas ocupan el 100% del ancho (1 columna). La navegación principal pasa a un *Bottom Navigation Bar* o un menú hamburguesa para no restar espacio al contenido.
+
+**2. Interacción y Comportamiento Web:**
+*   **Micro-interacciones:** Los botones *Call-to-Action* (CTAs), como la actualización a planes Premium o la vinculación de un nuevo sensor, cuentan con un estado *hover* (elevación de sombra y cambio de opacidad) que indica claramente su interactividad.
+*   **Accesibilidad (a11y):** Los contrastes de color cumplen con la normativa WCAG 2.1 nivel AA. Todos los formularios web y botones iconográficos (ej. botón de "Regar ahora") cuentan con etiquetas `aria-label` y soporte para navegación exclusiva por teclado.
+
+*(Añadir captura de pantalla ilustrando la guía de estilos web responsiva)*
+`![Web Style Guidelines - Responsive Grid & Components](../assets/images/ux-web-guidelines.png)`
+
+#### B. Mobile Style Guidelines (Native iOS & Android)
+
+Dado que la aplicación móvil es el punto de contacto principal para los usuarios del plan básico gratuito y los aficionados, el rendimiento y la naturalidad son críticos. Siguiendo nuestras restricciones arquitectónicas, el desarrollo se realiza de forma **nativa** (Swift para iOS y Kotlin para Android), por lo que las interfaces respetan las guías oficiales de cada plataforma, unificadas por el *branding* de Oryxen.
+
+**1. Android (Kotlin) - Material 3 Design:**
+*   **Navegación:** Uso de un *Bottom Navigation Bar* para el acceso rápido a: *Dashboard* (Mis Plantas), Comunidad, Alertas IA y Ajustes. 
+*   **Acciones Principales:** Se emplea un *Floating Action Button* (FAB) anclado en la esquina inferior derecha para la acción más importante: "Agregar Planta" (escaneo de código QR).
+*   **Feedback Visual:** Implementación del efecto *Ripple* de Material Design al tocar elementos interactivos.
+
+**2. iOS (Swift) - Human Interface Guidelines (HIG):**
+*   **Navegación:** Uso del *Tab Bar* estándar de iOS con iconografía lineal o sólida (SF Symbols) según el estado activo. La navegación jerárquica utiliza el *Navigation Bar* nativo con el botón "Atrás" en la esquina superior izquierda.
+*   **Gestos:** Soporte nativo para deslizar (*Swipe-to-go-back*) y menús contextuales en las tarjetas de las plantas (ej. deslizar a la izquierda sobre una planta en la lista para "Archivar" o "Editar").
+
+**3. Ergonomía y Touch Targets (Común para móviles):**
+Para garantizar que personas de la tercera edad u ocupadas interactúen sin frustración, el tamaño mínimo de cualquier botón o elemento interactivo es de **48x48 dp/pt**, con un margen de separación adecuado para evitar toques accidentales.
+
+*(Añadir captura de pantalla ilustrando los componentes nativos de iOS y Android)*
+`![Mobile Style Guidelines - Native Components](../assets/images/ux-mobile-guidelines.png)`
+
+#### C. Devices (IoT Hardware) Style & Feedback Guidelines
+
+Aunque el hardware físico (*Sensor Lite* y el módulo de riego) carece de pantallas digitales complejas, su experiencia de usuario debe estar perfectamente orquestada con la aplicación móvil. El diseño del hardware sigue un principio de "tecnología silenciosa", siendo minimalista para integrarse estéticamente en macetas de hogares y oficinas.
+
+**1. Retroalimentación Visual (Indicadores LED):**
+El hardware utiliza un patrón de comunicación semántico basado en un único indicador LED multicolor para informar su estado operativo sin depender del móvil:
+*   **Azul (parpadeo lento):** Modo de emparejamiento (Bluetooth/WiFi activo), esperando escaneo de código QR desde la App.
+*   **Verde (fijo por 3 seg):** Conexión exitosa al entorno de nube de Oryxen.
+*   **Rojo (parpadeo rápido):** Error crítico (batería extremadamente baja o desconexión de red superior a 5 minutos).
+*   **Apagado (por defecto):** Para ahorrar energía, el dispositivo no emite luz durante la operación normal de recolección de datos, dejando las alertas detalladas y predictivas al sistema de notificaciones *push* de la app.
+
+
+## 6.2. Information Architecture
+
+En esta sección se presenta la arquitectura de la información de Oryxen, el cual es un elemento clave en el diseño y la facilidad de uso de un sistema digital, que garantize que el usuario, independientemente de su nivel de conocimiento técnico, comprenda y utilice el contenido de forma clara y eficaz.
+
+### 6.2.1. Organization Systems
+
+Los sistemas de organización en Oryxen estructuran la información y funcionalidades para que la navegación sea intuitiva, eficiente y centrada en el usuario. Se aplican los siguientes enfoques:
+
+**Visual Organization Systems (Esquemas Visuales):**
+
+- **Jerárquica (Visual Hierarchy):** Se aplica principalmente en el Dashboard central de la aplicación móvil. Donde se priorizan que los indicadores sean completamente visibles e identificables rápidamente por el usuario, a través de el uso de colores y tamaños de fuente destacados.
+
+- **Secuencial (Step-by-step):** Se utiliza en la vinculación de dispositivos IoT, donde el usuario es guiado paso a paso para vincular estas herramientas a la red Wi-Fi y asignar una especie botánica específica, asegurando que la configuración técnica sea exitosa antes de permitir el acceso al monitoreo.
+
+- **Matricial:** Se aplica en el panel de analíticas avanzadas de la plataforma Web, donde el usuario puede comparar variables (ej. Humedad, Crecimiento, Clima externo) para obtener una visión acerca del rendimiento de su jardín inteligente.
+
+<br>
+
+**Categorization Schemes (Esquemas de Categorización):**
+
+- **Por Tópicos:** El contenido se agrupa en áreas funcionales claras como: Asistente IA, Comunidad, Configuración y Dispositivos, etc.
+
+- **Cronológico:** Se presenta en la sección de Historial de Cuidado, donde se registran de forma temporal los riegos automáticos realizados, las alertas detectadas y las intervenciones del usuario, permitiendo auditar la evolución de la planta a lo largo del tiempo.
+
+- **Según Audiencia:** La plataforma adapta funciones según el perfil del usuario como una visualización simplificada con consejos básicos de la IA para planes gratuitos; y acceso a dashboards técnicos detallados y configuraciones avanzadas de automatización para múltiples zonas de cultivo para planes con suscripción premium.
+
+### 6.2.2. Labeling Systems
+
+Los sistemas de etiquetado en **Oryxen** definen la forma en que se nombran las secciones, acciones, estados y mensajes dentro de la Landing Page, la Aplicación Web y la Aplicación Móvil. Su objetivo es utilizar términos claros, consistentes y comprensibles para que el usuario pueda reconocer rápidamente qué información está viendo y qué acciones puede realizar, incluso si no posee conocimientos técnicos sobre jardinería, IA o dispositivos IoT.
+
+#### A. Navigation Labels
+
+Las etiquetas de navegación agrupan las principales áreas funcionales del ecosistema Oryxen, facilitando el desplazamiento del usuario entre módulos.
+
+- **Inicio:** Vista general del estado de las plantas registradas y accesos rápidos.
+- **Mis Plantas:** Inventario personal de plantas vinculadas al usuario.
+- **Asistente IA:** Espacio para consultas, diagnósticos y recomendaciones personalizadas.
+- **Comunidad:** Sección de interacción entre usuarios, consejos y experiencias compartidas.
+- **Dispositivos:** Gestión de sensores IoT, vinculación de hardware y estado de conexión.
+- **Analíticas:** Visualización de métricas históricas, tendencias y reportes avanzados.
+- **Perfil:** Configuración de cuenta, preferencias, notificaciones y suscripción.
+
+#### B. Action Labels
+
+Las etiquetas de acción se redactan con verbos directos para indicar de forma inmediata la tarea que ejecutará el sistema.
+
+- **Agregar planta:** Permite registrar una nueva planta en el inventario.
+- **Vincular sensor:** Inicia el flujo de conexión de un dispositivo IoT mediante QR o configuración manual.
+- **Regar ahora:** Activa una acción de riego inmediata cuando el hardware lo permite.
+- **Consultar IA:** Abre el asistente para recibir recomendaciones o diagnósticos.
+- **Guardar cambios:** Confirma la actualización de datos o configuraciones.
+- **Ver historial:** Muestra registros anteriores de riego, alertas, diagnósticos e intervenciones.
+
+#### C. Status and Alert Labels
+
+Las etiquetas de estado permiten comunicar de forma rápida la condición de una planta, un sensor o una acción del sistema.
+
+- **Saludable:** La planta se encuentra dentro de los rangos recomendados.
+- **Requiere atención:** Se detectó una condición que necesita revisión del usuario.
+- **Humedad baja:** El nivel de humedad está por debajo del umbral definido.
+- **Sensor desconectado:** El dispositivo no está enviando información al sistema.
+- **Riego programado:** Existe una acción automática planificada.
+- **Diagnóstico disponible:** La IA generó una recomendación o análisis reciente.
+
+#### D. Form and Data Labels
+
+Los formularios utilizan etiquetas descriptivas para evitar ambigüedad durante el registro de plantas, configuración de sensores y personalización de preferencias.
+
+- **Nombre de la planta:** Identificador personalizado asignado por el usuario.
+- **Tipo de planta:** Categoría o especie seleccionada para aplicar recomendaciones adecuadas.
+- **Ubicación:** Espacio físico donde se encuentra la planta, como sala, balcón o jardín.
+- **Frecuencia de riego:** Intervalo recomendado o personalizado para el cuidado.
+- **Nivel de humedad:** Valor medido por el sensor o ingresado manualmente.
+- **Preferencias de notificación:** Canales y frecuencia de alertas que desea recibir el usuario.
+
+#### E. Search and Filter Labels
+
+Las etiquetas de búsqueda y filtrado ayudan a localizar información específica dentro de inventarios, historiales y analíticas.
+
+- **Buscar planta:** Campo para ubicar una planta por nombre o tipo.
+- **Filtrar por estado:** Permite mostrar plantas saludables, en riesgo o con alertas activas.
+- **Filtrar por dispositivo:** Muestra plantas vinculadas a sensores específicos.
+- **Ordenar por última actividad:** Organiza registros según la actualización más reciente.
+- **Rango de fechas:** Delimita la consulta de historiales y reportes.
+
+#### F. Feedback Labels
+
+Las etiquetas de retroalimentación confirman el resultado de una acción o informan errores de manera clara y accionable.
+
+- **Planta agregada correctamente:** Confirma el registro exitoso.
+- **Sensor vinculado con éxito:** Indica que el dispositivo quedó asociado a la cuenta.
+- **No se pudo conectar el sensor:** Informa una falla de conexión y orienta a revisar la red o el código QR.
+- **Cambios guardados:** Confirma que la configuración fue actualizada.
+- **No hay resultados disponibles:** Comunica que la búsqueda o filtro aplicado no encontró coincidencias.
+- **Recomendación actualizada:** Indica que el asistente IA generó una nueva sugerencia.
+
+### 6.2.3. Searching Systems.
+
+Los sistemas de búsqueda permiten a los usuarios localizar información específica de manera rápida y eficiente dentro de la aplicación, optimizando el acceso al contenido y mejorando la experiencia de uso.
+
+- **Filtros personalizados** para el historial y planta.
+- **Resultados presentados con etiquetas visuales**, íconos e información clave como el nombre de la planta, humedad actual, último riego y estado general.
+
+Estos sistemas hacen que la gestión y monitoreo de las plantas sea más ágil, especialmente útil para usuarios con múltiples registros o sensores activos.
+
+### 6.2.4. SEO Tags and Meta Tags
+
+Las etiquetas SEO y meta tags de **Oryxen** permiten mejorar la visibilidad de la solución en motores de búsqueda, redes sociales y tiendas de aplicaciones. Su uso busca comunicar de manera clara la propuesta de valor del producto: cuidado inteligente de plantas mediante IA, sensores IoT, automatización y recomendaciones personalizadas para usuarios ocupados y aficionados a la jardinería.
+
+#### A. Landing Page
+
+La *Landing Page* está orientada a atraer visitantes, explicar el valor del ecosistema Oryxen y convertirlos en usuarios registrados.
+
+- **Title:** Oryxen | Cuidado inteligente de plantas con IA e IoT
+- **Description:** Oryxen ayuda a cuidar plantas desde una plataforma inteligente que combina monitoreo con sensores, riego automatizado, alertas y recomendaciones personalizadas mediante IA.
+- **Keywords:** Oryxen, GrassFarming, cuidado de plantas, jardinería inteligente, sensores IoT, riego automático, monitoreo de plantas, asistente IA para plantas
+- **Author:** GrassFarming
+- **Robots:** index, follow
+- **Viewport:** width=device-width, initial-scale=1.0
+- **Open Graph Title:** Oryxen - Cuidado inteligente para tus plantas
+- **Open Graph Description:** Automatiza y mejora el cuidado de tus plantas con sensores IoT, alertas y recomendaciones inteligentes.
+- **Open Graph Type:** website
+- **Open Graph Image:** Imagen principal de Oryxen mostrando la aplicación, el Sensor Lite y plantas saludables.
+
+#### B. Web Application
+
+La aplicación web está enfocada en usuarios que desean gestionar sus plantas, revisar analíticas, consultar historiales y administrar su suscripción o hardware asociado.
+
+- **Title:** Oryxen Dashboard | Monitoreo y analíticas de plantas
+- **Description:** Panel web de Oryxen para visualizar el estado de las plantas, revisar diagnósticos de IA, analizar historiales de cuidado y gestionar sensores inteligentes.
+- **Keywords:** dashboard Oryxen, monitoreo de plantas, analíticas de jardinería, historial de riego, diagnóstico IA, sensores inteligentes, cuidado automatizado
+- **Author:** GrassFarming
+- **Robots:** noindex, nofollow
+- **Viewport:** width=device-width, initial-scale=1.0
+
+#### C. Mobile Application
+
+La aplicación móvil está orientada al uso diario, permitiendo que el usuario reciba alertas, consulte el estado de sus plantas, interactúe con el asistente IA y vincule dispositivos IoT de forma rápida.
+
+- **Title:** Oryxen App | Cuida tus plantas desde tu celular
+- **Description:** Aplicación móvil de Oryxen para recibir alertas, registrar plantas, consultar recomendaciones de IA y controlar sensores IoT desde cualquier lugar.
+- **Keywords:** app Oryxen, cuidado de plantas móvil, alertas de riego, asistente IA, sensor para plantas, jardinería en casa, monitoreo móvil
+- **Author:** GrassFarming
+- **Robots:** index, follow
+- **Viewport:** width=device-width, initial-scale=1.0
+- **App Name:** Oryxen
+- **Theme Color:** Verde natural asociado a la identidad visual de Oryxen.
+
+### 6.2.5. Navigation Systems
+
+El sistema de navegación de **Oryxen** está diseñado para guiar a los usuarios de manera intuitiva y sin fricciones a través de todo el ecosistema (Landing Page, Aplicación Web y Aplicación Móvil). La estructura de navegación se centra en facilitar la consecución de las metas del usuario (como registrar plantas, consultar diagnósticos de IA o interactuar con la comunidad), utilizando patrones familiares que reducen la carga cognitiva y promueven la adopción de nuestro modelo de adopción progresiva (Freemium a Premium/Hardware).
+
+#### A. Landing Page Navigation
+
+La página de aterrizaje comercial tiene como objetivo principal la conversión, educando al visitante sobre el ecosistema Oryxen y dirigiéndolo hacia el registro gratuito.
+
+*   **Global Navigation (Sticky Header):** Se utiliza una barra de navegación superior fija que acompaña al usuario durante el *scroll*. Incluye enlaces ancla a las secciones clave: *Beneficios*, *Cómo Funciona*, *Planes* (mostrando la estrategia de Sensor Lite) y *Comunidad*. 
+*   **Sequential & Scroll Navigation:** El contenido está organizado para contar una historia (Storytelling). A medida que el usuario hace *scroll* vertical, avanza secuencialmente desde la identificación del problema (plantas marchitas por falta de tiempo/conocimiento) hasta la solución (IA y automatización).
+*   **Call-to-Action (CTA) Routing:** Para facilitar el objetivo principal de negocio, se utilizan botones de acción claros y contrastantes (ej. "Comienza Gratis") ubicados estratégicamente en el *Hero Section* y al final de la página, los cuales enrutan directamente al flujo de *Sign Up*.
+
+*(Añadir captura de pantalla ilustrando el flujo de navegación de la Landing Page)*
+`![Navigation Systems - Landing Page](../assets/images/nav-landing-page.png)`
+
+#### B. Web Application Navigation (Dashboard)
+
+La aplicación web está pensada para sesiones más largas, donde los usuarios aficionados o administradores revisan analíticas profundas, historiales y gestionan sus suscripciones.
+
+*   **Left Sidebar Navigation (Navegación Global):** El menú principal se ubica en el lateral izquierdo, permitiendo una jerarquía clara de módulos. Los ítems principales incluyen:
+    *   *Dashboard* (Vista general).
+    *   *Mis Plantas* (Inventario).
+    *   *Analíticas e Historial* (Exclusivo para evaluar métricas profundas).
+    *   *Comunidad* (Foro y consejos).
+    *   *Suscripción y Hardware* (Gestión del plan y compra del Sensor Lite).
+*   **Local Navigation (Pestañas/Tabs):** Dentro del detalle de una planta específica, se utilizan pestañas horizontales para cambiar entre *Información Básica*, *Diagnósticos IA* y *Configuración de Sensores*, evitando recargas de página completas (comportamiento SPA con Vue.js).
+*   **Breadcrumbs:** Se implementan "migas de pan" en la parte superior (ej. `Mis Plantas > Monstera Deliciosa > Diagnósticos`) para que el usuario conozca su ubicación exacta dentro de la jerarquía profunda y pueda retroceder un nivel fácilmente.
+
+*(Añadir captura de pantalla ilustrando el Left Sidebar y Breadcrumbs de la Web App)*
+`![Navigation Systems - Web App](../assets/images/nav-webapp.png)`
+
+#### C. Mobile Application Navigation
+
+La aplicación móvil es el canal principal para la gestión diaria. Su navegación debe ser ergonómica para el uso con una sola mano y ofrecer acceso ultrarrápido a acciones críticas.
+
+*   **Bottom Navigation Bar (Navegación Principal):** Reemplaza al menú hamburguesa para las secciones de mayor uso, manteniéndolas a un toque de distancia en la parte inferior de la pantalla. Las opciones son:
+    *   *Inicio* (Tarjetas de estado rápido de las plantas).
+    *   *Comunidad* (Feed social).
+    *   *Asistente IA* (Acceso directo al chatbot).
+    *   *Perfil* (Ajustes y notificaciones).
+*   **Floating Action Button (FAB):** Para la acción más frecuente y crítica del negocio (agregar una planta al inventario o vincular un Sensor Lite mediante código QR), se utiliza un FAB prominente anclado sobre la navegación inferior.
+*   **Hierarchical Navigation (Stack de Vistas):** Cuando un usuario selecciona una planta desde el *Inicio*, ingresa a una vista de detalle (Drill-down). La navegación superior nativa (Navigation Bar en iOS / Top App Bar en Android) mostrará el nombre de la planta y una flecha clara de "Atrás" para regresar al nivel superior.
+*   **In-context Navigation (Swipe & Gestures):** Se soportan gestos nativos, como deslizar tarjetas horizontalmente para revelar acciones rápidas (ej. "Regar ahora" o "Archivar planta"), acelerando el flujo de tareas repetitivas.
+
+*(Añadir captura de pantalla ilustrando el Bottom Navigation Bar y el FAB de la App Móvil)*
+`![Navigation Systems - Mobile App](../assets/images/nav-mobileapp.png)`
+
+
+### 6.3. Landing Page UI Design
+
+El diseño de la interfaz de usuario (UI) de la *Landing Page* de Oryxen tiene un propósito fundamental: **la conversión y educación del cliente**. Al ser un producto innovador que combina software (IA) y hardware (IoT), el diseño visual debe transmitir confianza, simplicidad y accesibilidad, derribando el mito de que la tecnología para el hogar es costosa o difícil de instalar.
+
+Para lograrlo, la interfaz se apoya en los siguientes principios de diseño:
+*   **Identidad Visual Orgánica y Tecnológica:** Se utiliza una paleta de colores que combina tonos tierra y verdes (representando la naturaleza y el crecimiento) con blancos y grises claros (aportando el minimalismo y limpieza del sector tecnológico).
+*   **Jerarquía Tipográfica Clara:** Uso de fuentes *Sans-Serif* modernas que facilitan la lectura rápida de los beneficios y características, guiando el ojo del usuario hacia los botones de llamada a la acción (CTAs).
+*   **Enfoque en la Adopción Progresiva:** El diseño UI prioriza mostrar que el usuario puede empezar a usar Oryxen de forma 100% gratuita (solo software), para luego presentar los planes Premium y el "Sensor Lite" como expansiones naturales de la experiencia.
+
+#### 6.3.1. Landing Page Wireframe
+
+Los *wireframes* de la Landing Page representan la estructura esquelética (baja fidelidad) del sitio web, priorizando la arquitectura de la información y la distribución del contenido antes de aplicar el diseño visual final. Se ha diseñado bajo el enfoque *Mobile-First* para asegurar la accesibilidad, escalando luego a la versión de escritorio (*Desktop*).
+
+La estructura secuencial del *wireframe* es la siguiente:
+
+1.  **Hero Section (Primer impacto):** 
+    *   **Titular principal:** Enfocado en el beneficio final (ej. "Plantas siempre vivas, sin esfuerzo").
+    *   **Subtitular:** Explica brevemente la combinación de IA y monitoreo.
+    *   **CTA Principal:** Un botón de alto contraste con el texto "Comienza Gratis" (enrutando al registro de la aplicación web).
+    *   **Imagen hero heroica:** Espacio para un *mockup* de la aplicación móvil interactuando con una planta real.
+
+2.  **Problem / Solution Section (Empatía):**
+    *   Sección dividida en dos columnas. Una ilustra el "dolor" (plantas marchitas, falta de tiempo, estrés) y la otra ilustra la solución de Oryxen (tranquilidad, notificaciones inteligentes, automatización).
+
+3.  **Features Section (Cómo funciona):**
+    *   Tres tarjetas (*cards*) principales con iconos representativos: 
+        1. *App Inteligente y Chatbot IA* (Gratis/Premium).
+        2. *Monitoreo IoT con Sensor Lite*.
+        3. *Riego Automático* (Módulo avanzado).
+
+4.  **Pricing Section (Modelo Freemium):**
+    *   Una tabla de precios clara adaptada al mercado de LATAM.
+    *   Columna 1: **Plan Básico** ($0 - App y recordatorios).
+    *   Columna 2: **Plan Premium** (Suscripción mensual - Diagnósticos visuales y Chatbot IA). Destacada visualmente.
+    *   Columna 3: **Kit Hardware** (Sensor Lite + Meses de Premium incluidos).
+
+5.  **Testimonial Section (Prueba Social):**
+    *   Carrusel de testimonios segmentados. Muestra opiniones tanto de personas con agendas ocupadas como de aficionados a la jardinería para que el visitante se identifique con su perfil.
+
+6.  **Footer:**
+    *   Enlaces de navegación secundarios, términos de servicio, políticas de privacidad y enlaces a redes sociales.
+
+*(Añadir captura de pantalla de los wireframes en versión Desktop y Mobile)*
+`![Landing Page Wireframe - Desktop & Mobile](../assets/images/wireframe-landing-page.png)`
+
+
+#### 6.3.1. Landing Page Mock-up
+
+En esta sección se detallan los Mock-ups de la Landing Page de Oryxen, diseñados bajo un enfoque responsive para asegurar una visualización óptima tanto en navegadores web de escritorio como en dispositivos móviles. El diseño busca convertir visitantes en usuarios mediante una narrativa visual clara y una navegación intuitiva.
+
+El diseño implementa rigurosamente el Design System establecido, utilizando la tipografía Raleway en distintos pesos para marcar una jerarquía visual clara y una paleta cromática basada en tonos crema y verdes que evocan equilibrio y sostenibilidad.
+
+A continuación se presentan las evidencias de los mock-ups:
+
+**Home:**
+![Home_LandingPageTP1](./assets/Chapter-6/Home_LandingPageTP1.png)
+
+**About The Product:**
+![AboutTheProduct_LandingPageTP1](./assets/Chapter-6/AboutTheProduct_LandingPageTP1.png)
+
+**How It Works:**
+![HowItWorks_LandingPageTP1](./assets/Chapter-6/HowItWorks_LandingPageTP1.png)
+
+**Benefits:**
+![Benefits_LandingPageTP1](./assets/Chapter-6/Benefits_LandingPageTP1.png)
+
+**Team:**
+![Team_LandingPageTP1](./assets/Chapter-6/Team_LandingPageTP1.png)
+
+**Plans:**
+![Plans_LandingPageTP1](./assets/Chapter-6/Plans_LandingPageTP1.png)
+
+**Testimonials:**
+![Testimonials_LandingPageTP1](./assets/Chapter-6/Testimonials_LandingPageTP1.png)
+
+**Footer:**
+![Footer_LandingPageTP1](./assets/Chapter-6/Footer_LandingPageTP1.png)
+
+
+## 6.4. Applications UX/UI Design
+
+El sistema de navegación de **Oryxen** está orientado a brindar una experiencia intuitiva, accesible y consistente tanto en plataformas mobile como web. La interfaz busca facilitar la interacción de los usuarios con las funcionalidades del sistema, permitiendo un uso sencillo y eficiente de las herramientas de monitoreo, automatización y gestión inteligente.
+
+El diseño de las aplicaciones considera los siguientes principios:
+
+*   **Experiencia de Usuario Intuitiva:** Las interfaces están diseñadas para que los usuarios puedan navegar y utilizar las funcionalidades principales de manera simple, reduciendo la complejidad de aprendizaje.
+*   **Consistencia entre Plataformas:** Tanto la aplicación móvil como la aplicación web mantienen una identidad visual unificada, garantizando coherencia en los componentes, colores, tipografías y patrones de interacción.
+*   **Diseño Responsivo y Accesible:** La interfaz se adapta a diferentes tamaños de pantalla y dispositivos, asegurando una experiencia fluida tanto en computadoras como en dispositivos móviles.
+*   **Jerarquía Visual y Organización de Información:** Se prioriza una distribución clara de los elementos visuales y funcionalidades, facilitando el acceso rápido a información relevante y acciones principales del sistema.
+*   **Enfoque en la Interacción del Usuario:** El diseño UI incorpora componentes visuales modernos y minimalistas que favorecen la interacción continua y mejoran la percepción de usabilidad de la plataforma.
+
+
+### 6.4.2. Applications Mock-ups
+
+En esta sección se presentan los mock-ups para las aplicaciones móvil y web de Oryxen, diseñados para ofrecer una experiencia de usuario intuitiva y eficiente. Estas interfaces son la representación directa del Design System establecido, utilizando la tipografía Raleway para asegurar una lectura clara y una paleta de colores en tonos verdes y cremas que proyecta la identidad tecnológica y orgánica de la plataforma.
+
+La arquitectura de la información se basa en una jerarquía visual que prioriza los estados críticos del jardín inteligente; el dashboard central destaca métricas de humedad y alertas urgentes, permitiendo una respuesta inmediata del usuario. Bajo principios de diseño inclusivo, se han optimizado los contrastes de color siguiendo las pautas de accesibilidad y se ha implementado una navegación táctil simplificada con amplios espacios en blanco para reducir la fatiga visual.
+
+A continuación se presentan los mock-ups para la aplicación web y móvil:
+
+**Aplicación Web:**
+
+**On Board:**
+![OnBoard_WebMockup](./assets/Chapter-6/OnBoard_WebMockup.png)
+
+**Sign Up:**
+![SignUp_WebMockup](./assets/Chapter-6/SignUp_WebMockup.png)
+
+**Sign In:**
+![SignIn_WebMockup](./assets/Chapter-6/SignIn_WebMockup.png)
+
+**Dashboard:**
+![Dashboard_WebMockup](./assets/Chapter-6/Dashboard_WebMockup.png)
+
+**Plant Grid:**
+![PlantGrid_WebMockup](./assets/Chapter-6/PlantGrid_WebMockup.png)
+
+**Plant Details:**
+![PlantDetails_WebMockup](./assets/Chapter-6/PlantDetails_WebMockup.png)
+
+**History:**
+![History_WebMockup](./assets/Chapter-6/History_WebMockup.png)
+
+**Analytics:**
+![Analytics_WebMockup](./assets/Chapter-6/Analytics_WebMockup.png)
+
+**Community:**
+![Community_WebMockup](./assets/Chapter-6/Community_WebMockup.png)
+
+**Settings:**
+![Settings_WebMockup](./assets/Chapter-6/Settings_WebMockup.png)
+
+
+
+**Aplicación Móvil:**
+
+**On Board:** <br>
+![OnBoard_MobileMockup](./assets/Chapter-6/OnBoard_MobileMockup.png)
+
+**Sign Up:**<br>
+![SignUp_MobileMockup](./assets/Chapter-6/SignUp_MobileMockup.png)
+
+**Sign In:**<br>
+![SignIn_MobileMockup](./assets/Chapter-6/SignIn_MobileMockup.png)
+
+**Dashboard:**<br>
+![Dashboard_MobileMockup](./assets/Chapter-6/Dashboard_MobileMockup.png)
+
+**Plants:**<br>
+![Plants_MobileMockup](./assets/Chapter-6/Plants_MobileMockup.png)
+
+**Plant Details:**<br>
+![PlantDetails_MobileMockup](./assets/Chapter-6/PlantDetails_MobileMockup.png)
+
+**History:**<br>
+![History_MobileMockup](./assets/Chapter-6/History_MobileMockup.png)
+
+**Settings:**<br>
+![Settings_MobileMockup](./assets/Chapter-6/Settings_MobileMockup.png)
+
+**Dark Mode:**<br>
+![DarkMode_MobileMockup](./assets/Chapter-6/DarkMode_MobileMockup.png)
+
+
+### 6.4.3. Applications User Flow Diagrams
+
+Los diagramas de flujo de usuario (*User Flows*) mapean el recorrido paso a paso que realiza un consumidor dentro de las aplicaciones (Web y Móvil) de Oryxen para completar tareas específicas. Estos flujos han sido diseñados minimizando la fricción cognitiva y apoyando nuestra estrategia de adopción progresiva: permitiendo al usuario experimentar valor inmediato en el plan gratuito y facilitando transiciones naturales hacia la compra de hardware (Sensor Lite) o la suscripción Premium.
+
+A continuación, se detallan los tres flujos críticos del negocio:
+
+#### A. Flujo 1: Onboarding y Registro Manual de Planta (Plan Básico / Freemium)
+Este es el primer contacto del usuario con la aplicación. El objetivo es que registre su primera planta lo más rápido posible, experimentando el valor de tener un inventario centralizado, sin requerir hardware físico inicial.
+
+1.  **Inicio:** El usuario abre la aplicación móvil.
+2.  **Autenticación:** Pantalla de *Sign Up* / *Login*. El usuario elige autenticarse rápidamente vía Google (OAuth2) o correo electrónico.
+3.  **Pantalla de Bienvenida:** El sistema detecta que el usuario no tiene plantas y muestra un *Empty State* con un CTA principal: "Añadir mi primera planta".
+4.  **Formulario de Registro:** El usuario ingresa la información básica (Nombre, Especie, Ubicación). 
+5.  **Configuración de Umbrales:** El sistema sugiere parámetros predeterminados de humedad según la especie seleccionada. El usuario acepta.
+6.  **Fin (Éxito):** El usuario es redirigido al *Dashboard* principal, donde visualiza la tarjeta de su nueva planta recién agregada.
+
+*(Añadir captura de pantalla del diagrama de flujo: Onboarding y Registro de Planta)*
+`![User Flow - Onboarding & Plant Registration](../assets/images/userflow-onboarding.png)`
+
+#### B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)
+Este flujo representa el momento en que un usuario decide automatizar su monitoreo tras adquirir el hardware de entrada de Oryxen. Destaca la restricción de usabilidad (QA-04) que exige una vinculación en menos de 30 segundos.
+
+1.  **Inicio:** Desde el *Dashboard*, el usuario presiona el *Floating Action Button* (FAB) y selecciona "Vincular Dispositivo".
+2.  **Permisos:** La aplicación solicita acceso a la cámara y Bluetooth.
+3.  **Escaneo QR:** El usuario escanea el código QR ubicado en la base del *Sensor Lite*.
+4.  **Validación y Emparejamiento:** El sistema reconoce el ID del sensor, lo registra en el backend y lo enlaza a la red WiFi local mediante Bluetooth (BLE).
+5.  **Asignación:** La app pregunta: "¿A qué planta pertenece este sensor?". El usuario selecciona una planta previamente registrada (ej. "Monstera de la Sala").
+6.  **Fin (Éxito):** Pantalla de confirmación animada. El *Dashboard* se actualiza y la tarjeta de la planta ahora muestra la métrica de humedad y temperatura en tiempo real.
+
+*(Añadir captura de pantalla del diagrama de flujo: Vinculación de Hardware)*
+`![User Flow - Hardware Pairing](../assets/images/userflow-hardware.png)`
+
+#### C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)
+Este flujo ilustra cómo un usuario interactúa con la característica estrella de la aplicación para resolver un problema complejo de salud en su planta.
+
+1.  **Inicio:** El usuario nota hojas amarillas en su planta. Ingresa a la app y selecciona la planta desde el *Dashboard*.
+2.  **Llamada a la Acción:** En la vista de detalle, presiona el botón "Diagnóstico con IA".
+3.  **Captura de Imagen:** Se abre la cámara integrada. El usuario toma una fotografía de la hoja afectada.
+4.  **Procesamiento (Loading):** Pantalla de carga mientras la imagen es sanitizada (eliminación de GPS/EXIF) y procesada por el motor de visión artificial en el backend.
+5.  **Resultados y Recomendación:** El sistema muestra una alerta contextual con el problema detectado (ej. "Falta de nutrientes / Clorosis") y una lista de acciones correctivas inmediatas y a largo plazo.
+6.  **Fin (Seguimiento):** El usuario presiona el botón "Aplicar recomendación". El sistema programa automáticamente un recordatorio de seguimiento para evaluar la mejora en 7 días.
+
+*(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
+`![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
+
+
 
 
 # Conclusiones
