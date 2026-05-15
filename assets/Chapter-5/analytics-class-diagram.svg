@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+  <title id="title">Analytics Domain Class Diagram</title>
+  <desc id="desc">Domain class diagram for the Oryxen Analytics bounded context.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f3a33"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #1f2a24; }
+      .title { font-size: 30px; font-weight: 700; }
+      .className { font-size: 19px; font-weight: 700; }
+      .member { font-size: 14px; }
+      .classBox { fill: #fbfefb; stroke: #2f7d46; stroke-width: 2; rx: 8; }
+      .serviceBox { fill: #fff9ed; stroke: #b97818; stroke-width: 2; rx: 8; }
+      .section { stroke: #2f7d46; stroke-width: 1; }
+      .line { stroke: #2f3a33; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1280" height="820" fill="#ffffff"/>
+  <text class="title" x="40" y="55">Analytics - Domain Layer Class Diagram</text>
+
+  <g transform="translate(415,90)">
+    <rect class="classBox" width="350" height="320"/>
+    <text class="className" x="105" y="34">AnalyticsReport</text>
+    <line class="section" x1="0" y1="52" x2="350" y2="52"/>
+    <text class="member" x="18" y="80">- id: UUID</text>
+    <text class="member" x="18" y="104">- userId: UUID</text>
+    <text class="member" x="18" y="128">- plantId: UUID</text>
+    <text class="member" x="18" y="152">- reportType: ReportType</text>
+    <text class="member" x="18" y="176">- period: AnalysisPeriod</text>
+    <text class="member" x="18" y="200">- healthScore: PlantHealthScore</text>
+    <text class="member" x="18" y="224">- summary: String</text>
+    <line class="section" x1="0" y1="244" x2="350" y2="244"/>
+    <text class="member" x="18" y="270">+ calculateHealthScore()</text>
+    <text class="member" x="18" y="294">+ addInsight()</text>
+  </g>
+
+  <g transform="translate(70,120)">
+    <rect class="classBox" width="270" height="220"/>
+    <text class="className" x="62" y="34">MetricSnapshot</text>
+    <line class="section" x1="0" y1="52" x2="270" y2="52"/>
+    <text class="member" x="18" y="82">- id: UUID</text>
+    <text class="member" x="18" y="106">- plantId: UUID</text>
+    <text class="member" x="18" y="130">- averageHumidity: Decimal</text>
+    <text class="member" x="18" y="154">- lightExposure: Decimal</text>
+    <text class="member" x="18" y="178">- riskLevel: RiskLevel</text>
+    <line class="section" x1="0" y1="192" x2="270" y2="192"/>
+    <text class="member" x="18" y="212">+ evaluateRisk()</text>
+  </g>
+
+  <g transform="translate(70,455)">
+    <rect class="classBox" width="270" height="150"/>
+    <text class="className" x="72" y="34">AnalysisPeriod</text>
+    <line class="section" x1="0" y1="52" x2="270" y2="52"/>
+    <text class="member" x="18" y="82">- startDate: DateTime</text>
+    <text class="member" x="18" y="106">- endDate: DateTime</text>
+    <line class="section" x1="0" y1="120" x2="270" y2="120"/>
+    <text class="member" x="18" y="140">+ durationInDays()</text>
+  </g>
+
+  <g transform="translate(850,120)">
+    <rect class="classBox" width="280" height="155"/>
+    <text class="className" x="72" y="34">PlantHealthScore</text>
+    <line class="section" x1="0" y1="52" x2="280" y2="52"/>
+    <text class="member" x="18" y="82">- value: Integer</text>
+    <text class="member" x="18" y="106">- category: String</text>
+    <line class="section" x1="0" y1="120" x2="280" y2="120"/>
+    <text class="member" x="18" y="140">+ requiresAttention()</text>
+  </g>
+
+  <g transform="translate(850,405)">
+    <rect class="classBox" width="280" height="175"/>
+    <text class="className" x="78" y="34">TrendIndicator</text>
+    <line class="section" x1="0" y1="52" x2="280" y2="52"/>
+    <text class="member" x="18" y="82">- metricName: String</text>
+    <text class="member" x="18" y="106">- direction: String</text>
+    <text class="member" x="18" y="130">- confidence: Decimal</text>
+    <line class="section" x1="0" y1="144" x2="280" y2="144"/>
+    <text class="member" x="18" y="164">+ isNegative()</text>
+  </g>
+
+  <g transform="translate(270,655)">
+    <rect class="serviceBox" width="290" height="110"/>
+    <text class="className" x="82" y="34">AnalyticsService</text>
+    <line class="section" x1="0" y1="52" x2="290" y2="52"/>
+    <text class="member" x="18" y="82">+ generateReport()</text>
+  </g>
+
+  <g transform="translate(720,655)">
+    <rect class="serviceBox" width="290" height="110"/>
+    <text class="className" x="70" y="34">InsightService</text>
+    <line class="section" x1="0" y1="52" x2="290" y2="52"/>
+    <text class="member" x="18" y="82">+ generatePlantInsights()</text>
+  </g>
+
+  <path class="line" d="M415 195 H340"/>
+  <path class="line" d="M415 245 C365 245 365 530 340 530"/>
+  <path class="line" d="M765 195 H850"/>
+  <path class="line" d="M765 250 C810 250 810 490 850 490"/>
+  <path class="line" d="M415 655 C455 585 520 500 560 410"/>
+  <path class="line" d="M865 655 C820 570 755 490 695 410"/>
+</svg>

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
+  <title id="title">Analytics Database Design Diagram</title>
+  <desc id="desc">Database design diagram for the Oryxen Analytics bounded context.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2f3a33"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #1f2a24; }
+      .title { font-size: 30px; font-weight: 700; }
+      .tableTitle { font-size: 19px; font-weight: 700; }
+      .field { font-size: 15px; }
+      .table { fill: #fbfefb; stroke: #2f7d46; stroke-width: 2; rx: 8; }
+      .header { fill: #dff0e3; stroke: #2f7d46; stroke-width: 2; }
+      .line { stroke: #2f3a33; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1280" height="760" fill="#ffffff"/>
+  <text class="title" x="40" y="55">Analytics - Database Design Diagram</text>
+
+  <g transform="translate(455,120)">
+    <rect class="table" width="360" height="285"/>
+    <rect class="header" width="360" height="50" rx="8"/>
+    <text class="tableTitle" x="88" y="32">ANALYTICS_REPORTS</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">user_id: uuid</text>
+    <text class="field" x="22" y="138">plant_id: uuid</text>
+    <text class="field" x="22" y="166">report_type: string</text>
+    <text class="field" x="22" y="194">period_start: datetime</text>
+    <text class="field" x="22" y="222">period_end: datetime</text>
+    <text class="field" x="22" y="250">health_score: integer</text>
+  </g>
+
+  <g transform="translate(80,160)">
+    <rect class="table" width="310" height="255"/>
+    <rect class="header" width="310" height="50" rx="8"/>
+    <text class="tableTitle" x="62" y="32">METRIC_SNAPSHOTS</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">plant_id: uuid</text>
+    <text class="field" x="22" y="138">average_humidity: decimal</text>
+    <text class="field" x="22" y="166">watering_frequency: decimal</text>
+    <text class="field" x="22" y="194">light_exposure: decimal</text>
+    <text class="field" x="22" y="222">captured_at: datetime</text>
+  </g>
+
+  <g transform="translate(890,160)">
+    <rect class="table" width="310" height="230"/>
+    <rect class="header" width="310" height="50" rx="8"/>
+    <text class="tableTitle" x="112" y="32">INSIGHTS</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">FK report_id: uuid</text>
+    <text class="field" x="22" y="138">type: string</text>
+    <text class="field" x="22" y="166">message: string</text>
+    <text class="field" x="22" y="194">severity: string</text>
+  </g>
+
+  <g transform="translate(455,500)">
+    <rect class="table" width="360" height="175"/>
+    <rect class="header" width="360" height="50" rx="8"/>
+    <text class="tableTitle" x="92" y="32">TREND_INDICATORS</text>
+    <text class="field" x="22" y="82">PK id: uuid</text>
+    <text class="field" x="22" y="110">FK report_id: uuid</text>
+    <text class="field" x="22" y="138">metric_name: string</text>
+  </g>
+
+  <path class="line" d="M390 285 H455"/>
+  <text class="field" x="405" y="270">N:1</text>
+  <path class="line" d="M815 250 H890"/>
+  <text class="field" x="835" y="235">1:N</text>
+  <path class="line" d="M635 405 V500"/>
+  <text class="field" x="650" y="455">1:N</text>
+</svg>
