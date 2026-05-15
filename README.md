@@ -196,9 +196,19 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de plantas mediante una solución inteligente que automatiza tareas esenciales y brinda asistencia continua al usuario. Con nuestra plataforma **"Oryxen"**, nos centramos en ayudar a personas amantes de la jardinería y personas con agendas ocupadas, quienes suelen enfrentar dificultades para mantener sus plantas saludables debido al olvido o la falta de tiempo. La solución integra funciones de riego automático, monitoreo con sensores y un chatbot inteligente que brinda recomendaciones personalizadas. A través de la interfaz, los usuarios podrán visualizar fácilmente el estado de todas sus plantas, recibir alertas y gestionar su cuidado de manera práctica y confiable. Con ello, se busca reducir la pérdida de plantas, mejorar la experiencia del usuario y aumentar su satisfacción.
 
-**Misión:** Facilitar el cuidado de plantas mediante automatización e inteligencia artificial, ofreciendo una experiencia más accesible, práctica y confiable.
+La propuesta de valor de Oryxen se basa en tres pilares diferenciales:
 
-**Visión:** Convertirnos en una solución líder en el cuidado inteligente de plantas, promoviendo hogares más saludables y conectados con la naturaleza.
+- **Automatización inteligente:** El sistema automatiza tareas esenciales como el monitoreo constante y el riego de las plantas mediante sensores IoT y módulos de riego automático, reduciendo la dependencia de recordatorios manuales.
+- **IA visual y asistencia personalizada:** Oryxen incorpora inteligencia artificial capaz de analizar imágenes y datos de las plantas para detectar posibles problemas, interpretar su estado y brindar recomendaciones personalizadas mediante un chatbot inteligente.
+- **Seguimiento centralizado:** Los usuarios pueden visualizar en una sola plataforma el estado de todas sus plantas en tiempo real, recibiendo alertas, recomendaciones y métricas de cuidado desde cualquier dispositivo.
+
+A diferencia de soluciones tradicionales que solo recuerdan tareas o funcionan dentro de ecosistemas cerrados, Oryxen transforma las plantas y macetas que el usuario ya posee en un sistema inteligente, accesible y escalable.
+
+Con ello, se busca reducir la pérdida de plantas, disminuir la carga del cuidado manual, optimizar el tiempo de los usuarios y mejorar la experiencia general del cuidado de plantas.
+
+**Misión:** Facilitar el cuidado de plantas mediante automatización, inteligencia artificial visual y monitoreo inteligente, ofreciendo una experiencia accesible, práctica y confiable.
+
+**Visión:** Convertirnos en la solución líder de cuidado inteligente de plantas en Latinoamérica, integrando automatización e inteligencia artificial para promover hogares más saludables y conectados con la naturaleza.
 
 **Logotipo de la Startup:**
 
@@ -212,7 +222,7 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 | Integrante | Descripción | Conocimientos |
 | ---------- | ----------- | ------------- |
-| **Alejandro Alberto Pachas Chávez - u201917598** <img src="./assets/Chapter-1/perfil_alejandro.png"> | Mi nombre es Alejandro Alberto Pachas Chávez, tengo 24 años y actualmente curso la carrera de Ingeniería de Software. Me describo como una persona creativa, responsable y constante, con una fuerte disposición para colaborar en equipo. Mi objetivo es contribuir positivamente al grupo y alcanzar las metas propuestas. | Cuento con experiencia en lenguajes de programación como JavaScript, TypeScript y Go; además de desarrollo web utilizando frameworks como React y Next.js, y manejo de bases de datos tanto relacionales como no relacionales, incluyendo PostgreSQL y Firebase.  |
+| **Alejandro Alberto Pachas Chávez - u201917598** <img src="./assets/Chapter-1/perfil_alejandro.png"> | Mi nombre es Alejandro Alberto Pachas Chávez, tengo 24 años y actualmente curso la carrera de Ingeniería de Software. Me describo como una persona creativa, responsable y constante, con una fuerte disposición para colaborar en equipo. Mi objetivo es contribuir positivamente al grupo y alcanzar las metas propuestas. | Cuento con experiencia en lenguajes de programación como JavaScript, TypeScript y Go; además de desarrollo web utilizando frameworks como React y Next.js, y manejo de bases de datos tanto relacionales como no relacionales, incluyendo PostgreSQL y Firebase. |
 | **Pedro Jesús Nanfuñay Liza - u202215462** <img src="./assets/Chapter-1/Perfil_PedroNanfuñay.jpeg"> | Mi nombre es Pedro Jesús Nanfuñay Liza, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Me considero una persona creativa, responsable, perseverante y siempre dispuesto a trabajar en equipo. Espero aportar de manera positiva al equipo y cumplir con los objetivos establecidos. | Tengo conocimientos en lenguajes de programación como C++, Java y Python; en el desarrollo web con frameworks Angular y Primevue, y en base de datos relacionales y no relacionales como SQL y MongoDB. |
 | **Zevallos Linares, Alessandro Netto - u202216035** <img src="https://github.com/user-attachments/assets/6e621406-9662-4f9f-964c-249eb7cb17a1"> | Mi nombre es Alessandro Netto Zevallos Linares, tengo 22 años y soy estudiante de Ingeniería de Software con un fuerte interés en el desarrollo de productos digitales y la tecnología. En mi tiempo libre, me gusta jugar videojuegos. También tengo un interés especial en la música, lo que me ayuda a equilibrar mi vida académica y personal. | Tengo conocimientos en JavaScript, React, Next.js, Angular, Vue, Java, Flutter, Kotlin, y en base de datos como SQL y MongoDB. |
 | **Abraham Andres Estrada Cajamune - U202112164** <img src="./assets/Chapter-1/Abraham.jpg"> | Mi nombre es Abraham Andres Estrada Cajamune, tengo 22 años y soy estudiante de la carrera de Ingeniería de Software, cursando el 9no ciclo. Me califico como una persona responsable, trabajando a presión y con buena disposición en trabajar en equipo. Mi interés está en el desarrollo web y movil. |  A lo largo de mis estudios universitarios he adquirido las bases sólidas en lenguajes de programación como Java, C++, Python, utilizando Frameworks como Angular y Vue y un fuerte conocimiento en el manejo de bases de datos. |
@@ -236,37 +246,39 @@ Nuestra startup **"GrassFarming"** se enfoca en simplificar el cuidado de planta
 
 #### 1.2.2.1. Lean UX Problem Statements
 
-Oryxen fue diseñado para ayudar a los usuarios a mantener sus plantas saludables mediante sensores que registran parámetros como la humedad, oxígeno, etc; para automatizar procesos de cuidado y brindar asistencia inteligente, reduciendo la carga del cuidado manual. 
+Oryxen fue diseñado para ayudar a los usuarios a mantener sus plantas saludables mediante la integración de automatización inteligente, inteligencia artificial visual y seguimiento centralizado. La solución utiliza sensores IoT, módulos de riego automático y análisis visual asistido por IA para monitorear continuamente el estado de las plantas y reducir la carga del cuidado manual.
 
 Hemos observado que los usuarios, especialmente personas con agendas ocupadas y aficionados a la jardinería, no logran mantener un cuidado constante, lo que provoca la pérdida de plantas, frustración y una menor continuidad en la creación de áreas verdes.
 
-¿Cómo podríamos mejorar Oryxen para que nuestros clientes tengan más éxito según su disponibilidad de tiempo y conocimientos previos en el cuidado de plantas, incrementando el interés de las personas por cultivar más plantas y reduciendo la carga de cuidado manual?
+Además, las soluciones existentes suelen enfocarse únicamente en recordatorios manuales o en ecosistemas cerrados de hardware, sin ofrecer una experiencia integral que combine automatización, diagnóstico inteligente y monitoreo unificado.
+
+¿Cómo podríamos mejorar Oryxen para que nuestros clientes tengan más éxito según su disponibilidad de tiempo y conocimientos previos en el cuidado de plantas, utilizando automatización, IA visual y seguimiento centralizado para reducir la carga de cuidado manual y aumentar la supervivencia de las plantas?
 
 #### 1.2.2.2. Lean UX Assumptions
 
 **Business Assumptions:**
 
-1. Creo que mis clientes necesitan mantener sus plantas saludables sin depender de recordatorios manuales o tiempo constante.
-2. Estas necesidades puede ser solucionadas con un sistema inteligente que automatice los cuidados y monitoree las plantas mediante sensores e IA.
-3. Mis primeros clientes son (o serán) personas con agendas ocupadas y aficionados a la jardinería.
-4. El valor número 1 que un cliente quiere obtener de mi servicio es mantener sus plantas vivas sin esfuerzo y ver su estado mediante un panel de control.
-5. El cliente también puede obtener estos beneficios adicionales: Automatizar procesos de cuidado, ahorrar tiempo, obtener bienestar y aprender sobre el cuidado de plantas.
-6. Obtendré la mayoría de mis clientes a través de redes sociales, recomendaciones (boca a boca) y marketplaces de tecnología/hogar inteligente.
-7. Ganaré dinero a través de planes premium y paquetes con objetos que ayudarán al cliente a entender mejor el proceso de cuidado de plantas.
-8. Mi principal competencia en el mercado serán aplicaciones de recordatorio de riego y sistemas básicos de riego automático.
-9. Los venceremos por integrar automatización de cuidado con sensores y la implementación de un chatbot impulsado con IA en una sola solución simple y accesible.
-10. Mi mayor riesgo de producto es que los usuarios no perciban suficiente valor frente a soluciones más simples o no adopten el hardware.
-11. Resolveremos esto a través de una experiencia fácil de usar, funciones claras e intuitivas, soporte técnico constante y demostración de los resultados de la solución en casos reales.
-12. Otras suposiciones que tenemos que podrían resultar falsas serían que los usuarios no estén dispuestos a pagar por los planes premium de la solución y o que confíen demasiado en la automatización para el cuidado de sus plantas.
+1. Creo que mis clientes necesitan mantener sus plantas saludables sin depender constantemente de supervisión manual.
+2. Estas necesidades pueden ser solucionadas mediante una plataforma que combine automatización, IA visual y monitoreo centralizado.
+3. Mis primeros clientes serán personas con agendas ocupadas y aficionados a la jardinería.
+4. El valor número 1 que un cliente quiere obtener de mi servicio es tranquilidad al saber que sus plantas están siendo monitoreadas y cuidadas automáticamente.
+5. El cliente también puede obtener beneficios adicionales como ahorro de tiempo, recomendaciones inteligentes y reducción de pérdida de plantas.
+6. Obtendré la mayoría de mis clientes a través de redes sociales, recomendaciones y marketplaces de hogar inteligente.
+7. Ganaré dinero a través de planes premium, venta de sensores y módulos inteligentes.
+8. Mi principal competencia en el mercado serán aplicaciones de cuidado de plantas y sistemas de automatización básica.
+9. Los venceremos al integrar automatización, IA visual y seguimiento centralizado en una sola solución accesible y adaptable.
+10. Mi mayor riesgo de producto es que los usuarios no perciban suficiente valor diferencial frente a soluciones más simples.
+11. Resolveremos esto demostrando resultados reales mediante monitoreo inteligente y automatización efectiva.
+12. Otra posible suposición falsa es que algunos usuarios no estén dispuestos a adoptar hardware inteligente en sus hogares.
 
 **User Assumptions:**
 
-1. ¿Quién es el usuario? Personas ocupadas y amantes de la jardinería que desean gestionar de manera efectiva la salud de sus plantas.
-2. ¿Dónde encaja nuestro producto en su trabajo o vida? Se integra en el flujo de vida diaria de cada cliente, permitiendo revisar y analizar la información de sus plantas cuando lo deseen.
-3. ¿Qué problemas tiene nuestro producto y cómo los resolvemos? Problema: Arduo cuidado manual y uso de tiempo para el cuidado de plantas. Solución: Plataforma unificada con automatización y acceso centralizado a toda la información.
-4. ¿Cuándo y cómo es usado nuestro producto? Durante el hábito de cultivar plantas, donde los clientes buscan mantener saludables a sus plantas.
-5. ¿Qué características son importantes? Interfaz intuitiva y responsive, sincronización en tiempo real e integración con sistemas existentes.
-6. ¿Cómo debe verse y comportarse nuestro producto? Diseño limpio y profesional, navegación simple, tiempo de respuesta rápido y accesible desde múltiples dispositivos.
+1. ¿Quién es el usuario? Personas ocupadas y amantes de la jardinería que desean gestionar la salud de sus plantas de forma eficiente.
+2. ¿Dónde encaja nuestro producto en su vida? En el cuidado diario de plantas dentro del hogar, oficinas y espacios personales.
+3. ¿Qué problemas tiene nuestro producto y cómo los resolvemos? Problema: cuidado manual complejo y pérdida frecuente de plantas. Solución: automatización inteligente, IA visual y acceso centralizado a la información.
+4. ¿Cuándo y cómo es usado nuestro producto? Durante el cuidado cotidiano de plantas, monitoreando su estado desde cualquier dispositivo.
+5. ¿Qué características son importantes? Automatización confiable, visualización centralizada, análisis inteligente y facilidad de uso.
+6. ¿Cómo debe verse y comportarse nuestro producto? Diseño limpio, intuitivo, rápido y accesible desde múltiples dispositivos.
 
 **Priorización de suposiciones:**
 
@@ -274,49 +286,48 @@ Siguiendo la metodología Lean UX de Jeff Gothelf, priorizamos nuestras suposici
 
 **Suposiciones de Alta Prioridad (Alto Riesgo + Bajo Conocimiento):**
 
-1. Los usuarios realmente adoptarán una solución de cuidado automático si perciben que les ahorra tiempo y reduce el trabajo manual.
-2. Los adultos mayores y personas con agendas ocupadas confiarán en un sistema automatizado para el cuidado de sus plantas.
-3. Los usuarios valorarán una interfaz que muestre el estado de todas sus plantas de forma clara y centralizada.
-4. La integración de sensores, riego automático y funciones con IA será percibida como útil y no como compleja.
+1. Los usuarios adoptarán una solución de automatización inteligente si perciben una reducción real del trabajo manual.
+2. Los usuarios confiarán en recomendaciones generadas mediante IA visual para el cuidado de sus plantas.
+3. Los usuarios valorarán una plataforma centralizada que les permita monitorear todas sus plantas desde un solo lugar.
+4. La combinación de automatización, IA visual y monitoreo centralizado será percibida como una propuesta diferencial y útil.
 
 **Suposiciones de prioridad media (Riesgo medio + conocimiento medio):**
 
-5. Los usuarios estarán dispuestos a leer notificaciones y alertas frecuentes para monitorear sus plantas.
-6. La solución será útil tanto para personas con pocas plantas como para quienes tienen varias.
-7. Los usuarios confiarán en las recomendaciones del chatbot para tomar decisiones de cuidado.
-8. La automatización del riego será suficiente para reducir significativamente la cantidad de plantas muertas.
+5. Los usuarios estarán dispuestos a recibir alertas y recomendaciones frecuentes.
+6. La solución será útil tanto para usuarios principiantes como avanzados.
+7. Los usuarios confiarán en las recomendaciones generadas por el chatbot inteligente.
+8. La automatización reducirá significativamente la pérdida de plantas.
 
 **Suposiciones de baja prioridad (Bajo riesgo + alto conocimiento):**
 
-9. Los usuarios prefieren interfaces simples, intuitivas y fáciles de entender.
-10. La visualización del estado de las plantas en una sola plataforma mejora la experiencia de uso.
-11. Los usuarios valoran recibir recordatorios y recomendaciones personalizadas.
-12. Los dispositivos móviles y la conectividad a internet son accesibles para la mayoría de nuestros usuarios.
+9. Los usuarios prefieren interfaces simples e intuitivas.
+10. La centralización de información mejora la experiencia de uso.
+11. Los usuarios valoran recomendaciones personalizadas.
+12. Los dispositivos móviles y el acceso a internet son accesibles para la mayoría de usuarios.
 
-Estas suposiciones de alta prioridad serán las primeras en validarse mediante entrevistas, pruebas de concepto y prototipos, antes de proceder con el desarrollo completo de Oryxen.
+Estas suposiciones de alta prioridad serán las primeras en validarse mediante entrevistas, pruebas de concepto y prototipos antes de proceder con el desarrollo completo de Oryxen.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-- **Hypothesis Statement 01:** <br>
-Creemos que los usuarios amantes de la jardinería y personas con agendas ocupadas buscan una forma simple de mantener sus plantas saludables sin depender del riego manual.
-Sabremos que esto es cierto al medir la frecuencia con la que usan la app para revisar el estado de sus plantas.
-Cuando al menos el 60% de los usuarios activos consulte la plataforma 3 veces por semana o más durante el primer mes.
+- **Hypothesis Statement 01:**  
+Creemos que los usuarios con agendas ocupadas buscarán automatizar el cuidado de sus plantas para reducir tiempo y esfuerzo manual.  
+Sabremos que esto es cierto al medir la frecuencia con la que utilizan las funciones automáticas de monitoreo y riego.  
+Cuando al menos el 60% de los usuarios activos mantenga activadas las funciones automáticas durante el primer mes.
 
-- **Hypothesis Statement 02:** <br>
-Creemos que la automatización del riego reducirá significativamente la cantidad de plantas muertas en comparación con el cuidado manual.
-Sabremos que esto es cierto al comparar el número de plantas marchitas o muertas antes y después de usar la solución.
-Cuando los usuarios reporten una reducción de al menos 30% en plantas perdidas en los primeros 3 meses.
+- **Hypothesis Statement 02:**  
+Creemos que la integración de IA visual permitirá detectar problemas de salud en las plantas de manera más eficiente que el cuidado manual tradicional.  
+Sabremos que esto es cierto al analizar la percepción de utilidad y precisión de las recomendaciones generadas por la IA.  
+Cuando más del 70% de los usuarios califique las recomendaciones visuales como útiles y precisas.
 
-- **Hypothesis Statement 03:** <br>
-Creemos que los usuarios valorarán una interfaz donde puedan ver el estado de todas sus plantas en un solo lugar.
-Sabremos que esto es cierto al analizar las ocasiones y el tiempo en el que permanecen los usuarios dentro de la aplicación.
-Cuando al menos el 70% de los usuarios activos utilice la pantalla de resumen de plantas y la califique como útil.
+- **Hypothesis Statement 03:**  
+Creemos que los usuarios valorarán una plataforma centralizada donde puedan visualizar el estado de todas sus plantas en tiempo real.  
+Sabremos que esto es cierto al analizar el uso de la pantalla principal de monitoreo.  
+Cuando al menos el 75% de los usuarios utilice frecuentemente el panel centralizado de seguimiento.
 
-- **Hypothesis Statement 04:** <br>
-Creemos que un chatbot con IA aumentará la confianza del usuario al brindar recomendaciones claras y oportunas sobre el cuidado de sus plantas.
-Sabremos que esto es cierto al analizar el uso del chatbot y la satisfacción percibida por los usuarios.
-Cuando al menos el 50% de los usuarios interactúe con el chatbot y más del 75% declare que sus recomendaciones fueron útiles.
-
+- **Hypothesis Statement 04:**  
+Creemos que la combinación de automatización, IA visual y seguimiento centralizado aumentará la confianza y satisfacción del usuario.  
+Sabremos que esto es cierto mediante encuestas de satisfacción y retención de usuarios.  
+Cuando más del 80% de los usuarios considere que Oryxen facilita significativamente el cuidado de sus plantas.
 
 #### 1.2.2.4. Lean UX Canvas
 
@@ -334,19 +345,20 @@ Para asegurar el éxito de Oryxen, hemos identificado dos segmentos clave que se
 
 ## 2.1. Competidores
 
-En el mercado de soluciones digitales para el cuidado de plantas, se han identificado tres competidores representativos que cubren distintos frentes de valor: desde aplicaciones móviles con IA hasta electrodomésticos de jardinería inteligente. Cada uno aborda parcialmente el problema que **Oryxen** resuelve de forma integral, lo que permite posicionar con claridad las ventajas de nuestra propuesta.
+En el mercado de jardinería inteligente, existen soluciones que van desde aplicaciones móviles con funciones básicas de seguimiento hasta ecosistemas avanzados de automatización y monitoreo. Hemos identificado tres frentes competitivos que nos permiten definir nuestra estrategia de diferenciación, lo que permitiría a **Oryxen** destacar en el ámbito tecnológico y económico, especialmente considerando las limitaciones de adopción de hardware en LATAM.
 
-**Planta (Strömming & Löf AB)**  
-Aplicación móvil sueca con más de 10 millones de descargas que asiste a los usuarios en el cuidado de sus plantas mediante recordatorios, identificación por foto con IA, medidor de luz con la cámara del celular y una extensa base de datos de especies. Es un competidor directo en el plano **software** pero no integra hardware, por lo que depende de la memoria y disciplina del usuario para ejecutar cada tarea. Su plan premium se comercializa por suscripción anual a bajo costo.
 
-**Click & Grow (Smart Garden 3 / 9 / 25)**  
-Compañía estonia que ofrece jardines inteligentes de interior en formato de electrodoméstico: una maceta cerrada con riego automatizado, luces LED de crecimiento y cápsulas propietarias ("plant pods") con semillas preparadas. Es un competidor **hardware** de gama media-alta, pero orientado exclusivamente al cultivo de hierbas, vegetales y flores dentro de su propio ecosistema cerrado; no permite monitorear las plantas que el usuario ya tiene en casa.
+**Planta (Strömming & Löf AB)**
+Es una aplicación móvil enfocada en el cuidado de plantas. Permite identificar plantas por foto, crear recordatorios personalizados, usar un medidor de luz y recibir recomendaciones y diagnósticos de problemas comunes. Su fortaleza está en el software y en la facilidad de uso, pero depende por completo de que el usuario ejecute las acciones manualmente. Por eso, compite con Oryxen en la parte de acompañamiento digital, aunque no automatiza el cuidado físico de la planta. <br>
+**Diferenciación:** Oryxen elimina el error humano y la disciplina requerida, pasando de un "recordatorio" a una "acción automatizada".
+
+**Xiaomi Mi Flora / Smart Home Ecosystem**  
+Xiaomi representa la mayor amenaza debido a su capacidad de escala y precios agresivos. Sus sensores de suelo son económicos y se integran a ecosistemas de hogar inteligente como Xiaomi Home y Google Home. Sus dispositivos permiten monitorear variables como humedad, temperatura y luz, ofreciendo datos básicos sobre el estado de las plantas. <br>
+**Diferenciación:** Oryxen no solo recibe datos, los interpreta, ejecuta y explica las acciones que realiza impulsado por IA.
 
 **Gardyn (Home Kit 3.0 con Kelby AI)**  
-Startup estadounidense que vende un huerto vertical hidropónico para el hogar, controlado por una IA propia llamada **Kelby** que utiliza cámaras integradas para detectar el estado de cada planta y recomendar acciones. Funciona con un modelo de suscripción ("Gardyn Membership") que incluye envío recurrente de yCubes (semillas) y soporte. Representa el segmento **premium + IA** y es el competidor más cercano en filosofía, aunque a un precio muy elevado y atado a su propio formato de cultivo.
-
-**¿Por qué llevar a cabo este análisis?**  
-**Pregunta clave:** ¿Cómo se posiciona **Oryxen** frente a una app popular sin hardware (Planta), un electrodoméstico de cultivo cerrado (Click & Grow) y una solución premium con IA y cámara (Gardyn), considerando propuesta de valor, mercado objetivo, modelo de negocio y capacidades tecnológicas?
+Es el referente tecnológico con visión artificial. Sin embargo, su costo superior a los $700 USD y su formato cerrado lo hacen inviable para el mercado masivo en LATAM. Utiliza una IA propia llamada **Kelby** que utiliza cámaras integradas para detectar el estado de cada planta y recomendar acciones. Funciona con un modelo de suscripción ("Gardyn Membership") que incluye envío recurrente de yCubes (semillas) y soporte. <br>
+**Diferenciación:** Oryxen propone una solución modular y más accesible, enfocada en las macetas y plantas que el usuario ya posee, integrando automatización e IA sin requerir un sistema de cultivo propietario, reduciendo el costo de entrada en un 80%.
 
 ### 2.1.1. Análisis competitivo
 
@@ -356,7 +368,7 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>¿Por qué llevar a cabo este análisis?</td>
-    <td colspan="4">Identificar fortalezas y debilidades frente a competidores de software (apps de cuidado con IA), electrodomésticos de cultivo cerrado y huertos inteligentes premium, con el fin de posicionar a Oryxen como la única solución modular que convierte las plantas que el usuario ya posee en plantas inteligentes, combinando sensores, riego automático y un chatbot con IA a un precio accesible.</td>
+    <td colspan="4">Identificar fortalezas, debilidades y oportunidades frente a competidores de software, ecosistemas IoT y soluciones premium de jardinería inteligente, con el fin de posicionar a Oryxen como una alternativa modular y accesible para el mercado latinoamericano, enfocada en automatización, monitoreo y asistencia inteligente sobre las plantas que el usuario ya posee.</td>
   </tr>
   <tr>
     <td colspan="5"></td>
@@ -365,7 +377,7 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <th></th>
     <th><img src="./assets/Chapter-2/Logo_Oryxen.png"></th>
     <th><img src="./assets/Chapter-2/Logo_Planta.jpg"></th>
-    <th><img src="./assets/Chapter-2/Logo_Click&Grow.png"></th>
+    <th><img src="./assets/Chapter-2/Logo_Xiaomi.jpg"></th>
     <th><img src="./assets/Chapter-2/Logo_Gardyn.png"></th>
   </tr>
 
@@ -374,24 +386,24 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>Overview</td>
-    <td>Solución IoT modular que convierte las macetas existentes del usuario en plantas inteligentes mediante sensores, riego automático, chatbot con IA y panel de control web/móvil.</td>
-    <td>Aplicación móvil con recordatorios, identificación de plantas por foto, medidor de luz vía cámara y base de datos de especies. Solo software.</td>
-    <td>Electrodoméstico de jardinería indoor con riego automatizado, luces LED y cápsulas propietarias de semillas.</td>
-    <td>Huerto vertical hidropónico premium con IA "Kelby" y cámaras integradas, controlado desde una app.</td>
+    <td>Plataforma modular de jardinería inteligente que combina sensores IoT, automatización de riego, IA visual y chatbot conversacional para ayudar a usuarios urbanos a cuidar las plantas que ya poseen.</td>
+    <td>Aplicación móvil enfocada en recordatorios, identificación de plantas y recomendaciones de cuidado mediante IA.</td>
+    <td>Ecosistema IoT de hogar inteligente con sensores accesibles para monitorear variables como humedad, temperatura y luz.</td>
+    <td>Sistema premium de jardinería indoor que combina automatización, cámaras y visión artificial mediante su IA “Kelby”.</td>
   </tr>
   <tr>
     <td>Ventaja competitiva</td>
-    <td>Combina automatización + IA conversacional sobre las plantas que el usuario ya tiene. Sensores modulares de bajo costo y chatbot entrenado para asistir de forma personalizada.</td>
-    <td>Enorme base de usuarios, marca consolidada y una experiencia de app pulida con identificación de plantas por IA.</td>
-    <td>Jardín llave en mano: el usuario solo conecta el aparato y añade agua cada varias semanas.</td>
-    <td>IA con visión por cámara que detecta en tiempo real el estado de cada planta; experiencia "set and forget" de gama alta.</td>
+    <td>Integra monitoreo, automatización e IA sobre macetas existentes sin obligar al usuario a migrar a un ecosistema cerrado o realizar una inversión inicial elevada.</td>
+    <td>Facilidad de uso, gran base de usuarios y experiencia digital enfocada en usuarios principiantes.</td>
+    <td>Sensores de bajo costo e integración con ecosistemas de smart home ampliamente utilizados.</td>
+    <td>Alto nivel de automatización y monitoreo avanzado mediante visión artificial e IA.</td>
   </tr>
   <tr>
     <td>¿Qué valor ofrece a los clientes?</td>
-    <td>Tranquilidad, ahorro de tiempo y reducción de pérdidas para las plantas que ya poseen, con acompañamiento por IA al nivel de un experto.</td>
-    <td>Educación básica y recordatorios para usuarios principiantes, a un costo muy bajo.</td>
-    <td>Posibilidad de cultivar hierbas y vegetales frescos en casa sin experiencia previa.</td>
-    <td>Producción de alimentos en casa con mínimo esfuerzo y una experiencia tech-premium guiada por IA.</td>
+    <td>Reduce el esfuerzo manual, disminuye pérdidas de plantas y ayuda a usuarios con poco tiempo mediante automatización progresiva y recomendaciones personalizadas./td>
+    <td>Ayuda a recordar tareas de cuidado y aprender conceptos básicos de jardinería.</td>
+    <td>Permite monitorear variables ambientales de manera económica y sencilla.</td>
+    <td>Ofrece una experiencia premium de cultivo indoor con mínima intervención del usuario.</td>
   </tr>
 
   <tr>
@@ -399,17 +411,17 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>Mercado objetivo</td>
-    <td>Personas ocupadas (25–45) y aficionados a la jardinería en zonas urbanas, así como adultos mayores que buscan asistencia continua para sus plantas ya existentes.</td>
-    <td>Usuarios principiantes y casuales que quieren recordatorios y aprender sobre sus plantas desde el celular.</td>
-    <td>Usuarios de clase media-alta interesados en cocina casera, hierbas frescas y decoración indoor.</td>
-    <td>Hogares tech-premium y foodies interesados en autoabastecimiento y hidroponia en EE. UU.</td>
+    <td>Personas ocupadas y aficionados a la jardinería en zonas urbanas que buscan reducir el tiempo y esfuerzo del cuidado manual.</td>
+    <td>Usuarios casuales o principiantes interesados en aprender sobre cuidado de plantas.</td>
+    <td>Usuarios interesados en automatización del hogar y dispositivos inteligentes accesibles.</td>
+    <td>Usuarios premium interesados en cultivo indoor automatizado y tecnología avanzada.</td>
   </tr>
   <tr>
     <td>Estrategias de marketing</td>
-    <td>Redes sociales, creadores de contenido de jardinería, alianzas con viveros locales y campañas en marketplaces de hogar inteligente.</td>
-    <td>App store optimization, freemium agresivo y marketing viral en TikTok/Instagram.</td>
-    <td>E-commerce propio, presencia en retailers de diseño y campañas en sostenibilidad.</td>
-    <td>Publicidad digital, ferias tecnológicas (CES) y modelo D2C con membresía.</td>
+    <td>Redes sociales, contenido educativo, alianzas con viveros locales y marketplaces de hogar inteligente.</td>
+    <td>Freemium, posicionamiento en App Store/Google Play y contenido viral en redes sociales.</td>
+    <td>Ecosistema Xiaomi Home, precios competitivos y distribución global masiva.</td>
+    <td>Marketing premium, modelo D2C y posicionamiento tecnológico.</td>
   </tr>
 
   <tr>
@@ -417,24 +429,24 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
   </tr>
   <tr>
     <td>Productos & Servicios</td>
-    <td>Kit de sensores IoT modulares + módulo de riego automático + aplicación móvil/web + chatbot con IA + planes básico y premium por suscripción.</td>
-    <td>Aplicación móvil iOS/Android con plan gratuito y Planta Premium.</td>
-    <td>Jardín inteligente cerrado (Smart Garden 3/9/25) + cápsulas de semillas recurrentes.</td>
-    <td>Home Kit 3.0 hidropónico + Gardyn Membership + yCubes (semillas) + IA Kelby.</td>
+    <td>App móvil/web + IA visual + chatbot + sensores opcionales + riego automático modular + dashboard centralizado.</td>
+    <td>Aplicación móvil con recordatorios y recomendaciones de cuidado.</td>
+    <td>Sensores inteligentes y dispositivos integrados a Xiaomi Home.</td>
+    <td>Home Kit hidropónico + IA Kelby + cámaras + membresía premium.</td>
   </tr>
   <tr>
     <td>Precios & Costos</td>
-    <td>Kit inicial accesible + suscripción mensual (plan básico gratuito, premium con IA y sensores adicionales).</td>
-    <td>App gratuita + Planta Premium ≈ USD 30/año.</td>
-    <td>USD 100–600 según tamaño + cápsulas de semillas recurrentes (USD 10–30 por set).</td>
-    <td>USD 700+ por el Home Kit + membresía mensual con yCubes incluidos.</td>
+    <td>Bajo costo de entrada: acceso inicial sin hardware obligatorio y posibilidad de escalar progresivamente./td>
+    <td>Bajo costo anual mediante suscripción móvil.</td>
+    <td>Hardware económico orientado al mercado masivo.</td>
+    <td>Alto costo inicial y suscripción recurrente.</td>
   </tr>
   <tr>
     <td>Canales de distribución</td>
-    <td>App móvil + Plataforma web + alianzas con viveros y tiendas de hogar inteligente en Perú/LATAM.</td>
-    <td>App Store y Google Play (global).</td>
-    <td>Sitio propio, Amazon y retail de decoración (internacional).</td>
-    <td>Sitio propio D2C (principalmente EE. UU.).</td>
+    <td>Aplicación móvil/web, marketplaces y alianzas con viveros y tiendas tecnológicas locales.</td>
+    <td>App Store y Google Play.</td>
+    <td>E-commerce y retail tecnológico global.</td>
+    <td>Venta directa mediante plataforma propia.</td>
   </tr>
 
   <tr>
@@ -444,31 +456,31 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Fortalezas</td>
     <td>
       <ul>
-        <li>Único que combina sensores + riego automático + chatbot con IA</li>
-        <li>Trabaja sobre las plantas y macetas que el usuario ya posee</li>
-        <li>Sensores modulares de bajo costo</li>
-        <li>Plan freemium accesible para LATAM</li>
+        <li>Entrada progresiva sin hardware obligatorio</li>
+        <li>Automatización + IA conversacional + monitoreo</li>
+        <li>Compatible con macetas existentes</li>
+        <li>Enfoque económico y modular para LATAM</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Marca consolidada y comunidad grande</li>
-        <li>IA de identificación por foto muy madura</li>
-        <li>Costo mínimo para el usuario final</li>
+        <li>Gran comunidad de usuarios</li>
+        <li>Experiencia intuitiva</li>
+        <li>Barrera de entrada mínima</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Automatización total del cultivo</li>
-        <li>Diseño atractivo y llave en mano</li>
-        <li>Experiencia educativa para principiantes</li>
+        <li>Precios accesibles</li>
+        <li>Integración smart home consolidada</li>
+        <li>Amplia disponibilidad</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Visión por cámara + IA para diagnóstico</li>
-        <li>Modelo de suscripción recurrente consolidado</li>
-        <li>Branding tecnológico premium</li>
+        <li>Automatización avanzada</li>
+        <li>IA basada en visión artificial</li>
+        <li>Experiencia premium consolidada</li>
       </ul>
     </td>
   </tr>
@@ -476,29 +488,28 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Debilidades</td>
     <td>
       <ul>
-        <li>Startup nueva sin posicionamiento consolidado</li>
-        <li>Presupuesto de marketing inicial limitado</li>
-        <li>Requiere validación del hardware a mayor escala</li>
+        <li>Startup sin posicionamiento consolidado</li>
+        <li>Necesita validar confianza en IA y automatización</li>
+        <li>Dependencia inicial de adquisición de usuarios</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>No tiene hardware: depende totalmente del usuario para ejecutar tareas</li>
-        <li>No riega, no mide humedad real del suelo</li>
+        <li>No automatiza acciones físicas</li>
+        <li>Depende totalmente del usuario</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Ecosistema cerrado: solo funciona con sus cápsulas</li>
-        <li>No sirve para las plantas existentes del usuario</li>
-        <li>Costo recurrente de semillas propietarias</li>
+        <li>Monitoreo limitado</li>
+        <li>No incluye IA especializada en jardinería</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Precio muy elevado</li>
-        <li>Disponibilidad geográfica restringida</li>
-        <li>Formato único (no se adapta a macetas)</li>
+        <li>Precio elevado</li>
+        <li>Ecosistema cerrado</li>
+        <li>Baja accesibilidad para LATAM</li>
       </ul>
     </td>
   </tr>
@@ -506,27 +517,27 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Oportunidades</td>
     <td>
       <ul>
-        <li>Crecimiento del hogar inteligente en LATAM</li>
-        <li>Auge de la jardinería urbana post-pandemia</li>
-        <li>Adopción masiva de asistentes con IA</li>
+        <li>Crecimiento del smart home en LATAM</li>
+        <li>Aumento de jardinería urbana post-pandemia</li>
+        <li>Mayor adopción de IA conversacional</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Monetizar su base con funciones premium</li>
-        <li>Extender hacia integraciones con hardware de terceros</li>
+        <li>Expandirse hacia automatización física</li>
+        <li>Integración con hardware de terceros</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Tendencia "grow your own food"</li>
-        <li>Expansión a mercados emergentes</li>
+        <li>Integración con hardware de terceros</li>
+        <li>Nuevos sensores domésticos</li>
       </ul>
     </td>
     <td>
       <ul>
         <li>Expansión internacional</li>
-        <li>Alianzas con retailers de alimentos orgánicos</li>
+        <li>Crecimiento de agricultura indoor</li>
       </ul>
     </td>
   </tr>
@@ -534,27 +545,27 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
     <td>Amenazas</td>
     <td>
       <ul>
-        <li>Entrada de grandes players (Xiaomi, Google Home) al segmento</li>
-        <li>Fallas de hardware que erosionen la confianza del usuario</li>
-        <li>Apps gratuitas con IA como alternativa "suficiente"</li>
+        <li>Competencia de ecosistemas IoT consolidados</li>
+        <li>Percepción de bajo valor frente a apps gratuitas</li>
+        <li>Sensibilidad al precio del hardware en LATAM</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Aparición de competidores con hardware integrado</li>
+        <li>Ingreso de competidores con automatización</li>
         <li>Fatiga de suscripciones</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Usuarios que prefieren soluciones abiertas y modulares</li>
-        <li>Alternativas más baratas en Amazon</li>
+        <li>Competidores especializados con IA</li>
+        <li>Dependencia del ecosistema Xiaomi</li>
       </ul>
     </td>
     <td>
       <ul>
-        <li>Competencia de soluciones modulares más económicas</li>
-        <li>Sensibilidad al precio en contextos de recesión</li>
+        <li>Mercado reducido fuera del segmento premium</li>
+        <li>Alta barrera económica</li>
       </ul>
     </td>
   </tr>
@@ -567,16 +578,54 @@ Startup estadounidense que vende un huerto vertical hidropónico para el hogar, 
 - Ecosistema **hardware + software modular**: sensores independientes, riego automatizado y panel centralizado accesible desde web y móvil.
 - Modelo de negocio Freemium 100% software para eliminar la barrera de entrada al hardware en LATAM, escalable mediante la venta de un 'Sensor Lite' básico de bajo costo, y un Plan Premium que rentabiliza el negocio bloqueando funciones avanzadas de IA e historial completo de datos..
 - Posicionamiento como un **aliado cotidiano** para hogares ocupados y aficionados latinoamericanos, con precios adaptados al mercado regional.
+Hemos identificado diversas estrategias y tácticas para diferenciarnos y competir de manera efectiva dentro del mercado de jardinería inteligente y automatización del hogar. Oryxen busca posicionarse como una solución accesible y especializada para el cuidado de plantas en entornos urbanos, combinando automatización, monitoreo e inteligencia artificial en una sola plataforma.
 
----
+**1. Estrategias de Diferenciación:** <br>
 
-**Tácticas frente a competidores**
+**Automatización Integral del Cuidado:**
+A diferencia de competidores como Planta, que se limitan a la gestión de software y recordatorios. Oryxen incorpora sensores y módulos de riego que permiten automatizar tareas de cuidado y reducir la dependencia del usuario en actividades repetitivas.
 
-| Competidor | Estrategia | Táctica |
-|------------|------------|---------|
-| **Planta** | Complementar y superar el "solo software" con hardware | Mostrar que los recordatorios sin sensores siguen dependiendo del usuario; Oryxen ejecuta, no solo recuerda. Ofrecer importación de especies desde apps de recordatorio como puente de migración. |
-| **Click & Grow** | Diferenciarse del ecosistema cerrado | Comunicar que Oryxen funciona con cualquier maceta y planta que el usuario ya tenga, sin depender de cápsulas propietarias ni de un solo tipo de cultivo. |
-| **Gardyn** | Competir por valor frente a una solución premium y regional | Ofrecer capacidades de IA equivalentes (diagnóstico conversacional por especie) a una fracción del costo y con disponibilidad en LATAM, sin obligar al usuario a comprar un huerto vertical completo. |
+**IA especializada en jardinería:**
+Oryxen integra chatbot conversacional y diagnóstico visual por IA para interpretar el estado de las plantas y recomendar acciones específicas según la especie, el entorno y las condiciones detectadas por los sensores. Esto permite ofrecer una experiencia más personalizada que los sistemas IoT tradicionales.
+
+**Dashboard centralizado y monitoreo inteligente:**
+La plataforma permite visualizar el estado de todas las plantas desde una sola interfaz, incluyendo historial de riego, humedad, alertas y recomendaciones automáticas. Esto brinda mayor control a usuarios con múltiples plantas o poco tiempo disponible.
+
+
+**2. Tácticas de Marketing:** <br>
+
+**Contenido educativo y redes sociales:**
+Se implementarán campañas digitales orientadas a hogares urbanos y adultos mayores, utilizando contenido educativo sobre cuidado de plantas, automatización e IA aplicada al hogar.
+
+**Alianzas con viveros y tiendas tecnológicas:**
+Oryxen buscará colaborar con viveros locales y marketplaces tecnológicos para aumentar visibilidad, facilitar pruebas del producto y fortalecer la confianza del usuario en etapas tempranas.
+
+**Demostraciones y onboarding simplificado:**
+Se priorizará una experiencia de configuración sencilla y demostraciones prácticas del monitoreo y diagnóstico por IA, reduciendo la percepción de complejidad tecnológica asociada al hardware IoT.
+
+
+**3. Estrategias de Precios:** <br>
+
+**Modelo freemium con adopción progresiva:**
+Los usuarios podrán iniciar utilizando funciones gratuitas como chatbot básico, monitoreo manual y diagnóstico visual, sin necesidad de adquirir hardware desde el inicio. Posteriormente podrán incorporar sensores o automatización según sus necesidades y presupuesto.
+
+**Planes escalables según cantidad de plantas:**
+Se ofrecerán planes premium orientados a usuarios con múltiples macetas o necesidades avanzadas, incluyendo automatización inteligente, historial avanzado y análisis personalizados.
+
+**Hardware modular de bajo costo:**
+A diferencia de soluciones premium cerradas, Oryxen priorizará sensores independientes y compatibles con diferentes tipos de macetas, permitiendo reducir costos y facilitar el acceso en el mercado latinoamericano.
+
+
+**4. Expansión y Adaptabilidad:** <br>
+
+**Enfoque inicial en Lima Metropolitana:**
+La startup comenzará enfocándose en usuarios urbanos de Lima Metropolitana, donde existe un crecimiento sostenido en el uso de plantas ornamentales y dispositivos smart home. Posteriormente se evaluará la expansión nacional e internacional.
+
+**Compatibilidad con ecosistemas existentes:**
+Oryxen buscará integrarse progresivamente con plataformas de hogar inteligente y asistentes virtuales, permitiendo aumentar compatibilidad y competitividad frente a ecosistemas consolidados como Xiaomi o Google Home.
+
+**Aprendizaje continuo mediante feedback del usuario:**
+El sistema utilizará interacciones y retroalimentación de los usuarios para mejorar la precisión de alertas, recomendaciones y diagnósticos visuales, fortaleciendo la confianza en la plataforma con el tiempo.
 
 
 <div style="page-break-after: always;"></div>
@@ -955,7 +1004,7 @@ To-Be Scenario Map 2- Segmento de : Aficionados
 | EPIC 006 | Comunidad y Colaboración entre Usuarios |Como usuario, quiero participar en una comunidad donde pueda compartir experiencias, recibir consejos de otros cuidadores y colaborar en el cuidado de plantas, para enriquecer mi conocimiento y sentirme parte de una red de apoyo. |**Escenario 01: Experiencia comunitaria integrada**<br>- Dado que un usuario completa el registro básico<br>- Cuando accede por primera vez a la comunidad<br>- Entonces encuentra contenido relevante según sus tipos de plantas<br>- Y puede interactuar inmediatamente con otros usuarios afines**Escenario 02: Valor educativo continuo**<br>- Dado que un usuario participa regularmente en la comunidad<br>- Cuando comparte y recibe feedback<br>- Entonces acumula conocimiento aplicable a sus plantas<br>- Y mejora progresivamente sus técnicas de cuidado<br>**Reglas de Comunidad:**<br>- Usuarios nuevos no pueden publicar enlaces externos hasta tener 10 reputación<br>- Las fotos compartidas no pueden exceder 5MB ni contener metadatos de ubicación<br>- El contenido se modera automáticamente con lista de palabras prohibidas<br>- Usuarios pueden reportar contenido, con 3 reportes se suspende publicación automáticamente    | N/A|
 | EPIC 007 | Alertas Inteligentes Contextuales|Como usuario, quiero recibir alertas contextuales que me indiquen no solo el problema sino también causas posibles y soluciones, para tomar acciones informadas rápidamente.|**Escenario 01: Alerta con diagnóstico**<br>- Dado que la humedad del suelo baja críticamente<br>- Cuando se genera la alerta<br>- Entonces incluye posible causa (temperatura alta, suelo muy drenante, maceta pequeña)<br>- Y sugiere acciones específicas (regar inmediatamente, mover a sombra, transplantar)<br>**Escenario 02: Alertas preventivas**<br>- Dado que una planta muestra tendencia descendente en salud<br>- Cuando el sistema detecta patrón de deterioro<br>- Entonces envía alerta preventiva antes de llegar a estado crítico<br>- Y recomienda acciones correctivas tempranas<br>**Reglas de Alertas:**<br>- Las alertas preventivas requieren tendencia consistente de 72 horas<br>- El diagnóstico automático considera máximo 3 causas probables por alerta<br>- Las soluciones sugeridas deben estar validadas por al menos 10 casos exitosos en la comunidad<br>- No se generan alertas por fluctuaciones menores al 5% en rangos normales|N/A|
 | EPIC 008 | Configuración Inteligente de Dispositivos|Como usuario, quiero vincular y configurar fácilmente mis sensores IoT con perfiles predefinidos según mi tipo de planta y ubicación, para que el dispositivo comience a monitorear automáticamente sin necesidad de configuración técnica compleja.|**Escenario 01: Vinculación simplificada**<br>- Dado que un usuario adquiere un nuevo sensor<br>- Cuando escanea el código QR del dispositivo<br>- Entonces el sistema lo detecta automáticamente<br>- Y guía al usuario en asignarlo a una planta específica<br>**Escenario 02: Configuración automática por tipo de planta**<br>- Dado que un usuario selecciona "Suculenta" al registrar planta<br>- Cuando vincula el sensor<br>- Entonces el sistema aplica automáticamente umbrales de humedad para suculentas<br>- Y configura frecuencias de monitoreo adecuadas<br>**Reglas de Dispositivos:**<br>- Máximo 3 dispositivos por usuario en plan básico, ilimitado en premium<br>- Los dispositivos deben recertificar conexión cada 24 horas<br>- La batería crítica se define como menor al 15% de capacidad<br>- Los datos de sensores se muestran con precisión de ±2% para humedad, ±0.5°C para temperatura|N/A| 
-| EPIC 009 | Gestión de suscripciones|Como usuario, quiero elegir entre diferentes modelos de pago (compra única de hardware o suscripción mensual con servicios premium) según mis necesidades y presupuesto, para acceder a las funcionalidades que más valoro.|**Escenario 01: Opción de compra única**<br>- Dado que un usuario prefiere pago único<br>- Cuando selecciona el plan básico<br>- Entonces accede a funciones esenciales de monitoreo<br>- Y no tiene compromisos de pago recurrentes<br>**Escenario 02: Suscripción premium**<br>- Dado que un usuario quiere funcionalidades avanzadas<br>- Cuando elige suscripción mensual<br>- Entonces desbloquea diagnósticos avanzados, historiales extensos e integración con clima<br>- Y puede cancelar en cualquier momento<br>**Reglas de Facturación:**<br>- Las suscripciones se renuevan automáticamente 24 horas antes del vencimiento<br>- Período de gracia de 7 días para pagos fallidos antes de suspensión<br>- Reembolsos completos dentro de primeros 14 días de suscripción<br>- Los cambios de plan premium a básico mantienen funciones hasta fin de período pagado|N/A|
+| EPIC 009 | Gestión de suscripciones|Como usuario, quiero elegir entre diferentes modelos de adopción progresiva (plan básico gratuito, suscripción premium de software o compra de hardware modular) según mis necesidades y presupuesto, para acceder a las funcionalidades que más valoro sin barreras de entrada altas.|**Escenario 01: Plan Básico Gratuito**<br>- Dado que un usuario prefiere probar la plataforma sin costo inicial<br>- Cuando selecciona el plan Básico<br>-Entonces accede a funciones esenciales de monitoreo y registro manual de plantas y no tiene compromisos de pagos recurrentes ni requiere comprar hardware<br> **Escenario 02: Suscripción premium (Solo Software)** <br>- Dado que un usuario quiere funcionalidades avanzadas sin comprar sensores<br>- Cuando elige la suscripción mensual premium<br>- Entonces desbloquea diagnósticos con IA, historial extenso y soporte avanzado.<br>- Y puede cancelar en cualquier momento<br> **Escenario 03: compra de Hardware Modular (Sensor Lite)** <br>- Dado que un usuario desea automatizar su monitoreo<br>- Cuando adquiere el Sensor Lite de entrada<br>- Entonces integra los datos automáticos a su plan y recibe meses de suscripción premium incluidos.<br>**Reglas de Facturación:**<br>- Las suscripciones se renuevan automáticamente 24 horas antes del vencimiento<br>- Período de gracia de 7 días para pagos fallidos antes de suspensión<br>- Reembolsos completos dentro de primeros 14 días de suscripción<br>- Los cambios de plan premium a básico mantienen funciones hasta fin de período pagado|N/A|
 | EPIC 010 | Gestión de Riego 100% Autónomo | Como usuario, quiero que el sistema gestione de forma autónoma el riego de mis plantas, para asegurar su hidratación óptima sin necesidad de intervención manual o supervisión constante. | **Escenario 01: Ejecución de riego por demanda**<br> - Dado que el sensor detecta que la humedad del suelo es inferior al umbral de la especie <br> - Cuando el sistema valida que no ha habido riego reciente <br> - Entonces activa automáticamente la bomba de agua hasta alcanzar el nivel ideal <br> - Y registra el volumen de agua consumido. <br> **Escenario 02: Suspensión inteligente de riego**  <br> - Dado que el sistema tiene programado un riego <br> - Cuando la predicción climática local indica lluvia inminente (>80% probabilidad) <br> - Entonces el sistema pospone el riego autónomo para ahorrar agua y evitar sobrehidratación. <br> **Reglas de Negocio:** <br>- El sistema debe enviar un reporte diario de acciones autónomas realizadas. <br> - Existe un ""Failsafe"" que corta el riego si el sensor no detecta cambios en 60 segundos (evitar inundaciones por fuga). <br> - Los registros de riego deben guardarse por 12 meses. | N/A |
 | EPIC 011 | Diagnóstico por Visión Artificial | Como usuario, quiero capturar imágenes de mis plantas para que una IA identifique automáticamente plagas, enfermedades o deficiencias nutricionales de forma inmediata. | **Escenario 01: Identificación de anomalías** <br> - Dado que un usuario toma una foto de una hoja con manchas o decoloración- Cuando el motor de IA procesa la imagen- Entonces identifica la posible enfermedad con un porcentaje de certeza- Y sugiere un tratamiento específico (insecticida, fertilizante, etc.). **Escenario 02: Seguimiento de crecimiento** <br> - Dado que el usuario toma fotos periódicas <br> - Cuando accede al módulo de salud <br> - Entonces la IA compara las imágenes para determinar la tasa de crecimiento y vigorosidad. <br> **Reglas de Negocio:** <br> - El procesamiento de imagen (Inferencia) debe completarse en menos de 5 segundos. <br> - Se requiere una certeza mínima del 85% para dar una recomendación de producto químico. <br> - Las imágenes se almacenan en un bucket optimizado para análisis histórico. | N/A |
 | EPIC 012 | Asistente Virtual (Chatbot) | Como usuario, quiero interactuar con un asistente inteligente que conozca el estado real de mis plantas, para resolver dudas técnicas y recibir consejos personalizados mediante lenguaje natural. | **Escenario 01: Consulta de estado** <br> - Dado que un usuario pregunta "¿Cómo están mis plantas hoy?" <br> - Cuando el chatbot analiza los datos de los sensores y el historial de riego <br> - Entonces responde con un resumen ejecutivo sobre la salud general de su jardín. <br> **Escenario 02: Resolución de dudas sobre cuidados** <br> - Dado que un usuario tiene una duda sobre una especie nueva <br> - Cuando consulta al chatbot sobre cuidados de luz o sustrato <br> - Entonces el asistente brinda información técnica validada por su base de conocimientos. <br> **Reglas de Negocio:** <br> - El chatbot debe mantener el contexto de la conversación durante al menos 10 minutos. <br> - Las respuestas deben ser personalizadas según el inventario de plantas del usuario. <br> - El tiempo de respuesta inicial del bot debe ser inferior a 2 segundos. | N/A |
@@ -1010,7 +1059,7 @@ To-Be Scenario Map 2- Segmento de : Aficionados
 | US-043          | Configuración inteligente por perfil de planta | Como usuario, quiero que el sistema configure automáticamente los parámetros del dispositivo según el tipo de planta, para optimizar el monitoreo sin requerir conocimiento técnico.                  | **Escenario 01: Aplicación de perfiles predefinidos**<br>- Dado que un usuario selecciona "Orquídea" al registrar una planta<br>- Cuando vincula un sensor a esa planta<br>- Entonces el sistema aplica parámetros específicos para orquídeas (humedad alta, luz indirecta)<br>- Y ajusta sensibilidad de alertas según necesidades de la especie<br><br>**Escenario 02: Personalización de parámetros automáticos**<br>- Dado que un usuario tiene configuración automática activa<br>- Cuando el sistema detecta condiciones ambientales locales<br>- Entonces ajusta umbrales considerando clima y estación<br>- Y notifica al usuario sobre los ajustes aplicados <br>**Reglas de negocio:**<br>- Los perfiles predefinidos de planta deben estar almacenados en una base de conocimiento estandarizada (catálogo de especies)<br> -El sistema debe aplicar automáticamente umbrales y sensibilidades según la especie seleccionada.| EPIC 008                   |
 | US-044          | Recepción de datos en tiempo real         | Como usuario, quiero ver las lecturas de mis sensores actualizarse en tiempo real, para monitorear el estado actual de mis plantas instantáneamente.                                                | **Escenario 01: Actualización continua**<br>- Dado que un dispositivo está transmitiendo datos<br>- Cuando el usuario visualiza el dashboard de una planta<br>- Entonces los valores de humedad, temperatura y luz se actualizan cada 30 segundos<br>- Y los cambios se reflejan sin necesidad de recargar manualmente<br><br>**Escenario 02: Indicadores de estado de conexión**<br>- Dado que un dispositivo está operativo<br>- Cuando el usuario revisa el estado del sensor<br>- Entonces ve indicador visual de "Conectado" y última actualización<br>- Y puede ver historial de estabilidad de conexión <br>**Reglas de negocio:**<br>-Los dispositivos deben enviar lecturas en intervalos de 30 segundos por defecto, ajustables por configuración.<br>- Si un dispositivo no envía datos durante más de 2 minutos, debe marcarse como “en riesgo de desconexión”.| EPIC 008                   |
 | US-045          | Gestión proactiva de conectividad         | Como usuario, quiero ser notificado proactivamente sobre problemas de conexión del dispositivo, para mantener el monitoreo continuo de mis plantas.                                                 |**Escenario 01: Alerta de desconexión**<br>- Dado que un dispositivo vinculado pierde conexión<br>- Cuando el sistema detecta falta de comunicación por 5 minutos<br>- Entonces envía notificación push informando la desconexión<br>- Y sugiere verificar batería, WiFi o posición del dispositivo<br>**Escenario 02: Reconexión automática**<br>- Dado que un dispositivo se reconecta después de falla<br>- Cuando restablece comunicación con el servidor<br>- Entonces el sistema notifica la reconexión exitosa<br>- Y sincroniza datos acumulados durante el período offline<br>**Reglas de negocio:**<br>- Una alerta de desconexión se genera tras 5 minutos consecutivos sin comunicación con el servidor.<br> - El sistema debe intentar reconexión automática antes de emitir alerta al usuario.| EPIC 008                   |
-| US-046          | Selección flexible de planes              | Como usuario, quiero elegir entre diferentes modelos de pago según mis necesidades, para acceder a las funcionalidades que mejor se adapten a mi presupuesto y nivel de uso.                        | **Escenario 01: Opción de compra única**<br>- Dado que un usuario prefiere evitar suscripciones recurrentes<br>- Cuando selecciona el plan "Básico" de pago único<br>- Entonces accede a funciones esenciales de monitoreo permanente<br>- Y no tiene compromisos de pago mensuales recurrentes<br><br>**Escenario 02: Suscripción premium**<br>- Dado que un usuario quiere funcionalidades avanzadas<br>- Cuando elige suscripción mensual o anual<br>- Entonces desbloquea inmediatamente diagnósticos avanzados e historiales extensos<br>- Y puede probar todas las funciones premium durante el período de pago <br>**Reglas de negocio:**<br>- Los planes disponibles deben estar definidos en un catálogo dinámico administrable desde backend. <br>- Los beneficios de cada plan deben actualizarse inmediatamente tras el pago o cambio.| EPIC 009                   |
+| US-046          | Selección flexible de planes              | Como usuario, quiero elegir entre diferentes modelos de pago según mis necesidades, para acceder a las funcionalidades que mejor se adapten a mi presupuesto y nivel de uso.                        | **Escenario 01: Selección del Plan Básico Gratuito**<br>- Dado que un usuario no deseaa invertir dinero incialmente<br>- Cuando selecciona el plan "Básico" en la pantalla de suscripciones<br>- Entonces  el sistema le otorga acceso a la gestión manual de plantas y no le solicita información de tarjetas de crédito <br><br>**Escenario 02: Selección de Suscripción premium**<br>- Dado que un usuario necesita diágnosticos automatizados por IA <br>- Cuando selecciona el plan "Premium" y completa el pago<br>- Entonces el sistema desbloquea el chatbot experto y la visión artificial en su cuenta.<br> **Escenario 03: Expansión con Kit de Hardware**<br>- Dado que un usuario quiere dejar de medir la humedad manualmente <br>- Cuando compra el 'Sensor Lite' desde la plataforma <br>- Entonces el sistema vincula el sensor a su cuenta y se activa la recolección de datos en tiempo real. <br>**Reglas de negocio:**<br>- Los planes disponibles deben estar definidos en un catálogo dinámico administrable desde backend. <br>- Los beneficios de cada plan deben actualizarse inmediatamente tras el pago o cambio.| EPIC 009                   |
 | US-047          | Gestión segura de métodos de pago         | Como usuario, quiero administrar mi información de pago de forma segura, para mantener mis suscripciones activas y actualizadas.                                                                    | **Escenario 01: Actualización de tarjeta**<br>- Dado que un usuario necesita actualizar su método de pago<br>- Cuando agrega nueva tarjeta en la sección de facturación<br>- Entonces el sistema valida y tokeniza la información de forma segura<br>- Y confirma que el nuevo método está disponible para futuros cobros<br><br>**Escenario 02: Rotación segura de credenciales**<br>- Dado que un usuario reemplaza su método de pago principal<br>- Cuando el sistema procesa el cambio<br>- Entonces invalida los tokens anteriores inmediatamente<br>- Y notifica sobre la actualización exitosa <br>**Reglas de negocio:**<br>- Los datos de tarjetas deben ser tokenizados y nunca almacenados directamente por el sistema.| EPIC 009                   |
 | US-048          | Cancelación flexible de suscripciones     | Como usuario, quiero poder cancelar mi suscripción en cualquier momento, para tener control total sobre mis gastos recurrentes.                                                                    | **Escenario 01: Cancelación inmediata con acceso hasta fin de período**<br>- Dado que un usuario decide cancelar su suscripción<br>- Cuando confirma la cancelación en la app<br>- Entonces el acceso premium se mantiene hasta el final del período pagado<br>- Y no se realizan cobros recurrentes adicionales<br><br>**Escenario 02: Confirmación de cancelación**<br>- Dado que un usuario completa el proceso de cancelación<br>- Cuando el sistema procesa la solicitud<br>- Entonces envía comprobante de cancelación por email<br>- Y muestra confirmación en la app con fecha de finalización <br>**Reglas de negocio:**<br>- La cancelación debe poder realizarse sin intervención del soporte técnico.<br>- Tras cancelar, el acceso premium se mantiene hasta el final del período ya pagado.| EPIC 009                   |
 | US-049          | Transparencia en historial de pagos       | Como usuario, quiero consultar mi historial completo de transacciones, para tener control y registro de todos mis pagos y suscripciones.                                                            | **Escenario 01: Consulta de historial financiero**<br>- Dado que un usuario accede a su historial de pagos<br>- Cuando navega por las transacciones<br>- Entonces ve fecha, monto, método de pago y concepto de cada cargo<br>- Y puede filtrar por tipo de transacción (suscripción, compra única, etc.)<br><br>**Escenario 02: Descarga de comprobantes**<br>- Dado que un usuario necesita un comprobante específico<br>- Cuando selecciona descargar recibo de pago<br>- Entonces genera PDF con detalles completos de la transacción<br>- Y el documento incluye información fiscal requerida <br>**Reglas de negocio:**<br>-Todas las transacciones deben registrarse con número único, monto, fecha y método de pago.<br>- El historial debe conservar al menos 12 meses de registros accesibles para el usuario.| EPIC 009                   |
@@ -1114,7 +1163,7 @@ Para el segmento del usuario aficionado se elaboró un Impact Mapping con el obj
 | 33 | US-002 | Secciones informativas diferenciadas | Como visitante, quiero ver secciones que muestren cómo el producto beneficia tanto a personas ocupadas como a aficionados | 3 |
 | 34 | US-003 | Call to Action contextual | Como visitante, quiero encontrar botones de acción claros y contextualizados según mis intereses | 2 |
 | 35 | US-004 | Testimonios segmentados | Como visitante, quiero ver testimonios de usuarios reales que representen diferentes perfiles | 3 |
-| 36 | US-046 | Selección flexible de planes | Como usuario, quiero elegir entre diferentes modelos de pago según mis necesidades | 3 |
+| 36 | US-046 | Selección flexible de planes | Como usuario, quiero elegir entre diferentes modelos de suscripción y hardwaresegún mis necesidades | 3 |
 | 37 | US-047 | Gestión segura de métodos de pago | Como usuario, quiero administrar mi información de pago de forma segura | 3 |
 | 38 | US-048 | Cancelación flexible de suscripciones | Como usuario, quiero poder cancelar mi suscripción en cualquier momento | 2 |
 | 39 | US-049 | Transparencia en historial de pagos | Como usuario, quiero consultar mi historial completo de transacciones | 3 |
@@ -1211,7 +1260,7 @@ A continuación, se presentan los constraints representados mediante Technical S
 | **CON-01** | Backend Framework | Como Arquitecto de Software, requiero que el desarrollo del backend se realice utilizando el framework .NET con C#, para garantizar un alto rendimiento en el procesamiento de datos concurrentes y estandarizar el código. | **Escenario 01: Verificación de tecnología backend**<br>Dado que un desarrollador debe crear un nuevo microservicio para Oryxen,<br>Cuando se selecciona el stack tecnológico,<br>Entonces se debe utilizar C# sobre el framework .NET 8 o superior.<br><br>**Escenario 02: Implementación de la persistencia**<br>Dado que el sistema requiere almacenar datos de telemetría,<br>Cuando se define la capa de acceso a datos,<br>Entonces se debe implementar Entity Framework Core como ORM oficial. | |
 | **CON-02** | Frontend Framework | Como Líder Técnico, requiero que las aplicaciones web se desarrollen utilizando el framework Vue.js, para asegurar una experiencia de usuario reactiva y cumplir con los lineamientos tecnológicos del proyecto. | **Escenario 01: Implementación del Dashboard Web**<br>Dado que un desarrollador frontend inicia la construcción del panel de control,<br>Cuando se define la estructura del proyecto web,<br>Entonces se debe utilizar Vue 3 para gestionar los componentes de la interfaz.<br><br>**Escenario 02: Integración de componentes UI**<br>Dado que el equipo de diseño requiere una interfaz responsiva,<br>Cuando se integran bibliotecas de componentes,<br>Entonces se deben utilizar PrimeVue o Vuetify compatibles con Vue.js. | |
 | **CON-03** | Mobile Native Strategy | Como Desarrollador Móvil, requiero que las aplicaciones móviles se construyan con tecnologías nativas (Kotlin para Android, Swift para iOS), para evitar cuellos de botella en rendimiento y aprovechar al máximo el hardware del dispositivo. | **Escenario 01: Desarrollo del módulo Android**<br>Dado que se inicia el desarrollo de la aplicación para smartphones Android,<br>Cuando se selecciona el lenguaje de programación en el IDE,<br>Entonces se debe utilizar estrictamente Kotlin.<br><br>**Escenario 02: Desarrollo del módulo iOS**<br>Dado que se inicia el desarrollo de la aplicación para dispositivos Apple,<br>Cuando se compila el código fuente móvil,<br>Entonces se debe utilizar Swift, descartando cualquier framework de desarrollo híbrido. | |
-| **CON-04** | Cloud Deployment | Como Ingeniero DevOps, requiero que la infraestructura se despliegue en contenedores dentro de una plataforma de nube pública, para garantizar la disponibilidad, el auto-escalado y la fácil gestión de los picos de tráfico. | **Escenario 01: Contenerización de microservicios**<br>Dado que el código de un servicio ha pasado las pruebas de integración,<br>Cuando se inicia el flujo de despliegue continuo,<br>Entonces el sistema debe empaquetar el servicio en una imagen Docker.<br><br>**Escenario 02: Orquestación en Nube Pública**<br>Dado que las imágenes de los contenedores están listas en el registro,<br>Cuando se realiza el despliegue a producción,<br>Entonces se deben alojar en servicios administrados de AWS, Azure o Google Cloud. ||
+| **CON-04** | Cloud Deployment | Como Ingeniero DevOps, requiero que la infraestructura se despliegue en contenedores dentro de una plataforma de nube pública, para garantizar la disponibilidad, el auto-escalado y la fácil gestión de los picos de tráfico. | **Escenario 01: Contenerización de microservicios**<br>Dado que el código de un servicio ha pasado las pruebas de integración,<br>Cuando se inicia el flujo de despliegue continuo,<br>Entonces el sistema debe empaquetar el servicio en una imagen Docker.<br><br>**Escenario 02: Orquestación en Nube Pública**<br>Dado que las imágenes de los contenedores están listas en el registro,<br>Cuando se realiza el despliegue a producción,<br>Entonces se deben alojar exclusivamente en servicios administrados de Amazon Web Services (AWS)||
 | **CON-05** | IoT Communication Protocol | Como Ingeniero IoT, requiero que la comunicación entre los sensores físicos y la nube utilice el protocolo MQTT, para asegurar una transmisión de telemetría ligera y estable. | **Escenario 01: Envío de telemetría desde sensores**<br>Dado que un sensor IoT detecta un cambio en la humedad del suelo,<br>Cuando el dispositivo intenta enviar la información a la nube,<br>Entonces el mensaje debe publicarse a través de un tópico MQTT hacia el Broker central.<br><br>**Escenario 02: Recepción de comandos de riego**<br>Dado que el sistema decide activar una bomba de agua autónoma,<br>Cuando se envía la orden desde el backend,<br>Entonces el dispositivo debe recibir el comando mediante una suscripción activa al protocolo MQTT. ||
 | **CON-06** | Authentication Standard | Como Arquitecto de Seguridad, requiero que la autenticación y autorización de usuarios se gestione mediante el estándar OAuth 2.0 y tokens JWT, para asegurar un acceso sin estado (stateless) seguro entre microservicios. | **Escenario 01: Generación de token seguro**<br>Dado que un usuario ingresa credenciales válidas en el login,<br>Cuando el servidor de identidad procesa la solicitud,<br>Entonces el sistema debe emitir un token JWT firmado criptográficamente con una expiración definida.<br><br>**Escenario 02: Acceso a rutas protegidas**<br>Dado que un cliente (Web o Móvil) intenta consumir un endpoint protegido,<br>Cuando envía la solicitud HTTP,<br>Entonces debe incluir el token JWT en el header de Autorización (Bearer) para que el API Gateway permita el paso. | |
 | **CON-07** | API Documentation | Como Desarrollador Frontend/Móvil, requiero que todas las APIs RESTful expuestas por el backend estén documentadas bajo la especificación OpenAPI (Swagger), para garantizar un contrato claro y facilitar la integración entre equipos. | **Escenario 01: Exposición del contrato API**<br>Dado que el equipo backend despliega un nuevo microservicio,<br>Cuando el servicio se inicia en el entorno de desarrollo,<br>Entonces debe autogenerar y exponer una interfaz Swagger accesible vía navegador.<br><br>**Escenario 02: Consumo por parte del cliente**<br>Dado que un desarrollador frontend necesita integrar la vista de "Mis Plantas",<br>Cuando consulta la documentación de la API,<br>Entonces debe visualizar claramente los schemas exactos de los request y responses esperados. | |
@@ -1469,27 +1518,27 @@ Los diagramas de arquitectura de software nos ayudan a plantear el sistema de nu
 
 ### 4.3.1.	Software Architecture System Landscape Diagram
 
-Este diagrama representa todos los actores y sistemas del ecosistema Oryxen en un solo nivel: usuarios, Oryxen, servicios externos (Google OAuth2, Stripe), y el dispositivo IoT.
+El System Landscape Diagram presenta una vista general del ecosistema de Oryxen dentro de su entorno tecnológico y de negocio. Se identifican los principales actores que interactúan con la plataforma, así como los sistemas externos integrados, incluyendo servicios de autenticación, pagos, inteligencia artificial y dispositivos IoT. Este diagrama permite comprender cómo Oryxen se posiciona dentro de un ecosistema de jardinería inteligente conectado y orientado a la automatización.
 
-![LandscapeDiagram.png](assets/C4-landscape.png)
+![SystemLandscapeDiagram_Oryxen](./assets/SystemLandscapeDiagram_Oryxen.png)
 
 ### 4.3.2.	Software Architecture Context Level Diagrams
 
-Este diagrama muestra el sistema Oryxen en su entorno, destacando las interacciones con los distintos usuarios (profesionales ocupados, aficionados y desarrolladores), los servicios externos (Google OAuth2 y Plants API) y el dispositivo IoT.
+El Context Level Diagram muestra a Oryxen como un sistema central y explica cómo se relaciona con los usuarios y servicios externos. El objetivo de este diagrama es representar claramente el alcance funcional del sistema y visualizar las dependencias externas necesarias para su operación.
 
-![ContextDiagram.png](assets/C4-context.png)
+![SystemContextDiagram_Oryxen](./assets/SystemContextDiagram_Oryxen.png)
 
 ### 4.3.3.	Software Architecture Container Level Diagrams
 
-Detalla la arquitectura interna de Oryxen en términos de contenedores: aplicación web, aplicación móvil, backend, bases de datos (web y móvil) y la Edge App para el dispositivo IoT. También muestra cómo se conectan entre sí y con sistemas externos.
+El Container Level Diagram presenta la arquitectura interna de Oryxen, mostrando cómo se distribuyen las responsabilidades entre aplicaciones cliente, servicios backend, componentes IoT y la capa de datos. La solución incorpora un API Gateway como punto centralizado de acceso y múltiples servicios especializados alineados a los distintos dominios del negocio, como identidad, gestión de plantas, analíticas, comunidad, notificaciones y suscripciones. Asimismo, se diferencian bases de datos operacionales, analíticas y de telemetría IoT para garantizar escalabilidad y modularidad orientada a la automatización inteligente del cuidado de plantas.
 
-![ContainersDiagram.png](assets/C4-containerrs.png)
+![ContainerDiagram_Oryxen](./assets/ContainerDiagram_Oryxen.png)
 
 ### 4.3.4.	Software Architecture Deployment Diagrams
 
 Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Server, App Server, Database Server), dispositivos móviles de los usuarios y el dispositivo IoT físico. Cada contenedor está ubicado en el nodo correspondiente.
 
-![DeploymentDiagram.png](https://i.ibb.co/ycVyb5k0/C4-deployment.png)
+![DeploymentDiagram.png](./assets/C4-deployment.png)
 
 ---
 
