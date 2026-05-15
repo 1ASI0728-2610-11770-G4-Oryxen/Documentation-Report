@@ -2549,16 +2549,6 @@ Este flujo ilustra cómo un usuario interactúa con la característica estrella 
 *(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
 `![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
 
-### 6.5. Applications Prototyping
-
-[![Protitipo-MOVIL.jpg](https://i.postimg.cc/8c68x7x3/Protitipo-MOVIL.jpg)](https://postimg.cc/YLMyWCrf)
-
-Link del video app movil: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQDQXbb_sP6gQbtmDmIo70zvAexpD0dW6jAVRMliIWUcS6A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8SMDbO
-
-[![Prototipo-WEB.jpg](https://i.postimg.cc/zvgm4y9m/Prototipo-WEB.jpg)](https://postimg.cc/0KPHwykZ)
-
-Link del video app web: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQD90adpuh2HRaN3xZ5TbRREAbDzTw7cJ7ru2NqoLsuGbEg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=c79d7N
-
 
 ---
 
@@ -6849,6 +6839,15 @@ Este flujo ilustra cómo un usuario interactúa con la característica estrella 
 *(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
 `![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
 
+### 6.5. Applications Prototyping
+
+[![Protitipo-MOVIL.jpg](https://i.postimg.cc/8c68x7x3/Protitipo-MOVIL.jpg)](https://postimg.cc/YLMyWCrf)
+
+Link del video app movil: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQDQXbb_sP6gQbtmDmIo70zvAexpD0dW6jAVRMliIWUcS6A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=8SMDbO
+
+[![Prototipo-WEB.jpg](https://i.postimg.cc/zvgm4y9m/Prototipo-WEB.jpg)](https://postimg.cc/0KPHwykZ)
+
+Link del video app web: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQD90adpuh2HRaN3xZ5TbRREAbDzTw7cJ7ru2NqoLsuGbEg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=c79d7N
 
 
 # Conclusiones
