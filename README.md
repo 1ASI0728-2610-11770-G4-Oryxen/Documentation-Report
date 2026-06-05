@@ -5971,6 +5971,90 @@ Link del video app movil: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202
 Link del video app web: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQD90adpuh2HRaN3xZ5TbRREAbDzTw7cJ7ru2NqoLsuGbEg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=c79d7N
 
 
+# Capítulo VII: Product Implementation, Validation & Deployment
+
+## 7.1. Software Configuration Management
+
+### 7.1.1. Software Development Environment Configuration
+
+### 7.1.2. Source Code Management
+
+En esta sección se presenta el enfoque seleccionado para la gestión del código fuente que se centraliza en GitHub, implementando un sistema robusto de control de versiones bajo la organización: https://github.com/1ASI0728-2610-11770-G4-Oryxen. Esta estructura nos permite mantener un flujo de trabajo colaborativo y organizado: <br>
+
+**Oryxen-Documentation-Report:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report<br>
+**Oryxen-Landing-Page:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page <br>
+**Oryxen-Web-Application:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application <br>
+**Oryxen-Mobile-Application:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application <br>
+**Oryxen-Backend:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend <br>
+
+<br>
+
+**GitFlow Workflow:**<br>
+Para el desarrollo de los artefactos de nuestra solución, se implementa el modelo GitFlow propuesto por Vincent Driessen, adaptado a un entorno de desarrollo y despliegue continuo. Las ramas a implementar son:
+
+- `main:` Rama principal para producción
+- `develop:` Rama de desarrollo
+- `feature/nombre-descriptivo:` Rama para desarrollo de nuevas funcionalidades
+- `fix/x.y.z:` Rama para corrección de errores
+- `release/x.y.z:` Rama para despliegue de versiones estables
+
+<br>
+
+**Conventional Commits:**<br>
+Se utilizarán **Conventional Commits** para facilitar el versionado semántico.
+
+- `feat:` Nueva funcionalidad
+- `fix:` Corrección de errores
+- `test:` Pruebas agregadas o modificadas
+- `docs:` Documentación
+
+<br>
+
+**Source Code Style Guide & Coding Conventions:**<br>
+Para mantener la coherencia y legibilidad del código, el equipo adopta las siguientes guías y convenciones:
+
+- **Nomenclatura:**
+  - Todos los nombres de variables, funciones, clases y archivos se escriben en inglés.
+  - Se aplica camelCase para variables y funciones, PascalCase para clases, y snake_case para nombres de archivos.
+
+
+### 7.1.3. Source Code Style Guide & Conventions
+
+### 7.1.4. Software Deployment Configuration
+
+
+## 7.2. Solution Implementation
+
+### 7.2.1. Sprint 1
+
+#### 7.2.1.1. Sprint Planning 1
+
+#### 7.2.1.2. Sprint Backlog 1
+
+#### 7.2.1.3. Development Evidence for Sprint Review
+
+#### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+#### 7.2.1.5.	Execution Evidence for Sprint Review
+
+#### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+#### 7.2.1.7.	Software Deployment Evidence for Sprint Review
+
+#### 7.2.1.8.	Team Collaboration Insights during Sprint
+
+
+## 7.3. Validation Interviews
+
+### 7.3.1. Diseño de Entrevistas
+
+### 7.3.2. Registro de Entrevistas
+
+### 7.3.3. Evaluaciones según heurísticas
+
+## 7.4. Video About-the-Product
+
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
