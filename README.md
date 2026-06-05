@@ -70,6 +70,16 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
 ![NetworkGraphTB1](./assets/Chapter-1/NetworkGraphTB1.png)
 ![InsightsPeopleTB1](./assets/Chapter-1/InsightsPeopleTB1.png)
 
+**TB2** <br>
+Las tareas asignadas a la TB2 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega se redactaron los contenidos correspondientes a los capítulos 5 y 6, que constan en la documentación de los bounded context identificados que seguirá nuestra arquitectura y el diseño UX que seguirá nuestra solución para desarrollar los canales que podrá hacer uso nuestros usuarios.
+
+![PulseTB1](./assets/Chapter-1/PulseTB2.png)
+![ContributorsTB2](./assets/Chapter-1/ContributorsTB2.png)
+![NetworkGraphTB2](./assets/Chapter-1/NetworkGraphTB2.png)
+![InsightsPeopleTB2](./assets/Chapter-1/InsightsPeopleTB2.png)
+
 
 # Contenido
 
