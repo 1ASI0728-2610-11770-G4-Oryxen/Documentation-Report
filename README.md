@@ -163,7 +163,7 @@ En esta entrega se redactaron los contenidos correspondientes a los capítulos 5
     - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
         - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
         - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
-- [5.2. Bounded Context: Analysis & Reporting](#52-bounded-context-analysis--reporting)
+- [5.2. Bounded Context: Plant Management](#52-bounded-context-plant-management)
     - [5.2.1. Domain Layer](#521-domain-layer)
     - [5.2.2. Interface Layer](#522-interface-layer)
     - [5.2.3. Application Layer](#523-application-layer)
@@ -172,6 +172,60 @@ En esta entrega se redactaron los contenidos correspondientes a los capítulos 5
     - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
         - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
         - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
+- [5.3. Bounded Context: Device Management IoT](#53-bounded-context-device-management-iot)
+    - [5.3.1. Domain Layer](#531-domain-layer)
+    - [5.3.2. Interface Layer](#532-interface-layer)
+    - [5.3.3. Application Layer](#533-application-layer)
+    - [5.3.4. Infrastructure Layer](#534-infrastructure-layer)
+    - [5.3.5. Bounded Context Software Architecture Component Level Diagrams](#535-bounded-context-software-architecture-component-level-diagrams)
+    - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
+        - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
+        - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
+- [5.4. Bounded Context: Artificial Intelligence (AI)](#54-bounded-context-artificial-intelligence-ai)
+    - [5.4.1. Domain Layer](#541-domain-layer)
+    - [5.4.2. Interface Layer](#542-interface-layer)
+    - [5.4.3. Application Layer](#543-application-layer)
+    - [5.4.4. Infrastructure Layer](#544-infrastructure-layer)
+    - [5.4.5. Bounded Context Software Architecture Component Level Diagrams](#545-bounded-context-software-architecture-component-level-diagrams)
+    - [5.4.6. Bounded Context Software Architecture Code Level Diagrams](#546-bounded-context-software-architecture-code-level-diagrams)
+        - [5.4.6.1. Bounded Context Domain Layer Class Diagrams](#5461-bounded-context-domain-layer-class-diagrams)
+        - [5.4.6.2. Bounded Context Database Design Diagram](#5462-bounded-context-database-design-diagram)
+- [5.5. Bounded Context: Analysis & Reporting](#55-bounded-context-analysis--reporting)
+    - [5.5.1. Domain Layer](#551-domain-layer)
+    - [5.5.2. Interface Layer](#552-interface-layer)
+    - [5.5.3. Application Layer](#553-application-layer)
+    - [5.5.4. Infrastructure Layer](#554-infrastructure-layer)
+    - [5.5.5. Bounded Context Software Architecture Component Level Diagrams](#555-bounded-context-software-architecture-component-level-diagrams)
+    - [5.5.6. Bounded Context Software Architecture Code Level Diagrams](#556-bounded-context-software-architecture-code-level-diagrams)
+        - [5.5.6.1. Bounded Context Domain Layer Class Diagrams](#5561-bounded-context-domain-layer-class-diagrams)
+        - [5.5.6.2. Bounded Context Database Design Diagram](#5562-bounded-context-database-design-diagram)
+- [5.6. Bounded Context: Notification](#56-bounded-context-notification)
+    - [5.6.1. Domain Layer](#561-domain-layer)
+    - [5.6.2. Interface Layer](#562-interface-layer)
+    - [5.6.3. Application Layer](#563-application-layer)
+    - [5.6.4. Infrastructure Layer](#564-infrastructure-layer)
+    - [5.6.5. Bounded Context Software Architecture Component Level Diagrams](#565-bounded-context-software-architecture-component-level-diagrams)
+    - [5.6.6. Bounded Context Software Architecture Code Level Diagrams](#566-bounded-context-software-architecture-code-level-diagrams)
+        - [5.6.6.1. Bounded Context Domain Layer Class Diagrams](#5661-bounded-context-domain-layer-class-diagrams)
+        - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
+- [5.7. Bounded Context: Billing and Subscription](#57-bounded-context-billing-and-subscription)
+    - [5.7.1. Domain Layer](#571-domain-layer)
+    - [5.7.2. Interface Layer](#572-interface-layer)
+    - [5.7.3. Application Layer](#573-application-layer)
+    - [5.7.4. Infrastructure Layer](#574-infrastructure-layer)
+    - [5.7.5. Bounded Context Software Architecture Component Level Diagrams](#575-bounded-context-software-architecture-component-level-diagrams)
+    - [5.7.6. Bounded Context Software Architecture Code Level Diagrams](#576-bounded-context-software-architecture-code-level-diagrams)
+        - [5.7.6.1. Bounded Context Domain Layer Class Diagrams](#5761-bounded-context-domain-layer-class-diagrams)
+        - [5.7.6.2. Bounded Context Database Design Diagram](#5762-bounded-context-database-design-diagram)
+- [5.8. Bounded Context: Community](#58-bounded-context-community)
+    - [5.8.1. Domain Layer](#581-domain-layer)
+    - [5.8.2. Interface Layer](#582-interface-layer)
+    - [5.8.3. Application Layer](#583-application-layer)
+    - [5.8.4. Infrastructure Layer](#584-infrastructure-layer)
+    - [5.8.5. Bounded Context Software Architecture Component Level Diagrams](#585-bounded-context-software-architecture-component-level-diagrams)
+    - [5.8.6. Bounded Context Software Architecture Code Level Diagrams](#586-bounded-context-software-architecture-code-level-diagrams)
+        - [5.8.6.1. Bounded Context Domain Layer Class Diagrams](#5861-bounded-context-domain-layer-class-diagrams)
+        - [5.8.6.2. Bounded Context Database Design Diagram](#5862-bounded-context-database-design-diagram)
 
 ## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
   - [6.1. Style Guidelines](#61-style-guidelines)
@@ -655,6 +709,157 @@ Oryxen buscará integrarse progresivamente con plataformas de hogar inteligente 
 
 **Aprendizaje continuo mediante feedback del usuario:**
 El sistema utilizará interacciones y retroalimentación de los usuarios para mejorar la precisión de alertas, recomendaciones y diagnósticos visuales, fortaleciendo la confianza en la plataforma con el tiempo.
+
+---
+
+#### 2.1.2.1. Modelo de Monetización y Análisis Financiero
+
+**Conversión Freemium → Premium: Métricas Objetivo SaaS/IoT**
+
+El modelo Freemium de Oryxen posiciona la aplicación gratuita como canal de adquisición principal. La conversión al plan Premium y la compra del Sensor Lite son los eventos de monetización críticos del negocio. Las siguientes métricas guían las decisiones de diseño de producto y estrategia de crecimiento:
+
+| Métrica | Definición | Objetivo Año 1 | Objetivo Año 2 |
+|---------|-----------|----------------|----------------|
+| **Tasa de Conversión MoM (Freemium→Premium)** | % de usuarios del plan gratuito que activan Premium en el mes | 3.5% | 5.0% |
+| **Churn Rate Mensual (Premium)** | % de suscriptores Premium que cancelan en el mes | < 2.5% | < 2.0% |
+| **LTV / CAC Ratio** | Valor de vida del cliente vs. costo de adquisición por canal digital | > 2.5:1 | > 3:1 |
+| **ARPU Mensual (Premium)** | Ingreso promedio por usuario premium activo | $8.99 USD | $10.99 USD |
+| **Net Revenue Retention (NRR)** | Retención de ingresos considerando expansión (upsell hardware) y churn | > 105% | > 110% |
+| **Payback Period (CAC)** | Meses para recuperar el costo de adquisición con ingresos recurrentes | ≤ 6 meses | ≤ 4 meses |
+| **DAU/MAU (Engagement Index)** | Ratio de usuarios activos diarios sobre mensuales | > 25% | > 35% |
+
+**Supuesto clave de conversión:** La funcionalidad de diagnóstico visual por IA (foto de planta → diagnóstico instantáneo) actúa como *aha moment* que dispara la conversión. El objetivo es que el usuario experimente este evento dentro de las primeras 72 horas de uso gratuito, antes de que ocurra el mayor riesgo de abandono (ventana de drop-off día 1–3).
+
+---
+
+**Modelo Financiero: Break-Even del Sensor Lite**
+
+El Sensor Lite representa el componente de hardware de entrada al ecosistema Oryxen IoT. A continuación se establece el modelo financiero para evaluar la viabilidad y el punto de equilibrio de la línea de hardware.
+
+**Supuestos financieros por unidad (Año 1):**
+
+| Parámetro | Valor | Nota |
+|-----------|-------|------|
+| COGS — fabricación + componentes electrónicos | $18.00 USD | Producción en lotes mínimos de 500 unidades |
+| Costo logístico unitario (almacén + última milla Lima) | $7.00 USD | Operador logístico regional |
+| **Costo total unitario (COGS + logística)** | **$25.00 USD** | |
+| Precio de venta al público (PVP) | $49.00 USD | Incluye 3 meses de suscripción Premium |
+| **Margen bruto unitario de hardware** | **$24.00 USD (49%)** | |
+| Valor nominal de la suscripción incluida (3 × $8.99) | $26.97 USD | Reconocido como descuento de adquisición en el modelo |
+| Ingreso neto efectivo por hardware en Year 1 (margen − costo promo) | ~$20.00 USD | |
+
+**Cálculo de Break-Even mensual (Año 1):**
+
+| Concepto | Valor |
+|----------|-------|
+| Costos fijos mensuales estimados (infraestructura cloud, soporte, marketing) | $2,500 USD |
+| Unidades necesarias para cubrir costos fijos **solo con margen de hardware** | 2,500 ÷ 24 = **105 unidades/mes** |
+| Unidades necesarias **incorporando ingresos recurrentes de suscripción** (retención 80% tras período de regalo) | 2,500 ÷ (24 + 7.19*) ≈ **80 unidades/mes** |
+
+*$7.19 = ARPU $8.99 × 80% de retención × participación de usuarios hardware sobre el total*
+
+**Análisis de Payback por usuario hardware:**
+
+El costo de adquisición total de un usuario hardware es `COGS ($25) + CAC digital estimado ($8) = $33.00`. El retorno se compone de:
+
+- Margen inmediato de hardware: **$24.00**
+- Ingresos recurrentes de suscripción post-período regalo (meses 4–12): 9 × $8.99 = **$80.91**
+- **Total Year 1 por usuario hardware: $104.91 USD**
+- **ROI sobre la inversión de adquisición ($33): 218%**
+- El payback de la inversión de adquisición se alcanza dentro del **primer mes** gracias al margen de hardware, haciendo que cada unidad vendida sea profitable desde el día uno de la transacción.
+
+---
+
+**BC Community y su Rol en la Retención Premium**
+
+El Bounded Context **Community** es un diferenciador estratégico que genera efectos de red directamente vinculados al modelo de monetización. Su impacto en las métricas clave de ingresos se manifiesta en tres mecanismos concretos:
+
+**1. Reducción del Churn por Switching Costs Sociales:** Los usuarios Premium que participan activamente en la comunidad (comparten progreso de plantas, responden preguntas, reciben reconocimientos de la comunidad) desarrollan capital social dentro de la plataforma. Cancelar la suscripción implica perder ese capital, incrementando los switching costs no económicos. Benchmark de referencia: plataformas con componente social registran un churn 18–25% menor que sus equivalentes sin él (Duolingo reportó +30% en mantenimiento de streaks para usuarios con componente social).
+
+**2. Alertas Comunitarias de Plagas como Feature Premium Exclusivo:** La posibilidad de compartir y recibir alertas validadas por la comunidad sobre plagas o enfermedades detectadas en zonas geográficas cercanas (geolocalización opt-in) es una funcionalidad exclusiva del plan Premium. Este feature genera valor colectivo creciente con la base de usuarios activos, reforzando el modelo de red: a más usuarios Premium activos, más valiosa es la alerta comunitaria para todos. Esto crea un *positive feedback loop* entre crecimiento de usuarios y valor percibido del plan Premium.
+
+**3. Foros de Soporte Colaborativo como Deflector de Tickets (Nivel 0):** La comunidad actúa como primera línea de soporte entre pares, reduciendo el volumen de tickets que escalan al Nivel 1 del soporte formal. Esto disminuye el costo operativo de soporte en un estimado de 15–20%, mejorando directamente el margen neto del plan Premium y la escalabilidad del equipo de Customer Success.
+
+---
+
+#### 2.1.2.2. Operaciones de Hardware: Sensor Lite
+
+**Cadena de Distribución y Logística**
+
+El proceso logístico del Sensor Lite cubre desde la fabricación hasta la activación en campo del dispositivo:
+
+```
+[Proveedor / Fabricante (EMS)] → [Control de Calidad (QA)] → [Almacén Central GrassFarming — Lima]
+    → [Operador Logístico (Shalom / Olva Express)] → [Despacho Última Milla] → [Usuario Final]
+```
+
+**Etapas del flujo logístico:**
+
+| Etapa | Responsable | Descripción | SLA Interno |
+|-------|-------------|-------------|-------------|
+| **Fabricación y QA** | Proveedor EMS + GrassFarming QA | Lotes mínimos de 500 unidades. Prueba de firmware, calibración de sensores y verificación de conectividad BLE/WiFi antes del despacho | 15 días hábiles por lote |
+| **Recepción en almacén central** | Operaciones GrassFarming | Verificación de inventario, asignación de Serial Number único y código QR de activación por unidad | 2 días hábiles |
+| **Procesamiento del pedido** | Sistema automatizado (ERP/WMS) | Picking, packing y generación de guía de despacho al confirmar pago en plataforma | < 24 horas hábiles |
+| **Despacho y tránsito** | Operador logístico (Shalom/Olva) | Lima Metropolitana: 1–2 días hábiles. Provincias: 3–5 días hábiles | Según cobertura del operador |
+| **Notificación al usuario** | Sistema Oryxen (push + email) | Código de seguimiento y enlace al flujo de activación en la app | Inmediato al registrar despacho |
+
+---
+
+**Proceso de Activación del Sensor Lite (Device Provisioning)**
+
+El proceso de activación sigue un flujo guiado dentro de la aplicación Oryxen, minimizando la fricción técnica para usuarios sin experiencia en IoT:
+
+**Paso 1 — Escaneo del Código QR:** El usuario accede a "Mis Dispositivos" → "Agregar Sensor" y escanea el código QR único impreso en la etiqueta del Sensor Lite. El QR codifica el `deviceSerial`, `deviceModel` y `firmwareVersion`. El backend pre-valida que el serial no esté registrado previamente.
+
+**Paso 2 — Modo Pairing BLE:** El usuario presiona el botón físico de pairing durante 3 segundos hasta que el LED indicador parpadea en azul (1 Hz), señalando modo de descubrimiento BLE.
+
+**Paso 3 — Descubrimiento y Conexión BLE:** La app activa el escáner BLE y detecta el dispositivo por su `advertisedName` (`ORYXEN-{últimos 4 dígitos del serial}`). El usuario confirma la conexión. El canal BLE se establece cifrado (AES-128 CCM).
+
+**Paso 4 — Provisioning de Red WiFi:** La app solicita las credenciales de la red WiFi (SSID + contraseña, solo redes 2.4 GHz). Las credenciales se transmiten al Sensor Lite a través del canal BLE seguro y se almacenan en memoria flash cifrada (EEPROM con AES-128).
+
+**Paso 5 — Conexión a Internet y Registro en Backend:** El Sensor Lite conecta a la red WiFi y realiza una solicitud HTTPS al endpoint de registro del Device Management BC (`/api/v1/devices/provision`), incluyendo `deviceSerial`, `firmwareVersion` y `userId` obtenido del JWT de la app. El backend registra el dispositivo, valida la suscripción y habilita la telemetría.
+
+**Paso 6 — Confirmación y Primera Lectura:** La app recibe confirmación de activación exitosa. El LED pasa a verde fijo. La primera lectura de telemetría (humedad, temperatura, luz) aparece en el dashboard en menos de 60 segundos. El evento `DeviceActivatedEvent` es consumido por el BC Analysis & Reporting para inicializar la línea base de métricas históricas.
+
+---
+
+**Política de Devoluciones y Garantía**
+
+| Política | Condiciones | Plazo | Proceso |
+|----------|-------------|-------|---------|
+| **Devolución por insatisfacción** | Hardware en estado original, sin uso efectivo, en embalaje original | 30 días calendario desde recepción | Usuario solicita devolución en app → Código de devolución generado → Envío con carrier de GrassFarming → Reembolso en 5–7 días hábiles al medio de pago original |
+| **Garantía por defecto de fábrica** | Falla de componentes electrónicos, sensores descalibrados, falla de conectividad BLE/WiFi sin causa externa, daño en PCB por fabricación | 12 meses desde fecha de compra | RMA iniciado en Nivel 2 de soporte → Diagnóstico remoto → Envío de unidad de reemplazo en 5–7 días hábiles → Unidad defectuosa retornada con guía prepagada |
+| **Exclusiones de garantía** | Daño físico por caídas, inmersión total en agua, cortocircuito por alimentación externa incorrecta, modificación del firmware por el usuario | — | Se ofrece opción de compra de reemplazo a precio reducido ($35 USD) |
+
+---
+
+**Soporte al Cliente: Canales, SLA y Niveles de Escalamiento**
+
+**Canales de Atención:**
+
+| Canal | Disponibilidad | Uso principal |
+|-------|---------------|---------------|
+| **In-App Live Chat** | Lun–Vie 8:00–20:00, Sáb 9:00–14:00 (GMT-5) | Consultas generales, guía de activación, billing |
+| **WhatsApp Business (Enterprise API)** | Lun–Vie 8:00–20:00; respuesta automatizada 24/7 para FAQs | Seguimiento de pedidos, reporte de falla de hardware |
+| **Email (soporte@oryxen.io)** | 24/7 (respuesta en horario laboral) | Solicitudes formales de RMA, garantías, escalamientos documentados |
+| **Portal de Auto-Servicio (Help Center)** | 24/7 | Base de conocimiento, FAQs, guías de activación en video, estado del servicio |
+
+**Tabla Formal de SLA por Nivel de Escalamiento:**
+
+| Nivel | Equipo | Tipo de Incidente | Canal de Ingreso | Tiempo de 1ª Respuesta | Objetivo de Resolución | Criterio de Escalamiento |
+|-------|--------|-------------------|-----------------|-----------------------|------------------------|--------------------------|
+| **Nivel 1** — Atención al Cliente (Customer Success) | Agente de soporte general | Preguntas de uso, configuración inicial de la app, gestión de cuenta y billing, seguimiento del pedido del Sensor Lite, guía de activación paso a paso | In-App Chat, WhatsApp, Email | **< 1 hora** (horario laboral) | **< 4 horas** | No resuelto en < 4 horas de respuesta activa → escalamiento automático a Nivel 2 |
+| **Nivel 2** — Especialista Técnico (Hardware & IoT) | Técnico certificado en IoT | Falla de conectividad BLE o WiFi post-activación, sensor con lecturas fuera de rango (descalibrado), falla de actualización de firmware (OTA), pérdida de telemetría, inicio de proceso RMA | Ticket interno generado desde Nivel 1 | **< 4 horas** (horario laboral) | **< 24 horas** | Diagnóstico confirma falla de software o infraestructura → escalamiento a Nivel 3. Falla de hardware confirmada → inicio de RMA |
+| **Nivel 3** — Ingeniería de Software / DevOps | Ingeniero de backend / SRE | Bugs reproducibles en plataforma web/móvil, pérdida o corrupción de datos de telemetría, fallas sistemáticas del modelo IA, incidentes de infraestructura (caída de servicio, latencia elevada), vulnerabilidades de seguridad reportadas | Escalamiento interno desde Nivel 2 / reporte directo de QA | **< 4 horas** | **< 72 horas** (bugs complejos); **< 4 horas** (incidentes críticos P0) | Post-mortem obligatorio para P0 y P1. Ticket cerrado solo con evidencia de fix deployado en producción |
+
+**Clasificación de Incidentes por Prioridad:**
+
+| Prioridad | Descripción | SLA de Resolución |
+|-----------|-------------|-------------------|
+| **P0 — Crítico** | Plataforma inaccesible para todos los usuarios, pérdida masiva de datos, vulnerabilidad de seguridad activa | < 4 horas (Nivel 3 on-call 24/7) |
+| **P1 — Alto** | Falla de funcionalidad core para > 20% de usuarios (diagnóstico IA, telemetría, billing) | < 8 horas |
+| **P2 — Medio** | Falla de funcionalidad no crítica, bug reproducible, hardware individual con falla | < 24 horas |
+| **P3 — Bajo** | Consultas generales, mejoras solicitadas, bugs cosméticos | < 72 horas |
 
 
 <div style="page-break-after: always;"></div>
@@ -1574,6 +1779,644 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 
 # Capítulo V: Tactical-Level Software Design
+
+## 5.1. Bounded Context: Auth & Identity Integration
+
+El bounded context de **Auth & Identity Integration** representa la capa de seguridad transversal de la plataforma Oryxen, responsable de la autenticación de usuarios, la gestión de sesiones y el control de acceso basado en roles (RBAC). Este contexto actúa como guardián del ecosistema: todo intento de acceso a recursos protegidos es validado por este contexto antes de ser procesado por cualquier otro bounded context. Integra el estándar OAuth 2.0 / OpenID Connect (OIDC) para autenticación federada con proveedores externos (Google/Firebase), y emite tokens JWT firmados con RS256 para autorizar peticiones internas. Define tres roles fundamentales del sistema: **FARMER** (Agricultor/Cliente), **ADMIN** (Administrador) y **SUPPORT_TECHNICIAN** (Técnico de Soporte).
+
+### 5.1.1. Domain Layer
+
+La capa de dominio del bounded context **Auth & Identity Integration** modela las identidades de usuario, los mecanismos de autenticación, el ciclo de vida de los tokens y las políticas de control de acceso.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `UserAccount`
+
+**Paquete:** `com.upc.auth.domain.model.aggregates`
+
+**Propósito:** Representa la cuenta de identidad de un usuario registrado en la plataforma. Constituye el Aggregate Root del bounded context Auth & Identity Integration. Encapsula las credenciales, el estado de la cuenta, el proveedor de autenticación utilizado y los roles asignados.
+
+**Atributos:**
+
+- `id: UUID` → Identificador único de la cuenta de usuario.
+- `email: Email` → Dirección de correo electrónico (Value Object, inmutable tras verificación).
+- `passwordHash: PasswordHash` → Hash BCrypt de la contraseña (nulo si el proveedor es OAuth2 externo).
+- `authProvider: AuthProvider` → Proveedor de autenticación utilizado (`LOCAL`, `GOOGLE`, `FIREBASE`).
+- `authProviderId: String` → ID externo del proveedor OAuth2 (nulo si `authProvider = LOCAL`).
+- `status: AccountStatus` → Estado de la cuenta (`PENDING_VERIFICATION`, `ACTIVE`, `SUSPENDED`, `DELETED`).
+- `roles: List<UserRole>` → Lista de roles asignados al usuario.
+- `createdAt: DateTime` → Fecha y hora de creación de la cuenta.
+- `updatedAt: DateTime` → Fecha y hora de la última modificación.
+
+**Métodos:**
+
+- `activate()` → Activa la cuenta tras la verificación de correo electrónico.
+- `suspend(reason: String)` → Suspende la cuenta indicando el motivo.
+- `delete()` → Marca la cuenta como eliminada (soft-delete, no se borra físicamente).
+- `assignRole(role: UserRole)` → Asigna un nuevo rol al usuario, validando que no esté duplicado.
+- `revokeRole(role: UserRole)` → Revoca un rol del usuario.
+- `isActive()` → Verifica si la cuenta se encuentra en estado `ACTIVE`.
+- `hasRole(roleName: String)` → Verifica si el usuario posee un rol determinado.
+- `updatePassword(newPasswordHash: PasswordHash)` → Actualiza el hash de contraseña y revoca sesiones activas.
+
+**Relaciones:**
+
+- Un `UserAccount` puede poseer múltiples roles (`UserRole`).
+- Un `UserAccount` puede tener múltiples `RefreshToken` activos (soporte multi-dispositivo).
+- Un `UserAccount` puede mantener múltiples `Session` concurrentes.
+
+
+**b. Entities del dominio:**
+
+`Role`
+
+**Propósito:** Representa un rol de autorización dentro del sistema. Define el conjunto de permisos que se aplican a los usuarios asignados. Oryxen define tres roles fundamentales:
+
+- **`FARMER`** (Agricultor/Cliente): acceso a funciones de monitoreo, diagnóstico IA, gestión de plantas y comunidad.
+- **`ADMIN`** (Administrador): acceso total a la plataforma, gestión de usuarios, planes y configuración del sistema.
+- **`SUPPORT_TECHNICIAN`** (Técnico de Soporte): acceso a tickets de soporte, estado de dispositivos IoT y logs del sistema para diagnóstico técnico.
+
+**Atributos:**
+
+- `id: UUID`
+- `name: String`
+- `description: String`
+- `permissions: List<String>`
+
+**Métodos:**
+
+- `addPermission(permission: String)` → Añade un permiso al rol.
+- `removePermission(permission: String)` → Elimina un permiso del rol.
+
+
+`RefreshToken`
+
+**Propósito:** Representa un token de actualización de larga duración asociado a una sesión de usuario. Permite emitir nuevos JWT de acceso (duración: 15 minutos) sin requerir credenciales completas, implementando un esquema de *sliding window* de 30 días.
+
+**Atributos:**
+
+- `id: UUID`
+- `userId: UUID`
+- `tokenHash: String` → Hash SHA-256 del token (nunca se almacena en texto plano).
+- `deviceInfo: String` → Información del dispositivo emisor (user-agent, OS).
+- `expiresAt: DateTime`
+- `isRevoked: boolean`
+- `createdAt: DateTime`
+
+**Métodos:**
+
+- `revoke()` → Invalida el token de forma permanente.
+- `isExpired()` → Verifica si el token ha superado su fecha de expiración.
+- `isValid()` → Retorna `true` si el token no está revocado ni expirado.
+
+
+`Session`
+
+**Propósito:** Representa una sesión activa de usuario asociada a un JWT emitido, almacenada en caché Redis para revocación inmediata.
+
+**Atributos:**
+
+- `id: UUID`
+- `userId: UUID`
+- `jwtTokenHash: String`
+- `issuedAt: DateTime`
+- `expiresAt: DateTime`
+- `isActive: boolean`
+- `ipAddress: String`
+
+**Métodos:**
+
+- `invalidate()` → Cierra la sesión activa.
+- `isExpired()` → Verifica si la sesión ha expirado.
+
+
+**c. Value Objects:**
+
+`Email`
+
+Representa una dirección de correo electrónico validada mediante expresión regular RFC-5322.
+
+**Atributos:**
+
+- `value: String`
+
+**Métodos:**
+
+- `validate()` → Lanza `InvalidEmailException` si el formato es inválido.
+- `equals(other: Email)` → Comparación estricta por valor (case-insensitive).
+
+
+`PasswordHash`
+
+Representa el hash BCrypt de una contraseña con factor de coste 12. Nunca expone el valor original.
+
+**Atributos:**
+
+- `value: String` → Hash BCrypt completo incluyendo sal y factor de coste.
+
+**Métodos:**
+
+- `matches(rawPassword: String)` → Verifica si la contraseña en texto plano corresponde al hash almacenado.
+
+
+`AuthProvider`
+
+Enumera los proveedores de identidad soportados por la plataforma.
+
+**Valores posibles:**
+
+- `LOCAL`
+- `GOOGLE`
+- `FIREBASE`
+
+
+`AccountStatus`
+
+Representa el estado del ciclo de vida de una cuenta de usuario.
+
+**Valores posibles:**
+
+- `PENDING_VERIFICATION`
+- `ACTIVE`
+- `SUSPENDED`
+- `DELETED`
+
+
+`UserRole`
+
+Enumera los roles de autorización del sistema Oryxen.
+
+**Valores posibles:**
+
+- `FARMER`
+- `ADMIN`
+- `SUPPORT_TECHNICIAN`
+
+
+`JwtToken`
+
+Representa un JSON Web Token firmado emitido por el sistema.
+
+**Atributos:**
+
+- `value: String` → Token JWT compacto (header.payload.signature en Base64URL).
+- `expiresAt: DateTime`
+
+**Métodos:**
+
+- `isExpired()` → Verifica si el token ha superado su fecha de expiración.
+- `getClaims()` → Extrae y retorna los claims del payload (`sub`, `roles`, `iat`, `exp`, `iss`).
+
+
+**d. Commands del dominio:**
+
+`RegisterUserCommand`
+
+**Paquete:** `com.upc.auth.domain.model.commands`
+
+**Propósito:** Registrar un nuevo usuario con credenciales locales (email + contraseña).
+
+**Atributos:**
+
+- `email: String`
+- `rawPassword: String`
+- `firstName: String`
+- `lastName: String`
+
+
+`LoginCommand`
+
+**Propósito:** Autenticar un usuario con credenciales locales y emitir un par de tokens (JWT de acceso + refresh token).
+
+**Atributos:**
+
+- `email: String`
+- `rawPassword: String`
+- `deviceInfo: String`
+
+
+`OAuthLoginCommand`
+
+**Propósito:** Autenticar o registrar un usuario mediante proveedor OAuth2 externo (Google/Firebase OIDC).
+
+**Atributos:**
+
+- `idToken: String` → Token de identidad emitido por el proveedor externo.
+- `provider: AuthProvider`
+- `deviceInfo: String`
+
+
+`LogoutCommand`
+
+**Propósito:** Cerrar sesión de un usuario revocando el refresh token activo y la sesión en caché.
+
+**Atributos:**
+
+- `userId: UUID`
+- `refreshTokenValue: String`
+
+
+`RefreshTokenCommand`
+
+**Propósito:** Renovar el JWT de acceso usando un refresh token válido, sin rotar el refresh token (política *sliding window*).
+
+**Atributos:**
+
+- `refreshTokenValue: String`
+
+
+`ChangePasswordCommand`
+
+**Propósito:** Actualizar la contraseña de un usuario autenticado, revocando todas las sesiones activas por seguridad.
+
+**Atributos:**
+
+- `userId: UUID`
+- `currentRawPassword: String`
+- `newRawPassword: String`
+
+
+`AssignRoleCommand`
+
+**Propósito:** Asignar un rol a un usuario (operación restringida al rol ADMIN).
+
+**Atributos:**
+
+- `targetUserId: UUID`
+- `role: UserRole`
+- `requestedByUserId: UUID`
+
+
+`RevokeAllTokensCommand`
+
+**Propósito:** Revocar todos los refresh tokens de un usuario (cierre de sesión global en todos los dispositivos).
+
+**Atributos:**
+
+- `userId: UUID`
+
+
+**e. Queries del dominio:**
+
+`GetUserByIdQuery`
+
+**Propósito:** Obtener la información de un usuario por su identificador único.
+
+**Atributos:**
+
+- `userId: UUID`
+
+
+`GetUserByEmailQuery`
+
+**Propósito:** Obtener la información de un usuario por su dirección de correo electrónico.
+
+**Atributos:**
+
+- `email: String`
+
+
+`ValidateTokenQuery`
+
+**Propósito:** Validar la firma y vigencia de un JWT de acceso, retornando los claims extraídos.
+
+**Atributos:**
+
+- `jwtToken: String`
+
+
+`GetUserRolesQuery`
+
+**Propósito:** Obtener los roles asignados a un usuario específico.
+
+**Atributos:**
+
+- `userId: UUID`
+
+
+`ListUsersQuery`
+
+**Propósito:** Obtener la lista paginada de usuarios registrados (requiere rol ADMIN).
+
+**Atributos:**
+
+- `page: int`
+- `size: int`
+- `statusFilter: AccountStatus`
+
+
+**f. Domain Services:**
+
+`AuthenticationDomainService`
+
+**Paquete:** `com.upc.auth.domain.services`
+
+**Propósito:** Coordinar el flujo de autenticación validando credenciales, delegando al proveedor de identidad correspondiente y orquestando la emisión del par de tokens.
+
+**Operaciones:**
+
+- `handle(LoginCommand)` → Retorna `AuthTokenPair` (accessToken + refreshToken).
+- `handle(OAuthLoginCommand)` → Valida el idToken externo, crea o recupera el `UserAccount`, retorna `AuthTokenPair`.
+- `handle(LogoutCommand)` → Revoca el refresh token y la sesión activa en Redis.
+- `handle(RefreshTokenCommand)` → Valida el refresh token y emite un nuevo JWT de acceso.
+
+
+`AuthorizationDomainService`
+
+**Propósito:** Evaluar si un usuario posee los permisos necesarios para ejecutar una operación específica, aplicando las reglas RBAC definidas para los tres roles del sistema.
+
+**Operaciones:**
+
+- `handle(AssignRoleCommand)` → Verifica que el solicitante es ADMIN, asigna el rol al usuario destino.
+- `handle(GetUserRolesQuery)` → Retorna la lista de roles de un usuario.
+- `canAccess(userId: UUID, requiredRole: UserRole)` → Evaluación booleana de permisos en tiempo real.
+
+
+`TokenDomainService`
+
+**Propósito:** Gestionar el ciclo de vida completo de tokens JWT y refresh tokens, incluyendo generación, validación y revocación.
+
+**Operaciones:**
+
+- `generateAccessToken(userAccount: UserAccount)` → Firma un JWT RS256 con claims de userId, roles y expiración de 15 minutos.
+- `generateRefreshToken(userId: UUID, deviceInfo: String)` → Genera un refresh token opaco de 30 días, almacena su hash SHA-256.
+- `handle(ValidateTokenQuery)` → Verifica firma RS256 y vigencia del JWT.
+- `handle(RevokeAllTokensCommand)` → Invalida todos los refresh tokens activos de un usuario.
+
+---
+
+### 5.1.2. Interface Layer
+
+La Interface Layer del bounded context **Auth & Identity Integration** expone los endpoints REST responsables de gestionar la autenticación y autorización de usuarios en la plataforma Oryxen.
+
+**`AuthController`**
+
+**Paquete:** `com.upc.auth.interfaces.rest`
+
+**Base URL:** `/api/v1/auth`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Autenticación requerida |
+|--------|------|-------------|------------------------|
+| `POST` | `/register` | Registrar nuevo usuario con credenciales locales | No |
+| `POST` | `/login` | Autenticación local; retorna JWT de acceso + refresh token | No |
+| `POST` | `/oauth/google` | Autenticación via Google OIDC; retorna JWT + refresh token | No |
+| `POST` | `/logout` | Revocar refresh token activo y cerrar sesión | Sí (Bearer JWT) |
+| `POST` | `/refresh-token` | Renovar JWT de acceso usando refresh token válido | No (refresh token en body) |
+| `POST` | `/change-password` | Cambiar contraseña del usuario autenticado | Sí (Bearer JWT) |
+| `POST` | `/revoke-all-tokens` | Cerrar sesión en todos los dispositivos activos | Sí (Bearer JWT) |
+
+
+**`UserController`**
+
+**Paquete:** `com.upc.auth.interfaces.rest`
+
+**Base URL:** `/api/v1/users`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Rol requerido |
+|--------|------|-------------|--------------|
+| `GET` | `/{userId}` | Obtener perfil de usuario por ID | FARMER, ADMIN |
+| `GET` | `/` | Listar usuarios paginados | ADMIN |
+| `POST` | `/{userId}/roles` | Asignar rol a usuario | ADMIN |
+| `DELETE` | `/{userId}/roles/{role}` | Revocar rol de usuario | ADMIN |
+| `PUT` | `/{userId}/suspend` | Suspender cuenta de usuario | ADMIN |
+| `PUT` | `/{userId}/activate` | Reactivar cuenta de usuario | ADMIN |
+
+---
+
+### 5.1.3. Application Layer
+
+La Application Layer del bounded context **Auth & Identity Integration** coordina los flujos de autenticación y autorización, actuando como intermediario entre la Interface Layer y el Domain Layer.
+
+**Command Handlers:**
+
+`RegisterUserCommandHandler`
+
+**Propósito:** Validar unicidad del email, hashear la contraseña con BCrypt(12), crear y persistir el `UserAccount`, asignar rol `FARMER` por defecto y publicar el evento `UserRegisteredEvent` para que el BC Notification envíe el email de bienvenida.
+
+`LoginCommandHandler`
+
+**Propósito:** Recuperar el `UserAccount` por email, verificar el hash de contraseña con BCrypt, validar que la cuenta esté `ACTIVE`, delegar en `TokenDomainService` para generar el par de tokens y persistir el `RefreshToken` y la `Session`.
+
+`OAuthLoginCommandHandler`
+
+**Propósito:** Verificar el `idToken` contra el proveedor externo via Firebase Admin SDK / Google OAuth2, recuperar o crear el `UserAccount` con `authProvider = GOOGLE`, generar el par de tokens y persistir la sesión.
+
+`LogoutCommandHandler`
+
+**Propósito:** Localizar el `RefreshToken` por hash SHA-256, marcarlo como revocado, invalidar la `Session` activa en Redis.
+
+`RefreshTokenCommandHandler`
+
+**Propósito:** Localizar el `RefreshToken` por hash, verificar validez mediante `isValid()`, emitir nuevo JWT de acceso con expiración renovada (sin rotar el refresh token).
+
+`ChangePasswordCommandHandler`
+
+**Propósito:** Verificar la contraseña actual, aplicar nueva contraseña hasheada, revocar todos los refresh tokens activos del usuario por seguridad y publicar el evento `PasswordChangedEvent`.
+
+`AssignRoleCommandHandler`
+
+**Propósito:** Verificar que el solicitante posee rol ADMIN, localizar el usuario destino, asignar el rol y publicar el evento `RoleAssignedEvent`.
+
+
+**Application Services:**
+
+`AuthApplicationService`
+
+**Paquete:** `com.upc.auth.application.internal.commandservices`
+
+**Operaciones:**
+
+- `handle(RegisterUserCommand)`
+- `handle(LoginCommand)`
+- `handle(OAuthLoginCommand)`
+- `handle(LogoutCommand)`
+- `handle(RefreshTokenCommand)`
+- `handle(ChangePasswordCommand)`
+- `handle(ValidateTokenQuery)`
+
+
+`UserApplicationService`
+
+**Operaciones:**
+
+- `handle(AssignRoleCommand)`
+- `handle(RevokeAllTokensCommand)`
+- `handle(GetUserByIdQuery)`
+- `handle(GetUserByEmailQuery)`
+- `handle(GetUserRolesQuery)`
+- `handle(ListUsersQuery)`
+
+---
+
+### 5.1.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context **Auth & Identity Integration** implementa los mecanismos de persistencia, generación de tokens, integración con proveedores externos y caché de sesiones activas.
+
+**Adaptadores y Repositorios:**
+
+`JwtTokenAdapter`
+
+**Propósito:** Implementar la generación y validación de tokens JWT firmados con el algoritmo RS256 (clave privada/pública RSA-2048). Emite tokens de acceso con expiración de 15 minutos. Los claims incluyen: `sub` (userId), `roles`, `iat`, `exp`, `iss` (oryxen.io).
+
+**Dependencia:** `io.jsonwebtoken:jjwt-api:0.11.5`
+
+
+`OAuth2ProviderAdapter`
+
+**Propósito:** Verificar los `idToken` emitidos por Google/Firebase mediante el Firebase Admin SDK y extraer los claims de identidad del usuario (email, nombre, foto de perfil).
+
+**Dependencia:** `com.google.firebase:firebase-admin:9.2.0`
+
+
+`PasswordEncoderAdapter`
+
+**Propósito:** Encapsular el algoritmo BCrypt con factor de coste 12 para el hasheo y la verificación de contraseñas locales.
+
+**Dependencia:** `org.springframework.security:spring-security-crypto`
+
+
+`UserJpaRepository`
+
+**Propósito:** Repositorio JPA para la persistencia de entidades `UserAccount` en la tabla `user_accounts` de PostgreSQL.
+
+**Dependencia:** Spring Data JPA + PostgreSQL 15
+
+
+`RoleJpaRepository`
+
+**Propósito:** Repositorio JPA para la gestión de roles en la tabla `roles`.
+
+
+`RefreshTokenJpaRepository`
+
+**Propósito:** Repositorio JPA para la persistencia y consulta de refresh tokens en la tabla `refresh_tokens`.
+
+
+`SessionCacheAdapter`
+
+**Propósito:** Almacenar las sesiones activas y la lista negra de JWT revocados en Redis para validación sub-milisegundo y revocación inmediata de sesiones comprometidas.
+
+**Dependencia:** `spring-boot-starter-data-redis` + Redis 7
+
+
+**Dependencias de infraestructura del contexto Auth & Identity:**
+
+- PostgreSQL 15 → persistencia de usuarios, roles, user_roles y refresh tokens.
+- Redis 7 → caché de sesiones activas y lista negra de JWT revocados.
+- Firebase Admin SDK → validación de tokens OAuth2/OIDC externos (Google).
+- Spring Security 6 → filtros de autenticación y autorización HTTP.
+- jjwt (0.11.5) → generación y validación de JWT RS256.
+
+---
+
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Auth & Identity Integration` representa la arquitectura interna del módulo de seguridad, mostrando la interacción entre los controladores REST, los servicios de aplicación, el dominio y los adaptadores de infraestructura.
+
+**Descripción de componentes principales:**
+
+- **Auth REST API Component:** Expone los endpoints de autenticación (`/api/v1/auth`). Delega en el `AuthApplicationService`.
+- **User REST API Component:** Expone los endpoints de gestión de usuarios (`/api/v1/users`). Delega en el `UserApplicationService`.
+- **Auth Command Processing Component:** Orquesta los command handlers de registro, login, logout y refresh.
+- **Auth Query Processing Component:** Ejecuta las queries de validación de token y perfil de usuario.
+- **Auth Domain Component:** Contiene los agregados, servicios de dominio y value objects.
+- **JWT Token Component:** Gestiona la firma RS256 y validación de tokens JWT.
+- **OAuth2 Integration Component:** Valida tokens de identidad externos contra Firebase/Google.
+- **Auth Persistence Component:** Implementa los repositorios JPA para usuarios, roles y refresh tokens.
+- **Session Cache Component:** Gestiona el ciclo de vida de sesiones activas en Redis.
+
+![ComponentsDiagram_AuthIdentity](./assets/Chapter-5/auth-identity-component-diagram.svg)
+
+---
+
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Auth & Identity Integration`, visualizando la estructura del dominio y el diseño de la base de datos de identidades.
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer muestra el agregado principal `UserAccount`, las entidades `Role`, `RefreshToken` y `Session`, junto a los Value Objects `Email`, `PasswordHash`, `AuthProvider`, `AccountStatus`, `UserRole` y `JwtToken`. Las relaciones clave son: `UserAccount` agrega `UserRole` (lista), `UserAccount` tiene múltiples `RefreshToken` (ciclo de vida separado) y múltiples `Session` activas.
+
+**Relaciones entre clases:**
+
+- `UserAccount (1) ──── (*) UserRole`
+- `UserAccount (1) ──── (*) RefreshToken`
+- `UserAccount (1) ──── (*) Session`
+- `AuthenticationDomainService → UserAccount`
+- `AuthenticationDomainService → TokenDomainService`
+- `TokenDomainService → JwtToken`
+- `TokenDomainService → RefreshToken`
+
+![UMLClassDiagram_AuthIdentity](./assets/Chapter-5/auth-identity-class-diagram.svg)
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Auth & Identity Integration` representa la estructura relacional para almacenar identidades de usuario, roles, tokens y sesiones activas.
+
+**Tabla principal:** `user_accounts`
+
+**Atributos:**
+
+- `user_id` → UUID, PRIMARY KEY
+- `email` → VARCHAR(255), UNIQUE, NOT NULL
+- `password_hash` → VARCHAR(72), NULLABLE (nulo para cuentas OAuth2 externas)
+- `auth_provider` → ENUM('LOCAL','GOOGLE','FIREBASE'), NOT NULL
+- `auth_provider_id` → VARCHAR(255), NULLABLE
+- `status` → ENUM('PENDING_VERIFICATION','ACTIVE','SUSPENDED','DELETED'), NOT NULL
+- `created_at` → TIMESTAMP, NOT NULL
+- `updated_at` → TIMESTAMP, NOT NULL
+
+
+**Tabla:** `roles`
+
+**Atributos:**
+
+- `role_id` → UUID, PRIMARY KEY
+- `name` → VARCHAR(50), UNIQUE, NOT NULL
+- `description` → VARCHAR(255)
+
+
+**Tabla de relación:** `user_roles`
+
+**Atributos:**
+
+- `user_id` → UUID, FOREIGN KEY → `user_accounts(user_id)`
+- `role_id` → UUID, FOREIGN KEY → `roles(role_id)`
+- `assigned_at` → TIMESTAMP, NOT NULL
+- PRIMARY KEY (`user_id`, `role_id`)
+
+
+**Tabla:** `refresh_tokens`
+
+**Atributos:**
+
+- `token_id` → UUID, PRIMARY KEY
+- `user_id` → UUID, FOREIGN KEY → `user_accounts(user_id)`
+- `token_hash` → VARCHAR(64), NOT NULL (SHA-256 del token original)
+- `device_info` → VARCHAR(255)
+- `expires_at` → TIMESTAMP, NOT NULL
+- `is_revoked` → BOOLEAN, DEFAULT FALSE
+- `created_at` → TIMESTAMP, NOT NULL
+
+**Constraints:**
+
+- INDEX en `token_hash` para búsquedas de validación eficientes O(log n).
+- INDEX en `user_id` para la revocación global de todos los tokens de un usuario.
+
+
+**Relaciones entre tablas:**
+
+- `user_accounts (1) ──── (*) user_roles`
+- `user_accounts (1) ──── (*) refresh_tokens`
+- `user_roles (*) ──── (1) roles`
+
+![ERDDiagram_AuthIdentity](./assets/Chapter-5/auth-identity-database-diagram.svg)
+
+---
 
 ## 5.2. Bounded Context: Plant Management
 
@@ -3426,6 +4269,680 @@ Representa métricas ambientales obtenidas desde sensores IoT utilizados para co
 - `plants (1) ──── (*) plant_diagnosis`
 - `plants (1) ──── (*) sensor_metrics`
 
+
+---
+
+## 5.5. Bounded Context: Analysis & Reporting
+
+El bounded context de **Analysis & Reporting** representa la inteligencia analítica de la plataforma Oryxen. Este contexto agrega la telemetría de sensores IoT proveniente del BC Device Management, integra los resultados diagnósticos del BC AI y los transforma en reportes accionables, dashboards históricos y alertas predictivas de salud del cultivo. Permite al usuario exportar sus datos en formatos PDF y CSV, programar la generación automática de reportes periódicos y acceder a tendencias de salud de sus plantas en el tiempo. Su diseño aplica el patrón CQRS para separar los flujos de escritura (generación e ingestión de telemetría) de los flujos de lectura (dashboards y exportaciones), y utiliza TimescaleDB como motor de series de tiempo para el almacenamiento eficiente de métricas históricas de alta frecuencia.
+
+### 5.5.1. Domain Layer
+
+La capa de dominio del bounded context **Analysis & Reporting** modela los reportes analíticos, las métricas de salud agregadas y los registros de telemetría histórica.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `Report`
+
+**Paquete:** `com.upc.analytics.domain.model.aggregates`
+
+**Propósito:** Representa un reporte de análisis generado para una planta específica en un rango de tiempo determinado. Constituye el Aggregate Root del bounded context Analysis & Reporting. Encapsula el estado del reporte, las métricas resumidas, el tipo de exportación y la referencia al archivo generado en cloud storage.
+
+**Atributos:**
+
+- `id: UUID` → Identificador único del reporte.
+- `userId: UUID` → Usuario propietario del reporte.
+- `plantId: UUID` → Planta analizada (referencia cruzada al BC Plant Management).
+- `reportType: ReportType` → Tipo de reporte generado.
+- `status: ReportStatus` → Estado del proceso de generación.
+- `dateRange: DateRange` → Rango de fechas cubierto por el análisis.
+- `exportFormat: ExportFormat` → Formato de exportación seleccionado.
+- `fileUrl: String` → URL pre-firmada del archivo generado en S3/GCS (expira en 24 horas).
+- `generatedAt: DateTime` → Marca temporal de finalización del proceso.
+- `createdAt: DateTime` → Marca temporal de creación de la solicitud.
+
+**Métodos:**
+
+- `startGeneration()` → Transiciona el estado a `PROCESSING`.
+- `completeGeneration(fileUrl: String)` → Registra la URL del archivo y transiciona a `COMPLETED`.
+- `failGeneration(reason: String)` → Registra el error y transiciona a `FAILED`.
+- `isCompleted()` → Verifica si el reporte fue generado exitosamente.
+- `getDateRangeDays()` → Retorna la cantidad de días cubiertos por el análisis.
+
+**Relaciones:**
+
+- Un `Report` pertenece a un único usuario y una única planta.
+- Un `Report` puede contener múltiples `MetricSummary` (uno por período de agregación).
+- Un `ReportSchedule` genera múltiples `Report` a lo largo del tiempo.
+
+
+**b. Entities del dominio:**
+
+`MetricSummary`
+
+**Propósito:** Representa las métricas ambientales y de salud agregadas para una planta en un período específico. Constituye la unidad fundamental de análisis dentro de un reporte.
+
+**Atributos:**
+
+- `id: UUID`
+- `reportId: UUID`
+- `plantId: UUID`
+- `periodStart: DateTime`
+- `periodEnd: DateTime`
+- `avgHumidity: float`
+- `avgTemperature: float`
+- `avgLightLevel: float`
+- `avgHealthScore: HealthScore`
+- `minHealthScore: HealthScore`
+- `maxHealthScore: HealthScore`
+- `diagnosisCount: int` → Número de diagnósticos IA registrados en el período.
+- `alertCount: int` → Número de alertas disparadas en el período.
+
+**Métodos:**
+
+- `getHealthTrend()` → Calcula la tendencia de salud comparando inicio y fin del período (`IMPROVING`, `STABLE`, `DECLINING`).
+- `hasAnomalies()` → Retorna `true` si el `avgHealthScore` cayó por debajo del umbral crítico (< 30.0).
+
+
+`TelemetryRecord`
+
+**Propósito:** Representa una lectura individual de sensores IoT capturada en tiempo real. Origen: BC Device Management via evento de dominio `SensorDataReceivedEvent`.
+
+**Atributos:**
+
+- `id: UUID`
+- `plantId: UUID`
+- `deviceId: UUID`
+- `humidity: float`
+- `temperature: float`
+- `lightLevel: float`
+- `soilMoisture: float`
+- `healthScore: HealthScore`
+- `recordedAt: DateTime`
+
+**Métodos:**
+
+- `isWithinRange(start: DateTime, end: DateTime)` → Verifica si la lectura pertenece al rango temporal consultado.
+- `isCritical()` → Retorna `true` si alguna métrica supera los umbrales de alerta definidos por el perfil de la especie.
+
+
+`ReportSchedule`
+
+**Propósito:** Representa una configuración de generación automática y periódica de reportes para una planta de un usuario.
+
+**Atributos:**
+
+- `id: UUID`
+- `userId: UUID`
+- `plantId: UUID`
+- `frequency: ScheduleFrequency` → `DAILY`, `WEEKLY`, `MONTHLY`.
+- `exportFormat: ExportFormat`
+- `nextRunAt: DateTime`
+- `isActive: boolean`
+- `createdAt: DateTime`
+
+**Métodos:**
+
+- `activate()` → Activa la programación periódica.
+- `deactivate()` → Suspende la programación sin eliminarla.
+- `calculateNextRun()` → Calcula la próxima fecha de ejecución en función de la frecuencia configurada.
+
+
+**c. Value Objects:**
+
+`DateRange`
+
+Representa un intervalo temporal inmutable para la consulta de métricas y generación de reportes.
+
+**Atributos:**
+
+- `start: DateTime`
+- `end: DateTime`
+
+**Métodos:**
+
+- `contains(date: DateTime)` → Verifica si una fecha pertenece al rango.
+- `overlapsWith(other: DateRange)` → Detecta solapamiento entre rangos.
+- `days()` → Retorna la duración en días del rango.
+- `validate()` → Lanza `InvalidDateRangeException` si `start >= end` o si el rango supera 365 días.
+
+
+`ReportType`
+
+Enumera los tipos de reportes disponibles en la plataforma.
+
+**Valores posibles:**
+
+- `HEALTH_SUMMARY` → Resumen de salud de la planta en el período, con métricas clave y recomendaciones.
+- `TELEMETRY_DETAIL` → Detalle completo de lecturas de sensores con exportación de serie de tiempo raw.
+- `PREDICTIVE_ALERT` → Reporte con predicciones de riesgo sanitario generadas por el modelo IA del BC AI.
+- `COMPARATIVE_ANALYSIS` → Comparación de métricas entre múltiples plantas del mismo usuario en un período.
+
+
+`ExportFormat`
+
+Enumera los formatos de exportación disponibles para descarga.
+
+**Valores posibles:**
+
+- `PDF`
+- `CSV`
+- `JSON`
+
+
+`ReportStatus`
+
+Representa el estado del ciclo de vida de un reporte.
+
+**Valores posibles:**
+
+- `PENDING`
+- `PROCESSING`
+- `COMPLETED`
+- `FAILED`
+
+
+`HealthScore`
+
+Representa la puntuación de salud de una planta, calculada por el modelo de IA del BC AI a partir de lecturas de sensores e imágenes diagnósticas.
+
+**Atributos:**
+
+- `value: float` → Valor entre 0.0 (crítico) y 100.0 (óptimo).
+
+**Métodos:**
+
+- `isCritical()` → Retorna `true` si `value < 30.0`.
+- `isWarning()` → Retorna `true` si `value` está entre 30.0 y 60.0.
+- `isGood()` → Retorna `true` si `value` está entre 60.0 y 80.0.
+- `isOptimal()` → Retorna `true` si `value >= 80.0`.
+- `label()` → Retorna la etiqueta textual: `CRITICAL`, `WARNING`, `GOOD`, `OPTIMAL`.
+
+
+`ScheduleFrequency`
+
+Enumera las frecuencias de generación automática de reportes.
+
+**Valores posibles:**
+
+- `DAILY`
+- `WEEKLY`
+- `MONTHLY`
+
+
+**d. Commands del dominio:**
+
+`GenerateReportCommand`
+
+**Paquete:** `com.upc.analytics.domain.model.commands`
+
+**Propósito:** Solicitar la generación bajo demanda de un reporte analítico para una planta en un rango de fechas.
+
+**Atributos:**
+
+- `userId: UUID`
+- `plantId: UUID`
+- `reportType: ReportType`
+- `dateRange: DateRange`
+- `exportFormat: ExportFormat`
+
+
+`ScheduleReportCommand`
+
+**Propósito:** Configurar la generación automática y periódica de reportes para una planta.
+
+**Atributos:**
+
+- `userId: UUID`
+- `plantId: UUID`
+- `frequency: ScheduleFrequency`
+- `exportFormat: ExportFormat`
+
+
+`ExportReportCommand`
+
+**Propósito:** Solicitar la exportación de un reporte ya generado en un formato alternativo.
+
+**Atributos:**
+
+- `reportId: UUID`
+- `userId: UUID`
+- `targetFormat: ExportFormat`
+
+
+`CancelReportScheduleCommand`
+
+**Propósito:** Desactivar una configuración de generación periódica de reportes.
+
+**Atributos:**
+
+- `scheduleId: UUID`
+- `userId: UUID`
+
+
+**e. Queries del dominio:**
+
+`GetReportQuery`
+
+**Propósito:** Obtener los detalles completos de un reporte específico incluyendo sus `MetricSummary`.
+
+**Atributos:**
+
+- `reportId: UUID`
+- `userId: UUID`
+
+
+`ListReportsQuery`
+
+**Propósito:** Obtener la lista paginada de reportes generados por un usuario, con filtros opcionales.
+
+**Atributos:**
+
+- `userId: UUID`
+- `plantId: UUID` (opcional)
+- `page: int`
+- `size: int`
+
+
+`GetTelemetrySummaryQuery`
+
+**Propósito:** Obtener las métricas de telemetría agregadas para una planta en un rango de tiempo, con granularidad configurable.
+
+**Atributos:**
+
+- `plantId: UUID`
+- `dateRange: DateRange`
+- `aggregationInterval: String` → `HOUR`, `DAY`, `WEEK`.
+
+
+`GetHealthTrendQuery`
+
+**Propósito:** Obtener la serie temporal de `HealthScore` para una planta, incluyendo la proyección predictiva del modelo IA para los próximos N días.
+
+**Atributos:**
+
+- `plantId: UUID`
+- `dateRange: DateRange`
+- `predictionHorizonDays: int`
+
+
+`GetDashboardDataQuery`
+
+**Propósito:** Obtener los datos consolidados para el dashboard analítico del usuario, incluyendo resúmenes de salud de todas sus plantas activas y alertas recientes.
+
+**Atributos:**
+
+- `userId: UUID`
+- `summaryPeriod: String` → `LAST_7_DAYS`, `LAST_30_DAYS`, `LAST_90_DAYS`.
+
+
+`ListScheduledReportsQuery`
+
+**Propósito:** Listar las configuraciones de reportes periódicos activos de un usuario.
+
+**Atributos:**
+
+- `userId: UUID`
+
+
+**f. Domain Services:**
+
+`ReportGenerationDomainService`
+
+**Paquete:** `com.upc.analytics.domain.services`
+
+**Propósito:** Orquestar el proceso completo de generación de un reporte: recuperación de telemetría, agregación estadística de métricas, enriquecimiento con predicciones IA, renderizado del documento exportable y publicación del evento de finalización.
+
+**Operaciones:**
+
+- `handle(GenerateReportCommand)` → Crea el `Report` en estado `PENDING`, procesa la telemetría, genera el documento y lo persiste.
+- `handle(ExportReportCommand)` → Exporta un reporte existente (`COMPLETED`) en un formato alternativo.
+- `handle(CancelReportScheduleCommand)` → Desactiva un `ReportSchedule` y cancela el job del scheduler.
+
+
+`TelemetryAggregationDomainService`
+
+**Propósito:** Agregar las lecturas de telemetría (`TelemetryRecord`) en `MetricSummary` por períodos configurables, aplicando funciones estadísticas (promedio, mínimo, máximo, conteos de alertas y diagnósticos).
+
+**Operaciones:**
+
+- `aggregate(plantId: UUID, dateRange: DateRange, interval: String)` → Retorna lista de `MetricSummary` para el período.
+- `handle(GetTelemetrySummaryQuery)` → Retorna los agregados para la vista de dashboard.
+- `handle(GetHealthTrendQuery)` → Retorna la serie temporal de `HealthScore` con proyección predictiva integrada.
+
+
+`PredictiveHealthDomainService`
+
+**Propósito:** Integrar las predicciones del BC AI para enriquecer los reportes con alertas proactivas de riesgo sanitario, anticipando deterioro antes de que sea visible en los sensores o a simple vista.
+
+**Operaciones:**
+
+- `getPredictedHealthScore(plantId: UUID, horizonDays: int)` → Solicita predicción al BC AI para `horizonDays` días futuros vía Anti-Corruption Layer.
+- `handle(GetDashboardDataQuery)` → Compone el payload del dashboard integrando métricas históricas y predicciones IA.
+
+---
+
+### 5.5.2. Interface Layer
+
+La Interface Layer del bounded context **Analysis & Reporting** expone los endpoints REST para la consulta, generación y exportación de reportes analíticos.
+
+**`ReportController`**
+
+**Paquete:** `com.upc.analytics.interfaces.rest`
+
+**Base URL:** `/api/v1/reports`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Rol requerido |
+|--------|------|-------------|--------------|
+| `POST` | `/` | Solicitar generación de reporte bajo demanda | FARMER, ADMIN |
+| `GET` | `/{reportId}` | Obtener detalles de un reporte | FARMER, ADMIN |
+| `GET` | `/` | Listar reportes del usuario paginados | FARMER, ADMIN |
+| `GET` | `/{reportId}/download` | Descargar archivo del reporte (PDF/CSV/JSON) | FARMER, ADMIN |
+| `DELETE` | `/{reportId}` | Eliminar un reporte generado | FARMER, ADMIN |
+
+
+**`DashboardController`**
+
+**Base URL:** `/api/v1/dashboard`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Rol requerido |
+|--------|------|-------------|--------------|
+| `GET` | `/` | Obtener datos consolidados del dashboard analítico | FARMER, ADMIN |
+| `GET` | `/telemetry` | Obtener serie temporal de telemetría por planta y período | FARMER, ADMIN |
+| `GET` | `/health-trend` | Obtener tendencia de salud con proyección predictiva IA | FARMER, ADMIN |
+| `GET` | `/summary` | Obtener resumen de salud de todas las plantas activas del usuario | FARMER, ADMIN |
+
+
+**`ReportScheduleController`**
+
+**Base URL:** `/api/v1/reports/schedules`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Rol requerido |
+|--------|------|-------------|--------------|
+| `POST` | `/` | Configurar reporte periódico automático | FARMER, ADMIN |
+| `GET` | `/` | Listar configuraciones de reportes activos | FARMER, ADMIN |
+| `DELETE` | `/{scheduleId}` | Cancelar generación periódica | FARMER, ADMIN |
+
+---
+
+### 5.5.3. Application Layer
+
+La Application Layer del bounded context **Analysis & Reporting** coordina los flujos de generación de reportes, consulta de dashboards y exportación de datos analíticos.
+
+**Command Handlers:**
+
+`GenerateReportCommandHandler`
+
+**Propósito:** Crear el registro `Report` en estado `PENDING`, publicar el job de generación al sistema de colas (Spring Batch), retornar el `reportId` para seguimiento asíncrono del proceso.
+
+`ScheduleReportCommandHandler`
+
+**Propósito:** Crear y persistir el `ReportSchedule`, calcular el `nextRunAt` según la frecuencia seleccionada y registrar el job en el scheduler distribuido (Spring Batch + Quartz Scheduler).
+
+`ExportReportCommandHandler`
+
+**Propósito:** Recuperar el `Report` en estado `COMPLETED`, generar el documento en el formato destino usando el adaptador correspondiente (`PdfExportAdapter` o `CsvExportAdapter`) y actualizar la URL de descarga.
+
+`CancelReportScheduleCommandHandler`
+
+**Propósito:** Localizar el `ReportSchedule` por ID y usuario, desactivarlo via `deactivate()` y remover el job del scheduler distribuido.
+
+
+**Query Handlers:**
+
+`GetReportQueryHandler`
+
+**Propósito:** Recuperar el `Report` y sus `MetricSummary` asociados, proyectarlos al DTO de respuesta con URL de descarga válida.
+
+`GetDashboardDataQueryHandler`
+
+**Propósito:** Orquestar las consultas de métricas de todas las plantas activas del usuario, enriquecer el resultado con predicciones del BC AI y componer el payload completo del dashboard.
+
+`GetTelemetrySummaryQueryHandler`
+
+**Propósito:** Delegar en `TelemetryAggregationDomainService` para calcular los agregados estadísticos del rango solicitado con la granularidad especificada.
+
+
+**Application Services:**
+
+`ReportApplicationService`
+
+**Paquete:** `com.upc.analytics.application.internal.commandservices`
+
+**Operaciones:**
+
+- `handle(GenerateReportCommand)`
+- `handle(ExportReportCommand)`
+- `handle(CancelReportScheduleCommand)`
+- `handle(ScheduleReportCommand)`
+- `handle(GetReportQuery)`
+- `handle(ListReportsQuery)`
+
+
+`DashboardApplicationService`
+
+**Operaciones:**
+
+- `handle(GetDashboardDataQuery)`
+- `handle(GetTelemetrySummaryQuery)`
+- `handle(GetHealthTrendQuery)`
+- `handle(ListScheduledReportsQuery)`
+
+---
+
+### 5.5.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context **Analysis & Reporting** implementa la persistencia de telemetría de alta frecuencia, la generación de documentos exportables y la integración con los contextos AI y Notification.
+
+**Adaptadores y Repositorios:**
+
+`TelemetryTimeSeriesRepository`
+
+**Propósito:** Almacenar y consultar `TelemetryRecord` en PostgreSQL con la extensión TimescaleDB, que habilita hypertables particionadas automáticamente por tiempo. Optimiza consultas de rango temporal (semanas o meses de lecturas) mediante índices BRIN comprimidos.
+
+**Dependencia:** TimescaleDB 2.x + Spring Data JPA con `@Query` nativa.
+
+
+`ReportJpaRepository`
+
+**Propósito:** Repositorio JPA para la persistencia de entidades `Report` en PostgreSQL.
+
+**Dependencia:** Spring Data JPA.
+
+
+`MetricSummaryJpaRepository`
+
+**Propósito:** Repositorio JPA para la persistencia de `MetricSummary` asociados a cada `Report`.
+
+
+`ReportScheduleJpaRepository`
+
+**Propósito:** Repositorio JPA para la persistencia y consulta de configuraciones de reportes periódicos.
+
+
+`PdfExportAdapter`
+
+**Propósito:** Generar documentos PDF a partir de los datos de `Report` y sus `MetricSummary`. Implementa plantillas con gráficos de series temporales, tabla de métricas clave (humedad, temperatura, HealthScore), sección de alertas y recomendaciones predictivas IA.
+
+**Dependencia:** `net.sf.jasperreports:jasperreports:6.20.0`
+
+
+`CsvExportAdapter`
+
+**Propósito:** Serializar los `TelemetryRecord` y `MetricSummary` en formato CSV estructurado para exportación y análisis externo en herramientas como Excel o Python/pandas.
+
+**Dependencia:** `org.apache.commons:commons-csv:1.10.0`
+
+
+`AIAnalyticsAdapter`
+
+**Propósito:** Cliente interno para solicitar predicciones de salud al BC AI. Implementa el patrón Anti-Corruption Layer (ACL) para aislar el modelo de dominio de Analytics del modelo de dominio del BC AI, traduciendo entre sus lenguajes de dominio respectivos.
+
+**Patrón de integración:** ACL sincrónico hacia el `DiagnosisQueryService` del BC AI.
+
+
+`NotificationEventPublisher`
+
+**Propósito:** Publicar el evento de dominio `ReportGeneratedEvent` al BC Notification cuando un reporte es completado exitosamente, para que el usuario reciba una notificación push y/o email con el enlace de descarga.
+
+**Patrón de integración:** Domain Event → Apache Kafka (topic: `analytics.report.generated`).
+
+
+`FileStorageAdapter`
+
+**Propósito:** Subir los documentos generados (PDF/CSV) a almacenamiento de objetos en la nube y retornar una URL de descarga pre-firmada con expiración de 24 horas.
+
+**Dependencia:** AWS S3 SDK / Google Cloud Storage client library.
+
+
+**Dependencias de infraestructura del contexto Analysis & Reporting:**
+
+- PostgreSQL 15 + TimescaleDB 2.x → series de tiempo de telemetría y persistencia de reportes, métricas y schedules.
+- Apache Kafka → publicación del evento `ReportGeneratedEvent` al BC Notification.
+- JasperReports (6.20.0) → generación de documentos PDF con gráficos y tablas.
+- Apache Commons CSV (1.10.0) → exportación de datos tabulares en formato CSV.
+- AWS S3 / Google Cloud Storage → almacenamiento persistente de archivos generados.
+- Spring Batch → orquestación de reportes periódicos programados (jobs distribuidos).
+- Redis → caché de resultados de dashboard para consultas de alta frecuencia (TTL: 5 minutos).
+
+---
+
+### 5.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Analysis & Reporting` representa la arquitectura interna del módulo analítico, mostrando el flujo completo desde la ingestión de telemetría IoT hasta la generación y entrega de reportes al usuario.
+
+**Descripción de componentes principales:**
+
+- **Report REST API Component:** Expone los endpoints de generación, consulta y descarga de reportes (`/api/v1/reports`). Delega en `ReportApplicationService`.
+- **Dashboard REST API Component:** Expone los endpoints del dashboard analítico (`/api/v1/dashboard`). Delega en `DashboardApplicationService`.
+- **Report Schedule REST API Component:** Expone los endpoints de reportes periódicos (`/api/v1/reports/schedules`).
+- **Report Command Processing Component:** Orquesta los command handlers de generación, exportación y programación de reportes.
+- **Dashboard Query Processing Component:** Resuelve las queries de dashboard, telemetría y tendencias de salud.
+- **Analytics Domain Component:** Contiene los agregados `Report`, `MetricSummary`, `TelemetryRecord` y `ReportSchedule`, junto a los domain services de agregación, generación y predicción.
+- **Telemetry Time-Series Component:** Gestiona la escritura y consulta eficiente de series de tiempo de sensores (TimescaleDB hypertable).
+- **Analytics Persistence Component:** Implementa los repositorios JPA para reportes, métricas y schedules.
+- **PDF/CSV Export Component:** Genera documentos exportables con gráficos de series temporales y tablas de métricas.
+- **AI Integration Component (ACL):** Anti-Corruption Layer hacia el BC AI para obtener predicciones de `HealthScore`.
+- **File Storage Component:** Gestiona el ciclo de vida de archivos generados en cloud storage (S3/GCS) con pre-signed URLs.
+- **Notification Event Component:** Publica `ReportGeneratedEvent` al BC Notification via Kafka.
+
+![ComponentsDiagram_Analytics](./assets/Chapter-5/analytics-component-diagram.svg)
+
+---
+
+### 5.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Analysis & Reporting`, visualizando la estructura del dominio y el diseño de la base de datos analítica.
+
+#### 5.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer muestra el agregado principal `Report`, la entidad `MetricSummary` contenida en cada reporte, la entidad `TelemetryRecord` como fuente de datos histórica (consumida desde el BC Device Management) y `ReportSchedule` como entidad de configuración de generación periódica. Los Value Objects `DateRange`, `ReportType`, `ExportFormat`, `ReportStatus`, `HealthScore` y `ScheduleFrequency` garantizan inmutabilidad en las reglas de negocio críticas del dominio analítico.
+
+**Relaciones entre clases:**
+
+- `Report (1) ──── (*) MetricSummary`
+- `ReportSchedule (1) ──── (*) Report` (vía generación periódica)
+- `TelemetryRecord (*) ──── (1) plantId` (referencia cruzada lógica al BC Plant Management)
+- `ReportGenerationDomainService → Report`
+- `TelemetryAggregationDomainService → TelemetryRecord`
+- `TelemetryAggregationDomainService → MetricSummary`
+- `PredictiveHealthDomainService → HealthScore`
+
+![UMLClassDiagram_Analytics](./assets/Chapter-5/analytics-class-diagram.svg)
+
+#### 5.5.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Analysis & Reporting` representa el esquema relacional para reportes y la hypertable TimescaleDB para telemetría de alta frecuencia.
+
+**Tabla principal:** `reports`
+
+**Atributos:**
+
+- `report_id` → UUID, PRIMARY KEY
+- `user_id` → UUID, NOT NULL
+- `plant_id` → UUID, NOT NULL
+- `report_type` → ENUM('HEALTH_SUMMARY','TELEMETRY_DETAIL','PREDICTIVE_ALERT','COMPARATIVE_ANALYSIS'), NOT NULL
+- `status` → ENUM('PENDING','PROCESSING','COMPLETED','FAILED'), NOT NULL
+- `date_range_start` → TIMESTAMP, NOT NULL
+- `date_range_end` → TIMESTAMP, NOT NULL
+- `export_format` → ENUM('PDF','CSV','JSON'), NOT NULL
+- `file_url` → VARCHAR(500), NULLABLE
+- `generated_at` → TIMESTAMP, NULLABLE
+- `created_at` → TIMESTAMP, NOT NULL
+
+
+**Tabla:** `metric_summaries`
+
+**Atributos:**
+
+- `summary_id` → UUID, PRIMARY KEY
+- `report_id` → UUID, FOREIGN KEY → `reports(report_id)`
+- `plant_id` → UUID, NOT NULL
+- `period_start` → TIMESTAMP, NOT NULL
+- `period_end` → TIMESTAMP, NOT NULL
+- `avg_humidity` → FLOAT, NOT NULL
+- `avg_temperature` → FLOAT, NOT NULL
+- `avg_light_level` → FLOAT, NOT NULL
+- `avg_health_score` → FLOAT, NOT NULL
+- `min_health_score` → FLOAT, NOT NULL
+- `max_health_score` → FLOAT, NOT NULL
+- `diagnosis_count` → INT, DEFAULT 0
+- `alert_count` → INT, DEFAULT 0
+
+
+**Hypertable TimescaleDB:** `telemetry_records`
+
+**Atributos:**
+
+- `record_id` → UUID
+- `plant_id` → UUID, NOT NULL
+- `device_id` → UUID, NOT NULL
+- `humidity` → FLOAT, NOT NULL
+- `temperature` → FLOAT, NOT NULL
+- `light_level` → FLOAT, NOT NULL
+- `soil_moisture` → FLOAT
+- `health_score` → FLOAT
+- `recorded_at` → TIMESTAMP WITH TIME ZONE, NOT NULL (dimensión de partición temporal de TimescaleDB)
+
+**Constraints:**
+
+- PRIMARY KEY (`record_id`, `recorded_at`) — requerido por TimescaleDB para hypertables.
+- INDEX BRIN en `recorded_at` para consultas de rango eficientes sobre meses de datos.
+- INDEX COMPUESTO en (`plant_id`, `recorded_at`) para queries por planta + ventana temporal.
+
+
+**Tabla:** `report_schedules`
+
+**Atributos:**
+
+- `schedule_id` → UUID, PRIMARY KEY
+- `user_id` → UUID, NOT NULL
+- `plant_id` → UUID, NOT NULL
+- `frequency` → ENUM('DAILY','WEEKLY','MONTHLY'), NOT NULL
+- `export_format` → ENUM('PDF','CSV','JSON'), NOT NULL
+- `next_run_at` → TIMESTAMP, NOT NULL
+- `is_active` → BOOLEAN, DEFAULT TRUE
+- `created_at` → TIMESTAMP, NOT NULL
+
+**Constraints:**
+
+- INDEX en `next_run_at` para la consulta eficiente de jobs pendientes de ejecución por el scheduler.
+- INDEX en `user_id` para listar todos los schedules de un usuario.
+
+
+**Relaciones entre tablas:**
+
+- `reports (1) ──── (*) metric_summaries`
+- `report_schedules (1) ──── (*) reports`
+- `telemetry_records (*) ──── (1) plant_id` (referencia lógica al BC Plant Management)
+
+![ERDDiagram_Analytics](./assets/Chapter-5/analytics-database-diagram.svg)
 
 ---
 
@@ -5440,8 +6957,6 @@ Dado que la aplicación móvil es el punto de contacto principal para los usuari
 **3. Ergonomía y Touch Targets (Común para móviles):**
 Para garantizar que personas de la tercera edad u ocupadas interactúen sin frustración, el tamaño mínimo de cualquier botón o elemento interactivo es de **48x48 dp/pt**, con un margen de separación adecuado para evitar toques accidentales.
 
-*(Añadir captura de pantalla ilustrando los componentes nativos de iOS y Android)*
-![Mobile Style Guidelines - Native Components](assets/2.jpeg)
 
 #### C. Devices (IoT Hardware) Style & Feedback Guidelines
 
@@ -5617,8 +7132,6 @@ La página de aterrizaje comercial tiene como objetivo principal la conversión,
 *   **Sequential & Scroll Navigation:** El contenido está organizado para contar una historia (Storytelling). A medida que el usuario hace *scroll* vertical, avanza secuencialmente desde la identificación del problema (plantas marchitas por falta de tiempo/conocimiento) hasta la solución (IA y automatización).
 *   **Call-to-Action (CTA) Routing:** Para facilitar el objetivo principal de negocio, se utilizan botones de acción claros y contrastantes (ej. "Comienza Gratis") ubicados estratégicamente en el *Hero Section* y al final de la página, los cuales enrutan directamente al flujo de *Sign Up*.
 
-*(Añadir captura de pantalla ilustrando el flujo de navegación de la Landing Page)*
-`![Navigation Systems - Landing Page](../assets/images/nav-landing-page.png)`
 
 #### B. Web Application Navigation (Dashboard)
 
@@ -5633,8 +7146,6 @@ La aplicación web está pensada para sesiones más largas, donde los usuarios a
 *   **Local Navigation (Pestañas/Tabs):** Dentro del detalle de una planta específica, se utilizan pestañas horizontales para cambiar entre *Información Básica*, *Diagnósticos IA* y *Configuración de Sensores*, evitando recargas de página completas (comportamiento SPA con Vue.js).
 *   **Breadcrumbs:** Se implementan "migas de pan" en la parte superior (ej. `Mis Plantas > Monstera Deliciosa > Diagnósticos`) para que el usuario conozca su ubicación exacta dentro de la jerarquía profunda y pueda retroceder un nivel fácilmente.
 
-*(Añadir captura de pantalla ilustrando el Left Sidebar y Breadcrumbs de la Web App)*
-`![Navigation Systems - Web App](../assets/images/nav-webapp.png)`
 
 #### C. Mobile Application Navigation
 
@@ -5649,8 +7160,6 @@ La aplicación móvil es el canal principal para la gestión diaria. Su navegaci
 *   **Hierarchical Navigation (Stack de Vistas):** Cuando un usuario selecciona una planta desde el *Inicio*, ingresa a una vista de detalle (Drill-down). La navegación superior nativa (Navigation Bar en iOS / Top App Bar en Android) mostrará el nombre de la planta y una flecha clara de "Atrás" para regresar al nivel superior.
 *   **In-context Navigation (Swipe & Gestures):** Se soportan gestos nativos, como deslizar tarjetas horizontalmente para revelar acciones rápidas (ej. "Regar ahora" o "Archivar planta"), acelerando el flujo de tareas repetitivas.
 
-*(Añadir captura de pantalla ilustrando el Bottom Navigation Bar y el FAB de la App Móvil)*
-`![Navigation Systems - Mobile App](../assets/images/nav-mobileapp.png)`
 
 
 ### 6.3. Landing Page UI Design
@@ -5695,8 +7204,7 @@ La estructura secuencial del *wireframe* es la siguiente:
 6.  **Footer:**
     *   Enlaces de navegación secundarios, términos de servicio, políticas de privacidad y enlaces a redes sociales.
 
-*(Añadir captura de pantalla de los wireframes en versión Desktop y Mobile)*
-`![Landing Page Wireframe - Desktop & Mobile](../assets/images/wireframe-landing-page.png)`
+![Landing Page Wireframe](./assets/Chapter-6/wireframe-landing.png)
 
 
 #### 6.3.1. Landing Page Mock-up
@@ -5746,7 +7254,7 @@ El diseño de las aplicaciones considera los siguientes principios:
 
 ### 6.4.1. Applications Wireframes
 
-Aquí se muestran los wireframes desarrollados para la aplicación web y móvil SecurOn.
+Aquí se muestran los wireframes desarrollados para la aplicación web y móvil Oryxen.
 
 **Wireframes Web Application:**
 
@@ -5761,7 +7269,7 @@ Aquí se muestran los wireframes desarrollados para la aplicación web y móvil 
 
 ![Wireframes Mobile App](./assets/Chapter-6/wireframe-mobile.png)
 
-[Enlace para acceder al Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/SecurOn?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
+[Enlace para acceder al prototipo de wireframes de Oryxen en Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/SecurOn?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
 
 ### 6.4.2. Applications Wireflow Diagrams
 
@@ -5931,8 +7439,6 @@ Este es el primer contacto del usuario con la aplicación. El objetivo es que re
 5.  **Configuración de Umbrales:** El sistema sugiere parámetros predeterminados de humedad según la especie seleccionada. El usuario acepta.
 6.  **Fin (Éxito):** El usuario es redirigido al *Dashboard* principal, donde visualiza la tarjeta de su nueva planta recién agregada.
 
-*(Añadir captura de pantalla del diagrama de flujo: Onboarding y Registro de Planta)*
-`![User Flow - Onboarding & Plant Registration](../assets/images/userflow-onboarding.png)`
 
 #### B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)
 Este flujo representa el momento en que un usuario decide automatizar su monitoreo tras adquirir el hardware de entrada de Oryxen. Destaca la restricción de usabilidad (QA-04) que exige una vinculación en menos de 30 segundos.
@@ -5944,8 +7450,6 @@ Este flujo representa el momento en que un usuario decide automatizar su monitor
 5.  **Asignación:** La app pregunta: "¿A qué planta pertenece este sensor?". El usuario selecciona una planta previamente registrada (ej. "Monstera de la Sala").
 6.  **Fin (Éxito):** Pantalla de confirmación animada. El *Dashboard* se actualiza y la tarjeta de la planta ahora muestra la métrica de humedad y temperatura en tiempo real.
 
-*(Añadir captura de pantalla del diagrama de flujo: Vinculación de Hardware)*
-`![User Flow - Hardware Pairing](../assets/images/userflow-hardware.png)`
 
 #### C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)
 Este flujo ilustra cómo un usuario interactúa con la característica estrella de la aplicación para resolver un problema complejo de salud en su planta.
@@ -5957,8 +7461,6 @@ Este flujo ilustra cómo un usuario interactúa con la característica estrella 
 5.  **Resultados y Recomendación:** El sistema muestra una alerta contextual con el problema detectado (ej. "Falta de nutrientes / Clorosis") y una lista de acciones correctivas inmediatas y a largo plazo.
 6.  **Fin (Seguimiento):** El usuario presiona el botón "Aplicar recomendación". El sistema programa automáticamente un recordatorio de seguimiento para evaluar la mejora en 7 días.
 
-*(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
-`![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
 
 ### 6.5. Applications Prototyping
 
