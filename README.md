@@ -7613,12 +7613,66 @@ Se adoptan las [Gherkin Conventions for Readable Specifications](https://specflo
 
 ### 7.1.4. Software Deployment Configuration
 
+En esta sección se especifica la configuración de despliegue de cada producto digital de la solución, partiendo de los repositorios de código fuente hasta su publicación. El entorno de desarrollo local (localhost) replica la topología de microservicios que se promueve a la nube en las entregas posteriores.
+
+**Topología de despliegue (entorno local):**
+
+```
+                         ┌──────────────────────────┐
+   Visitante  ─────────► │  Oryxen-Landing-Page     │  (HTML5/CSS3/JS estático)
+                         │  Firebase Hosting / :5500│
+                         └─────────────┬────────────┘
+                                       │ CTA "Open the app"
+                                       ▼
+   Usuario    ─────────► ┌──────────────────────────┐      ┌───────────────────────┐
+   (Web)                 │  Oryxen-Web-Application   │ ───► │  Oryxen-Backend (API) │
+                         │  Vue 3 + Vite  :5173     │ REST │  ASP.NET Core  :5170  │
+                         └──────────────────────────┘ JWT  │  /swagger (OpenAPI)   │
+   Usuario    ─────────► ┌──────────────────────────┐      │                       │
+   (Mobile)              │  Oryxen-Mobile-App        │ ───► │                       │
+                         │  Android (10.0.2.2:5170) │ REST └──────────┬────────────┘
+                         └──────────────────────────┘                 │ EF Core / Npgsql
+   Sensor Lite ────────► POST /api/v1/telemetry  ────────────────────►│
+   (simulador)                                                        ▼
+                                                          ┌───────────────────────┐
+                                                          │  PostgreSQL 15        │
+                                                          │  Docker  :5432        │
+                                                          └───────────────────────┘
+```
+
+**Pasos de despliegue por producto:**
+
+| Producto | Build | Despliegue local | Destino de publicación |
+|----------|-------|------------------|------------------------|
+| **Oryxen-Backend** (RESTful API) | `dotnet build Oryxen.API.slnx` | `docker compose up -d` (PostgreSQL) → `dotnet run --project src/Oryxen.API`. Las migraciones de EF Core se aplican automáticamente al inicio. Expone `http://localhost:5170` y Swagger en `/swagger`. | Azure App Service / Google Cloud Run + Azure Database for PostgreSQL. |
+| **Oryxen-Web-Application** | `npm install` → `npm run build` (genera `dist/`) | `npm run dev` → `http://localhost:5173`. Variable `VITE_API_BASE_URL` apunta al backend. | Firebase Hosting (`firebase deploy`). |
+| **Oryxen-Landing-Page** | Sitio estático (sin build step) | Servir la carpeta con cualquier servidor estático (Live Server / `firebase serve`). | Firebase Hosting (`firebase deploy`). |
+| **Oryxen-Mobile-Application** | `./gradlew assembleRelease` (Android Studio) | Ejecución en emulador/dispositivo (API 24+), apuntando a `http://10.0.2.2:5170`. | Firebase App Distribution / Google Play. |
+
+La base de datos local se gestiona de forma reproducible mediante `docker-compose.yml` (imagen `postgres:15-alpine`), con credenciales parametrizadas en el archivo `.env` y healthcheck `pg_isready`. El diagrama de despliegue de C4 Model que formaliza esta topología se mantiene en el workspace de arquitectura del equipo (Structurizr).
 
 ## 7.2. Solution Implementation
 
 ### 7.2.1. Sprint 1
 
 #### 7.2.1.1. Sprint Planning 1
+
+En esta sección se presenta el resumen del Sprint Planning Meeting del Sprint 1. Al ser el primer sprint del ciclo de implementación, el objetivo se centró en establecer la presencia digital del producto (Landing Page) y los cimientos de identidad y telemetría del backend que habilitan el resto de capacidades de Oryxen.
+
+| **Sprint #** | Sprint 1 |
+|--------------|----------|
+| **Sprint Planning Background** | |
+| Date | 2026-06-02 |
+| Time | 07:00 PM |
+| Location | Reunión virtual (Discord — canal del equipo Oryxen) |
+| Prepared By | Estrada Cajamune, Abraham Andrés (Team Leader) |
+| Attendees | Estrada Cajamune, Abraham Andrés / Nanfuñay Liza, Pedro Jesús / Pachas Chavez, Alejandro Alberto / Zevallos Linares, Alessandro Netto |
+| Sprint 0 Review Summary | No aplica. El Sprint 1 es el primer sprint de implementación; parte de los artefactos de diseño estratégico y táctico (Capítulos IV y V) y de UX (Capítulo VI) aprobados en TB1/TP1. |
+| Sprint 0 Retrospective Summary | No aplica. El equipo acordó adoptar GitFlow + Conventional Commits y una reunión de sincronización cada 48 horas como base de trabajo. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Publicar la Landing Page responsiva de Oryxen e implementar el núcleo de Auth & Identity (registro, login y refresh con JWT) junto con la ingesta de telemetría del Sensor Lite, dejando el ecosistema Web ↔ Backend integrado en entorno local. Métrica de cumplimiento: flujo end-to-end (registro → login → telemetría con Health Score) operativo. |
+| Sprint 1 Velocity | 30 Story Points |
+| Sum of Story Points | 24 Story Points (US-001, US-002, US-003, US-004, US-005, US-006, US-009) |
 
 #### 7.2.1.2. Sprint Backlog 1
 
@@ -7678,6 +7732,54 @@ En esta sección se registra la evidencia de implementación del Sprint 1. Los a
 #### 7.2.1.5.	Execution Evidence for Sprint Review
 
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+El backend de Oryxen (ASP.NET Core 9) documenta sus endpoints REST mediante **OpenAPI 3.0**, generado automáticamente con **Swashbuckle**. La documentación interactiva se despliega en `http://localhost:5170/swagger` e incorpora el esquema de seguridad **Bearer (JWT)**, lo que permite autenticar las pruebas pegando el `accessToken` directamente en Swagger UI mediante el botón *Authorize*.
+
+A continuación, la relación de endpoints documentados que forman parte del alcance del Sprint 1:
+
+| Verbo | Endpoint | Auth | Parámetros / Body | Descripción |
+|-------|----------|------|-------------------|-------------|
+| `POST` | `/api/v1/auth/register` | Anónimo | `{ email, password, fullName }` | Registra una cuenta (rol `FARMER` + suscripción Freemium) y devuelve el par de tokens. |
+| `POST` | `/api/v1/auth/login` | Anónimo | `{ email, password }` | Autentica credenciales y devuelve `accessToken` + `refreshToken`. |
+| `POST` | `/api/v1/auth/refresh` | Anónimo | `{ refreshToken }` | Rota el refresh token y emite un nuevo par de tokens. |
+| `GET` | `/api/v1/auth/me` | Bearer | — | Devuelve los claims de identidad del usuario autenticado. |
+| `POST` | `/api/v1/telemetry` | Anónimo (dispositivo) | `{ deviceId, plantId, humidity, temperature, lightLevel, soilMoisture }` | Ingesta una lectura del Sensor Lite y devuelve el `healthScore` calculado. |
+| `GET` | `/api/v1/telemetry/{plantId}` | `FARMER` / `ADMIN` | `plantId`, query `from?`, `to?` | Devuelve el historial reciente de telemetría de una planta. |
+
+**Ejemplo — `POST /api/v1/auth/login`**
+
+Request:
+```json
+{ "email": "farmer@oryxen.io", "password": "Sembrar2026!" }
+```
+Response `200 OK`:
+```json
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refreshToken": "k4Jr...base64...==",
+  "accessTokenExpiresAt": "2026-06-19T04:24:26Z",
+  "email": "farmer@oryxen.io",
+  "fullName": "Abraham Estrada",
+  "roles": ["FARMER"]
+}
+```
+
+**Ejemplo — `POST /api/v1/telemetry`**
+
+Request:
+```json
+{ "deviceId": "SL-SIM-001", "plantId": "11111111-2222-3333-4444-555555555555",
+  "humidity": 52, "temperature": 22, "lightLevel": 850, "soilMoisture": 62 }
+```
+Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` del dominio):
+```json
+{
+  "id": "f3a1...", "deviceId": "SL-SIM-001",
+  "plantId": "11111111-2222-3333-4444-555555555555",
+  "humidity": 52, "temperature": 22, "lightLevel": 850,
+  "soilMoisture": 62, "healthScore": 100, "recordedAt": "2026-06-19T03:54:00Z"
+}
+```
 
 #### 7.2.1.7.	Software Deployment Evidence for Sprint Review
 
