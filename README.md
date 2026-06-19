@@ -7479,6 +7479,33 @@ Link del video app web: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221
 
 ### 7.1.1. Software Development Environment Configuration
 
+El equipo establece las herramientas de software que cada integrante debe utilizar para contribuir en el ciclo de vida del proyecto. La selección cubre todas las actividades del proceso de ingeniería: gestión del proyecto, diseño, desarrollo, pruebas, despliegue y documentación.
+
+| Actividad | Producto de Software | Propósito en el proyecto | Ruta de referencia / Descarga |
+|-----------|---------------------|--------------------------|-------------------------------|
+| Project Management | Trello | Gestión del Product Backlog y Sprint Boards mediante tableros Kanban para visualizar el avance de tareas por sprint. | https://trello.com |
+| Project Management | GitHub Projects | Seguimiento de issues técnicos y pull requests asociados al código fuente de los repositorios. | https://github.com |
+| Requirements Management | Pivotal Tracker | Registro, priorización y estimación de User Stories y Technical Stories del Product Backlog. | https://www.pivotaltracker.com |
+| Product UX Design | Figma | Creación de wireframes, mock-ups y prototipos interactivos para la Landing Page y aplicaciones Web/Mobile. | https://www.figma.com |
+| Product UX Design | UXPressia | Elaboración de User Personas, Empathy Maps e Impact Maps para los segmentos objetivo identificados. | https://uxpressia.com |
+| Architecture Modeling | Structurizr | Modelado de diagramas C4 Model (Context, Container, Component) para la arquitectura de software de la solución. | https://structurizr.com |
+| Architecture Modeling | LucidChart | Diagramas de EventStorming, Domain Storytelling, Bounded Context Mapping y Class Diagrams UML. | https://lucidchart.com |
+| Architecture Modeling | Vertabelo | Diseño de diagramas de base de datos (Database Design Diagrams) para los Bounded Contexts del sistema. | https://vertabelo.com |
+| Software Development (Backend) | JetBrains Rider 2024.x | IDE principal para el desarrollo del servicio backend en C# con ASP.NET Core 8, con soporte para .NET y refactoring avanzado. | https://www.jetbrains.com/rider (descarga) |
+| Software Development (Backend) | .NET SDK 8.0 | Runtime y SDK necesario para compilar, ejecutar y publicar el backend ASP.NET Core de la solución. | https://dotnet.microsoft.com/download (descarga) |
+| Software Development (Backend) | Docker Desktop | Contenedorización local de servicios de infraestructura (PostgreSQL 15, Redis 7) para el entorno de desarrollo. | https://www.docker.com/products/docker-desktop (descarga) |
+| Software Development (Web App) | Visual Studio Code 1.89+ | Editor de código para desarrollo de la Web Application en Vue.js 3 + TypeScript, con extensiones Vue Official y ESLint. | https://code.visualstudio.com (descarga) |
+| Software Development (Web App) | Node.js v20 LTS | Entorno de ejecución necesario para npm, Vite 8 y las dependencias del proyecto Vue.js. | https://nodejs.org (descarga) |
+| Software Development (Web App) | Vue DevTools | Extensión de navegador para depuración de componentes Vue 3 y estado de stores Pinia en tiempo real. | https://devtools.vuejs.org |
+| Software Development (Mobile) | Android Studio Jellyfish (2023.3) | IDE para el desarrollo de la aplicación móvil nativa en Kotlin para la plataforma Android. | https://developer.android.com/studio (descarga) |
+| Software Development (Landing) | Visual Studio Code | Editor para la implementación de la Landing Page estática en HTML5, CSS3 y JavaScript puro. | https://code.visualstudio.com (descarga) |
+| Software Testing | Postman v11 | Pruebas manuales de endpoints REST y colecciones de prueba de integración de la API del backend. | https://www.postman.com |
+| Software Testing | xUnit (.NET) | Framework de pruebas unitarias para las clases del Domain Layer del backend en C#. | NuGet Package: `xunit` |
+| Software Deployment | Firebase CLI | Despliegue de la Web Application y Landing Page en Firebase Hosting y gestión de proyectos Firebase. | https://firebase.google.com/docs/cli |
+| Software Deployment | GitHub Actions | Pipeline de CI/CD para automatizar builds, pruebas y despliegues desde los repositorios de la organización en GitHub. | https://github.com/features/actions |
+| Software Documentation | GitHub + Markdown | Control de versiones del informe de proyecto en formato Markdown (README.md) dentro del repositorio público de la organización. | https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report |
+| Software Documentation | Swagger UI / OpenAPI 3.0 | Documentación interactiva de los endpoints REST del backend, generada automáticamente con Swashbuckle en ASP.NET Core. | https://swagger.io |
+
 ### 7.1.2. Source Code Management
 
 En esta sección se presenta el enfoque seleccionado para la gestión del código fuente que se centraliza en GitHub, implementando un sistema robusto de control de versiones bajo la organización: https://github.com/1ASI0728-2610-11770-G4-Oryxen. Esta estructura nos permite mantener un flujo de trabajo colaborativo y organizado: <br>
@@ -7522,6 +7549,68 @@ Para mantener la coherencia y legibilidad del código, el equipo adopta las sigu
 
 ### 7.1.3. Source Code Style Guide & Conventions
 
+Para mantener la coherencia, legibilidad y calidad del código fuente en todos los repositorios de la solución, el equipo adopta las siguientes guías y convenciones estándar de la industria, aplicadas a cada tecnología utilizada en el proyecto. Todos los identificadores se escriben en **inglés** como norma transversal.
+
+**C# / ASP.NET Core (Oryxen-Backend)**
+
+Se adoptan las [Microsoft C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names) y las convenciones de Domain-Driven Design para nombrar los artefactos del dominio:
+
+- **PascalCase**: clases, interfaces, métodos, propiedades, eventos, enumeraciones y namespaces públicos.
+  Ejemplos: `UserAccount`, `GetUserByIdAsync()`, `AuthProvider`, `IUserRepository`
+- **camelCase**: variables locales y parámetros de métodos.
+  Ejemplos: `userId`, `accessToken`, `dateRange`
+- **_camelCase** (prefijo guion bajo): campos privados o protegidos de instancia.
+  Ejemplos: `_userRepository`, `_jwtTokenAdapter`, `_passwordEncoder`
+- **IPascalCase**: interfaces con prefijo `I` obligatorio.
+  Ejemplos: `IUserRepository`, `ITokenDomainService`, `INotificationPublisher`
+- **Namespaces** siguen la estructura de carpetas del proyecto:
+  `GrassFarming.{BoundedContext}.{Layer}.{Sublayer}`
+  Ejemplo: `GrassFarming.Auth.Application.CommandHandlers`
+- Los métodos asíncronos llevan el sufijo `Async`:
+  `RegisterUserAsync()`, `ValidateTokenAsync()`, `GenerateReportAsync()`
+- Los Commands se nombran en imperativo: `RegisterUserCommand`, `GenerateReportCommand`
+- Los Queries en forma de consulta nominal: `GetUserByIdQuery`, `ListReportsQuery`
+
+**Vue.js 3 + TypeScript (Oryxen-Web-Application)**
+
+Se adoptan el [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) y la [Vue.js Official Style Guide](https://vuejs.org/style-guide) (Prioridades A y B obligatorias):
+
+- **PascalCase**: nombres de componentes Vue, tanto en nombre de archivo como en su uso en templates.
+  Ejemplos: `PlantCard.vue`, `AuthLoginForm.vue`, `<PlantCard />`
+- **camelCase**: variables TypeScript, funciones, props de componentes y propiedades de Pinia stores.
+  Ejemplos: `const isLoading = ref(false)`, `function getUserData()`, prop `plantId`
+- **kebab-case**: nombres de eventos personalizados y atributos en templates HTML.
+  Ejemplos: `@plant-updated`, `v-bind:plant-id`, nombre de ruta `plant-detail`
+- **SCREAMING_SNAKE_CASE**: constantes de aplicación.
+  Ejemplos: `const MAX_RETRY_COUNT = 3`, `const API_BASE_URL = '...'`
+- Los archivos de componentes utilizan `<script setup lang="ts">` (Composition API con sintaxis de azúcar).
+- Los stores de Pinia siguen el patrón `use{Name}Store()`:
+  `useAuthStore()`, `usePlantStore()`, `useNotificationStore()`
+- Se prohíbe el uso implícito de `any`; todos los tipos deben declararse explícitamente con TypeScript.
+- Un componente realiza una única responsabilidad; la lógica compleja se extrae a composables en `src/composables/`.
+- Los archivos de servicios de API se ubican en `src/services/` con nombre en camelCase: `plantService.ts`, `authService.ts`.
+- Importaciones ordenadas: librerías externas → aliases internos (`@/`) → rutas relativas.
+
+**HTML5 / CSS3 / JavaScript (Oryxen-Landing-Page)**
+
+- **BEM** (Block\_\_Element--Modifier) para nombrar clases CSS.
+  Ejemplos: `.hero__cta-button`, `.card--featured`, `.nav__menu-item--active`
+- Elementos HTML5 semánticos obligatorios: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`.
+- Los atributos `id` y `class` usan **kebab-case**.
+  Ejemplos: `id="hero-section"`, `class="pricing-plans"`
+- No se permiten estilos en línea (`style="..."`); todo el CSS se centraliza en archivos externos.
+- Las variables CSS se declaran en el selector `:root` del archivo principal: `--color-primary`, `--font-size-base`, `--spacing-md`.
+
+**Gherkin (Feature Files — BDD Testing)**
+
+Se adoptan las [Gherkin Conventions for Readable Specifications](https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/):
+
+- Los archivos `.feature` usan **kebab-case**: `user-authentication.feature`, `plant-registration.feature`
+- Los escenarios usan **Title Case** en inglés: `Scenario: Successful user login with valid credentials`
+- Los steps usan **tiempo presente imperativo** en inglés: `Given`, `When`, `Then`, `And`, `But`
+  Ejemplo: `Given a registered user with email "user@example.com"`
+- Los steps no referencian detalles de implementación ni elementos de UI específicos (evitar "click button #submit").
+
 ### 7.1.4. Software Deployment Configuration
 
 
@@ -7533,7 +7622,56 @@ Para mantener la coherencia y legibilidad del código, el equipo adopta las sigu
 
 #### 7.2.1.2. Sprint Backlog 1
 
+Para el Sprint 1, el equipo enfocó sus esfuerzos en la construcción y despliegue de la Landing Page de Oryxen y en la implementación de los flujos de autenticación de usuarios (registro, inicio de sesión y Google OAuth) en la Web Application, sentando las bases para el onboarding de los primeros usuarios beta de la plataforma.
+
+**Sprint 1 Goal:** Desplegar la Landing Page funcional de Oryxen e implementar la autenticación core del usuario (registro, login y Google OAuth) en la Web Application, permitiendo el acceso inicial de usuarios beta a la plataforma.
+
+**Sprint 1 Velocity:** 30 Story Points
+
+*(Captura del Sprint Board — Sprint 1 en Trello)*
+
+**Trello Sprint Board:** https://trello.com/invite/b/69eb915dbfebde12de7929b0/ATTI72c244ba9b9b2af37b84a4adac09acbd15A9C4C2/product-backlog-oryxen
+
+| Sprint # | Sprint 1 | | | | | | |
+|----------|----------|-|-|-|-|-|-|
+| **User Story** | | **Work-Item / Task** | | | | | |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US-001 | Acceso a la Landing Page | T001 | Setup LP project structure | Crear la estructura base del proyecto HTML5/CSS3/JS de la Landing Page con organización de carpetas y configuración del entorno de desarrollo local. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-001 | Acceso a la Landing Page | T002 | Implement responsive layout | Implementar el layout principal con CSS Grid y Flexbox garantizando responsividad completa para mobile web browser y desktop web browser. | 4 | Zevallos Linares, Alessandro Netto | Done |
+| US-001 | Acceso a la Landing Page | T003 | Deploy to Firebase Hosting | Configurar Firebase Hosting y ejecutar el despliegue inicial de la Landing Page verificando la URL pública del sitio. | 2 | Zevallos Linares, Alessandro Netto | Done |
+| US-002 | Secciones informativas diferenciadas | T004 | Hero and About section | Implementar la sección hero con headline y tagline de Oryxen, y la sección "About" describiendo la propuesta de valor diferenciada para personas ocupadas y aficionados. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-002 | Secciones informativas diferenciadas | T005 | Services and Benefits sections | Implementar la sección de servicios (monitoreo IoT, diagnóstico IA, alertas) y la sección de beneficios diferenciados por segmento de usuario. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-002 | Secciones informativas diferenciadas | T006 | How it Works section | Implementar la sección paso a paso del proceso de uso del producto: desde la instalación del Sensor Lite hasta el primer monitoreo activo. | 2 | Zevallos Linares, Alessandro Netto | Done |
+| US-003 | Call to Action contextual | T007 | CTA buttons in hero section | Añadir botones de CTA contextuales en la sección hero redirigiendo a la Web Application (registro y descarga de app). | 1 | Zevallos Linares, Alessandro Netto | Done |
+| US-003 | Call to Action contextual | T008 | CTA buttons in pricing section | Añadir botones de CTA en la sección de planes y precios con redirección al flujo de registro de la Web Application. | 1 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-004 | Testimonios segmentados | T009 | Testimonials section | Implementar la sección de testimonios con cards diferenciados por perfil de usuario, mostrando casos reales de personas ocupadas y aficionados a la jardinería. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-004 | Testimonios segmentados | T010 | Plans and pricing section | Implementar la sección de planes con cards comparativos de Freemium y Premium, incluyendo características, precios y hardware Sensor Lite. | 2 | Pachas Chavez, Alejandro Alberto | Done |
+| US-004 | Testimonios segmentados | T011 | Team and footer section | Implementar la sección del equipo de GrassFarming con perfiles y el footer con links de navegación, redes sociales y términos de servicio. | 2 | Pachas Chavez, Alejandro Alberto | Done |
+| US-005 | Registro de usuario | T012 | RegisterForm component | Crear el componente Vue `RegisterForm.vue` con campos de nombre, email y contraseña usando componentes de PrimeVue (InputText, Password). | 4 | Estrada Cajamune, Abraham Andrés | Done |
+| US-005 | Registro de usuario | T013 | Firebase Auth register integration | Integrar `createUserWithEmailAndPassword` de Firebase Auth v12 para persistir nuevos usuarios y crear su perfil en Firestore. | 3 | Estrada Cajamune, Abraham Andrés | Done |
+| US-005 | Registro de usuario | T014 | Form validation and error handling | Implementar validación reactiva de campos (formato de email, longitud mínima de contraseña) y manejo tipado de errores de Firebase Auth. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-006 | Inicio de sesión | T015 | LoginForm component | Crear el componente Vue `LoginForm.vue` con campos de email y contraseña, incluyendo feedback visual del estado de carga (loading state). | 3 | Estrada Cajamune, Abraham Andrés | Done |
+| US-006 | Inicio de sesión | T016 | Firebase Auth sign-in integration | Integrar `signInWithEmailAndPassword` de Firebase Auth y manejar la persistencia de sesión con `setPersistence(LOCAL)`. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-006 | Inicio de sesión | T017 | Pinia auth session store | Implementar `useAuthStore()` con Pinia para centralizar el estado de autenticación del usuario (user, isAuthenticated, isLoading) entre vistas. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-009 | Autenticación externa segura | T018 | Firebase Google provider config | Configurar el proveedor OAuth de Google en Firebase Console y registrar las credenciales en `src/firebase.ts` del proyecto Vue. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-009 | Autenticación externa segura | T019 | GoogleSignIn button component | Implementar el componente `GoogleSignInButton.vue` que invoca `signInWithPopup` con `GoogleAuthProvider` de Firebase Auth. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-009 | Autenticación externa segura | T020 | OAuth callback and user profile sync | Manejar el resultado del callback de OAuth, sincronizar el perfil del usuario de Google con `useAuthStore()` y redirigir al dashboard principal. | 3 | Estrada Cajamune, Abraham Andrés | Done |
+
 #### 7.2.1.3. Development Evidence for Sprint Review
+
+En esta sección se registra la evidencia de implementación del Sprint 1. Los avances principales cubren el desarrollo y despliegue completo de la Landing Page de Oryxen (todas sus secciones) y el scaffolding inicial de la Web Application con integración de Firebase Authentication (Vue 3 + TypeScript + Pinia + PrimeVue). Los commits se distribuyen entre los repositorios `Oryxen-Landing-Page`, `Oryxen-Web-Application` y `Documentation-Report` bajo la organización GitHub de la solución.
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+|----------------|-----------|--------------|-------------------|------------------------|------------------------|
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | 0180565 | feat: add hero and about section | Implements responsive hero section with segmented CTA buttons and "About Oryxen" section describing the value proposition for both target segments. | 08/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | 3229368 | feat: add services section | Adds services section showcasing IoT real-time monitoring, AI-powered diagnostics and smart alert capabilities with visual cards. | 08/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | 0b687c3 | feat: add how it works section | Implements 3-step onboarding flow section covering Sensor Lite QR setup, plant profile creation and first health monitoring. | 14/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | f66b04f | feat: add benefits section | Adds benefits section with differentiated feature cards for busy users (automation, minimal effort) and plant enthusiasts (analytics, advanced reports). | 14/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | a8fa3a3 | feat: add team section | Adds GrassFarming team section with member profiles, photos, roles and academic background. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | ecef7cc | feat: add plans & pricing section | Implements Freemium and Premium subscription plan cards with feature comparison, Sensor Lite hardware pricing and upgrade CTA buttons. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | f2e24b1 | feat: add testimonials and footer section | Adds segmented user testimonials (busy user and enthusiast profiles) and footer with navigation links, social media and Terms of Service link. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application | main | e74cd83 | initial commit. | Scaffolding of Oryxen Web Application: Vue 3.5 + Vite 8 + TypeScript + PrimeVue 4 + Pinia 3 + Firebase SDK v12 + Vue Router 5. Base project structure with src/components, src/views, src/stores, src/services, src/router and Firebase config. | 16/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Documentation-Report | feature/chapter-7 | 6ec9a9a | docs(chapter-7): add source code management | Documents GitFlow workflow implementation, Conventional Commits strategy, Semantic Versioning and repository URLs for all five Oryxen digital product repositories. | 04/06/2026 |
 
 #### 7.2.1.4. Testing Suite Evidence for Sprint Review
 
