@@ -7729,6 +7729,29 @@ En esta sección se registra la evidencia de implementación del Sprint 1. Los a
 
 #### 7.2.1.4. Testing Suite Evidence for Sprint Review
 
+En esta sección se presentan las evidencias de la Testing Suite desarrollada durante el Sprint 1.
+Debido a que este Sprint se centró en la construcción de un MVP funcional con mockups y estructura inicial, se incluyeron principalmente pruebas iniciales de documentación y configuración del entorno de testing, así como planificación y estructura base para futuras pruebas automatizadas.
+Aún no se implementaron Unit Tests ni Integration Tests completos, ya que se requería primero consolidar la arquitectura y los módulos funcionales del Frontend y Backend. Sin embargo, se avanzó con la preparación del repositorio y la documentación técnica para los próximos sprints.
+
+|User Story|Avance durante el Sprint|	Testing asociado|
+|-|-|-|
+|US-001 - Acceso a la Landing Page| Funcional |Verificación manual de acceso y carga inicial de la página|
+|US-002 - Secciones informativas diferenciadas|Funcional |Revisión manual de estructura visual y navegación entre secciones|
+|US-003	- Call to Action contextual|Funcional|Validación manual del funcionamiento de CTAs y navegación|
+|US-004	Testimonios segmentados|En proceso|Planificado: Validación de maquetación y contenido dinámico|
+|US-005	Registro de usuario|Funcional|Planificado: Validación de campos obligatorios y flujo de registro|
+|US-006	Inicio de sesión|Funcional|Planificado: Validación de credenciales y redirección post-login (Acceptance Test)|
+|US-010	Cerrar sesión|Funcional|Planificado: Validación de cierre de sesión y limpieza de sesión|
+|US-011	Registro simplificado de planta|En proceso|Planificado: Verificación de estructura de formulario y persistencia simulada|
+|US-012	Edición rápida de información de planta|En proceso|Planificado: Validación de edición en modo mock y actualización visual|
+|US-013	Eliminación confirmada de planta|En proceso|Planificado: Test de confirmación modal y actualización en vista|
+|US-021	Análisis histórico con gráficos avanzados|En proceso (funcional con mockups)|Planificado: Validación de carga de datos simulados y render básico|
+|US-022	Reportes semanales detallados|En proceso (funcional con mockups)|Planificado: Verificación de estructura del reporte y navegación|
+|US-023	Reportes de largo plazo|En proceso (funcional con mockups)|Planificado: Validación del flujo visual|
+|US-027	Integración automática a la comunidad|En proceso (funcional con mockups)|Planificado: Validación de acceso automático y flujo simulado|
+|US-028	Feed comunitario|En proceso (funcional con mockups)|Planificado: Verificación de publicación y visualización en mock|
+|US-032	Interacción y aprendizaje comunitario|En proceso (funcional con mockups)|Planificado: Validación de reacciones y comentarios simulados|
+
 #### 7.2.1.5.	Execution Evidence for Sprint Review
 
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
@@ -7784,7 +7807,6 @@ Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` de
 #### 7.2.1.7.	Software Deployment Evidence for Sprint Review
 
 #### 7.2.1.8.	Team Collaboration Insights during Sprint
-
 
 ## 7.3. Validation Interviews
 
