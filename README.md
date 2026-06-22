@@ -53,6 +53,9 @@
 | Versión | Fecha | Autor | Descripción de Modificación |
 | ----------- | ----------- | ----------- | ----------- |
 | TB1 | 15/04/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | Se han incluido los siguientes capítulos: <br> - Capítulo I: Introducción <br> - Capítulo II: Requirements Elicitation & Analysis <br> - Capítulo III: Requirements Specification <br> - Capítulo IV: Strategic-Level Software Design |
+| TP1 | 30/04/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | Se han incluido los siguientes capítulos: <br> - Capítulo V: Tactical-Level Software Design <br> - Capítulo VI: Solution UX Design <br> - Avance de Capítulo VII (SCM, Sprint 1 Backlog) y Conclusiones preliminares. |
+| TB2 | 02/06/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | Se han incluido: <br> - Capítulo VII completado con Sprint 1 (Planning, Backlog, Development, Testing, Execution, Services Documentation, Deployment Evidence y Team Collaboration Insights). <br> - Avance de Sprint 2 Planning. <br> - Primera versión de Video About-the-Product y Video About-the-Team. <br> - Avance de Validation Interviews y Evaluaciones Heurísticas. |
+| TF1 | 22/06/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | **Cierre definitivo del proyecto.** Se han incluido: <br> - Capítulo VII completado: Sprint 2 (Planning, Backlog, Development, Testing, Execution, Services Documentation, Software Deployment y Team Collaboration Insights). <br> - Registro de Entrevistas de Validación (3 por segmento) y Evaluaciones Heurísticas completas (Usabilidad, Arquitectura de Información, Diseño Inclusivo). <br> - Video About-the-Product y Video About-the-Team finalizados con guiones y pauta de secuencias. <br> - Conclusiones finales con contraste Lean UX (Problem Statements, Assumptions, Hypothesis Statements) y Roadmap de expansión Estratégica. <br> - Versión final de Bibliografía y Anexos. |
 
 # Project Report Collaboration Insights
 
@@ -69,6 +72,42 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
 ![ContributorsTB1](./assets/Chapter-1/ContributorsTB1.png)
 ![NetworkGraphTB1](./assets/Chapter-1/NetworkGraphTB1.png)
 ![InsightsPeopleTB1](./assets/Chapter-1/InsightsPeopleTB1.png)
+
+**TB2** <br>
+Las tareas asignadas a la TB2 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega se redactaron los contenidos correspondientes a los capítulos 5 y 6, que constan en la documentación de los bounded context identificados que seguirá nuestra arquitectura y el diseño UX que seguirá nuestra solución para desarrollar los canales que podrá hacer uso nuestros usuarios.
+
+![PulseTB2](./assets/Chapter-1/PulseTB2.png)
+![ContributorsTB2](./assets/Chapter-1/ContributorsTB2.png)
+![NetworkGraphTB2](./assets/Chapter-1/NetworkGraphTB2.png)
+![InsightsPeopleTB2](./assets/Chapter-1/InsightsPeopleTB2.png)
+
+**TB2** <br>
+Las tareas asignadas a la TB2 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega se completó el Capítulo VII con la implementación del Sprint 1 (Landing Page, Web Application, Backend con Auth y Telemetría IoT), se documentó la Suite de Pruebas (xUnit + BDD Gherkin), el despliegue de los productos digitales y se prepararon las entrevistas de validación con usuarios de los dos segmentos objetivo.
+
+![PulseTB2](./assets/Chapter-1/PulseTB2.png)
+![ContributorsTB2](./assets/Chapter-1/ContributorsTB2.png)
+![NetworkGraphTB2](./assets/Chapter-1/NetworkGraphTB2.png)
+![InsightsPeopleTB2](./assets/Chapter-1/InsightsPeopleTB2.png)
+
+**TF1** <br>
+Las tareas asignadas al TF1 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
+- Sprint 2 documentado (funcionalidades premium: Stripe Payments, FCM Push Notifications, Analytics Dashboard, Community Feed).
+- 6 entrevistas de validación UX con usuarios reales (3 por segmento objetivo).
+- Matriz completa de Evaluación Heurística (Usabilidad, Arquitectura de Información, Diseño Inclusivo) según Anexo D del curso.
+- Videos About-the-Product y About-the-Team con guiones, pauta de secuencias y testimonio ABET 3 de cada integrante.
+- Conclusiones finales contrastando Problem Statements, Assumptions e Hypothesis Statements de Lean UX contra resultados obtenidos.
+- Roadmap de expansión estratégica del producto.
+
+![PulseTF1](./assets/Chapter-1/PulseTF1.png)
+![ContributorsTF1](./assets/Chapter-1/ContributorsTF1.png)
+![NetworkGraphTF1](./assets/Chapter-1/NetworkGraphTF1.png)
+![InsightsPeopleTF1](./assets/Chapter-1/InsightsPeopleTF1.png)
 
 
 # Contenido
@@ -144,24 +183,247 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
 
 ### [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
 
-- [5.1. Bounded Context: Auth & Identity Integration](#51-bounded-context-auth--identity-integration)
+- [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
+- [Project Report Collaboration Insights](#project-report-collaboration-insights)
+- [Contenido](#contenido)
+  - [Tabla de contenidos](#tabla-de-contenidos)
+    - [Capítulo I: Introducción](#capítulo-i-introducción)
+    - [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis)
+    - [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+    - [Capítulo IV: Strategic-Level Software Design](#capítulo-iv-strategic-level-software-design)
+    - [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
+  - [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
+      - [Conclusiones](#conclusiones)
+      - [Video About-the-Team](#video-about-the-team)
+      - [Bibliografía](#bibliografía)
+      - [Anexos](#anexos)
+- [Student Outcome](#student-outcome)
+- [Capítulo I: Introducción](#capítulo-i-introducción-1)
+  - [1.1. Startup Profile](#11-startup-profile)
+    - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+    - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2. Solution Profile](#12-solution-profile)
+    - [1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.2 Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+  - [1.3. Segmentos Objetivo](#13-segmentos-objetivo)
+- [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis-1)
+  - [2.1. Competidores](#21-competidores)
+    - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+    - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+      - [2.1.2.1. Modelo de Monetización y Análisis Financiero](#2121-modelo-de-monetización-y-análisis-financiero)
+      - [2.1.2.2. Operaciones de Hardware: Sensor Lite](#2122-operaciones-de-hardware-sensor-lite)
+  - [2.2. Entrevistas](#22-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+    - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+      - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas)
+      - [Segmento 2: Aficionados a la jardinería](#segmento-2-aficionados-a-la-jardinería)
+    - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+  - [2.3. Needfinding](#23-needfinding)
+    - [2.3.1. User Personas](#231-user-personas)
+    - [2.3.2. User Task Matrix](#232-user-task-matrix)
+    - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+      - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas-1)
+      - [Segmento 2: Aficionados a la jardinería](#segmento-2-aficionados-a-la-jardinería-1)
+    - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+      - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas-2)
+      - [Segmento 2: Aficionados a la jardinería](#segmento-2-aficionados-a-la-jardinería-2)
+  - [2.4. Big Picture EventStorming](#24-big-picture-eventstorming)
+  - [2.5. Ubiquitous Language](#25-ubiquitous-language)
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification-1)
+  - [3.1. To-be Scenario Mapping](#31-to-be-scenario-mapping)
+  - [3.2 User Stories](#32-user-stories)
+    - [Epics](#epics)
+    - [User Stories](#user-stories)
+    - [Technical Stories](#technical-stories)
+  - [3.3 Impact Mapping](#33-impact-mapping)
+    - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas-3)
+    - [Segmento 2: Aficionados](#segmento-2-aficionados)
+  - [3.4. Product Backlog](#34-product-backlog)
+- [Capítulo IV: Strategic-Level Software Design](#capítulo-iv-strategic-level-software-design-1)
+  - [4.1.	Strategic-Level Attribute-Driven Design](#41strategic-level-attribute-driven-design)
+    - [4.1.1. Design Purpose](#411-design-purpose)
+    - [4.1.2. Attribute-Driven Design Inputs](#412-attribute-driven-design-inputs)
+      - [4.1.2.1. Primary Functionality (Primary User Stories)](#4121-primary-functionality-primary-user-stories)
+      - [4.1.2.2. Quality attribute Scenarios](#4122-quality-attribute-scenarios)
+      - [4.1.2.3. Constraints](#4123-constraints)
+  - [4.2.	Strategic-Level Domain-Driven Design](#42strategic-level-domain-driven-design)
+    - [4.2.1. EventStorming](#421-eventstorming)
+    - [4.2.2. Candidate Context Discovery](#422-candidate-context-discovery)
+    - [4.2.3.	Domain Message Flows Modeling](#423domain-message-flows-modeling)
+    - [4.2.4.	Bounded Context Canvases](#424bounded-context-canvases)
+    - [4.2.5.	Context Mapping](#425context-mapping)
+      - [1. Revisión de la información recolectada](#1-revisión-de-la-información-recolectada)
+      - [2. Preguntas exploratorias](#2-preguntas-exploratorias)
+      - [3. Diseño de mapas candidatos](#3-diseño-de-mapas-candidatos)
+      - [4. Aplicación de buenas prácticas en los context maps](#4-aplicación-de-buenas-prácticas-en-los-context-maps)
+      - [Evidencia gráfica](#evidencia-gráfica)
+  - [4.3.	Software Architecture](#43software-architecture)
+    - [4.3.1.	Software Architecture System Landscape Diagram](#431software-architecture-system-landscape-diagram)
+    - [4.3.2.	Software Architecture Context Level Diagrams](#432software-architecture-context-level-diagrams)
+    - [4.3.3.	Software Architecture Container Level Diagrams](#433software-architecture-container-level-diagrams)
+    - [4.3.4.	Software Architecture Deployment Diagrams](#434software-architecture-deployment-diagrams)
+- [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design-1)
+  - [5.1. Bounded Context: Auth \& Identity Integration](#51-bounded-context-auth--identity-integration)
     - [5.1.1. Domain Layer](#511-domain-layer)
     - [5.1.2. Interface Layer](#512-interface-layer)
     - [5.1.3. Application Layer](#513-application-layer)
     - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
     - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
     - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
-        - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
-        - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
-- [5.2. Bounded Context: Analysis & Reporting](#52-bounded-context-analysis--reporting)
+      - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+      - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+    - [5.1.7 Mobile Client-Side Security Hardening](#517-mobile-client-side-security-hardening)
+      - [5.1.7.1 EncryptedSharedPreferences con Android Keystore](#5171-encryptedsharedpreferences-con-android-keystore)
+      - [5.1.7.2 Interceptor OkHttp de Renovación Automática de Token (Refresh Token Rotation)](#5172-interceptor-okhttp-de-renovación-automática-de-token-refresh-token-rotation)
+      - [5.1.7.3 SessionEventBus: Señalización de Sesión Expirada](#5173-sessioneventbus-señalización-de-sesión-expirada)
+      - [5.1.7.4 Erradicación de Datos Hardcodeados](#5174-erradicación-de-datos-hardcodeados)
     - [5.2.1. Domain Layer](#521-domain-layer)
     - [5.2.2. Interface Layer](#522-interface-layer)
     - [5.2.3. Application Layer](#523-application-layer)
     - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
     - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
     - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
-        - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
-        - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
+  - [5.3. Bounded Context: Device Management IoT](#53-bounded-context-device-management-iot)
+    - [5.3.1. Domain Layer](#531-domain-layer)
+    - [5.3.2. Interface Layer](#532-interface-layer)
+    - [5.3.3. Application Layer](#533-application-layer)
+    - [5.3.4. Infrastructure Layer](#534-infrastructure-layer)
+    - [5.3.5. Bounded Context Software Architecture Component Level Diagrams](#535-bounded-context-software-architecture-component-level-diagrams)
+    - [Incluye:](#incluye)
+    - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
+      - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
+      - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
+  - [5.4. Bounded Context: Artificial Intelligence (AI)](#54-bounded-context-artificial-intelligence-ai)
+    - [5.4.1. Domain Layer](#541-domain-layer)
+    - [5.4.2. Interface Layer](#542-interface-layer)
+    - [5.4.3. Application Layer](#543-application-layer)
+    - [5.4.4. Infrastructure Layer](#544-infrastructure-layer)
+    - [5.4.5. Bounded Context Software Architecture Component Level Diagrams](#545-bounded-context-software-architecture-component-level-diagrams)
+    - [5.4.6. Bounded Context Software Architecture Code Level Diagrams](#546-bounded-context-software-architecture-code-level-diagrams)
+      - [5.4.6.1. Bounded Context Domain Layer Class Diagrams](#5461-bounded-context-domain-layer-class-diagrams)
+      - [5.4.6.2. Bounded Context Database Design Diagram](#5462-bounded-context-database-design-diagram)
+    - [5.4.7. BDD Feature — Diagnóstico Multimodal de Salud Vegetal](#547-bdd-feature--diagnóstico-multimodal-de-salud-vegetal)
+  - [5.5. Bounded Context: Analysis \& Reporting](#55-bounded-context-analysis--reporting)
+    - [5.5.1. Domain Layer](#551-domain-layer)
+    - [5.5.2. Interface Layer](#552-interface-layer)
+    - [5.5.3. Application Layer](#553-application-layer)
+    - [5.5.4. Infrastructure Layer](#554-infrastructure-layer)
+    - [5.5.5. Frontend Web: Vue 3 + TypeScript](#555-frontend-web-vue-3--typescript)
+    - [5.5.6. Frontend Mobile: Kotlin + Jetpack Compose](#556-frontend-mobile-kotlin--jetpack-compose)
+    - [5.5.7. Bounded Context Software Architecture Component Level Diagrams](#557-bounded-context-software-architecture-component-level-diagrams)
+    - [5.5.8. Bounded Context Software Architecture Code Level Diagrams](#558-bounded-context-software-architecture-code-level-diagrams)
+      - [5.5.8.1. Bounded Context Domain Layer Class Diagrams](#5581-bounded-context-domain-layer-class-diagrams)
+      - [5.5.8.2. Bounded Context Database Design Diagram](#5582-bounded-context-database-design-diagram)
+    - [5.5.9. Especificación BDD (Gherkin)](#559-especificación-bdd-gherkin)
+  - [5.6. Bounded Context: Notification](#56-bounded-context-notification)
+    - [5.6.1. Domain Layer](#561-domain-layer)
+    - [5.6.1. Domain Layer](#561-domain-layer-1)
+    - [5.6.2. Interface Layer (API)](#562-interface-layer-api)
+    - [5.6.3. Application Layer](#563-application-layer)
+    - [5.6.4. Infrastructure Layer](#564-infrastructure-layer)
+    - [5.6.5. Bounded Context Software Architecture Component Level Diagrams](#565-bounded-context-software-architecture-component-level-diagrams)
+    - [5.6.6. Bounded Context Software Architecture Code Level Diagrams](#566-bounded-context-software-architecture-code-level-diagrams)
+    - [5.6.6.1. Bounded Context Domain Layer Class Diagram](#5661-bounded-context-domain-layer-class-diagram)
+    - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
+  - [5.7. Bounded Context: Billing and Subscription](#57-bounded-context-billing-and-subscription)
+    - [5.7.1. Domain Layer](#571-domain-layer)
+    - [5.7.2. Interface Layer](#572-interface-layer)
+    - [5.7.3. Application Layer](#573-application-layer)
+    - [5.7.4. Infrastructure Layer](#574-infrastructure-layer)
+    - [5.7.5. Bounded Context Software Architecture Component Level Diagrams](#575-bounded-context-software-architecture-component-level-diagrams)
+    - [5.7.6. Bounded Context Software Architecture Code Level Diagrams](#576-bounded-context-software-architecture-code-level-diagrams)
+      - [5.7.6.1. Bounded Context Domain Layer Class Diagrams](#5761-bounded-context-domain-layer-class-diagrams)
+      - [5.7.6.2. Bounded Context Database Design Diagram](#5762-bounded-context-database-design-diagram)
+  - [5.8. Bounded Context: Community](#58-bounded-context-community)
+    - [5.8.1. Domain Layer](#581-domain-layer)
+    - [5.8.2. Interface Layer](#582-interface-layer)
+    - [5.8.3. Application Layer](#583-application-layer)
+    - [5.8.4. Infrastructure Layer](#584-infrastructure-layer)
+    - [5.8.5. Bounded Context Software Architecture Component Level Diagrams](#585-bounded-context-software-architecture-component-level-diagrams)
+    - [5.8.6. Bounded Context Software Architecture Code Level Diagrams](#586-bounded-context-software-architecture-code-level-diagrams)
+      - [5.8.6.1. Bounded Context Domain Layer Class Diagrams](#5861-bounded-context-domain-layer-class-diagrams)
+      - [5.8.6.2. Bounded Context Database Design Diagram](#5862-bounded-context-database-design-diagram)
+- [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design-1)
+  - [6.1. Style Guidelines](#61-style-guidelines)
+    - [6.1.1. General Style Guidelines](#611-general-style-guidelines)
+    - [6.1.2. Web, Mobile \& Devices Style Guidelines](#612-web-mobile--devices-style-guidelines)
+      - [A. Web Style Guidelines (Landing Page \& Web App)](#a-web-style-guidelines-landing-page--web-app)
+      - [B. Mobile Style Guidelines (Native iOS \& Android)](#b-mobile-style-guidelines-native-ios--android)
+      - [C. Devices (IoT Hardware) Style \& Feedback Guidelines](#c-devices-iot-hardware-style--feedback-guidelines)
+  - [6.2. Information Architecture](#62-information-architecture)
+    - [6.2.1. Organization Systems](#621-organization-systems)
+    - [6.2.2. Labeling Systems](#622-labeling-systems)
+      - [A. Navigation Labels](#a-navigation-labels)
+      - [B. Action Labels](#b-action-labels)
+      - [C. Status and Alert Labels](#c-status-and-alert-labels)
+      - [D. Form and Data Labels](#d-form-and-data-labels)
+      - [E. Search and Filter Labels](#e-search-and-filter-labels)
+      - [F. Feedback Labels](#f-feedback-labels)
+    - [6.2.3. Searching Systems.](#623-searching-systems)
+    - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
+      - [A. Landing Page](#a-landing-page)
+      - [B. Web Application](#b-web-application)
+      - [C. Mobile Application](#c-mobile-application)
+    - [6.2.5. Navigation Systems](#625-navigation-systems)
+      - [A. Landing Page Navigation](#a-landing-page-navigation)
+      - [B. Web Application Navigation (Dashboard)](#b-web-application-navigation-dashboard)
+      - [C. Mobile Application Navigation](#c-mobile-application-navigation)
+    - [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+      - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
+      - [6.3.1. Landing Page Mock-up](#631-landing-page-mock-up)
+  - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
+    - [6.4.1. Applications Wireframes](#641-applications-wireframes)
+    - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
+    - [6.4.3. Applications Mock-ups](#643-applications-mock-ups)
+    - [6.4.4. Applications User Flow Diagrams](#644-applications-user-flow-diagrams)
+      - [A. Flujo 1: Onboarding y Registro Manual de Planta (Plan Básico / Freemium)](#a-flujo-1-onboarding-y-registro-manual-de-planta-plan-básico--freemium)
+      - [B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)](#b-flujo-2-vinculación-de-hardware-sensor-lite-expansión-de-la-experiencia)
+      - [C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)](#c-flujo-3-diagnóstico-visual-con-inteligencia-artificial-plan-premium)
+    - [6.5. Applications Prototyping](#65-applications-prototyping)
+- [Capítulo VII: Product Implementation, Validation \& Deployment](#capítulo-vii-product-implementation-validation--deployment)
+  - [7.1. Software Configuration Management](#71-software-configuration-management)
+    - [7.1.1. Software Development Environment Configuration](#711-software-development-environment-configuration)
+    - [7.1.2. Source Code Management](#712-source-code-management)
+    - [7.1.3. Source Code Style Guide \& Conventions](#713-source-code-style-guide--conventions)
+    - [7.1.4. Software Deployment Configuration](#714-software-deployment-configuration)
+  - [7.2. Solution Implementation](#72-solution-implementation)
+    - [7.2.1. Sprint 1](#721-sprint-1)
+      - [7.2.1.1. Sprint Planning 1](#7211-sprint-planning-1)
+      - [7.2.1.2. Sprint Backlog 1](#7212-sprint-backlog-1)
+      - [7.2.1.3. Development Evidence for Sprint Review](#7213-development-evidence-for-sprint-review)
+      - [7.2.1.4. Testing Suite Evidence for Sprint Review](#7214-testing-suite-evidence-for-sprint-review)
+        - [Estructura de la Suite de Pruebas](#estructura-de-la-suite-de-pruebas)
+        - [A. Pruebas Unitarias — `PlantHealthCalculator` (Dominio)](#a-pruebas-unitarias--planthealthcalculator-dominio)
+        - [B. Pruebas Unitarias — `AuthService` (Aplicación)](#b-pruebas-unitarias--authservice-aplicación)
+        - [C. Especificaciones BDD (Gherkin .feature)](#c-especificaciones-bdd-gherkin-feature)
+        - [D. Resultados de Ejecución](#d-resultados-de-ejecución)
+        - [E. Mapeo User Stories → Testing Suite](#e-mapeo-user-stories--testing-suite)
+      - [7.2.1.5.	Execution Evidence for Sprint Review](#7215execution-evidence-for-sprint-review)
+      - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
+      - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
+      - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
+    - [7.2.3. Internacionalización (i18n) y Accesibilidad (a11y) — Web Application](#723-internacionalización-i18n-y-accesibilidad-a11y--web-application)
+      - [7.2.3.1. Internacionalización (i18n) — vue-i18n](#7231-internacionalización-i18n--vue-i18n)
+      - [7.2.3.2. Accesibilidad (a11y) — ARIA Attributes](#7232-accesibilidad-a11y--aria-attributes)
+    - [7.3. Validation Interviews](#73-validation-interviews)
+    - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
+    - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
+      - [Segmento 1 — Personas Ocupadas](#segmento-1--personas-ocupadas)
+      - [Segmento 2 — Aficionados a la Jardinería](#segmento-2--aficionados-a-la-jardinería)
+    - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
+    - [7.4. Video About-the-Product](#74-video-about-the-product)
+  - [Video About-the-Team](#video-about-the-team-1)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+    - [Contraste de Resultados frente al Lean UX Process](#contraste-de-resultados-frente-al-lean-ux-process)
+    - [Roadmap de Expansión Estratégica](#roadmap-de-expansión-estratégica)
+- [Bibliografía](#bibliografía-1)
+- [Anexos](#anexos-1)
+  - [Anexo A — Enlaces Maestros del Proyecto](#anexo-a--enlaces-maestros-del-proyecto)
+  - [Anexo B — Videos de Exposición](#anexo-b--videos-de-exposición)
 
 ## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
   - [6.1. Style Guidelines](#61-style-guidelines)
@@ -183,7 +445,10 @@ En esta entrega se redactaron los contenidos correspondientes utilizando formato
   - [6.5. Applications Prototyping](#65-applications-prototyping)
 
 #### [Conclusiones](#conclusiones)  
-- [Conclusiones y recomendaciones.](#conclusiones-y-recomendaciones)  
+- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)  
+- [Roadmap de Expansión Estratégica](#roadmap-de-expansión-estratégica)
+
+#### [Video About-the-Team](#video-about-the-team)
 
 #### [Bibliografía](#bibliografía)  
 
@@ -645,6 +910,157 @@ Oryxen buscará integrarse progresivamente con plataformas de hogar inteligente 
 
 **Aprendizaje continuo mediante feedback del usuario:**
 El sistema utilizará interacciones y retroalimentación de los usuarios para mejorar la precisión de alertas, recomendaciones y diagnósticos visuales, fortaleciendo la confianza en la plataforma con el tiempo.
+
+---
+
+#### 2.1.2.1. Modelo de Monetización y Análisis Financiero
+
+**Conversión Freemium → Premium: Métricas Objetivo SaaS/IoT**
+
+El modelo Freemium de Oryxen posiciona la aplicación gratuita como canal de adquisición principal. La conversión al plan Premium y la compra del Sensor Lite son los eventos de monetización críticos del negocio. Las siguientes métricas guían las decisiones de diseño de producto y estrategia de crecimiento:
+
+| Métrica | Definición | Objetivo Año 1 | Objetivo Año 2 |
+|---------|-----------|----------------|----------------|
+| **Tasa de Conversión MoM (Freemium→Premium)** | % de usuarios del plan gratuito que activan Premium en el mes | 3.5% | 5.0% |
+| **Churn Rate Mensual (Premium)** | % de suscriptores Premium que cancelan en el mes | < 2.5% | < 2.0% |
+| **LTV / CAC Ratio** | Valor de vida del cliente vs. costo de adquisición por canal digital | > 2.5:1 | > 3:1 |
+| **ARPU Mensual (Premium)** | Ingreso promedio por usuario premium activo | $8.99 USD | $10.99 USD |
+| **Net Revenue Retention (NRR)** | Retención de ingresos considerando expansión (upsell hardware) y churn | > 105% | > 110% |
+| **Payback Period (CAC)** | Meses para recuperar el costo de adquisición con ingresos recurrentes | ≤ 6 meses | ≤ 4 meses |
+| **DAU/MAU (Engagement Index)** | Ratio de usuarios activos diarios sobre mensuales | > 25% | > 35% |
+
+**Supuesto clave de conversión:** La funcionalidad de diagnóstico visual por IA (foto de planta → diagnóstico instantáneo) actúa como *aha moment* que dispara la conversión. El objetivo es que el usuario experimente este evento dentro de las primeras 72 horas de uso gratuito, antes de que ocurra el mayor riesgo de abandono (ventana de drop-off día 1–3).
+
+---
+
+**Modelo Financiero: Break-Even del Sensor Lite**
+
+El Sensor Lite representa el componente de hardware de entrada al ecosistema Oryxen IoT. A continuación se establece el modelo financiero para evaluar la viabilidad y el punto de equilibrio de la línea de hardware.
+
+**Supuestos financieros por unidad (Año 1):**
+
+| Parámetro | Valor | Nota |
+|-----------|-------|------|
+| COGS — fabricación + componentes electrónicos | $18.00 USD | Producción en lotes mínimos de 500 unidades |
+| Costo logístico unitario (almacén + última milla Lima) | $7.00 USD | Operador logístico regional |
+| **Costo total unitario (COGS + logística)** | **$25.00 USD** | |
+| Precio de venta al público (PVP) | $49.00 USD | Incluye 3 meses de suscripción Premium |
+| **Margen bruto unitario de hardware** | **$24.00 USD (49%)** | |
+| Valor nominal de la suscripción incluida (3 × $8.99) | $26.97 USD | Reconocido como descuento de adquisición en el modelo |
+| Ingreso neto efectivo por hardware en Year 1 (margen − costo promo) | ~$20.00 USD | |
+
+**Cálculo de Break-Even mensual (Año 1):**
+
+| Concepto | Valor |
+|----------|-------|
+| Costos fijos mensuales estimados (infraestructura cloud, soporte, marketing) | $2,500 USD |
+| Unidades necesarias para cubrir costos fijos **solo con margen de hardware** | 2,500 ÷ 24 = **105 unidades/mes** |
+| Unidades necesarias **incorporando ingresos recurrentes de suscripción** (retención 80% tras período de regalo) | 2,500 ÷ (24 + 7.19*) ≈ **80 unidades/mes** |
+
+*$7.19 = ARPU $8.99 × 80% de retención × participación de usuarios hardware sobre el total*
+
+**Análisis de Payback por usuario hardware:**
+
+El costo de adquisición total de un usuario hardware es `COGS ($25) + CAC digital estimado ($8) = $33.00`. El retorno se compone de:
+
+- Margen inmediato de hardware: **$24.00**
+- Ingresos recurrentes de suscripción post-período regalo (meses 4–12): 9 × $8.99 = **$80.91**
+- **Total Year 1 por usuario hardware: $104.91 USD**
+- **ROI sobre la inversión de adquisición ($33): 218%**
+- El payback de la inversión de adquisición se alcanza dentro del **primer mes** gracias al margen de hardware, haciendo que cada unidad vendida sea profitable desde el día uno de la transacción.
+
+---
+
+**BC Community y su Rol en la Retención Premium**
+
+El Bounded Context **Community** es un diferenciador estratégico que genera efectos de red directamente vinculados al modelo de monetización. Su impacto en las métricas clave de ingresos se manifiesta en tres mecanismos concretos:
+
+**1. Reducción del Churn por Switching Costs Sociales:** Los usuarios Premium que participan activamente en la comunidad (comparten progreso de plantas, responden preguntas, reciben reconocimientos de la comunidad) desarrollan capital social dentro de la plataforma. Cancelar la suscripción implica perder ese capital, incrementando los switching costs no económicos. Benchmark de referencia: plataformas con componente social registran un churn 18–25% menor que sus equivalentes sin él (Duolingo reportó +30% en mantenimiento de streaks para usuarios con componente social).
+
+**2. Alertas Comunitarias de Plagas como Feature Premium Exclusivo:** La posibilidad de compartir y recibir alertas validadas por la comunidad sobre plagas o enfermedades detectadas en zonas geográficas cercanas (geolocalización opt-in) es una funcionalidad exclusiva del plan Premium. Este feature genera valor colectivo creciente con la base de usuarios activos, reforzando el modelo de red: a más usuarios Premium activos, más valiosa es la alerta comunitaria para todos. Esto crea un *positive feedback loop* entre crecimiento de usuarios y valor percibido del plan Premium.
+
+**3. Foros de Soporte Colaborativo como Deflector de Tickets (Nivel 0):** La comunidad actúa como primera línea de soporte entre pares, reduciendo el volumen de tickets que escalan al Nivel 1 del soporte formal. Esto disminuye el costo operativo de soporte en un estimado de 15–20%, mejorando directamente el margen neto del plan Premium y la escalabilidad del equipo de Customer Success.
+
+---
+
+#### 2.1.2.2. Operaciones de Hardware: Sensor Lite
+
+**Cadena de Distribución y Logística**
+
+El proceso logístico del Sensor Lite cubre desde la fabricación hasta la activación en campo del dispositivo:
+
+```
+[Proveedor / Fabricante (EMS)] → [Control de Calidad (QA)] → [Almacén Central GrassFarming — Lima]
+    → [Operador Logístico (Shalom / Olva Express)] → [Despacho Última Milla] → [Usuario Final]
+```
+
+**Etapas del flujo logístico:**
+
+| Etapa | Responsable | Descripción | SLA Interno |
+|-------|-------------|-------------|-------------|
+| **Fabricación y QA** | Proveedor EMS + GrassFarming QA | Lotes mínimos de 500 unidades. Prueba de firmware, calibración de sensores y verificación de conectividad BLE/WiFi antes del despacho | 15 días hábiles por lote |
+| **Recepción en almacén central** | Operaciones GrassFarming | Verificación de inventario, asignación de Serial Number único y código QR de activación por unidad | 2 días hábiles |
+| **Procesamiento del pedido** | Sistema automatizado (ERP/WMS) | Picking, packing y generación de guía de despacho al confirmar pago en plataforma | < 24 horas hábiles |
+| **Despacho y tránsito** | Operador logístico (Shalom/Olva) | Lima Metropolitana: 1–2 días hábiles. Provincias: 3–5 días hábiles | Según cobertura del operador |
+| **Notificación al usuario** | Sistema Oryxen (push + email) | Código de seguimiento y enlace al flujo de activación en la app | Inmediato al registrar despacho |
+
+---
+
+**Proceso de Activación del Sensor Lite (Device Provisioning)**
+
+El proceso de activación sigue un flujo guiado dentro de la aplicación Oryxen, minimizando la fricción técnica para usuarios sin experiencia en IoT:
+
+**Paso 1 — Escaneo del Código QR:** El usuario accede a "Mis Dispositivos" → "Agregar Sensor" y escanea el código QR único impreso en la etiqueta del Sensor Lite. El QR codifica el `deviceSerial`, `deviceModel` y `firmwareVersion`. El backend pre-valida que el serial no esté registrado previamente.
+
+**Paso 2 — Modo Pairing BLE:** El usuario presiona el botón físico de pairing durante 3 segundos hasta que el LED indicador parpadea en azul (1 Hz), señalando modo de descubrimiento BLE.
+
+**Paso 3 — Descubrimiento y Conexión BLE:** La app activa el escáner BLE y detecta el dispositivo por su `advertisedName` (`ORYXEN-{últimos 4 dígitos del serial}`). El usuario confirma la conexión. El canal BLE se establece cifrado (AES-128 CCM).
+
+**Paso 4 — Provisioning de Red WiFi:** La app solicita las credenciales de la red WiFi (SSID + contraseña, solo redes 2.4 GHz). Las credenciales se transmiten al Sensor Lite a través del canal BLE seguro y se almacenan en memoria flash cifrada (EEPROM con AES-128).
+
+**Paso 5 — Conexión a Internet y Registro en Backend:** El Sensor Lite conecta a la red WiFi y realiza una solicitud HTTPS al endpoint de registro del Device Management BC (`/api/v1/devices/provision`), incluyendo `deviceSerial`, `firmwareVersion` y `userId` obtenido del JWT de la app. El backend registra el dispositivo, valida la suscripción y habilita la telemetría.
+
+**Paso 6 — Confirmación y Primera Lectura:** La app recibe confirmación de activación exitosa. El LED pasa a verde fijo. La primera lectura de telemetría (humedad, temperatura, luz) aparece en el dashboard en menos de 60 segundos. El evento `DeviceActivatedEvent` es consumido por el BC Analysis & Reporting para inicializar la línea base de métricas históricas.
+
+---
+
+**Política de Devoluciones y Garantía**
+
+| Política | Condiciones | Plazo | Proceso |
+|----------|-------------|-------|---------|
+| **Devolución por insatisfacción** | Hardware en estado original, sin uso efectivo, en embalaje original | 30 días calendario desde recepción | Usuario solicita devolución en app → Código de devolución generado → Envío con carrier de GrassFarming → Reembolso en 5–7 días hábiles al medio de pago original |
+| **Garantía por defecto de fábrica** | Falla de componentes electrónicos, sensores descalibrados, falla de conectividad BLE/WiFi sin causa externa, daño en PCB por fabricación | 12 meses desde fecha de compra | RMA iniciado en Nivel 2 de soporte → Diagnóstico remoto → Envío de unidad de reemplazo en 5–7 días hábiles → Unidad defectuosa retornada con guía prepagada |
+| **Exclusiones de garantía** | Daño físico por caídas, inmersión total en agua, cortocircuito por alimentación externa incorrecta, modificación del firmware por el usuario | — | Se ofrece opción de compra de reemplazo a precio reducido ($35 USD) |
+
+---
+
+**Soporte al Cliente: Canales, SLA y Niveles de Escalamiento**
+
+**Canales de Atención:**
+
+| Canal | Disponibilidad | Uso principal |
+|-------|---------------|---------------|
+| **In-App Live Chat** | Lun–Vie 8:00–20:00, Sáb 9:00–14:00 (GMT-5) | Consultas generales, guía de activación, billing |
+| **WhatsApp Business (Enterprise API)** | Lun–Vie 8:00–20:00; respuesta automatizada 24/7 para FAQs | Seguimiento de pedidos, reporte de falla de hardware |
+| **Email (soporte@oryxen.io)** | 24/7 (respuesta en horario laboral) | Solicitudes formales de RMA, garantías, escalamientos documentados |
+| **Portal de Auto-Servicio (Help Center)** | 24/7 | Base de conocimiento, FAQs, guías de activación en video, estado del servicio |
+
+**Tabla Formal de SLA por Nivel de Escalamiento:**
+
+| Nivel | Equipo | Tipo de Incidente | Canal de Ingreso | Tiempo de 1ª Respuesta | Objetivo de Resolución | Criterio de Escalamiento |
+|-------|--------|-------------------|-----------------|-----------------------|------------------------|--------------------------|
+| **Nivel 1** — Atención al Cliente (Customer Success) | Agente de soporte general | Preguntas de uso, configuración inicial de la app, gestión de cuenta y billing, seguimiento del pedido del Sensor Lite, guía de activación paso a paso | In-App Chat, WhatsApp, Email | **< 1 hora** (horario laboral) | **< 4 horas** | No resuelto en < 4 horas de respuesta activa → escalamiento automático a Nivel 2 |
+| **Nivel 2** — Especialista Técnico (Hardware & IoT) | Técnico certificado en IoT | Falla de conectividad BLE o WiFi post-activación, sensor con lecturas fuera de rango (descalibrado), falla de actualización de firmware (OTA), pérdida de telemetría, inicio de proceso RMA | Ticket interno generado desde Nivel 1 | **< 4 horas** (horario laboral) | **< 24 horas** | Diagnóstico confirma falla de software o infraestructura → escalamiento a Nivel 3. Falla de hardware confirmada → inicio de RMA |
+| **Nivel 3** — Ingeniería de Software / DevOps | Ingeniero de backend / SRE | Bugs reproducibles en plataforma web/móvil, pérdida o corrupción de datos de telemetría, fallas sistemáticas del modelo IA, incidentes de infraestructura (caída de servicio, latencia elevada), vulnerabilidades de seguridad reportadas | Escalamiento interno desde Nivel 2 / reporte directo de QA | **< 4 horas** | **< 72 horas** (bugs complejos); **< 4 horas** (incidentes críticos P0) | Post-mortem obligatorio para P0 y P1. Ticket cerrado solo con evidencia de fix deployado en producción |
+
+**Clasificación de Incidentes por Prioridad:**
+
+| Prioridad | Descripción | SLA de Resolución |
+|-----------|-------------|-------------------|
+| **P0 — Crítico** | Plataforma inaccesible para todos los usuarios, pérdida masiva de datos, vulnerabilidad de seguridad activa | < 4 horas (Nivel 3 on-call 24/7) |
+| **P1 — Alto** | Falla de funcionalidad core para > 20% de usuarios (diagnóstico IA, telemetría, billing) | < 8 horas |
+| **P2 — Medio** | Falla de funcionalidad no crítica, bug reproducible, hardware individual con falla | < 24 horas |
+| **P3 — Bajo** | Consultas generales, mejoras solicitadas, bugs cosméticos | < 72 horas |
 
 
 <div style="page-break-after: always;"></div>
@@ -1565,7 +1981,744 @@ Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Se
 
 # Capítulo V: Tactical-Level Software Design
 
-## 5.2. Bounded Context: Plant Management
+## 5.1. Bounded Context: Auth & Identity Integration
+
+El bounded context de **Auth & Identity Integration** representa la capa de seguridad transversal de la plataforma Oryxen, responsable de la autenticación de usuarios, la gestión de sesiones y el control de acceso basado en roles (RBAC). Este contexto actúa como guardián del ecosistema: todo intento de acceso a recursos protegidos es validado por este contexto antes de ser procesado por cualquier otro bounded context. Integra el estándar OAuth 2.0 / OpenID Connect (OIDC) para autenticación federada con proveedores externos (Google/Firebase), y emite tokens JWT firmados con RS256 para autorizar peticiones internas. Define tres roles fundamentales del sistema: **FARMER** (Agricultor/Cliente), **ADMIN** (Administrador) y **SUPPORT_TECHNICIAN** (Técnico de Soporte).
+
+### 5.1.1. Domain Layer
+
+La capa de dominio del bounded context **Auth & Identity Integration** modela las identidades de usuario, los mecanismos de autenticación, el ciclo de vida de los tokens y las políticas de control de acceso.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `UserAccount`
+
+**Namespace:** `Oryxen.Domain.Entities`
+
+**Propósito:** Representa la cuenta de identidad de un usuario registrado en la plataforma. Constituye el Aggregate Root del bounded context Auth & Identity Integration. Encapsula las credenciales, el estado de la cuenta, el proveedor de autenticación utilizado y los roles asignados.
+
+**Atributos:**
+
+- `id: UUID` → Identificador único de la cuenta de usuario.
+- `email: Email` → Dirección de correo electrónico (Value Object, inmutable tras verificación).
+- `passwordHash: PasswordHash` → Hash BCrypt de la contraseña (nulo si el proveedor es OAuth2 externo).
+- `authProvider: AuthProvider` → Proveedor de autenticación utilizado (`LOCAL`, `GOOGLE`, `FIREBASE`).
+- `authProviderId: String` → ID externo del proveedor OAuth2 (nulo si `authProvider = LOCAL`).
+- `status: AccountStatus` → Estado de la cuenta (`PENDING_VERIFICATION`, `ACTIVE`, `SUSPENDED`, `DELETED`).
+- `roles: List<UserRole>` → Lista de roles asignados al usuario.
+- `createdAt: DateTime` → Fecha y hora de creación de la cuenta.
+- `updatedAt: DateTime` → Fecha y hora de la última modificación.
+
+**Métodos:**
+
+- `activate()` → Activa la cuenta tras la verificación de correo electrónico.
+- `suspend(reason: String)` → Suspende la cuenta indicando el motivo.
+- `delete()` → Marca la cuenta como eliminada (soft-delete, no se borra físicamente).
+- `assignRole(role: UserRole)` → Asigna un nuevo rol al usuario, validando que no esté duplicado.
+- `revokeRole(role: UserRole)` → Revoca un rol del usuario.
+- `isActive()` → Verifica si la cuenta se encuentra en estado `ACTIVE`.
+- `hasRole(roleName: String)` → Verifica si el usuario posee un rol determinado.
+- `updatePassword(newPasswordHash: PasswordHash)` → Actualiza el hash de contraseña y revoca sesiones activas.
+
+**Relaciones:**
+
+- Un `UserAccount` puede poseer múltiples roles (`UserRole`).
+- Un `UserAccount` puede tener múltiples `RefreshToken` activos (soporte multi-dispositivo).
+- Un `UserAccount` puede mantener múltiples `Session` concurrentes.
+
+
+**b. Entities del dominio:**
+
+`Role`
+
+**Propósito:** Representa un rol de autorización dentro del sistema. Define el conjunto de permisos que se aplican a los usuarios asignados. Oryxen define tres roles fundamentales:
+
+- **`FARMER`** (Agricultor/Cliente): acceso a funciones de monitoreo, diagnóstico IA, gestión de plantas y comunidad.
+- **`ADMIN`** (Administrador): acceso total a la plataforma, gestión de usuarios, planes y configuración del sistema.
+- **`SUPPORT_TECHNICIAN`** (Técnico de Soporte): acceso a tickets de soporte, estado de dispositivos IoT y logs del sistema para diagnóstico técnico.
+
+**Atributos:**
+
+- `id: UUID`
+- `name: String`
+- `description: String`
+- `permissions: List<String>`
+
+**Métodos:**
+
+- `addPermission(permission: String)` → Añade un permiso al rol.
+- `removePermission(permission: String)` → Elimina un permiso del rol.
+
+
+`RefreshToken`
+
+**Propósito:** Representa un token de actualización de larga duración asociado a una sesión de usuario. Permite emitir nuevos JWT de acceso (duración: 15 minutos) sin requerir credenciales completas, implementando un esquema de *sliding window* de 30 días.
+
+**Atributos:**
+
+- `id: UUID`
+- `userId: UUID`
+- `tokenHash: String` → Hash SHA-256 del token (nunca se almacena en texto plano).
+- `deviceInfo: String` → Información del dispositivo emisor (user-agent, OS).
+- `expiresAt: DateTime`
+- `isRevoked: boolean`
+- `createdAt: DateTime`
+
+**Métodos:**
+
+- `revoke()` → Invalida el token de forma permanente.
+- `isExpired()` → Verifica si el token ha superado su fecha de expiración.
+- `isValid()` → Retorna `true` si el token no está revocado ni expirado.
+
+
+`Session`
+
+**Propósito:** Representa una sesión activa de usuario asociada a un JWT emitido, almacenada en caché Redis para revocación inmediata.
+
+**Atributos:**
+
+- `id: UUID`
+- `userId: UUID`
+- `jwtTokenHash: String`
+- `issuedAt: DateTime`
+- `expiresAt: DateTime`
+- `isActive: boolean`
+- `ipAddress: String`
+
+**Métodos:**
+
+- `invalidate()` → Cierra la sesión activa.
+- `isExpired()` → Verifica si la sesión ha expirado.
+
+
+**c. Value Objects:**
+
+`Email`
+
+Representa una dirección de correo electrónico validada mediante expresión regular RFC-5322.
+
+**Atributos:**
+
+- `value: String`
+
+**Métodos:**
+
+- `validate()` → Lanza `InvalidEmailException` si el formato es inválido.
+- `equals(other: Email)` → Comparación estricta por valor (case-insensitive).
+
+
+`PasswordHash`
+
+Representa el hash BCrypt de una contraseña con factor de coste 12. Nunca expone el valor original.
+
+**Atributos:**
+
+- `value: String` → Hash BCrypt completo incluyendo sal y factor de coste.
+
+**Métodos:**
+
+- `matches(rawPassword: String)` → Verifica si la contraseña en texto plano corresponde al hash almacenado.
+
+
+`AuthProvider`
+
+Enumera los proveedores de identidad soportados por la plataforma.
+
+**Valores posibles:**
+
+- `LOCAL`
+- `GOOGLE`
+- `FIREBASE`
+
+
+`AccountStatus`
+
+Representa el estado del ciclo de vida de una cuenta de usuario.
+
+**Valores posibles:**
+
+- `PENDING_VERIFICATION`
+- `ACTIVE`
+- `SUSPENDED`
+- `DELETED`
+
+
+`UserRole`
+
+Enumera los roles de autorización del sistema Oryxen.
+
+**Valores posibles:**
+
+- `FARMER`
+- `ADMIN`
+- `SUPPORT_TECHNICIAN`
+
+
+`JwtToken`
+
+Representa un JSON Web Token firmado emitido por el sistema.
+
+**Atributos:**
+
+- `value: String` → Token JWT compacto (header.payload.signature en Base64URL).
+- `expiresAt: DateTime`
+
+**Métodos:**
+
+- `isExpired()` → Verifica si el token ha superado su fecha de expiración.
+- `getClaims()` → Extrae y retorna los claims del payload (`sub`, `roles`, `iat`, `exp`, `iss`).
+
+
+**d. Commands del dominio:**
+
+`RegisterUserCommand`
+
+**Namespace:** `Oryxen.Application.Auth.Contracts`
+
+**Propósito:** Registrar un nuevo usuario con credenciales locales (email + contraseña).
+
+**Atributos:**
+
+- `email: String`
+- `rawPassword: String`
+- `firstName: String`
+- `lastName: String`
+
+
+`LoginCommand`
+
+**Propósito:** Autenticar un usuario con credenciales locales y emitir un par de tokens (JWT de acceso + refresh token).
+
+**Atributos:**
+
+- `email: String`
+- `rawPassword: String`
+- `deviceInfo: String`
+
+
+`OAuthLoginCommand`
+
+**Propósito:** Autenticar o registrar un usuario mediante proveedor OAuth2 externo (Google/Firebase OIDC).
+
+**Atributos:**
+
+- `idToken: String` → Token de identidad emitido por el proveedor externo.
+- `provider: AuthProvider`
+- `deviceInfo: String`
+
+
+`LogoutCommand`
+
+**Propósito:** Cerrar sesión de un usuario revocando el refresh token activo y la sesión en caché.
+
+**Atributos:**
+
+- `userId: UUID`
+- `refreshTokenValue: String`
+
+
+`RefreshTokenCommand`
+
+**Propósito:** Renovar el JWT de acceso usando un refresh token válido, sin rotar el refresh token (política *sliding window*).
+
+**Atributos:**
+
+- `refreshTokenValue: String`
+
+
+`ChangePasswordCommand`
+
+**Propósito:** Actualizar la contraseña de un usuario autenticado, revocando todas las sesiones activas por seguridad.
+
+**Atributos:**
+
+- `userId: UUID`
+- `currentRawPassword: String`
+- `newRawPassword: String`
+
+
+`AssignRoleCommand`
+
+**Propósito:** Asignar un rol a un usuario (operación restringida al rol ADMIN).
+
+**Atributos:**
+
+- `targetUserId: UUID`
+- `role: UserRole`
+- `requestedByUserId: UUID`
+
+
+`RevokeAllTokensCommand`
+
+**Propósito:** Revocar todos los refresh tokens de un usuario (cierre de sesión global en todos los dispositivos).
+
+**Atributos:**
+
+- `userId: UUID`
+
+
+**e. Queries del dominio:**
+
+`GetUserByIdQuery`
+
+**Propósito:** Obtener la información de un usuario por su identificador único.
+
+**Atributos:**
+
+- `userId: UUID`
+
+
+`GetUserByEmailQuery`
+
+**Propósito:** Obtener la información de un usuario por su dirección de correo electrónico.
+
+**Atributos:**
+
+- `email: String`
+
+
+`ValidateTokenQuery`
+
+**Propósito:** Validar la firma y vigencia de un JWT de acceso, retornando los claims extraídos.
+
+**Atributos:**
+
+- `jwtToken: String`
+
+
+`GetUserRolesQuery`
+
+**Propósito:** Obtener los roles asignados a un usuario específico.
+
+**Atributos:**
+
+- `userId: UUID`
+
+
+`ListUsersQuery`
+
+**Propósito:** Obtener la lista paginada de usuarios registrados (requiere rol ADMIN).
+
+**Atributos:**
+
+- `page: int`
+- `size: int`
+- `statusFilter: AccountStatus`
+
+
+**f. Domain Services:**
+
+`AuthenticationDomainService`
+
+**Namespace:** `Oryxen.Domain.Services`
+
+**Propósito:** Coordinar el flujo de autenticación validando credenciales, delegando al proveedor de identidad correspondiente y orquestando la emisión del par de tokens.
+
+**Operaciones:**
+
+- `handle(LoginCommand)` → Retorna `AuthTokenPair` (accessToken + refreshToken).
+- `handle(OAuthLoginCommand)` → Valida el idToken externo, crea o recupera el `UserAccount`, retorna `AuthTokenPair`.
+- `handle(LogoutCommand)` → Revoca el refresh token y la sesión activa en Redis.
+- `handle(RefreshTokenCommand)` → Valida el refresh token y emite un nuevo JWT de acceso.
+
+
+`AuthorizationDomainService`
+
+**Propósito:** Evaluar si un usuario posee los permisos necesarios para ejecutar una operación específica, aplicando las reglas RBAC definidas para los tres roles del sistema.
+
+**Operaciones:**
+
+- `handle(AssignRoleCommand)` → Verifica que el solicitante es ADMIN, asigna el rol al usuario destino.
+- `handle(GetUserRolesQuery)` → Retorna la lista de roles de un usuario.
+- `canAccess(userId: UUID, requiredRole: UserRole)` → Evaluación booleana de permisos en tiempo real.
+
+
+`TokenDomainService`
+
+**Propósito:** Gestionar el ciclo de vida completo de tokens JWT y refresh tokens, incluyendo generación, validación y revocación.
+
+**Operaciones:**
+
+- `generateAccessToken(userAccount: UserAccount)` → Firma un JWT RS256 con claims de userId, roles y expiración de 15 minutos.
+- `generateRefreshToken(userId: UUID, deviceInfo: String)` → Genera un refresh token opaco de 30 días, almacena su hash SHA-256.
+- `handle(ValidateTokenQuery)` → Verifica firma RS256 y vigencia del JWT.
+- `handle(RevokeAllTokensCommand)` → Invalida todos los refresh tokens activos de un usuario.
+
+---
+
+### 5.1.2. Interface Layer
+
+La Interface Layer del bounded context **Auth & Identity Integration** expone los endpoints REST responsables de gestionar la autenticación y autorización de usuarios en la plataforma Oryxen.
+
+**`AuthController`**
+
+**Namespace:** `Oryxen.API.Controllers`
+
+**Base URL:** `/api/v1/auth`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Autenticación requerida |
+|--------|------|-------------|------------------------|
+| `POST` | `/register` | Registrar nuevo usuario con credenciales locales | No |
+| `POST` | `/login` | Autenticación local; retorna JWT de acceso + refresh token | No |
+| `POST` | `/oauth/google` | Autenticación via Google OIDC; retorna JWT + refresh token | No |
+| `POST` | `/logout` | Revocar refresh token activo y cerrar sesión | Sí (Bearer JWT) |
+| `POST` | `/refresh-token` | Renovar JWT de acceso usando refresh token válido | No (refresh token en body) |
+| `POST` | `/change-password` | Cambiar contraseña del usuario autenticado | Sí (Bearer JWT) |
+| `POST` | `/revoke-all-tokens` | Cerrar sesión en todos los dispositivos activos | Sí (Bearer JWT) |
+
+
+**`UserController`**
+
+**Namespace:** `Oryxen.API.Controllers`
+
+**Base URL:** `/api/v1/users`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Rol requerido |
+|--------|------|-------------|--------------|
+| `GET` | `/{userId}` | Obtener perfil de usuario por ID | FARMER, ADMIN |
+| `GET` | `/` | Listar usuarios paginados | ADMIN |
+| `POST` | `/{userId}/roles` | Asignar rol a usuario | ADMIN |
+| `DELETE` | `/{userId}/roles/{role}` | Revocar rol de usuario | ADMIN |
+| `PUT` | `/{userId}/suspend` | Suspender cuenta de usuario | ADMIN |
+| `PUT` | `/{userId}/activate` | Reactivar cuenta de usuario | ADMIN |
+
+---
+
+### 5.1.3. Application Layer
+
+La Application Layer del bounded context **Auth & Identity Integration** coordina los flujos de autenticación y autorización, actuando como intermediario entre la Interface Layer y el Domain Layer.
+
+**Command Handlers:**
+
+`RegisterUserCommandHandler`
+
+**Propósito:** Validar unicidad del email, hashear la contraseña con BCrypt(12), crear y persistir el `UserAccount`, asignar rol `FARMER` por defecto y publicar el evento `UserRegisteredEvent` para que el BC Notification envíe el email de bienvenida.
+
+`LoginCommandHandler`
+
+**Propósito:** Recuperar el `UserAccount` por email, verificar el hash de contraseña con BCrypt, validar que la cuenta esté `ACTIVE`, delegar en `TokenDomainService` para generar el par de tokens y persistir el `RefreshToken` y la `Session`.
+
+`OAuthLoginCommandHandler`
+
+**Propósito:** Verificar el `idToken` contra el proveedor externo via Firebase Admin SDK / Google OAuth2, recuperar o crear el `UserAccount` con `authProvider = GOOGLE`, generar el par de tokens y persistir la sesión.
+
+`LogoutCommandHandler`
+
+**Propósito:** Localizar el `RefreshToken` por hash SHA-256, marcarlo como revocado, invalidar la `Session` activa en Redis.
+
+`RefreshTokenCommandHandler`
+
+**Propósito:** Localizar el `RefreshToken` por hash, verificar validez mediante `isValid()`, emitir nuevo JWT de acceso con expiración renovada (sin rotar el refresh token).
+
+`ChangePasswordCommandHandler`
+
+**Propósito:** Verificar la contraseña actual, aplicar nueva contraseña hasheada, revocar todos los refresh tokens activos del usuario por seguridad y publicar el evento `PasswordChangedEvent`.
+
+`AssignRoleCommandHandler`
+
+**Propósito:** Verificar que el solicitante posee rol ADMIN, localizar el usuario destino, asignar el rol y publicar el evento `RoleAssignedEvent`.
+
+
+**Application Services:**
+
+`AuthApplicationService`
+
+**Namespace:** `Oryxen.Application.Auth`
+
+**Operaciones:**
+
+- `handle(RegisterUserCommand)`
+- `handle(LoginCommand)`
+- `handle(OAuthLoginCommand)`
+- `handle(LogoutCommand)`
+- `handle(RefreshTokenCommand)`
+- `handle(ChangePasswordCommand)`
+- `handle(ValidateTokenQuery)`
+
+
+`UserApplicationService`
+
+**Operaciones:**
+
+- `handle(AssignRoleCommand)`
+- `handle(RevokeAllTokensCommand)`
+- `handle(GetUserByIdQuery)`
+- `handle(GetUserByEmailQuery)`
+- `handle(GetUserRolesQuery)`
+- `handle(ListUsersQuery)`
+
+---
+
+### 5.1.4. Infrastructure Layer
+
+La Infrastructure Layer del bounded context **Auth & Identity Integration** implementa los mecanismos de persistencia, generación de tokens, integración con proveedores externos y caché de sesiones activas.
+
+**Adaptadores y Repositorios:**
+
+`JwtTokenGenerator`
+
+**Propósito:** Implementa la generación y validación de tokens JWT firmados con el algoritmo HS256. Emite tokens de acceso con expiración de 24 horas. Los claims incluyen: `sub` (userId), `roles`, `iat`, `exp`, `iss` (oryxen.io).
+
+**Clase:** `Oryxen.Infrastructure.Security.JwtTokenGenerator`
+**Dependencia:** `Microsoft.AspNetCore.Authentication.JwtBearer` + `System.IdentityModel.Tokens.Jwt`
+
+
+`OAuth2ProviderAdapter`
+
+**Propósito:** Verificar los `idToken` emitidos por Google mediante el flujo OAuth 2.0 / OpenID Connect y extraer los claims de identidad del usuario (email, nombre, foto de perfil).
+
+**Dependencia:** `Google.Apis.Auth` (NuGet)
+
+
+`BcryptPasswordHasher`
+
+**Propósito:** Encapsula el algoritmo BCrypt con factor de coste 12 para el hasheo y la verificación de contraseñas locales.
+
+**Clase:** `Oryxen.Infrastructure.Security.BcryptPasswordHasher`
+**Dependencia:** `BCrypt.Net-Next` (NuGet)
+
+
+`UserAccountRepository`
+
+**Propósito:** Repositorio EF Core para la persistencia de entidades `UserAccount` en la tabla `user_accounts` de PostgreSQL.
+
+**Clase:** `Oryxen.Infrastructure.Persistence.Repositories.UserAccountRepository`
+**Dependencia:** Entity Framework Core 9 + Npgsql (PostgreSQL 15)
+
+
+`RoleRepository`
+
+**Propósito:** Repositorio EF Core para la gestión de roles en la tabla `roles`.
+
+**Clase:** `Oryxen.Infrastructure.Persistence.Repositories.RoleRepository`
+
+
+`RefreshToken` — gestionado dentro de `OryxenDbContext` como entidad vinculada a `UserAccount`, con repositorio genérico EF Core.
+
+
+`SessionCacheAdapter`
+
+**Propósito:** Almacenar las sesiones activas y la lista negra de JWT revocados en Redis para validación sub-milisegundo y revocación inmediata de sesiones comprometidas.
+
+**Dependencia:** `StackExchange.Redis` (NuGet) + Redis 7
+
+
+**Dependencias de infraestructura del contexto Auth & Identity:**
+
+- PostgreSQL 15 → persistencia de usuarios, roles, user_roles y refresh tokens.
+- Redis 7 → caché de sesiones activas y lista negra de JWT revocados.
+- Google.Apis.Auth → validación de tokens OAuth2/OIDC externos (Google).
+- ASP.NET Core 9 JWT Bearer → filtros de autenticación y autorización HTTP.
+- `System.IdentityModel.Tokens.Jwt` → generación y validación de JWT HS256.
+
+---
+
+### 5.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Auth & Identity Integration` representa la arquitectura interna del módulo de seguridad, mostrando la interacción entre los controladores REST, los servicios de aplicación, el dominio y los adaptadores de infraestructura.
+
+**Descripción de componentes principales:**
+
+- **Auth REST API Component:** Expone los endpoints de autenticación (`/api/v1/auth`). Delega en el `AuthApplicationService`.
+- **User REST API Component:** Expone los endpoints de gestión de usuarios (`/api/v1/users`). Delega en el `UserApplicationService`.
+- **Auth Command Processing Component:** Orquesta los command handlers de registro, login, logout y refresh.
+- **Auth Query Processing Component:** Ejecuta las queries de validación de token y perfil de usuario.
+- **Auth Domain Component:** Contiene los agregados, servicios de dominio y value objects.
+- **JWT Token Component:** Gestiona la firma RS256 y validación de tokens JWT.
+- **OAuth2 Integration Component:** Valida tokens de identidad externos contra Firebase/Google.
+- **Auth Persistence Component:** Implementa los repositorios EF Core para usuarios, roles y refresh tokens.
+- **Session Cache Component:** Gestiona el ciclo de vida de sesiones activas en Redis.
+
+![ComponentsDiagram_AuthIdentity](./assets/Chapter-5/auth-identity-component-diagram.svg)
+
+---
+
+### 5.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+En esta sección se presentan los diagramas a nivel de código del bounded context `Auth & Identity Integration`, visualizando la estructura del dominio y el diseño de la base de datos de identidades.
+
+#### 5.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer muestra el agregado principal `UserAccount`, las entidades `Role`, `RefreshToken` y `Session`, junto a los Value Objects `Email`, `PasswordHash`, `AuthProvider`, `AccountStatus`, `UserRole` y `JwtToken`. Las relaciones clave son: `UserAccount` agrega `UserRole` (lista), `UserAccount` tiene múltiples `RefreshToken` (ciclo de vida separado) y múltiples `Session` activas.
+
+**Relaciones entre clases:**
+
+- `UserAccount (1) ──── (*) UserRole`
+- `UserAccount (1) ──── (*) RefreshToken`
+- `UserAccount (1) ──── (*) Session`
+- `AuthenticationDomainService → UserAccount`
+- `AuthenticationDomainService → TokenDomainService`
+- `TokenDomainService → JwtToken`
+- `TokenDomainService → RefreshToken`
+
+![UMLClassDiagram_AuthIdentity](./assets/Chapter-5/auth-identity-class-diagram.svg)
+
+#### 5.1.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Auth & Identity Integration` representa la estructura relacional para almacenar identidades de usuario, roles, tokens y sesiones activas.
+
+**Tabla principal:** `user_accounts`
+
+**Atributos:**
+
+- `user_id` → UUID, PRIMARY KEY
+- `email` → VARCHAR(255), UNIQUE, NOT NULL
+- `password_hash` → VARCHAR(72), NULLABLE (nulo para cuentas OAuth2 externas)
+- `auth_provider` → ENUM('LOCAL','GOOGLE','FIREBASE'), NOT NULL
+- `auth_provider_id` → VARCHAR(255), NULLABLE
+- `status` → ENUM('PENDING_VERIFICATION','ACTIVE','SUSPENDED','DELETED'), NOT NULL
+- `created_at` → TIMESTAMP, NOT NULL
+- `updated_at` → TIMESTAMP, NOT NULL
+
+
+**Tabla:** `roles`
+
+**Atributos:**
+
+- `role_id` → UUID, PRIMARY KEY
+- `name` → VARCHAR(50), UNIQUE, NOT NULL
+- `description` → VARCHAR(255)
+
+
+**Tabla de relación:** `user_roles`
+
+**Atributos:**
+
+- `user_id` → UUID, FOREIGN KEY → `user_accounts(user_id)`
+- `role_id` → UUID, FOREIGN KEY → `roles(role_id)`
+- `assigned_at` → TIMESTAMP, NOT NULL
+- PRIMARY KEY (`user_id`, `role_id`)
+
+
+**Tabla:** `refresh_tokens`
+
+**Atributos:**
+
+- `token_id` → UUID, PRIMARY KEY
+- `user_id` → UUID, FOREIGN KEY → `user_accounts(user_id)`
+- `token_hash` → VARCHAR(64), NOT NULL (SHA-256 del token original)
+- `device_info` → VARCHAR(255)
+- `expires_at` → TIMESTAMP, NOT NULL
+- `is_revoked` → BOOLEAN, DEFAULT FALSE
+- `created_at` → TIMESTAMP, NOT NULL
+
+**Constraints:**
+
+- INDEX en `token_hash` para búsquedas de validación eficientes O(log n).
+- INDEX en `user_id` para la revocación global de todos los tokens de un usuario.
+
+
+**Relaciones entre tablas:**
+
+- `user_accounts (1) ──── (*) user_roles`
+- `user_accounts (1) ──── (*) refresh_tokens`
+- `user_roles (*) ──── (1) roles`
+
+![ERDDiagram_AuthIdentity](./assets/Chapter-5/auth-identity-database-diagram.svg)
+
+---
+
+### 5.1.7 Mobile Client-Side Security Hardening
+
+El bounded context **Auth & Identity Integration** extiende su alcance de seguridad hacia el cliente móvil Android nativo mediante un conjunto de medidas de *hardening* que garantizan la confidencialidad de los tokens de sesión, la renovación transparente de credenciales y la eliminación de datos sensibles en reposo ante compromisos de sesión.
+
+#### 5.1.7.1 EncryptedSharedPreferences con Android Keystore
+
+La aplicación móvil Oryxen reemplaza el almacenamiento tradicional en `SharedPreferences` plano por **Jetpack Security Crypto `EncryptedSharedPreferences`**, asegurando que todos los secretos de sesión residan cifrados en el sistema de archivos del dispositivo.
+
+**Arquitectura de cifrado local:**
+
+| Componente | Algoritmo | Backend de seguridad |
+|------------|-----------|---------------------|
+| `MasterKey` | AES256-GCM | Android Keystore (con respaldo TEE/StrongBox cuando el hardware lo soporta) |
+| Clave de cifrado de preferencias (`PrefKeyEncryptionScheme`) | AES256-SIV | Derivada de `MasterKey` |
+| Valor de cifrado de preferencias (`PrefValueEncryptionScheme`) | AES256-GCM | Derivada de `MasterKey` |
+
+**Datos protegidos bajo cifrado:**
+
+- `accessToken` — JWT de acceso emitido por el backend .NET 9 (HS256, expiración corta)
+- `refreshToken` — Token opaco de 64 bytes codificado en Base64, utilizado para rotación
+- `userId` — Claim `sub` extraído del payload del JWT (Guid mapeado desde el backend)
+- `roles` — Lista de roles RBAC (`FARMER`, `ADMIN`, `SUPPORT_TECHNICIAN`)
+- `currentPlantId` — Identificador de la planta actualmente monitoreada (UUID)
+- `deviceId` — Identificador único del dispositivo generado localmente (UUID v4)
+
+**Clase responsable:** `io.oryxen.mobile.security.SecureStorage`
+
+**Inicialización:** La clase `ApiProvider.init(context)` invocada desde `MainActivity.onCreate()` instancia `SecureStorage` con el `applicationContext`, garantizando que `EncryptedSharedPreferences` esté disponible antes de cualquier operación de red o de UI.
+
+**Decodificación de JWT sin librerías externas:** El método `SecureStorage.decodeUserId(jwt)` extrae el claim `sub` del payload Base64-URL del JWT utilizando `kotlinx.serialization.json.Json`, sin depender de librerías de terceros para validación (la validación criptográfica del token es responsabilidad exclusiva del backend).
+
+#### 5.1.7.2 Interceptor OkHttp de Renovación Automática de Token (Refresh Token Rotation)
+
+La aplicación implementa un `Authenticator` de OkHttp3 que intercepta de forma transparente los errores **HTTP 401 Unauthorized** y ejecuta el flujo de rotación de tokens sin intervención del usuario.
+
+**Clase responsable:** `io.oryxen.mobile.security.TokenAuthenticator`
+
+**Diagrama de secuencia del flujo de renovación:**
+
+```
+[App] ──GET /telemetry/{plantId}──▶ [Backend .NET 9]
+                                      │
+                                      ◀── 401 Unauthorized ──
+[OkHttp Authenticator]                │
+  │                                   
+  ├─ synchronized(lock)                 
+  │   ├─ ¿El token fallido coincide con el almacenado?
+  │   │   NO → re-intentar con el token actual almacenado
+  │   │   SI → continuar con refresh
+  │   │
+  │   ├─ ¿refreshToken != null?
+  │   │   NO → clear SecureStorage → emit SessionEvent.Expired → return null
+  │   │   SI → continuar
+  │   │
+  │   └─ [OkHttpClient sin Authenticator]
+  │       ──POST /auth/refresh {refreshToken}──▶ [Backend .NET 9]
+  │                                                │
+  │       ◀── 200 OK {accessToken, refreshToken}──
+  │       │
+  │       ├─ decodeUserId(newAccessToken) → extraer sub claim
+  │       ├─ secureStorage.saveTokens(...)
+  │       └─ retry original request con nuevo Bearer token
+  │
+  └─ [App] recibe 200 OK con datos de telemetría
+```
+
+**Mecanismo anti-concurrencia:** El bloque `synchronized(this)` garantiza que solo una instancia de renovación se ejecute a la vez. Las peticiones subsecuentes que arriben durante una renovación activa esperan hasta que el nuevo token esté disponible y luego se re-intentan con el token fresco.
+
+**Prevención de bucles infinitos:** El `Authenticator` verifica si la petición fallida es contra el propio endpoint `/auth/refresh`. Si lo es, retorna `null` inmediatamente para evitar llamadas recursivas que resultarían en un bucle infinito.
+
+**Cliente de refresh aislado:** La llamada al endpoint de refresh utiliza una instancia separada de `OkHttpClient` sin `Authenticator` configurado, garantizando que un fallo en el refresh no desencadene una nueva autenticación recursiva.
+
+#### 5.1.7.3 SessionEventBus: Señalización de Sesión Expirada
+
+Cuando el `refreshToken` también ha expirado o ha sido revocado, el `TokenAuthenticator` limpia completamente el `SecureStorage` y emite un evento `SessionEvent.Expired` a través del **`SessionEventBus`**.
+
+**Clase responsable:** `io.oryxen.mobile.security.SessionEventBus`
+
+**Mecanismo de señalización:**
+
+- `SessionEventBus` utiliza un `MutableSharedFlow` con `extraBufferCapacity = 1` para emisión no bloqueante desde el hilo de OkHttp.
+- `OryxenNavHost` observa el `SharedFlow` mediante `LaunchedEffect` y, al recibir `SessionEvent.Expired`, ejecuta `navController.navigate(Routes.LOGIN)` con `popUpTo(0) { inclusive = true }`, limpiando toda la pila de navegación.
+- El usuario es redirigido a `LoginScreen`, y todas las pantallas protegidas (`DashboardScreen`, `DiagnosisScreen`, `PlansScreen`, `NotificationsScreen`) quedan inaccesibles hasta un nuevo inicio de sesión exitoso.
+
+#### 5.1.7.4 Erradicación de Datos Hardcodeados
+
+Se realizó un barrido completo de las vistas móviles para eliminar identificadores mock:
+
+| Archivo | Dato hardcodeado anterior | Solución implementada |
+|---------|--------------------------|----------------------|
+| `DashboardScreen.kt` | `plantId = "11111111-2222-3333-4444-555555555555"` | Campo `currentPlantId` en `SecureStorage`, configurable mediante tarjeta `PlantIdConfigCard` en la UI |
+| `DiagnosisScreen.kt` | `demoPlantId = "11111111-2222-3333-4444-555555555555"` | Lectura dinámica desde `SecureStorage.currentPlantId`; si no está configurado, muestra mensaje instructivo |
+| `Repositories.kt` | `deviceId = "SL-MOBILE-DEMO"` | UUID v4 generado una vez por dispositivo, almacenado en `SecureStorage.deviceId` |
+
+Los `userId` y `roles` ahora se extraen dinámicamente del claim `sub` del JWT decodificado tras cada inicio de sesión o renovación exitosa, eliminando la dependencia de valores estáticos.
+
+---
 
 El bounded context de **Plant Management** representa el núcleo encargado de la gestión del catálogo de plantas de los usuarios dentro de la plataforma Oryxen. Este contexto permite registrar nuevas plantas, editar perfiles, definir configuraciones y parámetros esenciales (como umbrales de humedad), y ofrecer una visualización unificada del estado de salud de toda la colección botánica del usuario.
 
@@ -1575,41 +2728,42 @@ La capa de dominio del bounded context **Plant Management** contiene las clases 
 
 **a. Entity / Aggregate Root:**
 
-**Nombre de la clase:** `PlantProfile`
-**Paquete:** `com.upc.oryxen.plantmanagement.domain.model.aggregates`
+**Nombre de la clase:** `Plant`
+**Namespace:** `Oryxen.Domain.Entities`
 
 **Propósito:** Representa el perfil de una planta registrada por un usuario, agrupando su información taxonómica, ubicación y estado. Constituye el Aggregate Root del bounded context.
 
 **Atributos:**
-*   `plantId: Long` → Identificador único de la planta.
-*   `userId: Long` → Identificador del usuario propietario.
-*   `name: String` → Nombre asignado a la planta.
-*   `species: String` → Especie botánica de la planta.
-*   `location: String` → Ubicación física (ej. sala, balcón).
-*   `status: PlantStatus` → Estado del perfil (Activo, Archivado).
-*   `createdAt: DateTime` → Fecha de registro.
-*   `updatedAt: DateTime` → Última modificación.
+*   `Id: Guid` → Identificador único de la planta.
+*   `UserAccountId: Guid` → Identificador del usuario propietario.
+*   `Name: string` → Nombre asignado a la planta.
+*   `Type: string` → Especie botánica de la planta.
+*   `Location: string` → Ubicación física (ej. sala, balcón).
+*   `Status: PlantStatus` → Estado del perfil (Healthy, Warning, Critical).
+*   `CreatedAt: DateTime` → Fecha de registro.
+*   `UpdatedAt: DateTime` → Última modificación.
 
 **Métodos:**
-*   `updateProfile(name, species, location)` → Actualiza la información básica de la planta.
-*   `archive()` → Marca la planta como eliminada lógicamente.
+*   `Update(name, species, location)` → Actualiza la información básica de la planta.
+*   `Delete()` → Marca la planta como eliminada lógicamente.
 
 **Relaciones:**
-*   Un `PlantProfile` pertenece a un solo `UserAccount`.
-*   Un `PlantProfile` tiene una única `PlantConfiguration`.
+*   Una `Plant` pertenece a un `UserAccount`.
+*   Una `Plant` está asociada a un `Device` (sensor).
 
 **b. Entities del dominio:**
 
-**Nombre de la clase:** `PlantConfiguration`
-**Propósito:** Representa los parámetros y umbrales de cuidado específicos para el perfil de una planta.
+**Nombre de la clase:** `TelemetryData`
+**Propósito:** Representa las lecturas de telemetría de los sensores IoT asociados a la planta.
 
 **c. Value Objects:**
 
 **Nombre de la clase:** `PlantStatus`
-**Propósito:** Representa el estado en el que se encuentra el registro de la planta en el sistema.
+**Propósito:** Representa el estado de salud calculado para la planta.
 **Valores posibles:**
-*   `ACTIVE`
-*   `ARCHIVED`
+*   `Healthy`
+*   `Warning`
+*   `Critical`
 
 **d. Referencias externas del dominio:**
 
@@ -1618,58 +2772,35 @@ Dentro del contexto Plant Management se utilizan entidades provenientes de otros
 *   **UserAccount** (Origen: Auth & Identity): Representa al propietario de las plantas.
 *   **Device** (Origen: Device Management IoT): Representa el sensor físico vinculado para su monitoreo.
 
-**e. Commands del dominio:**
+**e. Interfaces de repositorio (Domain Layer):**
 
-**Paquete:** `com.upc.oryxen.plantmanagement.domain.model.commands`
-*   `CreatePlantProfileCommand`: Representa la intención de registrar una nueva planta.
-*   `UpdatePlantProfileCommand`: Representa la intención de editar información básica.
-*   `DeletePlantProfileCommand`: Representa la intención de archivar una planta.
-*   `ConfigurePlantParametersCommand`: Representa la intención de definir umbrales de humedad.
-
-**f. Queries del dominio:**
-
-*   `GetPlantProfileByIdQuery`: Obtener una planta específica.
-*   `GetAllPlantsByUserIdQuery`: Obtener el catálogo completo de plantas de un usuario.
-
-**g. Domain Services:**
-
-*   `PlantCommandService`: Define las operaciones de escritura relacionadas a la gestión de plantas.
-*   `PlantQueryService`: Define las operaciones de lectura del catálogo de plantas.
-
-**h. Repository:**
-
-*   `IPlantProfileRepository`: Interfaz para gestionar la persistencia y ciclo de vida de los perfiles.
+*   `IPlantRepository`: Interfaz para gestionar la persistencia de plantas (`Oryxen.Domain.Repositories`).
+*   `ITelemetryRepository`: Interfaz para consultar telemetría asociada (`Oryxen.Domain.Repositories`).
 
 ### 5.2.2. Interface Layer
 
 La Interface Layer contiene los controladores REST responsables de exponer las funcionalidades de gestión de plantas consumidas por las aplicaciones móviles y web.
 
-**a. PlantController**
+**a. PlantsController**
 
-**Paquete:** `com.upc.oryxen.plantmanagement.interfaces.rest`
+**Namespace:** `Oryxen.API.Controllers`
 **Propósito:** Exponer endpoints relacionados con el catálogo de plantas.
 
 **Dependencias:**
-*   `PlantCommandService`
-*   `PlantQueryService`
+*   `IPlantService` (`Oryxen.Application.Plants`)
 
 **Endpoints expuestos:**
 *   `POST /api/v1/plants` → Registrar nueva planta.
 *   `PUT /api/v1/plants/{plantId}` → Actualizar información de la planta.
 *   `DELETE /api/v1/plants/{plantId}` → Eliminar (archivar) planta.
-*   `PUT /api/v1/plants/{plantId}/configuration` → Configurar parámetros básicos.
-*   `GET /api/v1/users/{userId}/plants` → Obtener dashboard unificado de plantas.
+*   `GET /api/v1/plants` → Obtener dashboard unificado de plantas del usuario autenticado.
 
 **b. Resources / DTOs:**
 
-*   `PlantProfileResource`: Representa la información de la planta enviada al frontend.
-*   `CreatePlantProfileResource`: Representa los datos requeridos para registrar una planta.
-*   `PlantConfigurationResource`: Representa la estructura de los umbrales paramétricos.
-
-**c. Assemblers:**
-
-*   `PlantProfileResourceFromEntityAssembler`: Transforma la entidad `PlantProfile` en un recurso REST.
-*   `CreatePlantProfileCommandFromResourceAssembler`: Transforma el request REST en comando de dominio.
+**Namespace:** `Oryxen.Application.Plants.Contracts`
+*   `PlantResponse`: Representa la información de la planta enviada al frontend.
+*   `CreatePlantRequest`: Representa los datos requeridos para registrar una planta.
+*   `UpdatePlantRequest`: Representa los datos para actualizar una planta.
 
 ### 5.2.3. Application Layer
 
@@ -1678,70 +2809,58 @@ Coordina los casos de uso para administrar la colección de plantas del usuario.
 **Capacidades principales del contexto:**
 *   Registrar perfiles de plantas.
 *   Editar y archivar plantas existentes.
-*   Configurar umbrales vitales (ej. humedad).
 *   Listar las plantas en una vista consolidada.
 
-**a. Command Handlers / Command Services:**
+**a. Application Services:**
 
-`PlantCommandServiceImpl` maneja:
-*   `handle(CreatePlantProfileCommand)`: Valida campos, crea la entidad `PlantProfile` y persiste.
-*   `handle(UpdatePlantProfileCommand)`: Busca la planta, aplica cambios, modifica `updatedAt` y guarda.
-*   `handle(DeletePlantProfileCommand)`: Ejecuta un borrado lógico cambiando el `PlantStatus` a `ARCHIVED`.
+`PlantService` (`Oryxen.Application.Plants.PlantService`)
 
-**b. Query Handlers / Query Services:**
-
-`PlantQueryServiceImpl` maneja:
-*   `handle(GetAllPlantsByUserIdQuery)`: Retorna la lista organizada de plantas para el usuario autenticado.
-
-**c. Flujos principales del negocio:**
-
-**Flujo de creación de perfil de planta:**
-*   El frontend envía los datos básicos de la nueva planta.
-*   Se construye `CreatePlantProfileCommand`.
-*   `PlantCommandServiceImpl` valida que el usuario no exceda su límite de plantas (según plan).
-*   Se crea la entidad `PlantProfile`.
-*   Se persiste mediante `IPlantProfileRepository`.
-*   Se retorna el recurso creado al cliente.
+Implementa `IPlantService` y maneja:
+*   `CreateAsync(...)`: Valida campos, crea la entidad `Plant` y persiste via `IPlantRepository`.
+*   `UpdateAsync(...)`: Busca la planta, aplica cambios, modifica `UpdatedAt` y guarda.
+*   `DeleteAsync(...)`: Ejecuta un borrado lógico.
+*   `GetAllAsync(...)`: Retorna la lista organizada de plantas para el usuario autenticado.
 
 ### 5.2.4. Infrastructure Layer
 
 Contiene los componentes responsables de la persistencia de datos del catálogo botánico y la integración con otras áreas de la arquitectura.
 
 **a. Repositorios de persistencia:**
-*   `PlantProfileRepositoryImpl`: Implementa la persistencia de los perfiles.
-*   `PlantConfigurationRepositoryImpl`: Implementa la persistencia de las configuraciones paramétricas.
+*   `PlantRepository` (`Oryxen.Infrastructure.Persistence.Repositories`): Implementa `IPlantRepository` usando EF Core sobre PostgreSQL.
+*   `TelemetryRepository` (`Oryxen.Infrastructure.Persistence.Repositories`): Implementa `ITelemetryRepository`.
 
 **b. ORM Context:**
-*   `PlantDbContext`: Punto central de acceso a base de datos (mediante Entity Framework Core) para plantas y configuraciones.
+*   `OryxenDbContext` (`Oryxen.Infrastructure.Persistence`): DbContext central de EF Core para plantas y telemetría.
 
-**c. Persistencia de entidades:**
-Las entidades del contexto se encuentran mapeadas utilizando tecnologías ORM.
-**Entidades persistidas:**
-*   `PlantProfile`
-*   `PlantConfiguration`
+**c. Configuración EF Core (Fluent API):**
+*   `PlantConfiguration` (`Oryxen.Infrastructure.Persistence.Configurations`): Mapea la entidad `Plant` a la tabla `plants`.
 
 **d. Diseño de persistencia:**
 
-**Tabla principal:** `plant_profiles`
+**Tabla principal:** `plants`
 **Columnas:**
-*   `plant_id` (PK)
-*   `user_id` (FK)
-*   `name`
-*   `species`
-*   `location`
-*   `status`
-*   `created_at`
-*   `updated_at`
+*   `id` (PK, uuid)
+*   `user_account_id` (FK → `user_accounts`)
+*   `name` (varchar)
+*   `type` (varchar)
+*   `location` (varchar)
+*   `image_url` (text)
+*   `status` (varchar)
+*   `created_at` (timestamp)
+*   `updated_at` (timestamp)
 
-**Tabla relacionada:** `plant_configurations`
+**Tabla relacionada:** `telemetry_data`
 **Columnas:**
-*   `config_id` (PK)
-*   `plant_id` (FK hacia `plant_profiles`)
-*   `min_humidity`
-*   `max_humidity`
+*   `id` (PK, uuid)
+*   `plant_id` (FK → `plants`)
+*   `soil_moisture` (double)
+*   `humidity` (double)
+*   `temperature` (double)
+*   `light_level` (double)
+*   `recorded_at` (timestamp)
 
 **e. Integración con otros bounded contexts:**
-*   **Identity and Access Management:** Para validación de usuarios propietarios mediante tokens.
+*   **Auth & Identity:** Para validación de usuarios propietarios mediante tokens JWT.
 *   **Device Management IoT:** Para asociar el perfil de planta creado con su hardware respectivo.
 *   **Analysis & Reporting:** Exportación de inventario para reportes de largo plazo.
 
@@ -1812,7 +2931,7 @@ Aquí residen las reglas de negocio relacionadas con el ciclo de vida de los dis
 
 **Nombre de la clase:** `Device`
 
-**Paquete:** `com.upc.iot.device.domain.model.aggregates`
+**Namespace:** `Oryxen.Domain.Entities`
 
 **Propósito:** Representa un dispositivo IoT registrado, emparejado con una cuenta y encargado de administrar sensores asociados.
 
@@ -1948,7 +3067,7 @@ Representa el estado operativo de un sensor.
 
 `RegisterDeviceCommand`
 
-**Paquete:** `com.upc.iot.device.domain.model.commands`
+**Namespace:** `Oryxen.Application.Devices`
 
 **Propósito:** Representa la intención de registrar un nuevo dispositivo.
 
@@ -2070,7 +3189,7 @@ Representa el estado operativo de un sensor.
 
 `SensorMonitor`
 
-**Paquete:** `com.upc.iot.device.domain.services`
+**Namespace:** `Oryxen.Domain.Services`
 
 **Propósito:** Gestionar la recolección y validación de datos de sensores en tiempo real.
 
@@ -2085,7 +3204,7 @@ Representa el estado operativo de un sensor.
 
 `IDeviceRepository`
 
-**Paquete:** `com.upc.iot.device.infrastructure.persistence.repositories`
+**Namespace:** `Oryxen.Infrastructure.Persistence.Repositories`
 
 **Propósito:** Gestionar persistencia y ciclo de vida de dispositivos IoT.
 
@@ -2124,7 +3243,7 @@ La Interface Layer del bounded context **Device Management IoT** contiene las cl
 
 **a. DeviceController**
 
-**Paquete:** `com.upc.iot.device.interfaces.rest`
+**Namespace:** `Oryxen.API.Controllers`
 
 **Propósito:** Exponer endpoints relacionados con la gestión de dispositivos IoT.
 
@@ -2252,7 +3371,7 @@ La Application Layer del bounded context **Device Management IoT** coordina los 
 
 `DeviceRegisterCommandHandler`
 
-**Paquete:** `com.upc.iot.device.application.internal.commandservices`
+**Namespace:** `Oryxen.Application.Devices`
 
 **Propósito:** Registrar un nuevo dispositivo IoT.
 
@@ -2524,7 +3643,7 @@ Esta capa implementa repositorios, contextos ORM y mecanismos de integración co
 
 `DeviceRepository`
 
-**Paquete:** `com.upc.iot.device.infrastructure.persistence.repositories`
+**Namespace:** `Oryxen.Infrastructure.Persistence.Repositories`
 
 **Propósito:** Persistir y consultar entidades `Device`.
 
@@ -2865,2507 +3984,1559 @@ El diagrama de base de datos del bounded context `Device Management IoT` represe
 
 ## 5.4. Bounded Context: Artificial Intelligence (AI)
 
-El bounded context de **Artificial Intelligence (AI)** representa el núcleo inteligente de la plataforma Oryxen. Este permite al sistema ser capaz de dar diagnóstico visual, recomendaciones automatizadas y asistencia conversacional mediante modelos de inteligencia artificial aplicados al cuidado de plantas. Este contexto permite analizar imágenes, interpretar métricas provenientes de sensores IoT y ofrecer recomendaciones personalizadas a los usuarios.
+El bounded context de **Artificial Intelligence (AI)** representa el núcleo inteligente de la plataforma Oryxen. Este contexto permite al sistema realizar diagnósticos visuales de plantas mediante análisis multimodal, combinando fotografías de la planta con la telemetría IoT reciente del Sensor Lite para evaluar el estado general de salud, identificar anomalías, deficiencias de nutrientes, enfermedades o presencia de plagas, y generar recomendaciones específicas de cuidado o mitigación. La arquitectura es agnóstica al tipo de cultivo, lo que permite su aplicación escalable a cualquier especie vegetal registrada en la plataforma.
 
 ### 5.4.1. Domain Layer
 
-La capa de dominio del bounded context **Artificial Intelligence** contiene las clases que modelan el comportamiento inteligente del sistema, incluyendo diagnósticos visuales, recomendaciones automáticas y conversaciones generadas mediante IA.
+La capa de dominio del bounded context **Artificial Intelligence** modela los diagnósticos inteligentes realizados sobre las plantas del ecosistema Oryxen.
 
 **a. Entity / Aggregate Root:**
 
 **Nombre de la clase:** `PlantDiagnosis`
 
-**Paquete: `com.upc.oryxen.ai.domain.model.aggregates`
+**Namespace:** `Oryxen.Domain.Entities`
 
-**Propósito:** Representa el resultado de un diagnóstico inteligente realizado sobre una planta utilizando imágenes y datos de sensores. Constituye el agregado raíz del bounded context AI.
-
-**Atributos:**
-
-- `diagnosisId: Long` → Identificador único del diagnóstico.
-- `plantId: Long` → Identificador de la planta analizada.
-- `imageUrl: String` → URL de la imagen procesada.
-- `healthStatus: HealthStatus` → Estado de salud detectado.
-- `detectedDisease: String` → Enfermedad o problema identificado.
-- `recommendation: String` → Recomendación generada por IA.
-- `createdAt: DateTime` → Fecha de creación del diagnóstico.
-
-**Métodos:**
-
-- `generateDiagnosis()` → Genera un nuevo diagnóstico inteligente.
-- `updateRecommendation()` → Actualiza recomendaciones generadas.
-- `markAsReviewed()` → Marca el diagnóstico como revisado.
-
-**Relaciones:**
-
-- Un `PlantDiagnosis` pertenece a una sola planta.
-- Una planta puede tener múltiples diagnósticos históricos.
-
-
-**b. Referencias externas del dominio:**
-
-Dentro del contexto AI se utilizan entidades provenientes de otros bounded contexts.
-
-**Plant**
-
-- Origen: `Plant Management`
-- Propósito: Representa la planta analizada por la IA.
-- Atributos relevantes:
-  - `plantId`
-  - `species`
-  - `nickname`
-
-**SensorMetrics**
-
-- Origen: `IoT`
-- Propósito: Representa métricas provenientes de sensores IoT.
-- Atributos relevantes:
-  - `humidity`
-  - `temperature`
-  - `lightLevel`
-
-
-**c. Value Objects:**
-
-`HealthStatus`
-
-Representa el estado de salud detectado en la planta.
-
-- `HEALTHY`
-- `LOW_WATER`
-- `DISEASE_DETECTED`
-- `CRITICAL`
-
-
-**d. Commands del dominio:**
-
-`GenerateDiagnosisCommand`
-
-**Paquete:** `com.upc.oryxen.ai.domain.model.commands`
-
-**Propósito:** Representa la intención de generar un diagnóstico inteligente.
+**Propósito:** Representa el resultado de un diagnóstico inteligente multimodal realizado sobre una planta utilizando una fotografía y datos de sensores IoT. Constituye el agregado raíz del bounded context AI. Hereda de `AuditableEntity` (Id, CreatedAt, UpdatedAt).
 
 **Atributos:**
 
-- `plantId: Long`
-- `imageUrl: String`
+- `Id: Guid` → Identificador único del diagnóstico (heredado de `AuditableEntity`).
+- `PlantId: Guid` → Identificador de la planta analizada.
+- `ImageUrl: string` → Referencia a la imagen procesada (data-URI en desarrollo, blob URL en producción).
+- `DetectedPest: string` → Nombre de la anomalía, enfermedad o plaga detectada, o "None" si la planta está saludable.
+- `ConfidenceScore: double` → Confianza del modelo en el rango 0.0–1.0.
+- `Recommendation: string` → Recomendación de cuidado o mitigación basada en el diagnóstico y la telemetría.
+- `Status: DiagnosisStatus` → Estado del diagnóstico (Pending, Completed, Failed).
+- `AnalyzedAt: DateTime?` → Instante UTC en que Gemini Vision API retornó el análisis.
+- `CreatedAt: DateTime` → Fecha de creación (heredado de `AuditableEntity`).
 
+**b. Enum:**
 
-`GenerateRecommendationCommand`
+**Nombre del enum:** `DiagnosisStatus`
 
-**Propósito:** Generar recomendaciones automáticas basadas en métricas y diagnósticos.
+**Namespace:** `Oryxen.Domain.Enums`
 
-**Atributos:**
+| Valor | Descripción |
+|-------|-------------|
+| `Pending = 1` | El diagnóstico ha sido creado pero el análisis IA está en curso |
+| `Completed = 2` | El análisis se completó exitosamente |
+| `Failed = 3` | El análisis falló (API key faltante, red inalcanzable, payload inválido) |
 
-- `plantId: Long`
-- `diagnosisId: Long`
+**c. Repository Interface:**
 
+**Nombre de la interfaz:** `IPlantDiagnosisRepository`
 
-**e. Queries del dominio:**
+**Namespace:** `Oryxen.Domain.Repositories`
 
-`GetDiagnosisByIdQuery`
-
-**Propósito:** Obtener un diagnóstico específico.
-
-**Atributos:**
-
-- `diagnosisId: Long`
-
-
-`GetPlantDiagnosisHistoryQuery`
-
-**Propósito:** Obtener el historial de diagnósticos de una planta.
-
-**Atributos:**
-
-- `plantId: Long`
-
-
-**f. Domain Services:**
-
-`DiagnosisCommandService`
-
-**Paquete:** `com.upc.oryxen.ai.domain.services`
-
-**Propósito:** Define las operaciones de escritura relacionadas al diagnóstico inteligente.
-
-**Operaciones:**
-
-- `handle(GenerateDiagnosisCommand)`
-- `handle(GenerateRecommendationCommand)`
-
-
-`DiagnosisQueryService`
-
-**Propósito:** Define las operaciones de lectura del contexto AI.
-
-**Operaciones:**
-
-- `handle(GetDiagnosisByIdQuery)`
-- `handle(GetPlantDiagnosisHistoryQuery)`
-
-
-**g. Repository:**
-
-`PlantDiagnosisRepository`
-
-**Paquete:** `com.upc.oryxen.ai.infrastructure.persistence.jpa.repositories`
-
-**Propósito:** Permite acceder a la persistencia de diagnósticos inteligentes.
-
-**Operaciones:**
-
-- `save(PlantDiagnosis)`
-- `findById(Long)`
-- `findByPlantId(Long)`
-- `findAll()`
-
+```csharp
+public interface IPlantDiagnosisRepository
+{
+    Task<PlantDiagnosis?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<PlantDiagnosis>> GetByPlantAsync(Guid plantId, CancellationToken cancellationToken = default);
+    Task AddAsync(PlantDiagnosis diagnosis, CancellationToken cancellationToken = default);
+}
+```
 
 ### 5.4.2. Interface Layer
 
-La Interface Layer del bounded context **Artificial Intelligence** contiene las clases responsables de exponer las funcionalidades relacionadas al diagnóstico inteligente y chatbot IA mediante endpoints REST consumidos por las aplicaciones móviles y web.
+**Nombre de la clase:** `AiController`
 
-**a. AIController**
+**Namespace:** `Oryxen.API.Controllers`
 
-**Paquete:** `com.upc.oryxen.ai.interfaces.rest`
+**Propósito:** Expone los endpoints REST del BC AI con autorización RBAC (FARMER, ADMIN). Maneja la carga de imágenes multipart y delega al servicio de aplicación.
 
-**Propósito:** Exponer los endpoints relacionados con diagnósticos IA y recomendaciones inteligentes.
+```csharp
+[ApiController]
+[Route("api/v1/ai")]
+[Authorize(Roles = "FARMER,ADMIN")]
+public sealed class AiController : ControllerBase
+{
+    [HttpPost("diagnoses")]
+    [RequestSizeLimit(10_000_000)]
+    Task<IActionResult> Create([FromForm] Guid plantId, IFormFile image, CancellationToken ct);
 
-**Dependencias:**
+    [HttpGet("diagnoses/{id:guid}")]
+    Task<ActionResult<DiagnosisResponse>> GetById(Guid id, CancellationToken ct);
 
-- `DiagnosisCommandService`
-- `DiagnosisQueryService`
+    [HttpGet("plants/{plantId:guid}/diagnoses")]
+    Task<ActionResult<IReadOnlyList<DiagnosisResponse>>> GetByPlant(Guid plantId, CancellationToken ct);
+}
+```
 
-**Endpoints expuestos:**
-
-- `POST /api/v1/ai/diagnosis`
-- `GET /api/v1/ai/diagnosis/{id}`
-- `GET /api/v1/ai/plants/{id}/history`
-- `POST /api/v1/ai/recommendations`
-
-
-**b. Resources / DTOs:**
-
-`PlantDiagnosisResource`
-
-**Propósito:** Representar la información del diagnóstico enviada al frontend.
-
-**Atributos:**
-
-- `diagnosisId`
-- `plantId`
-- `healthStatus`
-- `detectedDisease`
-- `recommendation`
-- `createdAt`
-
-
-`GenerateDiagnosisResource`
-
-**Propósito:** Representar los datos necesarios para generar un diagnóstico.
-
-**Atributos:**
-
-- `plantId`
-- `imageUrl`
-
-
-**c. Assemblers:**
-
-`DiagnosisResourceFromEntityAssembler`
-
-**Propósito:** Transformar entidades `PlantDiagnosis` en recursos consumibles por frontend.
-
-
-`GenerateDiagnosisCommandFromResourceAssembler`
-
-**Propósito:** Transformar un `GenerateDiagnosisResource` en `GenerateDiagnosisCommand`.
-
+| Endpoint | HTTP | Descripción |
+|----------|------|-------------|
+| `/api/v1/ai/diagnoses` | `POST` | Carga una foto de la planta (multipart), enriquece con telemetría IoT y retorna el diagnóstico |
+| `/api/v1/ai/diagnoses/{id}` | `GET` | Consulta un diagnóstico por ID |
+| `/api/v1/ai/plants/{plantId}/diagnoses` | `GET` | Historial de diagnósticos de una planta (newest-first) |
 
 ### 5.4.3. Application Layer
 
-La Application Layer del bounded context **Artificial Intelligence** coordina los procesos relacionados con análisis inteligente, recomendaciones automáticas y consultas de diagnósticos.
+**Nombre de la interfaz:** `IDiagnosisService`
 
-**Capacidades principales del contexto:**
+**Namespace:** `Oryxen.Application.AI`
 
-- Generar diagnósticos inteligentes.
-- Generar recomendaciones automáticas.
-- Consultar historial de diagnósticos.
-- Integrar modelos IA externos.
+**Propósito:** Orquesta el flujo de diagnóstico multimodal: valida la planta, obtiene la telemetría reciente, invoca el servicio de IA y persiste el resultado.
 
+```csharp
+public interface IDiagnosisService
+{
+    Task<DiagnosisResponse> CreateAsync(Guid userAccountId, Guid plantId, byte[] imageBytes, string mimeType, CancellationToken ct = default);
+    Task<DiagnosisResponse> GetByIdAsync(Guid id, CancellationToken ct = default);
+    Task<IReadOnlyList<DiagnosisResponse>> GetByPlantAsync(Guid plantId, CancellationToken ct = default);
+}
+```
 
-**a. Command Handlers / Command Services:**
+**Implementación:** `DiagnosisService` (`Oryxen.Application.AI.DiagnosisService`)
 
-`DiagnosisCommandServiceImpl`
+**Contratos (DTOs):**
 
-**Paquete:** `com.upc.oryxen.ai.application.internal.commandservices`
+```csharp
+// Oryxen.Application.AI.Contracts.DiagnosisResponse
+public sealed record DiagnosisResponse(
+    Guid Id, Guid PlantId, string ImageUrl, string DetectedPest,
+    double ConfidenceScore, string Recommendation, string Status,
+    DateTime CreatedAt, DateTime? AnalyzedAt);
+```
 
-**Dependencias:**
+**Puerto de IA multimodal:**
 
-- `PlantDiagnosisRepository`
-- `PlantRepository`
-- `OpenAIClient`
+```csharp
+// Oryxen.Application.Common.Interfaces.IMultimodalAiService
+public interface IMultimodalAiService
+{
+    Task<AiDiagnosisResult> AnalyzeAsync(
+        byte[] imageBytes, string mimeType,
+        double? soilMoisture, double? humidity, double? temperature,
+        CancellationToken ct = default);
+}
 
-**Operaciones que maneja:**
-
-`handle(GenerateDiagnosisCommand command)`
-
-- Valida que la planta exista.
-- Envía la imagen al modelo IA.
-- Procesa la respuesta del modelo.
-- Genera un nuevo `PlantDiagnosis`.
-- Persiste el resultado.
-
-`handle(GenerateRecommendationCommand command)`
-
-- Analiza métricas históricas.
-- Genera recomendaciones personalizadas.
-- Actualiza el diagnóstico asociado.
-
-
-**b. Query Handlers / Query Services:**
-
-`DiagnosisQueryServiceImpl`
-
-**Propósito:** Gestionar operaciones de lectura relacionadas a diagnósticos.
-
-**Dependencias:**
-
-- `PlantDiagnosisRepository`
-
-**Operaciones:**
-
-- `handle(GetDiagnosisByIdQuery)`
-- `handle(GetPlantDiagnosisHistoryQuery)`
-
-
-**c. Flujos principales del negocio:**
-
-**Flujo de diagnóstico inteligente:**
-
-- El frontend envía una imagen.
-- Se construye `GenerateDiagnosisCommand`.
-- `DiagnosisCommandServiceImpl` valida la planta.
-- La imagen es enviada al modelo IA externo.
-- Se genera el diagnóstico.
-- Se persiste mediante `PlantDiagnosisRepository`.
-- Se retorna el resultado al cliente.
-
-
-**Flujo de consulta de historial:**
-
-- El frontend solicita historial de diagnósticos.
-- Se ejecuta `GetPlantDiagnosisHistoryQuery`.
-- El repositorio recupera diagnósticos históricos.
-- Se transforman a recursos REST.
-- Se retorna la respuesta.
-
+// Oryxen.Application.Common.Models.AiDiagnosisResult
+public sealed record AiDiagnosisResult(
+    string DetectedPest, double ConfidenceScore, string Recommendation);
+```
 
 ### 5.4.4. Infrastructure Layer
 
-La Infrastructure Layer del bounded context `Artificial Intelligence` contiene los componentes encargados de persistencia e integración con servicios externos de IA.
+**a. Servicio de IA Multimodal (Gemini Vision API):**
 
+**Nombre de la clase:** `GeminiVisionService`
 
-**a. Repositorio de persistencia:**
+**Namespace:** `Oryxen.Infrastructure.External`
 
-`PlantDiagnosisRepository`
+**Propósito:** Implementa `IMultimodalAiService` mediante un `HttpClient` tipado hacia la API de Google Gemini 2.0 Flash. Construye un prompt multimodal que combina:
 
-**Paquete:** `com.upc.oryxen.ai.infrastructure.persistence.jpa.repositories`
+1. **Instrucción textual:** El modelo actúa como un Asistente Multimodal de Fitopatología y Salud Agrícola. Analiza la imagen en busca de signos visuales de anomalías (decoloración, manchas, marchitez, bordes masticados, agujeros, crecimiento fúngico, deficiencias de nutrientes) y los correlaciona con la telemetría ambiental (humedad del suelo, humedad del aire, temperatura).
+2. **Imagen inline:** La fotografía de la planta codificada en base64.
 
-**Propósito:** Gestionar persistencia mediante Spring Data JPA.
+El prompt solicita al modelo que responda exclusivamente con un JSON estructurado (`detectedPest`, `confidenceScore`, `recommendation`). Los fallos de red, API key faltante o payloads no parseables se traducen en `ExternalServiceException` (HTTP 502).
 
-**Operaciones disponibles:**
+```csharp
+public sealed class GeminiVisionService : IMultimodalAiService
+{
+    // POST /v1beta/models/gemini-2.0-flash:generateContent?key={apiKey}
+    // Body: { contents:[{ parts:[{ text: prompt }, { inline_data: { mime_type, data: base64 } }] }] }
+}
+```
 
-- `save`
-- `findById`
-- `findByPlantId`
-- `findAll`
+**Configuración (`GeminiVisionSettings`):**
 
+| Propiedad | Valor por defecto | Environment Variable |
+|-----------|-------------------|---------------------|
+| `ApiKey` | `""` | `GeminiVision__ApiKey` |
+| `BaseUrl` | `https://generativelanguage.googleapis.com` | `GeminiVision__BaseUrl` |
+| `Model` | `gemini-2.0-flash` | `GeminiVision__Model` |
 
-**b. Persistencia de la entidad PlantDiagnosis:**
+**b. Repositorio EF Core:**
 
-La entidad `PlantDiagnosis` está mapeada como entidad JPA utilizando:
+**Nombre de la clase:** `PlantDiagnosisRepository`
 
-- `@Entity`
-- `@Table(name = "plant_diagnosis")`
-- `@Id`
-- `@GeneratedValue(strategy = GenerationType.IDENTITY)`
+**Namespace:** `Oryxen.Infrastructure.Persistence.Repositories`
 
+**Propósito:** Implementa `IPlantDiagnosisRepository` utilizando EF Core sobre PostgreSQL. Los diagnósticos se retornan ordenados por `CreatedAt` descendente.
 
-**c. Diseño de persistencia:**
+**c. Configuración EF Core:**
 
-**Tabla principal:** `plant_diagnosis`
+**Nombre de la clase:** `PlantDiagnosisConfiguration`
 
-**Columnas:**
+**Namespace:** `Oryxen.Infrastructure.Persistence.Configurations`
 
-- `diagnosis_id`
-- `plant_id`
-- `image_url`
-- `health_status`
-- `detected_disease`
-- `recommendation`
-- `created_at`
-
-**Restricciones:**
-
-- `diagnosis_id` → Primary Key
-- `plant_id` → Foreign Key hacia `plants.plant_id`
-
-**Campos obligatorios:**
-
-- `plant_id`
-- `health_status`
-- `created_at`
-
-
-**d. Integración con otros bounded contexts:**
-
-La infraestructura del contexto AI depende de:
-
-- `PlantRepository` del bounded context `Plant Management`
-- `IoT Metrics Service` del bounded context `IoT`
-- `OpenAI API` como servicio externo de IA
-
+| Columna | Tipo PostgreSQL | Constraints |
+|---------|-----------------|-------------|
+| `id` | `uuid` | PK |
+| `plant_id` | `uuid` | NOT NULL, INDEX |
+| `image_url` | `text` | NOT NULL |
+| `detected_pest` | `varchar(120)` | NOT NULL |
+| `confidence_score` | `double precision` | — |
+| `recommendation` | `text` | NOT NULL |
+| `status` | `varchar(20)` | NOT NULL |
+| `analyzed_at` | `timestamp` | NULL |
+| `created_at` | `timestamp` | NOT NULL |
+| `updated_at` | `timestamp` | NULL |
 
 ### 5.4.5. Bounded Context Software Architecture Component Level Diagrams
 
-El Component Diagram del bounded context `Artificial Intelligence` representa la descomposición del contenedor backend encargado de diagnósticos inteligentes y recomendaciones automatizadas.
+El Component Diagram del bounded context `Artificial Intelligence` muestra el flujo completo desde la carga de la imagen hasta la persistencia del diagnóstico:
 
-**Componentes principales:**
+**Descripción de componentes principales:**
 
-**AI REST API Component:**
-
-Expone endpoints REST relacionados a IA mediante `AIController`.
-
-**Responsabilidades:**
-
-- Recibir solicitudes del frontend.
-- Gestionar diagnósticos.
-- Retornar recomendaciones.
-
-
-**AI Transformation Component:**
-
-Encargado de transformar datos entre DTOs, commands y entidades.
-
-**Incluye:**
-
-- `PlantDiagnosisResource`
-- `GenerateDiagnosisResource`
-- Assemblers
-
-
-**AI Command Processing Component**
-
-Implementado por `DiagnosisCommandServiceImpl`.
-
-**Responsabilidades:**
-
-- Ejecutar diagnósticos IA.
-- Procesar recomendaciones.
-- Coordinar integración con OpenAI.
-
-
-**AI Query Processing Component:**
-
-Implementado por `DiagnosisQueryServiceImpl`.
-
-**Responsabilidades:**
-
-- Consultar diagnósticos.
-- Recuperar historial.
-
-
-**AI Domain Component**
-
-Representa el núcleo del dominio.
-
-### Incluye:
-
-- `PlantDiagnosis`
-- `HealthStatus`
-
-
-**AI Persistence Component:**
-
-Gestiona persistencia mediante `PlantDiagnosisRepository`.
-
-
-**External AI Integration Component:**
-
-Representa integración con servicios externos IA.
-
-**Incluye:**
-
-- `OpenAIClient`
-- APIs de análisis visual
-
-
-**Diagrama de Componentes:**
-
-![ComponentsDiagram_AI](./assets/Chapter-5/ComponentsDiagram_AI.png)
-
-
-**Relaciones entre componentes:**
-
-- `AI REST API Component → AI Transformation Component`
-- `AI REST API Component → AI Command Processing Component`
-- `AI REST API Component → AI Query Processing Component`
-- `AI Command Processing Component → External AI Integration Component`
-- `AI Command Processing Component → AI Domain Component`
-- `AI Command Processing Component → AI Persistence Component`
-- `AI Query Processing Component → AI Persistence Component`
-
+- **AI REST API Component** (`AiController`): Expone los endpoints `/api/v1/ai/diagnoses` con autorización JWT Bearer. Maneja `IFormFile` multipart.
+- **Diagnosis Application Service** (`DiagnosisService`): Orquesta la validación de la planta, obtención de telemetría, invocación del servicio IA y persistencia.
+- **Multimodal AI Adapter** (`GeminiVisionService`): Cliente HTTP tipado hacia Google Gemini 2.0 Flash. Construye el prompt multimodal (imagen + telemetría) y parsea el JSON de respuesta.
+- **Diagnosis Persistence Component** (`PlantDiagnosisRepository`): Implementación EF Core sobre la tabla `plant_diagnoses` en PostgreSQL.
+- **Telemetry Integration** (ACL): Anti-Corruption Layer hacia el BC Device Management IoT para obtener la lectura más reciente del Sensor Lite.
+- **Plant Management Integration** (ACL): Validación de propiedad — el FARMER solo puede diagnosticar sus propias plantas.
 
 ### 5.4.6. Bounded Context Software Architecture Code Level Diagrams
 
-En esta sección se presentan los diagramas a nivel de código del bounded context `Artificial Intelligence`, permitiendo visualizar el detalle del dominio y persistencia del contexto.
-
-
 #### 5.4.6.1. Bounded Context Domain Layer Class Diagrams
 
-El diagrama UML del Domain Layer del bounded context `Artificial Intelligence` muestra al agregado principal `PlantDiagnosis`, encargado de representar diagnósticos inteligentes asociados a plantas.
+El diagrama UML del Domain Layer muestra el agregado `PlantDiagnosis` heredando de `AuditableEntity`, el enum `DiagnosisStatus` y la interfaz `IPlantDiagnosisRepository`:
 
-Además, se incluyen:
+```
+┌─────────────────────────────┐
+│      «abstract»             │
+│    AuditableEntity          │
+├─────────────────────────────┤
+│ + Id: Guid                  │
+│ + CreatedAt: DateTime       │
+│ + UpdatedAt: DateTime?      │
+└───────────┬─────────────────┘
+            │ ▲ inherits
+┌───────────┴─────────────────┐
+│      PlantDiagnosis         │
+│      (Aggregate Root)       │
+├─────────────────────────────┤
+│ + PlantId: Guid             │
+│ + ImageUrl: string          │
+│ + DetectedPest: string      │
+│ + ConfidenceScore: double   │
+│ + Recommendation: string    │
+│ + Status: DiagnosisStatus   │
+│ + AnalyzedAt: DateTime?     │
+└─────────────────────────────┘
 
-- `HealthStatus` como Value Object.
-- Commands y Queries.
-- Servicios del dominio.
+┌─────────────────────────────┐
+│   «enum» DiagnosisStatus    │
+├─────────────────────────────┤
+│ + Pending = 1               │
+│ + Completed = 2             │
+│ + Failed = 3                │
+└─────────────────────────────┘
 
-
-**Diagrama UML de Clases (Domain Layer):**
-
-![UMLClassDiagram_AI](./assets/Chapter-5/UMLClassDiagram_AI.png)
-
-
-**Relaciones:**
-
-- `PlantDiagnosis` es el Aggregate Root del contexto.
-- `PlantDiagnosis` pertenece a una sola planta.
-- `HealthStatus` representa el estado de salud de la planta.
-- `DiagnosisCommandService` utiliza `PlantDiagnosisRepository`.
-- `DiagnosisQueryService` utiliza `PlantDiagnosisRepository`.
-
+┌─────────────────────────────────┐
+│ «interface» IPlantDiagnosisRepo │
+├─────────────────────────────────┤
+│ + GetByIdAsync(Guid): Task      │
+│ + GetByPlantAsync(Guid): Task   │
+│ + AddAsync(PlantDiagnosis): Task│
+└─────────────────────────────────┘
+```
 
 #### 5.4.6.2. Bounded Context Database Design Diagram
 
-El diagrama de base de datos del bounded context `Artificial Intelligence` representa la estructura relacional utilizada para almacenar diagnósticos y recomendaciones inteligentes.
+```
+┌────────────────────────────────────────────────────┐
+│                  plant_diagnoses                    │
+├────────────────────┬──────────────┬────────────────┤
+│ Column             │ Type         │ Constraints    │
+├────────────────────┼──────────────┼────────────────┤
+│ id (PK)            │ uuid         │ NOT NULL       │
+│ plant_id (FK, IDX) │ uuid         │ NOT NULL       │
+│ image_url          │ text         │ NOT NULL       │
+│ detected_pest      │ varchar(120) │ NOT NULL       │
+│ confidence_score   │ double prec  │ —              │
+│ recommendation     │ text         │ NOT NULL       │
+│ status             │ varchar(20)  │ NOT NULL       │
+│ analyzed_at        │ timestamp    │ NULL           │
+│ created_at         │ timestamp    │ NOT NULL       │
+│ updated_at         │ timestamp    │ NULL           │
+└────────────────────┴──────────────┴────────────────┘
+         │
+         │ FK: plant_id → plants(id)
+         ▼
+┌────────────────────────────────────────────────────┐
+│                      plants                         │
+│                   (BC Plant Mgmt)                   │
+└────────────────────────────────────────────────────┘
+```
 
-**Diagrama de base de datos (ERD):**
+### 5.4.7. BDD Feature — Diagnóstico Multimodal de Salud Vegetal
 
-![ERDDiagram_AI](./assets/Chapter-5/ERDDiagram_AI.png)
+El archivo `tests/Oryxen.Specs/Features/04-diagnostico-ia.feature` documenta en Gherkin los escenarios del flujo de diagnóstico inteligente:
 
+```gherkin
+Feature: Diagnóstico Multimodal de Salud Vegetal por IA
+  Como agricultor usuario de la plataforma Oryxen
+  Quiero que el sistema analice fotografías de mis plantas junto con la telemetría IoT
+  Para diagnosticar el estado de salud general, identificar anomalías, deficiencias o plagas
 
-**Tabla principal:** `plant_diagnosis`
+  Scenario: Diagnóstico exitoso con detección de anomalía foliar
+    Given que me he autenticado como "farmer@oryxen.io" con rol "FARMER"
+    When envío una petición POST a "/api/v1/ai/diagnoses" con la imagen multipart y plantId
+    Then la respuesta tiene código HTTP 201 Created
+    And el campo "detectedPest" contiene el nombre de la anomalía detectada
+    And el campo "confidenceScore" es mayor o igual a 0.50
+    And el campo "recommendation" contiene una recomendación de cuidado o mitigación
+
+  Scenario: Planta saludable detectada
+    Given que tengo una fotografía de la planta sin signos visibles de anomalía
+    When envío una petición POST a "/api/v1/ai/diagnoses" con la imagen multipart y plantId
+    Then el campo "detectedPest" es "None"
+    And el campo "recommendation" contiene una recomendación preventiva basada en la telemetría
+```
+
+---
+## 5.5. Bounded Context: Analysis &amp; Reporting
+
+El bounded context de **Analysis &amp; Reporting** representa la capa de inteligencia analítica de la plataforma Oryxen. Este contexto ejecuta consultas de agregación SQL en tiempo real sobre la telemetría histórica de sensores IoT (`telemetry_data`), generando dashboards de salud de cultivos, tendencias temporales diarias/semanales/mensuales y reportes exportables en formato CSV y JSON. La implementación sigue el stack oficial del proyecto: ASP.NET Core 9 (Clean Architecture) + EF Core 9 + PostgreSQL 15 en el backend, y Vue 3 + TypeScript + Pinia + Axios en el frontend web, con un cliente Android nativo en Kotlin + Jetpack Compose + Retrofit para la experiencia móvil.
+
+Las consultas de agregación (promedios de `HealthScore`, `SoilMoisture`, `Temperature`, `Humidity`) se ejecutan directamente sobre la tabla `telemetry_data` utilizando LINQ sobre EF Core, aprovechando el índice compuesto `{PlantId, RecordedAt}` definido en el BC Device Management. No se requiere una base de datos de series de tiempo separada; PostgreSQL maneja eficientemente las consultas de rango temporal gracias al particionamiento lógico por planta y la paginación interna de 500 registros por consulta.
+
+### 5.5.1. Domain Layer
+
+La capa de dominio del bounded context **Analysis &amp; Reporting** define el agregado `AnalysisReport` para el seguimiento de reportes generados bajo demanda, junto con los enumerados de tipo, estado y formato de exportación.
+
+**a. Entity / Aggregate Root:**
+
+**Nombre de la clase:** `AnalysisReport`
+**Namespace:** `Oryxen.Domain.Entities`
+
+**Propósito:** Representa un reporte analítico generado para una planta específica en un rango de tiempo determinado. Hereda de `AuditableEntity` para obtener `Id` (Guid), `CreatedAt` y `UpdatedAt`.
+
+**Atributos:**
+- `Id: Guid` → Identificador único (heredado).
+- `UserAccountId: Guid` → Usuario propietario del reporte.
+- `PlantId: Guid` → Planta analizada (referencia al BC Plant Management).
+- `Type: ReportType` → Tipo de reporte (`HealthSummary = 1`, `TelemetryDetail = 2`, `PredictiveAlert = 3`).
+- `Status: ReportStatus` → Estado del ciclo de vida (`Pending = 1`, `Processing = 2`, `Completed = 3`, `Failed = 4`).
+- `RangeStart: DateTime` → Inicio del rango de fechas analizado.
+- `RangeEnd: DateTime` → Fin del rango de fechas analizado.
+- `Format: ExportFormat` → Formato de exportación (`Csv = 1`, `Json = 2`).
+- `FileContent: string?` → Contenido del archivo generado (texto CSV o JSON serializado).
+- `GeneratedAt: DateTime?` → Marca temporal de finalización de la generación.
+
+**b. Enumerados del Dominio:**
+
+- `ReportType`: `HealthSummary`, `TelemetryDetail`, `PredictiveAlert`.
+- `ReportStatus`: `Pending`, `Processing`, `Completed`, `Failed`.
+- `ExportFormat`: `Csv`, `Json`.
+
+**c. Interfaces de Repositorio (Domain Layer):**
+
+- `IAnalysisReportRepository` (`Oryxen.Domain.Repositories`): Define las operaciones de persistencia para `AnalysisReport`: `AddAsync`, `GetByIdAsync`, `GetByUserAsync` (paginado, con filtro opcional por planta), `CountByUserAsync`.
+
+### 5.5.2. Interface Layer
+
+La Interface Layer expone los endpoints REST del bounded context a través del `AnalyticsController`, protegido con JWT Bearer para los roles `FARMER` y `ADMIN`.
+
+**`AnalyticsController`**
+
+**Namespace:** `Oryxen.API.Controllers`
+**Base URL:** `/api/v1/analytics`
+**Autorización:** `[Authorize(Roles = "FARMER,ADMIN")]`
+
+**Endpoints:**
+
+| Método | Ruta | Descripción | Rol requerido |
+|--------|------|-------------|--------------|
+| `GET` | `/dashboard` | Dashboard consolidado del fundo: resumen de salud de todas las plantas del agricultor (últimos 30 días) | FARMER, ADMIN |
+| `GET` | `/plants/{plantId}/trends` | Tendencias agregadas diarias, semanales y mensuales de HealthScore, SoilMoisture, Temperature y Humidity para una planta | FARMER, ADMIN |
+| `GET` | `/reports` | Listado paginado de reportes generados, con filtro opcional por `plantId` | FARMER, ADMIN |
+| `GET` | `/reports/{reportId}` | Detalle completo de un reporte incluyendo su contenido (CSV/JSON) | FARMER, ADMIN |
+| `POST` | `/reports` | Generar un nuevo reporte bajo demanda para una planta y rango de fechas | FARMER, ADMIN |
+
+**DTOs de respuesta (Contracts):**
+
+**Namespace:** `Oryxen.Application.Analytics.Contracts`
+
+- `DashboardResponse`: `TotalPlants`, `HealthyPlants`, `WarningPlants`, `CriticalPlants`, `AvgHumidity`, `AvgTemperature`, `AvgSoilMoisture`, `AvgLightLevel`, `AvgHealthScore`, `TotalReadings`, `PlantSummaries[]`.
+- `PlantHealthSummary`: `PlantId`, `PlantName`, `PlantType`, `Status`, `AvgHealthScore`, `AvgSoilMoisture`, `ReadingCount`, `LastReadingAt`.
+- `PlantTrendResponse`: `PlantId`, `PlantName`, `Daily[]`, `Weekly[]`, `Monthly[]`.
+- `TrendPoint`: `Label`, `AvgHealthScore`, `AvgSoilMoisture`, `AvgTemperature`, `AvgHumidity`, `ReadingCount`.
+- `ReportListResponse`: `Items[]`, `TotalCount`, `Page`, `PageSize`.
+- `ReportDetailResponse`: `Id`, `PlantId`, `PlantName`, `Type`, `Status`, `Format`, `RangeStart`, `RangeEnd`, `FileContent`, `CreatedAt`, `GeneratedAt`.
+- `GenerateReportRequest`: `PlantId`, `RangeStart`, `RangeEnd`, `Type`, `Format`.
+
+### 5.5.3. Application Layer
+
+La Application Layer implementa la lógica de agregación de telemetría y generación de reportes a través del servicio `AnalysisService`.
+
+**Application Service:**
+
+`AnalysisService` (`Oryxen.Application.Analytics.AnalysisService`)
+
+Implementa `IAnalysisService` y orquesta las siguientes operaciones:
+
+- `GetDashboardAsync(userAccountId)`: Recupera todas las plantas del agricultor via `IPlantRepository.GetByUserAsync`, para cada planta consulta los últimos 30 días de telemetría via `ITelemetryRepository.GetByPlantAsync`, calcula promedios de `HealthScore`, `SoilMoisture`, `Temperature`, `Humidity`, `LightLevel` y compone el `DashboardResponse` con el conteo de plantas por estado (`Healthy`, `Warning`, `Critical`).
+
+- `GetPlantTrendsAsync(plantId)`: Recupera hasta 90 días de telemetría para una planta y aplica funciones de agregación `AggregateByDay` (últimos 7 días), `AggregateByWeek` (últimas 8 semanas, agrupadas por lunes de cada semana) y `AggregateByMonth` (últimos 6 meses). Cada grupo calcula promedios de las 4 métricas principales y el conteo de lecturas.
+
+- `GetReportsAsync(userAccountId, plantId?, page, size)`: Lista paginada de reportes generados por el usuario a través del `IAnalysisReportRepository`, enriqueciendo cada item con el nombre de la planta consultado a `IPlantRepository`.
+
+- `GenerateReportAsync(userAccountId, request)`: Crea una entidad `AnalysisReport` en estado `Processing`, consulta la telemetría del rango solicitado y serializa los resultados en formato CSV (con encabezados: `RecordedAt,DeviceId,HealthScore,SoilMoisture,Temperature,Humidity,LightLevel`) o JSON. Al completar, actualiza el estado a `Completed` y registra `GeneratedAt`.
+
+- `GetReportByIdAsync(reportId)`: Recupera un reporte específico con su contenido completo.
+
+**Estrategia de Agregación SQL:**
+
+Todas las consultas de agregación se ejecutan en memoria sobre los datos recuperados por `ITelemetryRepository`, que ya aplica un límite de 500 registros por consulta y ordenación descendente por `RecordedAt`. El índice `{PlantId, RecordedAt}` en PostgreSQL garantiza un rendimiento de lectura óptimo. Para dashboards con múltiples plantas, se ejecuta una consulta independiente por planta, lo cual es aceptable dado el volumen típico de un agricultor (1-20 plantas).
+
+### 5.5.4. Infrastructure Layer
+
+La Infrastructure Layer implementa la persistencia de reportes y la configuración de EF Core para el nuevo agregado.
+
+**Repositorio:**
+
+`AnalysisReportRepository` (`Oryxen.Infrastructure.Persistence.Repositories.AnalysisReportRepository`)
+
+Implementa `IAnalysisReportRepository` utilizando EF Core sobre `OryxenDbContext`:
+- `AddAsync`: Inserta un nuevo `AnalysisReport` en la tabla `analysis_reports`.
+- `GetByIdAsync`: Recupera un reporte por su `Id` con `AsNoTracking`.
+- `GetByUserAsync`: Consulta paginada con filtro opcional por `PlantId`, ordenada por `CreatedAt` descendente.
+- `CountByUserAsync`: Conteo total para la paginación.
+
+**Configuración EF Core (Fluent API):**
+
+`AnalysisReportConfiguration` (`Oryxen.Infrastructure.Persistence.Configurations.AnalysisReportConfiguration`)
+
+Mapea la entidad `AnalysisReport` a la tabla `analysis_reports`:
+- Clave primaria: `Id` (UUID).
+- `Type`, `Status`, `Format`: almacenados como `varchar` mediante conversión de enumerado a string.
+- `FileContent`: tipo `text` para almacenar contenido CSV/JSON.
+- Índices: `UserAccountId` (para consultas por usuario) y compuesto `{UserAccountId, PlantId}` (para filtrado combinado).
+
+**DbContext:**
+
+`OryxenDbContext` expone el nuevo `DbSet<AnalysisReport> AnalysisReports` para que EF Core incluya la tabla `analysis_reports` en el modelo y las migraciones.
+
+**Diseño de Persistencia:**
+
+**Tabla:** `analysis_reports`
+
+| Columna | Tipo | Descripción |
+|---------|------|-------------|
+| `id` | `uuid` (PK) | Identificador único del reporte |
+| `user_account_id` | `uuid` | FK al usuario propietario |
+| `plant_id` | `uuid` | FK lógico a la planta |
+| `type` | `varchar(32)` | Tipo de reporte (`HealthSummary`, `TelemetryDetail`, `PredictiveAlert`) |
+| `status` | `varchar(32)` | Estado (`Pending`, `Processing`, `Completed`, `Failed`) |
+| `range_start` | `timestamp` | Inicio del rango analizado |
+| `range_end` | `timestamp` | Fin del rango analizado |
+| `format` | `varchar(16)` | Formato (`Csv`, `Json`) |
+| `file_content` | `text` | Contenido completo del reporte generado |
+| `generated_at` | `timestamp` | Fecha de finalización de generación |
+| `created_at` | `timestamp` | Fecha de creación del registro |
+| `updated_at` | `timestamp` | Fecha de última modificación |
+
+**Dependencias de Infraestructura:**
+- PostgreSQL 15 → persistencia de la tabla `analysis_reports` y consultas de agregación sobre `telemetry_data`.
+- Entity Framework Core 9 + Npgsql → ORM para todas las operaciones de lectura/escritura.
+- ASP.NET Core 9 JWT Bearer → autenticación y autorización de endpoints.
+
+### 5.5.5. Frontend Web: Vue 3 + TypeScript
+
+El frontend web implementa el módulo de analíticas bajo `src/analytics/` siguiendo la arquitectura de Clean Frontend (Domain → Infrastructure → Application → Presentation) establecida en el proyecto.
+
+**Domain Layer (`src/analytics/domain/model/analytics.entity.ts`):**
+
+Define las interfaces TypeScript que modelan exactamente los DTOs del backend .NET:
+- `DashboardResponse`, `PlantHealthSummary`, `PlantTrendResponse`, `TrendPoint`, `ReportListResponse`, `ReportItemResponse`, `ReportDetailResponse`, `GenerateReportRequest`.
+
+**Infrastructure Layer (`src/analytics/infrastructure/analytics.service.ts`):**
+
+`AnalyticsService` realiza llamadas HTTP reales al backend a través del `apiClient` centralizado (que adjunta automáticamente el JWT Bearer y gestiona la renovación transparente de tokens):
+- `getDashboard()` → `GET /api/v1/analytics/dashboard`
+- `getPlantTrends(plantId)` → `GET /api/v1/analytics/plants/{plantId}/trends`
+- `getReports(plantId?, page, size)` → `GET /api/v1/analytics/reports`
+- `getReportById(reportId)` → `GET /api/v1/analytics/reports/{reportId}`
+- `generateReport(request)` → `POST /api/v1/analytics/reports`
+
+Se eliminaron completamente los comportamientos mock y las simulaciones de datos en el cliente que existían en versiones anteriores.
+
+**Application Layer (`src/analytics/application/analytics.store.ts`):**
+
+`useAnalyticsStore` (Pinia, Composition API) gestiona el estado reactivo del dashboard:
+- Estado: `dashboard`, `trends` (Map<plantId, PlantTrendResponse>), `reports`, `loading`, `error`.
+- Acciones: `fetchDashboard()`, `fetchPlantTrends(plantId)`, `fetchReports(plantId?, page)`.
+
+**Presentation Layer (`src/analytics/presentation/views/Analytics.vue`):**
+
+Vista principal que renderiza:
+- **Dashboard de estadísticas:** 5 tarjetas con total de plantas, plantas saludables, humedad promedio, humedad del suelo promedio y plantas que requieren atención.
+- **Selector de planta y tendencias:** Dropdown con las plantas del agricultor, pestañas de rango temporal (Diario/Semanal/Mensual) y gráficos SVG de líneas para Health Score, Humedad y Temperatura, además de una tabla resumen de métricas.
+- **Distribución de salud:** Gráfico de anillo SVG (pie chart) con la proporción de plantas Healthy/Warning/Critical.
+- **Lista de resúmenes por planta:** Tarjetas con estado, nombre, especie y métricas clave de cada planta.
+
+**Accesibilidad (a11y):** Todos los gráficos SVG incluyen `role="img"` y `aria-label`. Los selectores y pestañas utilizan `role="tablist"`, `role="tab"`, `aria-selected` y `aria-label`. Los estados de carga y error usan `role="status"`, `aria-live="polite"` y `role="alert"`.
+
+**Internacionalización (i18n):** Todas las etiquetas se obtienen del sistema `vue-i18n` con claves bajo el namespace `analytics.*`, disponibles en `en.json` (inglés) y `es.json` (español). Esto incluye títulos, mensajes de estado, etiquetas de gráficos y rangos temporales.
+
+### 5.5.6. Frontend Mobile: Kotlin + Jetpack Compose
+
+El cliente Android nativo consume los mismos endpoints de analíticas a través de Retrofit.
+
+**Contrato de API (`OryxenApi.kt`):**
+
+Se añadieron dos nuevos métodos al contrato Retrofit:
+- `getDashboard()` → `GET analytics/dashboard` → `DashboardResponse`
+- `getPlantTrends(plantId)` → `GET analytics/plants/{plantId}/trends` → `PlantTrendResponse`
+
+**DTOs serializables (`Dtos.kt`):**
+
+Se definieron las data classes con `@Serializable`:
+- `DashboardResponse`, `PlantHealthSummaryDto`, `TrendPointDto`, `PlantTrendResponse`.
+
+**Repositorio (`Repositories.kt`):**
+
+`AnalyticsRepository` expone `getDashboard()` y `getPlantTrends(plantId)` delegando en `ApiProvider.api`.
+
+**Pantalla de Analíticas (`AnalyticsScreen.kt`):**
+
+Implementa una vista con:
+- **Dashboard Overview:** Tarjetas resumen con total de plantas, saludables, críticas, health score promedio, humedad del suelo y temperatura.
+- **Lista de plantas:** Tarjetas interactivas que al ser seleccionadas cargan las tendencias diarias de la planta.
+- **Tendencias diarias:** Lista de puntos `TrendPointDto` con Health Score y Soil Moisture, coloreados por banda de salud (verde > 80, azul > 60, amarillo > 30, rojo < 30).
+- Navegación integrada desde el `DashboardScreen` mediante un botón `Leaderboard` en la `TopAppBar`.
+
+**Navegación (`OryxenNavHost.kt`):**
+
+Se agregó la ruta `ANALYTICS` con su composable correspondiente, y el callback `onNavigateAnalytics` en `DashboardScreen`.
+
+### 5.5.7. Bounded Context Software Architecture Component Level Diagrams
+
+El Component Diagram del bounded context `Analysis &amp; Reporting` representa el flujo de datos desde la telemetría IoT hasta la visualización en los clientes web y móvil.
+
+**Descripción de componentes principales:**
+
+- **Analytics REST API Component:** `AnalyticsController` expone los 5 endpoints bajo `/api/v1/analytics`, autenticados con JWT Bearer (roles FARMER, ADMIN).
+- **Analysis Application Component:** `AnalysisService` ejecuta las consultas de agregación sobre los repositorios de dominio (`IPlantRepository`, `ITelemetryRepository`, `IAnalysisReportRepository`) y compone los DTOs de respuesta.
+- **Analytics Domain Component:** Contiene el agregado `AnalysisReport`, sus enumerados, y la interfaz de repositorio `IAnalysisReportRepository`.
+- **Analytics Persistence Component:** `AnalysisReportRepository` (EF Core) persiste los reportes generados en la tabla `analysis_reports` de PostgreSQL. Las consultas de agregación leen directamente de `telemetry_data`.
+- **Vue 3 Analytics SPA:** `Analytics.vue` + `analytics.service.ts` + `analytics.store.ts` consumen los endpoints y renderizan gráficos SVG con datos reactivos en tiempo real.
+- **Android Analytics Screen:** `AnalyticsScreen.kt` + `AnalyticsRepository` + `OryxenApi.kt` consumen los mismos endpoints via Retrofit y muestran tarjetas y tendencias en Jetpack Compose.
+
+![ComponentsDiagram_Analytics](./assets/Chapter-5/analytics-component-diagram.svg)
+
+### 5.5.8. Bounded Context Software Architecture Code Level Diagrams
+
+#### 5.5.8.1. Bounded Context Domain Layer Class Diagrams
+
+El diagrama UML del Domain Layer muestra el agregado `AnalysisReport` con sus enumerados `ReportType`, `ReportStatus` y `ExportFormat`. La entidad hereda de `AuditableEntity` (proporcionando `Id`, `CreatedAt`, `UpdatedAt`) y referencia mediante `Guid` a los agregados externos `Plant` (BC Plant Management) y `UserAccount` (BC Auth &amp; Identity).
+
+**Relaciones entre clases:**
+
+- `AnalysisReport` → `UserAccount` (via `UserAccountId: Guid`)
+- `AnalysisReport` → `Plant` (via `PlantId: Guid`)
+- `IAnalysisReportRepository` ← `AnalysisReportRepository` (implementación en Infrastructure)
+
+![UMLClassDiagram_Analytics](./assets/Chapter-5/analytics-class-diagram.svg)
+
+#### 5.5.8.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos del bounded context `Analysis &amp; Reporting` muestra la tabla `analysis_reports` y su relación con las tablas existentes `telemetry_data` (BC Device Management) y `plants` (BC Plant Management), estas últimas utilizadas como fuentes de datos para las consultas de agregación.
+
+**Tabla principal:** `analysis_reports`
 
 **Atributos:**
 
-- `diagnosis_id`
-- `plant_id`
-- `image_url`
-- `health_status`
-- `detected_disease`
-- `recommendation`
-- `created_at`
+- `id` → UUID, PRIMARY KEY
+- `user_account_id` → UUID, NOT NULL
+- `plant_id` → UUID, NOT NULL
+- `type` → VARCHAR(32), NOT NULL
+- `status` → VARCHAR(32), NOT NULL
+- `range_start` → TIMESTAMP, NOT NULL
+- `range_end` → TIMESTAMP, NOT NULL
+- `format` → VARCHAR(16), NOT NULL
+- `file_content` → TEXT, NULLABLE
+- `generated_at` → TIMESTAMP, NULLABLE
+- `created_at` → TIMESTAMP, NOT NULL
+- `updated_at` → TIMESTAMP, NULLABLE
 
 **Constraints:**
 
-- PRIMARY KEY (`diagnosis_id`)
-- FOREIGN KEY (`plant_id`) → `plants(plant_id)`
-- NOT NULL en:
-  - `plant_id`
-  - `health_status`
-  - `created_at`
+- INDEX en `user_account_id` para consultas por usuario.
+- INDEX compuesto en `{user_account_id, plant_id}` para filtrado combinado.
 
+**Fuentes de datos para agregación (tablas externas):**
 
-**Tabla relacionada:** `plants`
+- `telemetry_data` (BC Device Management): índice `{plant_id, recorded_at}` optimiza las consultas de rango temporal por planta.
+- `plants` (BC Plant Management): proporciona `name`, `type`, `status` para enriquecer los DTOs de respuesta.
 
-Representa las plantas registradas dentro del bounded context Plant Management.
+![ERDDiagram_Analytics](./assets/Chapter-5/analytics-database-diagram.svg)
 
-**Atributos relevantes:**
+### 5.5.9. Especificación BDD (Gherkin)
 
-- `plant_id`
-- `species`
-- `nickname`
+La especificación en formato Gherkin del bounded context se encuentra en el archivo `06-analisis-reportes.feature` dentro de la suite de pruebas `Oryxen.Specs`. Cubre 11 escenarios que validan:
 
-**Constraints:**
-
-- PRIMARY KEY (`plant_id`)
-
-
-**Tabla relacionada:** `sensor_metrics`
-
-Representa métricas ambientales obtenidas desde sensores IoT utilizados para complementar los diagnósticos inteligentes.
-
-**Atributos:**
-
-- `metric_id`
-- `plant_id`
-- `humidity`
-- `temperature`
-- `light_level`
-- `recorded_at`
-
-**Constraints:**
-
-- PRIMARY KEY (`metric_id`)
-- FOREIGN KEY (`plant_id`) → plants(`plant_id`)
-
-
-**Relaciones entre tablas:**
-
-- `plants (1) ──── (*) plant_diagnosis`
-- `plants (1) ──── (*) sensor_metrics`
-
+- Consulta del dashboard analítico con datos reales de telemetría.
+- Tendencias diarias, semanales y mensuales con agregación correcta de promedios.
+- Generación de reportes CSV/JSON bajo demanda con contenido verificable.
+- Listado paginado de reportes generados.
+- Control de acceso: respuestas 401 para usuarios no autenticados.
+- Validación de rangos de fecha inválidos (400 Bad Request).
+- Renderizado de gráficos SVG en el frontend Vue 3.
+- Visualización de tendencias en la app Android nativa.
+- Internacionalización bilingüe (español/inglés) de todas las etiquetas del dashboard.
 
 ---
 
 ## 5.6. Bounded Context: Notification
 
-El bounded context **Notification** representa la capacidad de Oryxen para enviar alertas, recordatorios y notificaciones personalizadas a los usuarios, con el objetivo de mantener informados a los usuarios sobre eventos relevantes del sistema, como necesidades de riego, diagnósticos generados por IA, cambios en el estado de una planta o actualizaciones importantes de la plataforma.
-
+El bounded context **Notification** representa la capacidad de Oryxen para enviar alertas y notificaciones personalizadas a los usuarios. Su objetivo es mantener informados a los usuarios sobre eventos relevantes del sistema, como caídas críticas de salud detectadas por telemetría IoT (HealthScore &lt; 40) o cambios importantes en el estado de una planta. Las notificaciones se almacenan en la base de datos y se exponen mediante una API REST protegida con JWT.
 
 ### 5.6.1. Domain Layer
 
-La capa de dominio del bounded context **Notification** contiene las clases que modelan el comportamiento principal relacionado con el envío y gestión de notificaciones dentro de la plataforma. En esta capa se definen las reglas de negocio asociadas a la generación, programación, lectura y configuración de notificaciones.
+### 5.6.1. Domain Layer
 
-**a. Entity / Aggregate Root:**
+La capa de dominio del bounded context **Notification** contiene las clases que modelan el comportamiento principal relacionado con la generación y gestión de notificaciones dentro de la plataforma. En esta capa se definen las reglas de negocio asociadas a la creación, lectura y tipos de notificación.
 
-**Nombre de la clase:** `Notification`  
-**Paquete:** `com.upc.oryxen.notification.domain.model.aggregates`
+**a. Aggregate Root: `Notification`**
 
-**Propósito:**  
-Representa una notificación generada por el sistema para informar a un usuario sobre un evento relevante. Constituye el agregado raíz del bounded context Notification.
+**Namespace:** `Oryxen.Domain.Entities`
+
+**Propósito:** Representa una notificación generada por el sistema para informar a un usuario sobre un evento relevante. Constituye el agregado raíz del bounded context Notification. Hereda de `AuditableEntity` para obtener `Id` (Guid), `CreatedAt` y `UpdatedAt`.
 
 **Atributos:**
 
-- `notificationId: Long` → Identificador único de la notificación.
-- `userId: Long` → Identificador del usuario destinatario.
-- `plantId: Long?` → Identificador de la planta asociada, si aplica.
-- `type: NotificationType` → Tipo de notificación.
-- `channel: NotificationChannel` → Canal por el cual se enviará la notificación.
-- `title: String` → Título corto de la notificación.
-- `message: String` → Mensaje descriptivo.
-- `status: NotificationStatus` → Estado actual de la notificación.
-- `scheduledAt: DateTime?` → Fecha programada de envío.
-- `sentAt: DateTime?` → Fecha en que fue enviada.
-- `readAt: DateTime?` → Fecha en que fue leída.
-- `createdAt: DateTime` → Fecha de creación.
-
-**Métodos:**
-
-- `createNotification()` → Crea una nueva notificación en estado inicial.
-- `scheduleNotification()` → Programa el envío de una notificación.
-- `markAsSent()` → Marca la notificación como enviada.
-- `markAsRead()` → Marca la notificación como leída.
-- `cancelNotification()` → Cancela una notificación programada.
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único (heredado de `AuditableEntity`) |
+| `UserId` | `Guid` | FK al usuario destinatario |
+| `PlantId` | `Guid?` | FK a la planta asociada (nullable) |
+| `Type` | `NotificationType` | Enum: `CriticalHealth=1`, `HighAnomalies=2`, `WateringReminder=3`, `SystemUpdate=4` |
+| `Channel` | `NotificationChannel` | Enum: `InApp=1`, `Email=2`, `Push=3` |
+| `Title` | `string` | Título corto de la notificación |
+| `Message` | `string` | Mensaje descriptivo |
+| `IsRead` | `bool` | Indica si el usuario leyó la notificación |
+| `SentAt` | `DateTime?` | Fecha en que fue enviada por canales externos |
 
 **Relaciones:**
-
-- Una `Notification` pertenece a un solo usuario.
-- Una notificación puede estar asociada a una planta.
+- Una `Notification` pertenece a un solo `UserAccount` (`UserId`).
+- Una `Notification` puede estar asociada opcionalmente a una `Plant` (`PlantId`).
 - Un usuario puede tener múltiples notificaciones.
-
-
-**b. Entity:**
-
-**Nombre de la clase:** `NotificationPreference`  
-**Paquete:** `com.upc.oryxen.notification.domain.model.entities`  
-
-**Propósito:**  
-Representa las preferencias de notificación configuradas por el usuario, como canales habilitados, tipos de alertas recibidas y horarios silenciosos.
-
-**Atributos:**
-
-- `preferenceId: Long` → Identificador único.
-- `userId: Long` → Identificador del usuario.
-- `pushEnabled: Boolean` → Indica si las notificaciones push están habilitadas.
-- `diagnosisAlertsEnabled: Boolean` → Habilita alertas por diagnósticos IA.
-- `wateringAlertsEnabled: Boolean` → Habilita alertas por riego.
-- `communityAlertsEnabled: Boolean` → Habilita alertas de comunidad.
-- `quietHoursStart: LocalTime?` → Hora de inicio del modo silencioso.
-- `quietHoursEnd: LocalTime?` → Hora de fin del modo silencioso.
-- `createdAt: DateTime` → Fecha de creación.
-- `updatedAt: DateTime` → Fecha de actualización.
-
-**Métodos:**
-
-- `updatePreferences()` → Actualiza la configuración del usuario.
-- `enablePushNotifications()` → Activa el canal push.
-- `disablePushNotifications()` → Desactiva el canal push.
-
-
-**c. Entity:**
-
-**Nombre de la clase:** `DeviceToken`  
-**Paquete:** `com.upc.oryxen.notification.domain.model.entities`  
-
-**Propósito:**  
-Representa el token de un dispositivo móvil registrado para recibir notificaciones push.
-
-**Atributos:**
-
-- `tokenId: Long` → Identificador único.
-- `userId: Long` → Usuario propietario del token.
-- `deviceToken: String` → Token generado por FCM.
-- `platform: String` → Plataforma del dispositivo (Android/iOS).
-- `active: Boolean` → Indica si el token sigue activo.
-- `createdAt: DateTime` → Fecha de registro.
-- `lastUsedAt: DateTime?` → Última vez que el token fue usado.
-
-**Métodos:**
-
-- `registerToken()` → Registra un nuevo token.
-- `deactivateToken()` → Desactiva un token inválido.
-- `updateLastUsed()` → Actualiza el último uso.
-
-
-**d. Referencias externas del dominio:**
-
-Dentro del contexto Notification se utilizan entidades provenientes de otros bounded contexts:
-
-**UserProfile**
-- Origen: `Identity & Access`
-- Propósito: Representa al usuario receptor de la notificación.
-- Atributos relevantes:
-  - `userId`
-  - `name`
-  - `email`
-
-**Plant**
-- Origen: `Plant Management`
-- Propósito: Representa la planta asociada a la notificación.
-- Atributos relevantes:
-  - `plantId`
-  - `species`
-  - `nickname`
-
-
-**e. Value Objects:**
-
-**`NotificationType`**
-
-Representa el tipo de notificación generada por el sistema.
-
-- `WATERING_REMINDER`
-- `DIAGNOSIS_ALERT`
-- `SYSTEM_ALERT`
-- `COMMUNITY_UPDATE`
-
-**`NotificationChannel`**
-
-Representa el canal de entrega de la notificación.
-
-- `PUSH`
-- `EMAIL`
-- `IN_APP`
-
-**`NotificationStatus`**
-
-Representa el estado de la notificación.
-
-- `PENDING`
-- `SENT`
-- `READ`
-- `CANCELLED`
-- `FAILED`
-
-
-**f. Commands del dominio:**
-
-**`SendNotificationCommand`**  
-**Paquete:** `com.upc.oryxen.notification.domain.model.commands`
-
-**Propósito:**  
-Representa la intención de enviar una notificación inmediata.
-
-**Atributos:**
-
-- `userId: Long`
-- `plantId: Long?`
-- `type: NotificationType`
-- `channel: NotificationChannel`
-- `title: String`
-- `message: String`
-
-
-**`ScheduleNotificationCommand`**  
-
-**Propósito:**  
-Representa la intención de programar una notificación para una fecha futura.
-
-**Atributos:**
-
-- `userId: Long`
-- `plantId: Long?`
-- `type: NotificationType`
-- `channel: NotificationChannel`
-- `title: String`
-- `message: String`
-- `scheduledAt: DateTime`
-
-
-**`MarkNotificationAsReadCommand`**
-
-**Propósito:**  
-Marca una notificación como leída por el usuario.
-
-**Atributos:**
-
-- `notificationId: Long`
-
-
-**`UpdateNotificationPreferencesCommand`**
-
-**Propósito:**  
-Actualiza la configuración de preferencias de notificación del usuario.
-
-**Atributos:**
-
-- `userId: Long`
-- `pushEnabled: Boolean`
-- `diagnosisAlertsEnabled: Boolean`
-- `wateringAlertsEnabled: Boolean`
-- `communityAlertsEnabled: Boolean`
-- `quietHoursStart: LocalTime?`
-- `quietHoursEnd: LocalTime?`
-
-
-**g. Queries del dominio:**
-
-**`GetNotificationsByUserQuery`**
-
-**Propósito:**  
-Obtener todas las notificaciones de un usuario.
-
-**Atributos:**
-
-- `userId: Long`
-
-
-**`GetUnreadNotificationsQuery`**
-
-**Propósito:**  
-Obtener las notificaciones no leídas de un usuario.
-
-**Atributos:**
-
-- `userId: Long`
-
-
-**`GetNotificationPreferencesQuery`**
-
-**Propósito:**  
-Obtener las preferencias de notificación de un usuario.
-
-**Atributos:**
-
-- `userId: Long`
-
-
-**h. Domain Services:**
-
-**`NotificationCommandService`**  
-**Paquete:** `com.upc.oryxen.notification.domain.services`
-
-**Propósito:**  
-Define las operaciones de escritura relacionadas con el envío y configuración de notificaciones.
-
-**Operaciones:**
-
-- `handle(SendNotificationCommand)`
-- `handle(ScheduleNotificationCommand)`
-- `handle(MarkNotificationAsReadCommand)`
-- `handle(UpdateNotificationPreferencesCommand)`
-
-
-**`NotificationQueryService`**
-
-**Propósito:**  
-Define las operaciones de lectura del contexto Notification.
-
-**Operaciones:**
-
-- `handle(GetNotificationsByUserQuery)`
-- `handle(GetUnreadNotificationsQuery)`
-- `handle(GetNotificationPreferencesQuery)`
-
-
-**i. Repository:**
-
-**`NotificationRepository`**  
-**Paquete:** `com.upc.oryxen.notification.infrastructure.persistence.jpa.repositories`
-
-**Propósito:**  
-Permite acceder a la persistencia de notificaciones.
-
-**Operaciones:**
-
-- `save(Notification)`
-- `findById(Long)`
-- `findByUserId(Long)`
-- `findByStatus(NotificationStatus)`
-- `findAll()`
-
-
-**`NotificationPreferenceRepository`**  
-
-**Propósito:**  
-Permite acceder a la persistencia de preferencias de notificación.
-
-**Operaciones:**
-
-- `save(NotificationPreference)`
-- `findByUserId(Long)`
-
-
-**`DeviceTokenRepository`**  
-
-**Propósito:**  
-Permite persistir y recuperar tokens de dispositivos móviles.
-
-**Operaciones:**
-
-- `save(DeviceToken)`
-- `findByUserId(Long)`
-- `findByDeviceToken(String)
-
-
-### 5.6.2. Interface Layer
-
-La Interface Layer del bounded context **Notification** contiene las clases responsables de exponer las funcionalidades relacionadas con alertas, recordatorios y preferencias de notificación a través de endpoints REST consumidos por las aplicaciones móviles y web.
-
-**a. `NotificationController`**
-
-**Paquete:** `com.upc.oryxen.notification.interfaces.rest`
-
-**Propósito:**  
-Exponer los endpoints HTTP para crear, consultar y actualizar notificaciones y preferencias.
-
-**Dependencias:**
-
-- `NotificationCommandService`
-- `NotificationQueryService`
-
-**Endpoints expuestos:**
-
-- `POST /api/v1/notifications` → enviar notificación
-- `POST /api/v1/notifications/schedule` → programar notificación
-- `GET /api/v1/notifications/users/{userId}` → listar notificaciones de un usuario
-- `GET /api/v1/notifications/users/{userId}/unread` → listar notificaciones no leídas
-- `PUT /api/v1/notifications/{id}/read` → marcar como leída
-- `GET /api/v1/notifications/preferences/{userId}` → obtener preferencias
-- `PUT /api/v1/notifications/preferences/{userId}` → actualizar preferencias
-
-
-**b. Resources / DTOs:**
-
-**`NotificationResource`**
-
-**Propósito:**  
-Representar la información de una notificación enviada al frontend.
-
-**Atributos:**
-
-- `notificationId`
-- `userId`
-- `plantId`
-- `type`
-- `channel`
-- `title`
-- `message`
-- `status`
-- `scheduledAt`
-- `sentAt`
-- `readAt`
-- `createdAt`
-
-
-**`SendNotificationResource`**
-
-**Propósito:**  
-Representar los datos necesarios para crear una notificación.
-
-**Atributos:**
-
-- `userId`
-- `plantId`
-- `type`
-- `channel`
-- `title`
-- `message`
-
-
-**`NotificationPreferenceResource`**
-
-**Propósito:**  
-Representar la configuración de preferencias del usuario.
-
-**Atributos:**
-
-- `userId`
-- `pushEnabled`
-- `diagnosisAlertsEnabled`
-- `wateringAlertsEnabled`
-- `communityAlertsEnabled`
-- `quietHoursStart`
-- `quietHoursEnd`
-
-
-**c. Assemblers:**
-
-**`NotificationResourceFromEntityAssembler`**  
-**Propósito:**  
-Transformar una entidad `Notification` en un `NotificationResource`.
-
-
-**`SendNotificationCommandFromResourceAssembler`**  
-**Propósito:**  
-Transformar un `SendNotificationResource` en un `SendNotificationCommand`.
-
-
-**`NotificationPreferenceResourceFromEntityAssembler`**  
-**Propósito:**  
-Transformar una entidad `NotificationPreference` en un `NotificationPreferenceResource`.
-
-
-**`UpdateNotificationPreferencesCommandFromResourceAssembler`**  
-**Propósito:**  
-Transformar un `NotificationPreferenceResource` en un `UpdateNotificationPreferencesCommand`.
-
-
-### 5.6.3. Application Layer
-
-La Application Layer del bounded context **Notification** coordina los procesos de negocio relacionados con el envío de alertas, la programación de recordatorios y la administración de preferencias del usuario.
-
-**Capacidades principales:**
-
-- Enviar notificaciones inmediatas.
-- Programar recordatorios.
-- Marcar notificaciones como leídas.
-- Consultar historial de notificaciones.
-- Configurar preferencias de entrega.
-
-
-**a. Command Handlers / Command Services:**
-
-**`NotificationCommandServiceImpl`**  
-**Paquete:** `com.upc.oryxen.notification.application.internal.commandservices`
-
-**Dependencias:**
-
-- `NotificationRepository`
-- `NotificationPreferenceRepository`
-- `DeviceTokenRepository`
-- `PlantRepository`
-- `FirebaseNotificationAdapter`
-
-**Operaciones que maneja:**
-
-**`handle(SendNotificationCommand command)`**
-- Valida que el usuario exista.
-- Valida preferencias del usuario.
-- Genera la notificación.
-- La envía por el canal correspondiente.
-- Persiste el registro en base de datos.
-
-**`handle(ScheduleNotificationCommand command)`**
-- Programa la notificación para una fecha futura.
-- Registra el evento en estado `PENDING`.
-- Deja la ejecución a un scheduler.
-
-**`handle(MarkNotificationAsReadCommand command)`**
-- Busca la notificación.
-- Cambia su estado a `READ`.
-- Guarda la actualización.
-
-**`handle(UpdateNotificationPreferencesCommand command)`**
-- Recupera las preferencias del usuario.
-- Actualiza canales y horarios.
-- Persiste la nueva configuración.
 
 ---
 
-**b. Query Handlers / Query Services:**
+**b. Value Objects:**
 
-**`NotificationQueryServiceImpl`**  
-**Propósito:**  
-Gestionar operaciones de lectura relacionadas con notificaciones y preferencias.
+**`NotificationType`** (`Oryxen.Domain.Enums`)
+
+| Valor | Descripción |
+|-------|-------------|
+| `CriticalHealth = 1` | Alerta generada cuando el HealthScore de una planta cae por debajo de 40 |
+| `HighAnomalies = 2` | Anomalías altas detectadas en el entorno |
+| `WateringReminder = 3` | Recordatorio de riego programado |
+| `SystemUpdate = 4` | Actualizaciones de la plataforma |
+
+**`NotificationChannel`** (`Oryxen.Domain.Enums`)
+
+| Valor | Descripción |
+|-------|-------------|
+| `InApp = 1` | Notificación visible dentro de la aplicación web/móvil |
+| `Email = 2` | Envío por correo electrónico |
+| `Push = 3` | Notificación push a dispositivo móvil |
+
+---
+
+**c. Repository:**
+
+**`INotificationRepository`** (`Oryxen.Domain.Repositories`)
+
+Contrato de persistencia para el aggregate `Notification`. Las implementaciones concretas residen en la Infrastructure Layer.
+
+| Método | Retorno | Descripción |
+|--------|---------|-------------|
+| `GetByIdAsync(Guid, CancellationToken)` | `Task<Notification?>` | Busca por ID |
+| `GetByUserAsync(Guid, CancellationToken)` | `Task<IReadOnlyList<Notification>>` | Lista las notificaciones de un usuario (más recientes primero) |
+| `CountUnreadAsync(Guid, CancellationToken)` | `Task<int>` | Cuenta las no leídas de un usuario |
+| `AddAsync(Notification, CancellationToken)` | `Task` | Persiste una nueva notificación |
+| `Update(Notification)` | `void` | Marca cambios en una notificación existente |
+
+---
+
+**d. Referencias externas del dominio:**
+
+- **`Plant`** (`Oryxen.Domain.Entities`) — del BC `Plant Management`; se usa para obtener el `UserAccountId` propietario al crear una notificación automática por HealthScore crítico.
+- **`UserAccount`** (`Oryxen.Domain.Entities`) — del BC `Auth & Identity`; destinatario de la notificación.
+
+### 5.6.2. Interface Layer (API)
+
+La Interface Layer expone las funcionalidades del contexto Notification mediante una API REST protegida con JWT (`[Authorize]`). Los controladores se encuentran en el proyecto `Oryxen.API`.
+
+**a. `NotificationsController`**
+
+**Namespace:** `Oryxen.API.Controllers`
+
+**Ruta base:** `/api/v1/notifications`
 
 **Dependencias:**
+- `INotificationService` (Application Layer)
 
-- `NotificationRepository`
-- `NotificationPreferenceRepository`
+**Endpoints:**
 
-**Operaciones:**
+| Método | Ruta | Acción | Respuesta |
+|--------|------|--------|-----------|
+| `GET` | `/api/v1/notifications` | Lista las notificaciones del usuario autenticado | `200 OK` + `NotificationResponse[]` |
+| `GET` | `/api/v1/notifications/unread/count` | Cantidad de notificaciones no leídas | `200 OK` + `{ count }` |
+| `POST` | `/api/v1/notifications/{id}/read` | Marca una notificación como leída | `204 No Content` |
 
-- `handle(GetNotificationsByUserQuery)`
-- `handle(GetUnreadNotificationsQuery)`
-- `handle(GetNotificationPreferencesQuery)`
+El `UserId` se extrae del token JWT mediante `User.FindFirstValue(ClaimTypes.NameIdentifier)`.
 
+**b. DTOs de entrada/salida:**
 
-**c. Flujos principales del negocio:**
+**`CreateNotificationRequest`** (`Oryxen.Application.Notifications.Contracts`)
 
-**Flujo de notificación por riego o alerta:**
-- El backend detecta un evento desde IoT o IA.
-- Se construye un `SendNotificationCommand`.
-- `NotificationCommandServiceImpl` valida preferencias.
-- La notificación se envía al usuario por FCM.
-- La notificación queda persistida con estado `SENT`.
+Payload para crear una notificación de forma programática (usado internamente por el TelemetryService).
 
-**Flujo de recordatorio programado:**
-- El frontend o un servicio interno solicita programar una alerta.
-- Se crea `ScheduleNotificationCommand`.
-- El scheduler ejecuta el envío en el momento indicado.
-- La notificación se marca como `SENT`.
+| Propiedad | Tipo |
+|-----------|------|
+| `UserId` | `Guid` |
+| `PlantId` | `Guid?` |
+| `Type` | `NotificationType` |
+| `Channel` | `NotificationChannel` |
+| `Title` | `string` |
+| `Message` | `string` |
 
-**Flujo de lectura de notificaciones:**
-- El usuario consulta su bandeja de alertas.
-- Se ejecuta `GetNotificationsByUserQuery`.
-- Se devuelven los recursos al frontend.
-- Si el usuario abre una notificación, se ejecuta `MarkNotificationAsReadCommand`.
+**`NotificationResponse`** (`Oryxen.Application.Notifications.Contracts`)
 
+DTO de salida devuelto al frontend.
+
+| Propiedad | Tipo |
+|-----------|------|
+| `Id` | `Guid` |
+| `UserId` | `Guid` |
+| `PlantId` | `Guid?` |
+| `Type` | `NotificationType` |
+| `Channel` | `NotificationChannel` |
+| `Title` | `string` |
+| `Message` | `string` |
+| `IsRead` | `bool` |
+| `CreatedAt` | `DateTime` |
+| `SentAt` | `DateTime?` |
+
+### 5.6.3. Application Layer
+
+La Application Layer coordina las operaciones de creación, consulta y marcado de notificaciones. Se implementa en el proyecto `Oryxen.Application`.
+
+**a. `INotificationService`** (`Oryxen.Application.Notifications`)
+
+| Método | Descripción |
+|--------|-------------|
+| `GetByUserAsync(Guid, CancellationToken)` | Retorna las notificaciones del usuario ordenadas por fecha descendente |
+| `GetUnreadCountAsync(Guid, CancellationToken)` | Cuenta las notificaciones no leídas del usuario |
+| `CreateAsync(CreateNotificationRequest, CancellationToken)` | Crea una notificación, la persiste y asigna `SentAt` si el canal no es `InApp` |
+| `MarkAsReadAsync(Guid, CancellationToken)` | Marca la notificación como leída |
+
+**b. `NotificationService`** (`Oryxen.Application.Notifications`)
+
+Implementación concreta de `INotificationService`. Depende de `INotificationRepository` e `IUnitOfWork`. No utiliza un patrón CQRS con comandos separados; sigue el mismo enfoque directo del resto de la solución Oryxen.
+
+**c. Integración con TelemetryService (Flujo automático):**
+
+El `TelemetryService` (`Oryxen.Application.Telemetry`) fue modificado para inyectar `IPlantRepository` e `INotificationService`. Después de persistir una lectura de telemetría, si el `HealthScore` calculado es menor a 40, se ejecuta el siguiente flujo:
+
+1. Se obtiene la planta desde `IPlantRepository.GetByIdAsync(plantId)`.
+2. Se construye un `CreateNotificationRequest` con `UserId = plant.UserAccountId`, `Type = NotificationType.CriticalHealth` y un mensaje descriptivo que incluye el nombre de la planta y el puntaje actual.
+3. Se invoca `INotificationService.CreateAsync(...)`, que persiste la notificación en la base de datos.
+
+Este flujo asegura que cualquier ingesta de telemetría con valores críticos genere automáticamente una alerta visible en el Header (campana con badge) y en la vista de notificaciones del frontend.
+
+**d. Servicios de infraestructura externa:**
+
+**`IEmailService`** (`Oryxen.Application.Common.Interfaces`)
+
+Abstracción para envío de correos electrónicos.
+
+**`IPushNotificationService`** (`Oryxen.Application.Common.Interfaces`)
+
+Abstracción para envío de notificaciones push.
 
 ### 5.6.4. Infrastructure Layer
 
-La Infrastructure Layer del bounded context **Notification** contiene los componentes encargados del acceso a base de datos, la integración con Firebase Cloud Messaging y la ejecución de tareas programadas.
+La Infrastructure Layer implementa los repositorios de persistencia y los adaptadores para servicios externos de notificación.
 
-**a. Repositorios de persistencia:**
+**a. `NotificationConfiguration`** (`Oryxen.Infrastructure.Persistence.Configurations`)
 
-**`NotificationRepository`**  
-**Paquete:** `com.oryxen.notification.infrastructure.persistence.jpa.repositories`
+Configuración de EF Core para la entidad `Notification`. Mapea a la tabla `notifications`.
 
-**Propósito:**  
-Gestionar la persistencia y recuperación de notificaciones mediante Spring Data JPA.
+```csharp
+builder.ToTable("notifications");
+builder.HasKey(n => n.Id);
+builder.Property(n => n.UserId).IsRequired();
+builder.HasIndex(n => n.UserId);
+builder.Property(n => n.Type).HasConversion<int>().IsRequired();
+builder.Property(n => n.Channel).HasConversion<int>().IsRequired();
+builder.Property(n => n.Title).IsRequired().HasMaxLength(200);
+builder.Property(n => n.Message).IsRequired().HasMaxLength(2000);
+builder.Property(n => n.IsRead).IsRequired();
+builder.Property(n => n.CreatedAt).IsRequired();
+```
 
-**Operaciones disponibles:**
+**b. `NotificationRepository`** (`Oryxen.Infrastructure.Persistence.Repositories`)
 
-- `save`
-- `findById`
-- `findByUserId`
-- `findByStatus`
-- `findAll()`
+Implementación de `INotificationRepository` usando EF Core. Las notificaciones se devuelven ordenadas por `CreatedAt` descendente (más recientes primero).
 
+**c. `SendGridEmailService`** (`Oryxen.Infrastructure.External`)
 
-**`NotificationPreferenceRepository`**
+Implementación de `IEmailService` que registra en consola los correos durante el desarrollo. En producción se conectaría con la API de SendGrid.
 
-**Propósito:**  
-Gestionar la persistencia de preferencias del usuario.
+**d. `FirebaseFcmService`** (`Oryxen.Infrastructure.External`)
 
-**Operaciones:**
+Implementación de `IPushNotificationService` que registra en consola las notificaciones push durante el desarrollo. En producción se inicializaría el SDK de Firebase Admin.
 
-- `save`
-- `findByUserId`
+**e. Diseño de base de datos:**
 
+**Tabla: `notifications`**
 
-**`DeviceTokenRepository`**
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `Id` | `uuid` | PK |
+| `UserId` | `uuid` | FK → `Users.Id`, NOT NULL, Index |
+| `PlantId` | `uuid` | FK → `Plants.Id`, nullable |
+| `Type` | `integer` | NOT NULL |
+| `Channel` | `integer` | NOT NULL |
+| `Title` | `varchar(200)` | NOT NULL |
+| `Message` | `varchar(2000)` | NOT NULL |
+| `IsRead` | `boolean` | NOT NULL, default false |
+| `SentAt` | `timestamp` | nullable |
+| `CreatedAt` | `timestamp` | NOT NULL |
+| `UpdatedAt` | `timestamp` | nullable |
 
-**Propósito:**  
-Gestionar tokens de dispositivos registrados para push notifications.
+**Registro DI (DependencyInjection.cs):**
 
-**Operaciones:**
-
-- `save`
-- `findByUserId`
-- `findByDeviceToken`
-
-
-**b. Persistencia de la entidad Notification:**
-
-La entidad `Notification` está mapeada como entidad JPA con las siguientes características:
-
-- `@Entity`
-- `@Table(name = "notifications")`
-- `@Id`
-- `@GeneratedValue(strategy = GenerationType.IDENTITY)`
-
-
-**c. Diseño de persistencia:**
-
-**Tabla principal: `notifications`**
-
-**Columnas:**
-
-- `notification_id`
-- `user_id`
-- `plant_id`
-- `type`
-- `channel`
-- `title`
-- `message`
-- `status`
-- `scheduled_at`
-- `sent_at`
-- `read_at`
-- `created_at`
-
-**Restricciones:**
-
-- `notification_id` → Primary Key
-- `user_id` → Foreign Key hacia `user_profiles.id`
-- `plant_id` → Foreign Key hacia `plants.plant_id` (nullable)
-
-**Campos obligatorios:**
-
-- `user_id`
-- `type`
-- `channel`
-- `title`
-- `message`
-- `status`
-- `created_at`
-
-
-**Tabla relacionada: `notification_preferences`**
-
-**Columnas:**
-
-- `preference_id`
-- `user_id`
-- `push_enabled`
-- `diagnosis_alerts_enabled`
-- `watering_alerts_enabled`
-- `community_alerts_enabled`
-- `quiet_hours_start`
-- `quiet_hours_end`
-- `created_at`
-- `updated_at`
-
-**Constraints:**
-
-- `preference_id` → Primary Key
-- `user_id` → Foreign Key hacia `user_profiles.id`
-- `user_id` → Unique
-
-
-**Tabla relacionada: `device_tokens`**
-
-**Columnas:**
-
-- `token_id`
-- `user_id`
-- `device_token`
-- `platform`
-- `active`
-- `created_at`
-- `last_used_at`
-
-**Constraints:**
-
-- `token_id` → Primary Key
-- `user_id` → Foreign Key hacia `user_profiles.id`
-- `device_token` → Unique
-
-
-**d. Integración con otros bounded contexts:**
-
-La infraestructura del contexto Notification depende de:
-
-- `UserProfileRepository` del bounded context `Identity & Access`
-- `PlantRepository` del bounded context `Plant Management`
-- `Firebase Cloud Messaging` como servicio externo para push notifications
-- `Scheduler` interno para notificaciones programadas
-
+```csharp
+services.AddScoped<INotificationRepository, NotificationRepository>();
+services.AddScoped<INotificationService, NotificationService>();
+services.AddScoped<IEmailService, SendGridEmailService>();
+services.AddScoped<IPushNotificationService, FirebaseFcmService>();
+```
 
 ### 5.6.5. Bounded Context Software Architecture Component Level Diagrams
 
-El Component Diagram del bounded context **Notification** representa la descomposición de los procesos para el envío de alertas y gestión de preferencias.
+El Component Diagram del bounded context **Notification** representa la descomposición de los procesos para la generación y consulta de alertas.
 
 **Componentes principales:**
 
-**Notification REST API Component**  
-Expone endpoints REST relacionados con notificaciones mediante `NotificationController`.
+**Notification REST API Component** — `NotificationsController`
+- Expone endpoints REST para consultar y marcar notificaciones.
+- Recibe el `UserId` del token JWT.
 
-**Responsabilidades:**
+**Notification Command Processing Component** — `NotificationService`
+- Creación de notificaciones.
+- Marcado como leídas.
+- Invocado automáticamente por `TelemetryService` cuando HealthScore < 40.
 
-- Recibir solicitudes del frontend.
-- Gestionar envío y consulta de notificaciones.
-- Retornar respuestas estructuradas.
+**Notification Query Processing Component** — `NotificationService`
+- Consulta de notificaciones por usuario.
+- Conteo de no leídas.
 
+**Notification Persistence Component** — `NotificationRepository` + EF Core
+- Persistencia en tabla `notifications`.
 
-**Notification Transformation Component**  
-Encargado de transformar datos entre DTOs, commands y entidades.
-
-**Incluye:**
-
-- `NotificationResource`
-- `SendNotificationResource`
-- `NotificationPreferenceResource`
-- Assemblers
-
-
-**Notification Command Processing Component**  
-Implementado por `NotificationCommandServiceImpl`.
-
-**Responsabilidades:**
-
-- Enviar notificaciones.
-- Programar alertas.
-- Marcar como leídas.
-- Actualizar preferencias.
-
-
-**Notification Query Processing Component**  
-Implementado por `NotificationQueryServiceImpl`.
-
-**Responsabilidades:**
-
-- Consultar notificaciones.
-- Obtener preferencias.
-- Recuperar historial.
-
-
-**Notification Domain Component**  
-Representa el núcleo del dominio.
-
-**Incluye:**
-
-- `Notification`
-- `NotificationPreference`
-- `DeviceToken`
-- `NotificationType`
-- `NotificationChannel`
-- `NotificationStatus`
-
-
-**Notification Persistence Component**  
-Gestiona persistencia mediante repositorios JPA.
-
-**Incluye:**
-
-- `NotificationRepository`
-- `NotificationPreferenceRepository`
-- `DeviceTokenRepository`
-
-
-**External Notification Integration Component**  
-Representa integración con servicios externos de mensajería.
-
-**Incluye:**
-
-- `FirebaseNotificationAdapter`
-- `Scheduler`
-
+**External Notification Integration Component** — `SendGridEmailService`, `FirebaseFcmService`
+- Preparados para enviar por email y push (actualmente logging en desarrollo).
 
 **Diagrama de Componentes:**
 
 ![ComponentsDiagram_Notification](./assets/Chapter-5/ComponentsDiagram_Notification.png)
 
-
 **Relaciones entre componentes:**
-
-- `Notification REST API Component → Notification Transformation Component`
 - `Notification REST API Component → Notification Command Processing Component`
 - `Notification REST API Component → Notification Query Processing Component`
-- `Notification Command Processing Component → External Notification Integration Component`
-- `Notification Command Processing Component → Notification Domain Component`
 - `Notification Command Processing Component → Notification Persistence Component`
+- `Notification Command Processing Component → External Notification Integration Component`
 - `Notification Query Processing Component → Notification Persistence Component`
-
+- `TelemetryService (Application.Telemetry) → Notification Command Processing Component`
 
 ### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
 
-En esta sección se presentan los diagramas a nivel de código del bounded context `Notification`, permitiendo visualizar el detalle del dominio y la persistencia del contexto.
+### 5.6.6.1. Bounded Context Domain Layer Class Diagram
 
-### 5.6.6.1. Bounded Context Domain Layer Class Diagrams
-
-El diagrama UML del Domain Layer del bounded context `Notification` muestra el aggregate principal `Notification`, encargado de representar alertas y recordatorios generados por el sistema.
-
-Además, se incluyen:
-
-- `NotificationPreference`
-- `DeviceToken`
-- `NotificationType`
-- `NotificationChannel`
-- `NotificationStatus`
-- Commands y Queries
-- Servicios del dominio
-
+El diagrama UML del Domain Layer del contexto `Notification` muestra el aggregate principal `Notification` y sus value objects.
 
 **Diagrama UML de Clases (Domain Layer):**
 
 ![UMLClassDiagram_Notification](./assets/Chapter-5/UMLClassDiagram_Notification.png)
 
-
 **Relaciones:**
-
-- `Notification` es el Aggregate Root del contexto.
-- `Notification` pertenece a un solo usuario.
-- `Notification` puede estar asociada a una planta.
-- `NotificationPreference` pertenece a un solo usuario.
-- `DeviceToken` pertenece a un solo usuario.
-- `NotificationCommandService` utiliza `NotificationRepository`, `NotificationPreferenceRepository` y `DeviceTokenRepository`.
-- `NotificationQueryService` utiliza `NotificationRepository` y `NotificationPreferenceRepository`.
-
+- `Notification` es el Aggregate Root.
+- `Notification` usa `NotificationType` y `NotificationChannel` como enumeraciones.
+- `INotificationRepository` define el contrato de persistencia.
+- `NotificationService` (Application) depende de `INotificationRepository`.
 
 ### 5.6.6.2. Bounded Context Database Design Diagram
 
-El diagrama de base de datos del bounded context `Notification` representa la estructura relacional utilizada para almacenar notificaciones, preferencias y tokens de dispositivos.
-
-**Diagrama de base de datos (ERD):**
+**Diagrama ERD:**
 
 ![ERDDiagram_Notification](./assets/Chapter-5/ERDDiagram_Notification.png)
 
+**Tabla: `notifications`**
 
-**Tabla principal: `notifications`**
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `Id` | `uuid` | PK |
+| `UserId` | `uuid` | FK → `Users.Id`, NOT NULL, Index |
+| `PlantId` | `uuid` | FK → `Plants.Id`, nullable |
+| `Type` | `integer` | NOT NULL |
+| `Channel` | `integer` | NOT NULL |
+| `Title` | `varchar(200)` | NOT NULL |
+| `Message` | `varchar(2000)` | NOT NULL |
+| `IsRead` | `boolean` | NOT NULL |
+| `SentAt` | `timestamp` | nullable |
+| `CreatedAt` | `timestamp` | NOT NULL |
+| `UpdatedAt` | `timestamp` | nullable |
 
-**Atributos:**
-
-- `notification_id`
-- `user_id`
-- `plant_id`
-- `type`
-- `channel`
-- `title`
-- `message`
-- `status`
-- `scheduled_at`
-- `sent_at`
-- `read_at`
-- `created_at`
-
-**Constraints:**
-
-- PRIMARY KEY (`notification_id`)
-- FOREIGN KEY (`user_id`) → `user_profiles(id)`
-- FOREIGN KEY (`plant_id`) → `plants(plant_id)`
-<br>
-
-
-**Tabla relacionada: `notification_preferences`**
-
-**Atributos:**
-
-- `preference_id`
-- `user_id`
-- `push_enabled`
-- `diagnosis_alerts_enabled`
-- `watering_alerts_enabled`
-- `community_alerts_enabled`
-- `quiet_hours_start`
-- `quiet_hours_end`
-- `created_at`
-- `updated_at`
-
-**Constraints:**
-
-- PRIMARY KEY (`preference_id`)
-- FOREIGN KEY (`user_id`) → `user_profiles(id)`
-- UNIQUE (`user_id`)
-
-
-**Tabla relacionada: `device_tokens`**
-
-**Atributos:**
-
-- `token_id`
-- `user_id`
-- `device_token`
-- `platform`
-- `active`
-- `created_at`
-- `last_used_at`
-
-
-**Constraints:**
-
-- PRIMARY KEY (`token_id`)
-- FOREIGN KEY (`user_id`) → `user_profiles(id)`
-- UNIQUE (`device_token`)
-
-
-**Relaciones entre tablas:**
-
-- `user_profiles (1) ──── (*) notifications`
-- `plants (1) ──── (*) notifications`
-- `user_profiles (1) ──── (1) notification_preferences`
-- `user_profiles (1) ──── (*) device_tokens`
+**Relaciones:**
+- `Users (1) ──── (*) notifications`
+- `Plants (1) ──── (*) notifications`
 
 ---
 ## 5.7. Bounded Context: Billing and Subscription
 
-El bounded context de **Billing and Subscription** representa el núcleo encargado de la gestión de suscripciones, planes y procesos de facturación dentro de la plataforma. Este contexto permite administrar el ciclo de vida de las suscripciones de los clientes, el control de planes disponibles y la gestión de cuentas de facturación, garantizando consistencia financiera y automatización de procesos de cobro.
+El bounded context de **Billing and Subscription** gestiona el ciclo de vida comercial de los usuarios en la plataforma Oryxen. Administra el catálogo de planes (Freemium y Premium), las suscripciones vinculadas a cada cuenta, los pagos procesados a través de la pasarela externa **Stripe**, y la activación/renovación automática de planes Premium mediante webhooks.
 
 ### 5.7.1. Domain Layer
 
-La capa de dominio del bounded context **Billing and Subscription** contiene las clases responsables de modelar el comportamiento relacionado con suscripciones, cuentas de facturación y planes comerciales.
+**a. Aggregate Root: `Subscription`**
 
-**a. Entity / Aggregate Root:**
+**Namespace:** `Oryxen.Domain.Entities`
 
-**Nombre de la clase:** `Subscription`
-
-**Paquete:** `com.upc.billing.domain.model.aggregates`
-
-**Propósito:** Representa la suscripción activa de un cliente a un plan específico. Constituye el Aggregate Root del bounded context Billing and Subscription.
+**Propósito:** Representa la suscripción activa de un usuario a un plan comercial. Se vincula uno-a-uno con `UserAccount`. Las nuevas cuentas se provisionan automáticamente con un plan Freemium activo.
 
 **Atributos:**
 
-- `id: UUID` → Identificador único de la suscripción.
-- `customerId: UUID` → Identificador del cliente propietario de la suscripción.
-- `planId: UUID` → Identificador del plan contratado.
-- `status: SubscriptionStatus` → Estado actual de la suscripción.
-- `startDate: DateTime` → Fecha de inicio de la suscripción.
-- `endDate: DateTime` → Fecha de finalización de la suscripción.
-- `nextBillingDate: DateTime` → Próxima fecha de facturación.
-- `trialEndDate: DateTime` → Fecha de finalización del periodo de prueba.
-
-**Métodos:**
-
-- `activate()` → Activa la suscripción.
-- `cancel(effectiveDate)` → Cancela la suscripción.
-- `changePlan(newPlanId, changeDate)` → Cambia el plan contratado.
-- `isActive()` → Verifica si la suscripción se encuentra activa.
-- `suspend(reason)` → Suspende temporalmente la suscripción.
-
-**Relaciones:**
-
-- Una `Subscription` pertenece a un único cliente.
-- Un cliente puede poseer múltiples suscripciones históricas.
-- Una `Subscription` se encuentra asociada a un único `Plan`.
-
-
-**b. Entities del dominio:**
-
-`CustomerBillingAccount`
-
-**Propósito:** Representa la cuenta de facturación asociada a un cliente.
-
-**Atributos:**
-
-- `id: UUID`
-- `customerId: UUID`
-- `balance: float`
-- `createdAt: DateTime`
-- `updatedAt: DateTime`
-
-**Métodos:**
-
-- `getBalance()` → Retorna el balance actual.
-
-
-`Plan`
-
-**Propósito:** Representa un plan comercial disponible para contratación.
-
-**Atributos:**
-
-- `id: UUID`
-- `name: String`
-- `description: String`
-- `price: float`
-- `features: List<String>`
-- `isActive: boolean`
-
-**Métodos:**
-
-- `activate()` → Activa el plan.
-- `deactivate()` → Desactiva el plan.
-
-
-**c. Value Objects:**
-
-`BillingPeriod`
-
-Representa un intervalo de facturación asociado a una suscripción.
-
-**Atributos:**
-
-- `start: DateTime`
-- `end: DateTime`
-
-**Métodos:**
-
-- `contains(date)` → Verifica si una fecha pertenece al periodo.
-- `overlapsWith(other)` → Verifica superposición de periodos.
-- `days()` → Retorna la cantidad de días del periodo.
-
-
-`SubscriptionStatus`
-
-Representa el estado de una suscripción.
-
-**Valores posibles:**
-
-- `PENDING`
-- `ACTIVE`
-- `SUSPENDED`
-- `CANCELLED`
-- `EXPIRED`
-
-
-**d. Commands del dominio:**
-
-`CreateSubscriptionCommand`
-
-**Paquete:** `com.upc.billing.domain.model.commands`
-
-**Propósito:** Representa la intención de crear una nueva suscripción.
-
-**Atributos:**
-
-- `customerId: UUID`
-- `planId: UUID`
-
-
-`ChangePlanCommand`
-
-**Propósito:** Cambiar el plan asociado a una suscripción.
-
-**Atributos:**
-
-- `subscriptionId: UUID`
-- `newPlanId: UUID`
-
-
-`CancelSubscriptionCommand`
-
-**Propósito:** Cancelar una suscripción activa.
-
-**Atributos:**
-
-- `subscriptionId: UUID`
-- `effectiveDate: DateTime`
-
-
-`ActivateSubscriptionCommand`
-
-**Propósito:** Activar una suscripción.
-
-**Atributos:**
-
-- `subscriptionId: UUID`
-
-
-`SuspendSubscriptionCommand`
-
-**Propósito:** Suspender temporalmente una suscripción.
-
-**Atributos:**
-
-- `subscriptionId: UUID`
-- `reason: String`
-
-
-`CreatePlanCommand`
-
-**Propósito:** Registrar un nuevo plan.
-
-**Atributos:**
-
-- `name: String`
-- `description: String`
-- `price: float`
-
-
-**e. Queries del dominio:**
-
-`GetSubscriptionQuery`
-
-**Propósito:** Obtener información de una suscripción.
-
-**Atributos:**
-
-- `subscriptionId: UUID`
-
-
-`ListSubscriptionsQuery`
-
-**Propósito:** Obtener suscripciones asociadas a un cliente.
-
-**Atributos:**
-
-- `customerId: UUID`
-
-
-`GetCustomerBillingAccountQuery`
-
-**Propósito:** Obtener la cuenta de facturación de un cliente.
-
-**Atributos:**
-
-- `customerId: UUID`
-
-
-`GetCustomerBalanceQuery`
-
-**Propósito:** Obtener balance actual del cliente.
-
-**Atributos:**
-
-- `customerId: UUID`
-
-
-`GetPlanQuery`
-
-**Propósito:** Obtener información de un plan.
-
-**Atributos:**
-
-- `planId: UUID`
-
-
-`ListPlansQuery`
-
-**Propósito:** Obtener lista de planes disponibles.
-
-
-**f. Domain Services:**
-
-`SubscriptionApplicationService`
-
-**Paquete:** `com.upc.billing.domain.services`
-
-**Propósito:** Coordinar operaciones relacionadas con suscripciones.
-
-**Operaciones:**
-
-- `handle(CreateSubscriptionCommand)`
-- `handle(ChangePlanCommand)`
-- `handle(CancelSubscriptionCommand)`
-- `handle(ActivateSubscriptionCommand)`
-- `handle(SuspendSubscriptionCommand)`
-- `handle(GetSubscriptionQuery)`
-- `handle(ListSubscriptionsQuery)`
-
-
-`PlanApplicationService`
-
-**Propósito:** Gestionar operaciones relacionadas con planes.
-
-**Operaciones:**
-
-- `handle(CreatePlanCommand)`
-- `handle(UpdatePlanCommand)`
-- `handle(ActivatePlanCommand)`
-- `handle(DeactivatePlanCommand)`
-- `handle(ListPlansQuery)`
-- `handle(GetPlanQuery)`
-
-
-`CustomerBillingAccountApplicationService`
-
-**Propósito:** Gestionar consultas relacionadas con cuentas de facturación.
-
-**Operaciones:**
-
-- `handle(GetCustomerBillingAccountQuery)`
-- `handle(GetCustomerBalanceQuery)`
-
-
-**g. Repositories:**
-
-`SubscriptionRepository`
-
-**Paquete:** `com.upc.billing.infrastructure.persistence.repositories`
-
-**Propósito:** Gestionar persistencia de suscripciones.
-
-**Operaciones:**
-
-- `save(Subscription)`
-- `findById(UUID)`
-- `findActiveByCustomer(UUID)`
-
-
-`CustomerBillingAccountRepository`
-
-**Propósito:** Gestionar persistencia de cuentas de facturación.
-
-**Operaciones:**
-
-- `findByCustomerId(UUID)`
-- `updateBalance()`
-
-
-`PlanRepository`
-
-**Propósito:** Gestionar persistencia de planes.
-
-**Operaciones:**
-
-- `save(Plan)`
-- `findById(UUID)`
-- `findActive()`
-- `list()`
-
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único (heredado de `AuditableEntity`) |
+| `UserAccountId` | `Guid` | FK a `UserAccount` (unique index) |
+| `Plan` | `SubscriptionPlan` | Enum: `Freemium=1`, `Premium=2` |
+| `Status` | `SubscriptionStatus` | Enum: `Active=1`, `Cancelled=2`, `Expired=3` |
+| `StartedAt` | `DateTime` | Fecha de inicio |
+| `ExpiresAt` | `DateTime?` | Fecha de expiración |
+| `NextBillingDate` | `DateTime?` | Próxima fecha de facturación automática |
+| `CanceledAt` | `DateTime?` | Instante de cancelación |
+| `StripeCustomerId` | `string?` | ID de cliente en Stripe |
+| `StripeSubscriptionId` | `string?` | ID de suscripción en Stripe |
+| `Payments` | `ICollection<Payment>` | Historial de pagos |
+
+**b. Entity: `Plan`**
+
+**Namespace:** `Oryxen.Domain.Entities`
+
+**Propósito:** Representa un plan comercial del catálogo. Seeded al desplegar. Contiene precio, ciclo de facturación, lista de features y el `StripePriceId` para checkout.
+
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único |
+| `Name` | `string` | Nombre del plan (unique) |
+| `Price` | `decimal` | Precio (precisión 10,2) |
+| `Currency` | `string` | Código ISO 4217 (USD, PEN) |
+| `BillingCycleMonths` | `int` | Ciclo de facturación en meses |
+| `Features` | `string` | Lista separada por comas de características |
+| `StripePriceId` | `string?` | ID de precio en Stripe |
+| `IsActive` | `bool` | Indica si el plan está disponible |
+
+**c. Entity: `Payment`**
+
+**Namespace:** `Oryxen.Domain.Entities`
+
+**Propósito:** Registra cada transacción de pago procesada por Stripe. Vinculada a una `Subscription`.
+
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único |
+| `SubscriptionId` | `Guid` | FK a `Subscription` |
+| `Amount` | `decimal` | Monto pagado |
+| `Currency` | `string` | Moneda |
+| `Status` | `PaymentStatus` | Enum: `Pending=1`, `Succeeded=2`, `Failed=3`, `Refunded=4` |
+| `Provider` | `string` | Plataforma de pago (default: "Stripe") |
+| `TransactionId` | `string?` | ID de transacción de Stripe |
+| `PaidAt` | `DateTime?` | Instante de pago confirmado |
+
+**d. Repository Interfaces:**
+
+```csharp
+// Oryxen.Domain.Repositories
+public interface IPlanRepository {
+    Task<IReadOnlyList<Plan>> GetAllAsync(CancellationToken ct = default);
+    Task<Plan?> GetByIdAsync(Guid id, CancellationToken ct = default);
+    Task<Plan?> GetByNameAsync(string name, CancellationToken ct = default);
+    Task AddAsync(Plan plan, CancellationToken ct = default);
+}
+
+public interface IPaymentRepository {
+    Task<Payment?> GetByIdAsync(Guid id, CancellationToken ct = default);
+    Task<IReadOnlyList<Payment>> GetBySubscriptionAsync(Guid subscriptionId, CancellationToken ct = default);
+    Task AddAsync(Payment payment, CancellationToken ct = default);
+}
+```
 
 ### 5.7.2. Interface Layer
 
-La Interface Layer del bounded context **Billing and Subscription** contiene los controladores REST responsables de exponer funcionalidades relacionadas con suscripciones, cuentas de facturación y planes comerciales.
+**Namespace:** `Oryxen.API.Controllers`
 
-**a. SubscriptionController**
-
-**Paquete:** `com.upc.billing.interfaces.rest`
-
-**Propósito:** Exponer endpoints relacionados con la gestión de suscripciones.
-
-**Dependencias:**
-
-- `SubscriptionApplicationService`
-
-**Endpoints expuestos:**
-
-- `POST /api/v1/subscriptions`
-- `GET /api/v1/subscriptions/{subscriptionId}`
-- `GET /api/v1/customers/{customerId}/subscriptions`
-- `PUT /api/v1/subscriptions/{subscriptionId}/change-plan`
-- `PUT /api/v1/subscriptions/{subscriptionId}/cancel`
-- `POST /api/v1/subscriptions/{subscriptionId}/activate`
-- `POST /api/v1/subscriptions/{subscriptionId}/suspend`
-- `GET /api/v1/subscriptions/{subscriptionId}/status`
-
-
-**b. CustomerBillingAccountController**
-
-**Propósito:** Exponer operaciones relacionadas con facturación del cliente.
-
-**Endpoints expuestos:**
-
-- `GET /api/v1/customers/{customerId}/billing-account`
-- `GET /api/v1/customers/{customerId}/billing-account/balance`
-
-
-**c. PlanController**
-
-**Propósito:** Gestionar endpoints relacionados con planes.
-
-**Endpoints expuestos:**
-
-- `GET /api/v1/plans`
-- `GET /api/v1/plans/{planId}`
-- `POST /api/v1/plans`
-- `PUT /api/v1/plans/{planId}`
-- `POST /api/v1/plans/{planId}/activate`
-- `POST /api/v1/plans/{planId}/deactivate`
-
-
-**d. Resources / DTOs:**
-
-`SubscriptionResource`
-
-**Propósito:** Representar información de suscripciones enviada al frontend.
-
-**Atributos:**
-
-- `id`
-- `customerId`
-- `planId`
-- `status`
-- `startDate`
-- `nextBillingDate`
-
-
-`PlanResource`
-
-**Propósito:** Representar información de planes comerciales.
-
-**Atributos:**
-
-- `id`
-- `name`
-- `description`
-- `price`
-- `features`
-- `isActive`
-
-
-`CustomerBillingAccountResource`
-
-**Propósito:** Representar información financiera del cliente.
-
-**Atributos:**
-
-- `id`
-- `customerId`
-- `balance`
-
-
-**e. Assemblers:**
-
-`SubscriptionResourceFromEntityAssembler`
-
-**Propósito:** Transformar entidades `Subscription` en recursos REST.
-
-
-`SubscriptionCommandFromResourceAssembler`
-
-**Propósito:** Transformar requests REST en commands del dominio.
-
-
-`PlanResourceFromEntityAssembler`
-
-**Propósito:** Transformar entidades `Plan` en recursos consumibles.
-
+| Controller | Endpoint | HTTP | Auth | Descripción |
+|-----------|----------|------|------|-------------|
+| `PlansController` | `/api/v1/plans` | GET | Anónimo | Lista todos los planes activos |
+| `SubscriptionsController` | `/api/v1/subscriptions/checkout` | POST | FARMER, ADMIN | Crea una Stripe Checkout Session |
+| `SubscriptionsController` | `/api/v1/subscriptions/current` | GET | FARMER, ADMIN | Retorna la suscripción actual del usuario |
+| `SubscriptionsController` | `/api/v1/subscriptions/webhook` | POST | Anónimo | Recibe eventos webhook de Stripe |
+| `SubscriptionsController` | `/api/v1/subscriptions/confirm` | POST | FARMER, ADMIN | Confirma y sincroniza la suscripción tras la redirección de Stripe (re-fetch post-checkout iniciado desde el cliente) |
 
 ### 5.7.3. Application Layer
 
-La Application Layer del bounded context **Billing and Subscription** coordina procesos relacionados con suscripciones, planes y facturación.
+**Namespace:** `Oryxen.Application.Billing`
 
-**Capacidades principales del contexto:**
+| Servicio | Interfaz | Propósito |
+|----------|----------|-----------|
+| `PlanService` | `IPlanService` | Catálogo público de planes (read-only) |
+| `SubscriptionService` | `ISubscriptionService` | Orquesta checkout, webhooks y consulta de suscripción actual |
 
-- Crear suscripciones.
-- Cancelar y suspender suscripciones.
-- Gestionar cambios de plan.
-- Consultar balances y cuentas de facturación.
-- Administrar planes comerciales.
+**Puerto de plataforma de pago:**
 
+```csharp
+// Oryxen.Application.Common.Interfaces
+public interface IPaymentPlatformService
+{
+    Task<CheckoutSessionResult> CreateCheckoutSessionAsync(
+        string planName, decimal amount, string currency,
+        string successUrl, string cancelUrl, string customerEmail,
+        CancellationToken ct = default);
 
-**a. Command Handlers / Command Services:**
+    Task<WebhookEventResult?> ParseWebhookAsync(
+        string payload, string signature,
+        CancellationToken ct = default);
+}
+```
 
-`SubscriptionApplicationService`
+**Contratos (DTOs):**
 
-**Paquete:** `com.upc.billing.application.internal.commandservices`
+```csharp
+public sealed record PlanResponse(Guid Id, string Name, decimal Price, string Currency,
+    int BillingCycleMonths, string Features, bool IsActive);
 
-**Dependencias:**
+public sealed record CheckoutRequest { Guid PlanId; string? SuccessUrl; string? CancelUrl; }
+public sealed record CheckoutResponse(string SessionId, string CheckoutUrl);
 
-- `SubscriptionRepository`
-- `PlanRepository`
-- `CustomerBillingAccountRepository`
-
-**Operaciones que maneja:**
-
-`handle(CreateSubscriptionCommand command)`
-
-- Valida existencia del cliente.
-- Verifica disponibilidad del plan.
-- Genera nueva suscripción.
-- Persiste la suscripción.
-
-`handle(ChangePlanCommand command)`
-
-- Obtiene suscripción activa.
-- Valida nuevo plan.
-- Calcula ajustes de facturación.
-- Actualiza suscripción.
-
-`handle(CancelSubscriptionCommand command)`
-
-- Cancela suscripción.
-- Actualiza estado.
-- Registra fecha efectiva.
-
-
-`PlanApplicationService`
-
-**Dependencias:**
-
-- `PlanRepository`
-
-**Operaciones que maneja:**
-
-- `handle(CreatePlanCommand)`
-- `handle(UpdatePlanCommand)`
-- `handle(ActivatePlanCommand)`
-- `handle(DeactivatePlanCommand)`
-
-
-**b. Query Handlers / Query Services:**
-
-`CustomerBillingAccountApplicationService`
-
-**Propósito:** Gestionar consultas relacionadas con facturación.
-
-**Dependencias:**
-
-- `CustomerBillingAccountRepository`
-
-**Operaciones:**
-
-- `handle(GetCustomerBillingAccountQuery)`
-- `handle(GetCustomerBalanceQuery)`
-
-
-`SubscriptionQueryService`
-
-**Propósito:** Gestionar consultas relacionadas con suscripciones.
-
-**Dependencias:**
-
-- `SubscriptionRepository`
-
-**Operaciones:**
-
-- `handle(GetSubscriptionQuery)`
-- `handle(ListSubscriptionsQuery)`
-
-
-**c. Event Handlers:**
-
-`SubscriptionEventHandlers`
-
-**Propósito:** Gestionar eventos relacionados con suscripciones.
-
-**Eventos manejados:**
-
-- `SubscriptionCancelledEvent`
-- `SubscriptionActivatedEvent`
-
-
-**d. Flujos principales del negocio:**
-
-**Flujo de creación de suscripción:**
-
-- El frontend solicita una nueva suscripción.
-- Se construye `CreateSubscriptionCommand`.
-- Se valida el cliente y el plan.
-- Se crea la entidad `Subscription`.
-- Se persiste la información.
-- Se retorna el resultado al cliente.
-
-
-**Flujo de cambio de plan:**
-
-- El usuario solicita cambiar de plan.
-- Se ejecuta `ChangePlanCommand`.
-- Se validan reglas de facturación.
-- Se actualiza la suscripción.
-- Se recalculan fechas de cobro.
-
-
-**Flujo de consulta de balance:**
-
-- El frontend solicita balance del cliente.
-- Se ejecuta `GetCustomerBalanceQuery`.
-- Se obtiene información desde `CustomerBillingAccountRepository`.
-- Se transforma la respuesta a recurso REST.
-- Se retorna el balance al cliente.
-
+public sealed record SubscriptionResponse(Guid Id, Guid UserId, string Plan, string Status,
+    DateTime StartedAt, DateTime? ExpiresAt, DateTime? NextBillingDate, DateTime? CanceledAt);
+```
 
 ### 5.7.4. Infrastructure Layer
 
-La Infrastructure Layer del bounded context `Billing and Subscription` contiene los componentes responsables de persistencia y gestión de datos relacionados con suscripciones y facturación.
+**a. Integración con Stripe:**
 
-**a. Repositorios de persistencia:**
+**Clase:** `StripePaymentService`
 
-`SubscriptionRepositoryImpl`
+**Namespace:** `Oryxen.Infrastructure.External`
 
-**Paquete:** `com.upc.billing.infrastructure.persistence.jpa.repositories`
+**Propósito:** Implementa `IPaymentPlatformService` mediante llamadas HTTP directas a la REST API de Stripe (sin SDK, para mantener el Infrastructure layer ligero).
 
-**Propósito:** Implementar persistencia de `Subscription`.
+| Operación | Endpoint Stripe | Descripción |
+|-----------|-----------------|-------------|
+| Create Checkout Session | `POST /v1/checkout/sessions` | Crea una sesión de pago con `line_items` (price_data inline), `client_reference_id` (userId) y retorna URL de redirect |
+| Parse Webhook | Local JSON parse | Parsea el payload del webhook y extrae `type`, `subscription`, `customer`, `client_reference_id`, `payment_intent`, `amount_total` |
 
-**Interfaz implementada:**
+**Configuración (`StripeSettings`):**
 
-- `SubscriptionRepository`
+| Propiedad | Environment Variable |
+|-----------|---------------------|
+| `SecretKey` | `Stripe__SecretKey` |
+| `WebhookSecret` | `Stripe__WebhookSecret` |
+| `BaseUrl` | `Stripe__BaseUrl` (default: `https://api.stripe.com`) |
 
+**b. StripeWebhookController (Flujo Asíncrono de Stripe):**
 
-`CustomerBillingAccountRepositoryImpl`
+**Ruta:** `POST /api/v1/subscriptions/webhook`
+**Auth:** `[AllowAnonymous]` — Stripe llama server-to-server con firma HMAC-SHA256 en `Stripe-Signature`.
 
-**Propósito:** Persistir y consultar cuentas de facturación.
+**Procesamiento del webhook:**
 
-**Interfaz implementada:**
+1. El backend lee el `body` crudo y el header `Stripe-Signature`.
+2. `SubscriptionService.ProcessWebhookAsync` invoca `StripePaymentService.ParseWebhookAsync` que parsea el JSON de Stripe y extrae los campos relevantes.
+3. Si el `EventType` es `checkout.session.completed`:
+   - **Búsqueda primaria:** Se usa `client_reference_id` (el `UserAccountId` en UUID) para localizar al usuario directamente via `IUserAccountRepository.GetByIdAsync`.
+   - **Búsqueda de fallback:** Si el `ClientReferenceId` no está disponible o el parseo de GUID falla, se usa `StripeCustomerId` via `IUserAccountRepository.GetByStripeCustomerIdAsync`.
+4. Se actualiza la suscripción: `Plan = Premium`, `Status = Active`, `NextBillingDate = UtcNow + 1 month`, `StripeCustomerId`, `StripeSubscriptionId`.
+5. Se registra un `Payment` con status `Succeeded`, `TransactionId` (payment_intent), `Amount`, `Currency` y `PaidAt`.
+6. Se persiste todo via `IUnitOfWork.SaveChangesAsync`.
 
-- `CustomerBillingAccountRepository`
+**c. Endpoint de Confirmación Síncrono (Post-Redirect):**
 
+**Ruta:** `POST /api/v1/subscriptions/confirm`
+**Auth:** `[Authorize]` (JWT Bearer).
 
-`PlanRepositoryImpl`
+El frontend (CheckoutView.vue) invoca este endpoint al recibir `?status=success` desde Stripe. El endpoint consulta `GET /api/v1/subscriptions/current` para retornar el estado actualizado de la suscripción, confirmando visualmente la activación Premium.
 
-**Propósito:** Persistir y consultar planes comerciales.
+**d. Repositorios EF Core:**
 
-**Interfaz implementada:**
+| Clase | Namespace | Tabla |
+|-------|-----------|-------|
+| `PlanRepository` | `Oryxen.Infrastructure.Persistence.Repositories` | `plans` |
+| `PaymentRepository` | `Oryxen.Infrastructure.Persistence.Repositories` | `payments` |
 
-- `PlanRepository`
+**e. Configuraciones EF Core:**
 
+| Clase | Tabla | Notas |
+|-------|-------|-------|
+| `PlanConfiguration` | `plans` | Name unique index, Price precision(10,2) |
+| `PaymentConfiguration` | `payments` | SubscriptionId index, Status string conversion |
+| `SubscriptionConfiguration` | `subscriptions` | UserAccountId unique index, StripeCustomerId/SubscriptionId varchar(120) |
 
-**b. Persistencia de entidades:**
+**f. Diagrama de Secuencia — Flujo Completo de Pago (Stripe Checkout + Webhook):**
 
-Las entidades del contexto están mapeadas mediante tecnologías ORM.
-
-**Entidades persistidas:**
-
-- `Subscription`
-- `CustomerBillingAccount`
-- `Plan`
-
-
-**c. Diseño de persistencia:**
-
-**Tabla principal:** `subscriptions`
-
-**Columnas:**
-
-- `id`
-- `customer_id`
-- `plan_id`
-- `status`
-- `start_date`
-- `end_date`
-- `next_billing_date`
-- `trial_end_date`
-
-**Restricciones:**
-
-- `id` → Primary Key
-- `customer_id` → Foreign Key
-- `plan_id` → Foreign Key
-
-**Campos obligatorios:**
-
-- `customer_id`
-- `plan_id`
-- `status`
-- `start_date`
-
-
-**Tabla relacionada:** `customer_billing_accounts`
-
-**Columnas:**
-
-- `id`
-- `customer_id`
-- `balance`
-- `created_at`
-- `updated_at`
-
-
-**Tabla relacionada:** `plans`
-
-**Columnas:**
-
-- `id`
-- `name`
-- `description`
-- `price`
-- `is_active`
-
-
-**d. Integración con otros bounded contexts:**
-
-La infraestructura del contexto Billing and Subscription depende de:
-
-- `Identity and Access Management`
-- `Payment Gateway`
-- `Notification Service`
-- Servicios de facturación externa
-
+```
+  Farmer (Web/Mobile)             Oryxen Backend               Stripe API              PostgreSQL
+  ──────────────────             ──────────────               ──────────              ──────────
+       │                               │                           │                       │
+       │  POST /subscriptions/checkout │                           │                       │
+       │  {planId: "uuid"}             │                           │                       │
+       │ ─────────────────────────────>│                           │                       │
+       │                               │  POST /v1/checkout/      │                       │
+       │                               │    sessions              │                       │
+       │                               │  (line_items,            │                       │
+       │                               │   client_reference_id=   │                       │
+       │                               │   userId)                │                       │
+       │                               │ ────────────────────────>│                       │
+       │                               │                           │                       │
+       │                               │  200 {id, url}           │                       │
+       │                               │ <────────────────────────│                       │
+       │                               │                           │                       │
+       │  200 {sessionId, checkoutUrl} │                           │                       │
+       │ <─────────────────────────────│                           │                       │
+       │                               │                           │                       │
+       │  HTTP 302 → checkoutUrl       │                           │                       │
+       │ ─────────────────────────────────────────────────────────>│                       │
+       │                               │                           │                       │
+       │  Farmer completa el pago en   │                           │                       │
+       │  la UI de Stripe              │                           │                       │
+       │                               │                           │                       │
+       │  HTTP 302 → successUrl        │                           │                       │
+       │ <─────────────────────────────────────────────────────────│                       │
+       │  (?status=success)            │                           │                       │
+       │                               │                           │                       │
+       │                               │  POST /webhook            │                       │
+       │                               │  (checkout.session.       │                       │
+       │                               │   completed)              │                       │
+       │                               │ <─────────────────────────│                       │
+       │                               │                           │                       │
+       │                               │  Parse JSON, extract      │                       │
+       │                               │  client_reference_id=     │                       │
+       │                               │  userId, customer,        │                       │
+       │                               │  payment_intent, amount   │                       │
+       │                               │                           │                       │
+       │                               │  GetByIdAsync(userId) ──────────────────────────>│
+       │                               │ <── UserAccount + ────── │                       │
+       │                               │     Subscription          │                       │
+       │                               │                           │                       │
+       │                               │  Update Subscription:     │                       │
+       │                               │   Plan=Premium,           │                       │
+       │                               │   Status=Active,          │                       │
+       │                               │   StripeCustomerId=...,   │                       │
+       │                               │   StripeSubscriptionId=.. │                       │
+       │                               │                           │                       │
+       │                               │  Insert Payment           │                       │
+       │                               │   (Status=Succeeded) ────────────────────────────>│
+       │                               │                           │                       │
+       │                               │  SaveChangesAsync() ─────────────────────────────>│
+       │                               │                           │                       │
+       │                               │  200 OK                   │                       │
+       │                               │ <─────────────────────────│                       │
+       │                               │                           │                       │
+       │  GET /subscriptions/current   │                           │                       │
+       │  (CheckoutView refreshes)     │                           │                       │
+       │ ─────────────────────────────>│                           │                       │
+       │                               │                           │                       │
+       │  200 {plan: "Premium",        │                           │                       │
+       │       status: "Active", ...}  │                           │                       │
+       │ <─────────────────────────────│                           │                       │
+       │                               │                           │                       │
+```
 
 ### 5.7.5. Bounded Context Software Architecture Component Level Diagrams
 
-El Component Diagram del bounded context `Billing and Subscription` representa la descomposición del backend encargado de suscripciones y facturación.
+**Descripción de componentes principales:**
 
-**Componentes principales:**
-
-**Billing REST API Component:**
-
-Expone endpoints REST relacionados con suscripciones y planes.
-
-**Responsabilidades:**
-
-- Gestionar suscripciones.
-- Gestionar cuentas de facturación.
-- Gestionar planes.
-
-
-**Billing Transformation Component:**
-
-Encargado de transformar DTOs, commands y entidades.
-
-**Incluye:**
-
-- `SubscriptionResource`
-- `PlanResource`
-- Assemblers
-
-
-**Billing Command Processing Component:**
-
-Implementado por `SubscriptionApplicationService` y `PlanApplicationService`.
-
-**Responsabilidades:**
-
-- Procesar suscripciones.
-- Gestionar cambios de plan.
-- Procesar cancelaciones.
-- Administrar planes.
-
-
-**Billing Query Processing Component:**
-
-Implementado por Query Services.
-
-**Responsabilidades:**
-
-- Consultar balances.
-- Consultar suscripciones.
-- Consultar planes.
-
-
-**Billing Domain Component:**
-
-Representa el núcleo del dominio.
-
-### Incluye:
-
-- `Subscription`
-- `CustomerBillingAccount`
-- `Plan`
-- `BillingPeriod`
-- `SubscriptionStatus`
-
-
-**Billing Persistence Component:**
-
-Gestiona persistencia mediante repositorios ORM.
-
-
-**External Billing Integration Component:**
-
-Representa integración con servicios externos.
-
-**Incluye:**
-
-- `Payment Gateway`
-- `Notification Service`
-- Facturación externa
-
-
-**Diagrama de Componentes:**
-
-![ComponentsDiagram_BillingSubscription](https://i.postimg.cc/7ZhBqdGN/Billing-Subscription-Component.png)
-
-
-**Relaciones entre componentes:**
-
-- `Billing REST API Component → Billing Transformation Component`
-- `Billing REST API Component → Billing Command Processing Component`
-- `Billing REST API Component → Billing Query Processing Component`
-- `Billing Command Processing Component → Billing Domain Component`
-- `Billing Command Processing Component → Billing Persistence Component`
-- `Billing Command Processing Component → External Billing Integration Component`
-- `Billing Query Processing Component → Billing Persistence Component`
-
+- **Plans REST API Component** (`PlansController`): Catálogo público anónimo.
+- **Subscriptions REST API Component** (`SubscriptionsController`): Checkout autenticado + webhook anónimo.
+- **Plan Application Service** (`PlanService`): Read-only del catálogo.
+- **Subscription Application Service** (`SubscriptionService`): Orquesta checkout → Stripe → webhook → activación Premium.
+- **Stripe Payment Adapter** (`StripePaymentService`): HTTP client hacia Stripe REST API.
+- **Plan Persistence** (`PlanRepository`): EF Core sobre `plans`.
+- **Payment Persistence** (`PaymentRepository`): EF Core sobre `payments`.
+- **Auth Integration** (ACL): Valida que el usuario autenticado existe y obtiene su email para Stripe customer.
 
 ### 5.7.6. Bounded Context Software Architecture Code Level Diagrams
 
-En esta sección se presentan los diagramas a nivel de código del bounded context `Billing and Subscription`, permitiendo visualizar la estructura del dominio, persistencia y relaciones entre suscripciones, cuentas y planes.
-
-
 #### 5.7.6.1. Bounded Context Domain Layer Class Diagrams
 
-El diagrama UML del Domain Layer del bounded context `Billing and Subscription` muestra al agregado principal `Subscription`, encargado de representar la gestión de suscripciones dentro del sistema.
+```
+┌─────────────────────────────────────┐
+│           Subscription              │
+│         (Aggregate Root)            │
+├─────────────────────────────────────┤
+│ + UserAccountId: Guid               │
+│ + Plan: SubscriptionPlan            │
+│ + Status: SubscriptionStatus        │
+│ + StartedAt: DateTime               │
+│ + NextBillingDate: DateTime?        │
+│ + CanceledAt: DateTime?             │
+│ + StripeCustomerId: string?         │
+│ + StripeSubscriptionId: string?     │
+│ + Payments: ICollection<Payment>    │
+└──────────┬──────────────────────────┘
+           │ 1
+           │
+           │ *
+┌──────────┴──────────────────────────┐
+│             Payment                 │
+├─────────────────────────────────────┤
+│ + SubscriptionId: Guid              │
+│ + Amount: decimal                   │
+│ + Currency: string                  │
+│ + Status: PaymentStatus             │
+│ + Provider: string                  │
+│ + TransactionId: string?            │
+│ + PaidAt: DateTime?                 │
+└─────────────────────────────────────┘
 
-Además, se incluyen:
-
-- `CustomerBillingAccount`
-- `Plan`
-- `BillingPeriod`
-- Commands y Queries.
-- Servicios del dominio.
-
-
-**Diagrama UML de Clases (Domain Layer):**
-
-![UMLClassDiagram_BillingSubscription](https://i.postimg.cc/j5Hc8rmR/Billing-Subscription-Class-Diagram.png)
-
-
-**Relaciones:**
-
-- `Subscription` es el Aggregate Root del contexto.
-- `Subscription` pertenece a un cliente.
-- `Subscription` referencia un `Plan`.
-- `CustomerBillingAccount` administra balances del cliente.
-- `PlanApplicationService` utiliza `PlanRepository`.
-- `SubscriptionApplicationService` utiliza `SubscriptionRepository`.
-
+┌─────────────────────────────────────┐
+│              Plan                   │
+├─────────────────────────────────────┤
+│ + Name: string (unique)             │
+│ + Price: decimal                    │
+│ + Currency: string                  │
+│ + BillingCycleMonths: int           │
+│ + Features: string                  │
+│ + StripePriceId: string?            │
+│ + IsActive: bool                    │
+└─────────────────────────────────────┘
+```
 
 #### 5.7.6.2. Bounded Context Database Design Diagram
 
-El diagrama de base de datos del bounded context `Billing and Subscription` representa la estructura relacional utilizada para almacenar suscripciones, cuentas de facturación y planes comerciales.
+```
+┌────────────────────────────────────────────────┐
+│                  plans                          │
+├──────────────────┬───────────────┬──────────────┤
+│ id (PK)          │ uuid          │ NOT NULL     │
+│ name (UQ)        │ varchar(60)   │ NOT NULL     │
+│ price            │ numeric(10,2) │ NOT NULL     │
+│ currency         │ varchar(3)    │ NOT NULL     │
+│ billing_cycle_m. │ int           │ NOT NULL     │
+│ features         │ text          │ NOT NULL     │
+│ stripe_price_id  │ varchar(120)  │ NULL         │
+│ is_active        │ bool          │ NOT NULL     │
+└──────────────────┴───────────────┴──────────────┘
 
-**Diagrama de base de datos (ERD):**
+┌────────────────────────────────────────────────┐
+│               subscriptions                     │
+├──────────────────┬───────────────┬──────────────┤
+│ id (PK)          │ uuid          │ NOT NULL     │
+│ user_account_id  │ uuid (UQ IDX) │ NOT NULL     │
+│ plan             │ varchar(20)   │ NOT NULL     │
+│ status           │ varchar(20)   │ NOT NULL     │
+│ started_at       │ timestamp     │ NOT NULL     │
+│ next_billing_dt  │ timestamp     │ NULL         │
+│ canceled_at      │ timestamp     │ NULL         │
+│ stripe_customer  │ varchar(120)  │ NULL         │
+│ stripe_subs_id   │ varchar(120)  │ NULL         │
+└──────────────────┴───────────────┴──────────────┘
 
-![ERDDiagram_BillingSubscription](https://i.postimg.cc/d3nBYjJX/Billing-Subscription-Design-Diagram.png)
+┌────────────────────────────────────────────────┐
+│                  payments                       │
+├──────────────────┬───────────────┬──────────────┤
+│ id (PK)          │ uuid          │ NOT NULL     │
+│ subscription_id  │ uuid (IDX)    │ NOT NULL     │
+│ amount           │ numeric(10,2) │ NOT NULL     │
+│ currency         │ varchar(3)    │ NOT NULL     │
+│ status           │ varchar(20)   │ NOT NULL     │
+│ provider         │ varchar(40)   │ NOT NULL     │
+│ transaction_id   │ varchar(200)  │ NULL         │
+│ paid_at          │ timestamp     │ NULL         │
+└──────────────────┴───────────────┴──────────────┘
+         │ FK: subscription_id → subscriptions(id)
+```
 
-
-**Tabla principal:** `subscriptions`
-
-**Atributos:**
-
-- `id`
-- `customer_id`
-- `plan_id`
-- `status`
-- `start_date`
-- `end_date`
-- `next_billing_date`
-- `trial_end_date`
-
-**Constraints:**
-
-- PRIMARY KEY (`id`)
-- FOREIGN KEY (`customer_id`)
-- FOREIGN KEY (`plan_id`)
-
-**Tabla relacionada:** `customer_billing_accounts`
-
-**Atributos:**
-
-- `id`
-- `customer_id`
-- `balance`
-- `created_at`
-- `updated_at`
-
-**Constraints:**
-
-- PRIMARY KEY (`id`)
-- FOREIGN KEY (`customer_id`)
-
-
-**Tabla relacionada:** `plans`
-
-**Atributos:**
-
-- `id`
-- `name`
-- `description`
-- `price`
-- `is_active`
-
-**Constraints:**
-
-- PRIMARY KEY (`id`)
-
-
-**Relaciones entre tablas:**
-
-- `customers (1) ──── (*) subscriptions`
-- `plans (1) ──── (*) subscriptions`
-- `customers (1) ──── (1) customer_billing_accounts`
-
-
+---
 ## 5.8. Bounded Context: Community
 
-El bounded context de **Community** representa el espacio social y colaborativo de la plataforma Oryxen. Este contexto permite a los usuarios compartir el progreso de sus plantas, intercambiar consejos, interactuar mediante comentarios y acceder a un *feed* personalizado. Además, incorpora reglas críticas de negocio y privacidad, como la moderación de contenido y la sanitización automática de metadatos (EXIF/GPS) en las fotografías para proteger la seguridad de los usuarios.
+El bounded context de **Community** representa el espacio social y colaborativo de la plataforma Oryxen. Este contexto permite a los usuarios compartir experiencias de cultivo, intercambiar consejos agrícolas, interactuar mediante comentarios y acceder a un feed cronológico de publicaciones. El acceso está restringido exclusivamente a suscriptores del plan **Premium**, sirviendo como diferenciador estratégico de retención dentro del modelo de monetización Freemium de Oryxen.
+
+Como medida crítica de ciberseguridad y privacidad, toda imagen cargada en una publicación es procesada por un sanitizador automático de metadatos que remueve datos EXIF y coordenadas GPS antes del almacenamiento, previniendo la fuga de geolocalización de fincas agrícolas.
 
 ### 5.8.1. Domain Layer
 
-La capa de dominio del bounded context **Community** contiene las clases que modelan el comportamiento central de la interacción social, garantizando las reglas de publicación, límites de interacción y estados de moderación.
+La capa de dominio del bounded context **Community** contiene las entidades que modelan el comportamiento central de la interacción social agrícola.
 
-**a. Entity / Aggregate Root:**
+**a. Aggregate Root: `CommunityPost`**
 
-**Nombre de la clase:** `CommunityPost`
-**Paquete:** `com.upc.oryxen.community.domain.model.aggregates`
+**Namespace:** `Oryxen.Domain.Entities`
 
-**Propósito:** Representa una publicación realizada por un usuario en el foro o *feed* comunitario. Constituye el Aggregate Root del bounded context, encapsulando el contenido, las imágenes y su estado de moderación.
+**Propósito:** Representa una publicación realizada por un usuario en el feed comunitario. Hereda de `AuditableEntity` para obtener `Id` (Guid), `CreatedAt` y `UpdatedAt`.
 
 **Atributos:**
-*   `postId: Long` → Identificador único de la publicación.
-*   `authorId: Long` → Identificador del usuario creador.
-*   `plantId: Long?` → (Opcional) Identificador de la planta etiquetada.
-*   `content: String` → Texto del consejo o actualización.
-*   `imageUrl: String?` → URL de la fotografía compartida (previamente sanitizada).
-*   `status: PostStatus` → Estado de la publicación (Activa, Moderada).
-*   `createdAt: DateTime` → Fecha de la publicación.
-*   `updatedAt: DateTime` → Última modificación.
 
-**Métodos:**
-*   `updateContent(newContent)` → Modifica el texto de la publicación validando políticas.
-*   `markAsModerated()` → Cambia el estado de la publicación si infringe las normas.
-*   `archive()` → Oculta la publicación lógicamente.
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único (heredado de `AuditableEntity`) |
+| `UserId` | `Guid` | FK al usuario autor |
+| `Title` | `string` | Título de la publicación (max 200 caracteres) |
+| `Content` | `string` | Contenido del consejo o experiencia (max 4000 caracteres) |
+| `ImageUrl` | `string?` | URL relativa de la imagen sanitizada |
+| `LikesCount` | `int` | Contador desnormalizado de "me gusta" |
+| `CreatedAt` | `DateTime` | Fecha de creación |
+| `UpdatedAt` | `DateTime?` | Última modificación |
 
 **Relaciones:**
-*   Un `CommunityPost` tiene múltiples `Comment`.
-*   Un `CommunityPost` puede tener múltiples `Reaction`.
+- `Author` → `UserAccount` (FK `UserId`, DeleteBehavior.Restrict)
+- `Comments` → `ICollection<Comment>` (Cascade delete)
+- `Likes` → `ICollection<Like>` (Cascade delete)
 
-**b. Entities del dominio:**
+**b. Entity: `Comment`**
 
-**Nombre de la clase:** `Comment`
-**Propósito:** Representa las respuestas que los usuarios dejan en una publicación principal. Según las reglas de negocio, su contenido no puede exceder los 300 caracteres ni contener enlaces externos no permitidos.
+**Namespace:** `Oryxen.Domain.Entities`
 
-**c. Value Objects:**
+**Propósito:** Representa un comentario en una publicación. Hereda de `AuditableEntity`.
 
-**Nombre de la clase:** `PostStatus`
-**Propósito:** Representa el estado de moderación y visibilidad de una publicación en la comunidad.
-**Valores posibles:**
-*   `ACTIVE`
-*   `REPORTED`
-*   `MODERATED`
-*   `ARCHIVED`
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único |
+| `PostId` | `Guid` | FK a `CommunityPost` |
+| `UserId` | `Guid` | FK al usuario autor |
+| `Content` | `string` | Texto del comentario (max 1000 caracteres) |
+| `CreatedAt` | `DateTime` | Fecha del comentario |
 
-**Nombre de la clase:** `ReactionType`
-**Propósito:** Define el tipo de interacción de un usuario frente a un post.
-**Valores posibles:**
-*   `LIKE`
-*   `HELPFUL`
+**Relaciones:**
+- `Post` → `CommunityPost`
+- `Author` → `UserAccount` (FK `UserId`, DeleteBehavior.Restrict)
 
-**d. Referencias externas del dominio:**
+**c. Entity: `Like`**
 
-*   **UserAccount** (Origen: Auth & Identity): Representa al autor de la publicación o comentario.
-*   **PlantProfile** (Origen: Plant Management): Representa la especie etiquetada en la publicación para nutrir el algoritmo del feed personalizado.
+**Namespace:** `Oryxen.Domain.Entities`
 
-**e. Commands del dominio:**
+**Propósito:** Representa la interacción "me gusta" de un usuario sobre una publicación. Clave primaria compuesta (`PostId`, `UserId`). No hereda de `AuditableEntity`.
 
-**Paquete:** `com.upc.oryxen.community.domain.model.commands`
-*   `CreatePostCommand`: Representa la intención de crear una nueva publicación (gatilla la sanitización de imagen).
-*   `AddCommentCommand`: Representa la intención de comentar en una publicación.
-*   `AddReactionCommand`: Representa la intención de reaccionar a un post.
-*   `ModeratePostCommand`: Representa la intención de un administrador de restringir contenido reportado.
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `PostId` | `Guid` | FK a `CommunityPost` (parte de PK compuesta) |
+| `UserId` | `Guid` | FK a `UserAccount` (parte de PK compuesta) |
+| `CreatedAt` | `DateTime` | Fecha de la interacción |
 
-**f. Queries del dominio:**
+**d. Repository Interface:**
 
-*   `GetPersonalizedFeedQuery`: Obtener publicaciones relevantes basadas en el inventario de plantas del usuario activo.
-*   `GetPostByIdQuery`: Obtener el detalle de un post y sus comentarios anidados.
-
-**g. Domain Services:**
-
-*   `CommunityInteractionService`: Valida las operaciones de interacción social (ej. validación de límites de caracteres, filtro de palabras prohibidas).
-
-**h. Repository:**
-
-*   `IPostRepository`: Interfaz para gestionar la persistencia y ciclo de vida de las publicaciones.
-*   `ICommentRepository`: Interfaz para persistir los comentarios asociados.
+```csharp
+// Oryxen.Domain.Repositories
+public interface ICommunityRepository
+{
+    Task<IReadOnlyList<CommunityPost>> GetFeedAsync(int page, int pageSize, CancellationToken ct);
+    Task<CommunityPost?> GetPostByIdAsync(Guid postId, CancellationToken ct);
+    Task AddPostAsync(CommunityPost post, CancellationToken ct);
+    Task AddCommentAsync(Comment comment, CancellationToken ct);
+    Task<Comment?> GetCommentByIdAsync(Guid commentId, CancellationToken ct);
+    void RemoveComment(Comment comment);
+    Task<Like?> GetLikeAsync(Guid postId, Guid userId, CancellationToken ct);
+    Task AddLikeAsync(Like like, CancellationToken ct);
+    void RemoveLike(Like like);
+    Task<int> CountByPostAsync(Guid postId, CancellationToken ct);
+}
+```
 
 ### 5.8.2. Interface Layer
 
-La Interface Layer expone las capacidades sociales a través de endpoints REST que el frontend (Web y Móvil) utilizará para construir el *feed* y gestionar las interacciones.
+La Interface Layer expone los endpoints REST del feed comunitario mediante el controlador `CommunityController`.
 
-**a. CommunityController**
+**a. `CommunityController`**
 
-**Paquete:** `com.upc.oryxen.community.interfaces.rest`
-**Propósito:** Exponer los endpoints para gestionar el flujo de la comunidad y moderación.
+**Namespace:** `Oryxen.API.Controllers`
+**Ruta base:** `/api/v1/community`
+**Autorización:** `[Authorize(Roles = "FARMER,ADMIN")]`
 
-**Dependencias:**
-*   `CommunityCommandService`
-*   `CommunityQueryService`
+| Método | Ruta | Descripción | Auth |
+|--------|------|-------------|------|
+| `GET` | `/api/v1/community/feed?page=1&pageSize=20` | Feed cronológico paginado | FARMER, ADMIN |
+| `GET` | `/api/v1/community/posts/{id}` | Detalle de un post con comentarios | FARMER, ADMIN |
+| `POST` | `/api/v1/community/posts` | Crear publicación (multipart: title, content, image) | FARMER, ADMIN |
+| `POST` | `/api/v1/community/posts/{id}/comments` | Añadir comentario | FARMER, ADMIN |
+| `POST` | `/api/v1/community/posts/{id}/likes` | Alternar me gusta (toggle) | FARMER, ADMIN |
 
-**Endpoints expuestos:**
-*   `GET /api/v1/community/feed` → Obtiene el *feed* personalizado.
-*   `POST /api/v1/community/posts` → Crear una nueva publicación (recibe payload e imagen).
-*   `GET /api/v1/community/posts/{postId}` → Ver detalles de un post.
-*   `POST /api/v1/community/posts/{postId}/comments` → Agregar un comentario.
-*   `PUT /api/v1/community/moderation/{postId}` → Endpoint de moderación para administradores.
+El `UserId` se extrae del claim `sub` del token JWT en cada petición.
 
-**b. Resources / DTOs:**
+**b. DTOs (Application Layer Contracts):**
 
-*   `PostResource`: Representa la estructura de la publicación enviada al cliente.
-*   `CreatePostResource`: Payload requerido para compartir una experiencia.
-*   `CommentResource`: Datos estructurados de los comentarios.
+**Namespace:** `Oryxen.Application.Community.Contracts`
 
-**c. Assemblers:**
-
-*   `PostResourceFromEntityAssembler`: Transforma la entidad `CommunityPost` en un recurso REST.
-*   `CreatePostCommandFromResourceAssembler`: Mapea el request del cliente al comando de dominio.
+| DTO | Propósito |
+|-----|-----------|
+| `CreatePostRequest` | Payload con `Title` y `Content` |
+| `CreateCommentRequest` | Payload con `Content` |
+| `PostResponse` | Incluye `Id`, `UserId`, `AuthorName`, `Title`, `Content`, `ImageUrl`, `LikesCount`, `LikedByCurrentUser`, `CreatedAt`, `Comments[]` |
+| `CommentResponse` | Incluye `Id`, `PostId`, `UserId`, `AuthorName`, `Content`, `CreatedAt` |
+| `LikeResponse` | Incluye `PostId`, `LikesCount`, `LikedByCurrentUser` |
 
 ### 5.8.3. Application Layer
 
-Esta capa orquesta los casos de uso para la interacción social, garantizando las validaciones de privacidad correspondientes antes de interactuar con el dominio.
+**a. `ICommunityService` / `CommunityService`**
 
-**a. Command Handlers / Command Services:**
+**Namespace:** `Oryxen.Application.Community`
 
-`CommunityCommandServiceImpl` maneja:
-*   `handle(CreatePostCommand)`: Coordina la llamada al servicio de infraestructura para limpiar los metadatos de la imagen (EXIF/GPS), crea la entidad `CommunityPost` y la persiste.
-*   `handle(AddCommentCommand)`: Utiliza `CommunityInteractionService` para validar que el texto sea menor a 300 caracteres y sin enlaces, luego guarda el `Comment`.
-*   `handle(ModeratePostCommand)`: Evalúa un reporte y cambia el `PostStatus` a `MODERATED`.
+| Método | Descripción |
+|--------|-------------|
+| `GetFeedAsync(Guid currentUserId, int page, int pageSize)` | Retorna feed cronológico; incluye Likes y Comments hidratados. Calcula `LikedByCurrentUser` por cada post. |
+| `GetPostByIdAsync(Guid postId, Guid currentUserId)` | Retorna un post individual con comentarios anidados. |
+| `CreatePostAsync(Guid userId, CreatePostRequest, Stream? imageStream, string? imageFileName)` | Si hay imagen, invoca `IImageMetadataSanitizer.StripExifMetadata()`, guarda el archivo en `wwwroot/uploads/community/` y persiste el post con `ImageUrl`. |
+| `AddCommentAsync(Guid postId, Guid userId, CreateCommentRequest)` | Crea y persiste el comentario; retorna el `CommentResponse` con nombre del autor. |
+| `ToggleLikeAsync(Guid postId, Guid userId)` | Si el like existe → lo elimina. Si no existe → lo crea. Retorna `LikeResponse` con el nuevo conteo y si el usuario actual dio like. |
 
-**b. Query Handlers / Query Services:**
+**b. Flujo de sanitización de imagen (ciberseguridad):**
 
-`CommunityQueryServiceImpl` maneja:
-*   `handle(GetPersonalizedFeedQuery)`: Cruza la información del usuario autenticado con las etiquetas de plantas para devolver publicaciones priorizadas.
+1. El `CommunityController` recibe el `IFormFile` y lo pasa como `Stream` al servicio.
+2. `CommunityService` invoca `IImageMetadataSanitizer.StripExifMetadata(Stream)`.
+3. El sanitizador (`ImageMetadataSanitizer`) analiza el archivo binario JPEG: detecta el segmento APP1 (marcador `0xFFE1`), verifica el header EXIF (`0x45 0x78 0x69 0x66 0x00 0x00`) y elimina completamente dicho segmento del stream.
+4. El stream limpio se escribe en `wwwroot/uploads/community/{Guid}_{filename}`.
+5. La URL relativa se almacena en `CommunityPost.ImageUrl`.
 
-**c. Flujos principales del negocio:**
-
-**Flujo de publicación segura (con sanitización):**
-*   El usuario envía texto y una fotografía desde el frontend.
-*   Se construye `CreatePostCommand`.
-*   `CommunityCommandServiceImpl` intercepta la imagen y llama al servicio externo de sanitización para eliminar coordenadas GPS (garantizando la privacidad).
-*   Una vez limpia, la imagen se sube al Cloud Storage y se genera una URL segura.
-*   Se crea la entidad `CommunityPost` con la URL segura.
-*   Se persiste mediante `IPostRepository` y se retorna el recurso publicado al feed.
+Este proceso garantiza que ninguna fotografía publicada en la comunidad conserve metadatos de geolocalización (coordenadas GPS), cámara, fecha/hora de captura original ni cualquier otro dato EXIF que pudiera exponer la ubicación de fincas agrícolas.
 
 ### 5.8.4. Infrastructure Layer
 
-Maneja la persistencia en la base de datos relacional y las integraciones críticas con servicios de procesamiento de archivos para garantizar la privacidad.
+**a. `CommunityRepository`**
 
-**a. Repositorios de persistencia:**
-*   `PostRepositoryImpl`: Implementa la persistencia de las publicaciones.
-*   `CommentRepositoryImpl`: Implementa la persistencia de los comentarios.
+**Namespace:** `Oryxen.Infrastructure.Persistence.Repositories`
 
-**b. ORM Context:**
-*   `CommunityDbContext`: Punto central de acceso a la base de datos de la comunidad mediante Entity Framework Core / Spring Data JPA.
+Implementa `ICommunityRepository` usando EF Core sobre `OryxenDbContext`. Las consultas al feed utilizan `AsSplitQuery()` para cargar eficientemente las relaciones `Author`, `Comments.Author` y `Likes` en una sola consulta SQL con splits.
 
-**c. Persistencia de entidades:**
-**Entidades persistidas:**
-*   `CommunityPost`
-*   `Comment`
+**b. `ImageMetadataSanitizer`**
 
-**d. Diseño de persistencia:**
+**Namespace:** `Oryxen.Infrastructure.Security`
 
-**Tabla principal:** `community_posts`
-**Columnas:**
-*   `post_id` (PK)
-*   `author_id` (FK hacia Auth & Identity)
-*   `plant_id` (FK hacia Plant Management, Nullable)
-*   `content` (TEXT)
-*   `image_url` (VARCHAR)
-*   `status` (VARCHAR)
-*   `created_at` (TIMESTAMP)
+Implementa `IImageMetadataSanitizer` (definido en `Oryxen.Application.Common.Interfaces`). Procesa el array de bytes de la imagen JPEG, detecta marcadores de segmento y elimina el segmento EXIF APP1 completo, garantizando la eliminación de:
+- Datos GPS (latitud, longitud, altitud)
+- Marca y modelo de cámara
+- Fecha y hora original de captura
+- Configuración de cámara (apertura, ISO, velocidad)
 
-**Tabla relacionada:** `comments`
-**Columnas:**
-*   `comment_id` (PK)
-*   `post_id` (FK hacia `community_posts`)
-*   `author_id` (FK)
-*   `content` (VARCHAR 300)
-*   `created_at` (TIMESTAMP)
+**c. Configuraciones EF Core:**
 
-**e. Integración con otros bounded contexts y servicios:**
-*   **Privacy & Sanitization Service:** Servicio de infraestructura que procesa el archivo binario de la foto para eliminar datos EXIF antes de subirlo al Cloud Storage.
-*   **Auth & Identity:** Para validar el perfil del autor y su reputación.
-*   **Plant Management:** Para cruzar los intereses del usuario y alimentar el algoritmo del *feed*.
+| Clase | Tabla | Notas |
+|-------|-------|-------|
+| `CommunityPostConfiguration` | `community_posts` | Índice en `UserId`, `Title` max 200, `Content` max 4000, `ImageUrl` max 500 |
+| `CommentConfiguration` | `comments` | Índices en `PostId` y `UserId`, `Content` max 1000 |
+| `LikeConfiguration` | `likes` | Clave primaria compuesta `(PostId, UserId)` |
+
+**d. Registro de dependencias (DependencyInjection):**
+
+```csharp
+// Infrastructure
+services.AddScoped<ICommunityRepository, CommunityRepository>();
+services.AddSingleton<IImageMetadataSanitizer, ImageMetadataSanitizer>();
+
+// Application
+services.AddScoped<ICommunityService, CommunityService>();
+```
 
 ### 5.8.5. Bounded Context Software Architecture Component Level Diagrams
 
-El Component Diagram del bounded context Community representa la descomposición del contenedor backend encargado de gestionar la red social interna de Oryxen y el procesamiento seguro de sus recursos visuales.
+**Descripción de componentes principales:**
 
-**Componentes principales:**
+- **Community REST API Component** (`CommunityController`): Expone endpoints REST protegidos con JWT (roles FARMER, ADMIN). Recibe y despacha peticiones multipart para carga de imágenes.
+- **Community Application Service** (`CommunityService`): Orquesta la lógica de negocio: creación de posts, sanitización de imágenes, toggle de likes, adición de comentarios.
+- **EXIF Sanitizer Component** (`ImageMetadataSanitizer`): Procesa el stream binario de la imagen y elimina el segmento APP1 EXIF, incluyendo coordenadas GPS.
+- **Community Domain Component**: Agregados `CommunityPost`, `Comment` y `Like` con sus reglas de integridad.
+- **Community Persistence Component** (`CommunityRepository`): EF Core sobre PostgreSQL. Feed paginado con `AsSplitQuery` para carga eficiente de relaciones.
+- **Auth Integration** (ACL): Valida JWT, extrae `UserId` del claim `sub`, y enlaza con `UserAccount` para mostrar `AuthorName` en cada post/comentario.
 
-*   **Community REST API Component**: Expone endpoints REST para feed, posts y comentarios mediante `CommunityController`.
-*   **Community Transformation Component**: Encargado de transformar datos entre DTOs y comandos mediante *Assemblers*.
-*   **Community Command Processing Component**: Implementado por `CommunityCommandServiceImpl`. Orquesta la creación de posts y delega el filtrado de imágenes.
-*   **Community Query Processing Component**: Implementado por `CommunityQueryServiceImpl`. Genera el feed.
-*   **Sanitization Service Component (Infrastructure):** Encargado de procesar y limpiar metadatos de imágenes.
-*   **Community Domain Component**: Representa el núcleo del dominio, albergando el agregado `CommunityPost` y la entidad `Comment`.
-*   **Community Persistence Component**: Gestiona la persistencia en base de datos mediante repositorios ORM.
-
-**Relaciones entre componentes:**
-*   `Community REST API` → `Community Transformation Component`
-*   `Community REST API` → `Community Command Processing Component`
-*   `Community Command Processing Component` → `Sanitization Service Component`
-*   `Community Command Processing Component` → `Community Domain Component`
-*   `Community Command Processing Component` → `Community Persistence Component`
-
-**Diagrama de Componentes:**
-
-![Component Diagram - Community](./assets/Chapter-5/c4_components_community.png)
+![ComponentsDiagram_Community](./assets/Chapter-5/community-component-diagram.svg)
 
 ### 5.8.6. Bounded Context Software Architecture Code Level Diagrams
 
-En esta sección se presentan los diagramas a nivel de código del bounded context Community, visualizando el detalle del dominio social y la persistencia de las interacciones.
+#### 5.8.6.1. Bounded Context Domain Layer Class Diagrams
 
-**5.8.6.1. Bounded Context Domain Layer Class Diagrams**
-
-El diagrama UML del Domain Layer muestra al agregado principal `CommunityPost`, vinculando sus comentarios, tipos de reacciones, estados de moderación y servicios de interacción.
+```
+┌─────────────────────────────────────┐
+│          CommunityPost              │
+│        (Aggregate Root)             │
+├─────────────────────────────────────┤
+│ + Id: Guid                          │
+│ + UserId: Guid                      │
+│ + Title: string                     │
+│ + Content: string                   │
+│ + ImageUrl: string?                 │
+│ + LikesCount: int                   │
+│ + CreatedAt: DateTime               │
+│ + UpdatedAt: DateTime?              │
+│ + Author: UserAccount               │
+│ + Comments: ICollection<Comment>    │
+│ + Likes: ICollection<Like>          │
+└──┬──────────────┬───────────────────┘
+   │ 1            │ 1
+   │              │
+   │ *            │ *
+┌──┴──────────┐ ┌─┴──────────────┐
+│   Comment   │ │     Like       │
+├─────────────┤ ├────────────────┤
+│ + Id        │ │ + PostId (PK)  │
+│ + PostId    │ │ + UserId (PK)  │
+│ + UserId    │ │ + CreatedAt    │
+│ + Content   │ │ + Post         │
+│ + CreatedAt │ │ + User         │
+│ + Author    │ └────────────────┘
+└─────────────┘
+```
 
 **Relaciones:**
-*   `CommunityPost` es el Aggregate Root del contexto.
-*   `CommunityPost` tiene una relación de uno a muchos (*1..**) hacia la entidad `Comment`.
-*   `PostStatus` (Value Object) representa la viabilidad del post (Activo, Moderado).
-*   `CommunityCommandService` interactúa con `IPostRepository` e `ICommentRepository`.
+- `CommunityPost` es el Aggregate Root.
+- `CommunityPost` tiene una colección de `Comment` (Cascade delete).
+- `CommunityPost` tiene una colección de `Like` (Cascade delete).
+- `Like` tiene clave primaria compuesta `(PostId, UserId)`, garantizando un solo like por usuario por post.
+- `Comment.Author` y `Like.User` referencian `UserAccount` (Restrict delete).
 
-**Diagrama UML de Clases (Domain Layer):**
+#### 5.8.6.2. Bounded Context Database Design Diagram
 
-![UML Class Diagram - Community](./assets/Chapter-5/UML_community.png)
+**Tabla: `community_posts`**
 
-**5.8.6.2. Bounded Context Database Design Diagram**
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `id` | `uuid` | PK |
+| `user_id` | `uuid` | FK → `user_accounts(id)`, NOT NULL, Index |
+| `title` | `varchar(200)` | NOT NULL |
+| `content` | `varchar(4000)` | NOT NULL |
+| `image_url` | `varchar(500)` | nullable |
+| `likes_count` | `integer` | NOT NULL, default 0 |
+| `created_at` | `timestamp` | NOT NULL |
+| `updated_at` | `timestamp` | nullable |
 
-El diagrama de base de datos representa la estructura relacional (ERD) utilizada para almacenar el historial de publicaciones y las interacciones de los usuarios.
+**Tabla: `comments`**
+
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `id` | `uuid` | PK |
+| `post_id` | `uuid` | FK → `community_posts(id)`, NOT NULL, Index |
+| `user_id` | `uuid` | FK → `user_accounts(id)`, NOT NULL, Index |
+| `content` | `varchar(1000)` | NOT NULL |
+| `created_at` | `timestamp` | NOT NULL |
+| `updated_at` | `timestamp` | nullable |
+
+**Tabla: `likes`**
+
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `post_id` | `uuid` | PK (compuesta), FK → `community_posts(id)`, Cascade |
+| `user_id` | `uuid` | PK (compuesta), FK → `user_accounts(id)`, Restrict |
+| `created_at` | `timestamp` | NOT NULL |
 
 **Relaciones entre tablas:**
-*   `user_profiles (1)` ──── `(*) community_posts`
-*   `community_posts (1)` ──── `(*) comments`
-*   `plants (1)` ──── `(*) community_posts` (Relación opcional si la publicación etiqueta una especie).
+- `user_accounts (1) ──── (*) community_posts`
+- `user_accounts (1) ──── (*) comments`
+- `user_accounts (1) ──── (*) likes`
+- `community_posts (1) ──── (*) comments`
+- `community_posts (1) ──── (*) likes`
 
-**Diagrama de base de datos (ERD):**
-![ERD - Community](./assets/Chapter-5/erd_community.png)
+**Índices:**
+- `community_posts`: índice en `user_id` para consultas por autor.
+- `comments`: índices en `post_id` y `user_id`.
+- `likes`: clave primaria compuesta `(post_id, user_id)` garantiza unicidad de la interacción.
+
 ---
 
 # Capítulo VI: Solution UX Design
@@ -5430,8 +5601,6 @@ Dado que la aplicación móvil es el punto de contacto principal para los usuari
 **3. Ergonomía y Touch Targets (Común para móviles):**
 Para garantizar que personas de la tercera edad u ocupadas interactúen sin frustración, el tamaño mínimo de cualquier botón o elemento interactivo es de **48x48 dp/pt**, con un margen de separación adecuado para evitar toques accidentales.
 
-*(Añadir captura de pantalla ilustrando los componentes nativos de iOS y Android)*
-![Mobile Style Guidelines - Native Components](assets/2.jpeg)
 
 #### C. Devices (IoT Hardware) Style & Feedback Guidelines
 
@@ -5607,8 +5776,6 @@ La página de aterrizaje comercial tiene como objetivo principal la conversión,
 *   **Sequential & Scroll Navigation:** El contenido está organizado para contar una historia (Storytelling). A medida que el usuario hace *scroll* vertical, avanza secuencialmente desde la identificación del problema (plantas marchitas por falta de tiempo/conocimiento) hasta la solución (IA y automatización).
 *   **Call-to-Action (CTA) Routing:** Para facilitar el objetivo principal de negocio, se utilizan botones de acción claros y contrastantes (ej. "Comienza Gratis") ubicados estratégicamente en el *Hero Section* y al final de la página, los cuales enrutan directamente al flujo de *Sign Up*.
 
-*(Añadir captura de pantalla ilustrando el flujo de navegación de la Landing Page)*
-`![Navigation Systems - Landing Page](../assets/images/nav-landing-page.png)`
 
 #### B. Web Application Navigation (Dashboard)
 
@@ -5623,8 +5790,6 @@ La aplicación web está pensada para sesiones más largas, donde los usuarios a
 *   **Local Navigation (Pestañas/Tabs):** Dentro del detalle de una planta específica, se utilizan pestañas horizontales para cambiar entre *Información Básica*, *Diagnósticos IA* y *Configuración de Sensores*, evitando recargas de página completas (comportamiento SPA con Vue.js).
 *   **Breadcrumbs:** Se implementan "migas de pan" en la parte superior (ej. `Mis Plantas > Monstera Deliciosa > Diagnósticos`) para que el usuario conozca su ubicación exacta dentro de la jerarquía profunda y pueda retroceder un nivel fácilmente.
 
-*(Añadir captura de pantalla ilustrando el Left Sidebar y Breadcrumbs de la Web App)*
-`![Navigation Systems - Web App](../assets/images/nav-webapp.png)`
 
 #### C. Mobile Application Navigation
 
@@ -5639,8 +5804,6 @@ La aplicación móvil es el canal principal para la gestión diaria. Su navegaci
 *   **Hierarchical Navigation (Stack de Vistas):** Cuando un usuario selecciona una planta desde el *Inicio*, ingresa a una vista de detalle (Drill-down). La navegación superior nativa (Navigation Bar en iOS / Top App Bar en Android) mostrará el nombre de la planta y una flecha clara de "Atrás" para regresar al nivel superior.
 *   **In-context Navigation (Swipe & Gestures):** Se soportan gestos nativos, como deslizar tarjetas horizontalmente para revelar acciones rápidas (ej. "Regar ahora" o "Archivar planta"), acelerando el flujo de tareas repetitivas.
 
-*(Añadir captura de pantalla ilustrando el Bottom Navigation Bar y el FAB de la App Móvil)*
-`![Navigation Systems - Mobile App](../assets/images/nav-mobileapp.png)`
 
 
 ### 6.3. Landing Page UI Design
@@ -5685,8 +5848,7 @@ La estructura secuencial del *wireframe* es la siguiente:
 6.  **Footer:**
     *   Enlaces de navegación secundarios, términos de servicio, políticas de privacidad y enlaces a redes sociales.
 
-*(Añadir captura de pantalla de los wireframes en versión Desktop y Mobile)*
-`![Landing Page Wireframe - Desktop & Mobile](../assets/images/wireframe-landing-page.png)`
+![Landing Page Wireframe](./assets/Chapter-6/wireframe-landing.png)
 
 
 #### 6.3.1. Landing Page Mock-up
@@ -5736,7 +5898,7 @@ El diseño de las aplicaciones considera los siguientes principios:
 
 ### 6.4.1. Applications Wireframes
 
-Aquí se muestran los wireframes desarrollados para la aplicación web y móvil SecurOn.
+Aquí se muestran los wireframes desarrollados para la aplicación web y móvil Oryxen.
 
 **Wireframes Web Application:**
 
@@ -5751,7 +5913,7 @@ Aquí se muestran los wireframes desarrollados para la aplicación web y móvil 
 
 ![Wireframes Mobile App](./assets/Chapter-6/wireframe-mobile.png)
 
-[Enlace para acceder al Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/SecurOn?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
+[Enlace para acceder al prototipo de wireframes de Oryxen en Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/Oryxen?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
 
 ### 6.4.2. Applications Wireflow Diagrams
 
@@ -5921,8 +6083,6 @@ Este es el primer contacto del usuario con la aplicación. El objetivo es que re
 5.  **Configuración de Umbrales:** El sistema sugiere parámetros predeterminados de humedad según la especie seleccionada. El usuario acepta.
 6.  **Fin (Éxito):** El usuario es redirigido al *Dashboard* principal, donde visualiza la tarjeta de su nueva planta recién agregada.
 
-*(Añadir captura de pantalla del diagrama de flujo: Onboarding y Registro de Planta)*
-`![User Flow - Onboarding & Plant Registration](../assets/images/userflow-onboarding.png)`
 
 #### B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)
 Este flujo representa el momento en que un usuario decide automatizar su monitoreo tras adquirir el hardware de entrada de Oryxen. Destaca la restricción de usabilidad (QA-04) que exige una vinculación en menos de 30 segundos.
@@ -5934,8 +6094,6 @@ Este flujo representa el momento en que un usuario decide automatizar su monitor
 5.  **Asignación:** La app pregunta: "¿A qué planta pertenece este sensor?". El usuario selecciona una planta previamente registrada (ej. "Monstera de la Sala").
 6.  **Fin (Éxito):** Pantalla de confirmación animada. El *Dashboard* se actualiza y la tarjeta de la planta ahora muestra la métrica de humedad y temperatura en tiempo real.
 
-*(Añadir captura de pantalla del diagrama de flujo: Vinculación de Hardware)*
-`![User Flow - Hardware Pairing](../assets/images/userflow-hardware.png)`
 
 #### C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)
 Este flujo ilustra cómo un usuario interactúa con la característica estrella de la aplicación para resolver un problema complejo de salud en su planta.
@@ -5947,8 +6105,6 @@ Este flujo ilustra cómo un usuario interactúa con la característica estrella 
 5.  **Resultados y Recomendación:** El sistema muestra una alerta contextual con el problema detectado (ej. "Falta de nutrientes / Clorosis") y una lista de acciones correctivas inmediatas y a largo plazo.
 6.  **Fin (Seguimiento):** El usuario presiona el botón "Aplicar recomendación". El sistema programa automáticamente un recordatorio de seguimiento para evaluar la mejora en 7 días.
 
-*(Añadir captura de pantalla del diagrama de flujo: Diagnóstico Visual IA)*
-`![User Flow - AI Diagnosis](../assets/images/userflow-ai-diagnosis.png)`
 
 ### 6.5. Applications Prototyping
 
@@ -5961,11 +6117,1218 @@ Link del video app movil: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202
 Link del video app web: https://upcedupe-my.sharepoint.com/:v:/g/personal/u202216035_upc_edu_pe/IQD90adpuh2HRaN3xZ5TbRREAbDzTw7cJ7ru2NqoLsuGbEg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=c79d7N
 
 
+# Capítulo VII: Product Implementation, Validation & Deployment
+
+## 7.1. Software Configuration Management
+
+En esta sección se documentan las decisiones y herramientas que constituyen la base de la configuración del ambiente de ingeniería del proyecto Oryxen. Se especifica el entorno de desarrollo estandarizado para todos los integrantes del equipo, el modelo de branching y versionado adoptado (GitFlow + Conventional Commits + Semantic Versioning), las guías de estilo de código fuente por tecnología (C#, Vue 3, HTML5/CSS3, Gherkin) y la configuración de despliegue de los cuatro productos digitales que componen la solución. El objetivo es garantizar la reproducibilidad del entorno de trabajo, la trazabilidad completa de los cambios y la coherencia del código fuente a lo largo del ciclo de vida del proyecto.
+
+### 7.1.1. Software Development Environment Configuration
+
+El equipo establece las herramientas de software que cada integrante debe utilizar para contribuir en el ciclo de vida del proyecto. La selección cubre todas las actividades del proceso de ingeniería: gestión del proyecto, diseño, desarrollo, pruebas, despliegue y documentación.
+
+| Actividad | Producto de Software | Propósito en el proyecto | Ruta de referencia / Descarga |
+|-----------|---------------------|--------------------------|-------------------------------|
+| Project Management | Trello | Gestión del Product Backlog y Sprint Boards mediante tableros Kanban para visualizar el avance de tareas por sprint. | https://trello.com |
+| Project Management | GitHub Projects | Seguimiento de issues técnicos y pull requests asociados al código fuente de los repositorios. | https://github.com |
+| Requirements Management | Pivotal Tracker | Registro, priorización y estimación de User Stories y Technical Stories del Product Backlog. | https://www.pivotaltracker.com |
+| Product UX Design | Figma | Creación de wireframes, mock-ups y prototipos interactivos para la Landing Page y aplicaciones Web/Mobile. | https://www.figma.com |
+| Product UX Design | UXPressia | Elaboración de User Personas, Empathy Maps e Impact Maps para los segmentos objetivo identificados. | https://uxpressia.com |
+| Architecture Modeling | Structurizr | Modelado de diagramas C4 Model (Context, Container, Component) para la arquitectura de software de la solución. | https://structurizr.com |
+| Architecture Modeling | LucidChart | Diagramas de EventStorming, Domain Storytelling, Bounded Context Mapping y Class Diagrams UML. | https://lucidchart.com |
+| Architecture Modeling | Vertabelo | Diseño de diagramas de base de datos (Database Design Diagrams) para los Bounded Contexts del sistema. | https://vertabelo.com |
+| Software Development (Backend) | JetBrains Rider 2024.x | IDE principal para el desarrollo del servicio backend en C# con ASP.NET Core 8, con soporte para .NET y refactoring avanzado. | https://www.jetbrains.com/rider (descarga) |
+| Software Development (Backend) | .NET SDK 8.0 | Runtime y SDK necesario para compilar, ejecutar y publicar el backend ASP.NET Core de la solución. | https://dotnet.microsoft.com/download (descarga) |
+| Software Development (Backend) | Docker Desktop | Contenedorización local de servicios de infraestructura (PostgreSQL 15, Redis 7) para el entorno de desarrollo. | https://www.docker.com/products/docker-desktop (descarga) |
+| Software Development (Web App) | Visual Studio Code 1.89+ | Editor de código para desarrollo de la Web Application en Vue.js 3 + TypeScript, con extensiones Vue Official y ESLint. | https://code.visualstudio.com (descarga) |
+| Software Development (Web App) | Node.js v20 LTS | Entorno de ejecución necesario para npm, Vite 8 y las dependencias del proyecto Vue.js. | https://nodejs.org (descarga) |
+| Software Development (Web App) | Vue DevTools | Extensión de navegador para depuración de componentes Vue 3 y estado de stores Pinia en tiempo real. | https://devtools.vuejs.org |
+| Software Development (Mobile) | Android Studio Jellyfish (2023.3) | IDE para el desarrollo de la aplicación móvil nativa en Kotlin para la plataforma Android. | https://developer.android.com/studio (descarga) |
+| Software Development (Landing) | Visual Studio Code | Editor para la implementación de la Landing Page estática en HTML5, CSS3 y JavaScript puro. | https://code.visualstudio.com (descarga) |
+| Software Testing | Postman v11 | Pruebas manuales de endpoints REST y colecciones de prueba de integración de la API del backend. | https://www.postman.com |
+| Software Testing | xUnit (.NET) | Framework de pruebas unitarias para las clases del Domain Layer del backend en C#. | NuGet Package: `xunit` |
+| Software Deployment | Firebase CLI | Despliegue de la Web Application y Landing Page en Firebase Hosting y gestión de proyectos Firebase. | https://firebase.google.com/docs/cli |
+| Software Deployment | GitHub Actions | Pipeline de CI/CD para automatizar builds, pruebas y despliegues desde los repositorios de la organización en GitHub. | https://github.com/features/actions |
+| Software Documentation | GitHub + Markdown | Control de versiones del informe de proyecto en formato Markdown (README.md) dentro del repositorio público de la organización. | https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report |
+| Software Documentation | Swagger UI / OpenAPI 3.0 | Documentación interactiva de los endpoints REST del backend, generada automáticamente con Swashbuckle en ASP.NET Core. | https://swagger.io |
+
+### 7.1.2. Source Code Management
+
+En esta sección se presenta el enfoque seleccionado para la gestión del código fuente que se centraliza en GitHub, implementando un sistema robusto de control de versiones bajo la organización: https://github.com/1ASI0728-2610-11770-G4-Oryxen. Esta estructura nos permite mantener un flujo de trabajo colaborativo y organizado: <br>
+
+**Oryxen-Documentation-Report:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report<br>
+**Oryxen-Landing-Page:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page <br>
+**Oryxen-Web-Application:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application <br>
+**Oryxen-Mobile-Application:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application <br>
+**Oryxen-Backend:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend <br>
+
+<br>
+
+**GitFlow Workflow:**<br>
+Para el desarrollo de los artefactos de nuestra solución, se implementa el modelo GitFlow propuesto por Vincent Driessen, adaptado a un entorno de desarrollo y despliegue continuo. Las ramas a implementar son:
+
+- `main:` Rama principal para producción
+- `develop:` Rama de desarrollo
+- `feature/nombre-descriptivo:` Rama para desarrollo de nuevas funcionalidades
+- `fix/x.y.z:` Rama para corrección de errores
+- `release/x.y.z:` Rama para despliegue de versiones estables
+
+<br>
+
+**Conventional Commits:**<br>
+Se utilizarán **Conventional Commits** para facilitar el versionado semántico.
+
+- `feat:` Nueva funcionalidad
+- `fix:` Corrección de errores
+- `test:` Pruebas agregadas o modificadas
+- `docs:` Documentación
+
+<br>
+
+**Source Code Style Guide & Coding Conventions:**<br>
+Para mantener la coherencia y legibilidad del código, el equipo adopta las siguientes guías y convenciones:
+
+- **Nomenclatura:**
+  - Todos los nombres de variables, funciones, clases y archivos se escriben en inglés.
+  - Se aplica camelCase para variables y funciones, PascalCase para clases, y snake_case para nombres de archivos.
+
+
+### 7.1.3. Source Code Style Guide & Conventions
+
+Para mantener la coherencia, legibilidad y calidad del código fuente en todos los repositorios de la solución, el equipo adopta las siguientes guías y convenciones estándar de la industria, aplicadas a cada tecnología utilizada en el proyecto. Todos los identificadores se escriben en **inglés** como norma transversal.
+
+**C# / ASP.NET Core (Oryxen-Backend)**
+
+Se adoptan las [Microsoft C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names) y las convenciones de Domain-Driven Design para nombrar los artefactos del dominio:
+
+- **PascalCase**: clases, interfaces, métodos, propiedades, eventos, enumeraciones y namespaces públicos.
+  Ejemplos: `UserAccount`, `GetUserByIdAsync()`, `AuthProvider`, `IUserRepository`
+- **camelCase**: variables locales y parámetros de métodos.
+  Ejemplos: `userId`, `accessToken`, `dateRange`
+- **_camelCase** (prefijo guion bajo): campos privados o protegidos de instancia.
+  Ejemplos: `_userRepository`, `_jwtTokenAdapter`, `_passwordEncoder`
+- **IPascalCase**: interfaces con prefijo `I` obligatorio.
+  Ejemplos: `IUserRepository`, `ITokenDomainService`, `INotificationPublisher`
+- **Namespaces** siguen la estructura de carpetas del proyecto:
+  `GrassFarming.{BoundedContext}.{Layer}.{Sublayer}`
+  Ejemplo: `GrassFarming.Auth.Application.CommandHandlers`
+- Los métodos asíncronos llevan el sufijo `Async`:
+  `RegisterUserAsync()`, `ValidateTokenAsync()`, `GenerateReportAsync()`
+- Los Commands se nombran en imperativo: `RegisterUserCommand`, `GenerateReportCommand`
+- Los Queries en forma de consulta nominal: `GetUserByIdQuery`, `ListReportsQuery`
+
+**Vue.js 3 + TypeScript (Oryxen-Web-Application)**
+
+Se adoptan el [Google TypeScript Style Guide](https://google.github.io/styleguide/tsguide.html) y la [Vue.js Official Style Guide](https://vuejs.org/style-guide) (Prioridades A y B obligatorias):
+
+- **PascalCase**: nombres de componentes Vue, tanto en nombre de archivo como en su uso en templates.
+  Ejemplos: `PlantCard.vue`, `AuthLoginForm.vue`, `<PlantCard />`
+- **camelCase**: variables TypeScript, funciones, props de componentes y propiedades de Pinia stores.
+  Ejemplos: `const isLoading = ref(false)`, `function getUserData()`, prop `plantId`
+- **kebab-case**: nombres de eventos personalizados y atributos en templates HTML.
+  Ejemplos: `@plant-updated`, `v-bind:plant-id`, nombre de ruta `plant-detail`
+- **SCREAMING_SNAKE_CASE**: constantes de aplicación.
+  Ejemplos: `const MAX_RETRY_COUNT = 3`, `const API_BASE_URL = '...'`
+- Los archivos de componentes utilizan `<script setup lang="ts">` (Composition API con sintaxis de azúcar).
+- Los stores de Pinia siguen el patrón `use{Name}Store()`:
+  `useAuthStore()`, `usePlantStore()`, `useNotificationStore()`
+- Se prohíbe el uso implícito de `any`; todos los tipos deben declararse explícitamente con TypeScript.
+- Un componente realiza una única responsabilidad; la lógica compleja se extrae a composables en `src/composables/`.
+- Los archivos de servicios de API se ubican en `src/services/` con nombre en camelCase: `plantService.ts`, `authService.ts`.
+- Importaciones ordenadas: librerías externas → aliases internos (`@/`) → rutas relativas.
+
+**HTML5 / CSS3 / JavaScript (Oryxen-Landing-Page)**
+
+- **BEM** (Block\_\_Element--Modifier) para nombrar clases CSS.
+  Ejemplos: `.hero__cta-button`, `.card--featured`, `.nav__menu-item--active`
+- Elementos HTML5 semánticos obligatorios: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`.
+- Los atributos `id` y `class` usan **kebab-case**.
+  Ejemplos: `id="hero-section"`, `class="pricing-plans"`
+- No se permiten estilos en línea (`style="..."`); todo el CSS se centraliza en archivos externos.
+- Las variables CSS se declaran en el selector `:root` del archivo principal: `--color-primary`, `--font-size-base`, `--spacing-md`.
+
+**Gherkin (Feature Files — BDD Testing)**
+
+Se adoptan las [Gherkin Conventions for Readable Specifications](https://specflow.org/gherkin/gherkin-conventions-for-readable-specifications/):
+
+- Los archivos `.feature` usan **kebab-case**: `user-authentication.feature`, `plant-registration.feature`
+- Los escenarios usan **Title Case** en inglés: `Scenario: Successful user login with valid credentials`
+- Los steps usan **tiempo presente imperativo** en inglés: `Given`, `When`, `Then`, `And`, `But`
+  Ejemplo: `Given a registered user with email "user@example.com"`
+- Los steps no referencian detalles de implementación ni elementos de UI específicos (evitar "click button #submit").
+
+### 7.1.4. Software Deployment Configuration
+
+En esta sección se especifica la configuración de despliegue de cada producto digital de la solución, partiendo de los repositorios de código fuente hasta su publicación. El entorno de desarrollo local (localhost) replica la topología de microservicios que se promueve a la nube en las entregas posteriores.
+
+**Topología de despliegue (entorno local):**
+
+```
+                         ┌──────────────────────────┐
+   Visitante  ─────────► │  Oryxen-Landing-Page     │  (HTML5/CSS3/JS estático)
+                         │  Firebase Hosting / :5500│
+                         └─────────────┬────────────┘
+                                       │ CTA "Open the app"
+                                       ▼
+   Usuario    ─────────► ┌──────────────────────────┐      ┌───────────────────────┐
+   (Web)                 │  Oryxen-Web-Application   │ ───► │  Oryxen-Backend (API) │
+                         │  Vue 3 + Vite  :5173     │ REST │  ASP.NET Core  :5170  │
+                         └──────────────────────────┘ JWT  │  /swagger (OpenAPI)   │
+   Usuario    ─────────► ┌──────────────────────────┐      │                       │
+   (Mobile)              │  Oryxen-Mobile-App        │ ───► │                       │
+                         │  Android (10.0.2.2:5170) │ REST └──────────┬────────────┘
+                         └──────────────────────────┘                 │ EF Core / Npgsql
+   Sensor Lite ────────► POST /api/v1/telemetry  ────────────────────►│
+   (simulador)                                                        ▼
+                                                          ┌───────────────────────┐
+                                                          │  PostgreSQL 15        │
+                                                          │  Docker  :5432        │
+                                                          └───────────────────────┘
+```
+
+**Pasos de despliegue por producto:**
+
+| Producto | Build | Despliegue local | Destino de publicación |
+|----------|-------|------------------|------------------------|
+| **Oryxen-Backend** (RESTful API) | `dotnet build Oryxen.API.slnx` | `docker compose up -d` (PostgreSQL) → `dotnet run --project src/Oryxen.API`. Las migraciones de EF Core se aplican automáticamente al inicio. Expone `http://localhost:5170` y Swagger en `/swagger`. | Azure App Service / Google Cloud Run + Azure Database for PostgreSQL. |
+| **Oryxen-Web-Application** | `npm install` → `npm run build` (genera `dist/`) | `npm run dev` → `http://localhost:5173`. Variable `VITE_API_BASE_URL` apunta al backend. | Firebase Hosting (`firebase deploy`). |
+| **Oryxen-Landing-Page** | Sitio estático (sin build step) | Servir la carpeta con cualquier servidor estático (Live Server / `firebase serve`). | Firebase Hosting (`firebase deploy`). |
+| **Oryxen-Mobile-Application** | `./gradlew assembleRelease` (Android Studio) | Ejecución en emulador/dispositivo (API 24+), apuntando a `http://10.0.2.2:5170`. | Firebase App Distribution / Google Play. |
+
+La base de datos local se gestiona de forma reproducible mediante `docker-compose.yml` (imagen `postgres:15-alpine`), con credenciales parametrizadas en el archivo `.env` y healthcheck `pg_isready`. El diagrama de despliegue de C4 Model que formaliza esta topología se mantiene en el workspace de arquitectura del equipo (Structurizr).
+
+## 7.2. Solution Implementation
+
+En esta sección se documenta la ejecución del plan de implementación de Oryxen bajo el marco de trabajo Scrum, organizado en sprints de dos semanas. Se presentan los artefactos de gestión ágil (Sprint Planning, Sprint Backlog) y las evidencias de revisión (Development, Testing Suite, Execution, Services Documentation, Software Deployment y Team Collaboration Insights) que demuestran el avance incremental de los cuatro productos digitales que componen la solución: Landing Page, Web Application, Mobile Application y Backend API. Adicionalmente, se documentan las capacidades transversales de internacionalización (i18n) y accesibilidad (a11y) integradas en la Web Application desde las primeras iteraciones.
+
+### 7.2.1. Sprint 1
+
+El Sprint 1 constituye la primera iteración de desarrollo del producto Oryxen, con una duración de dos semanas y una velocidad planificada de 30 Story Points. El objetivo del sprint fue establecer la presencia digital del producto mediante el despliegue de la Landing Page responsiva y sentar las bases técnicas del ecosistema con la implementación del núcleo de autenticación (registro, login y Google OAuth con JWT) y la ingesta de telemetría IoT desde el Sensor Lite, integrando la Web Application con el backend en un entorno local completamente funcional.
+
+#### 7.2.1.1. Sprint Planning 1
+
+En esta sección se presenta el resumen del Sprint Planning Meeting del Sprint 1. Al ser el primer sprint del ciclo de implementación, el objetivo se centró en establecer la presencia digital del producto (Landing Page) y los cimientos de identidad y telemetría del backend que habilitan el resto de capacidades de Oryxen.
+
+| **Sprint #** | Sprint 1 |
+|--------------|----------|
+| **Sprint Planning Background** | |
+| Date | 2026-06-02 |
+| Time | 07:00 PM |
+| Location | Reunión virtual (Discord — canal del equipo Oryxen) |
+| Prepared By | Estrada Cajamune, Abraham Andrés (Team Leader) |
+| Attendees | Estrada Cajamune, Abraham Andrés / Nanfuñay Liza, Pedro Jesús / Zevallos Linares, Alessandro Netto |
+| Sprint 0 Review Summary | No aplica. El Sprint 1 es el primer sprint de implementación; parte de los artefactos de diseño estratégico y táctico (Capítulos IV y V) y de UX (Capítulo VI) aprobados en TB1/TP1. |
+| Sprint 0 Retrospective Summary | No aplica. El equipo acordó adoptar GitFlow + Conventional Commits y una reunión de sincronización cada 48 horas como base de trabajo. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | Publicar la Landing Page responsiva de Oryxen e implementar el núcleo de Auth & Identity (registro, login y refresh con JWT) junto con la ingesta de telemetría del Sensor Lite, dejando el ecosistema Web ↔ Backend integrado en entorno local. Métrica de cumplimiento: flujo end-to-end (registro → login → telemetría con Health Score) operativo. |
+| Sprint 1 Velocity | 30 Story Points |
+| Sum of Story Points | 24 Story Points (US-001, US-002, US-003, US-004, US-005, US-006, US-009) |
+
+#### 7.2.1.2. Sprint Backlog 1
+
+Para el Sprint 1, el equipo enfocó sus esfuerzos en la construcción y despliegue de la Landing Page de Oryxen y en la implementación de los flujos de autenticación de usuarios (registro, inicio de sesión y Google OAuth) en la Web Application, sentando las bases para el onboarding de los primeros usuarios beta de la plataforma.
+
+**Sprint 1 Goal:** Desplegar la Landing Page funcional de Oryxen e implementar la autenticación core del usuario (registro, login y Google OAuth) en la Web Application, permitiendo el acceso inicial de usuarios beta a la plataforma.
+
+**Sprint 1 Velocity:** 30 Story Points
+
+*(Captura del Sprint Board — Sprint 1 en Trello)*
+
+**Trello Sprint Board:** https://trello.com/invite/b/69eb915dbfebde12de7929b0/ATTI72c244ba9b9b2af37b84a4adac09acbd15A9C4C2/product-backlog-oryxen
+
+| Sprint # | Sprint 1 | | | | | | |
+|----------|----------|-|-|-|-|-|-|
+| **User Story** | | **Work-Item / Task** | | | | | |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US-001 | Acceso a la Landing Page | T001 | Setup LP project structure | Crear la estructura base del proyecto HTML5/CSS3/JS de la Landing Page con organización de carpetas y configuración del entorno de desarrollo local. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-001 | Acceso a la Landing Page | T002 | Implement responsive layout | Implementar el layout principal con CSS Grid y Flexbox garantizando responsividad completa para mobile web browser y desktop web browser. | 4 | Zevallos Linares, Alessandro Netto | Done |
+| US-001 | Acceso a la Landing Page | T003 | Deploy to Firebase Hosting | Configurar Firebase Hosting y ejecutar el despliegue inicial de la Landing Page verificando la URL pública del sitio. | 2 | Zevallos Linares, Alessandro Netto | Done |
+| US-002 | Secciones informativas diferenciadas | T004 | Hero and About section | Implementar la sección hero con headline y tagline de Oryxen, y la sección "About" describiendo la propuesta de valor diferenciada para personas ocupadas y aficionados. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-002 | Secciones informativas diferenciadas | T005 | Services and Benefits sections | Implementar la sección de servicios (monitoreo IoT, diagnóstico IA, alertas) y la sección de beneficios diferenciados por segmento de usuario. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-002 | Secciones informativas diferenciadas | T006 | How it Works section | Implementar la sección paso a paso del proceso de uso del producto: desde la instalación del Sensor Lite hasta el primer monitoreo activo. | 2 | Zevallos Linares, Alessandro Netto | Done |
+| US-003 | Call to Action contextual | T007 | CTA buttons in hero section | Añadir botones de CTA contextuales en la sección hero redirigiendo a la Web Application (registro y descarga de app). | 1 | Zevallos Linares, Alessandro Netto | Done |
+| US-003 | Call to Action contextual | T008 | CTA buttons in pricing section | Añadir botones de CTA en la sección de planes y precios con redirección al flujo de registro de la Web Application. | 1 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-004 | Testimonios segmentados | T009 | Testimonials section | Implementar la sección de testimonios con cards diferenciados por perfil de usuario, mostrando casos reales de personas ocupadas y aficionados a la jardinería. | 3 | Zevallos Linares, Alessandro Netto | Done |
+| US-004 | Testimonios segmentados | T010 | Plans and pricing section | Implementar la sección de planes con cards comparativos de Freemium y Premium, incluyendo características, precios y hardware Sensor Lite. | 2 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-004 | Testimonios segmentados | T011 | Team and footer section | Implementar la sección del equipo de GrassFarming con perfiles y el footer con links de navegación, redes sociales y términos de servicio. | 2 | Zevallos Linares, Alessandro Netto | Done |
+| US-005 | Registro de usuario | T012 | RegisterForm component | Crear el componente Vue `RegisterForm.vue` con campos de nombre, email y contraseña usando componentes de PrimeVue (InputText, Password). | 4 | Estrada Cajamune, Abraham Andrés | Done |
+| US-005 | Registro de usuario | T013 | Firebase Auth register integration | Integrar `createUserWithEmailAndPassword` de Firebase Auth v12 para persistir nuevos usuarios y crear su perfil en Firestore. | 3 | Estrada Cajamune, Abraham Andrés | Done |
+| US-005 | Registro de usuario | T014 | Form validation and error handling | Implementar validación reactiva de campos (formato de email, longitud mínima de contraseña) y manejo tipado de errores de Firebase Auth. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-006 | Inicio de sesión | T015 | LoginForm component | Crear el componente Vue `LoginForm.vue` con campos de email y contraseña, incluyendo feedback visual del estado de carga (loading state). | 3 | Estrada Cajamune, Abraham Andrés | Done |
+| US-006 | Inicio de sesión | T016 | Firebase Auth sign-in integration | Integrar `signInWithEmailAndPassword` de Firebase Auth y manejar la persistencia de sesión con `setPersistence(LOCAL)`. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-006 | Inicio de sesión | T017 | Pinia auth session store | Implementar `useAuthStore()` con Pinia para centralizar el estado de autenticación del usuario (user, isAuthenticated, isLoading) entre vistas. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-009 | Autenticación externa segura | T018 | Firebase Google provider config | Configurar el proveedor OAuth de Google en Firebase Console y registrar las credenciales en `src/firebase.ts` del proyecto Vue. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-009 | Autenticación externa segura | T019 | GoogleSignIn button component | Implementar el componente `GoogleSignInButton.vue` que invoca `signInWithPopup` con `GoogleAuthProvider` de Firebase Auth. | 2 | Estrada Cajamune, Abraham Andrés | Done |
+| US-009 | Autenticación externa segura | T020 | OAuth callback and user profile sync | Manejar el resultado del callback de OAuth, sincronizar el perfil del usuario de Google con `useAuthStore()` y redirigir al dashboard principal. | 3 | Estrada Cajamune, Abraham Andrés | Done |
+
+#### 7.2.1.3. Development Evidence for Sprint Review
+
+En esta sección se registra la evidencia de implementación del Sprint 1. Los avances principales cubren el desarrollo y despliegue completo de la Landing Page de Oryxen (todas sus secciones) y el scaffolding inicial de la Web Application con integración de Firebase Authentication (Vue 3 + TypeScript + Pinia + PrimeVue). Los commits se distribuyen entre los repositorios `Oryxen-Landing-Page`, `Oryxen-Web-Application` y `Documentation-Report` bajo la organización GitHub de la solución.
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+|----------------|-----------|--------------|-------------------|------------------------|------------------------|
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | 0180565 | feat: add hero and about section | Implements responsive hero section with segmented CTA buttons and "About Oryxen" section describing the value proposition for both target segments. | 08/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | 3229368 | feat: add services section | Adds services section showcasing IoT real-time monitoring, AI-powered diagnostics and smart alert capabilities with visual cards. | 08/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | 0b687c3 | feat: add how it works section | Implements 3-step onboarding flow section covering Sensor Lite QR setup, plant profile creation and first health monitoring. | 14/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | f66b04f | feat: add benefits section | Adds benefits section with differentiated feature cards for busy users (automation, minimal effort) and plant enthusiasts (analytics, advanced reports). | 14/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | a8fa3a3 | feat: add team section | Adds GrassFarming team section with member profiles, photos, roles and academic background. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | ecef7cc | feat: add plans & pricing section | Implements Freemium and Premium subscription plan cards with feature comparison, Sensor Lite hardware pricing and upgrade CTA buttons. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page | main | f2e24b1 | feat: add testimonials and footer section | Adds segmented user testimonials (busy user and enthusiast profiles) and footer with navigation links, social media and Terms of Service link. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application | main | e74cd83 | initial commit. | Scaffolding of Oryxen Web Application: Vue 3.5 + Vite 8 + TypeScript + PrimeVue 4 + Pinia 3 + Firebase SDK v12 + Vue Router 5. Base project structure with src/components, src/views, src/stores, src/services, src/router and Firebase config. | 16/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Documentation-Report | feature/chapter-7 | 6ec9a9a | docs(chapter-7): add source code management | Documents GitFlow workflow implementation, Conventional Commits strategy, Semantic Versioning and repository URLs for all five Oryxen digital product repositories. | 04/06/2026 |
+
+#### 7.2.1.4. Testing Suite Evidence for Sprint Review
+
+Durante el Sprint 2, el equipo de Oryxen implementó una **Testing Suite automatizada** completa para el backend ASP.NET Core 9, cubriendo tanto pruebas unitarias como especificaciones de comportamiento BDD. La suite se organiza bajo el directorio `tests/` de la solución `Oryxen.API.slnx` y está integrada en el ciclo de compilación mediante `dotnet test`.
+
+##### Estructura de la Suite de Pruebas
+
+```
+Oryxen-Backend/
+├── tests/
+│   ├── Oryxen.Domain.Tests/                  ← Pruebas unitarias del dominio (xUnit)
+│   │   ├── Oryxen.Domain.Tests.csproj
+│   │   └── Services/
+│   │       └── PlantHealthCalculatorTests.cs  ← 26 tests del algoritmo de scoring
+│   │
+│   ├── Oryxen.Application.Tests/              ← Pruebas unitarias de servicios de aplicación (xUnit + NSubstitute)
+│   │   ├── Oryxen.Application.Tests.csproj
+│   │   └── Auth/
+│   │       └── AuthServiceTests.cs            ← 11 tests del flujo de autenticación
+│   │
+│   └── Oryxen.Specs/                          ← Especificaciones BDD (Gherkin)
+│       └── Features/
+│           ├── 01-autenticacion-rbac.feature
+│           ├── 02-ingesta-telemetria-iot.feature
+│           └── 03-bloqueo-401-unauthorized.feature
+```
+
+**Stack de testing:**
+
+| Herramienta | Versión | Propósito |
+|-------------|---------|-----------|
+| xUnit | 2.9.2 | Framework de pruebas unitarias (.NET) |
+| NSubstitute | 5.3.0 | Biblioteca de mocking para tests de Application layer |
+| Microsoft.NET.Test.Sdk | 17.12.0 | Adaptador de ejecución de tests |
+| Gherkin (.feature) | — | Especificaciones de comportamiento BDD legibles por negocio |
+
+##### A. Pruebas Unitarias — `PlantHealthCalculator` (Dominio)
+
+El `PlantHealthCalculator` es un servicio de dominio que computa un **Health Score determinístico** (0–100) a partir de las lecturas del Sensor Lite, ponderando: **Soil Moisture 50% + Humidity 25% + Temperature 25%**. Las pruebas cubren 4 categorías:
+
+| Categoría | Tests | Descripción |
+|-----------|-------|-------------|
+| Scoring | 6 | Score 100 en rango ideal, score 0 en valores nulos, clamping en 0 y 100 |
+| Weighting | 4 | Verificación de pesos: soil=50pts, humidity=25pts, temp=25pts |
+| Band Classification | 4 | Mapeo score→PlantStatus: `≥70 Healthy`, `≥40 Warning`, `<40 Critical` |
+| Determinism + Linear Decay | 12 | Mismas entradas = misma salida, decaimiento lineal fuera de rango, Theory con 7 casos parametrizados |
+
+**Extracto — verificación de pesos y bandas:**
+
+```csharp
+[Fact]
+public void Soil_Contributes_50_Percent_Of_Total_Score()
+{
+    var score = PlantHealthCalculator.Compute(soilMoisture: 55, humidity: 0, temperature: 0);
+    Assert.Equal(50, score);
+}
+
+[Theory]
+[InlineData(55, 50, 22.5, 100)]
+[InlineData(0, 0, 0, 0)]
+[InlineData(55, 0, 0, 50)]
+public void Produces_Expected_Score_For_Known_Inputs(
+    double soil, double humidity, double temperature, int expected)
+{
+    var score = PlantHealthCalculator.Compute(soil, humidity, temperature);
+    Assert.Equal(expected, score);
+}
+```
+
+##### B. Pruebas Unitarias — `AuthService` (Aplicación)
+
+El `AuthService` orquesta el registro, login y rotación de tokens. Las pruebas utilizan **NSubstitute** para mockear las dependencias (`IUserAccountRepository`, `IRoleRepository`, `IPasswordHasher`, `IJwtTokenGenerator`, `IUnitOfWork`) y validar el comportamiento aislado del servicio:
+
+| Categoría | Tests | Descripción |
+|-----------|-------|-------------|
+| RegisterAsync | 5 | Registro exitoso, hash BCrypt, email duplicado → `EmailAlreadyExistsException`, normalización email, asignación rol FARMER + suscripción Freemium |
+| LoginAsync | 6 | Login válido, contraseña incorrecta → `InvalidCredentialsException`, usuario inexistente, cuenta inactiva, normalización email, rotación de refresh token |
+
+**Extracto — flujo de registro exitoso y manejo de excepción por email duplicado:**
+
+```csharp
+[Fact]
+public async Task Creates_User_And_Returns_Tokens_When_Email_Is_New()
+{
+    _users.ExistsByEmailAsync("farmer@oryxen.io", Arg.Any<CancellationToken>()).Returns(false);
+    _roles.GetByNameAsync(Roles.Farmer, Arg.Any<CancellationToken>()).Returns(FarmerRole());
+    _passwordHasher.Hash("Sembrar2026!").Returns("bcrypt-hash");
+    SetupTokenGenerator();
+
+    var response = await _sut.RegisterAsync(ValidRegisterRequest());
+
+    Assert.Equal("access-jwt", response.AccessToken);
+    Assert.Contains(Roles.Farmer, response.Roles);
+    await _users.Received(1).AddAsync(Arg.Any<UserAccount>(), Arg.Any<CancellationToken>());
+}
+
+[Fact]
+public async Task Throws_EmailAlreadyExistsException_When_Email_Is_Duplicate()
+{
+    _users.ExistsByEmailAsync("farmer@oryxen.io", Arg.Any<CancellationToken>()).Returns(true);
+    await Assert.ThrowsAsync<EmailAlreadyExistsException>(
+        () => _sut.RegisterAsync(ValidRegisterRequest()));
+}
+```
+
+##### C. Especificaciones BDD (Gherkin .feature)
+
+Se elaboraron tres archivos `.feature` en sintaxis Gherkin pura (`Given / When / Then`) en español, cubriendo los flujos críticos del sistema:
+
+**Feature 1 — Control de Acceso Basado en Roles (RBAC):**
+
+```gherkin
+Feature: Control de Acceso Basado en Roles (RBAC)
+  Como administrador de la plataforma Oryxen
+  Quiero que los usuarios con rol FARMER solo accedan a sus propias plantas
+  Y que los usuarios con rol ADMIN tengan acceso global
+
+  Scenario: FARMER consulta sus propias plantas
+    Given que me he autenticado como "farmer@oryxen.io" con rol "FARMER"
+    When envío una petición GET a "/api/v1/users/{myUserId}/plants"
+    Then la respuesta tiene código HTTP 200 OK
+    And todas las plantas devueltas pertenecen a mi usuario
+
+  Scenario: FARMER intenta consultar las plantas de otro usuario
+    Given que me he autenticado como "farmer@oryxen.io" con rol "FARMER"
+    When envío una petición GET a "/api/v1/users/{otherUserId}/plants"
+    Then la respuesta tiene código HTTP 403 Forbidden
+    And el cuerpo de la respuesta contiene un ProblemDetails RFC 7807
+```
+
+**Feature 2 — Ingesta Automatizada de Telemetría IoT:**
+
+```gherkin
+Feature: Ingesta Automatizada de Telemetría IoT
+
+  Scenario: Ingesta de una lectura válida del Sensor Lite
+    Given que el Sensor Lite "SL-SIM-001" ha tomado una lectura con:
+      | soilMoisture | humidity | temperature | lightLevel |
+      | 62           | 52       | 22          | 850        |
+    When envío una petición POST a "/api/v1/telemetry" con el payload:
+      """
+      { "deviceId": "SL-SIM-001", "plantId": "11111111-...", "soilMoisture": 62, "humidity": 52, "temperature": 22, "lightLevel": 850 }
+      """
+    Then la respuesta tiene código HTTP 201 Created
+    And el "healthScore" es igual a 100 porque todas las métricas están en el rango ideal
+
+  Scenario Outline: Cálculo determinístico del Health Score
+    Given que el Sensor Lite envía una lectura con soilMoisture = <soilMoisture>
+    When el PlantHealthCalculator procesa la lectura con humidity = 50 y temperature = 22
+    Then el healthScore es <expectedScore>
+    And la banda de clasificación es <band>
+
+    Examples:
+      | soilMoisture | expectedScore | band      |
+      | 55           | 100           | Healthy   |
+      | 25           | 50            | Warning   |
+      | 0            | 0             | Critical  |
+```
+
+**Feature 3 — Bloqueo de Accesos No Autorizados (HTTP 401):**
+
+```gherkin
+Feature: Bloqueo de Accesos No Autorizados (HTTP 401)
+
+  Scenario: Petición a endpoint protegido sin token JWT
+    Given que soy un cliente no autenticado
+    When envío una petición GET a "/api/v1/auth/me" sin cabecera "Authorization"
+    Then la respuesta tiene código HTTP 401 Unauthorized
+    And el cuerpo de la respuesta tiene content-type "application/problem+json"
+
+  Scenario: Petición a endpoint protegido con token JWT expirado
+    Given que tengo un token JWT emitido hace 2 horas con expiración de 1 hora
+    When envío una petición GET a "/api/v1/auth/me" con cabecera "Authorization: Bearer {expiredToken}"
+    Then la respuesta tiene código HTTP 401 Unauthorized
+```
+
+##### D. Resultados de Ejecución
+
+```bash
+$ dotnet test Oryxen.API.slnx --verbosity normal
+
+Pruebas totales: 37
+     Correcto: 37
+     Fallidos: 0
+ Tiempo total: 3.07s
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+```
+
+| Proyecto de Tests | Total | Aprobados | Fallidos | Duración |
+|-------------------|-------|-----------|----------|----------|
+| Oryxen.Domain.Tests | 26 | 26 | 0 | 3.07s |
+| Oryxen.Application.Tests | 11 | 11 | 0 | 2.88s |
+| **Total** | **37** | **37** | **0** | **~3s** |
+
+##### E. Mapeo User Stories → Testing Suite
+
+| User Story | Tipo de Test | Estado |
+|------------|-------------|--------|
+| US-005 Registro de usuario | Unit (AuthService.RegisterAsync) | ✅ Implementado |
+| US-006 Inicio de sesión | Unit (AuthService.LoginAsync) | ✅ Implementado |
+| US-010 Cerrar sesión | BDD Feature 03 (401 sin token) | ✅ Especificado |
+| Control de Acceso RBAC (FARMER vs ADMIN) | BDD Feature 01 | ✅ Especificado |
+| Ingesta de telemetría IoT (Sensor Lite) | Unit (PlantHealthCalculator) + BDD Feature 02 | ✅ Implementado + Especificado |
+| Cálculo de Health Score | Unit (PlantHealthCalculator 26 tests) | ✅ Implementado |
+| Seguridad JWT / 401 Unauthorized | BDD Feature 03 (8 escenarios) | ✅ Especificado |
+
+#### 7.2.1.5.	Execution Evidence for Sprint Review
+
+En esta sección se presentan las capturas de pantalla de los productos digitales entregados al cierre del Sprint 1. Cada imagen documenta un flujo de usuario verificado contra los criterios de aceptación definidos en el Sprint Backlog, demostrando la integración funcional entre el frontend (Landing Page, Web y Mobile) y el backend RESTful en ASP.NET Core 9.
+
+**Landing Page — Presencia Digital y CTAs Segmentados (US-001, US-002, US-003):**
+
+*Landing Oryxen 1:* Sección Hero con headline, tagline y botones CTA contextuales que redirigen a la Web Application y a las tiendas de descarga. El layout responsivo implementa CSS Grid y Flexbox con breakpoints a 768px y 1024px.
+
+![Landing Oryxen 1](./assets/Chapter-7/LANDING_ORYXEN_1.jpg)
+
+*Landing Oryxen 2:* Secciones de servicios (monitoreo IoT, diagnóstico IA, alertas inteligentes) y beneficios diferenciados por segmento (personas ocupadas vs. aficionados). Cada card utiliza landmark semántico `<article>` con `aria-label` descriptivo.
+
+![Landing Oryxen 2](./assets/Chapter-7/LANDING_ORYXEN_2.jpg)
+
+*Landing Oryxen 3:* Secciones de testimonios segmentados, planes de suscripción (Freemium/Premium), perfil del equipo GrassFarming y footer con navegación secundaria. Los precios incluyen el costo del Sensor Lite ($49 USD) más suscripción mensual.
+
+![Landing Oryxen 3](./assets/Chapter-7/LANDING_ORYXEN_3.jpg)
+
+**Mobile Application — Autenticación Nativa y Dashboard Táctil (US-005, US-006, US-019):**
+
+*Mobile Oryxen Login:* Pantalla de inicio de sesión en Jetpack Compose con campos de email y contraseña, botón de Google Sign-In con OAuth 2.0, y validación reactiva de campos. El token JWT se almacena cifrado en EncryptedSharedPreferences con AES-256-GCM respaldado por Android Keystore.
+
+![Mobile Oryxen Login](./assets/Chapter-7/MOBILE_ORYXEN_LOGIN.jpg)
+
+*Mobile Oryxen Dashboard:* Vista principal con grid de cards de plantas mostrando Health Score como barra de progreso coloreada (verde ≥ 70, ámbar ≥ 40, rojo < 40). Navegación por gestos Material 3 con Navigation Compose. Cada card incluye la última lectura de humedad y un indicador de conexión del Sensor Lite.
+
+![Mobile Oryxen Dashboard](./assets/Chapter-7/MOBILE_ORYXEN_DASHBOARD.jpg)
+
+**Web Application — Autenticación, Gestión de Plantas y Dashboard Centralizado:**
+
+*Web Oryxen Login:* Formulario de inicio de sesión (`LoginForm.vue`) con campos de email y contraseña, botón de Google Sign-In, y validación ARIA en tiempo real (`aria-required`, `aria-invalid`, `role="alert"`). Estado de carga visible durante la autenticación.
+
+![Web Oryxen Login](./assets/Chapter-7/WEB_ORYXEN_LOGIN.jpg)
+
+*Web Oryxen Sign In:* Formulario de registro (`RegisterForm.vue`) con validación reactiva de formato de email, longitud mínima de contraseña (8 caracteres, 1 mayúscula, 1 número) y confirmación de contraseña. Errores inline con `role="alert"` para lectores de pantalla.
+
+![Web Oryxen Sign In](./assets/Chapter-7/WEB_ORYXEN_SIGN_IN.jpg)
+
+*Web Oryxen Dashboard:* Panel principal post-login con Sidebar de navegación, Header con badge de notificaciones (`aria-live="polite"`) y grid de cards de plantas. El Health Score se calcula en tiempo real desde la última lectura de telemetría IoT mediante polling cada 30 segundos al endpoint `GET /api/v1/users/{userId}/plants`. Las cards implementan `tabindex="0"` y `role="button"` para navegación por teclado.
+
+![Web Oryxen Dashboard](./assets/Chapter-7/WEB_ORYXEN_DASHBOARD.jpg)
+
+*Web Oryxen Plants:* Vista de catálogo con listado de todas las plantas del usuario autenticado. Cada fila muestra nombre común, especie botánica, Health Score, última lectura del Sensor Lite y un botón de acción para ver detalle. El endpoint `GET /api/v1/users/{userId}/plants` aplica filtro RBAC: usuarios `FARMER` solo recuperan sus plantas; `ADMIN` accede al catálogo global.
+
+![Web Oryxen Plants](./assets/Chapter-7/WEB_ORYXEN_PLANTS.jpg)
+
+*Web Oryxen Plant Detail:* Vista de detalle de una planta con pestañas de navegación: Overview (métricas actuales, Health Score), Telemetry History (gráfico de tendencia con Chart.js), AI Diagnoses (historial de diagnósticos IA) y Device Settings (vincular/desvincular Sensor Lite por `deviceId` UUID). El `plantId` UUID v4 se utiliza como clave inmutable en todas las interacciones con el ecosistema.
+
+![Web Oryxen Plant Detail](./assets/Chapter-7/WEB_ORYXEN_PLANT_DETAIL.jpg)
+
+*Web Oryxen Analytics:* Panel de analíticas con gráfico de tendencia de salud vegetal (Health Trend) usando Chart.js con datos agregados del endpoint `GET /api/v1/analytics/health-trend`. Incluye selector de rango temporal (7d, 30d, 90d) y granularidad (hora, día, semana). Botones de exportación a PDF y CSV que invocan `POST /api/v1/reports/export`.
+
+![Web Oryxen Analytics](./assets/Chapter-7/WEB_ORYXEN_ANALYTICS.jpg)
+
+*Web Oryxen Settings:* Vista de configuración de perfil con secciones: datos personales (nombre, email, foto), preferencias de notificación (toggles FCM por tipo: riego, diagnóstico IA, alertas comunitarias, actualizaciones de suscripción), historial de suscripciones (facturas Stripe) y gestión de dispositivos IoT vinculados.
+
+![Web Oryxen Settings](./assets/Chapter-7/WEB_ORYXEN_SETTINGS.jpg)
+
+#### 7.2.1.6. Services Documentation Evidence for Sprint Review
+
+El backend de Oryxen (ASP.NET Core 9) documenta sus endpoints REST mediante **OpenAPI 3.0**, generado automáticamente con **Swashbuckle**. La documentación interactiva se despliega en `http://localhost:5170/swagger` e incorpora el esquema de seguridad **Bearer (JWT)**, lo que permite autenticar las pruebas pegando el `accessToken` directamente en Swagger UI mediante el botón *Authorize*.
+
+A continuación, la relación de endpoints documentados que forman parte del alcance del Sprint 1:
+
+| Endpoint | HTTP Verb | Descripción | Parámetros / Body | Ejemplo Response |
+| -------- | --------- | ----------- | ----------------- | ---------------- |
+| `/api/v1/auth/register` | `POST` | Registra una cuenta (rol `FARMER` + suscripción Freemium) y devuelve el par de tokens. | `{ email, password, fullName }` | `{ "message":"user created" }` |
+| `/api/v1/auth/login` | `POST` | Autentica credenciales y devuelve `accessToken` + `refreshToken`. | `{ email, password }` | `{ "token":"jwt_token" }` |
+| `/api/v1/auth/refresh` | `POST` | Rota el refresh token y emite un nuevo par de tokens. | `{ refreshToken }` | `{ "token":"jwt_token" }` |
+| `/api/v1/auth/me`| `GET` | Devuelve los claims de identidad del usuario autenticado. | — | `{ "id": 101, "email": "user@oryxen.com", "fullName": "John Doe", "role": "FARMER" }` |
+| `/api/v1/telemetry` | `POST` | Ingesta una lectura del Sensor Lite y devuelve el `healthScore` calculado. | `{ "telemetryId": "tel_8932", "status": "success", "healthScore": 87, "timestamp": "2026-06-22T02:05:00Z" }` | |
+| `/api/v1/telemetry/{plantId}` | `GET` | Devuelve el historial reciente de telemetría de una planta. | `plantId`, query `from?`, `to?` | `{ "plantId": "plant_45", "deviceMapped": "dev_lite_01", "records": [ { "timestamp": "2026-06-22T02:00:00Z", "metrics": { "humidity": 62.5, "temperature": 24.2, "lightLevel": 350, "soilMoisture": 45.1 }, "healthScore": 88 }, { "timestamp": "2026-06-22T01:00:00Z", "metrics": { "humidity": 61.2, "temperature": 24.8, "lightLevel": 400, "soilMoisture": 46.3 }, "healthScore": 86 } ] }` |
+
+
+**Ejemplo — `POST /api/v1/auth/login`**
+
+Request:
+```json
+{ "email": "farmer@oryxen.io", "password": "Sembrar2026!" }
+```
+Response `200 OK`:
+```json
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refreshToken": "k4Jr...base64...==",
+  "accessTokenExpiresAt": "2026-06-19T04:24:26Z",
+  "email": "farmer@oryxen.io",
+  "fullName": "Abraham Estrada",
+  "roles": ["FARMER"]
+}
+```
+
+**Ejemplo — `POST /api/v1/telemetry`**
+
+Request:
+```json
+{ "deviceId": "SL-SIM-001", "plantId": "11111111-2222-3333-4444-555555555555",
+  "humidity": 52, "temperature": 22, "lightLevel": 850, "soilMoisture": 62 }
+```
+Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` del dominio):
+```json
+{
+  "id": "f3a1...", "deviceId": "SL-SIM-001",
+  "plantId": "11111111-2222-3333-4444-555555555555",
+  "humidity": 52, "temperature": 22, "lightLevel": 850,
+  "soilMoisture": 62, "healthScore": 100, "recordedAt": "2026-06-19T03:54:00Z"
+}
+```
+
+**Evidencia:**
+
+![ServicesDocumentationEndpoints_Sprint1](./assets/Chapter-7/ServicesDocumentationEndpoints_Sprint1.jpg)
+
+![ServicesDocumentationResponses_Sprint1](./assets/Chapter-7/ServicesDocumentationResponses_Sprint1.jpg)
+
+**Repositorio del Web Services:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend
+
+**IDs de commits del Backend Services:**
+
+- 892f1d7f99060a70ca07707626ea6ad7386a5dbf
+- eea1fcbedb66599912ed037424c16e11a04f662f
+- bdecef4b4f6ce6b84b9f987b1f6c3471dce59400
+- 7f9db13da84914396230309afe0a561ae9b956fa
+- 4079095086d5a86e035a409a3a861a710483996c
+- 0bfff21769a5845fc4962336219ee54ee2875199
+- 5b6df6bc4c6eecc9f23a769d033c1d3754670e73
+- 7f6571e9cba9480130870dfb5a30e9a10cfa1c7b
+- 8ae240876adfc120930d0ab854a8658bff3c1d7d
+
+#### 7.2.1.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 1, el equipo de Oryxen configuró y desplegó los siguientes productos digitales en sus respectivas plataformas cloud y entornos locales:
+
+**a. Oryxen-Landing-Page — Firebase Hosting:**
+
+La Landing Page estática de Oryxen fue desplegada en Firebase Hosting (Google Cloud) como sitio público con SSL automático. La configuración se realizó mediante Firebase CLI.
+
+**Pasos de despliegue:**
+
+1. Instalación y login: `npm install -g firebase-tools && firebase login`
+2. Inicialización del proyecto: `firebase init hosting` en el directorio `Oryxen-Landing-Page`
+3. Configuración de `firebase.json`:
+```json
+{
+  "hosting": {
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}
+```
+4. Despliegue a producción: `firebase deploy --only hosting`
+5. URL pública: `https://oryxen-landing.web.app`
+
+![FirebaseDeploy_Sprint1](./assets/Chapter-7/FirebaseHostingDeploy.jpg)
+
+**b. Oryxen-Backend — Entorno Local Dockerizado:**
+
+El backend ASP.NET Core 9 se ejecutó localmente con PostgreSQL 15 en contenedor Docker:
+
+1. `docker compose up -d` (inicia PostgreSQL 15 en puerto 5432)
+2. `dotnet run --project src/Oryxen.API` → API en `http://localhost:5170`
+3. Swagger UI disponible en `http://localhost:5170/swagger`
+
+**c. Oryxen-Web-Application — Entorno de Desarrollo Local:**
+
+La Web Application en Vue 3 se ejecutó con Vite en modo desarrollo:
+
+1. `npm install`
+2. Configurar `.env.development` con `VITE_API_BASE_URL=http://localhost:5170`
+3. `npm run dev` → Aplicación en `http://localhost:5173`
+
+**d. Oryxen-Mobile-Application — Android Emulador Local:**
+
+La aplicación móvil nativa en Kotlin ejecutó en Android Emulator (API 34) conectándose al backend vía `http://10.0.2.2:5170` (puente de red del emulador Android).
+
+| Producto Digital | Plataforma de Despliegue | URL / Acceso | Estado |
+|------------------|-------------------------|--------------|--------|
+| Landing Page | Firebase Hosting | `https://oryxen-landing.web.app` | Desplegado |
+| Backend API | Localhost (Docker + .NET) | `http://localhost:5170` | Operativo |
+| Web Application | Vite Dev Server (Local) | `http://localhost:5173` | Operativo |
+| Mobile Application | Android Emulator (Local) | `http://10.0.2.2:5170` | Operativo |
+
+#### 7.2.1.8. Team Collaboration Insights during Sprint
+
+En esta sección se evidencian los analíticos de colaboración del equipo durante el Sprint 1. Todos los miembros del equipo tuvieron participación activa en la implementación de los artefactos.
+
+**Documentación:**
+
+![CommitsDocumentation-Sprint1](./assets/Chapter-7/CommitsDocumentation-Sprint1.png)
+
+**Landing Page:**
+
+![CommitsLandingPage-Sprint1](./assets/Chapter-7/CommitsLandingPage-Sprint1.png)
+
+**Web Application:**
+
+![CommitsWebApplication-Sprint1](./assets/Chapter-7/CommitsWebApplication-Sprint1.png)
+
+**Mobile Application:**
+
+![CommitsMobileApplication-Sprint1](./assets/Chapter-7/CommitsMobileApplication-Sprint1.png)
+
+**Web Services:**
+
+![CommitsBackend-Sprint1](./assets/Chapter-7/CommitsBackend-Sprint1.png)
+
+---
+
+### 7.3. Validation Interviews
+
+En esta sección se documenta el proceso de validación de la experiencia de usuario con representantes de los dos segmentos objetivo del producto Oryxen. Se presenta el diseño metodológico de las entrevistas, estructurado en tres bloques de validación (Landing Page, Web Application y Mobile Application), así como el registro detallado de las sesiones realizadas con usuarios reales y la evaluación heurística preliminar de usabilidad, arquitectura de información y diseño inclusivo, siguiendo el formato del Anexo D del enunciado del curso.
+
+### 7.3.1. Diseño de Entrevistas
+
+**Objetivo:** Validar la propuesta de valor, comprensión, navegabilidad y experiencia de usuario del sistema Oryxen en sus tres componentes: Landing Page, Aplicación Móvil y Aplicación Web.
+
+
+**Script para el entrevistador:**
+
+- “Queremos validar una solución basada en IoT e Inteligencia Artificial para el monitoreo, automatización y cuidado de plantas.”
+
+- “No estamos evaluando su desempeño, sino la claridad y facilidad de uso del producto.”
+
+- “Le pedimos que navegue libremente y piense en voz alta mientras interactúa con la plataforma.”
+
+- “Cualquier duda, comentario o sugerencia es bienvenida.”
+
+
+**Preguntas Generales sobre el Usuario:**
+
+- ¿A qué se dedica actualmente (ocupación), en qué distrito reside y cuál es su estado civil? (Preguntas complementarias para el Arquetipo)
+
+- ¿Tiene plantas en casa o en su entorno cercano?
+
+- ¿Cuántas plantas tiene aproximadamente?
+
+- ¿Ha utilizado previamente alguna aplicación relacionada al cuidado de plantas o automatización del hogar?
+
+- ¿Qué tan familiarizado está con sistemas o dispositivos IoT (Internet de las Cosas)?
+
+- ¿Qué problemas o frustraciones enfrenta actualmente para cuidar adecuadamente sus plantas?
+
+- ¿Qué tan cómodo se siente utilizando aplicaciones móviles y aplicaciones web en su día a día?
+
+<br>
+
+**a. Validación de la Landing Page:**
+
+**Preguntas antes de usar la Landing Page:**
+
+- ¿Qué cree que ofrece el producto con base en la primera impresión?
+
+- ¿Qué elementos llaman más su atención al ingresar?
+
+- ¿Percibe el diseño como confiable y profesional?
+
+**Tareas (User Flows – Landing Page):**
+
+- “Identifique qué problema soluciona el sistema Oryxen.”
+
+- “Revise la sección donde se explica cómo funciona la solución con los sensores.”
+
+- “Acceda a la aplicación web o a la aplicación móvil mediante los botones o enlaces disponibles.”
+
+**Preguntas después de usar la Landing Page:**
+
+- ¿El mensaje principal del producto le resultó claro?
+
+- ¿Pudo comprender adecuadamente el funcionamiento del sistema IoT?
+
+- ¿La navegación le resultó intuitiva?
+
+- ¿Hubo alguna parte que le generó confusión o que modificaría?
+
+- ¿La Landing Page le motivaría a usar la aplicación?
+
+<br>
+
+**b. Validación de la Aplicación Web:**
+
+**Preguntas antes de usar la Aplicación Web:**
+
+- ¿Qué funcionalidades esperaría encontrar en una plataforma web de escritorio para el monitoreo de plantas?
+
+- ¿Qué información o herramientas de análisis considera más importantes desde la versión de pantalla grande?
+
+**Tareas (User Flows – Aplicación Web):**
+
+**Flujo 1 – Inicio de sesión:**
+
+- “Ingrese a la plataforma utilizando el formulario de acceso.”
+
+**Flujo 2 – Visualización del estado general de las plantas:**
+
+- “Revise el Dashboard general e indique qué información comprende de los paneles.”
+
+**Flujo 3 – Agregar o editar un dispositivo IoT:**
+
+- “Simule el flujo para vincular o registrar un nuevo dispositivo de sensor IoT a su cuenta.”
+
+**Flujo 4 – Visualizar reportes o datos históricos:**
+
+- “Busque información histórica, métricas detalladas o reportes avanzados de telemetría.”
+
+**Preguntas después de usar la Aplicación Web:**
+
+- ¿La navegación en la plataforma web le pareció intuitiva?
+
+- ¿Los títulos y nombres de las secciones son claros y comprensibles?
+
+- ¿La distribución de los datos gráficos es adecuada?
+
+- ¿Hubo alguna parte que le generó confusión?
+
+- ¿Percibe coherencia visual y funcional respecto a la versión móvil, o parecen sistemas diferentes?
+
+<br>
+
+**Validación de la Aplicación Móvil:**
+
+**Preguntas antes de usar la Aplicación Móvil:**
+
+- ¿Qué espera encontrar en una aplicación destinada al cuidado de plantas?
+
+- ¿Qué información considera más importante monitorear desde su teléfono?
+
+**Tareas (User Flows – Aplicación Móvil):**
+
+**Flujo 1 – Visualización del estado general (Dashboard):**
+
+- “Acceda al Dashboard e indique qué información comprende sobre la salud de sus plantas.”
+
+**Flujo 2 – Visualizar detalles de una planta y diagnóstico:**
+
+- “Entre al detalle de una planta, revise las métricas de los sensores e interactúe con las funciones de asistencia por IA.”
+
+**Flujo 3 – Acceder a Configuración:**
+
+- “Ingrese a la sección de Configuración e intente activar una alerta o modificar algún ajuste disponible.”
+
+**Preguntas después de usar la Aplicación Móvil:**
+
+- ¿Qué tan fácil fue encontrar la información o funciones que buscaba?
+
+- ¿La información del Dashboard móvil le resultó clara y útil?
+
+- ¿Qué parte de la aplicación considera más útil y cuál menos útil?
+
+- ¿Experimentó confusión en algún punto del proceso?
+
+- ¿Cómo percibe el diseño y la organización visual de la aplicación?
+
+- ¿Agregarías o eliminaría alguna funcionalidad?
+
+<br>
+
+**Cierre de la Entrevista:**
+
+- ¿Qué valoración general (en una escala del 1 al 10) asignaría a las plataformas en su conjunto?
+
+- ¿Utilizaría el sistema Oryxen si estuviera disponible actualmente en el mercado?
+
+- ¿Qué aspecto considera más convincente del producto?
+
+- ¿Qué aspecto considera menos convincente o requiere mejoras?
+
+- ¿Tiene algún comentario adicional o sugerencia para el equipo de desarrollo?
+
+
+### 7.3.2. Registro de Entrevistas
+
+En esta sección se registran las entrevistas de validación realizadas con representantes de cada segmento objetivo. Cada usuario interactuó con los tres productos digitales de Oryxen (Landing Page, Web Application y Mobile Application), realizando las tareas definidas en el diseño de entrevistas y expresando sus apreciaciones cualitativas sobre la experiencia de uso.
+
+#### Segmento 1 — Personas Ocupadas
+
+**Entrevista de Validación N° 1:**
+
+- **Nombres y apellidos:** Andrea Navarro Castillo
+- **Edad:** 31 años
+- **Distrito de residencia:** Miraflores, Lima
+- **Ocupación:** Marketing Manager en empresa retail
+- **Inicio de la entrevista:** 0:04
+- **Fin de la entrevista:** 24:18
+- **Duración total:** 24 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg1_Andrea](./assets/Chapter-7/Validacion_Seg1_Andrea.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg1-andrea
+
+**Resumen descriptivo de la validación:**
+
+Andrea es una profesional con agenda saturada (50+ horas semanales) que mantiene 3 plantas en su departamento. Al interactuar con la Landing Page, identificó inmediatamente la propuesta de valor: "me encanta que hable de automatización desde el primer momento, porque yo no tengo tiempo para recordar cuándo regar". El diseño visual le pareció profesional y confiable, destacando la sección de testimonios segmentados como factor de credibilidad.
+
+En la Web Application, completó el flujo de registro e inicio de sesión sin fricción. Al llegar al Dashboard, valoró positivamente la simplicidad del panel central: "puedo ver en 5 segundos si mis plantas están bien o no". La funcionalidad de diagnóstico por IA le pareció "impresionante" — subió una foto de una de sus plantas y recibió un diagnóstico en menos de 10 segundos. Manifestó que pagaría por el plan Premium si el precio se mantiene por debajo de S/ 40 mensuales, y que el Sensor Lite a $49 USD le parece un precio justo.
+
+En la aplicación móvil, la navegación le resultó intuitiva y valoró que las notificaciones push le lleguen solo cuando hay un problema crítico ("no quiero spam, solo lo importante"). Su valoración general fue **8.5/10**, y afirmó que "definitivamente usaría Oryxen si estuviera disponible hoy".
+
+**Apreciaciones clave:**
+- Landing Page: mensaje claro, diseño profesional, testimonios segmentados generan confianza.
+- Web Application: dashboard simple y directo, diagnóstico IA rápido y útil, proceso de checkout Premium claro.
+- Mobile Application: notificaciones contextuales valoradas, navegación intuitiva.
+- Crítica constructiva: sugiere añadir un tutorial interactivo al primer inicio para usuarios no familiarizados con IoT.
+- Disposición a pagar: S/ 35–40 mensuales por Premium.
+
+---
+
+**Entrevista de Validación N° 2:**
+
+- **Nombres y apellidos:** Rodrigo Salazar Vega
+- **Edad:** 38 años
+- **Distrito de residencia:** San Isidro, Lima
+- **Ocupación:** Consultor Financiero independiente
+- **Inicio de la entrevista:** 0:06
+- **Fin de la entrevista:** 22:45
+- **Duración total:** 22 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg1_Rodrigo](./assets/Chapter-7/Validacion_Seg1_Rodrigo.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg1-rodrigo
+
+**Resumen descriptivo de la validación:**
+
+Rodrigo es consultor financiero que viaja frecuentemente (3-4 días fuera de Lima cada dos semanas). Tiene 5 plantas en su oficina en casa y el principal problema que enfrenta es el abandono durante sus viajes. Al revisar la Landing Page, conectó inmediatamente con el caso de uso de personas ocupadas: "esto es exactamente lo que necesito; mis plantas sufren cada vez que viajo". Destacó la sección "How It Works" como clara y convincente.
+
+En la Web Application, el proceso de registro le tomó menos de 2 minutos con Google OAuth. Al explorar el Dashboard, preguntó espontáneamente por la funcionalidad de Analytics: "quiero ver cómo estuvieron mis plantas la semana pasada mientras no estuve". El gráfico de Health Trend le pareció "exactamente lo que un usuario de negocios necesita: datos claros y accionables". El flujo de upgrade a Premium con Stripe Checkout le pareció fluido y profesional, comparándolo favorablemente con servicios como Netflix o Spotify.
+
+En la Mobile Application, valoró altamente las notificaciones push: "si mi planta está en estado crítico mientras estoy en una reunión con un cliente, necesito saberlo". Sugirió que la app permita programar "modo viaje" para intensificar el monitoreo durante ausencias programadas.
+
+Valoración general: **9/10**. Afirmó que "es el tipo de herramienta que pagaría sin dudar, porque el costo de reemplazar plantas muertas cada dos meses ya supera los $8.99 de suscripción".
+
+**Apreciaciones clave:**
+- Landing Page: conexión emocional inmediata con el problema de viajes frecuentes.
+- Web Application: Analytics y Health Trend son el diferenciador clave para su perfil.
+- Mobile Application: notificaciones críticas indispensables, sugiere "modo viaje".
+- Stripe Checkout: experiencia de pago profesional y confiable.
+- Crítica constructiva: añadir un dashboard comparativo entre períodos (antes/durante/después de viajes).
+- Disposición a pagar: $8.99 USD mensuales sin objeción.
+
+---
+
+**Entrevista de Validación N° 3:**
+
+- **Nombres y apellidos:** Camila Fernández Rivas
+- **Edad:** 27 años
+- **Distrito de residencia:** Lince, Lima
+- **Ocupación:** Diseñadora UX/UI freelance
+- **Inicio de la entrevista:** 0:05
+- **Fin de la entrevista:** 26:12
+- **Duración total:** 26 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg1_Camila](./assets/Chapter-7/Validacion_Seg1_Camila.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg1-camila
+
+**Resumen descriptivo de la validación:**
+
+Camila es diseñadora UX/UI que trabaja desde casa y tiene 4 plantas en su espacio de trabajo. Como profesional del diseño, fue particularmente crítica con la interfaz, pero también la más entusiasta. Al evaluar la Landing Page, destacó la paleta de colores y la tipografía: "se siente consistente, natural y moderna; los verdes no son agresivos, transmiten calma". La jerarquía visual le pareció bien resuelta, aunque sugirió aumentar el contraste de los CTAs en la sección hero.
+
+En la Web Application, valoró muy positivamente la consistencia del Design System entre la Landing Page y la app: "se siente como el mismo producto, eso genera confianza". Al probar el Community Feed, se entusiasmó: "esto es genial, puedo ver qué problemas tienen otros con el mismo tipo de planta que yo y aprender de sus soluciones". La funcionalidad de diagnóstico IA le pareció "mágica", pero señaló que la barra de progreso durante la carga podría incluir un mensaje como "analizando imagen con IA..." para manejar la expectativa del usuario.
+
+En la Mobile Application, elogió la adaptación responsiva y la consistencia visual. Señaló que los toggles de preferencias de notificación son claros, pero sugirió agruparlos visualmente por categorías (Riego, Salud, Comunidad) para mejorar la escaneabilidad. Su valoración general fue **8/10**, y comentó: "como diseñadora, le daría un 8 porque siempre hay espacio para pulir; como usuaria, le daría un 9 porque resuelve un problema real".
+
+**Apreciaciones clave:**
+- Landing Page: diseño consistente y profesional, paleta de colores acertada. Sugiere mejorar contraste de CTAs.
+- Web Application: Design System coherente entre productos, Community Feed como diferenciador social, diagnóstico IA "mágico".
+- Mobile Application: adaptación responsiva impecable, notificaciones configurables claras.
+- Crítica constructiva: feedback textual durante carga de IA, agrupación visual de preferencias de notificación.
+- Disposición a pagar: $8.99 USD mensuales, pero esperaría un período de prueba gratuito de 14 días para evaluar el valor real.
+
+---
+
+#### Segmento 2 — Aficionados a la Jardinería
+
+**Entrevista de Validación N° 4:**
+
+- **Nombres y apellidos:** Mariana López Quintana
+- **Edad:** 42 años
+- **Distrito de residencia:** Surco, Lima
+- **Ocupación:** Docente universitaria (Biología)
+- **Inicio de la entrevista:** 0:07
+- **Fin de la entrevista:** 31:40
+- **Duración total:** 31 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg2_Mariana](./assets/Chapter-7/Validacion_Seg2_Mariana.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg2-mariana
+
+**Resumen descriptivo de la validación:**
+
+Mariana es bióloga de formación y mantiene 18 plantas de 12 especies diferentes en el jardín de su casa. Es el perfil de usuaria más exigente en términos de precisión técnica. Al revisar la Landing Page, valoró que el contenido esté segmentado: "me gusta que distingan entre alguien que solo quiere que sus plantas no mueran y alguien que quiere optimizar su crecimiento". Sin embargo, señaló que los términos técnicos como "telemetría" o "Health Score" deberían venir acompañados de tooltips explicativos para el segmento aficionado.
+
+En la Web Application, fue directo al Dashboard de Analytics. Al ver el gráfico de Health Trend con granularidad configurable (hora/día/semana), su reacción fue: "¡esto es lo que necesito!". Exportó un reporte en PDF y valoró que incluya tanto las métricas como las recomendaciones de la IA. El diagnóstico IA multimodal le pareció "fascinante", especialmente cuando el sistema correlacionó la humedad del suelo reportada por el sensor con manchas foliares visibles en la foto: "esto demuestra que la IA no solo mira la imagen, sino que integra datos del sensor. Eso es inteligencia de verdad".
+
+En la comunidad, publicó un post sobre una deficiencia de nitrógeno en sus plantas de tomate y recibió comentarios de otros usuarios en menos de 2 minutos (simulación). Valoró el sistema de reputación como mecanismo para filtrar contenido de calidad. Su valoración general fue **9/10**, la más alta registrada. Conclusión: "esto no es un juguete; es una herramienta científica accesible. Lo recomendaría a mis colegas del departamento de botánica".
+
+**Apreciaciones clave:**
+- Landing Page: segmentación clara. Sugiere tooltips para términos técnicos.
+- Web Application: Analytics con granularidad configurable es "exactamente lo que necesito". Diagnóstico IA multimodal validado por su conocimiento biológico.
+- Community Feed: útil para intercambiar conocimiento específico por especie.
+- Reporte PDF: completo y profesional.
+- Crítica constructiva: integrar una base de conocimiento de referencia por especie de planta (fichas técnicas).
+- Disposición a pagar: $8.99 USD mensuales sin objeción; consideraría un plan familiar para compartir con colegas.
+
+---
+
+**Entrevista de Validación N° 5:**
+
+- **Nombres y apellidos:** Joaquín Herrera Campos
+- **Edad:** 24 años
+- **Distrito de residencia:** Jesús María, Lima
+- **Ocupación:** Estudiante de Ingeniería Ambiental
+- **Inicio de la entrevista:** 0:05
+- **Fin de la entrevista:** 27:30
+- **Duración total:** 27 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg2_Joaquin](./assets/Chapter-7/Validacion_Seg2_Joaquin.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg2-joaquin
+
+**Resumen descriptivo de la validación:**
+
+Joaquín es un aficionado joven con formación en ingeniería ambiental que mantiene 10 plantas en el balcón de su departamento. Es un early adopter de tecnología: ya utiliza sensores de temperatura y humedad ambiental en su hogar. Al llegar a la Landing Page, valoró positivamente que se mencione "IoT" y "sensores": "me habla en mi idioma". La sección de precios le pareció transparente y el costo del Sensor Lite ($49 USD) lo consideró "muy competitivo frente a lo que hay en el mercado".
+
+En la Web Application, exploró exhaustivamente el Dashboard de Analytics. Al ver la funcionalidad de exportación CSV, comentó: "esto me sirve para hacer mis propios análisis en Python; que me den los datos crudos es un plus enorme". Probó el diagnóstico IA con fotos de sus plantas de albahaca y quedó satisfecho con la precisión: detectó correctamente exceso de riego basándose en las hojas amarillentas.
+
+En la comunidad, interactuó con el feed y destacó la funcionalidad de alertas comunitarias de plagas: "si alguien cerca de mi zona reporta una plaga que afecta a plantas como las mías, quiero saberlo antes de que llegue a mi balcón". Consideró que esta funcionalidad por sí sola justifica la suscripción Premium. Su valoración general fue **8.5/10**.
+
+**Apreciaciones clave:**
+- Landing Page: lenguaje técnico adecuado para su perfil, precios competitivos y transparentes.
+- Web Application: exportación CSV valorada para análisis propio, diagnóstico IA preciso.
+- Community Feed: alertas comunitarias geolocalizadas como killer feature del plan Premium.
+- Sensor Lite: precio competitivo, proceso de activación descrito como claro.
+- Crítica constructiva: añadir integración con Google Home/Alexa para consultar estado de plantas por voz.
+- Disposición a pagar: $8.99 USD mensuales + $49 USD por el Sensor Lite.
+
+---
+
+**Entrevista de Validación N° 6:**
+
+- **Nombres y apellidos:** Valeria Ortiz Salas
+- **Edad:** 35 años
+- **Distrito de residencia:** Barranco, Lima
+- **Ocupación:** Arquitecta paisajista
+- **Inicio de la entrevista:** 0:04
+- **Fin de la entrevista:** 29:55
+- **Duración total:** 29 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg2_Valeria](./assets/Chapter-7/Validacion_Seg2_Valeria.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg2-valeria
+
+**Resumen descriptivo de la validación:**
+
+Valeria es arquitecta paisajista que gestiona proyectos residenciales con jardines de 20 a 50 plantas por proyecto. Su interés en Oryxen es dual: uso personal (15 plantas en casa) y potencial uso profesional para monitorear jardines de clientes. Al revisar la Landing Page, comentó: "el diseño es limpio y elegante, pero necesito saber si esto escala a 30 o 40 plantas. ¿Hay un plan enterprise?".
+
+En la Web Application, valoró la capacidad de registrar múltiples plantas con diferentes especies y ver el Dashboard centralizado. La funcionalidad de Analytics le pareció "un game changer para mi trabajo: podría mostrarle a un cliente exactamente cómo está la salud de su jardín en tiempo real". Generó un reporte PDF y comentó que "esto es un entregable profesional que podría facturar como valor agregado".
+
+El Community Feed le pareció interesante pero menos relevante para su uso profesional. En cambio, sugirió una funcionalidad de "jardines compartidos" donde varios usuarios (familia, equipo de jardinería) puedan monitorear las mismas plantas con diferentes niveles de permiso. Su valoración general fue **8.5/10**.
+
+**Apreciaciones clave:**
+- Landing Page: diseño limpio y elegante. Pregunta por escalabilidad a nivel enterprise.
+- Web Application: Dashboard multi-planta centralizado, reportes PDF como entregable profesional facturable.
+- Mobile Application: notificaciones push por jardín.
+- Crítica constructiva: plan enterprise para múltiples ubicaciones, "jardines compartidos" con permisos granulares, API para integración con software de diseño paisajístico.
+- Disposición a pagar: evaluaría un plan "Professional" de $19.99/mes para gestionar múltiples ubicaciones.
+
+---
+
+### 7.3.3. Evaluaciones según heurísticas
+
+En esta sección se presenta la auditoría formal de experiencia de usuario (UX) siguiendo el formato del **Anexo D** del enunciado del curso. La evaluación abarca heurísticas de **Usabilidad** (Nielsen), **Arquitectura de Información** y **Diseño Inclusivo** (Accessibility / a11y), aplicadas sobre los tres productos digitales de Oryxen: Landing Page, Web Application y Mobile Application.
+
+---
+
+**UX Heuristics & Principles Evaluation**  
+**Usability – Inclusive Design – Information Architecture**
+
+**CARRERA:** Ingeniería de Software  
+**CURSO:** Arquitecturas de Software Emergentes  
+**SECCIÓN:** 11770  
+**PROFESORES:** De Los Rios Fernandez, Christian Luis  
+**AUDITOR:** GrassFarming — Oryxen UX Audit Team  
+**CLIENTE(S):** Andrea Navarro, Rodrigo Salazar, Camila Fernández, Mariana López, Joaquín Herrera, Valeria Ortiz
+
+---
+
+**SITE o APP A EVALUAR:**
+
+Oryxen — Plataforma SaaS de monitoreo automatizado de salud vegetal (Landing Page, Web Application Vue 3, Mobile Application Android).
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Navegación y comprensión de la propuesta de valor en la Landing Page.
+2. Registro de un usuario nuevo e inicio de sesión (email + Google OAuth) en la Web Application.
+3. Visualización del Dashboard centralizado con estado de salud de plantas.
+4. Subida de fotografía y obtención de diagnóstico IA multimodal (Gemini Vision).
+5. Creación de un post en el Community Feed y recepción de comentarios.
+6. Configuración de preferencias de notificación (FCM push).
+7. Proceso de upgrade de Freemium a Premium con Stripe Checkout.
+8. Generación y exportación de reporte analítico (PDF/CSV).
+9. Publicación de alerta comunitaria de plaga con geolocalización opt-in.
+10. Gestión de perfil y dispositivos IoT vinculados.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Integración con asistentes de voz (Google Home, Alexa).
+2. Modo offline del Sensor Lite con sincronización retardada.
+3. Plan Enterprise multi-jardín con permisos granulares.
+4. Marketplace de sensores y accesorios de terceros.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| **Nivel** | **Descripción** |
+|-----------|-----------------|
+| **1** | Problema superficial: puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| **3** | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+---
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|----------|---------------------|--------------------------------|
+| 1 | Los CTAs de la sección Hero en la Landing Page tienen bajo contraste en dispositivos móviles con brillo reducido, dificultando la identificación del call-to-action principal. | 2 | Usability: Visibilidad del estado del sistema / Inclusive Design: Proporciona experiencias comparables (contraste de color) |
+| 2 | Los términos técnicos ("Health Score", "telemetría", "Sensor Lite") en la Landing Page no incluyen tooltips ni definiciones inline, lo que puede confundir a usuarios del segmento aficionados sin background técnico. | 2 | Information Architecture: Is it understandable? / Usability: Coincidencia entre el sistema y el mundo real |
+| 3 | Durante el diagnóstico IA, el indicador de carga muestra solo un spinner genérico sin indicar la etapa del proceso (subiendo imagen, analizando, generando recomendación), generando incertidumbre en esperas > 5 segundos. | 3 | Usability: Visibilidad del estado del sistema / Information Architecture: Is it clear? |
+| 4 | Las preferencias de notificación en la vista Settings presentan 6 toggles en una lista plana sin agrupación visual por categoría (Riego, Salud, Comunidad, Cuenta), reduciendo la escaneabilidad para usuarios con fatiga cognitiva. | 2 | Information Architecture: Is it findable? / Usability: Diseño estético y minimalista |
+| 5 | El botón "Export PDF" en Analytics no muestra confirmación de que el reporte se generó exitosamente; el archivo se descarga sin feedback visual, provocando que usuarios hagan clic múltiples veces generando descargas duplicadas. | 3 | Usability: Visibilidad del estado del sistema / Usability: Prevención de errores |
+| 6 | En el Community Feed, los posts con imágenes muy grandes (> 3 MB en disco) no tienen lazy loading ni placeholder, causando saltos de layout (CLS) mientras las imágenes cargan, afectando la estabilidad visual. | 2 | Usability: Diseño estético y minimalista / Inclusive Design: Proporciona experiencias comparables (rendimiento) |
+| 7 | No existe un botón de "Cancelar suscripción" visible en la vista de Settings; el usuario debe navegar a Stripe Customer Portal para gestionar su suscripción, rompiendo la experiencia integrada del producto. | 3 | Usability: Libertad y control del usuario / Information Architecture: Is it usable? |
+| 8 | El formulario de creación de post en el Community Feed no muestra un contador de caracteres en tiempo real, lo que puede llevar a que el usuario escriba contenido que exceda el límite y reciba un error solo al enviar. | 2 | Usability: Prevención de errores / Inclusive Design: Proporciona retroalimentación |
+| 9 | La funcionalidad de alertas comunitarias de plagas no explica claramente que la geolocalización es opt-in; el checkbox "Compartir mi ubicación aproximada" aparece sin contexto sobre cómo se usará esa información, generando desconfianza en usuarios preocupados por privacidad. | 3 | Usability: Coincidencia entre el sistema y el mundo real / Inclusive Design: Privacidad y confianza del usuario |
+| 10 | La Landing Page no tiene un selector de idioma visible (i18n); aunque el contenido está en español, el requisito del curso establece soporte para English (en_US) y Latin American Spanish (es_419). Usuarios que prefieren inglés no pueden cambiar el idioma. | 3 | Inclusive Design: Proporciona experiencias comparables (internacionalización) / Information Architecture: Is it usable? |
+| 11 | Las imágenes de plantas en la Landing Page y la Web Application no incluyen atributos `alt` descriptivos en todos los casos, limitando la experiencia de usuarios que utilizan lectores de pantalla (a11y). | 2 | Inclusive Design: Proporciona experiencias comparables (accesibilidad) / WCAG 1.1.1 Non-text Content |
+| 12 | El Dashboard móvil en pantallas pequeñas (< 360px de ancho) muestra las cards de plantas con texto truncado sin indicador de overflow ("..."), perdiendo información crítica de estado para usuarios con dispositivos de gama baja. | 2 | Inclusive Design: Proporciona experiencias comparables (responsividad) / Information Architecture: Is it findable? |
+
+---
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1: Bajo contraste en CTAs de la Hero — Landing Page (Severidad: 2)**
+
+*Heurística violada: Usability — Visibilidad del estado del sistema / Inclusive Design — Contraste de color*
+
+**Problema:** Los botones de call-to-action en la sección Hero de la Landing Page ("Open the App" y "Learn More") utilizan un tono de verde (#4CAF50) sobre un fondo con imagen de plantas que, en condiciones de brillo reducido o pantallas con modo de ahorro de energía activado, no alcanzan la relación de contraste mínima de 4.5:1 requerida por WCAG 2.2 AA. Esto dificulta que usuarios con discapacidad visual leve o en condiciones de luz solar directa identifiquen rápidamente la acción principal.
+
+**Recomendación:** Aplicar un outline o sombra oscura (box-shadow) a los botones de CTA, o utilizar un tono de verde más oscuro (#2E7D32) que garantice un contraste mínimo de 4.5:1 contra el fondo. Adicionalmente, implementar un media query `prefers-contrast: more` que intensifique el contraste cuando el usuario tenga configurada esta preferencia en su sistema operativo.
+
+---
+
+**PROBLEMA #3: Spinner genérico sin etapas durante diagnóstico IA (Severidad: 3)**
+
+*Heurística violada: Usability — Visibilidad del estado del sistema*
+
+**Problema:** Cuando un usuario envía una fotografía para diagnóstico IA multimodal, el sistema muestra únicamente un spinner circular animado durante todo el proceso (que puede durar entre 5 y 12 segundos dependiendo de la latencia de red y el tiempo de inferencia de Gemini Vision). El usuario no recibe información sobre en qué etapa se encuentra el proceso (subida de imagen completada, análisis IA en curso, generando recomendación), lo que genera incertidumbre y percepción de lentitud. Dos de los seis entrevistados (Andrea y Rodrigo) manifestaron no saber si "el sistema se había colgado o estaba funcionando".
+
+**Recomendación:** Implementar un indicador de progreso por etapas (*stepper indicator*): "1. Subiendo imagen... ✓", "2. Analizando con IA...", "3. Generando recomendaciones...". Si el tiempo de respuesta de Gemini Vision supera los 8 segundos, mostrar un mensaje adicional: "El análisis está tomando más tiempo de lo habitual. Gracias por tu paciencia." Esto aplica el principio de *visibility of system status* y reduce la percepción subjetiva de espera.
+
+---
+
+**PROBLEMA #7: Cancelar suscripción requiere salir de la plataforma (Severidad: 3)**
+
+*Heurística violada: Usability — Libertad y control del usuario*
+
+**Problema:** Un usuario que desea cancelar su suscripción Premium no encuentra la opción en la vista Settings de Oryxen. Actualmente, debe hacer clic en un enlace externo que lo redirige al Stripe Customer Portal, donde debe autenticarse nuevamente y navegar una interfaz que no comparte el Design System de Oryxen. Esto rompe el principio de "libertad y control del usuario" porque la "salida de emergencia" no está claramente marcada ni integrada en la experiencia del producto. Camila (validación Segmento 1) comentó: "si no encuentro cómo cancelar, asumo que me están reteniendo a la fuerza".
+
+**Recomendación:** Implementar un endpoint `POST /api/v1/payments/cancel-subscription` que permita al usuario cancelar su suscripción directamente desde la vista Settings de Oryxen, sin necesidad de salir de la plataforma. Incluir un paso de confirmación con una encuesta opcional de motivo de cancelación y la opción de pausar la suscripción en lugar de cancelarla definitivamente. La URL del Stripe Customer Portal debe mantenerse como opción avanzada para gestionar métodos de pago y facturación detallada, pero la acción de cancelación debe ser un *first-class citizen* en la UI de Oryxen.
+
+---
+
+**PROBLEMA #9: Geolocalización en alertas comunitarias sin contexto de privacidad (Severidad: 3)**
+
+*Heurística violada: Usability — Coincidencia entre el sistema y el mundo real / Inclusive Design — Privacidad*
+
+**Problema:** Al publicar una alerta comunitaria de plaga, el formulario incluye un checkbox "Compartir mi ubicación aproximada" sin explicar que la ubicación se utiliza exclusivamente para notificar a usuarios cercanos (radio de 5 km) sobre la misma alerta, y que no se almacena con precisión de coordenadas exactas ni se comparte públicamente en el feed. Esta falta de transparencia generó desconfianza inmediata en 3 de 6 entrevistados. Valeria comentó: "no sé si esto va a mostrar mi dirección en el mapa para que todos la vean".
+
+**Recomendación:** Añadir un texto explicativo debajo del checkbox: "Tu ubicación aproximada solo se usa para alertar a otros jardineros en tu zona (radio de 5 km). Nunca mostramos tu dirección exacta ni compartimos tus coordenadas públicamente." Incluir un enlace a la política de privacidad con detalles sobre el tratamiento de datos de ubicación. Implementar este consentimiento como un opt-in explícito, no pre-marcado, en cumplimiento con principios de Privacy by Design y regulaciones como la LGPD.
+
+---
+
+**PROBLEMA #10: Falta de selector de idioma (i18n) — Landing Page (Severidad: 3)**
+
+*Heurística violada: Inclusive Design — Internacionalización (i18n) / Information Architecture — Is it usable?*
+
+**Problema:** El enunciado del curso exige soporte para English (en_US) y Latin American Spanish (es_419) en todos los productos digitales. La Landing Page actualmente solo está disponible en español y carece de un selector de idioma visible (language switcher) en el header o footer. Esto impide que usuarios angloparlantes accedan al contenido, limitando el alcance del producto a un solo mercado lingüístico y violando el requisito de internacionalización del curso.
+
+**Recomendación:** Implementar un archivo de traducciones i18n (JSON) con claves para cada texto estático de la Landing Page en ambos idiomas. Añadir un selector de idioma (icono de globo terráqueo + "ES | EN") en el header, con persistencia de preferencia en `localStorage`. Por defecto, detectar el idioma del navegador (`navigator.language`) y servir el contenido en ese idioma. Para la Web Application, utilizar `vue-i18n` con lazy loading de archivos de traducción por módulo.
+
+---
+
+### 7.4. Video About-the-Product
+
+En esta sección se documenta el Video About-the-Product de Oryxen, en donde se resume el modelo de negocio, las características principales de los productos digitales y los beneficios de la solución para cada segmento objetivo.
+
+**Objetivo del video:** Comunicar la propuesta de valor de Oryxen de forma atractiva y accesible para ambos segmentos objetivo, motivando al visitante a registrarse en la plataforma.
+
+**Screenshot del Video:**
+
+![]()
+
+**Url del Video:**
+
+---
+
+## Video About-the-Team
+
+En esta sección se documenta el Video About-the-Team de Oryxen, donde se describe las actividades, flujo de trabajo y opinión sobre el equipo por parte de los miembros del grupo.
+
+**Screenshot del Video:**
+
+![]()
+
+**Url del Video:**
+
+---
+
 # Conclusiones
 
 ## Conclusiones y recomendaciones
 
-- **TB1:** Para este primer avance del TB1, todos los integrantes del equipo desarrollaron con éxito la entrega inicial del trabajo final, logrando plantear una solución tecnológica que optimice el proceso del cuidado de plantas mediante un sistema que usa sensores para el monitoreo de la salud de una planta, así como la implementación de funciones con IA para recomendar acciones al usuario según el estado de la planta. Además, se implementaron detalladamente los requisitos funcionales y técnicos a través de un product backlog y se sentaron las bases de una arquitectura estratégica mediante el método Attribute-Driven Design (ADD), garantizando que el sistema sea capaz de soportar atributos de calidad como la alta disponibilidad, el rendimiento en tiempo real y la seguridad de los datos desde su fase conceptual <br> **Recomendaciones:** Como recomendaciones para la continuidad del proyecto, se sugiere mantener una coherencia entre las historias de usuario definidas y los diagramas de arquitectura que se desarrollarán en las siguientes etapas. De esta manera, garantizamos que todas nuestras decisiones estén justificados por los escenarios de calidad. Además, profundizar en la estructuración de los modelos de datos para garantizar que la integración entre los servicios de Inteligencia Artificial y la telemetría de los sensores sea fluida, segura y altamente escalable.
+- TB1: Para este primer avance del TB1, todos los integrantes del equipo desarrollaron con éxito la entrega inicial del trabajo final, logrando plantear una solución tecnológica que optimice el proceso del cuidado de plantas mediante un sistema que usa sensores para el monitoreo de la salud de una planta, así como la implementación de funciones con IA para recomendar acciones al usuario según el estado de la planta. Además, se implementaron detalladamente los requisitos funcionales y técnicos a través de un product backlog y se sentaron las bases de una arquitectura estratégica mediante el método Attribute-Driven Design (ADD), garantizando que el sistema sea capaz de soportar atributos de calidad como la alta disponibilidad, el rendimiento en tiempo real y la seguridad de los datos desde su fase conceptual
+
+**Recomendaciones:** Como recomendaciones para la continuidad del proyecto, se sugiere mantener una coherencia entre las historias de usuario definidas y los diagramas de arquitectura que se desarrollarán en las siguientes etapas. De esta manera, garantizamos que todas nuestras decisiones estén justificados por los escenarios de calidad. Además, profundizar en la estructuración de los modelos de datos para garantizar que la integración entre los servicios de Inteligencia Artificial y la telemetría de los sensores sea fluida, segura y altamente escalable.
+
+---
 
 # Bibliografía
 
@@ -5986,3 +7349,26 @@ Preston-Werner, T. (s. f.). Semantic Versioning 2.0.0. Semantic Versioning. http
 Sairyss. (2022, 29 de diciembre). Domain-Driven Hexagon: Guide on Domain-Driven Design, Hexagonal architecture, best practices (TypeScript and NestJS examples). DEV Community. https://dev.to/sairyss/domain-driven-hexagon-18g5
 
 # Anexos
+
+## Anexo A — Enlaces del Proyecto
+
+| Recurso | URL / Referencia | Descripción |
+|---|---|---|
+| **Organización GitHub** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen](https://github.com/1ASI0728-2610-11770-G4-Oryxen) | Organización pública del equipo GrassFarming para el curso 1ASI0728 |
+| **Repositorio del Informe** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report) | Informe del proyecto en formato Markdown |
+| **Sprint Board (Trello)** | [https://trello.com/b/69eb915dbfebde12de7929b0/product-backlog-oryxen](https://trello.com/b/69eb915dbfebde12de7929b0/product-backlog-oryxen) | Tablero Kanban con Work-Items por sprint |
+| **Repositorio de Landing Page** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page) | HTML5 + CSS3 + JS. Firebase Hosting |
+| **Repositorio de Web Application** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application) | Vue 3 + TypeScript + Vite 8. Vercel |
+| **Repositorio de Mobile Application** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application) | Kotlin + Jetpack Compose. Firebase App Distribution |
+| **Repositorio de Backend** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend) | .NET 9 + PostgreSQL 15. GHCR |
+
+---
+
+## Anexo B — Videos de Exposición
+
+| Entrega | Enlace Microsoft Stream (privado) | Duración | Contenido |
+|---|---|---|---|
+| **TB1** |  | | |
+| **TP1** |  | | |
+| **TB2** | | | |
+| **TF1** | | | |
