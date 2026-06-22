@@ -7726,6 +7726,8 @@ El ciclo de vida del proyecto Oryxen ha validado de forma contundente las hipót
 
 4. **Profundización del Community Feedback Loop:** Se recomienda implementar un programa de *early adopters* con incentivos (3 meses de Premium gratuito a cambio de publicar 1 post semanal) para sembrar contenido de calidad antes del lanzamiento público.
 
+5. **Cobertura completa de sanitización de metadatos de imágenes (deuda técnica):** El sanitizador actual (`ImageMetadataSanitizer`, capa de Infraestructura) remueve de forma destructiva los metadatos EXIF/GPS en imágenes **JPEG** (segmento APP1 `Exif\0\0`) y **PNG** (chunks `eXIf/tEXt/zTXt/iTXt/tIME`), cubriendo los formatos predominantes de las cargas comunitarias. No obstante, los formatos **WebP y HEIC** —cada vez más frecuentes en fotos tomadas con smartphones iOS y Android modernos— aún se almacenan sin re-procesar, por lo que podrían conservar coordenadas de geolocalización. Se recomienda incorporar la biblioteca **`SixLabors.ImageSharp`** en la capa de Infraestructura para automatizar el *re-encode* completo de la imagen, garantizando la eliminación de toda metadata sensible con independencia del formato de origen.
+
 ---
 
 ### Roadmap de Expansión Estratégica
