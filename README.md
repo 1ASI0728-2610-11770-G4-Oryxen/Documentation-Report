@@ -7760,14 +7760,15 @@ El backend de Oryxen (ASP.NET Core 9) documenta sus endpoints REST mediante **Op
 
 A continuación, la relación de endpoints documentados que forman parte del alcance del Sprint 1:
 
-| Verbo | Endpoint | Auth | Parámetros / Body | Descripción |
-|-------|----------|------|-------------------|-------------|
-| `POST` | `/api/v1/auth/register` | Anónimo | `{ email, password, fullName }` | Registra una cuenta (rol `FARMER` + suscripción Freemium) y devuelve el par de tokens. |
-| `POST` | `/api/v1/auth/login` | Anónimo | `{ email, password }` | Autentica credenciales y devuelve `accessToken` + `refreshToken`. |
-| `POST` | `/api/v1/auth/refresh` | Anónimo | `{ refreshToken }` | Rota el refresh token y emite un nuevo par de tokens. |
-| `GET` | `/api/v1/auth/me` | Bearer | — | Devuelve los claims de identidad del usuario autenticado. |
-| `POST` | `/api/v1/telemetry` | Anónimo (dispositivo) | `{ deviceId, plantId, humidity, temperature, lightLevel, soilMoisture }` | Ingesta una lectura del Sensor Lite y devuelve el `healthScore` calculado. |
-| `GET` | `/api/v1/telemetry/{plantId}` | `FARMER` / `ADMIN` | `plantId`, query `from?`, `to?` | Devuelve el historial reciente de telemetría de una planta. |
+| Endpoint | HTTP Verb | Descripción | Parámetros / Body | Ejemplo Response |
+| -------- | --------- | ----------- | ----------------- | ---------------- |
+| `/api/v1/auth/register` | `POST` | Registra una cuenta (rol `FARMER` + suscripción Freemium) y devuelve el par de tokens. | `{ email, password, fullName }` | `{ "message":"user created" }` |
+| `/api/v1/auth/login` | `POST` | Autentica credenciales y devuelve `accessToken` + `refreshToken`. | `{ email, password }` | `{ "token":"jwt_token" }` |
+| `/api/v1/auth/refresh` | `POST` | Rota el refresh token y emite un nuevo par de tokens. | `{ refreshToken }` | `{ "token":"jwt_token" }` |
+| `/api/v1/auth/me`| `GET` | Devuelve los claims de identidad del usuario autenticado. | — | `{ "id": 101, "email": "user@oryxen.com", "fullName": "John Doe", "role": "FARMER" }` |
+| `/api/v1/telemetry` | `POST` | Ingesta una lectura del Sensor Lite y devuelve el `healthScore` calculado. | `{ "telemetryId": "tel_8932", "status": "success", "healthScore": 87, "timestamp": "2026-06-22T02:05:00Z" }` | |
+| `/api/v1/telemetry/{plantId}` | `GET` | Devuelve el historial reciente de telemetría de una planta. | `plantId`, query `from?`, `to?` | `{ "plantId": "plant_45", "deviceMapped": "dev_lite_01", "records": [ { "timestamp": "2026-06-22T02:00:00Z", "metrics": { "humidity": 62.5, "temperature": 24.2, "lightLevel": 350, "soilMoisture": 45.1 }, "healthScore": 88 }, { "timestamp": "2026-06-22T01:00:00Z", "metrics": { "humidity": 61.2, "temperature": 24.8, "lightLevel": 400, "soilMoisture": 46.3 }, "healthScore": 86 } ] }` |
+
 
 **Ejemplo — `POST /api/v1/auth/login`**
 
@@ -7803,6 +7804,26 @@ Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` de
   "soilMoisture": 62, "healthScore": 100, "recordedAt": "2026-06-19T03:54:00Z"
 }
 ```
+
+**Evidencia:**
+
+![ServicesDocumentationEndpoints_Sprint1](./assets/Chapter-7/ServicesDocumentationEndpoints_Sprint1.jpg)
+
+![ServicesDocumentationResponses_Sprint1](./assets/Chapter-7/ServicesDocumentationResponses_Sprint1.jpg)
+
+**Repositorio del Web Services:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend
+
+**IDs de commits del Backend Services:**
+
+- 892f1d7f99060a70ca07707626ea6ad7386a5dbf
+- eea1fcbedb66599912ed037424c16e11a04f662f
+- bdecef4b4f6ce6b84b9f987b1f6c3471dce59400
+- 7f9db13da84914396230309afe0a561ae9b956fa
+- 4079095086d5a86e035a409a3a861a710483996c
+- 0bfff21769a5845fc4962336219ee54ee2875199
+- 5b6df6bc4c6eecc9f23a769d033c1d3754670e73
+- 7f6571e9cba9480130870dfb5a30e9a10cfa1c7b
+- 8ae240876adfc120930d0ab854a8658bff3c1d7d
 
 #### 7.2.1.7.	Software Deployment Evidence for Sprint Review
 
