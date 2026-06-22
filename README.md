@@ -7269,7 +7269,7 @@ Aquí se muestran los wireframes desarrollados para la aplicación web y móvil 
 
 ![Wireframes Mobile App](./assets/Chapter-6/wireframe-mobile.png)
 
-[Enlace para acceder al prototipo de wireframes de Oryxen en Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/SecurOn?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
+[Enlace para acceder al prototipo de wireframes de Oryxen en Figma.](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/Oryxen?node-id=87-44&t=ytQkGBOLqrfy4mp6-1)
 
 ### 6.4.2. Applications Wireflow Diagrams
 
