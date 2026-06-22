@@ -6647,8 +6647,8 @@ Para el Sprint 2, el equipo enfocó sus esfuerzos en las funcionalidades diferen
 | US-012 | Analytics Dashboard Avanzado | T029 | Report Export (PDF/CSV) | Implementar el endpoint `POST /api/v1/reports/export` usando QuestPDF (PDF) y CsvHelper (CSV) para generar reportes exportables con métricas agregadas, diagnósticos IA y recomendaciones. | 5 | Pachas Chavez, Alejandro Alberto | Done |
 | US-013 | Community Feed | T030 | Post CRUD Endpoints | Implementar los endpoints REST para el feed comunitario: `POST /api/v1/community/posts` (crear post con imagen opcional), `GET /api/v1/community/posts` (listar con paginación y filtro por tipo de planta), `DELETE /api/v1/community/posts/{id}` (soft delete con verificación de propiedad). | 5 | Pachas Chavez, Alejandro Alberto | Done |
 | US-013 | Community Feed | T031 | Community Feed UI | Implementar la vista `CommunityView.vue` con scroll infinito de posts, componente de creación de post con upload de imagen (máx 5MB), sistema de likes y comentarios anidados. | 6 | Nanfuñay Liza, Pedro Jesús | Done |
-| US-013 | Community Feed | T032 | Content Moderation Service | Implementar `ContentModerationService` con lista de palabras prohibidas, filtro automático de enlaces externos para usuarios con reputación < 10, y endpoint de reporte de contenido con umbral de 3 reportes para suspensión automática. | 4 | Zevallos Linares, Alessandro Netto | Done |
-| US-014 | Reputación y Logros | T033 | Reputation Scoring Engine | Implementar `ReputationService` que calcula la puntuación de reputación del usuario basada en: posts creados (+2 pts), comentarios recibidos (+1 pt), likes recibidos (+0.5 pts), días consecutivos activos (+3 pts por streak de 7 días). | 4 | Pachas Chavez, Alejandro Alberto | Done |
+| US-013 | Community Feed | T032 | Content Moderation Service | Implementar `ContentModerationService` con lista de palabras prohibidas, filtro automático de enlaces externos para usuarios con reputación < 10, y endpoint de reporte de contenido con umbral de 3 reportes para suspensión automática. | 4 | Zevallos Linares, Alessandro Netto | In-Process |
+| US-014 | Reputación y Logros | T033 | Reputation Scoring Engine | Implementar `ReputationService` que calcula la puntuación de reputación del usuario basada en: posts creados (+2 pts), comentarios recibidos (+1 pt), likes recibidos (+0.5 pts), días consecutivos activos (+3 pts por streak de 7 días). | 4 | Pachas Chavez, Alejandro Alberto | In-Process |
 | US-016 | Alertas Comunitarias de Plagas | T034 | Geospatial Alert Publication | Implementar `POST /api/v1/community/alerts` que permite a usuarios Premium publicar alertas de plagas/enfermedades con ubicación geográfica opt-in. Las alertas se notifican vía FCM a usuarios en un radio de 5 km con el mismo tipo de planta. | 4 | Estrada Cajamune, Abraham Andrés | Done |
 | US-017 | Diagnóstico IA Multimodal | T035 | Gemini Vision Integration | Implementar `GeminiVisionService` (cliente HTTP tipado) que envía la fotografía de la planta + telemetría IoT a Gemini 2.0 Flash y parsea el JSON de diagnóstico (detectedPest, confidenceScore, recommendation) contra la respuesta estructurada del modelo. | 5 | Estrada Cajamune, Abraham Andrés | Done |
 | US-017 | Diagnóstico IA Multimodal | T036 | Diagnosis UI with Image Upload | Implementar la vista `DiagnosisView.vue` con componente de captura/upload de imagen (cámara o galería), preview, estado de carga del análisis y visualización del resultado (pest detectado, confidence score como barra de progreso, recomendación). | 4 | Nanfuñay Liza, Pedro Jesús | Done |
@@ -6831,38 +6831,52 @@ Feature: Diagnóstico de Salud Vegetal por IA Multimodal (Gemini Vision)
     And el campo "recommendation" contiene cuidados preventivos basados en telemetría
 ```
 
-##### E. Resultados de Ejecución — Sprint 2
+##### E. Resultados de Ejecución — Sprint 2 + Suite Consolidada
 
 ```bash
-$ dotnet test Oryxen.API.slnx --verbosity normal --filter "FullyQualifiedName~Sprint2"
+$ dotnet test Oryxen.API.slnx --verbosity normal
 
-Pruebas totales: 55 (Sprint 1: 37 + Sprint 2: 18 nuevas)
-     Correcto: 55
+Pruebas totales: 37
+     Correcto: 37
      Fallidos: 0
- Tiempo total: 5.12s
+ Tiempo total: 3.07s
 
 Compilación correcta.
     0 Advertencia(s)
     0 Errores
 ```
 
-| Proyecto de Tests | Sprint 1 | Sprint 2 (Nuevas) | Total | Aprobados | Fallidos |
-|-------------------|----------|-------------------|-------|-----------|----------|
-| Oryxen.Domain.Tests | 26 | 10 | 36 | 36 | 0 |
-| Oryxen.Application.Tests | 11 | 8 | 19 | 19 | 0 |
-| **Total** | **37** | **18** | **55** | **55** | **0** |
+| Proyecto de Tests | Total | Aprobados | Fallidos | Duración |
+|-------------------|-------|-----------|----------|----------|
+| Oryxen.Domain.Tests | 26 | 26 | 0 | 3.07s |
+| Oryxen.Application.Tests | 11 | 11 | 0 | 2.88s |
+| **Total** | **37** | **37** | **0** | **~3s** |
+
+Adicionalmente, se han elaborado **8 archivos de especificación BDD (Gherkin .feature)** que documentan los flujos de comportamiento esperado para los 8 Bounded Contexts del sistema. Estos archivos constituyen la especificación ejecutable del sistema y guían las pruebas de aceptación automatizadas en el pipeline de CI/CD:
+
+| # | Archivo .feature | Bounded Context | Escenarios | Sprint |
+|---|-----------------|-----------------|------------|--------|
+| 1 | `01-autenticacion-rbac.feature` | Auth & Identity | 3 | Sprint 1 |
+| 2 | `02-ingesta-telemetria-iot.feature` | Device Management IoT | 4 | Sprint 1 |
+| 3 | `03-bloqueo-401-unauthorized.feature` | Auth & Identity | 2 | Sprint 1 |
+| 4 | `04-diagnostico-ia.feature` | AI | 2 | Sprint 2 |
+| 5 | `05-notificaciones-alertas.feature` | Notification | 6 | Sprint 2 |
+| 6 | `06-analisis-reportes.feature` | Analysis & Reporting | 12 | Sprint 2 |
+| 7 | `07-comunidad-soporte.feature` | Community | 10 | Sprint 2 |
+| 8 | `08-seguridad-persistencia-movil.feature` | Mobile Security | 4 | Sprint 2 |
+| **Total** | | | **43 escenarios** | |
 
 ##### F. Mapeo User Stories Sprint 2 → Testing Suite
 
 | User Story | Tipo de Test | Estado |
 |------------|-------------|--------|
-| US-008 Suscripción Stripe | Unit (PaymentService) + BDD Feature 04 | ✅ Implementado + Especificado |
-| US-011 Notificaciones FCM | Unit (FcmNotificationSender) + Integration | ✅ Implementado |
-| US-012 Analytics Dashboard | Unit (HealthTrendAggregation) + Integration | ✅ Implementado |
-| US-013 Community Feed | Unit (CommunityPost, Moderation) + BDD Feature 05 | ✅ Implementado + Especificado |
-| US-014 Reputación | Unit (ReputationService) | ✅ Implementado |
-| US-016 Alertas Comunitarias | Unit (GeospatialAlertService) + Integration | ✅ Implementado |
-| US-017 Diagnóstico IA | BDD Feature 06 + Integration (GeminiVisionService) | ✅ Especificado + Implementado |
+| US-008 Suscripción Stripe | Unit (PaymentService) + BDD Feature 04 | ✅ BDD Especificado |
+| US-011 Notificaciones FCM | Unit (FcmNotificationSender) + BDD Feature 05 | ✅ BDD Especificado |
+| US-012 Analytics Dashboard | Unit (HealthTrendAggregation) + BDD Feature 06 | ✅ BDD Especificado |
+| US-013 Community Feed | Unit (CommunityPost CRUD) + BDD Feature 07 | ✅ BDD Especificado + CRUD implementado |
+| US-014 Reputación | BDD Feature 07 (especificación de scoring) | 🔶 Especificado (BDD); motor no implementado |
+| US-016 Alertas Comunitarias | BDD Feature 07 (geolocalización en escenarios) | 🔶 Especificado (BDD); geolocalización no implementada |
+| US-017 Diagnóstico IA | BDD Feature 04 + Integration (GeminiVisionService) | ✅ Especificado + Implementado |
 
 #### 7.2.2.5. Execution Evidence for Sprint Review
 
@@ -6953,61 +6967,33 @@ Durante el Sprint 2, el equipo desplegó contenedores cloud-ready y configuró l
 - Tópicos FCM configurados: `critical_alerts`, `watering_reminders`, `community_alerts`, `subscription_updates`.
 - La Web Application registra el token FCM mediante `getToken(messaging, { vapidKey })` al iniciar sesión.
 
-**c. PostgreSQL + TimescaleDB — Hipertablas:**
+**c. PostgreSQL + Agregación de Telemetría:**
 
-- Extensión TimescaleDB habilitada: `CREATE EXTENSION IF NOT EXISTS timescaledb;`
-- Hipertabla `telemetry_records` creada con particionamiento automático por 7 días:
-  ```sql
-  SELECT create_hypertable('telemetry_records', 'recorded_at', chunk_time_interval => INTERVAL '7 days');
-  ```
-- Índice BRIN comprimido para consultas de rango temporal eficientes.
+- Motor de base de datos: PostgreSQL 15 vía `Npgsql.EntityFrameworkCore.PostgreSQL`
+- Tabla `telemetry_data` con índice B-tree compuesto `(PlantId, RecordedAt)` para consultas de rango temporal.
+- La agregación de métricas (diaria, semanal, mensual) se realiza mediante LINQ `GroupBy` en C# en la capa de aplicación, delegando la consulta base al repositorio en Infraestructura.
+- EF Core correctamente segregado: la capa de Aplicación no tiene dependencia de `Microsoft.EntityFrameworkCore`. El `OryxenDbContext` y todos los repositorios residen exclusivamente en Infraestructura.
 
-**d. GitHub Container Registry (GHCR) — Imagen Docker del Backend:**
+**d. Exportación de Reportes (CSV/JSON):**
 
-Se publicó la imagen Docker del backend en GitHub Container Registry como parte del pipeline de CI/CD:
+La funcionalidad de exportación de reportes implementada en `AnalysisService` genera los siguientes formatos:
+- **CSV:** Archivo estructurado con columnas `RecordedAt, DeviceId, HealthScore, SoilMoisture, Temperature, Humidity, LightLevel` generado como string y almacenado en la columna `analysis_reports.file_content`.
+- **JSON:** Array JSON con objetos de lecturas de telemetría, retornado inline en la respuesta de la API.
 
-```yaml
-# .github/workflows/deploy-backend.yml
-name: Build and Push Backend to GHCR
-on:
-  push:
-    branches: [develop]
-jobs:
-  build-and-push:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Login to GHCR
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build and push
-        uses: docker/build-push-action@v5
-        with:
-          context: ./Oryxen-Backend
-          push: true
-          tags: ghcr.io/1asi0728-2610-11770-g4-oryxen/oryxen-backend:latest
-```
+Ambos formatos se generan mediante métodos privados de `AnalysisService` y se persisten en la base de datos para su consulta posterior vía `GET /api/v1/analytics/reports/{reportId}`.
 
-**e. Vercel — Web Application (Preview Deployment):**
+**e. Pipeline de CI/CD — GitHub Actions:**
 
-La Web Application se desplegó en Vercel como vista previa del Sprint 2:
-
-- Conexión del repositorio `Oryxen-Web-Application` a Vercel.
-- Variables de entorno configuradas: `VITE_API_BASE_URL`, `VITE_FIREBASE_API_KEY`, `VITE_FIREBASE_VAPID_KEY`.
-- Preview URL: `https://oryxen-web.vercel.app`
+El backend cuenta con configuración de CI/CD mediante GitHub Actions para build y test automatizados en cada push a la rama `develop`. El pipeline ejecuta `dotnet build` y `dotnet test` sobre la solución `Oryxen.API.slnx`, garantizando que las 37 pruebas unitarias pasen antes de aceptar un merge. La imagen Docker del backend está preparada mediante `Dockerfile` multietapa para su publicación en GitHub Container Registry en el despliegue a producción.
 
 | Servicio / Plataforma | Propósito | URL / Referencia | Estado Sprint 2 |
 |-----------------------|-----------|-----------------|-----------------|
 | Stripe (Test Mode) | Procesamiento de pagos recurrentes | `https://dashboard.stripe.com/test` | Configurado |
-| Firebase Cloud Messaging | Notificaciones push | Firebase Console → Oryxen Project | Configurado |
-| TimescaleDB (Docker) | Telemetría de series de tiempo | `localhost:5432` | Operativo |
-| GitHub Container Registry | Imagen Docker del backend | `ghcr.io/1asi0728-2610-11770-g4-oryxen/oryxen-backend:latest` | Publicado |
-| Vercel | Web Application Preview | `https://oryxen-web.vercel.app` | Desplegado |
+| Firebase Cloud Messaging | Infraestructura de notificaciones push | Firebase Console → Oryxen Project | Configurado |
+| PostgreSQL 15 (Docker) | Base de datos relacional + telemetría | `localhost:5432` | Operativo |
+| Docker Compose | Orquestación de servicios de infraestructura | `docker-compose.yml` | Operativo |
 | Firebase Hosting | Landing Page (estático) | `https://oryxen-landing.web.app` | Desplegado |
-| ngrok | Túnel webhook Stripe (dev) | `https://oryxen-stripe.ngrok-free.app` | Activo (dev) |
+| ngrok | Túnel webhook Stripe (desarrollo) | `https://oryxen-stripe.ngrok-free.app` | Activo (dev) |
 
 #### 7.2.2.8. Team Collaboration Insights during Sprint
 
@@ -7031,6 +7017,72 @@ En esta sección se evidencian los analíticos de colaboración del equipo duran
 
 ![NetworkGraphSprint2](./assets/Chapter-7/NetworkGraphSprint2.jpg)
 ![ContributionActivitySprint2](./assets/Chapter-7/ContributionActivitySprint2.jpg)
+
+---
+
+### 7.2.3. Internacionalización (i18n) y Accesibilidad (a11y) — Web Application
+
+La Web Application de Oryxen implementa internacionalización completa y un conjunto extensivo de atributos de accesibilidad, en cumplimiento con los requisitos de Diseño Inclusivo del curso.
+
+#### 7.2.3.1. Internacionalización (i18n) — vue-i18n
+
+**Framework:** `vue-i18n` v11.4.6 en modo Composition API (`legacy: false`)
+
+**Configuración:** `src/i18n/index.ts` — Instancia de i18n con lazy-loading de mensajes por locale.
+
+**Idiomas soportados:**
+
+| Código | Idioma | Atributo `<html lang>` |
+|--------|--------|------------------------|
+| `en` | English (default) | `en-US` |
+| `es` | Latin American Spanish | `es-419` |
+
+**Archivos de traducción:**
+- `src/locales/en.json` — 281 líneas de claves i18n en inglés
+- `src/locales/es.json` — 281 líneas de claves i18n en español
+
+**Mecanismo de cambio de idioma:**
+- Botón de toggle en `Header.vue` con `setLocale()` del composable i18n
+- Persistencia de preferencia en `localStorage` bajo la clave `oryxen.lang`
+- Actualización dinámica del atributo `<html lang>` mediante `htmlLangFor()`
+
+**Componentes con i18n activo (16 componentes):**
+`Header`, `Sidebar`, `Dashboard`, `LoginForm`, `RegisterForm`, `LoginView`, `RegisterView`, `Terms`, `Plants`, `PlantsForm`, `PlantDetail`, `DiagnosisView`, `Analytics`, `PricingView`, `CheckoutView`, `NotificationsView`, `CommunityView`
+
+#### 7.2.3.2. Accesibilidad (a11y) — ARIA Attributes
+
+La Web Application implementa **más de 91 atributos ARIA** distribuidos en 17 componentes Vue, cubriendo las categorías de landmarks semánticos, labels accesibles, estados dinámicos, validación de formularios y navegación por teclado:
+
+| Categoría ARIA | Cantidad | Componentes principales |
+|----------------|----------|------------------------|
+| `aria-label` | 34 | Header, Sidebar, Analytics (gráficos SVG), Plants, DiagnosisView, CommunityView, NotificationsView, CheckoutView, PricingView |
+| `aria-labelledby` | 5 | Terms, DiagnosisView, NotificationsView, CheckoutView, PricingView |
+| `aria-hidden` (decorativos) | 20 | Íconos emoji en Header, Sidebar, Plants, DiagnosisView, Terms, PricingView |
+| `aria-live / role="status"` | 11 | Estados de carga en Dashboard, Analytics, Plants, PlantDetail, DiagnosisView, NotificationsView, CheckoutView, PricingView |
+| `role="alert"` | 7 | Mensajes de error en RegisterForm, LoginForm, Dashboard, PlantsForm, PlantDetail, Analytics, CommunityView |
+| `aria-required / aria-invalid` | 10 | Validación de formularios en LoginForm, RegisterForm, PlantsForm, DiagnosisView, CommunityView |
+| `aria-expanded / aria-haspopup / aria-pressed` | 4 | Botón "New Post", toggle comentarios, botón like en CommunityView |
+| `aria-current / aria-selected` | 2 | Navegación activa (Sidebar), pestañas de tiempo (Analytics) |
+
+**Estructura semántica de landmarks:**
+
+```
+App.vue layout:
+  ├── <aside>              → role="complementary" (Sidebar)
+  │   └── <nav>            → role="navigation" con aria-label="Oryxen"
+  ├── <header>             → role="banner" (Header: menú, notificaciones, idioma, tema)
+  └── <main>               → role="main" (router-view con transiciones)
+```
+
+**Elementos HTML5 semánticos:** `<article>`, `<footer>`, `<time>` utilizados en componentes informativos.
+
+**Navegación por teclado:** Cards de plantas con `tabindex="0"`, `role="button"` y handler `@keydown.enter`.
+
+**Oportunidad de mejora identificada:** Los mensajes de error de validación no están vinculados mediante `aria-describedby` a sus campos correspondientes (WCAG 2.1 SC 3.3.1). Planificado para siguiente release.
+
+---
+
+### 7.3. Validation Interviews
 
 ### 7.3.1. Diseño de Entrevistas
 
