@@ -7729,28 +7729,211 @@ En esta sección se registra la evidencia de implementación del Sprint 1. Los a
 
 #### 7.2.1.4. Testing Suite Evidence for Sprint Review
 
-En esta sección se presentan las evidencias de la Testing Suite desarrollada durante el Sprint 1.
-Debido a que este Sprint se centró en la construcción de un MVP funcional con mockups y estructura inicial, se incluyeron principalmente pruebas iniciales de documentación y configuración del entorno de testing, así como planificación y estructura base para futuras pruebas automatizadas.
-Aún no se implementaron Unit Tests ni Integration Tests completos, ya que se requería primero consolidar la arquitectura y los módulos funcionales del Frontend y Backend. Sin embargo, se avanzó con la preparación del repositorio y la documentación técnica para los próximos sprints.
+Durante el Sprint 2, el equipo de Oryxen implementó una **Testing Suite automatizada** completa para el backend ASP.NET Core 9, cubriendo tanto pruebas unitarias como especificaciones de comportamiento BDD. La suite se organiza bajo el directorio `tests/` de la solución `Oryxen.API.slnx` y está integrada en el ciclo de compilación mediante `dotnet test`.
 
-|User Story|Avance durante el Sprint|	Testing asociado|
-|-|-|-|
-|US-001 - Acceso a la Landing Page| Funcional |Verificación manual de acceso y carga inicial de la página|
-|US-002 - Secciones informativas diferenciadas|Funcional |Revisión manual de estructura visual y navegación entre secciones|
-|US-003	- Call to Action contextual|Funcional|Validación manual del funcionamiento de CTAs y navegación|
-|US-004	Testimonios segmentados|En proceso|Planificado: Validación de maquetación y contenido dinámico|
-|US-005	Registro de usuario|Funcional|Planificado: Validación de campos obligatorios y flujo de registro|
-|US-006	Inicio de sesión|Funcional|Planificado: Validación de credenciales y redirección post-login (Acceptance Test)|
-|US-010	Cerrar sesión|Funcional|Planificado: Validación de cierre de sesión y limpieza de sesión|
-|US-011	Registro simplificado de planta|En proceso|Planificado: Verificación de estructura de formulario y persistencia simulada|
-|US-012	Edición rápida de información de planta|En proceso|Planificado: Validación de edición en modo mock y actualización visual|
-|US-013	Eliminación confirmada de planta|En proceso|Planificado: Test de confirmación modal y actualización en vista|
-|US-021	Análisis histórico con gráficos avanzados|En proceso (funcional con mockups)|Planificado: Validación de carga de datos simulados y render básico|
-|US-022	Reportes semanales detallados|En proceso (funcional con mockups)|Planificado: Verificación de estructura del reporte y navegación|
-|US-023	Reportes de largo plazo|En proceso (funcional con mockups)|Planificado: Validación del flujo visual|
-|US-027	Integración automática a la comunidad|En proceso (funcional con mockups)|Planificado: Validación de acceso automático y flujo simulado|
-|US-028	Feed comunitario|En proceso (funcional con mockups)|Planificado: Verificación de publicación y visualización en mock|
-|US-032	Interacción y aprendizaje comunitario|En proceso (funcional con mockups)|Planificado: Validación de reacciones y comentarios simulados|
+##### Estructura de la Suite de Pruebas
+
+```
+Oryxen-Backend/
+├── tests/
+│   ├── Oryxen.Domain.Tests/                  ← Pruebas unitarias del dominio (xUnit)
+│   │   ├── Oryxen.Domain.Tests.csproj
+│   │   └── Services/
+│   │       └── PlantHealthCalculatorTests.cs  ← 26 tests del algoritmo de scoring
+│   │
+│   ├── Oryxen.Application.Tests/              ← Pruebas unitarias de servicios de aplicación (xUnit + NSubstitute)
+│   │   ├── Oryxen.Application.Tests.csproj
+│   │   └── Auth/
+│   │       └── AuthServiceTests.cs            ← 11 tests del flujo de autenticación
+│   │
+│   └── Oryxen.Specs/                          ← Especificaciones BDD (Gherkin)
+│       └── Features/
+│           ├── 01-autenticacion-rbac.feature
+│           ├── 02-ingesta-telemetria-iot.feature
+│           └── 03-bloqueo-401-unauthorized.feature
+```
+
+**Stack de testing:**
+
+| Herramienta | Versión | Propósito |
+|-------------|---------|-----------|
+| xUnit | 2.9.2 | Framework de pruebas unitarias (.NET) |
+| NSubstitute | 5.3.0 | Biblioteca de mocking para tests de Application layer |
+| Microsoft.NET.Test.Sdk | 17.12.0 | Adaptador de ejecución de tests |
+| Gherkin (.feature) | — | Especificaciones de comportamiento BDD legibles por negocio |
+
+##### A. Pruebas Unitarias — `PlantHealthCalculator` (Dominio)
+
+El `PlantHealthCalculator` es un servicio de dominio que computa un **Health Score determinístico** (0–100) a partir de las lecturas del Sensor Lite, ponderando: **Soil Moisture 50% + Humidity 25% + Temperature 25%**. Las pruebas cubren 4 categorías:
+
+| Categoría | Tests | Descripción |
+|-----------|-------|-------------|
+| Scoring | 6 | Score 100 en rango ideal, score 0 en valores nulos, clamping en 0 y 100 |
+| Weighting | 4 | Verificación de pesos: soil=50pts, humidity=25pts, temp=25pts |
+| Band Classification | 4 | Mapeo score→PlantStatus: `≥70 Healthy`, `≥40 Warning`, `<40 Critical` |
+| Determinism + Linear Decay | 12 | Mismas entradas = misma salida, decaimiento lineal fuera de rango, Theory con 7 casos parametrizados |
+
+**Extracto — verificación de pesos y bandas:**
+
+```csharp
+[Fact]
+public void Soil_Contributes_50_Percent_Of_Total_Score()
+{
+    var score = PlantHealthCalculator.Compute(soilMoisture: 55, humidity: 0, temperature: 0);
+    Assert.Equal(50, score);
+}
+
+[Theory]
+[InlineData(55, 50, 22.5, 100)]
+[InlineData(0, 0, 0, 0)]
+[InlineData(55, 0, 0, 50)]
+public void Produces_Expected_Score_For_Known_Inputs(
+    double soil, double humidity, double temperature, int expected)
+{
+    var score = PlantHealthCalculator.Compute(soil, humidity, temperature);
+    Assert.Equal(expected, score);
+}
+```
+
+##### B. Pruebas Unitarias — `AuthService` (Aplicación)
+
+El `AuthService` orquesta el registro, login y rotación de tokens. Las pruebas utilizan **NSubstitute** para mockear las dependencias (`IUserAccountRepository`, `IRoleRepository`, `IPasswordHasher`, `IJwtTokenGenerator`, `IUnitOfWork`) y validar el comportamiento aislado del servicio:
+
+| Categoría | Tests | Descripción |
+|-----------|-------|-------------|
+| RegisterAsync | 5 | Registro exitoso, hash BCrypt, email duplicado → `EmailAlreadyExistsException`, normalización email, asignación rol FARMER + suscripción Freemium |
+| LoginAsync | 6 | Login válido, contraseña incorrecta → `InvalidCredentialsException`, usuario inexistente, cuenta inactiva, normalización email, rotación de refresh token |
+
+**Extracto — flujo de registro exitoso y manejo de excepción por email duplicado:**
+
+```csharp
+[Fact]
+public async Task Creates_User_And_Returns_Tokens_When_Email_Is_New()
+{
+    _users.ExistsByEmailAsync("farmer@oryxen.io", Arg.Any<CancellationToken>()).Returns(false);
+    _roles.GetByNameAsync(Roles.Farmer, Arg.Any<CancellationToken>()).Returns(FarmerRole());
+    _passwordHasher.Hash("Sembrar2026!").Returns("bcrypt-hash");
+    SetupTokenGenerator();
+
+    var response = await _sut.RegisterAsync(ValidRegisterRequest());
+
+    Assert.Equal("access-jwt", response.AccessToken);
+    Assert.Contains(Roles.Farmer, response.Roles);
+    await _users.Received(1).AddAsync(Arg.Any<UserAccount>(), Arg.Any<CancellationToken>());
+}
+
+[Fact]
+public async Task Throws_EmailAlreadyExistsException_When_Email_Is_Duplicate()
+{
+    _users.ExistsByEmailAsync("farmer@oryxen.io", Arg.Any<CancellationToken>()).Returns(true);
+    await Assert.ThrowsAsync<EmailAlreadyExistsException>(
+        () => _sut.RegisterAsync(ValidRegisterRequest()));
+}
+```
+
+##### C. Especificaciones BDD (Gherkin .feature)
+
+Se elaboraron tres archivos `.feature` en sintaxis Gherkin pura (`Given / When / Then`) en español, cubriendo los flujos críticos del sistema:
+
+**Feature 1 — Control de Acceso Basado en Roles (RBAC):**
+
+```gherkin
+Feature: Control de Acceso Basado en Roles (RBAC)
+  Como administrador de la plataforma Oryxen
+  Quiero que los usuarios con rol FARMER solo accedan a sus propias plantas
+  Y que los usuarios con rol ADMIN tengan acceso global
+
+  Scenario: FARMER consulta sus propias plantas
+    Given que me he autenticado como "farmer@oryxen.io" con rol "FARMER"
+    When envío una petición GET a "/api/v1/users/{myUserId}/plants"
+    Then la respuesta tiene código HTTP 200 OK
+    And todas las plantas devueltas pertenecen a mi usuario
+
+  Scenario: FARMER intenta consultar las plantas de otro usuario
+    Given que me he autenticado como "farmer@oryxen.io" con rol "FARMER"
+    When envío una petición GET a "/api/v1/users/{otherUserId}/plants"
+    Then la respuesta tiene código HTTP 403 Forbidden
+    And el cuerpo de la respuesta contiene un ProblemDetails RFC 7807
+```
+
+**Feature 2 — Ingesta Automatizada de Telemetría IoT:**
+
+```gherkin
+Feature: Ingesta Automatizada de Telemetría IoT
+
+  Scenario: Ingesta de una lectura válida del Sensor Lite
+    Given que el Sensor Lite "SL-SIM-001" ha tomado una lectura con:
+      | soilMoisture | humidity | temperature | lightLevel |
+      | 62           | 52       | 22          | 850        |
+    When envío una petición POST a "/api/v1/telemetry" con el payload:
+      """
+      { "deviceId": "SL-SIM-001", "plantId": "11111111-...", "soilMoisture": 62, "humidity": 52, "temperature": 22, "lightLevel": 850 }
+      """
+    Then la respuesta tiene código HTTP 201 Created
+    And el "healthScore" es igual a 100 porque todas las métricas están en el rango ideal
+
+  Scenario Outline: Cálculo determinístico del Health Score
+    Given que el Sensor Lite envía una lectura con soilMoisture = <soilMoisture>
+    When el PlantHealthCalculator procesa la lectura con humidity = 50 y temperature = 22
+    Then el healthScore es <expectedScore>
+    And la banda de clasificación es <band>
+
+    Examples:
+      | soilMoisture | expectedScore | band      |
+      | 55           | 100           | Healthy   |
+      | 25           | 50            | Warning   |
+      | 0            | 0             | Critical  |
+```
+
+**Feature 3 — Bloqueo de Accesos No Autorizados (HTTP 401):**
+
+```gherkin
+Feature: Bloqueo de Accesos No Autorizados (HTTP 401)
+
+  Scenario: Petición a endpoint protegido sin token JWT
+    Given que soy un cliente no autenticado
+    When envío una petición GET a "/api/v1/auth/me" sin cabecera "Authorization"
+    Then la respuesta tiene código HTTP 401 Unauthorized
+    And el cuerpo de la respuesta tiene content-type "application/problem+json"
+
+  Scenario: Petición a endpoint protegido con token JWT expirado
+    Given que tengo un token JWT emitido hace 2 horas con expiración de 1 hora
+    When envío una petición GET a "/api/v1/auth/me" con cabecera "Authorization: Bearer {expiredToken}"
+    Then la respuesta tiene código HTTP 401 Unauthorized
+```
+
+##### D. Resultados de Ejecución
+
+```bash
+$ dotnet test Oryxen.API.slnx --verbosity normal
+
+Pruebas totales: 37
+     Correcto: 37
+     Fallidos: 0
+ Tiempo total: 3.07s
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+```
+
+| Proyecto de Tests | Total | Aprobados | Fallidos | Duración |
+|-------------------|-------|-----------|----------|----------|
+| Oryxen.Domain.Tests | 26 | 26 | 0 | 3.07s |
+| Oryxen.Application.Tests | 11 | 11 | 0 | 2.88s |
+| **Total** | **37** | **37** | **0** | **~3s** |
+
+##### E. Mapeo User Stories → Testing Suite
+
+| User Story | Tipo de Test | Estado |
+|------------|-------------|--------|
+| US-005 Registro de usuario | Unit (AuthService.RegisterAsync) | ✅ Implementado |
+| US-006 Inicio de sesión | Unit (AuthService.LoginAsync) | ✅ Implementado |
+| US-010 Cerrar sesión | BDD Feature 03 (401 sin token) | ✅ Especificado |
+| Control de Acceso RBAC (FARMER vs ADMIN) | BDD Feature 01 | ✅ Especificado |
+| Ingesta de telemetría IoT (Sensor Lite) | Unit (PlantHealthCalculator) + BDD Feature 02 | ✅ Implementado + Especificado |
+| Cálculo de Health Score | Unit (PlantHealthCalculator 26 tests) | ✅ Implementado |
+| Seguridad JWT / 401 Unauthorized | BDD Feature 03 (8 escenarios) | ✅ Especificado |
 
 #### 7.2.1.5.	Execution Evidence for Sprint Review
 
