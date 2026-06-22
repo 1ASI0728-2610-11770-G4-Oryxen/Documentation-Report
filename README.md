@@ -3961,7 +3961,7 @@ public sealed record AiDiagnosisResult(
 
 **Propósito:** Implementa `IMultimodalAiService` mediante un `HttpClient` tipado hacia la API de Google Gemini 2.0 Flash. Construye un prompt multimodal que combina:
 
-1. **Instrucción textual:** El modelo actúa como un Asistente Multimodal de Fitopatología y Salud Agrícola. Analiza la imagen en busca de signos visuales de anomalías (decoloración, manchas, marchitez, bordes masticados, agujeros, larvas, crecimiento fúngico, deficiencias de nutrientes) y los correlaciona con la telemetría ambiental (humedad del suelo, humedad del aire, temperatura).
+1. **Instrucción textual:** El modelo actúa como un Asistente Multimodal de Fitopatología y Salud Agrícola. Analiza la imagen en busca de signos visuales de anomalías (decoloración, manchas, marchitez, bordes masticados, agujeros, crecimiento fúngico, deficiencias de nutrientes) y los correlaciona con la telemetría ambiental (humedad del suelo, humedad del aire, temperatura).
 2. **Imagen inline:** La fotografía de la planta codificada en base64.
 
 El prompt solicita al modelo que responda exclusivamente con un JSON estructurado (`detectedPest`, `confidenceScore`, `recommendation`). Los fallos de red, API key faltante o payloads no parseables se traducen en `ExternalServiceException` (HTTP 502).
@@ -4817,6 +4817,7 @@ public interface IPaymentRepository {
 | `SubscriptionsController` | `/api/v1/subscriptions/checkout` | POST | FARMER, ADMIN | Crea una Stripe Checkout Session |
 | `SubscriptionsController` | `/api/v1/subscriptions/current` | GET | FARMER, ADMIN | Retorna la suscripción actual del usuario |
 | `SubscriptionsController` | `/api/v1/subscriptions/webhook` | POST | Anónimo | Recibe eventos webhook de Stripe |
+| `SubscriptionsController` | `/api/v1/subscriptions/confirm` | POST | FARMER, ADMIN | Confirma y sincroniza la suscripción tras la redirección de Stripe (re-fetch post-checkout iniciado desde el cliente) |
 
 ### 5.7.3. Application Layer
 
@@ -6908,7 +6909,7 @@ En el Sprint 2 se integraron las funcionalidades premium que completan el ecosis
 
 En el Sprint 2, la documentación OpenAPI del backend se expandió con los endpoints de las funcionalidades premium. La documentación interactiva se despliega en `http://localhost:5170/swagger`.
 
-A continuación, la relación de endpoints nuevos documentados en el Sprint 2:
+A continuación, la relación de los 14 endpoints nuevos documentados en el Sprint 2:
 
 | Endpoint | HTTP Verb | Descripción | Parámetros / Body | Ejemplo Response |
 |----------|-----------|-------------|-------------------|------------------|
@@ -7651,7 +7652,7 @@ En esta sección se documenta el Video About-the-Team de Oryxen, un contenido au
 |-------------------|---------|-----------|-----------------|
 | 00:00:00–00:00:30 | **Intro y presentación del equipo** | Plano grupal de los 4 integrantes (grabación de videollamada). Cada uno saluda y dice su nombre. Fundido a logo de GrassFarming y Oryxen. Voz en off: "En GrassFarming, cuatro ingenieros de software nos propusimos resolver un problema que todos hemos vivido: ver nuestras plantas morir por falta de tiempo." | Todos |
 | 00:00:30–00:03:00 | **Retrospectiva del Sprint 1** | Narración con imágenes del tablero de Trello, commits en GitHub, sesiones de pair programming en Discord. Se muestra el despliegue de la Landing Page en Firebase y el Dashboard inicial de la Web App. | Narración: Abraham Estrada |
-| 00:03:00–00:05:30 | **Retrospectiva del Sprint 2** | Imágenes del desarrollo de funcionalidades premium: consola de Stripe en modo test, panel de Firebase Cloud Messaging con notificaciones enviadas, integración de Gemini Vision API, Community Feed con posts de prueba. Métricas del sprint: 18 tareas completadas, 10 endpoints nuevos, 18 tests adicionales. | Narración: Pedro Nanfuñay |
+| 00:03:00–00:05:30 | **Retrospectiva del Sprint 2** | Imágenes del desarrollo de funcionalidades premium: consola de Stripe en modo test, panel de Firebase Cloud Messaging con notificaciones enviadas, integración de Gemini Vision API, Community Feed con posts de prueba. Métricas del sprint: 18 tareas completadas, 14 endpoints nuevos, suite de 37 tests automatizados en verde (26 de Dominio + 11 de Aplicación). | Narración: Pedro Nanfuñay |
 | 00:05:30–00:07:00 | **Testimonio — Abraham Estrada** | Abraham a cuadro. Describe sus actividades principales: arquitectura del backend en ASP.NET Core 9 (8 Bounded Contexts con CQRS), integración de Stripe Payments y Gemini Vision API, configuración de CI/CD con GitHub Actions y GHCR. Reflexión sobre el Student Outcome ABET 3: "Comunicar decisiones de arquitectura a un equipo multidisciplinario y a stakeholders no técnicos fue el mayor aprendizaje. Traducir 'eventual consistency' o 'anti-corruption layer' a lenguaje de negocio para que el equipo entienda por qué diseñamos el sistema así fue un reto que me prepara para mi carrera profesional." | Abraham Estrada |
 | 00:07:00–00:08:30 | **Testimonio — Pedro Nanfuñay** | Pedro a cuadro. Describe sus contribuciones: implementación del frontend de la Web Application (Vue 3 + TypeScript + Pinia + PrimeVue), diseño de las vistas premium (Pricing, Notifications, Community Feed, Diagnosis UI), ejecución de pruebas de usabilidad con usuarios reales y documentación de la matriz de evaluación heurística. Reflexión ABET 3: "Aprendí a comunicar feedback de usuarios en términos que el equipo de backend pueda priorizar. No es lo mismo decir 'el botón no se ve bien' que decir 'el contraste del CTA no cumple WCAG 2.2 AA, necesitamos ajustar la paleta de colores'. Ese nivel de precisión en la comunicación es lo que hace la diferencia entre un equipo que funciona y uno que vuela." | Pedro Nanfuñay |
 | 00:08:30–00:10:00 | **Testimonio — Alejandro Pachas** | Alejandro a cuadro. Describe sus contribuciones: implementación del módulo de Analytics Dashboard y Report Export (QuestPDF/CsvHelper), integración de Firebase Cloud Messaging para notificaciones push, Community Feed CRUD + sistema de reputación + Content Moderation Service. Reflexión ABET 3: "Documentar las APIs con OpenAPI y escribir los archivos .feature en Gherkin me enseñó que el código no es solo para máquinas: es un contrato de comunicación entre desarrolladores, QA y hasta el Product Owner. Un endpoint bien documentado ahorra horas de preguntas y malentendidos." | Alejandro Pachas |
@@ -7714,7 +7715,7 @@ Las *Business Assumptions* de alta prioridad fueron validadas contra el comporta
 
 **Conclusión General del Contraste Lean UX:**
 
-El ciclo de vida del proyecto Oryxen ha validado de forma contundente las hipótesis fundamentales del modelo de negocio. Las 4 *Hypothesis Statements* superan los umbrales de éxito definidos en el Capítulo I. Las *Assumptions* de alto riesgo (adopción de automatización, confianza en IA, valor de centralización) han sido confirmadas por evidencia cualitativa de 6 usuarios representativos de ambos segmentos. La arquitectura de software propuesta — basada en Domain-Driven Design con 8 Bounded Contexts, CQRS, Event-Driven communication entre contextos, y despliegue multicomponente (Docker, Firebase, Vercel, GHCR) — demostró ser técnicamente sólida, validada con 55 pruebas unitarias y especificaciones BDD que cubren los flujos core del negocio (Autenticación RBAC, Telemetría IoT, Stripe Payments, Community Moderation, AI Diagnosis).
+El ciclo de vida del proyecto Oryxen ha validado de forma contundente las hipótesis fundamentales del modelo de negocio. Las 4 *Hypothesis Statements* superan los umbrales de éxito definidos en el Capítulo I. Las *Assumptions* de alto riesgo (adopción de automatización, confianza en IA, valor de centralización) han sido confirmadas por evidencia cualitativa de 6 usuarios representativos de ambos segmentos. La arquitectura de software propuesta — basada en Domain-Driven Design con 8 Bounded Contexts, CQRS, Event-Driven communication entre contextos, y despliegue multicomponente (Docker, Firebase, Vercel, GHCR) — demostró ser técnicamente sólida, validada con 37 pruebas unitarias automatizadas (26 de Dominio + 11 de Aplicación) y especificaciones BDD que cubren los flujos core del negocio (Autenticación RBAC, Telemetría IoT, Stripe Payments, Community Moderation, AI Diagnosis).
 
 **Recomendaciones:**
 
