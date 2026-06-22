@@ -7937,6 +7937,42 @@ Compilación correcta.
 
 #### 7.2.1.5.	Execution Evidence for Sprint Review
 
+## Landing Oryxen 1
+![Landing Oryxen 1](./assets/Chapter-7/LANDING_ORYXEN_1.jpg)
+
+## Landing Oryxen 2
+![Landing Oryxen 2](./assets/Chapter-7/LANDING_ORYXEN_2.jpg)
+
+## Landing Oryxen 3
+![Landing Oryxen 3](./assets/Chapter-7/LANDING_ORYXEN_3.jpg)
+
+## Mobile Oryxen Dashboard
+![Mobile Oryxen Dashboard](./assets/Chapter-7/MOBILE_ORYXEN_DASHBOARD.jpg)
+
+## Mobile Oryxen Login
+![Mobile Oryxen Login](./assets/Chapter-7/MOBILE_ORYXEN_LOGIN.jpg)
+
+## Web Oryxen Analytics
+![Web Oryxen Analytics](./assets/Chapter-7/WEB_ORYXEN_ANALYTICS.jpg)
+
+## Web Oryxen Dashboard
+![Web Oryxen Dashboard](./assets/Chapter-7/WEB_ORYXEN_DASHBOARD.jpg)
+
+## Web Oryxen Login
+![Web Oryxen Login](./assets/Chapter-7/WEB_ORYXEN_LOGIN.jpg)
+
+## Web Oryxen Plants
+![Web Oryxen Plants](./assets/Chapter-7/WEB_ORYXEN_PLANTS.jpg)
+
+## Web Oryxen Plant Detail
+![Web Oryxen Plant Detail](./assets/Chapter-7/WEB_ORYXEN_PLANT_DETAIL.jpg)
+
+## Web Oryxen Settings
+![Web Oryxen Settings](./assets/Chapter-7/WEB_ORYXEN_SETTINGS.jpg)
+
+## Web Oryxen Sign In
+![Web Oryxen Sign In](./assets/Chapter-7/WEB_ORYXEN_SIGN_IN.jpg)
+
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
 
 El backend de Oryxen (ASP.NET Core 9) documenta sus endpoints REST mediante **OpenAPI 3.0**, generado automáticamente con **Swashbuckle**. La documentación interactiva se despliega en `http://localhost:5170/swagger` e incorpora el esquema de seguridad **Bearer (JWT)**, lo que permite autenticar las pruebas pegando el `accessToken` directamente en Swagger UI mediante el botón *Authorize*.
