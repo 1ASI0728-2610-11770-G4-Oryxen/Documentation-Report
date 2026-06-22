@@ -8052,6 +8052,161 @@ Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` de
 
 ### 7.3.1. Diseño de Entrevistas
 
+**Objetivo:** Validar la propuesta de valor, comprensión, navegabilidad y experiencia de usuario del sistema Oryxen en sus tres componentes: Landing Page, Aplicación Móvil y Aplicación Web.
+
+
+**Script para el entrevistador:**
+
+- “Queremos validar una solución basada en IoT e Inteligencia Artificial para el monitoreo, automatización y cuidado de plantas.”
+
+- “No estamos evaluando su desempeño, sino la claridad y facilidad de uso del producto.”
+
+- “Le pedimos que navegue libremente y piense en voz alta mientras interactúa con la plataforma.”
+
+- “Cualquier duda, comentario o sugerencia es bienvenida.”
+
+
+**Preguntas Generales sobre el Usuario:**
+
+- ¿A qué se dedica actualmente (ocupación), en qué distrito reside y cuál es su estado civil? (Preguntas complementarias para el Arquetipo)
+
+- ¿Tiene plantas en casa o en su entorno cercano?
+
+- ¿Cuántas plantas tiene aproximadamente?
+
+- ¿Ha utilizado previamente alguna aplicación relacionada al cuidado de plantas o automatización del hogar?
+
+- ¿Qué tan familiarizado está con sistemas o dispositivos IoT (Internet de las Cosas)?
+
+- ¿Qué problemas o frustraciones enfrenta actualmente para cuidar adecuadamente sus plantas?
+
+- ¿Qué tan cómodo se siente utilizando aplicaciones móviles y aplicaciones web en su día a día?
+
+<br>
+
+**a. Validación de la Landing Page:**
+
+**Preguntas antes de usar la Landing Page:**
+
+- ¿Qué cree que ofrece el producto con base en la primera impresión?
+
+- ¿Qué elementos llaman más su atención al ingresar?
+
+- ¿Percibe el diseño como confiable y profesional?
+
+**Tareas (User Flows – Landing Page):**
+
+- “Identifique qué problema soluciona el sistema Oryxen.”
+
+- “Revise la sección donde se explica cómo funciona la solución con los sensores.”
+
+- “Acceda a la aplicación web o a la aplicación móvil mediante los botones o enlaces disponibles.”
+
+**Preguntas después de usar la Landing Page:**
+
+- ¿El mensaje principal del producto le resultó claro?
+
+- ¿Pudo comprender adecuadamente el funcionamiento del sistema IoT?
+
+- ¿La navegación le resultó intuitiva?
+
+- ¿Hubo alguna parte que le generó confusión o que modificaría?
+
+- ¿La Landing Page le motivaría a usar la aplicación?
+
+<br>
+
+**b. Validación de la Aplicación Web:**
+
+**Preguntas antes de usar la Aplicación Web:**
+
+- ¿Qué funcionalidades esperaría encontrar en una plataforma web de escritorio para el monitoreo de plantas?
+
+- ¿Qué información o herramientas de análisis considera más importantes desde la versión de pantalla grande?
+
+**Tareas (User Flows – Aplicación Web):**
+
+**Flujo 1 – Inicio de sesión:**
+
+- “Ingrese a la plataforma utilizando el formulario de acceso.”
+
+**Flujo 2 – Visualización del estado general de las plantas:**
+
+- “Revise el Dashboard general e indique qué información comprende de los paneles.”
+
+**Flujo 3 – Agregar o editar un dispositivo IoT:**
+
+- “Simule el flujo para vincular o registrar un nuevo dispositivo de sensor IoT a su cuenta.”
+
+**Flujo 4 – Visualizar reportes o datos históricos:**
+
+- “Busque información histórica, métricas detalladas o reportes avanzados de telemetría.”
+
+**Preguntas después de usar la Aplicación Web:**
+
+- ¿La navegación en la plataforma web le pareció intuitiva?
+
+- ¿Los títulos y nombres de las secciones son claros y comprensibles?
+
+- ¿La distribución de los datos gráficos es adecuada?
+
+- ¿Hubo alguna parte que le generó confusión?
+
+- ¿Percibe coherencia visual y funcional respecto a la versión móvil, o parecen sistemas diferentes?
+
+<br>
+
+**Validación de la Aplicación Móvil:**
+
+**Preguntas antes de usar la Aplicación Móvil:**
+
+- ¿Qué espera encontrar en una aplicación destinada al cuidado de plantas?
+
+- ¿Qué información considera más importante monitorear desde su teléfono?
+
+**Tareas (User Flows – Aplicación Móvil):**
+
+**Flujo 1 – Visualización del estado general (Dashboard):**
+
+- “Acceda al Dashboard e indique qué información comprende sobre la salud de sus plantas.”
+
+**Flujo 2 – Visualizar detalles de una planta y diagnóstico:**
+
+- “Entre al detalle de una planta, revise las métricas de los sensores e interactúe con las funciones de asistencia por IA.”
+
+**Flujo 3 – Acceder a Configuración:**
+
+- “Ingrese a la sección de Configuración e intente activar una alerta o modificar algún ajuste disponible.”
+
+**Preguntas después de usar la Aplicación Móvil:**
+
+- ¿Qué tan fácil fue encontrar la información o funciones que buscaba?
+
+- ¿La información del Dashboard móvil le resultó clara y útil?
+
+- ¿Qué parte de la aplicación considera más útil y cuál menos útil?
+
+- ¿Experimentó confusión en algún punto del proceso?
+
+- ¿Cómo percibe el diseño y la organización visual de la aplicación?
+
+- ¿Agregarías o eliminaría alguna funcionalidad?
+
+<br>
+
+**Cierre de la Entrevista:**
+
+- ¿Qué valoración general (en una escala del 1 al 10) asignaría a las plataformas en su conjunto?
+
+- ¿Utilizaría el sistema Oryxen si estuviera disponible actualmente en el mercado?
+
+- ¿Qué aspecto considera más convincente del producto?
+
+- ¿Qué aspecto considera menos convincente o requiere mejoras?
+
+- ¿Tiene algún comentario adicional o sugerencia para el equipo de desarrollo?
+
+
 ### 7.3.2. Registro de Entrevistas
 
 ### 7.3.3. Evaluaciones según heurísticas
