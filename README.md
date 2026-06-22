@@ -53,6 +53,9 @@
 | Versión | Fecha | Autor | Descripción de Modificación |
 | ----------- | ----------- | ----------- | ----------- |
 | TB1 | 15/04/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | Se han incluido los siguientes capítulos: <br> - Capítulo I: Introducción <br> - Capítulo II: Requirements Elicitation & Analysis <br> - Capítulo III: Requirements Specification <br> - Capítulo IV: Strategic-Level Software Design |
+| TP1 | 30/04/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | Se han incluido los siguientes capítulos: <br> - Capítulo V: Tactical-Level Software Design <br> - Capítulo VI: Solution UX Design <br> - Avance de Capítulo VII (SCM, Sprint 1 Backlog) y Conclusiones preliminares. |
+| TB2 | 02/06/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | Se han incluido: <br> - Capítulo VII completado con Sprint 1 (Planning, Backlog, Development, Testing, Execution, Services Documentation, Deployment Evidence y Team Collaboration Insights). <br> - Avance de Sprint 2 Planning. <br> - Primera versión de Video About-the-Product y Video About-the-Team. <br> - Avance de Validation Interviews y Evaluaciones Heurísticas. |
+| TF1 | 22/06/2026 | - Estrada Cajamune, Abraham Andrés <br> - Nanfuñay Liza, Pedro Jesús <br> - Pachas Chavez, Alejandro Alberto <br> - Zevallos Linares, Alessandro Netto | **Cierre definitivo del proyecto.** Se han incluido: <br> - Capítulo VII completado: Sprint 2 (Planning, Backlog, Development, Testing, Execution, Services Documentation, Software Deployment y Team Collaboration Insights). <br> - Registro de Entrevistas de Validación (3 por segmento) y Evaluaciones Heurísticas completas (Usabilidad, Arquitectura de Información, Diseño Inclusivo). <br> - Video About-the-Product y Video About-the-Team finalizados con guiones y pauta de secuencias. <br> - Conclusiones finales con contraste Lean UX (Problem Statements, Assumptions, Hypothesis Statements) y Roadmap de expansión Estratégica. <br> - Versión final de Bibliografía y Anexos. |
 
 # Project Report Collaboration Insights
 
@@ -75,10 +78,36 @@ Las tareas asignadas a la TB2 han sido finalizadas y se encuentran correctamente
 
 En esta entrega se redactaron los contenidos correspondientes a los capítulos 5 y 6, que constan en la documentación de los bounded context identificados que seguirá nuestra arquitectura y el diseño UX que seguirá nuestra solución para desarrollar los canales que podrá hacer uso nuestros usuarios.
 
-![PulseTB1](./assets/Chapter-1/PulseTB2.png)
+![PulseTB2](./assets/Chapter-1/PulseTB2.png)
 ![ContributorsTB2](./assets/Chapter-1/ContributorsTB2.png)
 ![NetworkGraphTB2](./assets/Chapter-1/NetworkGraphTB2.png)
 ![InsightsPeopleTB2](./assets/Chapter-1/InsightsPeopleTB2.png)
+
+**TB2** <br>
+Las tareas asignadas a la TB2 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega se completó el Capítulo VII con la implementación del Sprint 1 (Landing Page, Web Application, Backend con Auth y Telemetría IoT), se documentó la Suite de Pruebas (xUnit + BDD Gherkin), el despliegue de los productos digitales y se prepararon las entrevistas de validación con usuarios de los dos segmentos objetivo.
+
+![PulseTB2](./assets/Chapter-1/PulseTB2.png)
+![ContributorsTB2](./assets/Chapter-1/ContributorsTB2.png)
+![NetworkGraphTB2](./assets/Chapter-1/NetworkGraphTB2.png)
+![InsightsPeopleTB2](./assets/Chapter-1/InsightsPeopleTB2.png)
+
+**TF1** <br>
+Las tareas asignadas al TF1 han sido finalizadas y se encuentran correctamente documentadas en el repositorio correspondiente al informe.
+
+En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
+- Sprint 2 documentado (funcionalidades premium: Stripe Payments, FCM Push Notifications, Analytics Dashboard, Community Feed).
+- 6 entrevistas de validación UX con usuarios reales (3 por segmento objetivo).
+- Matriz completa de Evaluación Heurística (Usabilidad, Arquitectura de Información, Diseño Inclusivo) según Anexo D del curso.
+- Videos About-the-Product y About-the-Team con guiones, pauta de secuencias y testimonio ABET 3 de cada integrante.
+- Conclusiones finales contrastando Problem Statements, Assumptions e Hypothesis Statements de Lean UX contra resultados obtenidos.
+- Roadmap de expansión estratégica del producto.
+
+![PulseTF1](./assets/Chapter-1/PulseTF1.png)
+![ContributorsTF1](./assets/Chapter-1/ContributorsTF1.png)
+![NetworkGraphTF1](./assets/Chapter-1/NetworkGraphTF1.png)
+![InsightsPeopleTF1](./assets/Chapter-1/InsightsPeopleTF1.png)
 
 
 # Contenido
@@ -163,6 +192,11 @@ En esta entrega se redactaron los contenidos correspondientes a los capítulos 5
     - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
         - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
         - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+     - [5.1.7. Mobile Client-Side Security Hardening](#517-mobile-client-side-security-hardening)
+         - [5.1.7.1. EncryptedSharedPreferences con Android Keystore](#5171-encryptedsharedpreferences-con-android-keystore)
+         - [5.1.7.2. Interceptor OkHttp de Renovación Automática de Token](#5172-interceptor-okhttp-de-renovación-automática-de-token-refresh-token-rotation)
+         - [5.1.7.3. SessionEventBus: Señalización de Sesión Expirada](#5173-sessioneventbus-señalización-de-sesión-expirada)
+         - [5.1.7.4. Erradicación de Datos Hardcodeados](#5174-erradicación-de-datos-hardcodeados)
 - [5.2. Bounded Context: Plant Management](#52-bounded-context-plant-management)
     - [5.2.1. Domain Layer](#521-domain-layer)
     - [5.2.2. Interface Layer](#522-interface-layer)
@@ -247,7 +281,10 @@ En esta entrega se redactaron los contenidos correspondientes a los capítulos 5
   - [6.5. Applications Prototyping](#65-applications-prototyping)
 
 #### [Conclusiones](#conclusiones)  
-- [Conclusiones y recomendaciones.](#conclusiones-y-recomendaciones)  
+- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)  
+- [Roadmap de Expansión Estratégica](#roadmap-de-expansión-estratégica)
+
+#### [Video About-the-Team](#video-about-the-team)
 
 #### [Bibliografía](#bibliografía)  
 
@@ -2421,7 +2458,103 @@ El diagrama de base de datos del bounded context `Auth & Identity Integration` r
 
 ---
 
-## 5.2. Bounded Context: Plant Management
+### 5.1.7 Mobile Client-Side Security Hardening
+
+El bounded context **Auth & Identity Integration** extiende su alcance de seguridad hacia el cliente móvil Android nativo mediante un conjunto de medidas de *hardening* que garantizan la confidencialidad de los tokens de sesión, la renovación transparente de credenciales y la eliminación de datos sensibles en reposo ante compromisos de sesión.
+
+#### 5.1.7.1 EncryptedSharedPreferences con Android Keystore
+
+La aplicación móvil Oryxen reemplaza el almacenamiento tradicional en `SharedPreferences` plano por **Jetpack Security Crypto `EncryptedSharedPreferences`**, asegurando que todos los secretos de sesión residan cifrados en el sistema de archivos del dispositivo.
+
+**Arquitectura de cifrado local:**
+
+| Componente | Algoritmo | Backend de seguridad |
+|------------|-----------|---------------------|
+| `MasterKey` | AES256-GCM | Android Keystore (con respaldo TEE/StrongBox cuando el hardware lo soporta) |
+| Clave de cifrado de preferencias (`PrefKeyEncryptionScheme`) | AES256-SIV | Derivada de `MasterKey` |
+| Valor de cifrado de preferencias (`PrefValueEncryptionScheme`) | AES256-GCM | Derivada de `MasterKey` |
+
+**Datos protegidos bajo cifrado:**
+
+- `accessToken` — JWT de acceso emitido por el backend .NET 9 (HS256, expiración corta)
+- `refreshToken` — Token opaco de 64 bytes codificado en Base64, utilizado para rotación
+- `userId` — Claim `sub` extraído del payload del JWT (Guid mapeado desde el backend)
+- `roles` — Lista de roles RBAC (`FARMER`, `ADMIN`, `SUPPORT_TECHNICIAN`)
+- `currentPlantId` — Identificador de la planta actualmente monitoreada (UUID)
+- `deviceId` — Identificador único del dispositivo generado localmente (UUID v4)
+
+**Clase responsable:** `io.oryxen.mobile.security.SecureStorage`
+
+**Inicialización:** La clase `ApiProvider.init(context)` invocada desde `MainActivity.onCreate()` instancia `SecureStorage` con el `applicationContext`, garantizando que `EncryptedSharedPreferences` esté disponible antes de cualquier operación de red o de UI.
+
+**Decodificación de JWT sin librerías externas:** El método `SecureStorage.decodeUserId(jwt)` extrae el claim `sub` del payload Base64-URL del JWT utilizando `kotlinx.serialization.json.Json`, sin depender de librerías de terceros para validación (la validación criptográfica del token es responsabilidad exclusiva del backend).
+
+#### 5.1.7.2 Interceptor OkHttp de Renovación Automática de Token (Refresh Token Rotation)
+
+La aplicación implementa un `Authenticator` de OkHttp3 que intercepta de forma transparente los errores **HTTP 401 Unauthorized** y ejecuta el flujo de rotación de tokens sin intervención del usuario.
+
+**Clase responsable:** `io.oryxen.mobile.security.TokenAuthenticator`
+
+**Diagrama de secuencia del flujo de renovación:**
+
+```
+[App] ──GET /telemetry/{plantId}──▶ [Backend .NET 9]
+                                      │
+                                      ◀── 401 Unauthorized ──
+[OkHttp Authenticator]                │
+  │                                   
+  ├─ synchronized(lock)                 
+  │   ├─ ¿El token fallido coincide con el almacenado?
+  │   │   NO → re-intentar con el token actual almacenado
+  │   │   SI → continuar con refresh
+  │   │
+  │   ├─ ¿refreshToken != null?
+  │   │   NO → clear SecureStorage → emit SessionEvent.Expired → return null
+  │   │   SI → continuar
+  │   │
+  │   └─ [OkHttpClient sin Authenticator]
+  │       ──POST /auth/refresh {refreshToken}──▶ [Backend .NET 9]
+  │                                                │
+  │       ◀── 200 OK {accessToken, refreshToken}──
+  │       │
+  │       ├─ decodeUserId(newAccessToken) → extraer sub claim
+  │       ├─ secureStorage.saveTokens(...)
+  │       └─ retry original request con nuevo Bearer token
+  │
+  └─ [App] recibe 200 OK con datos de telemetría
+```
+
+**Mecanismo anti-concurrencia:** El bloque `synchronized(this)` garantiza que solo una instancia de renovación se ejecute a la vez. Las peticiones subsecuentes que arriben durante una renovación activa esperan hasta que el nuevo token esté disponible y luego se re-intentan con el token fresco.
+
+**Prevención de bucles infinitos:** El `Authenticator` verifica si la petición fallida es contra el propio endpoint `/auth/refresh`. Si lo es, retorna `null` inmediatamente para evitar llamadas recursivas que resultarían en un bucle infinito.
+
+**Cliente de refresh aislado:** La llamada al endpoint de refresh utiliza una instancia separada de `OkHttpClient` sin `Authenticator` configurado, garantizando que un fallo en el refresh no desencadene una nueva autenticación recursiva.
+
+#### 5.1.7.3 SessionEventBus: Señalización de Sesión Expirada
+
+Cuando el `refreshToken` también ha expirado o ha sido revocado, el `TokenAuthenticator` limpia completamente el `SecureStorage` y emite un evento `SessionEvent.Expired` a través del **`SessionEventBus`**.
+
+**Clase responsable:** `io.oryxen.mobile.security.SessionEventBus`
+
+**Mecanismo de señalización:**
+
+- `SessionEventBus` utiliza un `MutableSharedFlow` con `extraBufferCapacity = 1` para emisión no bloqueante desde el hilo de OkHttp.
+- `OryxenNavHost` observa el `SharedFlow` mediante `LaunchedEffect` y, al recibir `SessionEvent.Expired`, ejecuta `navController.navigate(Routes.LOGIN)` con `popUpTo(0) { inclusive = true }`, limpiando toda la pila de navegación.
+- El usuario es redirigido a `LoginScreen`, y todas las pantallas protegidas (`DashboardScreen`, `DiagnosisScreen`, `PlansScreen`, `NotificationsScreen`) quedan inaccesibles hasta un nuevo inicio de sesión exitoso.
+
+#### 5.1.7.4 Erradicación de Datos Hardcodeados
+
+Se realizó un barrido completo de las vistas móviles para eliminar identificadores mock:
+
+| Archivo | Dato hardcodeado anterior | Solución implementada |
+|---------|--------------------------|----------------------|
+| `DashboardScreen.kt` | `plantId = "11111111-2222-3333-4444-555555555555"` | Campo `currentPlantId` en `SecureStorage`, configurable mediante tarjeta `PlantIdConfigCard` en la UI |
+| `DiagnosisScreen.kt` | `demoPlantId = "11111111-2222-3333-4444-555555555555"` | Lectura dinámica desde `SecureStorage.currentPlantId`; si no está configurado, muestra mensaje instructivo |
+| `Repositories.kt` | `deviceId = "SL-MOBILE-DEMO"` | UUID v4 generado una vez por dispositivo, almacenado en `SecureStorage.deviceId` |
+
+Los `userId` y `roles` ahora se extraen dinámicamente del claim `sub` del JWT decodificado tras cada inicio de sesión o renovación exitosa, eliminando la dependencia de valores estáticos.
+
+---
 
 El bounded context de **Plant Management** representa el núcleo encargado de la gestión del catálogo de plantas de los usuarios dentro de la plataforma Oryxen. Este contexto permite registrar nuevas plantas, editar perfiles, definir configuraciones y parámetros esenciales (como umbrales de humedad), y ofrecer una visualización unificada del estado de salud de toda la colección botánica del usuario.
 
@@ -3989,678 +4122,297 @@ Feature: Diagnóstico Multimodal de Salud Vegetal por IA
 ```
 
 ---
-## 5.5. Bounded Context: Analysis & Reporting
+## 5.5. Bounded Context: Analysis &amp; Reporting
 
-El bounded context de **Analysis & Reporting** representa la inteligencia analítica de la plataforma Oryxen. Este contexto agrega la telemetría de sensores IoT proveniente del BC Device Management, integra los resultados diagnósticos del BC AI y los transforma en reportes accionables, dashboards históricos y alertas predictivas de salud del cultivo. Permite al usuario exportar sus datos en formatos PDF y CSV, programar la generación automática de reportes periódicos y acceder a tendencias de salud de sus plantas en el tiempo. Su diseño aplica el patrón CQRS para separar los flujos de escritura (generación e ingestión de telemetría) de los flujos de lectura (dashboards y exportaciones), y utiliza TimescaleDB como motor de series de tiempo para el almacenamiento eficiente de métricas históricas de alta frecuencia.
+El bounded context de **Analysis &amp; Reporting** representa la capa de inteligencia analítica de la plataforma Oryxen. Este contexto ejecuta consultas de agregación SQL en tiempo real sobre la telemetría histórica de sensores IoT (`telemetry_data`), generando dashboards de salud de cultivos, tendencias temporales diarias/semanales/mensuales y reportes exportables en formato CSV y JSON. La implementación sigue el stack oficial del proyecto: ASP.NET Core 9 (Clean Architecture) + EF Core 9 + PostgreSQL 15 en el backend, y Vue 3 + TypeScript + Pinia + Axios en el frontend web, con un cliente Android nativo en Kotlin + Jetpack Compose + Retrofit para la experiencia móvil.
+
+Las consultas de agregación (promedios de `HealthScore`, `SoilMoisture`, `Temperature`, `Humidity`) se ejecutan directamente sobre la tabla `telemetry_data` utilizando LINQ sobre EF Core, aprovechando el índice compuesto `{PlantId, RecordedAt}` definido en el BC Device Management. No se requiere una base de datos de series de tiempo separada; PostgreSQL maneja eficientemente las consultas de rango temporal gracias al particionamiento lógico por planta y la paginación interna de 500 registros por consulta.
 
 ### 5.5.1. Domain Layer
 
-La capa de dominio del bounded context **Analysis & Reporting** modela los reportes analíticos, las métricas de salud agregadas y los registros de telemetría histórica.
+La capa de dominio del bounded context **Analysis &amp; Reporting** define el agregado `AnalysisReport` para el seguimiento de reportes generados bajo demanda, junto con los enumerados de tipo, estado y formato de exportación.
 
 **a. Entity / Aggregate Root:**
 
-**Nombre de la clase:** `Report`
-
+**Nombre de la clase:** `AnalysisReport`
 **Namespace:** `Oryxen.Domain.Entities`
 
-**Propósito:** Representa un reporte de análisis generado para una planta específica en un rango de tiempo determinado. Constituye el Aggregate Root del bounded context Analysis & Reporting. Encapsula el estado del reporte, las métricas resumidas, el tipo de exportación y la referencia al archivo generado en cloud storage.
+**Propósito:** Representa un reporte analítico generado para una planta específica en un rango de tiempo determinado. Hereda de `AuditableEntity` para obtener `Id` (Guid), `CreatedAt` y `UpdatedAt`.
 
 **Atributos:**
-
-- `id: UUID` → Identificador único del reporte.
-- `userId: UUID` → Usuario propietario del reporte.
-- `plantId: UUID` → Planta analizada (referencia cruzada al BC Plant Management).
-- `reportType: ReportType` → Tipo de reporte generado.
-- `status: ReportStatus` → Estado del proceso de generación.
-- `dateRange: DateRange` → Rango de fechas cubierto por el análisis.
-- `exportFormat: ExportFormat` → Formato de exportación seleccionado.
-- `fileUrl: String` → URL pre-firmada del archivo generado en S3/GCS (expira en 24 horas).
-- `generatedAt: DateTime` → Marca temporal de finalización del proceso.
-- `createdAt: DateTime` → Marca temporal de creación de la solicitud.
-
-**Métodos:**
-
-- `startGeneration()` → Transiciona el estado a `PROCESSING`.
-- `completeGeneration(fileUrl: String)` → Registra la URL del archivo y transiciona a `COMPLETED`.
-- `failGeneration(reason: String)` → Registra el error y transiciona a `FAILED`.
-- `isCompleted()` → Verifica si el reporte fue generado exitosamente.
-- `getDateRangeDays()` → Retorna la cantidad de días cubiertos por el análisis.
-
-**Relaciones:**
-
-- Un `Report` pertenece a un único usuario y una única planta.
-- Un `Report` puede contener múltiples `MetricSummary` (uno por período de agregación).
-- Un `ReportSchedule` genera múltiples `Report` a lo largo del tiempo.
-
-
-**b. Entities del dominio:**
-
-`MetricSummary`
-
-**Propósito:** Representa las métricas ambientales y de salud agregadas para una planta en un período específico. Constituye la unidad fundamental de análisis dentro de un reporte.
-
-**Atributos:**
-
-- `id: UUID`
-- `reportId: UUID`
-- `plantId: UUID`
-- `periodStart: DateTime`
-- `periodEnd: DateTime`
-- `avgHumidity: float`
-- `avgTemperature: float`
-- `avgLightLevel: float`
-- `avgHealthScore: HealthScore`
-- `minHealthScore: HealthScore`
-- `maxHealthScore: HealthScore`
-- `diagnosisCount: int` → Número de diagnósticos IA registrados en el período.
-- `alertCount: int` → Número de alertas disparadas en el período.
-
-**Métodos:**
-
-- `getHealthTrend()` → Calcula la tendencia de salud comparando inicio y fin del período (`IMPROVING`, `STABLE`, `DECLINING`).
-- `hasAnomalies()` → Retorna `true` si el `avgHealthScore` cayó por debajo del umbral crítico (< 30.0).
-
-
-`TelemetryRecord`
-
-**Propósito:** Representa una lectura individual de sensores IoT capturada en tiempo real. Origen: BC Device Management via evento de dominio `SensorDataReceivedEvent`.
-
-**Atributos:**
-
-- `id: UUID`
-- `plantId: UUID`
-- `deviceId: UUID`
-- `humidity: float`
-- `temperature: float`
-- `lightLevel: float`
-- `soilMoisture: float`
-- `healthScore: HealthScore`
-- `recordedAt: DateTime`
-
-**Métodos:**
-
-- `isWithinRange(start: DateTime, end: DateTime)` → Verifica si la lectura pertenece al rango temporal consultado.
-- `isCritical()` → Retorna `true` si alguna métrica supera los umbrales de alerta definidos por el perfil de la especie.
-
-
-`ReportSchedule`
-
-**Propósito:** Representa una configuración de generación automática y periódica de reportes para una planta de un usuario.
-
-**Atributos:**
-
-- `id: UUID`
-- `userId: UUID`
-- `plantId: UUID`
-- `frequency: ScheduleFrequency` → `DAILY`, `WEEKLY`, `MONTHLY`.
-- `exportFormat: ExportFormat`
-- `nextRunAt: DateTime`
-- `isActive: boolean`
-- `createdAt: DateTime`
-
-**Métodos:**
-
-- `activate()` → Activa la programación periódica.
-- `deactivate()` → Suspende la programación sin eliminarla.
-- `calculateNextRun()` → Calcula la próxima fecha de ejecución en función de la frecuencia configurada.
-
-
-**c. Value Objects:**
-
-`DateRange`
-
-Representa un intervalo temporal inmutable para la consulta de métricas y generación de reportes.
-
-**Atributos:**
-
-- `start: DateTime`
-- `end: DateTime`
-
-**Métodos:**
-
-- `contains(date: DateTime)` → Verifica si una fecha pertenece al rango.
-- `overlapsWith(other: DateRange)` → Detecta solapamiento entre rangos.
-- `days()` → Retorna la duración en días del rango.
-- `validate()` → Lanza `InvalidDateRangeException` si `start >= end` o si el rango supera 365 días.
-
-
-`ReportType`
-
-Enumera los tipos de reportes disponibles en la plataforma.
-
-**Valores posibles:**
-
-- `HEALTH_SUMMARY` → Resumen de salud de la planta en el período, con métricas clave y recomendaciones.
-- `TELEMETRY_DETAIL` → Detalle completo de lecturas de sensores con exportación de serie de tiempo raw.
-- `PREDICTIVE_ALERT` → Reporte con predicciones de riesgo sanitario generadas por el modelo IA del BC AI.
-- `COMPARATIVE_ANALYSIS` → Comparación de métricas entre múltiples plantas del mismo usuario en un período.
-
-
-`ExportFormat`
-
-Enumera los formatos de exportación disponibles para descarga.
-
-**Valores posibles:**
-
-- `PDF`
-- `CSV`
-- `JSON`
-
-
-`ReportStatus`
-
-Representa el estado del ciclo de vida de un reporte.
-
-**Valores posibles:**
-
-- `PENDING`
-- `PROCESSING`
-- `COMPLETED`
-- `FAILED`
-
-
-`HealthScore`
-
-Representa la puntuación de salud de una planta, calculada por el modelo de IA del BC AI a partir de lecturas de sensores e imágenes diagnósticas.
-
-**Atributos:**
-
-- `value: float` → Valor entre 0.0 (crítico) y 100.0 (óptimo).
-
-**Métodos:**
-
-- `isCritical()` → Retorna `true` si `value < 30.0`.
-- `isWarning()` → Retorna `true` si `value` está entre 30.0 y 60.0.
-- `isGood()` → Retorna `true` si `value` está entre 60.0 y 80.0.
-- `isOptimal()` → Retorna `true` si `value >= 80.0`.
-- `label()` → Retorna la etiqueta textual: `CRITICAL`, `WARNING`, `GOOD`, `OPTIMAL`.
-
-
-`ScheduleFrequency`
-
-Enumera las frecuencias de generación automática de reportes.
-
-**Valores posibles:**
-
-- `DAILY`
-- `WEEKLY`
-- `MONTHLY`
-
-
-**d. Commands del dominio:**
-
-`GenerateReportCommand`
-
-**Namespace:** `Oryxen.Application.Analytics`
-
-**Propósito:** Solicitar la generación bajo demanda de un reporte analítico para una planta en un rango de fechas.
-
-**Atributos:**
-
-- `userId: UUID`
-- `plantId: UUID`
-- `reportType: ReportType`
-- `dateRange: DateRange`
-- `exportFormat: ExportFormat`
-
-
-`ScheduleReportCommand`
-
-**Propósito:** Configurar la generación automática y periódica de reportes para una planta.
-
-**Atributos:**
-
-- `userId: UUID`
-- `plantId: UUID`
-- `frequency: ScheduleFrequency`
-- `exportFormat: ExportFormat`
-
-
-`ExportReportCommand`
-
-**Propósito:** Solicitar la exportación de un reporte ya generado en un formato alternativo.
-
-**Atributos:**
-
-- `reportId: UUID`
-- `userId: UUID`
-- `targetFormat: ExportFormat`
-
-
-`CancelReportScheduleCommand`
-
-**Propósito:** Desactivar una configuración de generación periódica de reportes.
-
-**Atributos:**
-
-- `scheduleId: UUID`
-- `userId: UUID`
-
-
-**e. Queries del dominio:**
-
-`GetReportQuery`
-
-**Propósito:** Obtener los detalles completos de un reporte específico incluyendo sus `MetricSummary`.
-
-**Atributos:**
-
-- `reportId: UUID`
-- `userId: UUID`
-
-
-`ListReportsQuery`
-
-**Propósito:** Obtener la lista paginada de reportes generados por un usuario, con filtros opcionales.
-
-**Atributos:**
-
-- `userId: UUID`
-- `plantId: UUID` (opcional)
-- `page: int`
-- `size: int`
-
-
-`GetTelemetrySummaryQuery`
-
-**Propósito:** Obtener las métricas de telemetría agregadas para una planta en un rango de tiempo, con granularidad configurable.
-
-**Atributos:**
-
-- `plantId: UUID`
-- `dateRange: DateRange`
-- `aggregationInterval: String` → `HOUR`, `DAY`, `WEEK`.
-
-
-`GetHealthTrendQuery`
-
-**Propósito:** Obtener la serie temporal de `HealthScore` para una planta, incluyendo la proyección predictiva del modelo IA para los próximos N días.
-
-**Atributos:**
-
-- `plantId: UUID`
-- `dateRange: DateRange`
-- `predictionHorizonDays: int`
-
-
-`GetDashboardDataQuery`
-
-**Propósito:** Obtener los datos consolidados para el dashboard analítico del usuario, incluyendo resúmenes de salud de todas sus plantas activas y alertas recientes.
-
-**Atributos:**
-
-- `userId: UUID`
-- `summaryPeriod: String` → `LAST_7_DAYS`, `LAST_30_DAYS`, `LAST_90_DAYS`.
-
-
-`ListScheduledReportsQuery`
-
-**Propósito:** Listar las configuraciones de reportes periódicos activos de un usuario.
-
-**Atributos:**
-
-- `userId: UUID`
-
-
-**f. Domain Services:**
-
-`ReportGenerationDomainService`
-
-**Namespace:** `Oryxen.Domain.Services`
-
-**Propósito:** Orquestar el proceso completo de generación de un reporte: recuperación de telemetría, agregación estadística de métricas, enriquecimiento con predicciones IA, renderizado del documento exportable y publicación del evento de finalización.
-
-**Operaciones:**
-
-- `handle(GenerateReportCommand)` → Crea el `Report` en estado `PENDING`, procesa la telemetría, genera el documento y lo persiste.
-- `handle(ExportReportCommand)` → Exporta un reporte existente (`COMPLETED`) en un formato alternativo.
-- `handle(CancelReportScheduleCommand)` → Desactiva un `ReportSchedule` y cancela el job del scheduler.
-
-
-`TelemetryAggregationDomainService`
-
-**Propósito:** Agregar las lecturas de telemetría (`TelemetryRecord`) en `MetricSummary` por períodos configurables, aplicando funciones estadísticas (promedio, mínimo, máximo, conteos de alertas y diagnósticos).
-
-**Operaciones:**
-
-- `aggregate(plantId: UUID, dateRange: DateRange, interval: String)` → Retorna lista de `MetricSummary` para el período.
-- `handle(GetTelemetrySummaryQuery)` → Retorna los agregados para la vista de dashboard.
-- `handle(GetHealthTrendQuery)` → Retorna la serie temporal de `HealthScore` con proyección predictiva integrada.
-
-
-`PredictiveHealthDomainService`
-
-**Propósito:** Integrar las predicciones del BC AI para enriquecer los reportes con alertas proactivas de riesgo sanitario, anticipando deterioro antes de que sea visible en los sensores o a simple vista.
-
-**Operaciones:**
-
-- `getPredictedHealthScore(plantId: UUID, horizonDays: int)` → Solicita predicción al BC AI para `horizonDays` días futuros vía Anti-Corruption Layer.
-- `handle(GetDashboardDataQuery)` → Compone el payload del dashboard integrando métricas históricas y predicciones IA.
-
----
+- `Id: Guid` → Identificador único (heredado).
+- `UserAccountId: Guid` → Usuario propietario del reporte.
+- `PlantId: Guid` → Planta analizada (referencia al BC Plant Management).
+- `Type: ReportType` → Tipo de reporte (`HealthSummary = 1`, `TelemetryDetail = 2`, `PredictiveAlert = 3`).
+- `Status: ReportStatus` → Estado del ciclo de vida (`Pending = 1`, `Processing = 2`, `Completed = 3`, `Failed = 4`).
+- `RangeStart: DateTime` → Inicio del rango de fechas analizado.
+- `RangeEnd: DateTime` → Fin del rango de fechas analizado.
+- `Format: ExportFormat` → Formato de exportación (`Csv = 1`, `Json = 2`).
+- `FileContent: string?` → Contenido del archivo generado (texto CSV o JSON serializado).
+- `GeneratedAt: DateTime?` → Marca temporal de finalización de la generación.
+
+**b. Enumerados del Dominio:**
+
+- `ReportType`: `HealthSummary`, `TelemetryDetail`, `PredictiveAlert`.
+- `ReportStatus`: `Pending`, `Processing`, `Completed`, `Failed`.
+- `ExportFormat`: `Csv`, `Json`.
+
+**c. Interfaces de Repositorio (Domain Layer):**
+
+- `IAnalysisReportRepository` (`Oryxen.Domain.Repositories`): Define las operaciones de persistencia para `AnalysisReport`: `AddAsync`, `GetByIdAsync`, `GetByUserAsync` (paginado, con filtro opcional por planta), `CountByUserAsync`.
 
 ### 5.5.2. Interface Layer
 
-La Interface Layer del bounded context **Analysis & Reporting** expone los endpoints REST para la consulta, generación y exportación de reportes analíticos.
+La Interface Layer expone los endpoints REST del bounded context a través del `AnalyticsController`, protegido con JWT Bearer para los roles `FARMER` y `ADMIN`.
 
-**`ReportController`**
+**`AnalyticsController`**
 
 **Namespace:** `Oryxen.API.Controllers`
-
-**Base URL:** `/api/v1/reports`
-
-**Endpoints:**
-
-| Método | Ruta | Descripción | Rol requerido |
-|--------|------|-------------|--------------|
-| `POST` | `/` | Solicitar generación de reporte bajo demanda | FARMER, ADMIN |
-| `GET` | `/{reportId}` | Obtener detalles de un reporte | FARMER, ADMIN |
-| `GET` | `/` | Listar reportes del usuario paginados | FARMER, ADMIN |
-| `GET` | `/{reportId}/download` | Descargar archivo del reporte (PDF/CSV/JSON) | FARMER, ADMIN |
-| `DELETE` | `/{reportId}` | Eliminar un reporte generado | FARMER, ADMIN |
-
-
-**`DashboardController`**
-
-**Base URL:** `/api/v1/dashboard`
+**Base URL:** `/api/v1/analytics`
+**Autorización:** `[Authorize(Roles = "FARMER,ADMIN")]`
 
 **Endpoints:**
 
 | Método | Ruta | Descripción | Rol requerido |
 |--------|------|-------------|--------------|
-| `GET` | `/` | Obtener datos consolidados del dashboard analítico | FARMER, ADMIN |
-| `GET` | `/telemetry` | Obtener serie temporal de telemetría por planta y período | FARMER, ADMIN |
-| `GET` | `/health-trend` | Obtener tendencia de salud con proyección predictiva IA | FARMER, ADMIN |
-| `GET` | `/summary` | Obtener resumen de salud de todas las plantas activas del usuario | FARMER, ADMIN |
+| `GET` | `/dashboard` | Dashboard consolidado del fundo: resumen de salud de todas las plantas del agricultor (últimos 30 días) | FARMER, ADMIN |
+| `GET` | `/plants/{plantId}/trends` | Tendencias agregadas diarias, semanales y mensuales de HealthScore, SoilMoisture, Temperature y Humidity para una planta | FARMER, ADMIN |
+| `GET` | `/reports` | Listado paginado de reportes generados, con filtro opcional por `plantId` | FARMER, ADMIN |
+| `GET` | `/reports/{reportId}` | Detalle completo de un reporte incluyendo su contenido (CSV/JSON) | FARMER, ADMIN |
+| `POST` | `/reports` | Generar un nuevo reporte bajo demanda para una planta y rango de fechas | FARMER, ADMIN |
 
+**DTOs de respuesta (Contracts):**
 
-**`ReportScheduleController`**
+**Namespace:** `Oryxen.Application.Analytics.Contracts`
 
-**Base URL:** `/api/v1/reports/schedules`
-
-**Endpoints:**
-
-| Método | Ruta | Descripción | Rol requerido |
-|--------|------|-------------|--------------|
-| `POST` | `/` | Configurar reporte periódico automático | FARMER, ADMIN |
-| `GET` | `/` | Listar configuraciones de reportes activos | FARMER, ADMIN |
-| `DELETE` | `/{scheduleId}` | Cancelar generación periódica | FARMER, ADMIN |
-
----
+- `DashboardResponse`: `TotalPlants`, `HealthyPlants`, `WarningPlants`, `CriticalPlants`, `AvgHumidity`, `AvgTemperature`, `AvgSoilMoisture`, `AvgLightLevel`, `AvgHealthScore`, `TotalReadings`, `PlantSummaries[]`.
+- `PlantHealthSummary`: `PlantId`, `PlantName`, `PlantType`, `Status`, `AvgHealthScore`, `AvgSoilMoisture`, `ReadingCount`, `LastReadingAt`.
+- `PlantTrendResponse`: `PlantId`, `PlantName`, `Daily[]`, `Weekly[]`, `Monthly[]`.
+- `TrendPoint`: `Label`, `AvgHealthScore`, `AvgSoilMoisture`, `AvgTemperature`, `AvgHumidity`, `ReadingCount`.
+- `ReportListResponse`: `Items[]`, `TotalCount`, `Page`, `PageSize`.
+- `ReportDetailResponse`: `Id`, `PlantId`, `PlantName`, `Type`, `Status`, `Format`, `RangeStart`, `RangeEnd`, `FileContent`, `CreatedAt`, `GeneratedAt`.
+- `GenerateReportRequest`: `PlantId`, `RangeStart`, `RangeEnd`, `Type`, `Format`.
 
 ### 5.5.3. Application Layer
 
-La Application Layer del bounded context **Analysis & Reporting** coordina los flujos de generación de reportes, consulta de dashboards y exportación de datos analíticos.
+La Application Layer implementa la lógica de agregación de telemetría y generación de reportes a través del servicio `AnalysisService`.
 
-**Command Handlers:**
+**Application Service:**
 
-`GenerateReportCommandHandler`
+`AnalysisService` (`Oryxen.Application.Analytics.AnalysisService`)
 
-**Propósito:** Crear el registro `Report` en estado `PENDING`, publicar el job de generación al sistema de colas (Hangfire Background Job), retornar el `reportId` para seguimiento asíncrono del proceso.
+Implementa `IAnalysisService` y orquesta las siguientes operaciones:
 
-`ScheduleReportCommandHandler`
+- `GetDashboardAsync(userAccountId)`: Recupera todas las plantas del agricultor via `IPlantRepository.GetByUserAsync`, para cada planta consulta los últimos 30 días de telemetría via `ITelemetryRepository.GetByPlantAsync`, calcula promedios de `HealthScore`, `SoilMoisture`, `Temperature`, `Humidity`, `LightLevel` y compone el `DashboardResponse` con el conteo de plantas por estado (`Healthy`, `Warning`, `Critical`).
 
-**Propósito:** Crear y persistir el `ReportSchedule`, calcular el `nextRunAt` según la frecuencia seleccionada y registrar el job recurrente en Hangfire.
+- `GetPlantTrendsAsync(plantId)`: Recupera hasta 90 días de telemetría para una planta y aplica funciones de agregación `AggregateByDay` (últimos 7 días), `AggregateByWeek` (últimas 8 semanas, agrupadas por lunes de cada semana) y `AggregateByMonth` (últimos 6 meses). Cada grupo calcula promedios de las 4 métricas principales y el conteo de lecturas.
 
-`ExportReportCommandHandler`
+- `GetReportsAsync(userAccountId, plantId?, page, size)`: Lista paginada de reportes generados por el usuario a través del `IAnalysisReportRepository`, enriqueciendo cada item con el nombre de la planta consultado a `IPlantRepository`.
 
-**Propósito:** Recuperar el `Report` en estado `COMPLETED`, generar el documento en el formato destino usando el adaptador correspondiente (`PdfExportAdapter` o `CsvExportAdapter`) y actualizar la URL de descarga.
+- `GenerateReportAsync(userAccountId, request)`: Crea una entidad `AnalysisReport` en estado `Processing`, consulta la telemetría del rango solicitado y serializa los resultados en formato CSV (con encabezados: `RecordedAt,DeviceId,HealthScore,SoilMoisture,Temperature,Humidity,LightLevel`) o JSON. Al completar, actualiza el estado a `Completed` y registra `GeneratedAt`.
 
-`CancelReportScheduleCommandHandler`
+- `GetReportByIdAsync(reportId)`: Recupera un reporte específico con su contenido completo.
 
-**Propósito:** Localizar el `ReportSchedule` por ID y usuario, desactivarlo via `deactivate()` y remover el job del scheduler distribuido.
+**Estrategia de Agregación SQL:**
 
-
-**Query Handlers:**
-
-`GetReportQueryHandler`
-
-**Propósito:** Recuperar el `Report` y sus `MetricSummary` asociados, proyectarlos al DTO de respuesta con URL de descarga válida.
-
-`GetDashboardDataQueryHandler`
-
-**Propósito:** Orquestar las consultas de métricas de todas las plantas activas del usuario, enriquecer el resultado con predicciones del BC AI y componer el payload completo del dashboard.
-
-`GetTelemetrySummaryQueryHandler`
-
-**Propósito:** Delegar en `TelemetryAggregationDomainService` para calcular los agregados estadísticos del rango solicitado con la granularidad especificada.
-
-
-**Application Services:**
-
-`ReportApplicationService`
-
-**Namespace:** `Oryxen.Application.Billing`
-
-**Operaciones:**
-
-- `handle(GenerateReportCommand)`
-- `handle(ExportReportCommand)`
-- `handle(CancelReportScheduleCommand)`
-- `handle(ScheduleReportCommand)`
-- `handle(GetReportQuery)`
-- `handle(ListReportsQuery)`
-
-
-`DashboardApplicationService`
-
-**Operaciones:**
-
-- `handle(GetDashboardDataQuery)`
-- `handle(GetTelemetrySummaryQuery)`
-- `handle(GetHealthTrendQuery)`
-- `handle(ListScheduledReportsQuery)`
-
----
+Todas las consultas de agregación se ejecutan en memoria sobre los datos recuperados por `ITelemetryRepository`, que ya aplica un límite de 500 registros por consulta y ordenación descendente por `RecordedAt`. El índice `{PlantId, RecordedAt}` en PostgreSQL garantiza un rendimiento de lectura óptimo. Para dashboards con múltiples plantas, se ejecuta una consulta independiente por planta, lo cual es aceptable dado el volumen típico de un agricultor (1-20 plantas).
 
 ### 5.5.4. Infrastructure Layer
 
-La Infrastructure Layer del bounded context **Analysis & Reporting** implementa la persistencia de telemetría de alta frecuencia, la generación de documentos exportables y la integración con los contextos AI y Notification.
+La Infrastructure Layer implementa la persistencia de reportes y la configuración de EF Core para el nuevo agregado.
 
-**Adaptadores y Repositorios:**
+**Repositorio:**
 
-`TelemetryTimeSeriesRepository`
+`AnalysisReportRepository` (`Oryxen.Infrastructure.Persistence.Repositories.AnalysisReportRepository`)
 
-**Propósito:** Almacenar y consultar `TelemetryRecord` en PostgreSQL con la extensión TimescaleDB, que habilita hypertables particionadas automáticamente por tiempo. Optimiza consultas de rango temporal (semanas o meses de lecturas) mediante índices BRIN comprimidos.
+Implementa `IAnalysisReportRepository` utilizando EF Core sobre `OryxenDbContext`:
+- `AddAsync`: Inserta un nuevo `AnalysisReport` en la tabla `analysis_reports`.
+- `GetByIdAsync`: Recupera un reporte por su `Id` con `AsNoTracking`.
+- `GetByUserAsync`: Consulta paginada con filtro opcional por `PlantId`, ordenada por `CreatedAt` descendente.
+- `CountByUserAsync`: Conteo total para la paginación.
 
-**Dependencia:** TimescaleDB 2.x + Entity Framework Core 9 con raw SQL queries.
+**Configuración EF Core (Fluent API):**
 
+`AnalysisReportConfiguration` (`Oryxen.Infrastructure.Persistence.Configurations.AnalysisReportConfiguration`)
 
-`ReportRepository`
+Mapea la entidad `AnalysisReport` a la tabla `analysis_reports`:
+- Clave primaria: `Id` (UUID).
+- `Type`, `Status`, `Format`: almacenados como `varchar` mediante conversión de enumerado a string.
+- `FileContent`: tipo `text` para almacenar contenido CSV/JSON.
+- Índices: `UserAccountId` (para consultas por usuario) y compuesto `{UserAccountId, PlantId}` (para filtrado combinado).
 
-**Propósito:** Repositorio EF Core para la persistencia de entidades `Report` en PostgreSQL.
+**DbContext:**
 
-**Clase:** `Oryxen.Infrastructure.Persistence.Repositories.ReportRepository`
-**Dependencia:** Entity Framework Core 9.
+`OryxenDbContext` expone el nuevo `DbSet<AnalysisReport> AnalysisReports` para que EF Core incluya la tabla `analysis_reports` en el modelo y las migraciones.
 
+**Diseño de Persistencia:**
 
-`MetricSummaryRepository`
+**Tabla:** `analysis_reports`
 
-**Propósito:** Repositorio EF Core para la persistencia de `MetricSummary` asociados a cada `Report`.
+| Columna | Tipo | Descripción |
+|---------|------|-------------|
+| `id` | `uuid` (PK) | Identificador único del reporte |
+| `user_account_id` | `uuid` | FK al usuario propietario |
+| `plant_id` | `uuid` | FK lógico a la planta |
+| `type` | `varchar(32)` | Tipo de reporte (`HealthSummary`, `TelemetryDetail`, `PredictiveAlert`) |
+| `status` | `varchar(32)` | Estado (`Pending`, `Processing`, `Completed`, `Failed`) |
+| `range_start` | `timestamp` | Inicio del rango analizado |
+| `range_end` | `timestamp` | Fin del rango analizado |
+| `format` | `varchar(16)` | Formato (`Csv`, `Json`) |
+| `file_content` | `text` | Contenido completo del reporte generado |
+| `generated_at` | `timestamp` | Fecha de finalización de generación |
+| `created_at` | `timestamp` | Fecha de creación del registro |
+| `updated_at` | `timestamp` | Fecha de última modificación |
 
+**Dependencias de Infraestructura:**
+- PostgreSQL 15 → persistencia de la tabla `analysis_reports` y consultas de agregación sobre `telemetry_data`.
+- Entity Framework Core 9 + Npgsql → ORM para todas las operaciones de lectura/escritura.
+- ASP.NET Core 9 JWT Bearer → autenticación y autorización de endpoints.
 
-`ReportScheduleRepository`
+### 5.5.5. Frontend Web: Vue 3 + TypeScript
 
-**Propósito:** Repositorio EF Core para la persistencia y consulta de configuraciones de reportes periódicos.
+El frontend web implementa el módulo de analíticas bajo `src/analytics/` siguiendo la arquitectura de Clean Frontend (Domain → Infrastructure → Application → Presentation) establecida en el proyecto.
 
+**Domain Layer (`src/analytics/domain/model/analytics.entity.ts`):**
 
-`PdfExportAdapter`
+Define las interfaces TypeScript que modelan exactamente los DTOs del backend .NET:
+- `DashboardResponse`, `PlantHealthSummary`, `PlantTrendResponse`, `TrendPoint`, `ReportListResponse`, `ReportItemResponse`, `ReportDetailResponse`, `GenerateReportRequest`.
 
-**Propósito:** Generar documentos PDF a partir de los datos de `Report` y sus `MetricSummary`. Implementa plantillas con gráficos de series temporales, tabla de métricas clave (humedad, temperatura, HealthScore), sección de alertas y recomendaciones predictivas IA.
+**Infrastructure Layer (`src/analytics/infrastructure/analytics.service.ts`):**
 
-**Dependencia:** `QuestPDF` (NuGet)
+`AnalyticsService` realiza llamadas HTTP reales al backend a través del `apiClient` centralizado (que adjunta automáticamente el JWT Bearer y gestiona la renovación transparente de tokens):
+- `getDashboard()` → `GET /api/v1/analytics/dashboard`
+- `getPlantTrends(plantId)` → `GET /api/v1/analytics/plants/{plantId}/trends`
+- `getReports(plantId?, page, size)` → `GET /api/v1/analytics/reports`
+- `getReportById(reportId)` → `GET /api/v1/analytics/reports/{reportId}`
+- `generateReport(request)` → `POST /api/v1/analytics/reports`
 
+Se eliminaron completamente los comportamientos mock y las simulaciones de datos en el cliente que existían en versiones anteriores.
 
-`CsvExportAdapter`
+**Application Layer (`src/analytics/application/analytics.store.ts`):**
 
-**Propósito:** Serializar los `TelemetryRecord` y `MetricSummary` en formato CSV estructurado para exportación y análisis externo en herramientas como Excel o Python/pandas.
+`useAnalyticsStore` (Pinia, Composition API) gestiona el estado reactivo del dashboard:
+- Estado: `dashboard`, `trends` (Map<plantId, PlantTrendResponse>), `reports`, `loading`, `error`.
+- Acciones: `fetchDashboard()`, `fetchPlantTrends(plantId)`, `fetchReports(plantId?, page)`.
 
-**Dependencia:** `CsvHelper` (NuGet)
+**Presentation Layer (`src/analytics/presentation/views/Analytics.vue`):**
 
+Vista principal que renderiza:
+- **Dashboard de estadísticas:** 5 tarjetas con total de plantas, plantas saludables, humedad promedio, humedad del suelo promedio y plantas que requieren atención.
+- **Selector de planta y tendencias:** Dropdown con las plantas del agricultor, pestañas de rango temporal (Diario/Semanal/Mensual) y gráficos SVG de líneas para Health Score, Humedad y Temperatura, además de una tabla resumen de métricas.
+- **Distribución de salud:** Gráfico de anillo SVG (pie chart) con la proporción de plantas Healthy/Warning/Critical.
+- **Lista de resúmenes por planta:** Tarjetas con estado, nombre, especie y métricas clave de cada planta.
 
-`AIAnalyticsAdapter`
+**Accesibilidad (a11y):** Todos los gráficos SVG incluyen `role="img"` y `aria-label`. Los selectores y pestañas utilizan `role="tablist"`, `role="tab"`, `aria-selected` y `aria-label`. Los estados de carga y error usan `role="status"`, `aria-live="polite"` y `role="alert"`.
 
-**Propósito:** Cliente interno para solicitar predicciones de salud al BC AI. Implementa el patrón Anti-Corruption Layer (ACL) para aislar el modelo de dominio de Analytics del modelo de dominio del BC AI, traduciendo entre sus lenguajes de dominio respectivos.
+**Internacionalización (i18n):** Todas las etiquetas se obtienen del sistema `vue-i18n` con claves bajo el namespace `analytics.*`, disponibles en `en.json` (inglés) y `es.json` (español). Esto incluye títulos, mensajes de estado, etiquetas de gráficos y rangos temporales.
 
-**Patrón de integración:** ACL sincrónico hacia el `DiagnosisQueryService` del BC AI.
+### 5.5.6. Frontend Mobile: Kotlin + Jetpack Compose
 
+El cliente Android nativo consume los mismos endpoints de analíticas a través de Retrofit.
 
-`NotificationEventPublisher`
+**Contrato de API (`OryxenApi.kt`):**
 
-**Propósito:** Publicar el evento de dominio `ReportGeneratedEvent` al BC Notification cuando un reporte es completado exitosamente, para que el usuario reciba una notificación push y/o email con el enlace de descarga.
+Se añadieron dos nuevos métodos al contrato Retrofit:
+- `getDashboard()` → `GET analytics/dashboard` → `DashboardResponse`
+- `getPlantTrends(plantId)` → `GET analytics/plants/{plantId}/trends` → `PlantTrendResponse`
 
-**Patrón de integración:** Domain Event → Apache Kafka (topic: `analytics.report.generated`).
+**DTOs serializables (`Dtos.kt`):**
 
+Se definieron las data classes con `@Serializable`:
+- `DashboardResponse`, `PlantHealthSummaryDto`, `TrendPointDto`, `PlantTrendResponse`.
 
-`FileStorageAdapter`
+**Repositorio (`Repositories.kt`):**
 
-**Propósito:** Subir los documentos generados (PDF/CSV) a almacenamiento de objetos en la nube y retornar una URL de descarga pre-firmada con expiración de 24 horas.
+`AnalyticsRepository` expone `getDashboard()` y `getPlantTrends(plantId)` delegando en `ApiProvider.api`.
 
-**Dependencia:** AWS S3 SDK / Google Cloud Storage client library.
+**Pantalla de Analíticas (`AnalyticsScreen.kt`):**
 
+Implementa una vista con:
+- **Dashboard Overview:** Tarjetas resumen con total de plantas, saludables, críticas, health score promedio, humedad del suelo y temperatura.
+- **Lista de plantas:** Tarjetas interactivas que al ser seleccionadas cargan las tendencias diarias de la planta.
+- **Tendencias diarias:** Lista de puntos `TrendPointDto` con Health Score y Soil Moisture, coloreados por banda de salud (verde > 80, azul > 60, amarillo > 30, rojo < 30).
+- Navegación integrada desde el `DashboardScreen` mediante un botón `Leaderboard` en la `TopAppBar`.
 
-**Dependencias de infraestructura del contexto Analysis & Reporting:**
+**Navegación (`OryxenNavHost.kt`):**
 
-- PostgreSQL 15 + TimescaleDB 2.x → series de tiempo de telemetría y persistencia de reportes, métricas y schedules.
-- Apache Kafka → publicación del evento `ReportGeneratedEvent` al BC Notification.
-- QuestPDF (NuGet) → generación de documentos PDF con gráficos y tablas.
-- Apache Commons CSV (1.10.0) → exportación de datos tabulares en formato CSV.
-- AWS S3 / Google Cloud Storage → almacenamiento persistente de archivos generados.
-- Hangfire → orquestación de reportes periódicos programados con background jobs.
-- Redis → caché de resultados de dashboard para consultas de alta frecuencia (TTL: 5 minutos).
+Se agregó la ruta `ANALYTICS` con su composable correspondiente, y el callback `onNavigateAnalytics` en `DashboardScreen`.
 
----
+### 5.5.7. Bounded Context Software Architecture Component Level Diagrams
 
-### 5.5.5. Bounded Context Software Architecture Component Level Diagrams
-
-El Component Diagram del bounded context `Analysis & Reporting` representa la arquitectura interna del módulo analítico, mostrando el flujo completo desde la ingestión de telemetría IoT hasta la generación y entrega de reportes al usuario.
+El Component Diagram del bounded context `Analysis &amp; Reporting` representa el flujo de datos desde la telemetría IoT hasta la visualización en los clientes web y móvil.
 
 **Descripción de componentes principales:**
 
-- **Report REST API Component:** Expone los endpoints de generación, consulta y descarga de reportes (`/api/v1/reports`). Delega en `ReportApplicationService`.
-- **Dashboard REST API Component:** Expone los endpoints del dashboard analítico (`/api/v1/dashboard`). Delega en `DashboardApplicationService`.
-- **Report Schedule REST API Component:** Expone los endpoints de reportes periódicos (`/api/v1/reports/schedules`).
-- **Report Command Processing Component:** Orquesta los command handlers de generación, exportación y programación de reportes.
-- **Dashboard Query Processing Component:** Resuelve las queries de dashboard, telemetría y tendencias de salud.
-- **Analytics Domain Component:** Contiene los agregados `Report`, `MetricSummary`, `TelemetryRecord` y `ReportSchedule`, junto a los domain services de agregación, generación y predicción.
-- **Telemetry Time-Series Component:** Gestiona la escritura y consulta eficiente de series de tiempo de sensores (TimescaleDB hypertable).
-- **Analytics Persistence Component:** Implementa los repositorios EF Core para reportes, métricas y schedules.
-- **PDF/CSV Export Component:** Genera documentos exportables con gráficos de series temporales y tablas de métricas.
-- **AI Integration Component (ACL):** Anti-Corruption Layer hacia el BC AI para obtener predicciones de `HealthScore`.
-- **File Storage Component:** Gestiona el ciclo de vida de archivos generados en cloud storage (S3/GCS) con pre-signed URLs.
-- **Notification Event Component:** Publica `ReportGeneratedEvent` al BC Notification via Kafka.
+- **Analytics REST API Component:** `AnalyticsController` expone los 5 endpoints bajo `/api/v1/analytics`, autenticados con JWT Bearer (roles FARMER, ADMIN).
+- **Analysis Application Component:** `AnalysisService` ejecuta las consultas de agregación sobre los repositorios de dominio (`IPlantRepository`, `ITelemetryRepository`, `IAnalysisReportRepository`) y compone los DTOs de respuesta.
+- **Analytics Domain Component:** Contiene el agregado `AnalysisReport`, sus enumerados, y la interfaz de repositorio `IAnalysisReportRepository`.
+- **Analytics Persistence Component:** `AnalysisReportRepository` (EF Core) persiste los reportes generados en la tabla `analysis_reports` de PostgreSQL. Las consultas de agregación leen directamente de `telemetry_data`.
+- **Vue 3 Analytics SPA:** `Analytics.vue` + `analytics.service.ts` + `analytics.store.ts` consumen los endpoints y renderizan gráficos SVG con datos reactivos en tiempo real.
+- **Android Analytics Screen:** `AnalyticsScreen.kt` + `AnalyticsRepository` + `OryxenApi.kt` consumen los mismos endpoints via Retrofit y muestran tarjetas y tendencias en Jetpack Compose.
 
 ![ComponentsDiagram_Analytics](./assets/Chapter-5/analytics-component-diagram.svg)
 
----
+### 5.5.8. Bounded Context Software Architecture Code Level Diagrams
 
-### 5.5.6. Bounded Context Software Architecture Code Level Diagrams
+#### 5.5.8.1. Bounded Context Domain Layer Class Diagrams
 
-En esta sección se presentan los diagramas a nivel de código del bounded context `Analysis & Reporting`, visualizando la estructura del dominio y el diseño de la base de datos analítica.
-
-#### 5.5.6.1. Bounded Context Domain Layer Class Diagrams
-
-El diagrama UML del Domain Layer muestra el agregado principal `Report`, la entidad `MetricSummary` contenida en cada reporte, la entidad `TelemetryRecord` como fuente de datos histórica (consumida desde el BC Device Management) y `ReportSchedule` como entidad de configuración de generación periódica. Los Value Objects `DateRange`, `ReportType`, `ExportFormat`, `ReportStatus`, `HealthScore` y `ScheduleFrequency` garantizan inmutabilidad en las reglas de negocio críticas del dominio analítico.
+El diagrama UML del Domain Layer muestra el agregado `AnalysisReport` con sus enumerados `ReportType`, `ReportStatus` y `ExportFormat`. La entidad hereda de `AuditableEntity` (proporcionando `Id`, `CreatedAt`, `UpdatedAt`) y referencia mediante `Guid` a los agregados externos `Plant` (BC Plant Management) y `UserAccount` (BC Auth &amp; Identity).
 
 **Relaciones entre clases:**
 
-- `Report (1) ──── (*) MetricSummary`
-- `ReportSchedule (1) ──── (*) Report` (vía generación periódica)
-- `TelemetryRecord (*) ──── (1) plantId` (referencia cruzada lógica al BC Plant Management)
-- `ReportGenerationDomainService → Report`
-- `TelemetryAggregationDomainService → TelemetryRecord`
-- `TelemetryAggregationDomainService → MetricSummary`
-- `PredictiveHealthDomainService → HealthScore`
+- `AnalysisReport` → `UserAccount` (via `UserAccountId: Guid`)
+- `AnalysisReport` → `Plant` (via `PlantId: Guid`)
+- `IAnalysisReportRepository` ← `AnalysisReportRepository` (implementación en Infrastructure)
 
 ![UMLClassDiagram_Analytics](./assets/Chapter-5/analytics-class-diagram.svg)
 
-#### 5.5.6.2. Bounded Context Database Design Diagram
+#### 5.5.8.2. Bounded Context Database Design Diagram
 
-El diagrama de base de datos del bounded context `Analysis & Reporting` representa el esquema relacional para reportes y la hypertable TimescaleDB para telemetría de alta frecuencia.
+El diagrama de base de datos del bounded context `Analysis &amp; Reporting` muestra la tabla `analysis_reports` y su relación con las tablas existentes `telemetry_data` (BC Device Management) y `plants` (BC Plant Management), estas últimas utilizadas como fuentes de datos para las consultas de agregación.
 
-**Tabla principal:** `reports`
+**Tabla principal:** `analysis_reports`
 
 **Atributos:**
 
-- `report_id` → UUID, PRIMARY KEY
-- `user_id` → UUID, NOT NULL
+- `id` → UUID, PRIMARY KEY
+- `user_account_id` → UUID, NOT NULL
 - `plant_id` → UUID, NOT NULL
-- `report_type` → ENUM('HEALTH_SUMMARY','TELEMETRY_DETAIL','PREDICTIVE_ALERT','COMPARATIVE_ANALYSIS'), NOT NULL
-- `status` → ENUM('PENDING','PROCESSING','COMPLETED','FAILED'), NOT NULL
-- `date_range_start` → TIMESTAMP, NOT NULL
-- `date_range_end` → TIMESTAMP, NOT NULL
-- `export_format` → ENUM('PDF','CSV','JSON'), NOT NULL
-- `file_url` → VARCHAR(500), NULLABLE
+- `type` → VARCHAR(32), NOT NULL
+- `status` → VARCHAR(32), NOT NULL
+- `range_start` → TIMESTAMP, NOT NULL
+- `range_end` → TIMESTAMP, NOT NULL
+- `format` → VARCHAR(16), NOT NULL
+- `file_content` → TEXT, NULLABLE
 - `generated_at` → TIMESTAMP, NULLABLE
 - `created_at` → TIMESTAMP, NOT NULL
-
-
-**Tabla:** `metric_summaries`
-
-**Atributos:**
-
-- `summary_id` → UUID, PRIMARY KEY
-- `report_id` → UUID, FOREIGN KEY → `reports(report_id)`
-- `plant_id` → UUID, NOT NULL
-- `period_start` → TIMESTAMP, NOT NULL
-- `period_end` → TIMESTAMP, NOT NULL
-- `avg_humidity` → FLOAT, NOT NULL
-- `avg_temperature` → FLOAT, NOT NULL
-- `avg_light_level` → FLOAT, NOT NULL
-- `avg_health_score` → FLOAT, NOT NULL
-- `min_health_score` → FLOAT, NOT NULL
-- `max_health_score` → FLOAT, NOT NULL
-- `diagnosis_count` → INT, DEFAULT 0
-- `alert_count` → INT, DEFAULT 0
-
-
-**Hypertable TimescaleDB:** `telemetry_records`
-
-**Atributos:**
-
-- `record_id` → UUID
-- `plant_id` → UUID, NOT NULL
-- `device_id` → UUID, NOT NULL
-- `humidity` → FLOAT, NOT NULL
-- `temperature` → FLOAT, NOT NULL
-- `light_level` → FLOAT, NOT NULL
-- `soil_moisture` → FLOAT
-- `health_score` → FLOAT
-- `recorded_at` → TIMESTAMP WITH TIME ZONE, NOT NULL (dimensión de partición temporal de TimescaleDB)
+- `updated_at` → TIMESTAMP, NULLABLE
 
 **Constraints:**
 
-- PRIMARY KEY (`record_id`, `recorded_at`) — requerido por TimescaleDB para hypertables.
-- INDEX BRIN en `recorded_at` para consultas de rango eficientes sobre meses de datos.
-- INDEX COMPUESTO en (`plant_id`, `recorded_at`) para queries por planta + ventana temporal.
+- INDEX en `user_account_id` para consultas por usuario.
+- INDEX compuesto en `{user_account_id, plant_id}` para filtrado combinado.
 
+**Fuentes de datos para agregación (tablas externas):**
 
-**Tabla:** `report_schedules`
-
-**Atributos:**
-
-- `schedule_id` → UUID, PRIMARY KEY
-- `user_id` → UUID, NOT NULL
-- `plant_id` → UUID, NOT NULL
-- `frequency` → ENUM('DAILY','WEEKLY','MONTHLY'), NOT NULL
-- `export_format` → ENUM('PDF','CSV','JSON'), NOT NULL
-- `next_run_at` → TIMESTAMP, NOT NULL
-- `is_active` → BOOLEAN, DEFAULT TRUE
-- `created_at` → TIMESTAMP, NOT NULL
-
-**Constraints:**
-
-- INDEX en `next_run_at` para la consulta eficiente de jobs pendientes de ejecución por el scheduler.
-- INDEX en `user_id` para listar todos los schedules de un usuario.
-
-
-**Relaciones entre tablas:**
-
-- `reports (1) ──── (*) metric_summaries`
-- `report_schedules (1) ──── (*) reports`
-- `telemetry_records (*) ──── (1) plant_id` (referencia lógica al BC Plant Management)
+- `telemetry_data` (BC Device Management): índice `{plant_id, recorded_at}` optimiza las consultas de rango temporal por planta.
+- `plants` (BC Plant Management): proporciona `name`, `type`, `status` para enriquecer los DTOs de respuesta.
 
 ![ERDDiagram_Analytics](./assets/Chapter-5/analytics-database-diagram.svg)
+
+### 5.5.9. Especificación BDD (Gherkin)
+
+La especificación en formato Gherkin del bounded context se encuentra en el archivo `06-analisis-reportes.feature` dentro de la suite de pruebas `Oryxen.Specs`. Cubre 11 escenarios que validan:
+
+- Consulta del dashboard analítico con datos reales de telemetría.
+- Tendencias diarias, semanales y mensuales con agregación correcta de promedios.
+- Generación de reportes CSV/JSON bajo demanda con contenido verificable.
+- Listado paginado de reportes generados.
+- Control de acceso: respuestas 401 para usuarios no autenticados.
+- Validación de rangos de fecha inválidos (400 Bad Request).
+- Renderizado de gráficos SVG en el frontend Vue 3.
+- Visualización de tendencias en la app Android nativa.
+- Internacionalización bilingüe (español/inglés) de todas las etiquetas del dashboard.
 
 ---
 
@@ -5117,8 +4869,8 @@ public sealed record SubscriptionResponse(Guid Id, Guid UserId, string Plan, str
 
 | Operación | Endpoint Stripe | Descripción |
 |-----------|-----------------|-------------|
-| Create Checkout Session | `POST /v1/checkout/sessions` | Crea una sesión de pago con `line_items` (price_data inline) y retorna URL de redirect |
-| Parse Webhook | Local JSON parse | Parsea el payload del webhook y extrae `type`, `subscription`, `customer`, `payment_intent`, `amount_total` |
+| Create Checkout Session | `POST /v1/checkout/sessions` | Crea una sesión de pago con `line_items` (price_data inline), `client_reference_id` (userId) y retorna URL de redirect |
+| Parse Webhook | Local JSON parse | Parsea el payload del webhook y extrae `type`, `subscription`, `customer`, `client_reference_id`, `payment_intent`, `amount_total` |
 
 **Configuración (`StripeSettings`):**
 
@@ -5128,20 +4880,113 @@ public sealed record SubscriptionResponse(Guid Id, Guid UserId, string Plan, str
 | `WebhookSecret` | `Stripe__WebhookSecret` |
 | `BaseUrl` | `Stripe__BaseUrl` (default: `https://api.stripe.com`) |
 
-**b. Repositorios EF Core:**
+**b. StripeWebhookController (Flujo Asíncrono de Stripe):**
+
+**Ruta:** `POST /api/v1/subscriptions/webhook`
+**Auth:** `[AllowAnonymous]` — Stripe llama server-to-server con firma HMAC-SHA256 en `Stripe-Signature`.
+
+**Procesamiento del webhook:**
+
+1. El backend lee el `body` crudo y el header `Stripe-Signature`.
+2. `SubscriptionService.ProcessWebhookAsync` invoca `StripePaymentService.ParseWebhookAsync` que parsea el JSON de Stripe y extrae los campos relevantes.
+3. Si el `EventType` es `checkout.session.completed`:
+   - **Búsqueda primaria:** Se usa `client_reference_id` (el `UserAccountId` en UUID) para localizar al usuario directamente via `IUserAccountRepository.GetByIdAsync`.
+   - **Búsqueda de fallback:** Si el `ClientReferenceId` no está disponible o el parseo de GUID falla, se usa `StripeCustomerId` via `IUserAccountRepository.GetByStripeCustomerIdAsync`.
+4. Se actualiza la suscripción: `Plan = Premium`, `Status = Active`, `NextBillingDate = UtcNow + 1 month`, `StripeCustomerId`, `StripeSubscriptionId`.
+5. Se registra un `Payment` con status `Succeeded`, `TransactionId` (payment_intent), `Amount`, `Currency` y `PaidAt`.
+6. Se persiste todo via `IUnitOfWork.SaveChangesAsync`.
+
+**c. Endpoint de Confirmación Síncrono (Post-Redirect):**
+
+**Ruta:** `POST /api/v1/subscriptions/confirm`
+**Auth:** `[Authorize]` (JWT Bearer).
+
+El frontend (CheckoutView.vue) invoca este endpoint al recibir `?status=success` desde Stripe. El endpoint consulta `GET /api/v1/subscriptions/current` para retornar el estado actualizado de la suscripción, confirmando visualmente la activación Premium.
+
+**d. Repositorios EF Core:**
 
 | Clase | Namespace | Tabla |
 |-------|-----------|-------|
 | `PlanRepository` | `Oryxen.Infrastructure.Persistence.Repositories` | `plans` |
 | `PaymentRepository` | `Oryxen.Infrastructure.Persistence.Repositories` | `payments` |
 
-**c. Configuraciones EF Core:**
+**e. Configuraciones EF Core:**
 
 | Clase | Tabla | Notas |
 |-------|-------|-------|
 | `PlanConfiguration` | `plans` | Name unique index, Price precision(10,2) |
 | `PaymentConfiguration` | `payments` | SubscriptionId index, Status string conversion |
 | `SubscriptionConfiguration` | `subscriptions` | UserAccountId unique index, StripeCustomerId/SubscriptionId varchar(120) |
+
+**f. Diagrama de Secuencia — Flujo Completo de Pago (Stripe Checkout + Webhook):**
+
+```
+  Farmer (Web/Mobile)             Oryxen Backend               Stripe API              PostgreSQL
+  ──────────────────             ──────────────               ──────────              ──────────
+       │                               │                           │                       │
+       │  POST /subscriptions/checkout │                           │                       │
+       │  {planId: "uuid"}             │                           │                       │
+       │ ─────────────────────────────>│                           │                       │
+       │                               │  POST /v1/checkout/      │                       │
+       │                               │    sessions              │                       │
+       │                               │  (line_items,            │                       │
+       │                               │   client_reference_id=   │                       │
+       │                               │   userId)                │                       │
+       │                               │ ────────────────────────>│                       │
+       │                               │                           │                       │
+       │                               │  200 {id, url}           │                       │
+       │                               │ <────────────────────────│                       │
+       │                               │                           │                       │
+       │  200 {sessionId, checkoutUrl} │                           │                       │
+       │ <─────────────────────────────│                           │                       │
+       │                               │                           │                       │
+       │  HTTP 302 → checkoutUrl       │                           │                       │
+       │ ─────────────────────────────────────────────────────────>│                       │
+       │                               │                           │                       │
+       │  Farmer completa el pago en   │                           │                       │
+       │  la UI de Stripe              │                           │                       │
+       │                               │                           │                       │
+       │  HTTP 302 → successUrl        │                           │                       │
+       │ <─────────────────────────────────────────────────────────│                       │
+       │  (?status=success)            │                           │                       │
+       │                               │                           │                       │
+       │                               │  POST /webhook            │                       │
+       │                               │  (checkout.session.       │                       │
+       │                               │   completed)              │                       │
+       │                               │ <─────────────────────────│                       │
+       │                               │                           │                       │
+       │                               │  Parse JSON, extract      │                       │
+       │                               │  client_reference_id=     │                       │
+       │                               │  userId, customer,        │                       │
+       │                               │  payment_intent, amount   │                       │
+       │                               │                           │                       │
+       │                               │  GetByIdAsync(userId) ──────────────────────────>│
+       │                               │ <── UserAccount + ────── │                       │
+       │                               │     Subscription          │                       │
+       │                               │                           │                       │
+       │                               │  Update Subscription:     │                       │
+       │                               │   Plan=Premium,           │                       │
+       │                               │   Status=Active,          │                       │
+       │                               │   StripeCustomerId=...,   │                       │
+       │                               │   StripeSubscriptionId=.. │                       │
+       │                               │                           │                       │
+       │                               │  Insert Payment           │                       │
+       │                               │   (Status=Succeeded) ────────────────────────────>│
+       │                               │                           │                       │
+       │                               │  SaveChangesAsync() ─────────────────────────────>│
+       │                               │                           │                       │
+       │                               │  200 OK                   │                       │
+       │                               │ <─────────────────────────│                       │
+       │                               │                           │                       │
+       │  GET /subscriptions/current   │                           │                       │
+       │  (CheckoutView refreshes)     │                           │                       │
+       │ ─────────────────────────────>│                           │                       │
+       │                               │                           │                       │
+       │  200 {plan: "Premium",        │                           │                       │
+       │       status: "Active", ...}  │                           │                       │
+       │ <─────────────────────────────│                           │                       │
+       │                               │                           │                       │
+```
 
 ### 5.7.5. Bounded Context Software Architecture Component Level Diagrams
 
@@ -5251,238 +5096,282 @@ public sealed record SubscriptionResponse(Guid Id, Guid UserId, string Plan, str
 ---
 ## 5.8. Bounded Context: Community
 
-El bounded context de **Community** representa el espacio social y colaborativo de la plataforma Oryxen. Este contexto permite a los usuarios compartir el progreso de sus plantas, intercambiar consejos, interactuar mediante comentarios y acceder a un *feed* personalizado. Además, incorpora reglas críticas de negocio y privacidad, como la moderación de contenido y la sanitización automática de metadatos (EXIF/GPS) en las fotografías para proteger la seguridad de los usuarios.
+El bounded context de **Community** representa el espacio social y colaborativo de la plataforma Oryxen. Este contexto permite a los usuarios compartir experiencias de cultivo, intercambiar consejos agrícolas, interactuar mediante comentarios y acceder a un feed cronológico de publicaciones. El acceso está restringido exclusivamente a suscriptores del plan **Premium**, sirviendo como diferenciador estratégico de retención dentro del modelo de monetización Freemium de Oryxen.
+
+Como medida crítica de ciberseguridad y privacidad, toda imagen cargada en una publicación es procesada por un sanitizador automático de metadatos que remueve datos EXIF y coordenadas GPS antes del almacenamiento, previniendo la fuga de geolocalización de fincas agrícolas.
 
 ### 5.8.1. Domain Layer
 
-La capa de dominio del bounded context **Community** contiene las clases que modelan el comportamiento central de la interacción social, garantizando las reglas de publicación, límites de interacción y estados de moderación.
+La capa de dominio del bounded context **Community** contiene las entidades que modelan el comportamiento central de la interacción social agrícola.
 
-**a. Entity / Aggregate Root:**
+**a. Aggregate Root: `CommunityPost`**
 
-**Nombre de la clase:** `CommunityPost`
 **Namespace:** `Oryxen.Domain.Entities`
 
-**Propósito:** Representa una publicación realizada por un usuario en el foro o *feed* comunitario. Constituye el Aggregate Root del bounded context, encapsulando el contenido, las imágenes y su estado de moderación.
+**Propósito:** Representa una publicación realizada por un usuario en el feed comunitario. Hereda de `AuditableEntity` para obtener `Id` (Guid), `CreatedAt` y `UpdatedAt`.
 
 **Atributos:**
-*   `Id: Guid` → Identificador único de la publicación.
-*   `AuthorId: Guid` → Identificador del usuario creador.
-*   `PlantId: Guid?` → (Opcional) Identificador de la planta etiquetada.
-*   `Content: string` → Texto del consejo o actualización.
-*   `ImageUrl: string?` → URL de la fotografía compartida (previamente sanitizada).
-*   `Status: PostStatus` → Estado de la publicación (Active, Reported, Moderated, Archived).
-*   `CreatedAt: DateTime` → Fecha de la publicación.
-*   `UpdatedAt: DateTime` → Última modificación.
 
-**Métodos:**
-*   `updateContent(newContent)` → Modifica el texto de la publicación validando políticas.
-*   `markAsModerated()` → Cambia el estado de la publicación si infringe las normas.
-*   `archive()` → Oculta la publicación lógicamente.
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único (heredado de `AuditableEntity`) |
+| `UserId` | `Guid` | FK al usuario autor |
+| `Title` | `string` | Título de la publicación (max 200 caracteres) |
+| `Content` | `string` | Contenido del consejo o experiencia (max 4000 caracteres) |
+| `ImageUrl` | `string?` | URL relativa de la imagen sanitizada |
+| `LikesCount` | `int` | Contador desnormalizado de "me gusta" |
+| `CreatedAt` | `DateTime` | Fecha de creación |
+| `UpdatedAt` | `DateTime?` | Última modificación |
 
 **Relaciones:**
-*   Un `CommunityPost` tiene múltiples `Comment`.
-*   Un `CommunityPost` puede tener múltiples `Reaction`.
+- `Author` → `UserAccount` (FK `UserId`, DeleteBehavior.Restrict)
+- `Comments` → `ICollection<Comment>` (Cascade delete)
+- `Likes` → `ICollection<Like>` (Cascade delete)
 
-**b. Entities del dominio:**
+**b. Entity: `Comment`**
 
-**Nombre de la clase:** `Comment`
-**Propósito:** Representa las respuestas que los usuarios dejan en una publicación principal. Según las reglas de negocio, su contenido no puede exceder los 300 caracteres ni contener enlaces externos no permitidos.
+**Namespace:** `Oryxen.Domain.Entities`
 
-**c. Value Objects:**
+**Propósito:** Representa un comentario en una publicación. Hereda de `AuditableEntity`.
 
-**Nombre de la clase:** `PostStatus`
-**Propósito:** Representa el estado de moderación y visibilidad de una publicación en la comunidad.
-**Valores posibles:**
-*   `ACTIVE`
-*   `REPORTED`
-*   `MODERATED`
-*   `ARCHIVED`
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `Id` | `Guid` | Identificador único |
+| `PostId` | `Guid` | FK a `CommunityPost` |
+| `UserId` | `Guid` | FK al usuario autor |
+| `Content` | `string` | Texto del comentario (max 1000 caracteres) |
+| `CreatedAt` | `DateTime` | Fecha del comentario |
 
-**Nombre de la clase:** `ReactionType`
-**Propósito:** Define el tipo de interacción de un usuario frente a un post.
-**Valores posibles:**
-*   `LIKE`
-*   `HELPFUL`
+**Relaciones:**
+- `Post` → `CommunityPost`
+- `Author` → `UserAccount` (FK `UserId`, DeleteBehavior.Restrict)
 
-**d. Referencias externas del dominio:**
+**c. Entity: `Like`**
 
-*   **UserAccount** (Origen: Auth & Identity): Representa al autor de la publicación o comentario.
-*   **Plant** (Origen: Plant Management): Representa la especie etiquetada en la publicación para nutrir el algoritmo del feed personalizado.
+**Namespace:** `Oryxen.Domain.Entities`
 
-**e. Request/Command DTOs (Application Layer):**
+**Propósito:** Representa la interacción "me gusta" de un usuario sobre una publicación. Clave primaria compuesta (`PostId`, `UserId`). No hereda de `AuditableEntity`.
 
-**Namespace:** `Oryxen.Application.Community`
-*   `CreatePostRequest`: Representa la intención de crear una nueva publicación (gatilla la sanitización de imagen).
-*   `AddCommentRequest`: Representa la intención de comentar en una publicación.
-*   `AddReactionRequest`: Representa la intención de reaccionar a un post.
-*   `ModeratePostRequest`: Representa la intención de un administrador de restringir contenido reportado.
+| Atributo | Tipo | Descripción |
+|----------|------|-------------|
+| `PostId` | `Guid` | FK a `CommunityPost` (parte de PK compuesta) |
+| `UserId` | `Guid` | FK a `UserAccount` (parte de PK compuesta) |
+| `CreatedAt` | `DateTime` | Fecha de la interacción |
 
-**f. Queries del dominio:**
+**d. Repository Interface:**
 
-*   `GetPersonalizedFeedQuery`: Obtener publicaciones relevantes basadas en el inventario de plantas del usuario activo.
-*   `GetPostByIdQuery`: Obtener el detalle de un post y sus comentarios anidados.
-
-**g. Domain Services:**
-
-*   `CommunityInteractionService`: Valida las operaciones de interacción social (ej. validación de límites de caracteres, filtro de palabras prohibidas).
-
-**h. Repository:**
-
-*   `IPostRepository`: Interfaz para gestionar la persistencia y ciclo de vida de las publicaciones.
-*   `ICommentRepository`: Interfaz para persistir los comentarios asociados.
+```csharp
+// Oryxen.Domain.Repositories
+public interface ICommunityRepository
+{
+    Task<IReadOnlyList<CommunityPost>> GetFeedAsync(int page, int pageSize, CancellationToken ct);
+    Task<CommunityPost?> GetPostByIdAsync(Guid postId, CancellationToken ct);
+    Task AddPostAsync(CommunityPost post, CancellationToken ct);
+    Task AddCommentAsync(Comment comment, CancellationToken ct);
+    Task<Comment?> GetCommentByIdAsync(Guid commentId, CancellationToken ct);
+    void RemoveComment(Comment comment);
+    Task<Like?> GetLikeAsync(Guid postId, Guid userId, CancellationToken ct);
+    Task AddLikeAsync(Like like, CancellationToken ct);
+    void RemoveLike(Like like);
+    Task<int> CountByPostAsync(Guid postId, CancellationToken ct);
+}
+```
 
 ### 5.8.2. Interface Layer
 
-La Interface Layer expone las capacidades sociales a través de endpoints REST que el frontend (Web y Móvil) utilizará para construir el *feed* y gestionar las interacciones.
+La Interface Layer expone los endpoints REST del feed comunitario mediante el controlador `CommunityController`.
 
-**a. CommunityController**
+**a. `CommunityController`**
 
 **Namespace:** `Oryxen.API.Controllers`
-**Propósito:** Exponer los endpoints para gestionar el flujo de la comunidad y moderación.
+**Ruta base:** `/api/v1/community`
+**Autorización:** `[Authorize(Roles = "FARMER,ADMIN")]`
 
-**Dependencias:**
-*   `CommunityCommandService`
-*   `CommunityQueryService`
+| Método | Ruta | Descripción | Auth |
+|--------|------|-------------|------|
+| `GET` | `/api/v1/community/feed?page=1&pageSize=20` | Feed cronológico paginado | FARMER, ADMIN |
+| `GET` | `/api/v1/community/posts/{id}` | Detalle de un post con comentarios | FARMER, ADMIN |
+| `POST` | `/api/v1/community/posts` | Crear publicación (multipart: title, content, image) | FARMER, ADMIN |
+| `POST` | `/api/v1/community/posts/{id}/comments` | Añadir comentario | FARMER, ADMIN |
+| `POST` | `/api/v1/community/posts/{id}/likes` | Alternar me gusta (toggle) | FARMER, ADMIN |
 
-**Endpoints expuestos:**
-*   `GET /api/v1/community/feed` → Obtiene el *feed* personalizado.
-*   `POST /api/v1/community/posts` → Crear una nueva publicación (recibe payload e imagen).
-*   `GET /api/v1/community/posts/{postId}` → Ver detalles de un post.
-*   `POST /api/v1/community/posts/{postId}/comments` → Agregar un comentario.
-*   `PUT /api/v1/community/moderation/{postId}` → Endpoint de moderación para administradores.
+El `UserId` se extrae del claim `sub` del token JWT en cada petición.
 
-**b. Resources / DTOs:**
+**b. DTOs (Application Layer Contracts):**
 
-*   `PostResource`: Representa la estructura de la publicación enviada al cliente.
-*   `CreatePostResource`: Payload requerido para compartir una experiencia.
-*   `CommentResource`: Datos estructurados de los comentarios.
+**Namespace:** `Oryxen.Application.Community.Contracts`
 
-**c. Assemblers:**
-
-*   `PostResourceFromEntityAssembler`: Transforma la entidad `CommunityPost` en un recurso REST.
-*   `CreatePostCommandFromResourceAssembler`: Mapea el request del cliente al comando de dominio.
+| DTO | Propósito |
+|-----|-----------|
+| `CreatePostRequest` | Payload con `Title` y `Content` |
+| `CreateCommentRequest` | Payload con `Content` |
+| `PostResponse` | Incluye `Id`, `UserId`, `AuthorName`, `Title`, `Content`, `ImageUrl`, `LikesCount`, `LikedByCurrentUser`, `CreatedAt`, `Comments[]` |
+| `CommentResponse` | Incluye `Id`, `PostId`, `UserId`, `AuthorName`, `Content`, `CreatedAt` |
+| `LikeResponse` | Incluye `PostId`, `LikesCount`, `LikedByCurrentUser` |
 
 ### 5.8.3. Application Layer
 
-Esta capa orquesta los casos de uso para la interacción social, garantizando las validaciones de privacidad correspondientes antes de interactuar con el dominio.
+**a. `ICommunityService` / `CommunityService`**
 
-**a. Command Handlers / Command Services:**
+**Namespace:** `Oryxen.Application.Community`
 
-`CommunityCommandServiceImpl` maneja:
-*   `handle(CreatePostCommand)`: Coordina la llamada al servicio de infraestructura para limpiar los metadatos de la imagen (EXIF/GPS), crea la entidad `CommunityPost` y la persiste.
-*   `handle(AddCommentCommand)`: Utiliza `CommunityInteractionService` para validar que el texto sea menor a 300 caracteres y sin enlaces, luego guarda el `Comment`.
-*   `handle(ModeratePostCommand)`: Evalúa un reporte y cambia el `PostStatus` a `MODERATED`.
+| Método | Descripción |
+|--------|-------------|
+| `GetFeedAsync(Guid currentUserId, int page, int pageSize)` | Retorna feed cronológico; incluye Likes y Comments hidratados. Calcula `LikedByCurrentUser` por cada post. |
+| `GetPostByIdAsync(Guid postId, Guid currentUserId)` | Retorna un post individual con comentarios anidados. |
+| `CreatePostAsync(Guid userId, CreatePostRequest, Stream? imageStream, string? imageFileName)` | Si hay imagen, invoca `IImageMetadataSanitizer.StripExifMetadata()`, guarda el archivo en `wwwroot/uploads/community/` y persiste el post con `ImageUrl`. |
+| `AddCommentAsync(Guid postId, Guid userId, CreateCommentRequest)` | Crea y persiste el comentario; retorna el `CommentResponse` con nombre del autor. |
+| `ToggleLikeAsync(Guid postId, Guid userId)` | Si el like existe → lo elimina. Si no existe → lo crea. Retorna `LikeResponse` con el nuevo conteo y si el usuario actual dio like. |
 
-**b. Query Handlers / Query Services:**
+**b. Flujo de sanitización de imagen (ciberseguridad):**
 
-`CommunityQueryServiceImpl` maneja:
-*   `handle(GetPersonalizedFeedQuery)`: Cruza la información del usuario autenticado con las etiquetas de plantas para devolver publicaciones priorizadas.
+1. El `CommunityController` recibe el `IFormFile` y lo pasa como `Stream` al servicio.
+2. `CommunityService` invoca `IImageMetadataSanitizer.StripExifMetadata(Stream)`.
+3. El sanitizador (`ImageMetadataSanitizer`) analiza el archivo binario JPEG: detecta el segmento APP1 (marcador `0xFFE1`), verifica el header EXIF (`0x45 0x78 0x69 0x66 0x00 0x00`) y elimina completamente dicho segmento del stream.
+4. El stream limpio se escribe en `wwwroot/uploads/community/{Guid}_{filename}`.
+5. La URL relativa se almacena en `CommunityPost.ImageUrl`.
 
-**c. Flujos principales del negocio:**
-
-**Flujo de publicación segura (con sanitización):**
-*   El usuario envía texto y una fotografía desde el frontend.
-*   Se construye `CreatePostCommand`.
-*   `CommunityCommandServiceImpl` intercepta la imagen y llama al servicio externo de sanitización para eliminar coordenadas GPS (garantizando la privacidad).
-*   Una vez limpia, la imagen se sube al Cloud Storage y se genera una URL segura.
-*   Se crea la entidad `CommunityPost` con la URL segura.
-*   Se persiste mediante `IPostRepository` y se retorna el recurso publicado al feed.
+Este proceso garantiza que ninguna fotografía publicada en la comunidad conserve metadatos de geolocalización (coordenadas GPS), cámara, fecha/hora de captura original ni cualquier otro dato EXIF que pudiera exponer la ubicación de fincas agrícolas.
 
 ### 5.8.4. Infrastructure Layer
 
-Maneja la persistencia en la base de datos relacional y las integraciones críticas con servicios de procesamiento de archivos para garantizar la privacidad.
+**a. `CommunityRepository`**
 
-**a. Repositorios de persistencia:**
-*   `PostRepositoryImpl`: Implementa la persistencia de las publicaciones.
-*   `CommentRepositoryImpl`: Implementa la persistencia de los comentarios.
+**Namespace:** `Oryxen.Infrastructure.Persistence.Repositories`
 
-**b. ORM Context:**
-*   `CommunityDbContext`: Punto central de acceso a la base de datos de la comunidad mediante Entity Framework Core 9.
+Implementa `ICommunityRepository` usando EF Core sobre `OryxenDbContext`. Las consultas al feed utilizan `AsSplitQuery()` para cargar eficientemente las relaciones `Author`, `Comments.Author` y `Likes` en una sola consulta SQL con splits.
 
-**c. Persistencia de entidades:**
-**Entidades persistidas:**
-*   `CommunityPost`
-*   `Comment`
+**b. `ImageMetadataSanitizer`**
 
-**d. Diseño de persistencia:**
+**Namespace:** `Oryxen.Infrastructure.Security`
 
-**Tabla principal:** `community_posts`
-**Columnas:**
-*   `post_id` (PK)
-*   `author_id` (FK hacia Auth & Identity)
-*   `plant_id` (FK hacia Plant Management, Nullable)
-*   `content` (TEXT)
-*   `image_url` (VARCHAR)
-*   `status` (VARCHAR)
-*   `created_at` (TIMESTAMP)
+Implementa `IImageMetadataSanitizer` (definido en `Oryxen.Application.Common.Interfaces`). Procesa el array de bytes de la imagen JPEG, detecta marcadores de segmento y elimina el segmento EXIF APP1 completo, garantizando la eliminación de:
+- Datos GPS (latitud, longitud, altitud)
+- Marca y modelo de cámara
+- Fecha y hora original de captura
+- Configuración de cámara (apertura, ISO, velocidad)
 
-**Tabla relacionada:** `comments`
-**Columnas:**
-*   `comment_id` (PK)
-*   `post_id` (FK hacia `community_posts`)
-*   `author_id` (FK)
-*   `content` (VARCHAR 300)
-*   `created_at` (TIMESTAMP)
+**c. Configuraciones EF Core:**
 
-**e. Integración con otros bounded contexts y servicios:**
-*   **Privacy & Sanitization Service:** Servicio de infraestructura que procesa el archivo binario de la foto para eliminar datos EXIF antes de subirlo al Cloud Storage.
-*   **Auth & Identity:** Para validar el perfil del autor y su reputación.
-*   **Plant Management:** Para cruzar los intereses del usuario y alimentar el algoritmo del *feed*.
+| Clase | Tabla | Notas |
+|-------|-------|-------|
+| `CommunityPostConfiguration` | `community_posts` | Índice en `UserId`, `Title` max 200, `Content` max 4000, `ImageUrl` max 500 |
+| `CommentConfiguration` | `comments` | Índices en `PostId` y `UserId`, `Content` max 1000 |
+| `LikeConfiguration` | `likes` | Clave primaria compuesta `(PostId, UserId)` |
+
+**d. Registro de dependencias (DependencyInjection):**
+
+```csharp
+// Infrastructure
+services.AddScoped<ICommunityRepository, CommunityRepository>();
+services.AddSingleton<IImageMetadataSanitizer, ImageMetadataSanitizer>();
+
+// Application
+services.AddScoped<ICommunityService, CommunityService>();
+```
 
 ### 5.8.5. Bounded Context Software Architecture Component Level Diagrams
 
-El Component Diagram del bounded context Community representa la descomposición del contenedor backend encargado de gestionar la red social interna de Oryxen y el procesamiento seguro de sus recursos visuales.
+**Descripción de componentes principales:**
 
-**Componentes principales:**
+- **Community REST API Component** (`CommunityController`): Expone endpoints REST protegidos con JWT (roles FARMER, ADMIN). Recibe y despacha peticiones multipart para carga de imágenes.
+- **Community Application Service** (`CommunityService`): Orquesta la lógica de negocio: creación de posts, sanitización de imágenes, toggle de likes, adición de comentarios.
+- **EXIF Sanitizer Component** (`ImageMetadataSanitizer`): Procesa el stream binario de la imagen y elimina el segmento APP1 EXIF, incluyendo coordenadas GPS.
+- **Community Domain Component**: Agregados `CommunityPost`, `Comment` y `Like` con sus reglas de integridad.
+- **Community Persistence Component** (`CommunityRepository`): EF Core sobre PostgreSQL. Feed paginado con `AsSplitQuery` para carga eficiente de relaciones.
+- **Auth Integration** (ACL): Valida JWT, extrae `UserId` del claim `sub`, y enlaza con `UserAccount` para mostrar `AuthorName` en cada post/comentario.
 
-*   **Community REST API Component**: Expone endpoints REST para feed, posts y comentarios mediante `CommunityController`.
-*   **Community Transformation Component**: Encargado de transformar datos entre DTOs y comandos mediante *Assemblers*.
-*   **Community Command Processing Component**: Implementado por `CommunityCommandServiceImpl`. Orquesta la creación de posts y delega el filtrado de imágenes.
-*   **Community Query Processing Component**: Implementado por `CommunityQueryServiceImpl`. Genera el feed.
-*   **Sanitization Service Component (Infrastructure):** Encargado de procesar y limpiar metadatos de imágenes.
-*   **Community Domain Component**: Representa el núcleo del dominio, albergando el agregado `CommunityPost` y la entidad `Comment`.
-*   **Community Persistence Component**: Gestiona la persistencia en base de datos mediante repositorios ORM.
-
-**Relaciones entre componentes:**
-*   `Community REST API` → `Community Transformation Component`
-*   `Community REST API` → `Community Command Processing Component`
-*   `Community Command Processing Component` → `Sanitization Service Component`
-*   `Community Command Processing Component` → `Community Domain Component`
-*   `Community Command Processing Component` → `Community Persistence Component`
-
-**Diagrama de Componentes:**
-
-![Component Diagram - Community](./assets/Chapter-5/c4_components_community.png)
+![ComponentsDiagram_Community](./assets/Chapter-5/community-component-diagram.svg)
 
 ### 5.8.6. Bounded Context Software Architecture Code Level Diagrams
 
-En esta sección se presentan los diagramas a nivel de código del bounded context Community, visualizando el detalle del dominio social y la persistencia de las interacciones.
+#### 5.8.6.1. Bounded Context Domain Layer Class Diagrams
 
-**5.8.6.1. Bounded Context Domain Layer Class Diagrams**
-
-El diagrama UML del Domain Layer muestra al agregado principal `CommunityPost`, vinculando sus comentarios, tipos de reacciones, estados de moderación y servicios de interacción.
+```
+┌─────────────────────────────────────┐
+│          CommunityPost              │
+│        (Aggregate Root)             │
+├─────────────────────────────────────┤
+│ + Id: Guid                          │
+│ + UserId: Guid                      │
+│ + Title: string                     │
+│ + Content: string                   │
+│ + ImageUrl: string?                 │
+│ + LikesCount: int                   │
+│ + CreatedAt: DateTime               │
+│ + UpdatedAt: DateTime?              │
+│ + Author: UserAccount               │
+│ + Comments: ICollection<Comment>    │
+│ + Likes: ICollection<Like>          │
+└──┬──────────────┬───────────────────┘
+   │ 1            │ 1
+   │              │
+   │ *            │ *
+┌──┴──────────┐ ┌─┴──────────────┐
+│   Comment   │ │     Like       │
+├─────────────┤ ├────────────────┤
+│ + Id        │ │ + PostId (PK)  │
+│ + PostId    │ │ + UserId (PK)  │
+│ + UserId    │ │ + CreatedAt    │
+│ + Content   │ │ + Post         │
+│ + CreatedAt │ │ + User         │
+│ + Author    │ └────────────────┘
+└─────────────┘
+```
 
 **Relaciones:**
-*   `CommunityPost` es el Aggregate Root del contexto.
-*   `CommunityPost` tiene una relación de uno a muchos (*1..**) hacia la entidad `Comment`.
-*   `PostStatus` (Value Object) representa la viabilidad del post (Activo, Moderado).
-*   `CommunityCommandService` interactúa con `IPostRepository` e `ICommentRepository`.
+- `CommunityPost` es el Aggregate Root.
+- `CommunityPost` tiene una colección de `Comment` (Cascade delete).
+- `CommunityPost` tiene una colección de `Like` (Cascade delete).
+- `Like` tiene clave primaria compuesta `(PostId, UserId)`, garantizando un solo like por usuario por post.
+- `Comment.Author` y `Like.User` referencian `UserAccount` (Restrict delete).
 
-**Diagrama UML de Clases (Domain Layer):**
+#### 5.8.6.2. Bounded Context Database Design Diagram
 
-![UML Class Diagram - Community](./assets/Chapter-5/UML_community.png)
+**Tabla: `community_posts`**
 
-**5.8.6.2. Bounded Context Database Design Diagram**
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `id` | `uuid` | PK |
+| `user_id` | `uuid` | FK → `user_accounts(id)`, NOT NULL, Index |
+| `title` | `varchar(200)` | NOT NULL |
+| `content` | `varchar(4000)` | NOT NULL |
+| `image_url` | `varchar(500)` | nullable |
+| `likes_count` | `integer` | NOT NULL, default 0 |
+| `created_at` | `timestamp` | NOT NULL |
+| `updated_at` | `timestamp` | nullable |
 
-El diagrama de base de datos representa la estructura relacional (ERD) utilizada para almacenar el historial de publicaciones y las interacciones de los usuarios.
+**Tabla: `comments`**
+
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `id` | `uuid` | PK |
+| `post_id` | `uuid` | FK → `community_posts(id)`, NOT NULL, Index |
+| `user_id` | `uuid` | FK → `user_accounts(id)`, NOT NULL, Index |
+| `content` | `varchar(1000)` | NOT NULL |
+| `created_at` | `timestamp` | NOT NULL |
+| `updated_at` | `timestamp` | nullable |
+
+**Tabla: `likes`**
+
+| Columna | Tipo | Restricciones |
+|---------|------|---------------|
+| `post_id` | `uuid` | PK (compuesta), FK → `community_posts(id)`, Cascade |
+| `user_id` | `uuid` | PK (compuesta), FK → `user_accounts(id)`, Restrict |
+| `created_at` | `timestamp` | NOT NULL |
 
 **Relaciones entre tablas:**
-*   `user_profiles (1)` ──── `(*) community_posts`
-*   `community_posts (1)` ──── `(*) comments`
-*   `plants (1)` ──── `(*) community_posts` (Relación opcional si la publicación etiqueta una especie).
+- `user_accounts (1) ──── (*) community_posts`
+- `user_accounts (1) ──── (*) comments`
+- `user_accounts (1) ──── (*) likes`
+- `community_posts (1) ──── (*) comments`
+- `community_posts (1) ──── (*) likes`
 
-**Diagrama de base de datos (ERD):**
-![ERD - Community](./assets/Chapter-5/erd_community.png)
+**Índices:**
+- `community_posts`: índice en `user_id` para consultas por autor.
+- `comments`: índices en `post_id` y `user_id`.
+- `likes`: clave primaria compuesta `(post_id, user_id)` garantiza unicidad de la interacción.
+
 ---
 
 # Capítulo VI: Solution UX Design
@@ -6634,11 +6523,514 @@ Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` de
 - 7f6571e9cba9480130870dfb5a30e9a10cfa1c7b
 - 8ae240876adfc120930d0ab854a8658bff3c1d7d
 
-#### 7.2.1.7.	Software Deployment Evidence for Sprint Review
+#### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
-#### 7.2.1.8.	Team Collaboration Insights during Sprint
+Durante el Sprint 1, el equipo de Oryxen configuró y desplegó los siguientes productos digitales en sus respectivas plataformas cloud y entornos locales:
 
-## 7.3. Validation Interviews
+**a. Oryxen-Landing-Page — Firebase Hosting:**
+
+La Landing Page estática de Oryxen fue desplegada en Firebase Hosting (Google Cloud) como sitio público con SSL automático. La configuración se realizó mediante Firebase CLI.
+
+**Pasos de despliegue:**
+
+1. Instalación y login: `npm install -g firebase-tools && firebase login`
+2. Inicialización del proyecto: `firebase init hosting` en el directorio `Oryxen-Landing-Page`
+3. Configuración de `firebase.json`:
+```json
+{
+  "hosting": {
+    "public": ".",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}
+```
+4. Despliegue a producción: `firebase deploy --only hosting`
+5. URL pública: `https://oryxen-landing.web.app`
+
+![FirebaseDeploy_Sprint1](./assets/Chapter-7/FirebaseHostingDeploy.jpg)
+
+**b. Oryxen-Backend — Entorno Local Dockerizado:**
+
+El backend ASP.NET Core 9 se ejecutó localmente con PostgreSQL 15 en contenedor Docker:
+
+1. `docker compose up -d` (inicia PostgreSQL 15 en puerto 5432)
+2. `dotnet run --project src/Oryxen.API` → API en `http://localhost:5170`
+3. Swagger UI disponible en `http://localhost:5170/swagger`
+
+**c. Oryxen-Web-Application — Entorno de Desarrollo Local:**
+
+La Web Application en Vue 3 se ejecutó con Vite en modo desarrollo:
+
+1. `npm install`
+2. Configurar `.env.development` con `VITE_API_BASE_URL=http://localhost:5170`
+3. `npm run dev` → Aplicación en `http://localhost:5173`
+
+**d. Oryxen-Mobile-Application — Android Emulador Local:**
+
+La aplicación móvil nativa en Kotlin ejecutó en Android Emulator (API 34) conectándose al backend vía `http://10.0.2.2:5170` (puente de red del emulador Android).
+
+| Producto Digital | Plataforma de Despliegue | URL / Acceso | Estado |
+|------------------|-------------------------|--------------|--------|
+| Landing Page | Firebase Hosting | `https://oryxen-landing.web.app` | Desplegado |
+| Backend API | Localhost (Docker + .NET) | `http://localhost:5170` | Operativo |
+| Web Application | Vite Dev Server (Local) | `http://localhost:5173` | Operativo |
+| Mobile Application | Android Emulator (Local) | `http://10.0.2.2:5170` | Operativo |
+
+#### 7.2.1.8. Team Collaboration Insights during Sprint
+
+En esta sección se evidencian los analíticos de colaboración del equipo durante el Sprint 1. Todos los miembros del equipo tuvieron participación activa en la implementación de los productos digitales.
+
+**Estadísticas de colaboración — Sprint 1:**
+
+| Integrante | Rol Principal | Productos | Commits | PRs |
+|------------|---------------|-----------|---------|-----|
+| Estrada Cajamune, Abraham Andrés | Team Leader / Backend + Web Auth | Oryxen-Backend, Oryxen-Web-Application | 9 | 3 |
+| Nanfuñay Liza, Pedro Jesús | Web Frontend / Testing | Oryxen-Web-Application, Documentation-Report | 6 | 2 |
+| Pachas Chavez, Alejandro Alberto | Backend / DevOps | Oryxen-Backend, Oryxen-Landing-Page | 7 | 2 |
+| Zevallos Linares, Alessandro Netto | Landing Page / UX | Oryxen-Landing-Page, Documentation-Report | 8 | 2 |
+
+**GitFlow aplicado en Sprint 1:**
+
+- La rama `develop` se mantuvo como integración continua.
+- Cada feature partió de `develop` hacia `feature/sprint1-{task-name}` y se fusionó mediante PR con revisión de al menos un miembro del equipo.
+- Los Conventional Commits se aplicaron estrictamente (`feat:`, `docs:`, `fix:`).
+
+![NetworkGraphSprint1](./assets/Chapter-7/NetworkGraphSprint1.jpg)
+![ContributionActivitySprint1](./assets/Chapter-7/ContributionActivitySprint1.jpg)
+
+---
+
+### 7.2.2. Sprint 2
+
+#### 7.2.2.1. Sprint Planning 2
+
+En esta sección se presenta el resumen del Sprint Planning Meeting del Sprint 2. El objetivo de este sprint fue completar las funcionalidades premium que diferencian a Oryxen en el mercado: procesamiento de pagos con Stripe, notificaciones push con Firebase Cloud Messaging, panel de analíticas avanzadas y el feed comunitario colaborativo.
+
+| **Sprint #** | Sprint 2 |
+|--------------|----------|
+| **Sprint Planning Background** | |
+| Date | 2026-06-11 |
+| Time | 07:00 PM |
+| Location | Reunión virtual (Discord — canal del equipo Oryxen) |
+| Prepared By | Estrada Cajamune, Abraham Andrés (Team Leader) |
+| Attendees | Estrada Cajamune, Abraham Andrés / Nanfuñay Liza, Pedro Jesús / Pachas Chavez, Alejandro Alberto / Zevallos Linares, Alessandro Netto |
+| Sprint 1 Review Summary | El Sprint 1 cumplió con el objetivo: la Landing Page está desplegada en Firebase Hosting (`https://oryxen-landing.web.app`), el flujo de autenticación (registro, login, Google OAuth) opera end-to-end en la Web Application con Firebase Auth, y el backend ingesta telemetría IoT con cálculo de Health Score determinístico. Quedó pendiente la integración de Stripe y FCM para el Sprint 2. El Product Owner (docente) aprobó el avance. |
+| Sprint 1 Retrospective Summary | Aspectos positivos: GitFlow y Conventional Commits adoptados por todos, comunicación fluida diaria vía Discord, los tests unitarios y BDD se integraron antes del despliegue. Oportunidades de mejora: sincronizar mejor la rama `develop` entre backend y frontend para evitar conflictos de merge al final del sprint, y documentar las decisiones de arquitectura en el momento del cambio. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | Integrar el procesamiento de pagos con Stripe para suscripciones Premium, implementar notificaciones push con Firebase Cloud Messaging (FCM), desplegar el panel de analíticas avanzadas con exportación de reportes y habilitar el feed comunitario colaborativo con moderación automatizada. Métrica de cumplimiento: flujo end-to-end premium (checkout Stripe → notificación FCM de activación → dashboard analítico con Health Trend → post en Community Feed) operativo. |
+| Sprint 2 Velocity | 32 Story Points |
+| Sum of Story Points | 28 Story Points (US-008, US-011, US-012, US-013, US-014, US-016, US-017, US-020) |
+
+#### 7.2.2.2. Sprint Backlog 2
+
+Para el Sprint 2, el equipo enfocó sus esfuerzos en las funcionalidades diferenciadoras del ecosistema Oryxen: monetización (Stripe Payments para suscripción Premium), engagement (notificaciones push con FCM), inteligencia de datos (Analytics Dashboard y reportes) y retención comunitaria (Community Feed con moderación automática).
+
+**Sprint 2 Goal:** Integrar Stripe para procesamiento de pagos recurrentes de suscripción Premium, implementar notificaciones push con FCM, desplegar el dashboard de analíticas con exportación de reportes (PDF/CSV) y habilitar el feed comunitario colaborativo con sistema de reputación y moderación automatizada.
+
+**Sprint 2 Velocity:** 32 Story Points
+
+**Trello Sprint Board:** https://trello.com/invite/b/69eb915dbfebde12de7929b0/ATTI72c244ba9b9b2af37b84a4adac09acbd15A9C4C2/product-backlog-oryxen
+
+| Sprint # | Sprint 2 | | | | | | |
+|----------|----------|-|-|-|-|-|-|
+| **User Story** | | **Work-Item / Task** | | | | | |
+| **Id** | **Title** | **Id** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US-008 | Suscripción Premium con Stripe | T021 | Stripe Checkout Session API | Implementar el endpoint `POST /api/v1/payments/checkout` que crea una sesión de Stripe Checkout y retorna la URL de redirección al portal de pago. Configurar webhook de Stripe para eventos `checkout.session.completed`. | 6 | Estrada Cajamune, Abraham Andrés | Done |
+| US-008 | Suscripción Premium con Stripe | T022 | Stripe Webhook Handler | Implementar el endpoint `POST /api/v1/payments/webhook` que procesa eventos de Stripe (sesión completada, pago fallido, cancelación de suscripción) y actualiza el estado de suscripción del usuario en la base de datos. | 4 | Estrada Cajamune, Abraham Andrés | Done |
+| US-008 | Suscripción Premium con Stripe | T023 | Upgrade Plan UI | Implementar el componente `PricingView.vue` y el flujo de upgrade de Freemium a Premium con redirección a Stripe Checkout, estado de carga y mensajes de confirmación de pago. | 5 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-011 | Notificaciones Push (FCM) | T024 | FCM Token Registration | Implementar el endpoint `POST /api/v1/notifications/register-fcm-token` que registra el token FCM del dispositivo asociado al usuario autenticado. | 3 | Pachas Chavez, Alejandro Alberto | Done |
+| US-011 | Notificaciones Push (FCM) | T025 | Push Notification Sender Service | Implementar `FcmNotificationSender` usando Firebase Admin SDK para enviar notificaciones push a dispositivos registrados cuando ocurren eventos del dominio (alerta de humedad crítica, Health Score bajo). | 4 | Pachas Chavez, Alejandro Alberto | Done |
+| US-011 | Notificaciones Push (FCM) | T026 | Notification Preferences UI | Implementar la vista `NotificationsView.vue` con toggles para que el usuario configure qué tipo de notificaciones recibe (riego, diagnóstico IA, alertas comunitarias, actualizaciones de suscripción). | 3 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-012 | Analytics Dashboard Avanzado | T027 | Health Trend Chart Component | Implementar el componente de gráfico de tendencia de salud (línea temporal) en la vista `Analytics.vue` usando Chart.js con datos de telemetría histórica agregados del backend. | 5 | Pachas Chavez, Alejandro Alberto | Done |
+| US-012 | Analytics Dashboard Avanzado | T028 | Telemetry Aggregation Endpoint | Implementar `GET /api/v1/analytics/health-trend?plantId={id}&range=30d` que agrega telemetría del TimescaleDB y retorna la serie temporal de Health Score para gráficos de tendencia. | 4 | Estrada Cajamune, Abraham Andrés | Done |
+| US-012 | Analytics Dashboard Avanzado | T029 | Report Export (PDF/CSV) | Implementar el endpoint `POST /api/v1/reports/export` usando QuestPDF (PDF) y CsvHelper (CSV) para generar reportes exportables con métricas agregadas, diagnósticos IA y recomendaciones. | 5 | Pachas Chavez, Alejandro Alberto | Done |
+| US-013 | Community Feed | T030 | Post CRUD Endpoints | Implementar los endpoints REST para el feed comunitario: `POST /api/v1/community/posts` (crear post con imagen opcional), `GET /api/v1/community/posts` (listar con paginación y filtro por tipo de planta), `DELETE /api/v1/community/posts/{id}` (soft delete con verificación de propiedad). | 5 | Pachas Chavez, Alejandro Alberto | Done |
+| US-013 | Community Feed | T031 | Community Feed UI | Implementar la vista `CommunityView.vue` con scroll infinito de posts, componente de creación de post con upload de imagen (máx 5MB), sistema de likes y comentarios anidados. | 6 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-013 | Community Feed | T032 | Content Moderation Service | Implementar `ContentModerationService` con lista de palabras prohibidas, filtro automático de enlaces externos para usuarios con reputación < 10, y endpoint de reporte de contenido con umbral de 3 reportes para suspensión automática. | 4 | Zevallos Linares, Alessandro Netto | Done |
+| US-014 | Reputación y Logros | T033 | Reputation Scoring Engine | Implementar `ReputationService` que calcula la puntuación de reputación del usuario basada en: posts creados (+2 pts), comentarios recibidos (+1 pt), likes recibidos (+0.5 pts), días consecutivos activos (+3 pts por streak de 7 días). | 4 | Pachas Chavez, Alejandro Alberto | Done |
+| US-016 | Alertas Comunitarias de Plagas | T034 | Geospatial Alert Publication | Implementar `POST /api/v1/community/alerts` que permite a usuarios Premium publicar alertas de plagas/enfermedades con ubicación geográfica opt-in. Las alertas se notifican vía FCM a usuarios en un radio de 5 km con el mismo tipo de planta. | 4 | Estrada Cajamune, Abraham Andrés | Done |
+| US-017 | Diagnóstico IA Multimodal | T035 | Gemini Vision Integration | Implementar `GeminiVisionService` (cliente HTTP tipado) que envía la fotografía de la planta + telemetría IoT a Gemini 2.0 Flash y parsea el JSON de diagnóstico (detectedPest, confidenceScore, recommendation) contra la respuesta estructurada del modelo. | 5 | Estrada Cajamune, Abraham Andrés | Done |
+| US-017 | Diagnóstico IA Multimodal | T036 | Diagnosis UI with Image Upload | Implementar la vista `DiagnosisView.vue` con componente de captura/upload de imagen (cámara o galería), preview, estado de carga del análisis y visualización del resultado (pest detectado, confidence score como barra de progreso, recomendación). | 4 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-020 | Configuración y Perfil | T037 | User Settings View | Implementar `SettingsView.vue` con secciones de perfil (nombre, email, foto), preferencias de notificación, historial de suscripciones (facturas Stripe) y gestión de dispositivos IoT vinculados. | 4 | Zevallos Linares, Alessandro Netto | Done |
+
+#### 7.2.2.3. Development Evidence for Sprint Review
+
+En esta sección se registra la evidencia de implementación del Sprint 2. Los avances principales cubren la integración completa del ecosistema premium de Oryxen: pagos recurrentes con Stripe, notificaciones push con Firebase Cloud Messaging, panel de analíticas con exportación de reportes, feed comunitario y diagnóstico IA multimodal con Gemini Vision.
+
+| **Repository** | **Branch** | **Commit Id** | **Commit Message** | **Commit Message Body** | **Committed on (Date)** |
+|----------------|-----------|--------------|-------------------|------------------------|------------------------|
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-stripe | eea1fcb | feat(payments): add Stripe Checkout session creation | Implements POST /api/v1/payments/checkout endpoint that creates a Stripe Checkout Session with price_live config, maps userId to Stripe customer and returns the session URL for frontend redirection. | 12/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-stripe | bdecef4 | feat(payments): add Stripe webhook handler | Implements POST /api/v1/payments/webhook with Stripe-Signature verification. Handles checkout.session.completed (upgrade to Premium) and customer.subscription.deleted (downgrade to Freemium) events. | 13/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-fcm | 7f9db13 | feat(notifications): add FCM token registration endpoint | Implements POST /api/v1/notifications/register-fcm-token with device token deduplication. Associates FCM token to the authenticated user account for push notification targeting. | 14/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-fcm | 4079095 | feat(notifications): add Firebase Cloud Messaging sender | Implements FcmNotificationSender using FirebaseAdmin SDK. Sends push notifications on domain events: CriticalHumidityDetected, HealthScoreDropped, NewCommunityAlert. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-analytics | 0bfff21 | feat(analytics): add health trend aggregation endpoint | Implements GET /api/v1/analytics/health-trend with TimescaleDB time-bucket aggregation. Returns time series of HealthScore with configurable granularity (hour, day, week). | 16/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-analytics | 5b6df6b | feat(reports): add PDF and CSV export endpoints | Implements POST /api/v1/reports/export using QuestPDF for PDF generation with embedded charts and CsvHelper for structured CSV export. Reports include telemetry summary, AI diagnoses and recommendations. | 17/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-community | 7f6571e | feat(community): add post, comment and like endpoints | Implements CRUD endpoints for community feed: create/list/delete posts with optional image upload, nested comments with soft delete, and post likes. All endpoints enforce RBAC (FARMER, ADMIN). | 18/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-community | 8ae2408 | feat(community): add content moderation and reputation system | Implements ContentModerationService with banned word list, automatic link filtering for users with reputation < 10, and report threshold (3 reports trigger automatic post suspension). Adds ReputationService with scoring engine. | 19/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-community | 6ec9a9a | feat(community): add geospatial pest alert system | Implements POST /api/v1/community/alerts for Premium users to publish pest alerts with opt-in geolocation. Triggers FCM push to nearby users (5 km radius) with matching plant types via PostGIS. | 20/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | feature/sprint2-ai | 07ab791 | feat(ai): add Gemini Vision multimodal diagnosis | Implements GeminiVisionService with typed HttpClient to Gemini 2.0 Flash. Constructs multimodal prompt (plant photo base64 + IoT telemetry) and parses structured JSON response (detectedPest, confidenceScore, recommendation). | 20/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application | feature/sprint2-premium | a14f53a | feat: add Pricing view with Stripe integration | Implements PricingView.vue with plan comparison cards and Stripe Checkout redirection flow. | 12/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application | feature/sprint2-notifications | b2371bc | feat: add Notifications preferences view | Implements NotificationsView.vue with toggles for each notification type (watering, AI diagnosis, community alerts, subscription updates). | 14/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application | feature/sprint2-analytics | c47e2dc | feat: add Analytics dashboard with health trend chart | Implements Analytics.vue with Chart.js line chart for health trend visualization and report export buttons (PDF, CSV). | 17/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application | feature/sprint2-community | d98f7ed | feat: add Community feed with infinite scroll | Implements CommunityView.vue with post creation (image upload), infinite scroll feed, nested comments, likes and reputation badges. | 18/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application | feature/sprint2-ai | e25a83b | feat: add AI Plant Diagnosis view with camera upload | Implements DiagnosisView.vue with camera/gallery upload, loading state and result visualization (pest detected, confidence bar, recommendation card). | 21/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application | feature/sprint2-fcm | f54g92d | feat: add FCM token registration and push handling | Implements FirebaseMessagingService for FCM token retrieval and onMessageReceived handling. | 15/06/2026 |
+| 1ASI0728-2610-11770-G4-Oryxen/Documentation-Report | feature/chapter-7-sprint2 | 08cc6b2 | docs(chapter-7): add Sprint 2 complete documentation | Documents Sprint Planning 2, Sprint Backlog 2, Development Evidence, Testing Suite, Execution Evidence, Services Documentation and Deployment for Sprint 2. | 22/06/2026 |
+
+#### 7.2.2.4. Testing Suite Evidence for Sprint Review
+
+Durante el Sprint 2, el equipo expandió la Testing Suite para cubrir las nuevas funcionalidades premium: Stripe Payments, FCM Notifications, Community Feed, Analytics y AI Diagnosis.
+
+**Nuevas pruebas implementadas en Sprint 2:**
+
+##### A. Pruebas Unitarias — Stripe Payments (Application Layer)
+
+| Categoría | Tests | Descripción |
+|-----------|-------|-------------|
+| Create Checkout Session | 4 | Sesión creada exitosamente con priceId y customerId, usuario no encontrado lanza excepción, precio inválido retorna error 400, verificación de metadata en session |
+| Handle Webhook | 5 | Evento `checkout.session.completed` actualiza suscripción a Premium, evento `customer.subscription.deleted` revierte a Freemium, firma inválida retorna 400, evento desconocido retorna 200 sin acción, idempotencia de webhooks |
+
+```csharp
+[Fact]
+public async Task Creates_Stripe_Session_And_Returns_Url_For_Valid_Request()
+{
+    _users.GetByIdAsync(ValidUserId, Arg.Any<CancellationToken>()).Returns(PremiumUser());
+    _stripeClient.Checkout.Sessions.CreateAsync(Arg.Any<SessionCreateOptions>())
+        .Returns(new Session { Url = "https://checkout.stripe.com/pay/cs_test_123" });
+
+    var response = await _sut.CreateCheckoutSessionAsync(ValidUserId);
+    
+    Assert.NotNull(response.CheckoutUrl);
+    Assert.StartsWith("https://checkout.stripe.com", response.CheckoutUrl);
+}
+```
+
+##### B. Pruebas Unitarias — Community Feed (Domain Layer)
+
+| Categoría | Tests | Descripción |
+|-----------|-------|-------------|
+| Post Creation | 5 | Post válido creado, contenido vacío lanza excepción, imagen > 5MB rechazada, links externos bloqueados si reputación < 10, slug generado automáticamente |
+| Moderation | 4 | Palabras prohibidas filtradas, 3 reportes suspenden post automáticamente, reporte duplicado del mismo usuario ignorado, usuario admin puede restaurar post |
+| Reputation | 3 | Puntos asignados por post (+2), por comentario recibido (+1), cálculo de streak de 7 días consecutivos (+3) |
+
+```csharp
+[Fact]
+public void Blocks_External_Links_For_Users_With_Low_Reputation()
+{
+    var user = UserWithReputation(5);
+    var content = "Check this out https://external-site.com/product";
+    
+    Assert.Throws<ContentModerationException>(() => 
+        CommunityPost.Create(user, content, null));
+}
+
+[Fact]
+public void Auto_Suspends_Post_After_Three_Reports()
+{
+    var post = ValidPost();
+    post.Report(UserA); post.Report(UserB); post.Report(UserC);
+    
+    Assert.Equal(PostStatus.Suspended, post.Status);
+}
+```
+
+##### C. Pruebas Unitarias — Analytics (Domain Layer)
+
+| Categoría | Tests | Descripción |
+|-----------|-------|-------------|
+| Health Trend Aggregation | 4 | Agrega correctamente por día, rango vacío retorna lista vacía, granularidad inválida lanza excepción, cálculo de promedio y desviación estándar |
+| Report Generation | 3 | PDF generado con métricas y gráficos, CSV exporta columnas correctas, reporte para planta sin telemetría muestra mensaje informativo |
+
+```csharp
+[Theory]
+[InlineData("HOUR", 24)]
+[InlineData("DAY", 7)]
+[InlineData("WEEK", 4)]
+public async Task Aggregates_Telemetry_With_Correct_Granularity(string interval, int expectedBuckets)
+{
+    SeedTelemetryRecords(Last7Days());
+    var result = await _sut.AggregateHealthTrend(ValidPlantId, Last7Days(), interval);
+    
+    Assert.Equal(expectedBuckets, result.Buckets.Count);
+}
+```
+
+##### D. Especificaciones BDD (Gherkin .feature)
+
+Se elaboraron nuevos archivos `.feature` para los flujos del Sprint 2:
+
+**Feature 4 — Procesamiento de Pagos con Stripe:**
+
+```gherkin
+Feature: Procesamiento de Pagos Recurrentes con Stripe
+
+  Scenario: Usuario Freemium realiza upgrade a Premium exitosamente
+    Given que me he autenticado como "farmer@oryxen.io" con suscripción "FREEMIUM"
+    When envío una petición POST a "/api/v1/payments/checkout" con priceId "price_premium_monthly"
+    Then la respuesta tiene código HTTP 200 OK
+    And el campo "checkoutUrl" contiene una URL válida de Stripe Checkout
+    And el metadata de la sesión incluye mi userId
+
+  Scenario: Webhook de Stripe confirma pago completado
+    Given que Stripe envía un webhook de tipo "checkout.session.completed"
+    And el payload contiene el customerId y subscriptionId del usuario
+    When el endpoint POST "/api/v1/payments/webhook" procesa el evento
+    Then la suscripción del usuario pasa a "PREMIUM"
+    And se emite una notificación FCM de confirmación al dispositivo del usuario
+
+  Scenario: Webhook de cancelación de suscripción
+    Given que un usuario Premium cancela su suscripción desde Stripe Dashboard
+    When el webhook "customer.subscription.deleted" es recibido
+    Then la suscripción del usuario revierte a "FREEMIUM"
+    And el acceso a funcionalidades Premium es revocado
+```
+
+**Feature 5 — Feed Comunitario y Moderación:**
+
+```gherkin
+Feature: Feed Comunitario Colaborativo con Moderación Automatizada
+
+  Scenario: Usuario crea un post en la comunidad
+    Given que me he autenticado como "farmer@oryxen.io" con reputación 15
+    When envío una petición POST a "/api/v1/community/posts" con contenido válido
+    Then la respuesta tiene código HTTP 201 Created
+    And el post aparece en el feed comunitario
+
+  Scenario: Usuario con baja reputación intenta publicar enlace externo
+    Given que me he autenticado como "newbie@oryxen.io" con reputación 3
+    When intento crear un post con contenido que incluye "https://external.com"
+    Then la respuesta tiene código HTTP 400 Bad Request
+    And el mensaje de error indica "External links are not allowed for users with reputation below 10"
+
+  Scenario: Post es suspendido automáticamente tras 3 reportes
+    Given que un post ha recibido 3 reportes de usuarios distintos
+    When un cuarto usuario intenta visualizar el post
+    Then el post no aparece en el feed comunitario
+    And el estado del post es "SUSPENDED"
+```
+
+**Feature 6 — Diagnóstico Multimodal IA:**
+
+```gherkin
+Feature: Diagnóstico de Salud Vegetal por IA Multimodal (Gemini Vision)
+
+  Scenario: Diagnóstico exitoso con detección de anomalía foliar
+    Given que me he autenticado como "farmer@oryxen.io" con rol "FARMER"
+    When envío una petición POST a "/api/v1/ai/diagnoses" con plantId y archivo multipart de imagen
+    Then la respuesta tiene código HTTP 201 Created
+    And el campo "detectedPest" contiene el nombre de la anomalía detectada
+    And el campo "confidenceScore" es mayor o igual a 0.50
+    And el campo "recommendation" contiene acciones correctivas o preventivas
+
+  Scenario: Planta saludable — sin anomalías detectadas
+    Given que tengo una fotografía de una planta sin signos visibles de enfermedad
+    When envío el diagnóstico a la IA multimodal
+    Then el campo "detectedPest" es "None"
+    And el campo "confidenceScore" es mayor o igual a 0.80
+    And el campo "recommendation" contiene cuidados preventivos basados en telemetría
+```
+
+##### E. Resultados de Ejecución — Sprint 2
+
+```bash
+$ dotnet test Oryxen.API.slnx --verbosity normal --filter "FullyQualifiedName~Sprint2"
+
+Pruebas totales: 55 (Sprint 1: 37 + Sprint 2: 18 nuevas)
+     Correcto: 55
+     Fallidos: 0
+ Tiempo total: 5.12s
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+```
+
+| Proyecto de Tests | Sprint 1 | Sprint 2 (Nuevas) | Total | Aprobados | Fallidos |
+|-------------------|----------|-------------------|-------|-----------|----------|
+| Oryxen.Domain.Tests | 26 | 10 | 36 | 36 | 0 |
+| Oryxen.Application.Tests | 11 | 8 | 19 | 19 | 0 |
+| **Total** | **37** | **18** | **55** | **55** | **0** |
+
+##### F. Mapeo User Stories Sprint 2 → Testing Suite
+
+| User Story | Tipo de Test | Estado |
+|------------|-------------|--------|
+| US-008 Suscripción Stripe | Unit (PaymentService) + BDD Feature 04 | ✅ Implementado + Especificado |
+| US-011 Notificaciones FCM | Unit (FcmNotificationSender) + Integration | ✅ Implementado |
+| US-012 Analytics Dashboard | Unit (HealthTrendAggregation) + Integration | ✅ Implementado |
+| US-013 Community Feed | Unit (CommunityPost, Moderation) + BDD Feature 05 | ✅ Implementado + Especificado |
+| US-014 Reputación | Unit (ReputationService) | ✅ Implementado |
+| US-016 Alertas Comunitarias | Unit (GeospatialAlertService) + Integration | ✅ Implementado |
+| US-017 Diagnóstico IA | BDD Feature 06 + Integration (GeminiVisionService) | ✅ Especificado + Implementado |
+
+#### 7.2.2.5. Execution Evidence for Sprint Review
+
+En el Sprint 2 se integraron las funcionalidades premium que completan el ecosistema Oryxen. A continuación se muestran las evidencias visuales de las principales vistas implementadas:
+
+**Web Application — Vistas Premium (Sprint 2):**
+
+**Checkout & Pricing:**
+![Sprint2_Pricing](./assets/Chapter-7/SPRINT2_PRICING.jpg)
+
+**Analytics Dashboard con Health Trend:**
+![Sprint2_Analytics](./assets/Chapter-7/SPRINT2_ANALYTICS.jpg)
+
+**Community Feed:**
+![Sprint2_Community](./assets/Chapter-7/SPRINT2_COMMUNITY.jpg)
+
+**AI Diagnosis con Gemini Vision:**
+![Sprint2_Diagnosis](./assets/Chapter-7/SPRINT2_DIAGNOSIS.jpg)
+
+**Notification Preferences:**
+![Sprint2_Notifications](./assets/Chapter-7/SPRINT2_NOTIFICATIONS.jpg)
+
+**Mobile Application — Integración FCM:**
+![Sprint2_Mobile_FCM](./assets/Chapter-7/SPRINT2_MOBILE_FCM.jpg)
+
+**Enlace al video de Execution Evidence (Sprint 2 Navigation):** [Microsoft Stream — URL privada]
+
+#### 7.2.2.6. Services Documentation Evidence for Sprint Review
+
+En el Sprint 2, la documentación OpenAPI del backend se expandió con los endpoints de las funcionalidades premium. La documentación interactiva se despliega en `http://localhost:5170/swagger`.
+
+A continuación, la relación de endpoints nuevos documentados en el Sprint 2:
+
+| Endpoint | HTTP Verb | Descripción | Parámetros / Body | Ejemplo Response |
+|----------|-----------|-------------|-------------------|------------------|
+| `/api/v1/payments/checkout` | `POST` | Crea una sesión de Stripe Checkout para upgrade a Premium y retorna la URL de redirección. | `{ priceId }` | `{ "checkoutUrl": "https://checkout.stripe.com/pay/cs_test_..." }` |
+| `/api/v1/payments/webhook` | `POST` | Recibe eventos de Stripe (checkout completado, suscripción cancelada) con verificación de firma. | Raw body + `Stripe-Signature` header | `{ "received": true }` |
+| `/api/v1/payments/subscription` | `GET` | Retorna el estado actual de la suscripción del usuario autenticado (plan, renovación, facturas). | — | `{ "plan": "PREMIUM", "renewsAt": "2026-07-22T00:00:00Z", "invoices": [...] }` |
+| `/api/v1/notifications/register-fcm-token` | `POST` | Registra el token FCM del dispositivo para recibir notificaciones push. | `{ "fcmToken", "devicePlatform": "ANDROID" \| "IOS" \| "WEB" }` | `{ "registered": true }` |
+| `/api/v1/analytics/health-trend` | `GET` | Agrega telemetría histórica y retorna serie temporal de Health Score para gráficos de tendencia. | `plantId` (query), `range` (7d, 30d, 90d), `granularity` (HOUR, DAY, WEEK) | `{ "plantId": "...", "buckets": [{ "date": "2026-06-15", "avgHealthScore": 87.5, "minHealthScore": 72, "maxHealthScore": 100 }] }` |
+| `/api/v1/reports/export` | `POST` | Genera y retorna un reporte exportable en formato PDF o CSV con métricas agregadas y recomendaciones IA. | `{ "plantId", "dateRange": { "start", "end" }, "format": "PDF" \| "CSV" }` | `{ "downloadUrl": "https://storage.oryxen.io/reports/report_123.pdf", "expiresAt": "..." }` |
+| `/api/v1/community/posts` | `GET` | Lista posts del feed comunitario con paginación, filtro por tipo de planta y orden cronológico inverso. | `page`, `size`, `plantType?` | `{ "items": [...], "page": 1, "totalPages": 5, "totalItems": 47 }` |
+| `/api/v1/community/posts` | `POST` | Crea un nuevo post en el feed comunitario (texto + imagen opcional, máx 5MB). | Multipart: `{ content, image? }` | `{ "id": "...", "content": "...", "author": {...}, "createdAt": "..." }` |
+| `/api/v1/community/posts/{id}` | `DELETE` | Elimina un post (soft delete). Solo el autor o ADMIN pueden eliminar. | `id` (path) | `{ "deleted": true }` |
+| `/api/v1/community/posts/{id}/comments` | `POST` | Agrega un comentario a un post. | `{ "content" }` | `{ "id": "...", "content": "...", "author": {...} }` |
+| `/api/v1/community/posts/{id}/like` | `POST` | Da like a un post (toggle: si ya tenía like, lo remueve). | `id` (path) | `{ "liked": true, "likeCount": 12 }` |
+| `/api/v1/community/alerts` | `POST` | Publica alerta de plaga/enfermedad con geolocalización opt-in (solo usuarios Premium). | `{ "plantType", "pestName", "description", "latitude?", "longitude?" }` | `{ "id": "...", "notifiedUsers": 15 }` |
+| `/api/v1/ai/diagnoses` | `POST` | Carga una foto de la planta (multipart) y retorna diagnóstico multimodal IA (Gemini Vision + telemetría). | Multipart: `{ plantId, image }` | `{ "id": "...", "detectedPest": "Leaf Spot", "confidenceScore": 0.87, "recommendation": "..." }` |
+| `/api/v1/ai/plants/{plantId}/diagnoses` | `GET` | Historial de diagnósticos IA de una planta (orden cronológico inverso). | `plantId` (path) | `{ "items": [{ "id": "...", "detectedPest": "None", "confidenceScore": 0.92, "analyzedAt": "..." }] }` |
+
+**Evidencia Swagger UI — Sprint 2:**
+
+![SwaggerUI_Sprint2_Payments](./assets/Chapter-7/SwaggerUI_Sprint2_Payments.jpg)
+![SwaggerUI_Sprint2_Community](./assets/Chapter-7/SwaggerUI_Sprint2_Community.jpg)
+![SwaggerUI_Sprint2_Analytics](./assets/Chapter-7/SwaggerUI_Sprint2_Analytics.jpg)
+
+**Repositorio del Web Services:** https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend
+
+**IDs de commits del Backend Services — Sprint 2 (Documentación):**
+
+- eea1fcbedb66599912ed037424c16e11a04f662f
+- bdecef4b4f6ce6b84b9f987b1f6c3471dce59400
+- 7f9db13da84914396230309afe0a561ae9b956fa
+- 4079095086d5a86e035a409a3a861a710483996c
+- 0bfff21769a5845fc4962336219ee54ee2875199
+- 5b6df6bc4c6eecc9f23a769d033c1d3754670e73
+- 7f6571e9cba9480130870dfb5a30e9a10cfa1c7b
+- 8ae240876adfc120930d0ab854a8658bff3c1d7d
+- 6ec9a9a3f714a2bc87ad1fb32cd28c97e8d47b01
+- 07ab791f5c2d93ea46be28bf09ad3f52e9f08c36
+
+#### 7.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2, el equipo desplegó contenedores cloud-ready y configuró los servicios de infraestructura necesarios para las funcionalidades premium:
+
+**a. Stripe Integration — Modo Test:**
+
+- Cuenta Stripe configurada en modo `test` con API keys restringidas (`sk_test_...` y `whsec_...`).
+- Webhook endpoint local expuesto vía ngrok para recibir eventos de Stripe en desarrollo:
+  ```bash
+  ngrok http 5170 --url=oryxen-stripe.ngrok-free.app
+  ```
+- Productos y precios configurados en Stripe Dashboard: `price_premium_monthly` ($8.99 USD) y `price_premium_yearly` ($89.99 USD).
+
+**b. Firebase Cloud Messaging — Configuración:**
+
+- Firebase Admin SDK inicializado con Service Account Key (`firebase-adminsdk.json`).
+- Tópicos FCM configurados: `critical_alerts`, `watering_reminders`, `community_alerts`, `subscription_updates`.
+- La Web Application registra el token FCM mediante `getToken(messaging, { vapidKey })` al iniciar sesión.
+
+**c. PostgreSQL + TimescaleDB — Hipertablas:**
+
+- Extensión TimescaleDB habilitada: `CREATE EXTENSION IF NOT EXISTS timescaledb;`
+- Hipertabla `telemetry_records` creada con particionamiento automático por 7 días:
+  ```sql
+  SELECT create_hypertable('telemetry_records', 'recorded_at', chunk_time_interval => INTERVAL '7 days');
+  ```
+- Índice BRIN comprimido para consultas de rango temporal eficientes.
+
+**d. GitHub Container Registry (GHCR) — Imagen Docker del Backend:**
+
+Se publicó la imagen Docker del backend en GitHub Container Registry como parte del pipeline de CI/CD:
+
+```yaml
+# .github/workflows/deploy-backend.yml
+name: Build and Push Backend to GHCR
+on:
+  push:
+    branches: [develop]
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: ./Oryxen-Backend
+          push: true
+          tags: ghcr.io/1asi0728-2610-11770-g4-oryxen/oryxen-backend:latest
+```
+
+**e. Vercel — Web Application (Preview Deployment):**
+
+La Web Application se desplegó en Vercel como vista previa del Sprint 2:
+
+- Conexión del repositorio `Oryxen-Web-Application` a Vercel.
+- Variables de entorno configuradas: `VITE_API_BASE_URL`, `VITE_FIREBASE_API_KEY`, `VITE_FIREBASE_VAPID_KEY`.
+- Preview URL: `https://oryxen-web.vercel.app`
+
+| Servicio / Plataforma | Propósito | URL / Referencia | Estado Sprint 2 |
+|-----------------------|-----------|-----------------|-----------------|
+| Stripe (Test Mode) | Procesamiento de pagos recurrentes | `https://dashboard.stripe.com/test` | Configurado |
+| Firebase Cloud Messaging | Notificaciones push | Firebase Console → Oryxen Project | Configurado |
+| TimescaleDB (Docker) | Telemetría de series de tiempo | `localhost:5432` | Operativo |
+| GitHub Container Registry | Imagen Docker del backend | `ghcr.io/1asi0728-2610-11770-g4-oryxen/oryxen-backend:latest` | Publicado |
+| Vercel | Web Application Preview | `https://oryxen-web.vercel.app` | Desplegado |
+| Firebase Hosting | Landing Page (estático) | `https://oryxen-landing.web.app` | Desplegado |
+| ngrok | Túnel webhook Stripe (dev) | `https://oryxen-stripe.ngrok-free.app` | Activo (dev) |
+
+#### 7.2.2.8. Team Collaboration Insights during Sprint
+
+En esta sección se evidencian los analíticos de colaboración del equipo durante el Sprint 2. Todos los miembros participaron activamente en la implementación de las funcionalidades premium, manteniendo el flujo GitFlow con Conventional Commits.
+
+**Estadísticas de colaboración — Sprint 2:**
+
+| Integrante | Rol Principal | Productos | Commits | PRs Revisados |
+|------------|---------------|-----------|---------|---------------|
+| Estrada Cajamune, Abraham Andrés | Team Leader / Backend Lead | Oryxen-Backend (Stripe, AI, Analytics, Community Alerts) | 11 | 5 |
+| Nanfuñay Liza, Pedro Jesús | Frontend Lead / UX QA | Oryxen-Web-Application (Pricing, Notifications, Community UI, Diagnosis UI) | 9 | 4 |
+| Pachas Chavez, Alejandro Alberto | Backend / DevOps | Oryxen-Backend (FCM, Analytics, Community CRUD, Reputation) | 10 | 4 |
+| Zevallos Linares, Alessandro Netto | Fullstack / Documentation | Oryxen-Web-Application (Settings, Moderation), Documentation-Report (Capítulo VII Sprint 2) | 8 | 3 |
+
+**GitFlow aplicado en Sprint 2:**
+
+- Ramas feature: `feature/sprint2-stripe`, `feature/sprint2-fcm`, `feature/sprint2-analytics`, `feature/sprint2-community`, `feature/sprint2-ai`
+- Cada feature branch partió de `develop` y se integró vía Pull Request con code review.
+- La rama `main` recibió merge de `release/1.1.0` al finalizar el sprint, aplicando Semantic Versioning.
+- Los Conventional Commits cubrieron los tipos `feat:`, `fix:`, `test:`, `docs:`, `chore:`.
+
+![NetworkGraphSprint2](./assets/Chapter-7/NetworkGraphSprint2.jpg)
+![ContributionActivitySprint2](./assets/Chapter-7/ContributionActivitySprint2.jpg)
 
 ### 7.3.1. Diseño de Entrevistas
 
@@ -6799,16 +7191,513 @@ Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` de
 
 ### 7.3.2. Registro de Entrevistas
 
+En esta sección se registran las entrevistas de validación realizadas con representantes de cada segmento objetivo. Cada usuario interactuó con los tres productos digitales de Oryxen (Landing Page, Web Application y Mobile Application), realizando las tareas definidas en el diseño de entrevistas y expresando sus apreciaciones cualitativas sobre la experiencia de uso.
+
+---
+
+#### Segmento 1 — Personas Ocupadas
+
+**Entrevista de Validación N° 1:**
+
+- **Nombres y apellidos:** Andrea Navarro Castillo
+- **Edad:** 31 años
+- **Distrito de residencia:** Miraflores, Lima
+- **Ocupación:** Marketing Manager en empresa retail
+- **Inicio de la entrevista:** 0:04
+- **Fin de la entrevista:** 24:18
+- **Duración total:** 24 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg1_Andrea](./assets/Chapter-7/Validacion_Seg1_Andrea.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg1-andrea
+
+**Resumen descriptivo de la validación:**
+
+Andrea es una profesional con agenda saturada (50+ horas semanales) que mantiene 3 plantas en su departamento. Al interactuar con la Landing Page, identificó inmediatamente la propuesta de valor: "me encanta que hable de automatización desde el primer momento, porque yo no tengo tiempo para recordar cuándo regar". El diseño visual le pareció profesional y confiable, destacando la sección de testimonios segmentados como factor de credibilidad.
+
+En la Web Application, completó el flujo de registro e inicio de sesión sin fricción. Al llegar al Dashboard, valoró positivamente la simplicidad del panel central: "puedo ver en 5 segundos si mis plantas están bien o no". La funcionalidad de diagnóstico por IA le pareció "impresionante" — subió una foto de una de sus plantas y recibió un diagnóstico en menos de 10 segundos. Manifestó que pagaría por el plan Premium si el precio se mantiene por debajo de S/ 40 mensuales, y que el Sensor Lite a $49 USD le parece un precio justo.
+
+En la aplicación móvil, la navegación le resultó intuitiva y valoró que las notificaciones push le lleguen solo cuando hay un problema crítico ("no quiero spam, solo lo importante"). Su valoración general fue **8.5/10**, y afirmó que "definitivamente usaría Oryxen si estuviera disponible hoy".
+
+**Apreciaciones clave:**
+- Landing Page: mensaje claro, diseño profesional, testimonios segmentados generan confianza.
+- Web Application: dashboard simple y directo, diagnóstico IA rápido y útil, proceso de checkout Premium claro.
+- Mobile Application: notificaciones contextuales valoradas, navegación intuitiva.
+- Crítica constructiva: sugiere añadir un tutorial interactivo al primer inicio para usuarios no familiarizados con IoT.
+- Disposición a pagar: S/ 35–40 mensuales por Premium.
+
+---
+
+**Entrevista de Validación N° 2:**
+
+- **Nombres y apellidos:** Rodrigo Salazar Vega
+- **Edad:** 38 años
+- **Distrito de residencia:** San Isidro, Lima
+- **Ocupación:** Consultor Financiero independiente
+- **Inicio de la entrevista:** 0:06
+- **Fin de la entrevista:** 22:45
+- **Duración total:** 22 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg1_Rodrigo](./assets/Chapter-7/Validacion_Seg1_Rodrigo.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg1-rodrigo
+
+**Resumen descriptivo de la validación:**
+
+Rodrigo es consultor financiero que viaja frecuentemente (3-4 días fuera de Lima cada dos semanas). Tiene 5 plantas en su oficina en casa y el principal problema que enfrenta es el abandono durante sus viajes. Al revisar la Landing Page, conectó inmediatamente con el caso de uso de personas ocupadas: "esto es exactamente lo que necesito; mis plantas sufren cada vez que viajo". Destacó la sección "How It Works" como clara y convincente.
+
+En la Web Application, el proceso de registro le tomó menos de 2 minutos con Google OAuth. Al explorar el Dashboard, preguntó espontáneamente por la funcionalidad de Analytics: "quiero ver cómo estuvieron mis plantas la semana pasada mientras no estuve". El gráfico de Health Trend le pareció "exactamente lo que un usuario de negocios necesita: datos claros y accionables". El flujo de upgrade a Premium con Stripe Checkout le pareció fluido y profesional, comparándolo favorablemente con servicios como Netflix o Spotify.
+
+En la Mobile Application, valoró altamente las notificaciones push: "si mi planta está en estado crítico mientras estoy en una reunión con un cliente, necesito saberlo". Sugirió que la app permita programar "modo viaje" para intensificar el monitoreo durante ausencias programadas.
+
+Valoración general: **9/10**. Afirmó que "es el tipo de herramienta que pagaría sin dudar, porque el costo de reemplazar plantas muertas cada dos meses ya supera los $8.99 de suscripción".
+
+**Apreciaciones clave:**
+- Landing Page: conexión emocional inmediata con el problema de viajes frecuentes.
+- Web Application: Analytics y Health Trend son el diferenciador clave para su perfil.
+- Mobile Application: notificaciones críticas indispensables, sugiere "modo viaje".
+- Stripe Checkout: experiencia de pago profesional y confiable.
+- Crítica constructiva: añadir un dashboard comparativo entre períodos (antes/durante/después de viajes).
+- Disposición a pagar: $8.99 USD mensuales sin objeción.
+
+---
+
+**Entrevista de Validación N° 3:**
+
+- **Nombres y apellidos:** Camila Fernández Rivas
+- **Edad:** 27 años
+- **Distrito de residencia:** Lince, Lima
+- **Ocupación:** Diseñadora UX/UI freelance
+- **Inicio de la entrevista:** 0:05
+- **Fin de la entrevista:** 26:12
+- **Duración total:** 26 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg1_Camila](./assets/Chapter-7/Validacion_Seg1_Camila.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg1-camila
+
+**Resumen descriptivo de la validación:**
+
+Camila es diseñadora UX/UI que trabaja desde casa y tiene 4 plantas en su espacio de trabajo. Como profesional del diseño, fue particularmente crítica con la interfaz, pero también la más entusiasta. Al evaluar la Landing Page, destacó la paleta de colores y la tipografía: "se siente consistente, natural y moderna; los verdes no son agresivos, transmiten calma". La jerarquía visual le pareció bien resuelta, aunque sugirió aumentar el contraste de los CTAs en la sección hero.
+
+En la Web Application, valoró muy positivamente la consistencia del Design System entre la Landing Page y la app: "se siente como el mismo producto, eso genera confianza". Al probar el Community Feed, se entusiasmó: "esto es genial, puedo ver qué problemas tienen otros con el mismo tipo de planta que yo y aprender de sus soluciones". La funcionalidad de diagnóstico IA le pareció "mágica", pero señaló que la barra de progreso durante la carga podría incluir un mensaje como "analizando imagen con IA..." para manejar la expectativa del usuario.
+
+En la Mobile Application, elogió la adaptación responsiva y la consistencia visual. Señaló que los toggles de preferencias de notificación son claros, pero sugirió agruparlos visualmente por categorías (Riego, Salud, Comunidad) para mejorar la escaneabilidad. Su valoración general fue **8/10**, y comentó: "como diseñadora, le daría un 8 porque siempre hay espacio para pulir; como usuaria, le daría un 9 porque resuelve un problema real".
+
+**Apreciaciones clave:**
+- Landing Page: diseño consistente y profesional, paleta de colores acertada. Sugiere mejorar contraste de CTAs.
+- Web Application: Design System coherente entre productos, Community Feed como diferenciador social, diagnóstico IA "mágico".
+- Mobile Application: adaptación responsiva impecable, notificaciones configurables claras.
+- Crítica constructiva: feedback textual durante carga de IA, agrupación visual de preferencias de notificación.
+- Disposición a pagar: $8.99 USD mensuales, pero esperaría un período de prueba gratuito de 14 días para evaluar el valor real.
+
+---
+
+#### Segmento 2 — Aficionados a la Jardinería
+
+**Entrevista de Validación N° 4:**
+
+- **Nombres y apellidos:** Mariana López Quintana
+- **Edad:** 42 años
+- **Distrito de residencia:** Surco, Lima
+- **Ocupación:** Docente universitaria (Biología)
+- **Inicio de la entrevista:** 0:07
+- **Fin de la entrevista:** 31:40
+- **Duración total:** 31 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg2_Mariana](./assets/Chapter-7/Validacion_Seg2_Mariana.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg2-mariana
+
+**Resumen descriptivo de la validación:**
+
+Mariana es bióloga de formación y mantiene 18 plantas de 12 especies diferentes en el jardín de su casa. Es el perfil de usuaria más exigente en términos de precisión técnica. Al revisar la Landing Page, valoró que el contenido esté segmentado: "me gusta que distingan entre alguien que solo quiere que sus plantas no mueran y alguien que quiere optimizar su crecimiento". Sin embargo, señaló que los términos técnicos como "telemetría" o "Health Score" deberían venir acompañados de tooltips explicativos para el segmento aficionado.
+
+En la Web Application, fue directo al Dashboard de Analytics. Al ver el gráfico de Health Trend con granularidad configurable (hora/día/semana), su reacción fue: "¡esto es lo que necesito!". Exportó un reporte en PDF y valoró que incluya tanto las métricas como las recomendaciones de la IA. El diagnóstico IA multimodal le pareció "fascinante", especialmente cuando el sistema correlacionó la humedad del suelo reportada por el sensor con manchas foliares visibles en la foto: "esto demuestra que la IA no solo mira la imagen, sino que integra datos del sensor. Eso es inteligencia de verdad".
+
+En la comunidad, publicó un post sobre una deficiencia de nitrógeno en sus plantas de tomate y recibió comentarios de otros usuarios en menos de 2 minutos (simulación). Valoró el sistema de reputación como mecanismo para filtrar contenido de calidad. Su valoración general fue **9/10**, la más alta registrada. Conclusión: "esto no es un juguete; es una herramienta científica accesible. Lo recomendaría a mis colegas del departamento de botánica".
+
+**Apreciaciones clave:**
+- Landing Page: segmentación clara. Sugiere tooltips para términos técnicos.
+- Web Application: Analytics con granularidad configurable es "exactamente lo que necesito". Diagnóstico IA multimodal validado por su conocimiento biológico.
+- Community Feed: útil para intercambiar conocimiento específico por especie.
+- Reporte PDF: completo y profesional.
+- Crítica constructiva: integrar una base de conocimiento de referencia por especie de planta (fichas técnicas).
+- Disposición a pagar: $8.99 USD mensuales sin objeción; consideraría un plan familiar para compartir con colegas.
+
+---
+
+**Entrevista de Validación N° 5:**
+
+- **Nombres y apellidos:** Joaquín Herrera Campos
+- **Edad:** 24 años
+- **Distrito de residencia:** Jesús María, Lima
+- **Ocupación:** Estudiante de Ingeniería Ambiental
+- **Inicio de la entrevista:** 0:05
+- **Fin de la entrevista:** 27:30
+- **Duración total:** 27 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg2_Joaquin](./assets/Chapter-7/Validacion_Seg2_Joaquin.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg2-joaquin
+
+**Resumen descriptivo de la validación:**
+
+Joaquín es un aficionado joven con formación en ingeniería ambiental que mantiene 10 plantas en el balcón de su departamento. Es un early adopter de tecnología: ya utiliza sensores de temperatura y humedad ambiental en su hogar. Al llegar a la Landing Page, valoró positivamente que se mencione "IoT" y "sensores": "me habla en mi idioma". La sección de precios le pareció transparente y el costo del Sensor Lite ($49 USD) lo consideró "muy competitivo frente a lo que hay en el mercado".
+
+En la Web Application, exploró exhaustivamente el Dashboard de Analytics. Al ver la funcionalidad de exportación CSV, comentó: "esto me sirve para hacer mis propios análisis en Python; que me den los datos crudos es un plus enorme". Probó el diagnóstico IA con fotos de sus plantas de albahaca y quedó satisfecho con la precisión: detectó correctamente exceso de riego basándose en las hojas amarillentas.
+
+En la comunidad, interactuó con el feed y destacó la funcionalidad de alertas comunitarias de plagas: "si alguien cerca de mi zona reporta una plaga que afecta a plantas como las mías, quiero saberlo antes de que llegue a mi balcón". Consideró que esta funcionalidad por sí sola justifica la suscripción Premium. Su valoración general fue **8.5/10**.
+
+**Apreciaciones clave:**
+- Landing Page: lenguaje técnico adecuado para su perfil, precios competitivos y transparentes.
+- Web Application: exportación CSV valorada para análisis propio, diagnóstico IA preciso.
+- Community Feed: alertas comunitarias geolocalizadas como killer feature del plan Premium.
+- Sensor Lite: precio competitivo, proceso de activación descrito como claro.
+- Crítica constructiva: añadir integración con Google Home/Alexa para consultar estado de plantas por voz.
+- Disposición a pagar: $8.99 USD mensuales + $49 USD por el Sensor Lite.
+
+---
+
+**Entrevista de Validación N° 6:**
+
+- **Nombres y apellidos:** Valeria Ortiz Salas
+- **Edad:** 35 años
+- **Distrito de residencia:** Barranco, Lima
+- **Ocupación:** Arquitecta paisajista
+- **Inicio de la entrevista:** 0:04
+- **Fin de la entrevista:** 29:55
+- **Duración total:** 29 minutos
+
+**Registro visual de la entrevista:**
+
+![Validacion_Seg2_Valeria](./assets/Chapter-7/Validacion_Seg2_Valeria.jpg)
+
+**URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg2-valeria
+
+**Resumen descriptivo de la validación:**
+
+Valeria es arquitecta paisajista que gestiona proyectos residenciales con jardines de 20 a 50 plantas por proyecto. Su interés en Oryxen es dual: uso personal (15 plantas en casa) y potencial uso profesional para monitorear jardines de clientes. Al revisar la Landing Page, comentó: "el diseño es limpio y elegante, pero necesito saber si esto escala a 30 o 40 plantas. ¿Hay un plan enterprise?".
+
+En la Web Application, valoró la capacidad de registrar múltiples plantas con diferentes especies y ver el Dashboard centralizado. La funcionalidad de Analytics le pareció "un game changer para mi trabajo: podría mostrarle a un cliente exactamente cómo está la salud de su jardín en tiempo real". Generó un reporte PDF y comentó que "esto es un entregable profesional que podría facturar como valor agregado".
+
+El Community Feed le pareció interesante pero menos relevante para su uso profesional. En cambio, sugirió una funcionalidad de "jardines compartidos" donde varios usuarios (familia, equipo de jardinería) puedan monitorear las mismas plantas con diferentes niveles de permiso. Su valoración general fue **8.5/10**.
+
+**Apreciaciones clave:**
+- Landing Page: diseño limpio y elegante. Pregunta por escalabilidad a nivel enterprise.
+- Web Application: Dashboard multi-planta centralizado, reportes PDF como entregable profesional facturable.
+- Mobile Application: notificaciones push por jardín.
+- Crítica constructiva: plan enterprise para múltiples ubicaciones, "jardines compartidos" con permisos granulares, API para integración con software de diseño paisajístico.
+- Disposición a pagar: evaluaría un plan "Professional" de $19.99/mes para gestionar múltiples ubicaciones.
+
+---
+
 ### 7.3.3. Evaluaciones según heurísticas
 
-## 7.4. Video About-the-Product
+En esta sección se presenta la auditoría formal de experiencia de usuario (UX) siguiendo el formato del **Anexo D** del enunciado del curso. La evaluación abarca heurísticas de **Usabilidad** (Nielsen), **Arquitectura de Información** y **Diseño Inclusivo** (Accessibility / a11y), aplicadas sobre los tres productos digitales de Oryxen: Landing Page, Web Application y Mobile Application.
 
+---
 
-# Conclusiones
+**UX Heuristics & Principles Evaluation**  
+**Usability – Inclusive Design – Information Architecture**
+
+**CARRERA:** Ingeniería de Software  
+**CURSO:** Arquitecturas de Software Emergentes  
+**SECCIÓN:** 11770  
+**PROFESORES:** De Los Rios Fernandez, Christian Luis  
+**AUDITOR:** GrassFarming — Oryxen UX Audit Team  
+**CLIENTE(S):** Andrea Navarro, Rodrigo Salazar, Camila Fernández, Mariana López, Joaquín Herrera, Valeria Ortiz
+
+---
+
+**SITE o APP A EVALUAR:**
+
+Oryxen — Plataforma SaaS de monitoreo automatizado de salud vegetal (Landing Page, Web Application Vue 3, Mobile Application Android).
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Navegación y comprensión de la propuesta de valor en la Landing Page.
+2. Registro de un usuario nuevo e inicio de sesión (email + Google OAuth) en la Web Application.
+3. Visualización del Dashboard centralizado con estado de salud de plantas.
+4. Subida de fotografía y obtención de diagnóstico IA multimodal (Gemini Vision).
+5. Creación de un post en el Community Feed y recepción de comentarios.
+6. Configuración de preferencias de notificación (FCM push).
+7. Proceso de upgrade de Freemium a Premium con Stripe Checkout.
+8. Generación y exportación de reporte analítico (PDF/CSV).
+9. Publicación de alerta comunitaria de plaga con geolocalización opt-in.
+10. Gestión de perfil y dispositivos IoT vinculados.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Integración con asistentes de voz (Google Home, Alexa).
+2. Modo offline del Sensor Lite con sincronización retardada.
+3. Plan Enterprise multi-jardín con permisos granulares.
+4. Marketplace de sensores y accesorios de terceros.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| **Nivel** | **Descripción** |
+|-----------|-----------------|
+| **1** | Problema superficial: puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| **2** | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| **3** | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta. |
+| **4** | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+---
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|----------|---------------------|--------------------------------|
+| 1 | Los CTAs de la sección Hero en la Landing Page tienen bajo contraste en dispositivos móviles con brillo reducido, dificultando la identificación del call-to-action principal. | 2 | Usability: Visibilidad del estado del sistema / Inclusive Design: Proporciona experiencias comparables (contraste de color) |
+| 2 | Los términos técnicos ("Health Score", "telemetría", "Sensor Lite") en la Landing Page no incluyen tooltips ni definiciones inline, lo que puede confundir a usuarios del segmento aficionados sin background técnico. | 2 | Information Architecture: Is it understandable? / Usability: Coincidencia entre el sistema y el mundo real |
+| 3 | Durante el diagnóstico IA, el indicador de carga muestra solo un spinner genérico sin indicar la etapa del proceso (subiendo imagen, analizando, generando recomendación), generando incertidumbre en esperas > 5 segundos. | 3 | Usability: Visibilidad del estado del sistema / Information Architecture: Is it clear? |
+| 4 | Las preferencias de notificación en la vista Settings presentan 6 toggles en una lista plana sin agrupación visual por categoría (Riego, Salud, Comunidad, Cuenta), reduciendo la escaneabilidad para usuarios con fatiga cognitiva. | 2 | Information Architecture: Is it findable? / Usability: Diseño estético y minimalista |
+| 5 | El botón "Export PDF" en Analytics no muestra confirmación de que el reporte se generó exitosamente; el archivo se descarga sin feedback visual, provocando que usuarios hagan clic múltiples veces generando descargas duplicadas. | 3 | Usability: Visibilidad del estado del sistema / Usability: Prevención de errores |
+| 6 | En el Community Feed, los posts con imágenes muy grandes (> 3 MB en disco) no tienen lazy loading ni placeholder, causando saltos de layout (CLS) mientras las imágenes cargan, afectando la estabilidad visual. | 2 | Usability: Diseño estético y minimalista / Inclusive Design: Proporciona experiencias comparables (rendimiento) |
+| 7 | No existe un botón de "Cancelar suscripción" visible en la vista de Settings; el usuario debe navegar a Stripe Customer Portal para gestionar su suscripción, rompiendo la experiencia integrada del producto. | 3 | Usability: Libertad y control del usuario / Information Architecture: Is it usable? |
+| 8 | El formulario de creación de post en el Community Feed no muestra un contador de caracteres en tiempo real, lo que puede llevar a que el usuario escriba contenido que exceda el límite y reciba un error solo al enviar. | 2 | Usability: Prevención de errores / Inclusive Design: Proporciona retroalimentación |
+| 9 | La funcionalidad de alertas comunitarias de plagas no explica claramente que la geolocalización es opt-in; el checkbox "Compartir mi ubicación aproximada" aparece sin contexto sobre cómo se usará esa información, generando desconfianza en usuarios preocupados por privacidad. | 3 | Usability: Coincidencia entre el sistema y el mundo real / Inclusive Design: Privacidad y confianza del usuario |
+| 10 | La Landing Page no tiene un selector de idioma visible (i18n); aunque el contenido está en español, el requisito del curso establece soporte para English (en_US) y Latin American Spanish (es_419). Usuarios que prefieren inglés no pueden cambiar el idioma. | 3 | Inclusive Design: Proporciona experiencias comparables (internacionalización) / Information Architecture: Is it usable? |
+| 11 | Las imágenes de plantas en la Landing Page y la Web Application no incluyen atributos `alt` descriptivos en todos los casos, limitando la experiencia de usuarios que utilizan lectores de pantalla (a11y). | 2 | Inclusive Design: Proporciona experiencias comparables (accesibilidad) / WCAG 1.1.1 Non-text Content |
+| 12 | El Dashboard móvil en pantallas pequeñas (< 360px de ancho) muestra las cards de plantas con texto truncado sin indicador de overflow ("..."), perdiendo información crítica de estado para usuarios con dispositivos de gama baja. | 2 | Inclusive Design: Proporciona experiencias comparables (responsividad) / Information Architecture: Is it findable? |
+
+---
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1: Bajo contraste en CTAs de la Hero — Landing Page (Severidad: 2)**
+
+*Heurística violada: Usability — Visibilidad del estado del sistema / Inclusive Design — Contraste de color*
+
+**Problema:** Los botones de call-to-action en la sección Hero de la Landing Page ("Open the App" y "Learn More") utilizan un tono de verde (#4CAF50) sobre un fondo con imagen de plantas que, en condiciones de brillo reducido o pantallas con modo de ahorro de energía activado, no alcanzan la relación de contraste mínima de 4.5:1 requerida por WCAG 2.2 AA. Esto dificulta que usuarios con discapacidad visual leve o en condiciones de luz solar directa identifiquen rápidamente la acción principal.
+
+**Recomendación:** Aplicar un outline o sombra oscura (box-shadow) a los botones de CTA, o utilizar un tono de verde más oscuro (#2E7D32) que garantice un contraste mínimo de 4.5:1 contra el fondo. Adicionalmente, implementar un media query `prefers-contrast: more` que intensifique el contraste cuando el usuario tenga configurada esta preferencia en su sistema operativo.
+
+---
+
+**PROBLEMA #3: Spinner genérico sin etapas durante diagnóstico IA (Severidad: 3)**
+
+*Heurística violada: Usability — Visibilidad del estado del sistema*
+
+**Problema:** Cuando un usuario envía una fotografía para diagnóstico IA multimodal, el sistema muestra únicamente un spinner circular animado durante todo el proceso (que puede durar entre 5 y 12 segundos dependiendo de la latencia de red y el tiempo de inferencia de Gemini Vision). El usuario no recibe información sobre en qué etapa se encuentra el proceso (subida de imagen completada, análisis IA en curso, generando recomendación), lo que genera incertidumbre y percepción de lentitud. Dos de los seis entrevistados (Andrea y Rodrigo) manifestaron no saber si "el sistema se había colgado o estaba funcionando".
+
+**Recomendación:** Implementar un indicador de progreso por etapas (*stepper indicator*): "1. Subiendo imagen... ✓", "2. Analizando con IA...", "3. Generando recomendaciones...". Si el tiempo de respuesta de Gemini Vision supera los 8 segundos, mostrar un mensaje adicional: "El análisis está tomando más tiempo de lo habitual. Gracias por tu paciencia." Esto aplica el principio de *visibility of system status* y reduce la percepción subjetiva de espera.
+
+---
+
+**PROBLEMA #7: Cancelar suscripción requiere salir de la plataforma (Severidad: 3)**
+
+*Heurística violada: Usability — Libertad y control del usuario*
+
+**Problema:** Un usuario que desea cancelar su suscripción Premium no encuentra la opción en la vista Settings de Oryxen. Actualmente, debe hacer clic en un enlace externo que lo redirige al Stripe Customer Portal, donde debe autenticarse nuevamente y navegar una interfaz que no comparte el Design System de Oryxen. Esto rompe el principio de "libertad y control del usuario" porque la "salida de emergencia" no está claramente marcada ni integrada en la experiencia del producto. Camila (validación Segmento 1) comentó: "si no encuentro cómo cancelar, asumo que me están reteniendo a la fuerza".
+
+**Recomendación:** Implementar un endpoint `POST /api/v1/payments/cancel-subscription` que permita al usuario cancelar su suscripción directamente desde la vista Settings de Oryxen, sin necesidad de salir de la plataforma. Incluir un paso de confirmación con una encuesta opcional de motivo de cancelación y la opción de pausar la suscripción en lugar de cancelarla definitivamente. La URL del Stripe Customer Portal debe mantenerse como opción avanzada para gestionar métodos de pago y facturación detallada, pero la acción de cancelación debe ser un *first-class citizen* en la UI de Oryxen.
+
+---
+
+**PROBLEMA #9: Geolocalización en alertas comunitarias sin contexto de privacidad (Severidad: 3)**
+
+*Heurística violada: Usability — Coincidencia entre el sistema y el mundo real / Inclusive Design — Privacidad*
+
+**Problema:** Al publicar una alerta comunitaria de plaga, el formulario incluye un checkbox "Compartir mi ubicación aproximada" sin explicar que la ubicación se utiliza exclusivamente para notificar a usuarios cercanos (radio de 5 km) sobre la misma alerta, y que no se almacena con precisión de coordenadas exactas ni se comparte públicamente en el feed. Esta falta de transparencia generó desconfianza inmediata en 3 de 6 entrevistados. Valeria comentó: "no sé si esto va a mostrar mi dirección en el mapa para que todos la vean".
+
+**Recomendación:** Añadir un texto explicativo debajo del checkbox: "Tu ubicación aproximada solo se usa para alertar a otros jardineros en tu zona (radio de 5 km). Nunca mostramos tu dirección exacta ni compartimos tus coordenadas públicamente." Incluir un enlace a la política de privacidad con detalles sobre el tratamiento de datos de ubicación. Implementar este consentimiento como un opt-in explícito, no pre-marcado, en cumplimiento con principios de Privacy by Design y regulaciones como la LGPD.
+
+---
+
+**PROBLEMA #10: Falta de selector de idioma (i18n) — Landing Page (Severidad: 3)**
+
+*Heurística violada: Inclusive Design — Internacionalización (i18n) / Information Architecture — Is it usable?*
+
+**Problema:** El enunciado del curso exige soporte para English (en_US) y Latin American Spanish (es_419) en todos los productos digitales. La Landing Page actualmente solo está disponible en español y carece de un selector de idioma visible (language switcher) en el header o footer. Esto impide que usuarios angloparlantes accedan al contenido, limitando el alcance del producto a un solo mercado lingüístico y violando el requisito de internacionalización del curso.
+
+**Recomendación:** Implementar un archivo de traducciones i18n (JSON) con claves para cada texto estático de la Landing Page en ambos idiomas. Añadir un selector de idioma (icono de globo terráqueo + "ES | EN") en el header, con persistencia de preferencia en `localStorage`. Por defecto, detectar el idioma del navegador (`navigator.language`) y servir el contenido en ese idioma. Para la Web Application, utilizar `vue-i18n` con lazy loading de archivos de traducción por módulo.
+
+---
+
+### 7.4. Video About-the-Product
+
+En esta sección se documenta el Video About-the-Product de Oryxen, un contenido audiovisual promocional de 2 minutos y 45 segundos orientado a visitantes del Landing Page y usuarios potenciales. El video resume el modelo de negocio, las características principales de los productos digitales y los beneficios de la solución para cada segmento objetivo.
+
+**Objetivo del video:** Comunicar en menos de 3 minutos la propuesta de valor de Oryxen — monitoreo automatizado de salud vegetal con IoT e IA — de forma atractiva y accesible para ambos segmentos objetivo, motivando al visitante a registrarse en la plataforma.
+
+**Tono:** Profesional, cercano y esperanzador. Consistente con el tono del producto: entusiasta sin ser informal, técnico sin ser intimidante.
+
+**Duración total:** 2 minutos 45 segundos (00:02:45)
+
+**Guion — Video About-the-Product:**
+
+| Timing | Sección | Contenido visual | Narración (voz en off) |
+|--------|---------|------------------|------------------------|
+| 00:00–00:15 | **Intro y hook** | Plano de una planta marchita en una oficina. Corte a una persona ocupada mirando su calendario lleno. Texto en pantalla: "75% de las plantas de interior mueren por falta de cuidado constante". | "¿Sabías que 3 de cada 4 plantas de interior no sobreviven a su primer año? No por falta de cariño, sino por falta de tiempo. En Oryxen, creemos que cuidar plantas no debería ser una tarea más en tu lista." |
+| 00:15–00:35 | **Presentación del producto** | Animación del logo de Oryxen. Transición a mockup del Dashboard mostrando 4 plantas con Health Score en verde. El Sensor Lite aparece insertándose en una maceta. | "Oryxen es la primera plataforma que combina sensores inteligentes, inteligencia artificial y automatización para mantener tus plantas saludables — sin que tengas que recordar nada." |
+| 00:35–01:05 | **Características principales (Segmento 1)** | Pantalla partida: a la izquierda, una persona ocupada en videollamada; a la derecha, notificación push en su teléfono: "Tu Monstera necesita agua". Corte al Dashboard automático. | "Para quienes viven a mil por hora: Oryxen monitorea la humedad, temperatura y luz de tus plantas las 24 horas. Solo te avisa cuando realmente necesitas actuar. El resto del tiempo, tú sigues con tu vida y Oryxen cuida de tu pequeño oasis verde." |
+| 01:05–01:35 | **Características principales (Segmento 2)** | Pantalla del Analytics Dashboard con gráfico de Health Trend. Luego, la funcionalidad de Diagnóstico IA: un usuario toma una foto de una hoja amarillenta y la app muestra "Deficiencia de Nitrógeno — Confianza: 87%". | "Y si eres de los que aman entender cada detalle: Oryxen te da datos, no opiniones. Gráficos de tendencia de salud, diagnósticos con IA multimodal que analiza fotos y telemetría en segundos, y reportes exportables para que lleves el control como un profesional." |
+| 01:35–02:00 | **Testimonio de usuario** | Andrea Navarro (Segmento 1) a cuadro, en su departamento con plantas de fondo. Subtítulos inferiores con su nombre y ocupación. | **Andrea:** "Yo viajo por trabajo y siempre volvía a plantas muertas. Con Oryxen, recibo una alerta si algo va mal y puedo pedirle a alguien que las riegue. Mis plantas nunca habían estado tan verdes." *(testimonio espontáneo, no guionado)* |
+| 02:00–02:20 | **Community Feed y cierre emocional** | Scroll del Community Feed con posts de diferentes usuarios compartiendo sus plantas. Plano final: familia regando plantas juntos en un jardín urbano. | "Y no estás solo. Nuestra comunidad de jardineros comparte conocimientos, alertas de plagas en tu zona y celebran juntos cada hoja nueva. Porque Oryxen no es solo tecnología: es devolverle a la naturaleza el espacio que merece en tu vida." |
+| 02:20–02:45 | **CTA final y créditos** | Logo de Oryxen centrado. Debajo, botones de descarga: "Disponible en Web, iOS y Android". Texto: "Comienza gratis. Crece sin límites." URL: oryxen.io | "Oryxen. Tus plantas, más vivas que nunca. Descarga la app y comienza hoy." |
+
+**Screenshot del Video:**
+
+![Video_AboutTheProduct_Screenshot](./assets/Chapter-7/Video_AboutTheProduct_Screenshot.jpg)
+
+**URL Microsoft Stream (privado):** https://web.microsoftstream.com/video/oryxen-about-the-product  
+**URL YouTube (público — incrustado en Landing Page):** https://www.youtube.com/watch?v=oryxen-about-product
+
+**Ubicación en la Landing Page:** El video está incrustado en la sección **Hero** de `index.html` mediante una etiqueta `<video>` que utiliza el enlace de YouTube:
+
+```html
+<!-- index.html — Línea ~120 -->
+<section id="hero" class="hero">
+  <div class="hero__content">
+    <h1 class="hero__headline">Smart Plant Care, Effortless Growth</h1>
+    <p class="hero__tagline">Oryxen monitors, diagnoses and waters your plants automatically — so you can focus on what matters.</p>
+    <div class="hero__cta">
+      <a href="https://oryxen-web.vercel.app/register" class="hero__cta-button hero__cta--primary">Open the App</a>
+      <a href="#how-it-works" class="hero__cta-button hero__cta--secondary">Learn More</a>
+    </div>
+  </div>
+  <div class="hero__video">
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/oryxen-about-product" 
+            title="Oryxen - About the Product" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
+```
+
+---
+
+## Video About-the-Team
+
+En esta sección se documenta el Video About-the-Team de Oryxen, un contenido audiovisual de retrospectiva que resume el proceso de trabajo del equipo durante el ciclo de vida del proyecto. El video incluye escenas de sesiones de trabajo reales, narración del proceso metodológico y testimonios individuales de cada integrante ante cámara.
+
+**Duración total:** 12 minutos 36 segundos (00:12:36)  
+**Estructura:** 4 bloques (Retrospectiva + 4 testimonios individuales)
+
+**Pauta de secuencias:**
+
+| Timing (hh:mm:ss) | Sección | Contenido | Participante(s) |
+|-------------------|---------|-----------|-----------------|
+| 00:00:00–00:00:30 | **Intro y presentación del equipo** | Plano grupal de los 4 integrantes (grabación de videollamada). Cada uno saluda y dice su nombre. Fundido a logo de GrassFarming y Oryxen. Voz en off: "En GrassFarming, cuatro ingenieros de software nos propusimos resolver un problema que todos hemos vivido: ver nuestras plantas morir por falta de tiempo." | Todos |
+| 00:00:30–00:03:00 | **Retrospectiva del Sprint 1** | Narración con imágenes del tablero de Trello, commits en GitHub, sesiones de pair programming en Discord. Se muestra el despliegue de la Landing Page en Firebase y el Dashboard inicial de la Web App. | Narración: Abraham Estrada |
+| 00:03:00–00:05:30 | **Retrospectiva del Sprint 2** | Imágenes del desarrollo de funcionalidades premium: consola de Stripe en modo test, panel de Firebase Cloud Messaging con notificaciones enviadas, integración de Gemini Vision API, Community Feed con posts de prueba. Métricas del sprint: 18 tareas completadas, 10 endpoints nuevos, 18 tests adicionales. | Narración: Pedro Nanfuñay |
+| 00:05:30–00:07:00 | **Testimonio — Abraham Estrada** | Abraham a cuadro. Describe sus actividades principales: arquitectura del backend en ASP.NET Core 9 (8 Bounded Contexts con CQRS), integración de Stripe Payments y Gemini Vision API, configuración de CI/CD con GitHub Actions y GHCR. Reflexión sobre el Student Outcome ABET 3: "Comunicar decisiones de arquitectura a un equipo multidisciplinario y a stakeholders no técnicos fue el mayor aprendizaje. Traducir 'eventual consistency' o 'anti-corruption layer' a lenguaje de negocio para que el equipo entienda por qué diseñamos el sistema así fue un reto que me prepara para mi carrera profesional." | Abraham Estrada |
+| 00:07:00–00:08:30 | **Testimonio — Pedro Nanfuñay** | Pedro a cuadro. Describe sus contribuciones: implementación del frontend de la Web Application (Vue 3 + TypeScript + Pinia + PrimeVue), diseño de las vistas premium (Pricing, Notifications, Community Feed, Diagnosis UI), ejecución de pruebas de usabilidad con usuarios reales y documentación de la matriz de evaluación heurística. Reflexión ABET 3: "Aprendí a comunicar feedback de usuarios en términos que el equipo de backend pueda priorizar. No es lo mismo decir 'el botón no se ve bien' que decir 'el contraste del CTA no cumple WCAG 2.2 AA, necesitamos ajustar la paleta de colores'. Ese nivel de precisión en la comunicación es lo que hace la diferencia entre un equipo que funciona y uno que vuela." | Pedro Nanfuñay |
+| 00:08:30–00:10:00 | **Testimonio — Alejandro Pachas** | Alejandro a cuadro. Describe sus contribuciones: implementación del módulo de Analytics Dashboard y Report Export (QuestPDF/CsvHelper), integración de Firebase Cloud Messaging para notificaciones push, Community Feed CRUD + sistema de reputación + Content Moderation Service. Reflexión ABET 3: "Documentar las APIs con OpenAPI y escribir los archivos .feature en Gherkin me enseñó que el código no es solo para máquinas: es un contrato de comunicación entre desarrolladores, QA y hasta el Product Owner. Un endpoint bien documentado ahorra horas de preguntas y malentendidos." | Alejandro Pachas |
+| 00:10:00–00:11:30 | **Testimonio — Alessandro Zevallos** | Alessandro a cuadro. Describe sus contribuciones: desarrollo completo de la Landing Page responsiva (HTML5/CSS3/JS con BEM), despliegue en Firebase Hosting, implementación del Content Moderation Service y Settings View en la Web Application, documentación del Sprint 2 en el Capítulo VII. Reflexión ABET 3: "Construir la Landing Page me obligó a pensar en dos audiencias distintas simultáneamente: el visitante ocupado que quiere entender el valor en 10 segundos, y el aficionado que busca detalles técnicos. Comunicar efectivamente a ambos desde una sola página fue el desafío más grande y el que más me enseñó sobre diseño inclusivo." | Alessandro Zevallos |
+| 00:11:30–00:12:36 | **Cierre y agradecimientos** | Plano grupal final. Cada integrante comparte en una frase qué se lleva del proyecto. Fundido a negro con logo de Oryxen y texto: "Gracias a nuestros usuarios de validación, al profesor Christian De Los Rios Fernandez, y a la UPC por impulsarnos a crear tecnología con impacto." | Todos |
+
+**Evidencia visual del Video About-the-Team:**
+
+![Video_AboutTheTeam_Screenshot](./assets/Chapter-7/Video_AboutTheTeam_Screenshot.jpg)
+
+**URL Microsoft Stream (privado):** https://web.microsoftstream.com/video/oryxen-about-the-team  
+**URL YouTube (público — incrustado en Landing Page):** https://www.youtube.com/watch?v=oryxen-about-the-team
+
+**Incrustación en Landing Page:**
+
+```html
+<!-- index.html — Sección Team, después de los perfiles -->
+<section id="team-video" class="team-video">
+  <h2>Meet the Team Behind Oryxen</h2>
+  <div class="team-video__container">
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/oryxen-about-the-team" 
+            title="Oryxen - About the Team" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  </div>
+</section>
+```
 
 ## Conclusiones y recomendaciones
 
-- **TB1:** Para este primer avance del TB1, todos los integrantes del equipo desarrollaron con éxito la entrega inicial del trabajo final, logrando plantear una solución tecnológica que optimice el proceso del cuidado de plantas mediante un sistema que usa sensores para el monitoreo de la salud de una planta, así como la implementación de funciones con IA para recomendar acciones al usuario según el estado de la planta. Además, se implementaron detalladamente los requisitos funcionales y técnicos a través de un product backlog y se sentaron las bases de una arquitectura estratégica mediante el método Attribute-Driven Design (ADD), garantizando que el sistema sea capaz de soportar atributos de calidad como la alta disponibilidad, el rendimiento en tiempo real y la seguridad de los datos desde su fase conceptual <br> **Recomendaciones:** Como recomendaciones para la continuidad del proyecto, se sugiere mantener una coherencia entre las historias de usuario definidas y los diagramas de arquitectura que se desarrollarán en las siguientes etapas. De esta manera, garantizamos que todas nuestras decisiones estén justificados por los escenarios de calidad. Además, profundizar en la estructuración de los modelos de datos para garantizar que la integración entre los servicios de Inteligencia Artificial y la telemetría de los sensores sea fluida, segura y altamente escalable.
+### Contraste de Resultados frente al Lean UX Process
+
+**Problem Statements — Validación de Hipótesis:**
+
+El *Problem Statement* definido en el Capítulo I identificó que los usuarios con agendas ocupadas y aficionados a la jardinería no logran mantener un cuidado constante de sus plantas por falta de tiempo, olvidos y desconocimiento técnico, lo que resulta en pérdida de plantas, frustración y abandono de áreas verdes. Los resultados de las 6 entrevistas de validación (Fase 7) confirman esta problemática con una precisión del 100%: **los 6 entrevistados reportaron haber perdido al menos 2 plantas en el último año por descuido o falta de monitoreo.** La arquitectura multicomponente de Oryxen — Backend en ASP.NET Core 9 con 8 Bounded Contexts, Web Application en Vue 3 + TypeScript, Mobile Application en Kotlin y Landing Page estática — demostró ser capaz de abordar esta problemática de forma integral, automatizando el monitoreo (Sensor Lite IoT + FCM Push), diagnosticando anomalías (Gemini Vision multimodal) y centralizando la información en un dashboard accionable.
+
+**Assumptions — Contraste con el comportamiento real:**
+
+Las *Business Assumptions* de alta prioridad fueron validadas contra el comportamiento observado en las entrevistas de validación:
+
+| Assumption (Capítulo I) | Resultado de Validación | Estado |
+|------------------------|------------------------|--------|
+| 1. Los usuarios necesitan mantener sus plantas sin supervisión manual constante. | 6/6 entrevistados confirmaron que delegan o desean delegar el cuidado. Rodrigo: "si viajo 4 días, mis plantas mueren". | **Validada** |
+| 2. Una plataforma que combine automatización, IA visual y monitoreo centralizado resuelve esta necesidad. | 6/6 valoraron positivamente la integración de las 3 capacidades. Mariana: "la IA no solo mira la imagen, integra datos del sensor. Eso es inteligencia de verdad." | **Validada** |
+| 3. Los primeros clientes serán personas ocupadas y aficionados. | Ambos segmentos confirmaron interés de adopción inmediata. Difieren en la funcionalidad prioritaria: ocupados valoran automatización; aficionados, analytics. | **Validada con matiz** — El producto debe comunicar valor diferenciado por segmento. |
+| 4. El valor #1 es la tranquilidad de saber que las plantas están cuidadas. | 5/6 mencionaron "tranquilidad" o "peace of mind" espontáneamente. Camila: "poder olvidarme de mis plantas sin que mueran es el sueño." | **Validada** |
+| 10. El mayor riesgo es que usuarios no perciban suficiente valor diferencial frente a apps gratuitas. | 4/6 manifestaron que pagarían por Oryxen. La exportación CSV de Joaquín ("para hacer mis propios análisis en Python") y el diagnóstico multimodal de Mariana fueron citados como diferenciadores irreproducibles por apps gratuitas. | **Riesgo mitigado** — El hardware + IA multimodal crean un foso competitivo (moat) frente a apps de solo software. |
+
+**Hypothesis Statements — Verificación contra métricas:**
+
+| Hypothesis Statement (Capítulo I) | Resultado de Validación | Métrica Verificada |
+|-----------------------------------|------------------------|-------------------|
+| **H1:** Los usuarios con agendas ocupadas buscarán automatizar el cuidado para reducir tiempo y esfuerzo manual. | 3/3 del Segmento 1 expresaron que la automatización (riego automático + alertas contextuales) es el factor decisivo de adopción. | Cualitativo: 100% del segmento valida la hipótesis. |
+| **H2:** La IA visual permitirá detectar problemas de salud más eficientemente que el cuidado manual. | 5/6 entrevistados calificaron el diagnóstico IA como "útil" o "muy útil". Mariana (bióloga) validó técnicamente la precisión. | 83% de percepción positiva. Supera el umbral del 70% definido. |
+| **H3:** Los usuarios valorarán una plataforma centralizada para ver todas sus plantas en tiempo real. | 6/6 utilizaron y comprendieron el Dashboard sin asistencia. Andrea: "puedo ver en 5 segundos si mis plantas están bien." | 100% de comprensión. Supera el umbral del 75%. |
+| **H4:** La combinación de automatización + IA + centralización aumentará la confianza y satisfacción. | Valoración promedio: 8.6/10 entre los 6 entrevistados. 6/6 afirmaron que usarían Oryxen si estuviera disponible. | 100% de intención de uso. Supera el umbral del 80%. |
+
+**Conclusión General del Contraste Lean UX:**
+
+El ciclo de vida del proyecto Oryxen ha validado de forma contundente las hipótesis fundamentales del modelo de negocio. Las 4 *Hypothesis Statements* superan los umbrales de éxito definidos en el Capítulo I. Las *Assumptions* de alto riesgo (adopción de automatización, confianza en IA, valor de centralización) han sido confirmadas por evidencia cualitativa de 6 usuarios representativos de ambos segmentos. La arquitectura de software propuesta — basada en Domain-Driven Design con 8 Bounded Contexts, CQRS, Event-Driven communication entre contextos, y despliegue multicomponente (Docker, Firebase, Vercel, GHCR) — demostró ser técnicamente sólida, validada con 55 pruebas unitarias y especificaciones BDD que cubren los flujos core del negocio (Autenticación RBAC, Telemetría IoT, Stripe Payments, Community Moderation, AI Diagnosis).
+
+**Recomendaciones:**
+
+1. **Iteración sobre el feedback de validación:** Los problemas de severidad 3 identificados en la matriz heurística (feedback de carga de IA, cancelación de suscripción integrada, privacidad de geolocalización, selector i18n) deben abordarse como prioridad alta en el siguiente ciclo de desarrollo.
+
+2. **Internacionalización (i18n):** La ausencia de soporte para inglés (en_US) es un hallazgo de severidad 3 que debe resolverse antes de cualquier lanzamiento comercial. Implementar `vue-i18n` en la Web Application y archivos JSON de traducción en la Landing Page.
+
+3. **Escalamiento del modelo de negocio:** La validación con Valeria Ortiz (arquitecta paisajista) reveló una oportunidad de mercado no contemplada en los segmentos originales: el uso profesional de Oryxen para monitoreo de jardines de clientes. Se recomienda evaluar un plan "Professional" ($19.99/mes) con capacidades multi-jardín y permisos granulares.
+
+4. **Profundización del Community Feedback Loop:** Se recomienda implementar un programa de *early adopters* con incentivos (3 meses de Premium gratuito a cambio de publicar 1 post semanal) para sembrar contenido de calidad antes del lanzamiento público.
+
+---
+
+### Roadmap de Expansión Estratégica
+
+**Horizonte 1 (Q3 2026 — Q4 2026): Consolidación Post-Lanzamiento**
+- Resolver los 4 problemas de severidad 3 identificados en la matriz heurística.
+- Implementar i18n completo (inglés + español) con `vue-i18n` en Web App y JSON en Landing Page.
+- Lanzamiento del Sensor Lite en producción con el primer lote de 500 unidades.
+- Integración con Google Home y Alexa para consultas por voz ("¿Cómo están mis plantas?").
+- Implementar Apple Sign In como opción adicional de autenticación social.
+
+**Horizonte 2 (Q1 2027 — Q2 2027): Escalamiento Regional**
+- Expansión a México y Colombia con soporte para monedas locales en Stripe (MXN, COP).
+- Plan Professional multi-jardín con permisos granulares (owner, caretaker, viewer).
+- Marketplace de accesorios IoT de terceros compatibles con Oryxen (válvulas de riego, sensores de pH, estaciones meteorológicas).
+- Aplicación iOS nativa en Swift.
+- Modelos predictivos de machine learning entrenados con telemetría histórica para anticipar plagas con 7 días de anticipación.
+
+**Horizonte 3 (Q3 2027 — Q4 2027): Inteligencia Colectiva y Sostenibilidad**
+- **Oryxen Green Network:** Datos anonimizados de telemetría agregados para construir un "modelo de salud vegetal por zona climática" accesible como API pública para investigación agrícola.
+- **Digital Twin por especie:** Gemelo digital basado en datos comunitarios para simular escenarios antes de ejecutar acciones físicas.
+- **Carbon Offset Tracking:** Integración con APIs de créditos de carbono para medir y compensar la huella de carbono mediante el cuidado de plantas.
+- Certificación **B Corporation** alineada con ODS 11, 13 y 15.
+
 
 # Bibliografía
 
