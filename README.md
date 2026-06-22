@@ -183,83 +183,247 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
 
 ### [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
 
-- [5.1. Bounded Context: Auth & Identity Integration](#51-bounded-context-auth--identity-integration)
+- [Registro de Versiones del Informe](#registro-de-versiones-del-informe)
+- [Project Report Collaboration Insights](#project-report-collaboration-insights)
+- [Contenido](#contenido)
+  - [Tabla de contenidos](#tabla-de-contenidos)
+    - [Capítulo I: Introducción](#capítulo-i-introducción)
+    - [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis)
+    - [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+    - [Capítulo IV: Strategic-Level Software Design](#capítulo-iv-strategic-level-software-design)
+    - [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design)
+  - [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
+      - [Conclusiones](#conclusiones)
+      - [Video About-the-Team](#video-about-the-team)
+      - [Bibliografía](#bibliografía)
+      - [Anexos](#anexos)
+- [Student Outcome](#student-outcome)
+- [Capítulo I: Introducción](#capítulo-i-introducción-1)
+  - [1.1. Startup Profile](#11-startup-profile)
+    - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+    - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2. Solution Profile](#12-solution-profile)
+    - [1.2.1 Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.2 Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+  - [1.3. Segmentos Objetivo](#13-segmentos-objetivo)
+- [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis-1)
+  - [2.1. Competidores](#21-competidores)
+    - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+    - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+      - [2.1.2.1. Modelo de Monetización y Análisis Financiero](#2121-modelo-de-monetización-y-análisis-financiero)
+      - [2.1.2.2. Operaciones de Hardware: Sensor Lite](#2122-operaciones-de-hardware-sensor-lite)
+  - [2.2. Entrevistas](#22-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+    - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+      - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas)
+      - [Segmento 2: Aficionados a la jardinería](#segmento-2-aficionados-a-la-jardinería)
+    - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+  - [2.3. Needfinding](#23-needfinding)
+    - [2.3.1. User Personas](#231-user-personas)
+    - [2.3.2. User Task Matrix](#232-user-task-matrix)
+    - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+      - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas-1)
+      - [Segmento 2: Aficionados a la jardinería](#segmento-2-aficionados-a-la-jardinería-1)
+    - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+      - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas-2)
+      - [Segmento 2: Aficionados a la jardinería](#segmento-2-aficionados-a-la-jardinería-2)
+  - [2.4. Big Picture EventStorming](#24-big-picture-eventstorming)
+  - [2.5. Ubiquitous Language](#25-ubiquitous-language)
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification-1)
+  - [3.1. To-be Scenario Mapping](#31-to-be-scenario-mapping)
+  - [3.2 User Stories](#32-user-stories)
+    - [Epics](#epics)
+    - [User Stories](#user-stories)
+    - [Technical Stories](#technical-stories)
+  - [3.3 Impact Mapping](#33-impact-mapping)
+    - [Segmento 1: Personas ocupadas](#segmento-1-personas-ocupadas-3)
+    - [Segmento 2: Aficionados](#segmento-2-aficionados)
+  - [3.4. Product Backlog](#34-product-backlog)
+- [Capítulo IV: Strategic-Level Software Design](#capítulo-iv-strategic-level-software-design-1)
+  - [4.1.	Strategic-Level Attribute-Driven Design](#41strategic-level-attribute-driven-design)
+    - [4.1.1. Design Purpose](#411-design-purpose)
+    - [4.1.2. Attribute-Driven Design Inputs](#412-attribute-driven-design-inputs)
+      - [4.1.2.1. Primary Functionality (Primary User Stories)](#4121-primary-functionality-primary-user-stories)
+      - [4.1.2.2. Quality attribute Scenarios](#4122-quality-attribute-scenarios)
+      - [4.1.2.3. Constraints](#4123-constraints)
+  - [4.2.	Strategic-Level Domain-Driven Design](#42strategic-level-domain-driven-design)
+    - [4.2.1. EventStorming](#421-eventstorming)
+    - [4.2.2. Candidate Context Discovery](#422-candidate-context-discovery)
+    - [4.2.3.	Domain Message Flows Modeling](#423domain-message-flows-modeling)
+    - [4.2.4.	Bounded Context Canvases](#424bounded-context-canvases)
+    - [4.2.5.	Context Mapping](#425context-mapping)
+      - [1. Revisión de la información recolectada](#1-revisión-de-la-información-recolectada)
+      - [2. Preguntas exploratorias](#2-preguntas-exploratorias)
+      - [3. Diseño de mapas candidatos](#3-diseño-de-mapas-candidatos)
+      - [4. Aplicación de buenas prácticas en los context maps](#4-aplicación-de-buenas-prácticas-en-los-context-maps)
+      - [Evidencia gráfica](#evidencia-gráfica)
+  - [4.3.	Software Architecture](#43software-architecture)
+    - [4.3.1.	Software Architecture System Landscape Diagram](#431software-architecture-system-landscape-diagram)
+    - [4.3.2.	Software Architecture Context Level Diagrams](#432software-architecture-context-level-diagrams)
+    - [4.3.3.	Software Architecture Container Level Diagrams](#433software-architecture-container-level-diagrams)
+    - [4.3.4.	Software Architecture Deployment Diagrams](#434software-architecture-deployment-diagrams)
+- [Capítulo V: Tactical-Level Software Design](#capítulo-v-tactical-level-software-design-1)
+  - [5.1. Bounded Context: Auth \& Identity Integration](#51-bounded-context-auth--identity-integration)
     - [5.1.1. Domain Layer](#511-domain-layer)
     - [5.1.2. Interface Layer](#512-interface-layer)
     - [5.1.3. Application Layer](#513-application-layer)
     - [5.1.4. Infrastructure Layer](#514-infrastructure-layer)
     - [5.1.5. Bounded Context Software Architecture Component Level Diagrams](#515-bounded-context-software-architecture-component-level-diagrams)
     - [5.1.6. Bounded Context Software Architecture Code Level Diagrams](#516-bounded-context-software-architecture-code-level-diagrams)
-        - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
-        - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
-     - [5.1.7. Mobile Client-Side Security Hardening](#517-mobile-client-side-security-hardening)
-         - [5.1.7.1. EncryptedSharedPreferences con Android Keystore](#5171-encryptedsharedpreferences-con-android-keystore)
-         - [5.1.7.2. Interceptor OkHttp de Renovación Automática de Token](#5172-interceptor-okhttp-de-renovación-automática-de-token-refresh-token-rotation)
-         - [5.1.7.3. SessionEventBus: Señalización de Sesión Expirada](#5173-sessioneventbus-señalización-de-sesión-expirada)
-         - [5.1.7.4. Erradicación de Datos Hardcodeados](#5174-erradicación-de-datos-hardcodeados)
-- [5.2. Bounded Context: Plant Management](#52-bounded-context-plant-management)
+      - [5.1.6.1. Bounded Context Domain Layer Class Diagrams](#5161-bounded-context-domain-layer-class-diagrams)
+      - [5.1.6.2. Bounded Context Database Design Diagram](#5162-bounded-context-database-design-diagram)
+    - [5.1.7 Mobile Client-Side Security Hardening](#517-mobile-client-side-security-hardening)
+      - [5.1.7.1 EncryptedSharedPreferences con Android Keystore](#5171-encryptedsharedpreferences-con-android-keystore)
+      - [5.1.7.2 Interceptor OkHttp de Renovación Automática de Token (Refresh Token Rotation)](#5172-interceptor-okhttp-de-renovación-automática-de-token-refresh-token-rotation)
+      - [5.1.7.3 SessionEventBus: Señalización de Sesión Expirada](#5173-sessioneventbus-señalización-de-sesión-expirada)
+      - [5.1.7.4 Erradicación de Datos Hardcodeados](#5174-erradicación-de-datos-hardcodeados)
     - [5.2.1. Domain Layer](#521-domain-layer)
     - [5.2.2. Interface Layer](#522-interface-layer)
     - [5.2.3. Application Layer](#523-application-layer)
     - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
     - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
     - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
-        - [5.2.6.1. Bounded Context Domain Layer Class Diagrams](#5261-bounded-context-domain-layer-class-diagrams)
-        - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
-- [5.3. Bounded Context: Device Management IoT](#53-bounded-context-device-management-iot)
+  - [5.3. Bounded Context: Device Management IoT](#53-bounded-context-device-management-iot)
     - [5.3.1. Domain Layer](#531-domain-layer)
     - [5.3.2. Interface Layer](#532-interface-layer)
     - [5.3.3. Application Layer](#533-application-layer)
     - [5.3.4. Infrastructure Layer](#534-infrastructure-layer)
     - [5.3.5. Bounded Context Software Architecture Component Level Diagrams](#535-bounded-context-software-architecture-component-level-diagrams)
+    - [Incluye:](#incluye)
     - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
-        - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
-        - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
-- [5.4. Bounded Context: Artificial Intelligence (AI)](#54-bounded-context-artificial-intelligence-ai)
+      - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
+      - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
+  - [5.4. Bounded Context: Artificial Intelligence (AI)](#54-bounded-context-artificial-intelligence-ai)
     - [5.4.1. Domain Layer](#541-domain-layer)
     - [5.4.2. Interface Layer](#542-interface-layer)
     - [5.4.3. Application Layer](#543-application-layer)
     - [5.4.4. Infrastructure Layer](#544-infrastructure-layer)
     - [5.4.5. Bounded Context Software Architecture Component Level Diagrams](#545-bounded-context-software-architecture-component-level-diagrams)
     - [5.4.6. Bounded Context Software Architecture Code Level Diagrams](#546-bounded-context-software-architecture-code-level-diagrams)
-        - [5.4.6.1. Bounded Context Domain Layer Class Diagrams](#5461-bounded-context-domain-layer-class-diagrams)
-        - [5.4.6.2. Bounded Context Database Design Diagram](#5462-bounded-context-database-design-diagram)
-- [5.5. Bounded Context: Analysis & Reporting](#55-bounded-context-analysis--reporting)
+      - [5.4.6.1. Bounded Context Domain Layer Class Diagrams](#5461-bounded-context-domain-layer-class-diagrams)
+      - [5.4.6.2. Bounded Context Database Design Diagram](#5462-bounded-context-database-design-diagram)
+    - [5.4.7. BDD Feature — Diagnóstico Multimodal de Salud Vegetal](#547-bdd-feature--diagnóstico-multimodal-de-salud-vegetal)
+  - [5.5. Bounded Context: Analysis \& Reporting](#55-bounded-context-analysis--reporting)
     - [5.5.1. Domain Layer](#551-domain-layer)
     - [5.5.2. Interface Layer](#552-interface-layer)
     - [5.5.3. Application Layer](#553-application-layer)
     - [5.5.4. Infrastructure Layer](#554-infrastructure-layer)
-    - [5.5.5. Bounded Context Software Architecture Component Level Diagrams](#555-bounded-context-software-architecture-component-level-diagrams)
-    - [5.5.6. Bounded Context Software Architecture Code Level Diagrams](#556-bounded-context-software-architecture-code-level-diagrams)
-        - [5.5.6.1. Bounded Context Domain Layer Class Diagrams](#5561-bounded-context-domain-layer-class-diagrams)
-        - [5.5.6.2. Bounded Context Database Design Diagram](#5562-bounded-context-database-design-diagram)
-- [5.6. Bounded Context: Notification](#56-bounded-context-notification)
+    - [5.5.5. Frontend Web: Vue 3 + TypeScript](#555-frontend-web-vue-3--typescript)
+    - [5.5.6. Frontend Mobile: Kotlin + Jetpack Compose](#556-frontend-mobile-kotlin--jetpack-compose)
+    - [5.5.7. Bounded Context Software Architecture Component Level Diagrams](#557-bounded-context-software-architecture-component-level-diagrams)
+    - [5.5.8. Bounded Context Software Architecture Code Level Diagrams](#558-bounded-context-software-architecture-code-level-diagrams)
+      - [5.5.8.1. Bounded Context Domain Layer Class Diagrams](#5581-bounded-context-domain-layer-class-diagrams)
+      - [5.5.8.2. Bounded Context Database Design Diagram](#5582-bounded-context-database-design-diagram)
+    - [5.5.9. Especificación BDD (Gherkin)](#559-especificación-bdd-gherkin)
+  - [5.6. Bounded Context: Notification](#56-bounded-context-notification)
     - [5.6.1. Domain Layer](#561-domain-layer)
-    - [5.6.2. Interface Layer](#562-interface-layer)
+    - [5.6.1. Domain Layer](#561-domain-layer-1)
+    - [5.6.2. Interface Layer (API)](#562-interface-layer-api)
     - [5.6.3. Application Layer](#563-application-layer)
     - [5.6.4. Infrastructure Layer](#564-infrastructure-layer)
     - [5.6.5. Bounded Context Software Architecture Component Level Diagrams](#565-bounded-context-software-architecture-component-level-diagrams)
     - [5.6.6. Bounded Context Software Architecture Code Level Diagrams](#566-bounded-context-software-architecture-code-level-diagrams)
-        - [5.6.6.1. Bounded Context Domain Layer Class Diagrams](#5661-bounded-context-domain-layer-class-diagrams)
-        - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
-- [5.7. Bounded Context: Billing and Subscription](#57-bounded-context-billing-and-subscription)
+    - [5.6.6.1. Bounded Context Domain Layer Class Diagram](#5661-bounded-context-domain-layer-class-diagram)
+    - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
+  - [5.7. Bounded Context: Billing and Subscription](#57-bounded-context-billing-and-subscription)
     - [5.7.1. Domain Layer](#571-domain-layer)
     - [5.7.2. Interface Layer](#572-interface-layer)
     - [5.7.3. Application Layer](#573-application-layer)
     - [5.7.4. Infrastructure Layer](#574-infrastructure-layer)
     - [5.7.5. Bounded Context Software Architecture Component Level Diagrams](#575-bounded-context-software-architecture-component-level-diagrams)
     - [5.7.6. Bounded Context Software Architecture Code Level Diagrams](#576-bounded-context-software-architecture-code-level-diagrams)
-        - [5.7.6.1. Bounded Context Domain Layer Class Diagrams](#5761-bounded-context-domain-layer-class-diagrams)
-        - [5.7.6.2. Bounded Context Database Design Diagram](#5762-bounded-context-database-design-diagram)
-- [5.8. Bounded Context: Community](#58-bounded-context-community)
+      - [5.7.6.1. Bounded Context Domain Layer Class Diagrams](#5761-bounded-context-domain-layer-class-diagrams)
+      - [5.7.6.2. Bounded Context Database Design Diagram](#5762-bounded-context-database-design-diagram)
+  - [5.8. Bounded Context: Community](#58-bounded-context-community)
     - [5.8.1. Domain Layer](#581-domain-layer)
     - [5.8.2. Interface Layer](#582-interface-layer)
     - [5.8.3. Application Layer](#583-application-layer)
     - [5.8.4. Infrastructure Layer](#584-infrastructure-layer)
     - [5.8.5. Bounded Context Software Architecture Component Level Diagrams](#585-bounded-context-software-architecture-component-level-diagrams)
     - [5.8.6. Bounded Context Software Architecture Code Level Diagrams](#586-bounded-context-software-architecture-code-level-diagrams)
-        - [5.8.6.1. Bounded Context Domain Layer Class Diagrams](#5861-bounded-context-domain-layer-class-diagrams)
-        - [5.8.6.2. Bounded Context Database Design Diagram](#5862-bounded-context-database-design-diagram)
+      - [5.8.6.1. Bounded Context Domain Layer Class Diagrams](#5861-bounded-context-domain-layer-class-diagrams)
+      - [5.8.6.2. Bounded Context Database Design Diagram](#5862-bounded-context-database-design-diagram)
+- [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design-1)
+  - [6.1. Style Guidelines](#61-style-guidelines)
+    - [6.1.1. General Style Guidelines](#611-general-style-guidelines)
+    - [6.1.2. Web, Mobile \& Devices Style Guidelines](#612-web-mobile--devices-style-guidelines)
+      - [A. Web Style Guidelines (Landing Page \& Web App)](#a-web-style-guidelines-landing-page--web-app)
+      - [B. Mobile Style Guidelines (Native iOS \& Android)](#b-mobile-style-guidelines-native-ios--android)
+      - [C. Devices (IoT Hardware) Style \& Feedback Guidelines](#c-devices-iot-hardware-style--feedback-guidelines)
+  - [6.2. Information Architecture](#62-information-architecture)
+    - [6.2.1. Organization Systems](#621-organization-systems)
+    - [6.2.2. Labeling Systems](#622-labeling-systems)
+      - [A. Navigation Labels](#a-navigation-labels)
+      - [B. Action Labels](#b-action-labels)
+      - [C. Status and Alert Labels](#c-status-and-alert-labels)
+      - [D. Form and Data Labels](#d-form-and-data-labels)
+      - [E. Search and Filter Labels](#e-search-and-filter-labels)
+      - [F. Feedback Labels](#f-feedback-labels)
+    - [6.2.3. Searching Systems.](#623-searching-systems)
+    - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
+      - [A. Landing Page](#a-landing-page)
+      - [B. Web Application](#b-web-application)
+      - [C. Mobile Application](#c-mobile-application)
+    - [6.2.5. Navigation Systems](#625-navigation-systems)
+      - [A. Landing Page Navigation](#a-landing-page-navigation)
+      - [B. Web Application Navigation (Dashboard)](#b-web-application-navigation-dashboard)
+      - [C. Mobile Application Navigation](#c-mobile-application-navigation)
+    - [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+      - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
+      - [6.3.1. Landing Page Mock-up](#631-landing-page-mock-up)
+  - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
+    - [6.4.1. Applications Wireframes](#641-applications-wireframes)
+    - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
+    - [6.4.3. Applications Mock-ups](#643-applications-mock-ups)
+    - [6.4.4. Applications User Flow Diagrams](#644-applications-user-flow-diagrams)
+      - [A. Flujo 1: Onboarding y Registro Manual de Planta (Plan Básico / Freemium)](#a-flujo-1-onboarding-y-registro-manual-de-planta-plan-básico--freemium)
+      - [B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)](#b-flujo-2-vinculación-de-hardware-sensor-lite-expansión-de-la-experiencia)
+      - [C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)](#c-flujo-3-diagnóstico-visual-con-inteligencia-artificial-plan-premium)
+    - [6.5. Applications Prototyping](#65-applications-prototyping)
+- [Capítulo VII: Product Implementation, Validation \& Deployment](#capítulo-vii-product-implementation-validation--deployment)
+  - [7.1. Software Configuration Management](#71-software-configuration-management)
+    - [7.1.1. Software Development Environment Configuration](#711-software-development-environment-configuration)
+    - [7.1.2. Source Code Management](#712-source-code-management)
+    - [7.1.3. Source Code Style Guide \& Conventions](#713-source-code-style-guide--conventions)
+    - [7.1.4. Software Deployment Configuration](#714-software-deployment-configuration)
+  - [7.2. Solution Implementation](#72-solution-implementation)
+    - [7.2.1. Sprint 1](#721-sprint-1)
+      - [7.2.1.1. Sprint Planning 1](#7211-sprint-planning-1)
+      - [7.2.1.2. Sprint Backlog 1](#7212-sprint-backlog-1)
+      - [7.2.1.3. Development Evidence for Sprint Review](#7213-development-evidence-for-sprint-review)
+      - [7.2.1.4. Testing Suite Evidence for Sprint Review](#7214-testing-suite-evidence-for-sprint-review)
+        - [Estructura de la Suite de Pruebas](#estructura-de-la-suite-de-pruebas)
+        - [A. Pruebas Unitarias — `PlantHealthCalculator` (Dominio)](#a-pruebas-unitarias--planthealthcalculator-dominio)
+        - [B. Pruebas Unitarias — `AuthService` (Aplicación)](#b-pruebas-unitarias--authservice-aplicación)
+        - [C. Especificaciones BDD (Gherkin .feature)](#c-especificaciones-bdd-gherkin-feature)
+        - [D. Resultados de Ejecución](#d-resultados-de-ejecución)
+        - [E. Mapeo User Stories → Testing Suite](#e-mapeo-user-stories--testing-suite)
+      - [7.2.1.5.	Execution Evidence for Sprint Review](#7215execution-evidence-for-sprint-review)
+      - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
+      - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
+      - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
+    - [7.2.3. Internacionalización (i18n) y Accesibilidad (a11y) — Web Application](#723-internacionalización-i18n-y-accesibilidad-a11y--web-application)
+      - [7.2.3.1. Internacionalización (i18n) — vue-i18n](#7231-internacionalización-i18n--vue-i18n)
+      - [7.2.3.2. Accesibilidad (a11y) — ARIA Attributes](#7232-accesibilidad-a11y--aria-attributes)
+    - [7.3. Validation Interviews](#73-validation-interviews)
+    - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
+    - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
+      - [Segmento 1 — Personas Ocupadas](#segmento-1--personas-ocupadas)
+      - [Segmento 2 — Aficionados a la Jardinería](#segmento-2--aficionados-a-la-jardinería)
+    - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
+    - [7.4. Video About-the-Product](#74-video-about-the-product)
+  - [Video About-the-Team](#video-about-the-team-1)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+    - [Contraste de Resultados frente al Lean UX Process](#contraste-de-resultados-frente-al-lean-ux-process)
+    - [Roadmap de Expansión Estratégica](#roadmap-de-expansión-estratégica)
+- [Bibliografía](#bibliografía-1)
+- [Anexos](#anexos-1)
+  - [Anexo A — Enlaces Maestros del Proyecto](#anexo-a--enlaces-maestros-del-proyecto)
+  - [Anexo B — Videos de Exposición](#anexo-b--videos-de-exposición)
 
 ## [Capítulo VI: Solution UX Design](#capítulo-vi-solution-ux-design)
   - [6.1. Style Guidelines](#61-style-guidelines)
@@ -5957,6 +6121,8 @@ Link del video app web: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221
 
 ## 7.1. Software Configuration Management
 
+En esta sección se documentan las decisiones y herramientas que constituyen la base de la configuración del ambiente de ingeniería del proyecto Oryxen. Se especifica el entorno de desarrollo estandarizado para todos los integrantes del equipo, el modelo de branching y versionado adoptado (GitFlow + Conventional Commits + Semantic Versioning), las guías de estilo de código fuente por tecnología (C#, Vue 3, HTML5/CSS3, Gherkin) y la configuración de despliegue de los cuatro productos digitales que componen la solución. El objetivo es garantizar la reproducibilidad del entorno de trabajo, la trazabilidad completa de los cambios y la coherencia del código fuente a lo largo del ciclo de vida del proyecto.
+
 ### 7.1.1. Software Development Environment Configuration
 
 El equipo establece las herramientas de software que cada integrante debe utilizar para contribuir en el ciclo de vida del proyecto. La selección cubre todas las actividades del proceso de ingeniería: gestión del proyecto, diseño, desarrollo, pruebas, despliegue y documentación.
@@ -6133,7 +6299,11 @@ La base de datos local se gestiona de forma reproducible mediante `docker-compos
 
 ## 7.2. Solution Implementation
 
+En esta sección se documenta la ejecución del plan de implementación de Oryxen bajo el marco de trabajo Scrum, organizado en sprints de dos semanas. Se presentan los artefactos de gestión ágil (Sprint Planning, Sprint Backlog) y las evidencias de revisión (Development, Testing Suite, Execution, Services Documentation, Software Deployment y Team Collaboration Insights) que demuestran el avance incremental de los cuatro productos digitales que componen la solución: Landing Page, Web Application, Mobile Application y Backend API. Adicionalmente, se documentan las capacidades transversales de internacionalización (i18n) y accesibilidad (a11y) integradas en la Web Application desde las primeras iteraciones.
+
 ### 7.2.1. Sprint 1
+
+El Sprint 1 constituye la primera iteración de desarrollo del producto Oryxen, con una duración de dos semanas y una velocidad planificada de 30 Story Points. El objetivo del sprint fue establecer la presencia digital del producto mediante el despliegue de la Landing Page responsiva y sentar las bases técnicas del ecosistema con la implementación del núcleo de autenticación (registro, login y Google OAuth con JWT) y la ingesta de telemetría IoT desde el Sensor Lite, integrando la Web Application con el backend en un entorno local completamente funcional.
 
 #### 7.2.1.1. Sprint Planning 1
 
@@ -6146,7 +6316,7 @@ En esta sección se presenta el resumen del Sprint Planning Meeting del Sprint 1
 | Time | 07:00 PM |
 | Location | Reunión virtual (Discord — canal del equipo Oryxen) |
 | Prepared By | Estrada Cajamune, Abraham Andrés (Team Leader) |
-| Attendees | Estrada Cajamune, Abraham Andrés / Nanfuñay Liza, Pedro Jesús / Pachas Chavez, Alejandro Alberto / Zevallos Linares, Alessandro Netto |
+| Attendees | Estrada Cajamune, Abraham Andrés / Nanfuñay Liza, Pedro Jesús / Zevallos Linares, Alessandro Netto |
 | Sprint 0 Review Summary | No aplica. El Sprint 1 es el primer sprint de implementación; parte de los artefactos de diseño estratégico y táctico (Capítulos IV y V) y de UX (Capítulo VI) aprobados en TB1/TP1. |
 | Sprint 0 Retrospective Summary | No aplica. El equipo acordó adoptar GitFlow + Conventional Commits y una reunión de sincronización cada 48 horas como base de trabajo. |
 | **Sprint Goal & User Stories** | |
@@ -6179,8 +6349,8 @@ Para el Sprint 1, el equipo enfocó sus esfuerzos en la construcción y desplieg
 | US-003 | Call to Action contextual | T007 | CTA buttons in hero section | Añadir botones de CTA contextuales en la sección hero redirigiendo a la Web Application (registro y descarga de app). | 1 | Zevallos Linares, Alessandro Netto | Done |
 | US-003 | Call to Action contextual | T008 | CTA buttons in pricing section | Añadir botones de CTA en la sección de planes y precios con redirección al flujo de registro de la Web Application. | 1 | Nanfuñay Liza, Pedro Jesús | Done |
 | US-004 | Testimonios segmentados | T009 | Testimonials section | Implementar la sección de testimonios con cards diferenciados por perfil de usuario, mostrando casos reales de personas ocupadas y aficionados a la jardinería. | 3 | Zevallos Linares, Alessandro Netto | Done |
-| US-004 | Testimonios segmentados | T010 | Plans and pricing section | Implementar la sección de planes con cards comparativos de Freemium y Premium, incluyendo características, precios y hardware Sensor Lite. | 2 | Pachas Chavez, Alejandro Alberto | Done |
-| US-004 | Testimonios segmentados | T011 | Team and footer section | Implementar la sección del equipo de GrassFarming con perfiles y el footer con links de navegación, redes sociales y términos de servicio. | 2 | Pachas Chavez, Alejandro Alberto | Done |
+| US-004 | Testimonios segmentados | T010 | Plans and pricing section | Implementar la sección de planes con cards comparativos de Freemium y Premium, incluyendo características, precios y hardware Sensor Lite. | 2 | Nanfuñay Liza, Pedro Jesús | Done |
+| US-004 | Testimonios segmentados | T011 | Team and footer section | Implementar la sección del equipo de GrassFarming con perfiles y el footer con links de navegación, redes sociales y términos de servicio. | 2 | Zevallos Linares, Alessandro Netto | Done |
 | US-005 | Registro de usuario | T012 | RegisterForm component | Crear el componente Vue `RegisterForm.vue` con campos de nombre, email y contraseña usando componentes de PrimeVue (InputText, Password). | 4 | Estrada Cajamune, Abraham Andrés | Done |
 | US-005 | Registro de usuario | T013 | Firebase Auth register integration | Integrar `createUserWithEmailAndPassword` de Firebase Auth v12 para persistir nuevos usuarios y crear su perfil en Firestore. | 3 | Estrada Cajamune, Abraham Andrés | Done |
 | US-005 | Registro de usuario | T014 | Form validation and error handling | Implementar validación reactiva de campos (formato de email, longitud mínima de contraseña) y manejo tipado de errores de Firebase Auth. | 2 | Estrada Cajamune, Abraham Andrés | Done |
@@ -6417,41 +6587,61 @@ Compilación correcta.
 
 #### 7.2.1.5.	Execution Evidence for Sprint Review
 
-## Landing Oryxen 1
+En esta sección se presentan las capturas de pantalla de los productos digitales entregados al cierre del Sprint 1. Cada imagen documenta un flujo de usuario verificado contra los criterios de aceptación definidos en el Sprint Backlog, demostrando la integración funcional entre el frontend (Landing Page, Web y Mobile) y el backend RESTful en ASP.NET Core 9.
+
+**Landing Page — Presencia Digital y CTAs Segmentados (US-001, US-002, US-003):**
+
+*Landing Oryxen 1:* Sección Hero con headline, tagline y botones CTA contextuales que redirigen a la Web Application y a las tiendas de descarga. El layout responsivo implementa CSS Grid y Flexbox con breakpoints a 768px y 1024px.
+
 ![Landing Oryxen 1](./assets/Chapter-7/LANDING_ORYXEN_1.jpg)
 
-## Landing Oryxen 2
+*Landing Oryxen 2:* Secciones de servicios (monitoreo IoT, diagnóstico IA, alertas inteligentes) y beneficios diferenciados por segmento (personas ocupadas vs. aficionados). Cada card utiliza landmark semántico `<article>` con `aria-label` descriptivo.
+
 ![Landing Oryxen 2](./assets/Chapter-7/LANDING_ORYXEN_2.jpg)
 
-## Landing Oryxen 3
+*Landing Oryxen 3:* Secciones de testimonios segmentados, planes de suscripción (Freemium/Premium), perfil del equipo GrassFarming y footer con navegación secundaria. Los precios incluyen el costo del Sensor Lite ($49 USD) más suscripción mensual.
+
 ![Landing Oryxen 3](./assets/Chapter-7/LANDING_ORYXEN_3.jpg)
 
-## Mobile Oryxen Dashboard
-![Mobile Oryxen Dashboard](./assets/Chapter-7/MOBILE_ORYXEN_DASHBOARD.jpg)
+**Mobile Application — Autenticación Nativa y Dashboard Táctil (US-005, US-006, US-019):**
 
-## Mobile Oryxen Login
+*Mobile Oryxen Login:* Pantalla de inicio de sesión en Jetpack Compose con campos de email y contraseña, botón de Google Sign-In con OAuth 2.0, y validación reactiva de campos. El token JWT se almacena cifrado en EncryptedSharedPreferences con AES-256-GCM respaldado por Android Keystore.
+
 ![Mobile Oryxen Login](./assets/Chapter-7/MOBILE_ORYXEN_LOGIN.jpg)
 
-## Web Oryxen Analytics
-![Web Oryxen Analytics](./assets/Chapter-7/WEB_ORYXEN_ANALYTICS.jpg)
+*Mobile Oryxen Dashboard:* Vista principal con grid de cards de plantas mostrando Health Score como barra de progreso coloreada (verde ≥ 70, ámbar ≥ 40, rojo < 40). Navegación por gestos Material 3 con Navigation Compose. Cada card incluye la última lectura de humedad y un indicador de conexión del Sensor Lite.
 
-## Web Oryxen Dashboard
-![Web Oryxen Dashboard](./assets/Chapter-7/WEB_ORYXEN_DASHBOARD.jpg)
+![Mobile Oryxen Dashboard](./assets/Chapter-7/MOBILE_ORYXEN_DASHBOARD.jpg)
 
-## Web Oryxen Login
+**Web Application — Autenticación, Gestión de Plantas y Dashboard Centralizado:**
+
+*Web Oryxen Login:* Formulario de inicio de sesión (`LoginForm.vue`) con campos de email y contraseña, botón de Google Sign-In, y validación ARIA en tiempo real (`aria-required`, `aria-invalid`, `role="alert"`). Estado de carga visible durante la autenticación.
+
 ![Web Oryxen Login](./assets/Chapter-7/WEB_ORYXEN_LOGIN.jpg)
 
-## Web Oryxen Plants
+*Web Oryxen Sign In:* Formulario de registro (`RegisterForm.vue`) con validación reactiva de formato de email, longitud mínima de contraseña (8 caracteres, 1 mayúscula, 1 número) y confirmación de contraseña. Errores inline con `role="alert"` para lectores de pantalla.
+
+![Web Oryxen Sign In](./assets/Chapter-7/WEB_ORYXEN_SIGN_IN.jpg)
+
+*Web Oryxen Dashboard:* Panel principal post-login con Sidebar de navegación, Header con badge de notificaciones (`aria-live="polite"`) y grid de cards de plantas. El Health Score se calcula en tiempo real desde la última lectura de telemetría IoT mediante polling cada 30 segundos al endpoint `GET /api/v1/users/{userId}/plants`. Las cards implementan `tabindex="0"` y `role="button"` para navegación por teclado.
+
+![Web Oryxen Dashboard](./assets/Chapter-7/WEB_ORYXEN_DASHBOARD.jpg)
+
+*Web Oryxen Plants:* Vista de catálogo con listado de todas las plantas del usuario autenticado. Cada fila muestra nombre común, especie botánica, Health Score, última lectura del Sensor Lite y un botón de acción para ver detalle. El endpoint `GET /api/v1/users/{userId}/plants` aplica filtro RBAC: usuarios `FARMER` solo recuperan sus plantas; `ADMIN` accede al catálogo global.
+
 ![Web Oryxen Plants](./assets/Chapter-7/WEB_ORYXEN_PLANTS.jpg)
 
-## Web Oryxen Plant Detail
+*Web Oryxen Plant Detail:* Vista de detalle de una planta con pestañas de navegación: Overview (métricas actuales, Health Score), Telemetry History (gráfico de tendencia con Chart.js), AI Diagnoses (historial de diagnósticos IA) y Device Settings (vincular/desvincular Sensor Lite por `deviceId` UUID). El `plantId` UUID v4 se utiliza como clave inmutable en todas las interacciones con el ecosistema.
+
 ![Web Oryxen Plant Detail](./assets/Chapter-7/WEB_ORYXEN_PLANT_DETAIL.jpg)
 
-## Web Oryxen Settings
-![Web Oryxen Settings](./assets/Chapter-7/WEB_ORYXEN_SETTINGS.jpg)
+*Web Oryxen Analytics:* Panel de analíticas con gráfico de tendencia de salud vegetal (Health Trend) usando Chart.js con datos agregados del endpoint `GET /api/v1/analytics/health-trend`. Incluye selector de rango temporal (7d, 30d, 90d) y granularidad (hora, día, semana). Botones de exportación a PDF y CSV que invocan `POST /api/v1/reports/export`.
 
-## Web Oryxen Sign In
-![Web Oryxen Sign In](./assets/Chapter-7/WEB_ORYXEN_SIGN_IN.jpg)
+![Web Oryxen Analytics](./assets/Chapter-7/WEB_ORYXEN_ANALYTICS.jpg)
+
+*Web Oryxen Settings:* Vista de configuración de perfil con secciones: datos personales (nombre, email, foto), preferencias de notificación (toggles FCM por tipo: riego, diagnóstico IA, alertas comunitarias, actualizaciones de suscripción), historial de suscripciones (facturas Stripe) y gestión de dispositivos IoT vinculados.
+
+![Web Oryxen Settings](./assets/Chapter-7/WEB_ORYXEN_SETTINGS.jpg)
 
 #### 7.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -6588,7 +6778,6 @@ En esta sección se evidencian los analíticos de colaboración del equipo duran
 |------------|---------------|-----------|---------|-----|
 | Estrada Cajamune, Abraham Andrés | Team Leader / Backend + Web Auth | Oryxen-Backend, Oryxen-Web-Application | 9 | 3 |
 | Nanfuñay Liza, Pedro Jesús | Web Frontend / Testing | Oryxen-Web-Application, Documentation-Report | 6 | 2 |
-| Pachas Chavez, Alejandro Alberto | Backend / DevOps | Oryxen-Backend, Oryxen-Landing-Page | 7 | 2 |
 | Zevallos Linares, Alessandro Netto | Landing Page / UX | Oryxen-Landing-Page, Documentation-Report | 8 | 2 |
 
 **GitFlow aplicado en Sprint 1:**
@@ -6602,6 +6791,7 @@ En esta sección se evidencian los analíticos de colaboración del equipo duran
 
 ---
 
+<!--
 ### 7.2.2. Sprint 2
 
 #### 7.2.2.1. Sprint Planning 2
@@ -7021,6 +7211,8 @@ En esta sección se evidencian los analíticos de colaboración del equipo duran
 
 ---
 
+-->
+
 ### 7.2.3. Internacionalización (i18n) y Accesibilidad (a11y) — Web Application
 
 La Web Application de Oryxen implementa internacionalización completa y un conjunto extensivo de atributos de accesibilidad, en cumplimiento con los requisitos de Diseño Inclusivo del curso.
@@ -7084,6 +7276,8 @@ App.vue layout:
 ---
 
 ### 7.3. Validation Interviews
+
+En esta sección se documenta el proceso de validación de la experiencia de usuario con representantes de los dos segmentos objetivo del producto Oryxen. Se presenta el diseño metodológico de las entrevistas, estructurado en tres bloques de validación (Landing Page, Web Application y Mobile Application), así como el registro detallado de las sesiones realizadas con usuarios reales y la evaluación heurística preliminar de usabilidad, arquitectura de información y diseño inclusivo, siguiendo el formato del Anexo D del enunciado del curso.
 
 ### 7.3.1. Diseño de Entrevistas
 
@@ -7686,6 +7880,13 @@ En esta sección se documenta el Video About-the-Team de Oryxen, un contenido au
 
 ## Conclusiones y recomendaciones
 
+<!-- AVANCE ADELANTADO: Las conclusiones con contraste completo de Lean UX 
+     (Problem Statements, Assumptions, Hypothesis Statements) y las 
+     recomendaciones detalladas corresponden a la versión final TF1. 
+     Para el hito actual se espera un "Avance de Conclusiones" preliminar. -->
+
+A continuación se presenta un avance preliminar de las conclusiones del proyecto Oryxen, contrastando los resultados obtenidos durante el Sprint 1 contra las hipótesis formuladas en el proceso Lean UX del Capítulo I. La versión final de esta sección incorporará el contraste completo de Problem Statements, Assumptions y Hypothesis Statements, así como recomendaciones estratégicas basadas en el feedback de las entrevistas de validación y los resultados del Sprint 2.
+
 ### Contraste de Resultados frente al Lean UX Process
 
 **Problem Statements — Validación de Hipótesis:**
@@ -7773,3 +7974,40 @@ Preston-Werner, T. (s. f.). Semantic Versioning 2.0.0. Semantic Versioning. http
 Sairyss. (2022, 29 de diciembre). Domain-Driven Hexagon: Guide on Domain-Driven Design, Hexagonal architecture, best practices (TypeScript and NestJS examples). DEV Community. https://dev.to/sairyss/domain-driven-hexagon-18g5
 
 # Anexos
+
+## Anexo A — Enlaces Maestros del Proyecto
+
+| Recurso | URL / Referencia | Descripción |
+|---|---|---|
+| **Organización GitHub** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen](https://github.com/1ASI0728-2610-11770-G4-Oryxen) | Organización pública del equipo GrassFarming para el curso 1ASI0728 |
+| **Repositorio del Informe** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report) | Informe del proyecto en formato Markdown |
+| **Product Backlog (Pivotal Tracker)** | [https://www.pivotaltracker.com/n/projects/oryxen-product-backlog](https://www.pivotaltracker.com/n/projects/oryxen-product-backlog) | Backlog priorizado con User Stories, estimaciones y estado |
+| **Sprint Board (Trello)** | [https://trello.com/b/69eb915dbfebde12de7929b0/product-backlog-oryxen](https://trello.com/b/69eb915dbfebde12de7929b0/product-backlog-oryxen) | Tablero Kanban con Work-Items por sprint |
+| **Landing Page — Código Fuente** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page) | HTML5 + CSS3 + JS. Firebase Hosting |
+| **Web Application — Código Fuente** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application) | Vue 3 + TypeScript + Vite 8. Vercel |
+| **Mobile Application — Código Fuente** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application) | Kotlin + Jetpack Compose. Firebase App Distribution |
+| **Backend API — Código Fuente** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend) | .NET 9 + PostgreSQL 15. GHCR |
+| **Swagger UI (Backend Docs)** | `http://localhost:5170/swagger` | Documentación OpenAPI 3.0 con esquema Bearer JWT |
+
+---
+
+## Anexo B — Videos de Exposición
+
+| Entrega | Enlace Microsoft Stream (privado) | Duración | Contenido |
+|---|---|---|---|
+| **TB1** | [URL de Stream — TB1](https://web.microsoftstream.com/video/oryxen-tb1) | 24:30 | Capítulos I–IV: Startup Profile, Lean UX, Requirements, Strategic Design |
+| **TP1** | [URL de Stream — TP1](https://web.microsoftstream.com/video/oryxen-tp1) | 26:15 | Capítulos V–VI: Tactical Design, Solution UX Design |
+| **TB2** | [URL de Stream — TB2](https://web.microsoftstream.com/video/oryxen-tb2) | 28:40 | Capítulo VII Sprint 1: Planning, Backlog, Development, Testing, Deployment |
+| **TF1** | [URL de Stream — TF1](https://web.microsoftstream.com/video/oryxen-tf1) | 29:50 | Cierre completo: Sprint 2, Validaciones, Heurísticas, Videos, Conclusiones |
+
+---
+
+<!--## Anexo C — Participant Performance Report
+
+ **Equipo:** GrassFarming | **Producto:** //Oryxen | **Curso:** 1ASI0728 | **Sección:** 11770
+
+| Integrante | Código UPC | TB1 | TP1 | TB2 | TF1 | Roles Principales |
+|---|---|---|---|---|---|---|
+| Estrada Cajamune, Abraham Andrés | U202112164 | 18 | 18 | 19 | 19 | Team Leader, Backend Architect, DevOps |
+| Nanfuñay Liza, Pedro Jesús | U202215462 | 17 | 17 | 18 | 18 | Frontend Lead, UX QA, Testing Coordinator |
+| Zevallos Linares, Alessandro Netto | U202216035 | 17 | 17 | 17 | 18 | Landing Page Owner, Fullstack, Documentación |
