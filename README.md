@@ -1,46 +1,28 @@
 <div align="center">    
     <img src="./assets/logo-upc.png" alt="Logo UPC" width="200" height="200"></img><br><strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
     <br><p>Ingeniería de Software</p>
-    <p>8vo Ciclo</p>
-    <br><strong>Arquitecturas de Software Emergentes</strong><br>
-    <br><p>Sección: 11770</p>
+    <p>Ciclo 8</p>
+    <br><strong>Curso: 1ASI0728 - Arquitecturas de Software Emergentes</strong><br>
+    <br><p>NRC: 11770</p>
     <p>Profesor: Christian Luis De Los Rios Fernandez</p><br>
 </div>
 
 <p align="center">
-    <strong>"Informe del Trabajo Final"</strong><br>
+    <strong>Informe del Trabajo Final</strong><br>
+    <strong>Ciclo: 2026-10</strong><br>
     <br><strong>Startup: GrassFarming</strong><br>
     <br><strong>Producto: Oryxen</strong><br><br>
 </p>
 
-<div>
+<div align="center">
     <h3 align="center">Integrantes:</h3>
-</div>
-
-<div>
-    <table align="center">
-        <tr>
-            <th style="text-align:center;">Apellidos y Nombres</th>
-            <th style="text-align:center;">Código</th>
-        </tr>
-        <tr>
-            <td style="text-align:center;">Estrada Cajamune, Abraham Andrés</td>
-            <td style="text-align:center;">U202112164</td>
-        </tr>
-        <tr>
-            <td style="text-align:center;">Nanfuñay Liza, Pedro Jesús</td>
-            <td style="text-align:center;">U202215462</td>
-        </tr>
-        <tr>
-            <td style="text-align:center;">Zevallos Linares, Alessandro Netto</td>
-            <td style="text-align:center;">U202216035</td>
-        </tr>
-    </table>
-    </div>
+    <p>- Estrada Cajamune, Abraham Andrés (U202112164)</p>
+    <p>- Nanfuñay Liza, Pedro Jesús (U202215462)</p>
+    <p>- Zevallos Linares, Alessandro Netto (U202216035)</p>
 </div>
 
 <br>
-<br><p align="center">Junio, 2026</p>
+<br><p align="center">Julio - 2026</p>
 <br><br>
 
 
@@ -580,8 +562,8 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 
 | Criterio específico | Acciones Realizadas | Conclusiones |
 | ------------------- | ------------------- | ------------ |
-| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Demostré capacidad de comunicar mi comprensión de la problemática que abordamos; así como, el planteamiento de una solución tecnológica que la resuelva. Además, de exponer los fundamentos técnicos y requisitos funcionales para la solución, usando un lenguaje empático para los distintos grupos de usuarios.<br>**TP1:** Expliqué verbalmente ante el equipo las decisiones visuales adoptadas para los Mock-ups de la Landing Page y las aplicaciones, justificando cómo los lineamientos generales de estilo y la arquitectura de información responden directamente a las expectativas de los usuarios aficionados y ocupados.<br>**TB2:** Presenté en la exposición grupal el flujo end-to-end logrado en el Sprint 1 (registro → login → telemetría con Health Score), explicando ante el docente cómo la Web Application consume la API REST del backend.<br>**TF1:** Sustenté oralmente el módulo de Analytics Dashboard y su valor diferencial para el segmento de aficionados, y participé en el video About-the-Team describiendo mi aporte al ciclo de vida completo del producto.<br><br> **Abraham Andres Estrada Cajamune**<br>**TB1:** Dirigió la comunicación con los usuarios finales durante la etapa de investigación, realizando el registro y moderación de las entrevistas para extraer necesidades críticas de los segmentos objetivo. Asimismo, sustentó oralmente ante el equipo y el docente las decisiones técnicas del Capítulo IV, traduciendo requerimientos de negocio en restricciones arquitectónicas viables.<br>**TP1:** Sustenté las decisiones de diseño táctico para los contextos delimitados (Plant Management y Community), y comuniqué los lineamientos de diseño web/móvil y flujos de usuario (User Flows) al equipo para alinear las capacidades del backend con la experiencia final del usuario en LATAM.<br>**TB2:** Dirigí la demostración en vivo del despliegue del Sprint 1 (Landing Page en Firebase Hosting, backend dockerizado y Swagger UI), explicando las decisiones de configuración ante el docente.<br>**TF1:** Sustenté la arquitectura final de despliegue (contenedores, imagen en GHCR y propuesta sobre Google Cloud Run) y las decisiones de negocio del modelo de conversión Freemium → Premium durante la sustentación sincrónica y el video About-the-Team.<br><br> **Alessandro Netto Zevallos Linares**<br>**TB1:** Durante el desarrollo del TB1, aporté la idea principal del proyecto y participé en su explicación, comunicando la problemática identificada y la solución propuesta de manera clara y estructurada, considerando la comprensión de distintos tipos de audiencia. <br>**TP1:** Expuse los sistemas de búsqueda (Searching Systems) y demostré la interacción real del usuario a través del Prototipado de las aplicaciones (Applications Prototyping), comunicando de forma visual y dinámica cómo el software resuelve los dolores del cliente.<br>**TB2:** Presenté la Landing Page desplegada y su narrativa de conversión por segmentos, demostrando en vivo la responsividad y los CTAs contextuales.<br>**TF1:** Expliqué el flujo de suscripción Premium (Stripe Checkout) y las notificaciones push (FCM) en la exposición final, adaptando el nivel técnico al tipo de audiencia, y aporté mi testimonio ante cámara en el video About-the-Team. | **TB1:** Como equipo, concluimos que la facultad de adaptar el discurso según la audiencia es una competencia crítica para el éxito del proyecto. La interacción directa con usuarios no técnicos en el **Capítulo II** nos permitió validar la problemática de Oryxen desde una perspectiva humana y empática. Por otro lado, la defensa de los perfiles de la startup (**Capítulo I**) y de la arquitectura estratégica (**Capítulo IV**) ante el docente, demostró nuestra capacidad de emplear un lenguaje técnico-formal para sustentar la viabilidad de una solución de ingeniería ante niveles jerárquicos de evaluación. <br> <br>**TP1:** En esta segunda entrega, concluimos que la comunicación oral efectiva requiere integrar perspectivas técnicas y de diseño (UX/UI). Discutir verbalmente los Wireflows, Prototipos y Bounded Contexts nos permitió alinear la viabilidad del software (backend) con la usabilidad de la interfaz (frontend), logrando un consenso rápido en equipo para la toma de decisiones arquitectónicas y de diseño.<br><br>**TB2:** Concluimos que exponer un producto en funcionamiento (demostración en vivo del Sprint 1) exige una preparación distinta a la de exponer artefactos de diseño: la audiencia evalúa lo que ve ejecutarse. Ensayar el guion de la demostración y anticipar preguntas sobre posibles fallos fortaleció nuestra capacidad de defensa técnica.<br><br>**TF1:** Al cierre del proyecto, confirmamos que la comunicación oral efectiva integra negocio, arquitectura y evidencia: en la sustentación final cada integrante defendió tanto decisiones técnicas (bounded contexts, contenedores, despliegue) como decisiones de negocio (conversión Freemium → Premium, operación del Sensor Lite, SLA de soporte), demostrando la capacidad de adaptar el discurso a audiencias de distintas especialidades y niveles jerárquicos, tal como exige el ABET – EAC Student Outcome 3.|
-| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Redacté la documentación con un enfoque en los objetivos de nuestra solución, garantizando que la coherencia y claridad de la información sea recepcionada por los usuarios en relación en lo que consiste nuestra plataforma y sobre los resultados de la arquitectura ADD. <br>**TP1:** Elaboré la documentación formal de la Arquitectura de Información y las Guías de Estilo Generales en el Capítulo VI, utilizando terminología estandarizada de diseño visual para acompañar la entrega de los Mock-ups de alta fidelidad.<br>**TB2:** Documenté el Sprint Planning 1 y el Sprint Backlog 1 con criterios de estimación en Story Points, y redacté la evidencia de servicios del sprint (endpoints REST con ejemplos de request/response en OpenAPI).<br>**TF1:** Redacté la documentación del Sprint 2 correspondiente a Analytics Dashboard y Community Feed, y las subsecciones de monetización del Capítulo II, declarando explícitamente los supuestos académicos del modelo financiero.<br> <br> **Abraham Andres Estrada Cajamune**<br>**TB1:** Además, fue responsable de la especificación de 10 Technical Stories para los Constraints en el Capítulo IV, utilizando la sintaxis Gherkin (Given-When-Then) para comunicar de forma objetiva las reglas técnicas a desarrolladores y stakeholders. <br>**TP1:** Redacté formalmente en Markdown la documentación técnica de los Bounded Contexts a nivel táctico (Domain Layer, ERD, C4 Components). Además, documenté los lineamientos de estilo responsivo (Material Design) y los diagramas de flujo de usuario (User Flows), estructurando la información técnica y de UX/UI con claridad.<br>**TB2:** Documenté la configuración de despliegue de la solución (sección 7.1.4), el pipeline de CI/CD con GitHub Actions y la evidencia de despliegue del Sprint 1.<br>**TF1:** Redacté la versión final del Capítulo IV (mapeo Bounded Context → Container y diagrama de despliegue con nodos reales), los Bounded Context Canvases y la matriz de cumplimiento del feedback docente, asegurando trazabilidad entre observaciones y correcciones aplicadas.<br> <br> **Alessandro Netto Zevallos Linares**<br>**TB1:** Me encargué de la redacción del documento del proyecto, organizando la información de manera clara y coherente, describiendo la idea principal, los objetivos y la propuesta de solución, utilizando un lenguaje adecuado para facilitar la comprensión por parte de distintos públicos. <br>**TP1:** Elaboré la documentación explicativa de los sistemas de búsqueda (Searching Systems) y los principios rectores de UX/UI aplicados a las plataformas de Oryxen, traduciendo requerimientos de interacción en especificaciones técnicas de diseño listas para su implementación.<br>**TB2:** Redacté la evidencia de ejecución del Sprint 1 (capturas comentadas de Landing Page, Web y Mobile Application), vinculando cada vista implementada con su User Story de origen.<br>**TF1:** Redacté los guiones y pautas de secuencias de los videos About-the-Product y About-the-Team, y las conclusiones finales del informe con el contraste de las hipótesis Lean UX contra los resultados de las entrevistas de validación. | **TB1:** El equipo concluye que la documentación formal y estructurada es el pilar de la transparencia en ingeniería de software. A través de la redacción del Lean UX Canvas (**Capítulo I**), los artefactos de Needfinding (**Capítulo II**) y el Software Design de nivel estratégico (**Capítulo IV**), logramos sintetizar información compleja en documentos claros y trazables. El uso de estándares como **Gherkin** y el modelo **C4** en el diseño de software asegura que la comunicación escrita sea objetiva, permitiendo que tanto stakeholders de negocio como desarrolladores técnicos comprendan el ecosistema de Oryxen sin ambigüedades <br>**TP1:** Concluimos que la comunicación escrita en el diseño a nivel táctico y UX es esencial para trazar un puente entre el diseño y el desarrollo. La correcta documentación en Markdown de los diagramas de componentes, ERDs, Guías de Estilo y diagramas de flujo de usuario (User Flows) nos permite entregar especificaciones sin ambigüedades, asegurando que cualquier miembro técnico o evaluador pueda comprender a fondo el funcionamiento y la estructura interactiva de las aplicaciones.<br><br>**TB2:** Concluimos que la documentación de evidencias de implementación (commits, pruebas, despliegues) convierte el informe en un registro auditable del ciclo de vida: cada afirmación del documento debe poder rastrearse hasta un artefacto verificable en los repositorios de la organización.<br><br>**TF1:** Al cerrar el proyecto, concluimos que la comunicación escrita rigurosa exige honestidad documental: distinguir entre lo implementado con evidencia, lo diseñado pendiente de ejecución y los supuestos académicos del modelo de negocio. Esta disciplina, aplicada en la versión final del informe, es la que permite que audiencias técnicas, académicas y de negocio confíen en el documento como fuente única de verdad del proyecto Oryxen.|
+| Comunica oralmente sus ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Demostré capacidad de comunicar mi comprensión de la problemática que abordamos; así como, el planteamiento de una solución tecnológica que la resuelva. Además, de exponer los fundamentos técnicos y requisitos funcionales para la solución, usando un lenguaje empático para los distintos grupos de usuarios.<br>**TP1:** Expliqué verbalmente ante el equipo las decisiones visuales adoptadas para los Mock-ups de la Landing Page y las aplicaciones, justificando cómo los lineamientos generales de estilo y la arquitectura de información responden directamente a las expectativas de los usuarios aficionados y ocupados.<br>**TB2:** Presenté en la exposición grupal el flujo end-to-end logrado en el Sprint 1 (registro → login → telemetría con Health Score), explicando ante el docente cómo la Web Application consume la API REST del backend.<br>**TF1:** Sustenté oralmente el módulo de Analytics Dashboard y su valor diferencial para el segmento de aficionados, y participé en el video About-the-Team describiendo mi aporte al ciclo de vida completo del producto.<br><br> **Abraham Andres Estrada Cajamune**<br>**TB1:** Dirigió la comunicación con los usuarios finales durante la etapa de investigación, realizando el registro y moderación de las entrevistas para extraer necesidades críticas de los segmentos objetivo. Asimismo, sustentó oralmente ante el equipo y el docente las decisiones técnicas del Capítulo IV, traduciendo requerimientos de negocio en restricciones arquitectónicas viables.<br>**TP1:** Sustenté las decisiones de diseño táctico para los contextos delimitados (Plant Management y Community), y comuniqué los lineamientos de diseño web/móvil y flujos de usuario (User Flows) al equipo para alinear las capacidades del backend con la experiencia final del usuario en LATAM.<br>**TB2:** Dirigí la demostración en vivo del despliegue del Sprint 1 (Landing Page en Firebase Hosting, backend dockerizado y Swagger UI), explicando las decisiones de configuración ante el docente.<br>**TF1:** Sustenté de forma adecuada y clara el proceso realizado para la integración de un chatbot con inteligencia artificial como tecnología emergente, llo que agrega valor a nuestra solución y a los usuarios que utilizarán nuestra plataforma, aplicando buenas prácticas de desarrollo y comunicación<br><br> **Alessandro Netto Zevallos Linares**<br>**TB1:** Durante el desarrollo del TB1, aporté la idea principal del proyecto y participé en su explicación, comunicando la problemática identificada y la solución propuesta de manera clara y estructurada, considerando la comprensión de distintos tipos de audiencia. <br>**TP1:** Expuse los sistemas de búsqueda (Searching Systems) y demostré la interacción real del usuario a través del Prototipado de las aplicaciones (Applications Prototyping), comunicando de forma visual y dinámica cómo el software resuelve los dolores del cliente.<br>**TB2:** Presenté la Landing Page desplegada y su narrativa de conversión por segmentos, demostrando en vivo la responsividad y los CTAs contextuales.<br>**TF1:** Expliqué el flujo de suscripción Premium (Stripe Checkout) y las notificaciones push (FCM) en la exposición final, adaptando el nivel técnico al tipo de audiencia, y aporté mi testimonio ante cámara en el video About-the-Team. | **TB1:** Como equipo, concluimos que la facultad de adaptar el discurso según la audiencia es una competencia crítica para el éxito del proyecto. La interacción directa con usuarios no técnicos en el **Capítulo II** nos permitió validar la problemática de Oryxen desde una perspectiva humana y empática. Por otro lado, la defensa de los perfiles de la startup (**Capítulo I**) y de la arquitectura estratégica (**Capítulo IV**) ante el docente, demostró nuestra capacidad de emplear un lenguaje técnico-formal para sustentar la viabilidad de una solución de ingeniería ante niveles jerárquicos de evaluación. <br> <br>**TP1:** En esta segunda entrega, concluimos que la comunicación oral efectiva requiere integrar perspectivas técnicas y de diseño (UX/UI). Discutir verbalmente los Wireflows, Prototipos y Bounded Contexts nos permitió alinear la viabilidad del software (backend) con la usabilidad de la interfaz (frontend), logrando un consenso rápido en equipo para la toma de decisiones arquitectónicas y de diseño.<br><br>**TB2:** Concluimos que exponer un producto en funcionamiento (demostración en vivo del Sprint 1) exige una preparación distinta a la de exponer artefactos de diseño: la audiencia evalúa lo que ve ejecutarse. Ensayar el guion de la demostración y anticipar preguntas sobre posibles fallos fortaleció nuestra capacidad de defensa técnica.<br><br>**TF1:** Al cierre del proyecto, confirmamos que la comunicación oral efectiva integra negocio, arquitectura y evidencia: en la sustentación final cada integrante defendió tanto decisiones técnicas (bounded contexts, contenedores, despliegue) como decisiones de negocio (conversión Freemium → Premium, operación del Sensor Lite, SLA de soporte), demostrando la capacidad de adaptar el discurso a audiencias de distintas especialidades y niveles jerárquicos, tal como exige el ABET – EAC Student Outcome 3.|
+| Comunica en forma escrita ideas y/o resultados con objetividad a público de diferentes especialidades y niveles jerarquicos, en el marco del desarrollo de un proyecto en ingeniería. | **Pedro Jesús Nanfuñay Liza** <br> **TB1** <br> Redacté la documentación con un enfoque en los objetivos de nuestra solución, garantizando que la coherencia y claridad de la información sea recepcionada por los usuarios en relación en lo que consiste nuestra plataforma y sobre los resultados de la arquitectura ADD. <br>**TP1:** Elaboré la documentación formal de la Arquitectura de Información y las Guías de Estilo Generales en el Capítulo VI, utilizando terminología estandarizada de diseño visual para acompañar la entrega de los Mock-ups de alta fidelidad.<br>**TB2:** Documenté el Sprint Planning 1 y el Sprint Backlog 1 con criterios de estimación en Story Points, y redacté la evidencia de servicios del sprint (endpoints REST con ejemplos de request/response en OpenAPI).<br>**TF1:** Redacté la documentación del Sprint 2 correspondiente al Development Evidence y Execcution evidence, subsecciones esenciales que garantizan el proceso de desarrollo e implementación realizado durante este sprint, evidenciando la integración de funcionalidades de valor.<br> <br> **Abraham Andres Estrada Cajamune**<br>**TB1:** Además, fue responsable de la especificación de 10 Technical Stories para los Constraints en el Capítulo IV, utilizando la sintaxis Gherkin (Given-When-Then) para comunicar de forma objetiva las reglas técnicas a desarrolladores y stakeholders. <br>**TP1:** Redacté formalmente en Markdown la documentación técnica de los Bounded Contexts a nivel táctico (Domain Layer, ERD, C4 Components). Además, documenté los lineamientos de estilo responsivo (Material Design) y los diagramas de flujo de usuario (User Flows), estructurando la información técnica y de UX/UI con claridad.<br>**TB2:** Documenté la configuración de despliegue de la solución (sección 7.1.4), el pipeline de CI/CD con GitHub Actions y la evidencia de despliegue del Sprint 1.<br>**TF1:** Redacté la versión final del Capítulo IV (mapeo Bounded Context → Container y diagrama de despliegue con nodos reales), los Bounded Context Canvases y la matriz de cumplimiento del feedback docente, asegurando trazabilidad entre observaciones y correcciones aplicadas.<br> <br> **Alessandro Netto Zevallos Linares**<br>**TB1:** Me encargué de la redacción del documento del proyecto, organizando la información de manera clara y coherente, describiendo la idea principal, los objetivos y la propuesta de solución, utilizando un lenguaje adecuado para facilitar la comprensión por parte de distintos públicos. <br>**TP1:** Elaboré la documentación explicativa de los sistemas de búsqueda (Searching Systems) y los principios rectores de UX/UI aplicados a las plataformas de Oryxen, traduciendo requerimientos de interacción en especificaciones técnicas de diseño listas para su implementación.<br>**TB2:** Redacté la evidencia de ejecución del Sprint 1 (capturas comentadas de Landing Page, Web y Mobile Application), vinculando cada vista implementada con su User Story de origen.<br>**TF1:** Redacté los guiones y pautas de secuencias de los videos About-the-Product y About-the-Team, y las conclusiones finales del informe con el contraste de las hipótesis Lean UX contra los resultados de las entrevistas de validación. | **TB1:** El equipo concluye que la documentación formal y estructurada es el pilar de la transparencia en ingeniería de software. A través de la redacción del Lean UX Canvas (**Capítulo I**), los artefactos de Needfinding (**Capítulo II**) y el Software Design de nivel estratégico (**Capítulo IV**), logramos sintetizar información compleja en documentos claros y trazables. El uso de estándares como **Gherkin** y el modelo **C4** en el diseño de software asegura que la comunicación escrita sea objetiva, permitiendo que tanto stakeholders de negocio como desarrolladores técnicos comprendan el ecosistema de Oryxen sin ambigüedades <br>**TP1:** Concluimos que la comunicación escrita en el diseño a nivel táctico y UX es esencial para trazar un puente entre el diseño y el desarrollo. La correcta documentación en Markdown de los diagramas de componentes, ERDs, Guías de Estilo y diagramas de flujo de usuario (User Flows) nos permite entregar especificaciones sin ambigüedades, asegurando que cualquier miembro técnico o evaluador pueda comprender a fondo el funcionamiento y la estructura interactiva de las aplicaciones.<br><br>**TB2:** Concluimos que la documentación de evidencias de implementación (commits, pruebas, despliegues) convierte el informe en un registro auditable del ciclo de vida: cada afirmación del documento debe poder rastrearse hasta un artefacto verificable en los repositorios de la organización.<br><br>**TF1:** Al cerrar el proyecto, concluimos que la comunicación escrita rigurosa exige honestidad documental: distinguir entre lo implementado con evidencia, lo diseñado pendiente de ejecución y los supuestos académicos del modelo de negocio. Esta disciplina, aplicada en la versión final del informe, es la que permite que audiencias técnicas, académicas y de negocio confíen en el documento como fuente única de verdad del proyecto Oryxen.|
 
 <br>
 
@@ -7380,15 +7362,46 @@ El Sprint 2 constituye la segunda y última iteración de desarrollo del ciclo a
 
 #### 7.2.2.3. Development Evidence for Sprint Review
 
-En este sprint los avances se concentraron en cuatro frentes, trazables a los bounded contexts del Capítulo V:
+En este sprint, se presentan los avances evidenciados a través de commits sobre el proceso de desarrollo e implementación de funcionalidades de tecnologías emergentes en los repositorios de Web Application, Mobile Application y Backend:
 
-1. **Billing & Subscription (Web + Backend):** integración de Stripe Checkout para el upgrade a Premium, webhook idempotente de confirmación de pago, catálogo de planes (`GET /api/v1/plans`) e historial de transacciones visible en Settings. La lógica de dominio corresponde a la sección 5.7.
-2. **Notification (Backend + Mobile + Web):** registro de tokens FCM por dispositivo, preferencias por categoría (riego, salud/IA, comunidad, cuenta) y composición de alertas con diagnóstico integrado. Corresponde a la sección 5.6.
-3. **Analysis & Reporting (Web + Mobile):** dashboard de tendencias con selector de rango (7d/30d/90d) y granularidad, y exportación PDF/CSV vía `POST /api/v1/reports/export`. Frontend documentado en 5.5.5 (Vue 3) y 5.5.6 (Kotlin/Compose).
-4. **Community (Backend + Web):** feed paginado, publicación multipart con sanitización EXIF/GPS (`ImageMetadataSanitizer`), comentarios y reacciones. Corresponde a la sección 5.8.
-5. **Seguridad móvil:** hardening completo del almacenamiento de sesión y erradicación de datos hardcodeados, documentado con artefactos de código reales en la sección 5.1.7.
+**Web Application:**
 
-El trabajo siguió GitFlow: ramas `feature/US-XXX-*` por historia, Pull Requests hacia `develop` y fusión a `main` al cierre del sprint, con Conventional Commits en los cinco repositorios de la organización.
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| ---------- | ------ | --------- | -------------- | ------------------- | ------------------ |
+| Oryxen-Web-Application | develop | e1092ab960cbd56be6da1053d14ca141b79e9dde | chore: add chatbot implementation | Implement chatbot ai function | 03/07/2026 |
+| Oryxen-Web-Application | develop | 5a06b97f18b7f675367306a5eaf517c668b53c23 | Merge pull request #2 from 1ASI0728-2610-11770-G4-Oryxen/develop | merge changes about ai functions to the main branch | 09/07/2026 |
+| Oryxen-Web-Application | develop | 9eabea60dd48342ecb63989015570e9fea77ab35 | fix: update package-lock.json to add peer dependencies and clean up optional packages | Update and clean dependencies of the app | 09/07/2026 |
+| Oryxen-Web-Application | fix/tf1-delivery-readiness | eb995ed224177d33c1f9fe2b29ba3b57ac2a8a35 | feat: enhance project setup with new scripts, dependencies, and ESLint configuration | Optimize dependencies and configuration in the app | 09/07/2026 |
+| Oryxen-Web-Application | fix/tf1-delivery-readiness | eb995ed224177d33c1f9fe2b29ba3b57ac2a8a35 | feat: enhance project setup with new scripts, dependencies, and ESLint configuration | Optimize dependencies and configuration in the app | 09/07/2026 |
+
+
+**Mobile Application:**
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| ---------- | ------ | --------- | -------------- | ------------------- | ------------------ |
+| Oryxen-Mobile-Application | develop | cc9ac37b43ee185de097b7edfd3c8c8630386018 | feat: implement analytics charts and fix navigation layout | Implement analytics charts and fix navigation layout | 08/07/2026 |
+| Oryxen-Mobile-Application | develop | e22e76df5b231415f00d5f96a17b60ae0dc48050 | Merge pull request #1 from 1ASI0728-2610-11770-G4-Oryxen/develop | Merge changes to main branch | 09/07/2026 |
+| Oryxen-Mobile-Application | fix/tf1-delivery-readiness | 29500eb4799564f34be2c237a27e9ed43ff54688 | feat: implement sensor assignment and chat functionality; update build configuration for API URLs | Implement chat and sensor assignment functionalities | 09/07/2026 |
+
+
+**Backend:**
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| ---------- | ------ | --------- | -------------- | ------------------- | ------------------ |
+| Oryxen-Backend | develop | 4f6398c2ef6f1f9220a687fc1b48f93c971f458d | feat: add IoT simulation | Implement IoT simulation | 07/07/2026 |
+| Oryxen-Backend | develop | 5853e9091948476b961216c259d50e011a28002f | fix: remove ILogger dependency | Remove ILogger dependency | 07/07/2026 |
+| Oryxen-Backend | develop | 9b8bc9c48323b62e948790b7dae05c2bdf614404 | fix: extension version | Fix extension version | 07/07/2026 |
+| Oryxen-Backend | develop | 97806c34ce3686b0bd6d434a959f9dbf32885bbb | Merge pull request #3 from 1ASI0728-2610-11770-G4-Oryxen/develop | Merge changes to main branch | 09/07/2026 |
+| Oryxen-Backend | main | ac2b46a7178b038163c2410e684426beea1edd2f | fix: git config for deploy. | Fix git config for deploy | 09/07/2026 |
+| Oryxen-Backend | main | 66bcc899e8064c79e8275a6aca64b0041652f4ee | fix: simulation interval minutes | Fix correct simulation interval minutes | 09/07/2026 |
+| Oryxen-Backend | develop | 234e06a1a4830ec324b8a27ae49a79efd99a41e3 | bug | Solution of a bug | 09/07/2026 |
+| Oryxen-Backend | develop | d4661fca847a7ef5a987a0f380d687762931a591 | Merge branch 'main' of https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend | Merge changes to main branch | 09/07/2026 |
+| Oryxen-Backend | fix/tf1-delivery-readiness | 089d945acb3c8fb032ca167556cc6e8e81c5bf9b | fix: update NuGet tool version and project assets for .NET 10 compatibility | Update NuGet and project versions for .NET compatibility | 09/07/2026 |
+| Oryxen-Backend | fix/tf1-delivery-readiness | 51d6f862de2687cd899421d94b7c59dffeea42e6 | Refactor project files to downgrade SDK and NuGet tool versions | Change project files to downgrade SDK and NuGet tool versions | 09/07/2026 |
+| Oryxen-Backend | fix/tf1-delivery-readiness | 69f7844fc208154ee8416bb5fadbbeb6a5b2c172 | feat: Implement plan seeding on startup and add chat service | Implement plan seeding and chat service | 09/07/2026 |
+| Oryxen-Backend | develop | 9e06ecb7900700815f6f2dc0567b1861e9be0051 | Merge pull request #4 from 1ASI0728-2610-11770-G4-Oryxen/fix/tf1-delivery-readiness | Merge changes to develop branch | 09/07/2026 |
+| Oryxen-Backend | develop | 153d0d2436b23f2fd2f8c34e0f0c99415dbe911d | Merge pull request #5 from 1ASI0728-2610-11770-G4-Oryxen/develop | Merge changes to main branch | 09/07/2026 |
+| Oryxen-Backend | main | 5ef8d7b8fd1df2ea69fa66c1c95fb0626d03c001 | Update project files and dependencies for .NET 10.0 SDK | Update project files and dependencies for .NET SDK | 09/07/2026 |
+
 
 #### 7.2.2.4. Testing Suite Evidence for Sprint Review
 
@@ -7421,6 +7434,19 @@ Flujos demostrables al cierre del Sprint 2:
 
 **f. Flujo administrador/soporte:** usuario con rol ADMIN accede al catálogo global de plantas (RBAC evidenciado en 7.2.1.5) y modera contenido reportado de la comunidad con registro auditable.
 
+<br>
+
+**Evidencias:**
+
+**Web Application:**
+
+**Mobile Application:**
+
+**Backend:**
+
+![Backend1_TF1](./assets/Chapter-7/Backend1_TF1.png)
+![Backend2_TF1](./assets/Chapter-7/Backend2_TF1.png)
+
 #### 7.2.2.6. Services Documentation Evidence for Sprint Review
 
 Relación consolidada de endpoints REST documentados en Swagger/OpenAPI al cierre del Sprint 2, organizada por bounded context:
@@ -7451,31 +7477,58 @@ Relación consolidada de endpoints REST documentados en Swagger/OpenAPI al cierr
 
 #### 7.2.2.7. Software Deployment Evidence for Sprint Review
 
-Estado de despliegue de los productos digitales al cierre del Sprint 2, alineado con la propuesta final de despliegue de la sección 4.3.4:
+En esta sección se presenta las evidencias relacionadas al proceso de despliegue de los artefactos desarrollados en el Sprint 2:
 
-| Producto Digital | Plataforma | Estado al cierre del Sprint 2 | Evidencia |
-|---|---|---|---|
-| Landing Page | Firebase Hosting | **Desplegado** — `https://oryxen-landing.web.app` | URL declarada en 7.2.1.7; captura de consola pendiente |
-| Backend API | Imagen Docker en GHCR (build automático en cada push a `main`/`develop`) → propuesta de servicio en Google Cloud Run | **Imagen publicada por CI/CD** (workflow `backend-ci-cd.yml` del repositorio); servicio cloud pendiente de activación | Workflow y Dockerfile en el repositorio `Oryxen-Backend` |
-| Web Application | Firebase Hosting (build de Vite con `VITE_API_BASE_URL` inyectada por GitHub Actions) | Build automatizado evidenciado (workflow `frontend-ci-cd.yml`); publicación de URL final pendiente | Workflow en el repositorio `Oryxen-Web-Application` |
-| Base de datos | PostgreSQL 15 (Docker local; propuesta Cloud SQL) | Operativa en entorno integrado con migraciones EF Core automáticas | `docker-compose.yml` del repositorio |
-| Mobile Application | APK release (`./gradlew assembleRelease`) → Firebase App Distribution | Build local verificado; distribución a testers pendiente de evidencia | — |
-| IoT Edge / Simulador | Simulador del Sensor Lite contra `POST /api/v1/telemetry` | Operativo en entorno integrado (evidencia del flujo en Sprint 1) | Ejemplos request/response en 7.2.1.6 |
+**Landing Page:**
 
-**Variables de entorno gestionadas para el despliegue:** ver la tabla completa en la sección 4.3.4 (conexión a base de datos, llaves JWT RS256, claves de Stripe, credencial FCM, API key del proveedor de IA y `VITE_API_BASE_URL`); en CI/CD se inyectan como GitHub Actions Secrets, como se evidencia en el workflow del frontend.
+**Web Application:**
+
+**Mobile Application:**
+
+**Backend:** Deployado en Render
+
+![DatabaseBackend_TF1](./assets/Chapter-7/DatabaseBackend_TF1.png)
+![EnvironmentBackend_TF1](./assets/Chapter-7/EnvironmentBackend_TF1.png)
+![DeployBackend_TF1](./assets/Chapter-7/DeployBackend_TF1.png)
 
 #### 7.2.2.8. Team Collaboration Insights during Sprint
 
-Durante el Sprint 2 el equipo mantuvo la organización del Sprint 1 (GitFlow, Conventional Commits, sincronización cada 48 horas por Discord) e incorporó dos prácticas nuevas: revisión cruzada obligatoria de Pull Requests entre frentes (quien implementó Billing revisó Community y viceversa) y el uso de Issues de GitHub etiquetados por bounded context para trazar el trabajo hacia el Sprint Backlog.
+Durante el Sprint 2 el equipo mantuvo la organización del Sprint 1 (GitFlow, Conventional Commits, sincronización cada 48 horas por Discord) e incorporó dos prácticas nuevas: revisión cruzada obligatoria de Pull Requests entre frentes (quien implementó Billing revisó Community y viceversa) y el uso de Issues de GitHub etiquetados por bounded context para trazar el trabajo hacia el Sprint Backlog. A continuación se presentan las evidencias:
 
-Distribución del trabajo por integrante:
+**Documentation Report:**
 
-| Integrante | Frente principal | Repositorios con actividad |
-|---|---|---|
-| Estrada Cajamune, Abraham Andrés | Billing & Subscription (Stripe) + hardening móvil (5.1.7) | Oryxen-Backend, Oryxen-Mobile-Application, Documentation-Report |
-| Nanfuñay Liza, Pedro Jesús | Analysis & Reporting (dashboard + exportación) y Community Feed (web) | Oryxen-Web-Application, Oryxen-Backend, Documentation-Report |
-| Pachas Chavez, Alejandro Alberto | Notification (FCM, preferencias, alertas con diagnóstico) | Oryxen-Backend, Oryxen-Mobile-Application, Documentation-Report |
-| Zevallos Linares, Alessandro Netto | Community (interacciones) + consolidación de despliegue (CI/CD) | Oryxen-Backend, Oryxen-Web-Application, Oryxen-Landing-Page, Documentation-Report |
+![ReportContributors_TF1](./assets/Chapter-7/ReportContributors_TF1.png)
+![ReportNetwork_TF1](./assets/Chapter-7/ReportNetwork_TF1.png)
+
+<br>
+
+**Landing Page:**
+
+![LandingPageContributors_TF1](./assets/Chapter-7/LandingPageContributors_TF1.png)
+![LandingPageNetwork_TF1](./assets/Chapter-7/LandingPageNetwork_TF1.png)
+
+<br>
+
+**Web Application:**
+
+![WebAppContributors_TF1](./assets/Chapter-7/WebAppContributors_TF1.png)
+![WebAppNetwork_TF1](./assets/Chapter-7/WebAppNetwork_TF1.png)
+
+<br>
+
+**Mobile Application:**
+
+![MobileAppContributors_TF1](./assets/Chapter-7/MobileAppContributors_TF1.png)
+![MobileInsights_TF1](./assets/Chapter-7/MobileInsights_TF1.png)
+
+<br>
+
+**Backend:**
+
+![BackendContributors_TF1](./assets/Chapter-7/BackendContributors_TF1.png)
+![BackendNetwork_TF1](./assets/Chapter-7/BackendNetwork_TF1.png)
+
+<br>
 
 **Reflexión de colaboración:** la división por bounded contexts redujo los conflictos de merge respecto del Sprint 1 (cada frente tocó módulos disjuntos del monolito modular) y la revisión cruzada elevó la calidad de los contratos REST entre módulos, detectando dos inconsistencias de nomenclatura antes de fusionar. Como aprendizaje final, el equipo reconoce que las evidencias de despliegue debieron capturarse en el momento de cada hito y no al cierre, lo que originó los pendientes listados en esta sección.
 
