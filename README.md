@@ -201,8 +201,11 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
   - [2.1. Competidores](#21-competidores)
     - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
     - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
-      - [2.1.2.1. Modelo de Monetización y Análisis Financiero](#2121-modelo-de-monetización-y-análisis-financiero)
-      - [2.1.2.2. Operaciones de Hardware: Sensor Lite](#2122-operaciones-de-hardware-sensor-lite)
+      - [2.1.2.1. Modelo de Monetización y Conversión Freemium](#2121-modelo-de-monetización-y-conversión-freemium)
+      - [2.1.2.2. Análisis financiero básico del Sensor Lite](#2122-análisis-financiero-básico-del-sensor-lite)
+      - [2.1.2.3. Operaciones de hardware: distribución, instalación y soporte](#2123-operaciones-de-hardware-distribución-instalación-y-soporte)
+      - [2.1.2.4. SLA y atención al cliente](#2124-sla-y-atención-al-cliente)
+      - [2.1.2.5. Comunidad como activo de monetización](#2125-comunidad-como-activo-de-monetización)
   - [2.2. Entrevistas](#22-entrevistas)
     - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
     - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
@@ -613,7 +616,8 @@ Xiaomi representa la mayor amenaza debido a su capacidad de escala y precios agr
 
 **Gardyn (Home Kit 3.0 con Kelby AI)**  
 Es el referente tecnológico con visión artificial. Sin embargo, su costo superior a los $700 USD y su formato cerrado lo hacen inviable para el mercado masivo en LATAM. Utiliza una IA propia llamada **Kelby** que utiliza cámaras integradas para detectar el estado de cada planta y recomendar acciones. Funciona con un modelo de suscripción ("Gardyn Membership") que incluye envío recurrente de yCubes (semillas) y soporte. <br>
-**Diferenciación:** Oryxen propone una solución modular y más accesible, enfocada en las macetas y plantas que el usuario ya posee, integrando automatización e IA sin requerir un sistema de cultivo propietario, reduciendo el costo de entrada en un 80%.
+
+**Diferenciación:** Oryxen propone una solución modular y más accesible, enfocada en las macetas y plantas que el usuario ya posee, integrando automatización e IA sin requerir un sistema de cultivo propietario. Bajo los supuestos del modelo financiero de la sección 2.1.2.2 (Sensor Lite a USD 49 frente a un kit Gardyn superior a USD 700), el costo de entrada al ecosistema con hardware se reduce en más de un 90%; en la modalidad Freemium sin hardware, el costo de entrada es nulo. Estas cifras se declaran como estimaciones académicas propias, no como comparativa de precios auditada.
 
 ### 2.1.1. Análisis competitivo
 
@@ -655,7 +659,7 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
   </tr>
   <tr>
     <td>¿Qué valor ofrece a los clientes?</td>
-    <td>Reduce el esfuerzo manual, disminuye pérdidas de plantas y ayuda a usuarios con poco tiempo mediante automatización progresiva y recomendaciones personalizadas./td>
+    <td>Reduce el esfuerzo manual, disminuye pérdidas de plantas y ayuda a usuarios con poco tiempo mediante automatización progresiva y recomendaciones personalizadas.</td>
     <td>Ayuda a recordar tareas de cuidado y aprender conceptos básicos de jardinería.</td>
     <td>Permite monitorear variables ambientales de manera económica y sencilla.</td>
     <td>Ofrece una experiencia premium de cultivo indoor con mínima intervención del usuario.</td>
@@ -691,7 +695,7 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
   </tr>
   <tr>
     <td>Precios & Costos</td>
-    <td>Bajo costo de entrada: acceso inicial sin hardware obligatorio y posibilidad de escalar progresivamente./td>
+    <td>Bajo costo de entrada: acceso inicial sin hardware obligatorio y posibilidad de escalar progresivamente.</td>
     <td>Bajo costo anual mediante suscripción móvil.</td>
     <td>Hardware económico orientado al mercado masivo.</td>
     <td>Alto costo inicial y suscripción recurrente.</td>
@@ -831,7 +835,7 @@ Es el referente tecnológico con visión artificial. Sin embargo, su costo super
 **Estrategias generales de Oryxen**
 - Diferenciación por la **integración de automatización + IA conversacional** aplicada sobre las plantas que el usuario ya posee, sin obligarlo a migrar a un ecosistema cerrado.
 - Ecosistema **hardware + software modular**: sensores independientes, riego automatizado y panel centralizado accesible desde web y móvil.
-- Modelo de negocio Freemium 100% software para eliminar la barrera de entrada al hardware en LATAM, escalable mediante la venta de un 'Sensor Lite' básico de bajo costo, y un Plan Premium que rentabiliza el negocio bloqueando funciones avanzadas de IA e historial completo de datos..
+- Modelo de negocio Freemium 100% software para eliminar la barrera de entrada al hardware en LATAM, escalable mediante la venta de un 'Sensor Lite' básico de bajo costo, y un Plan Premium que rentabiliza el negocio bloqueando funciones avanzadas de IA e historial completo de datos.
 - Posicionamiento como un **aliado cotidiano** para hogares ocupados y aficionados latinoamericanos, con precios adaptados al mercado regional.
 Hemos identificado diversas estrategias y tácticas para diferenciarnos y competir de manera efectiva dentro del mercado de jardinería inteligente y automatización del hogar. Oryxen busca posicionarse como una solución accesible y especializada para el cuidado de plantas en entornos urbanos, combinando automatización, monitoreo e inteligencia artificial en una sola plataforma.
 
@@ -850,7 +854,7 @@ La plataforma permite visualizar el estado de todas las plantas desde una sola i
 **2. Tácticas de Marketing:** <br>
 
 **Contenido educativo y redes sociales:**
-Se implementarán campañas digitales orientadas a hogares urbanos y adultos mayores, utilizando contenido educativo sobre cuidado de plantas, automatización e IA aplicada al hogar.
+Se implementarán campañas digitales orientadas a los dos segmentos objetivo (personas ocupadas de zonas urbanas y aficionados a la jardinería), utilizando contenido educativo sobre cuidado de plantas, automatización e IA aplicada al hogar.
 
 **Alianzas con viveros y tiendas tecnológicas:**
 Oryxen buscará colaborar con viveros locales y marketplaces tecnológicos para aumentar visibilidad, facilitar pruebas del producto y fortalecer la confianza del usuario en etapas tempranas.
@@ -884,7 +888,58 @@ El sistema utilizará interacciones y retroalimentación de los usuarios para me
 
 ---
 
-#### 2.1.2.1. Modelo de Monetización y Análisis Financiero
+**Tabla de riesgo competitivo**
+
+Como cierre del análisis competitivo, se identifican los principales riesgos de mercado frente a los competidores estudiados, con su impacto estimado, probabilidad y mitigación propuesta. Las valoraciones son cualitativas y fueron definidas por consenso del equipo bajo supuestos académicos.
+
+| Riesgo | Competidor asociado | Impacto | Probabilidad | Mitigación |
+|---|---|---:|---:|---|
+| El plan gratuito de una app consolidada resulta "suficientemente bueno" y el usuario no percibe valor en la automatización | Planta | Alto | Alta | Posicionar el diferencial en la acción física (riego automatizado + sensores) que ninguna app pura puede replicar; *aha moment* de diagnóstico IA en las primeras 72 horas |
+| Guerra de precios de hardware: sensores masivos a bajo costo erosionan el margen del Sensor Lite | Xiaomi Mi Flora / ecosistema smart home | Alto | Media | Competir por experiencia integrada (sensor + diagnóstico IA + comunidad en una sola app) y no por precio unitario; empaquetar el hardware con meses de suscripción |
+| Entrada de un jugador premium a LATAM con financiamiento superior | Gardyn | Medio | Baja | Foco en el segmento de macetas existentes (no cultivo propietario) y en precios regionales; velocidad de iteración local |
+| Dependencia de ecosistemas de terceros (Google Home, Xiaomi Home) que integren funciones equivalentes de forma nativa | Xiaomi / Google | Medio | Media | Integraciones progresivas con dichos ecosistemas en lugar de competir frontalmente; el valor propio queda en la capa de IA especializada en jardinería |
+| Fatiga de suscripciones del usuario LATAM: cancelación temprana del plan Premium | Todos | Alto | Media | Efectos de red de la comunidad (sección 2.1.2.5), alertas comunitarias exclusivas y bundle hardware + suscripción que ancla la permanencia |
+
+---
+
+#### 2.1.2.1. Modelo de Monetización y Conversión Freemium
+
+**Funnel de adquisición y conversión (AARRR adaptado)**
+
+El modelo Freemium de Oryxen se gestiona como un embudo de cinco etapas. Cada etapa tiene una métrica objetivo declarada **bajo supuestos académicos** (no existen aún cohortes reales que las validen):
+
+| Etapa | Definición operativa | Métrica objetivo (Año 1) |
+|---|---|---|
+| **Adquisición** | Visitante de la Landing Page que crea una cuenta gratuita | ≥ 8% de conversión visita → registro |
+| **Activación** | Usuario que registra al menos 1 planta y completa el onboarding | ≥ 60% de los registrados en las primeras 48 h |
+| **Conversión (aha moment)** | Usuario que ejecuta su primer diagnóstico visual con IA | ≥ 40% de los activados dentro de las primeras 72 h |
+| **Monetización** | Usuario gratuito que activa el plan Premium o compra el Sensor Lite | 3.5% mensual (ver métricas SaaS) |
+| **Retención** | Suscriptor Premium activo al tercer mes | ≥ 85% de la cohorte |
+
+**Tabla de planes y límites del plan gratuito**
+
+| Capacidad | Plan Freemium | Plan Premium ($8.99 USD/mes) |
+|---|---|---|
+| Plantas registradas | Hasta 3 | Ilimitadas |
+| Registro manual de riego y recordatorios | ✔ | ✔ |
+| Diagnóstico visual con IA | 2 diagnósticos/mes | Ilimitado |
+| Historial de telemetría | Últimos 7 días | Historial completo + exportación CSV/PDF |
+| Analytics Dashboard (tendencias, comparativas) | — | ✔ |
+| Notificaciones push | Máximo 3/día, solo críticas | Configurables por tipo y planta |
+| Alertas comunitarias de plagas (geolocalizadas) | — | ✔ (exclusivo) |
+| Vinculación de Sensor Lite | 1 dispositivo | Hasta 10 dispositivos |
+| Riego automático programable | — | ✔ |
+| Soporte | Comunidad + Help Center | Chat prioritario (SLA sección 2.1.2.4) |
+
+**Razones para pagar (drivers de conversión):**
+
+1. Tope de 3 plantas: el aficionado promedio entrevistado mantiene entre 7 y 15 macetas, por lo que supera el límite gratuito de forma natural.
+2. Diagnóstico IA ilimitado: el evento de mayor valor percibido en las entrevistas de validación.
+3. Historial y analítica: el segmento aficionado declaró explícitamente interés en estadísticas y evolución (sección 2.2.3).
+4. Alertas comunitarias de plagas: valor colectivo exclusivo Premium, no replicable individualmente.
+5. Automatización del riego: requiere Premium + hardware, y constituye la promesa central para personas ocupadas.
+
+**Riesgo declarado — suficiencia del plan gratuito:** existe el riesgo de que un usuario con 1–3 plantas y disciplina de riego perciba el plan gratuito como suficiente de forma indefinida. Se acepta ese comportamiento como costo de adquisición del modelo Freemium: ese usuario alimenta la comunidad y el boca a boca. La mitigación no es degradar el plan gratuito, sino que el producto muestre valor incremental contextual (por ejemplo, al fallar un riego manual o al detectar una anomalía que el plan gratuito no puede diagnosticar por haber agotado su cuota mensual de IA).
 
 **Conversión Freemium → Premium: Métricas Objetivo SaaS/IoT**
 
@@ -904,7 +959,9 @@ El modelo Freemium de Oryxen posiciona la aplicación gratuita como canal de adq
 
 ---
 
-**Modelo Financiero: Break-Even del Sensor Lite**
+#### 2.1.2.2. Análisis financiero básico del Sensor Lite
+
+> **Advertencia metodológica:** todos los valores de esta subsección son **supuestos académicos** construidos por el equipo con fines de modelado. No existe cotización real de fabricante (EMS), ni tarifario logístico contratado, ni ventas históricas. Antes de cualquier decisión real de inversión, cada parámetro debe reemplazarse por cotizaciones verificables.
 
 El Sensor Lite representa el componente de hardware de entrada al ecosistema Oryxen IoT. A continuación se establece el modelo financiero para evaluar la viabilidad y el punto de equilibrio de la línea de hardware.
 
@@ -938,23 +995,25 @@ El costo de adquisición total de un usuario hardware es `COGS ($25) + CAC digit
 - Ingresos recurrentes de suscripción post-período regalo (meses 4–12): 9 × $8.99 = **$80.91**
 - **Total Year 1 por usuario hardware: $104.91 USD**
 - **ROI sobre la inversión de adquisición ($33): 218%**
-- El payback de la inversión de adquisición se alcanza dentro del **primer mes** gracias al margen de hardware, haciendo que cada unidad vendida sea profitable desde el día uno de la transacción.
+- El payback de la inversión de adquisición se alcanza dentro del **primer mes** gracias al margen de hardware, haciendo que cada unidad vendida sea rentable desde la transacción inicial — siempre bajo los supuestos declarados.
+
+**Análisis de sensibilidad (variación de los supuestos críticos):**
+
+| Escenario | Supuesto alterado | Efecto sobre el break-even mensual |
+|---|---|---|
+| Base | COGS+logística $25, PVP $49, fijos $2,500 | ~105 unidades/mes (solo hardware) |
+| Pesimista de costo | COGS+logística sube 20% → $30 | 2,500 ÷ 19 ≈ **132 unidades/mes** |
+| Pesimista de precio | PVP baja a $39 por presión competitiva (Xiaomi) | 2,500 ÷ 14 ≈ **179 unidades/mes** |
+| Pesimista de retención | Retención post-regalo cae de 80% a 60% | El aporte recurrente por usuario baja de ~$7.19 a ~$5.39; break-even combinado ≈ **85 unidades/mes** |
+| Optimista de escala | Lote de 2,000 unidades reduce COGS 15% | 2,500 ÷ 27.3 ≈ **92 unidades/mes** (solo hardware) |
+
+La conclusión del análisis es que el modelo es más sensible al **precio de venta** que al costo de fabricación: una guerra de precios contra hardware masivo (riesgo identificado en la tabla de riesgo competitivo) casi duplica el volumen necesario para el equilibrio. Esto refuerza la decisión estratégica de no competir por precio unitario sino por experiencia integrada y por el bundle hardware + suscripción.
 
 ---
 
-**BC Community y su Rol en la Retención Premium**
-
-El Bounded Context **Community** es un diferenciador estratégico que genera efectos de red directamente vinculados al modelo de monetización. Su impacto en las métricas clave de ingresos se manifiesta en tres mecanismos concretos:
-
-**1. Reducción del Churn por Switching Costs Sociales:** Los usuarios Premium que participan activamente en la comunidad (comparten progreso de plantas, responden preguntas, reciben reconocimientos de la comunidad) desarrollan capital social dentro de la plataforma. Cancelar la suscripción implica perder ese capital, incrementando los switching costs no económicos. Benchmark de referencia: plataformas con componente social registran un churn 18–25% menor que sus equivalentes sin él (Duolingo reportó +30% en mantenimiento de streaks para usuarios con componente social).
-
-**2. Alertas Comunitarias de Plagas como Feature Premium Exclusivo:** La posibilidad de compartir y recibir alertas validadas por la comunidad sobre plagas o enfermedades detectadas en zonas geográficas cercanas (geolocalización opt-in) es una funcionalidad exclusiva del plan Premium. Este feature genera valor colectivo creciente con la base de usuarios activos, reforzando el modelo de red: a más usuarios Premium activos, más valiosa es la alerta comunitaria para todos. Esto crea un *positive feedback loop* entre crecimiento de usuarios y valor percibido del plan Premium.
-
-**3. Foros de Soporte Colaborativo como Deflector de Tickets (Nivel 0):** La comunidad actúa como primera línea de soporte entre pares, reduciendo el volumen de tickets que escalan al Nivel 1 del soporte formal. Esto disminuye el costo operativo de soporte en un estimado de 15–20%, mejorando directamente el margen neto del plan Premium y la escalabilidad del equipo de Customer Success.
-
 ---
 
-#### 2.1.2.2. Operaciones de Hardware: Sensor Lite
+#### 2.1.2.3. Operaciones de hardware: distribución, instalación y soporte
 
 **Cadena de Distribución y Logística**
 
@@ -1005,7 +1064,9 @@ El proceso de activación sigue un flujo guiado dentro de la aplicación Oryxen,
 
 ---
 
-**Soporte al Cliente: Canales, SLA y Niveles de Escalamiento**
+#### 2.1.2.4. SLA y atención al cliente
+
+El soporte al cliente de Oryxen se estructura en canales formales, niveles de escalamiento y tiempos objetivo. Las responsabilidades del usuario incluyen: mantener el firmware del Sensor Lite actualizado vía OTA, operar el dispositivo dentro de las condiciones declaradas (interiores, sin inmersión) y proporcionar información de diagnóstico cuando el soporte la solicite. Quedan fuera del alcance del soporte: asesoría agronómica profesional, hardware de terceros y modificaciones de firmware realizadas por el usuario.
 
 **Canales de Atención:**
 
@@ -1032,6 +1093,33 @@ El proceso de activación sigue un flujo guiado dentro de la aplicación Oryxen,
 | **P1 — Alto** | Falla de funcionalidad core para > 20% de usuarios (diagnóstico IA, telemetría, billing) | < 8 horas |
 | **P2 — Medio** | Falla de funcionalidad no crítica, bug reproducible, hardware individual con falla | < 24 horas |
 | **P3 — Bajo** | Consultas generales, mejoras solicitadas, bugs cosméticos | < 72 horas |
+
+---
+
+#### 2.1.2.5. Comunidad como activo de monetización
+
+**BC Community y su Rol en la Retención Premium**
+
+El Bounded Context **Community** es un diferenciador estratégico que genera efectos de red directamente vinculados al modelo de monetización. Su impacto en las métricas clave de ingresos se manifiesta en tres mecanismos concretos:
+
+**1. Reducción del Churn por Switching Costs Sociales:** Los usuarios Premium que participan activamente en la comunidad (comparten progreso de plantas, responden preguntas, reciben reconocimientos de la comunidad) desarrollan capital social dentro de la plataforma. Cancelar la suscripción implica perder ese capital, incrementando los switching costs no económicos. Como referencia cualitativa, la literatura de producto documenta que las plataformas con componente social tienden a registrar menor churn que sus equivalentes sin él; el equipo declara este supuesto como hipótesis de diseño a validar con cohortes propias, no como cifra verificada.
+
+**2. Alertas Comunitarias de Plagas como Feature Premium Exclusivo:** La posibilidad de compartir y recibir alertas validadas por la comunidad sobre plagas o enfermedades detectadas en zonas geográficas cercanas (geolocalización opt-in) es una funcionalidad exclusiva del plan Premium. Este feature genera valor colectivo creciente con la base de usuarios activos, reforzando el modelo de red: a más usuarios Premium activos, más valiosa es la alerta comunitaria para todos. Esto crea un *positive feedback loop* entre crecimiento de usuarios y valor percibido del plan Premium.
+
+**3. Foros de Soporte Colaborativo como Deflector de Tickets (Nivel 0):** La comunidad actúa como primera línea de soporte entre pares, reduciendo el volumen de tickets que escalan al Nivel 1 del soporte formal. Bajo supuestos académicos, el equipo estima que esta deflexión puede reducir de forma apreciable el costo operativo de soporte, mejorando el margen neto del plan Premium y la escalabilidad del equipo de Customer Success; la magnitud real se medirá con el ratio de tickets deflectados una vez en operación.
+
+**Métricas de la comunidad como activo (a instrumentar en el Analytics Dashboard):**
+
+| Métrica | Definición | Propósito de negocio |
+|---|---|---|
+| Posts activos por semana | Publicaciones nuevas con al menos 1 interacción | Salud general de la comunidad |
+| Tasa de respuestas útiles | % de preguntas con una respuesta marcada como útil en < 24 h | Valor de soporte entre pares (Nivel 0) |
+| Conversión desde comunidad | % de usuarios Freemium que activan Premium dentro de los 30 días posteriores a su primera interacción comunitaria | Vínculo directo comunidad → monetización |
+| Reducción de tickets | Variación % de tickets Nivel 1 por usuario activo tras el lanzamiento del feed | Deflexión de soporte |
+| Retención relativa | Churn de usuarios con actividad comunitaria vs. sin ella | Validación de la hipótesis de switching costs sociales |
+
+En síntesis, la comunidad no se monetiza vendiendo publicidad ni contenido, sino que **sostiene el modelo de ingresos por tres vías indirectas y medibles**: retiene suscriptores (menor churn), reduce costo operativo (deflexión de tickets) y empuja la conversión a Premium (alertas comunitarias exclusivas y prueba social). Estas tres vías quedan instrumentadas como métricas del producto para su validación con datos reales.
+
 
 
 <div style="page-break-after: always;"></div>
@@ -1128,11 +1216,11 @@ Respecto al seguimiento de cuidado de plantas, considera que sería muy útil pa
 
 **Resumen descriptivo de la entrevista:**
 
-El entrevistado, Renzo Fabricio Abad La Torre , es un estudiante universitario que nos comparte su afición hacia el cuidado de plantas. Él nos comenta el proceso por el que pasa para cuidar de manera correcta de sus plantas de interiores, contanto actualmente con 10 de este tipo, que aunque sea de su agrado, considera que le toma más tiempo del que le gustaría.
+El entrevistado, Renzo Fabricio Abad La Torre, es un estudiante universitario que nos comparte su afición hacia el cuidado de plantas. Él nos comenta el proceso por el que pasa para cuidar de manera correcta sus plantas de interiores, contando actualmente con 10 de este tipo, que aunque sean de su agrado, considera que le toman más tiempo del que le gustaría.
 
-En relación al cuidado de sus plantas, indica que riegua un aprox de 3-4 veces al día. Así mismo, considera que el mayor reto que enfrenta es encontrar un lugar idóneo para el crecimiento de sus plantas y monitorear su salud manualmente. Además, indica que tuvo plantas que se marchitaron debido al descuido por atender sus demás responsabilidades.
+En relación al cuidado de sus plantas, indica que riega aproximadamente 3-4 veces al día. Así mismo, considera que el mayor reto que enfrenta es encontrar un lugar idóneo para el crecimiento de sus plantas y monitorear su salud manualmente. Además, indica que tuvo plantas que se marchitaron debido al descuido por atender sus demás responsabilidades.
 
-Respecto al seguimiento de cuidado de plantas, considera que sería una útil para él una aplicación que lo apoye en este proceso a través de una interfaz general para que sea más sencillo y rápido leer la información. Así mismo, considera que herramientas como los sensores impulsados con IAs son herramientas muy útiles y confía en este tipo de herramientas. Por lo que estaría dispuesto a considerar el punto de vista de la IA. Estos datos nos indican que tiene interés en este tipo de herramientas y en nuestra solución.
+Respecto al seguimiento de cuidado de plantas, considera que sería útil para él una aplicación que lo apoye en este proceso a través de una interfaz general para que sea más sencillo y rápido leer la información. Así mismo, considera que herramientas como los sensores impulsados con IAs son herramientas muy útiles y confía en este tipo de herramientas. Por lo que estaría dispuesto a considerar el punto de vista de la IA. Estos datos nos indican que tiene interés en este tipo de herramientas y en nuestra solución.
 
 **Características identificadas a partir de la entrevista:**
 
