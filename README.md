@@ -399,20 +399,34 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
         - [C. Especificaciones BDD (Gherkin .feature)](#c-especificaciones-bdd-gherkin-feature)
         - [D. Resultados de Ejecución](#d-resultados-de-ejecución)
         - [E. Mapeo User Stories → Testing Suite](#e-mapeo-user-stories--testing-suite)
-      - [7.2.1.5.	Execution Evidence for Sprint Review](#7215execution-evidence-for-sprint-review)
+      - [7.2.1.5. Execution Evidence for Sprint Review](#7215-execution-evidence-for-sprint-review)
       - [7.2.1.6. Services Documentation Evidence for Sprint Review](#7216-services-documentation-evidence-for-sprint-review)
       - [7.2.1.7. Software Deployment Evidence for Sprint Review](#7217-software-deployment-evidence-for-sprint-review)
       - [7.2.1.8. Team Collaboration Insights during Sprint](#7218-team-collaboration-insights-during-sprint)
-    - [7.3. Validation Interviews](#73-validation-interviews)
+    - [7.2.2. Sprint 2](#722-sprint-2)
+      - [7.2.2.1. Sprint Planning 2](#7221-sprint-planning-2)
+      - [7.2.2.2. Sprint Backlog 2](#7222-sprint-backlog-2)
+      - [7.2.2.3. Development Evidence for Sprint Review](#7223-development-evidence-for-sprint-review)
+      - [7.2.2.4. Testing Suite Evidence for Sprint Review](#7224-testing-suite-evidence-for-sprint-review)
+      - [7.2.2.5. Execution Evidence for Sprint Review](#7225-execution-evidence-for-sprint-review)
+      - [7.2.2.6. Services Documentation Evidence for Sprint Review](#7226-services-documentation-evidence-for-sprint-review)
+      - [7.2.2.7. Software Deployment Evidence for Sprint Review](#7227-software-deployment-evidence-for-sprint-review)
+      - [7.2.2.8. Team Collaboration Insights during Sprint](#7228-team-collaboration-insights-during-sprint)
+    - [7.2.3. Internacionalización (i18n) y Accesibilidad (a11y) — Web Application](#723-internacionalización-i18n-y-accesibilidad-a11y--web-application)
+      - [7.2.3.1. Internacionalización (i18n) — vue-i18n](#7231-internacionalización-i18n--vue-i18n)
+      - [7.2.3.2. Accesibilidad (a11y) — ARIA Attributes](#7232-accesibilidad-a11y--aria-attributes)
+  - [7.3. Validation Interviews](#73-validation-interviews)
     - [7.3.1. Diseño de Entrevistas](#731-diseño-de-entrevistas)
     - [7.3.2. Registro de Entrevistas](#732-registro-de-entrevistas)
       - [Segmento 1 — Personas Ocupadas](#segmento-1--personas-ocupadas)
       - [Segmento 2 — Aficionados a la Jardinería](#segmento-2--aficionados-a-la-jardinería)
     - [7.3.3. Evaluaciones según heurísticas](#733-evaluaciones-según-heurísticas)
-    - [7.4. Video About-the-Product](#74-video-about-the-product)
-  - [Video About-the-Team](#video-about-the-team)
+  - [7.4. Video About-the-Product](#74-video-about-the-product)
 - [Conclusiones](#conclusiones)
   - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+    - [Contraste de Resultados frente al Lean UX Process](#contraste-de-resultados-frente-al-lean-ux-process)
+    - [Roadmap de Expansión Estratégica](#roadmap-de-expansión-estratégica)
+  - [Video About-the-Team](#video-about-the-team)
 - [Bibliografía](#bibliografía)
 - [Anexos](#anexos)
   - [Anexo A — Enlaces del Proyecto](#anexo-a--enlaces-del-proyecto)
@@ -6591,8 +6605,8 @@ El equipo establece las herramientas de software que cada integrante debe utiliz
 | Architecture Modeling | Structurizr | Modelado de diagramas C4 Model (Context, Container, Component) para la arquitectura de software de la solución. | https://structurizr.com |
 | Architecture Modeling | LucidChart | Diagramas de EventStorming, Domain Storytelling, Bounded Context Mapping y Class Diagrams UML. | https://lucidchart.com |
 | Architecture Modeling | Vertabelo | Diseño de diagramas de base de datos (Database Design Diagrams) para los Bounded Contexts del sistema. | https://vertabelo.com |
-| Software Development (Backend) | JetBrains Rider 2024.x | IDE principal para el desarrollo del servicio backend en C# con ASP.NET Core 8, con soporte para .NET y refactoring avanzado. | https://www.jetbrains.com/rider (descarga) |
-| Software Development (Backend) | .NET SDK 8.0 | Runtime y SDK necesario para compilar, ejecutar y publicar el backend ASP.NET Core de la solución. | https://dotnet.microsoft.com/download (descarga) |
+| Software Development (Backend) | JetBrains Rider 2024.x | IDE principal para el desarrollo del servicio backend en C# con ASP.NET Core 9, con soporte para .NET y refactoring avanzado. | https://www.jetbrains.com/rider (descarga) |
+| Software Development (Backend) | .NET SDK 9.0 | Runtime y SDK necesario para compilar, ejecutar y publicar el backend ASP.NET Core de la solución (versión alineada con el pipeline CI/CD del repositorio). | https://dotnet.microsoft.com/download (descarga) |
 | Software Development (Backend) | Docker Desktop | Contenedorización local de servicios de infraestructura (PostgreSQL 15, Redis 7) para el entorno de desarrollo. | https://www.docker.com/products/docker-desktop (descarga) |
 | Software Development (Web App) | Visual Studio Code 1.89+ | Editor de código para desarrollo de la Web Application en Vue.js 3 + TypeScript, con extensiones Vue Official y ESLint. | https://code.visualstudio.com (descarga) |
 | Software Development (Web App) | Node.js v20 LTS | Entorno de ejecución necesario para npm, Vite 8 y las dependencias del proyecto Vue.js. | https://nodejs.org (descarga) |
@@ -6833,7 +6847,7 @@ En esta sección se registra la evidencia de implementación del Sprint 1. Los a
 
 #### 7.2.1.4. Testing Suite Evidence for Sprint Review
 
-Durante el Sprint 2, el equipo de Oryxen implementó una **Testing Suite automatizada** completa para el backend ASP.NET Core 9, cubriendo tanto pruebas unitarias como especificaciones de comportamiento BDD. La suite se organiza bajo el directorio `tests/` de la solución `Oryxen.API.slnx` y está integrada en el ciclo de compilación mediante `dotnet test`.
+Durante el Sprint 1, el equipo de Oryxen implementó una **Testing Suite automatizada** para el backend ASP.NET Core 9, cubriendo tanto pruebas unitarias como especificaciones de comportamiento BDD. La suite se organiza bajo el directorio `tests/` de la solución `Oryxen.API.slnx` y está integrada en el ciclo de compilación mediante `dotnet test`.
 
 ##### Estructura de la Suite de Pruebas
 
@@ -7039,7 +7053,7 @@ Compilación correcta.
 | Cálculo de Health Score | Unit (PlantHealthCalculator 26 tests) | ✅ Implementado |
 | Seguridad JWT / 401 Unauthorized | BDD Feature 03 (8 escenarios) | ✅ Especificado |
 
-#### 7.2.1.5.	Execution Evidence for Sprint Review
+#### 7.2.1.5. Execution Evidence for Sprint Review
 
 En esta sección se presentan las capturas de pantalla de los productos digitales entregados al cierre del Sprint 1. Cada imagen documenta un flujo de usuario verificado contra los criterios de aceptación definidos en el Sprint Backlog, demostrando la integración funcional entre el frontend (Landing Page, Web y Mobile) y el backend RESTful en ASP.NET Core 9.
 
@@ -7168,6 +7182,18 @@ Response `201 Created` (el `healthScore` lo deriva el `PlantHealthCalculator` de
 - 7f6571e9cba9480130870dfb5a30e9a10cfa1c7b
 - 8ae240876adfc120930d0ab854a8658bff3c1d7d
 
+**IDs de commits del Backend Services:**
+
+- 892f1d7f99060a70ca07707626ea6ad7386a5dbf
+- eea1fcbedb66599912ed037424c16e11a04f662f
+- bdecef4b4f6ce6b84b9f987b1f6c3471dce59400
+- 7f9db13da84914396230309afe0a561ae9b956fa
+- 4079095086d5a86e035a409a3a861a710483996c
+- 0bfff21769a5845fc4962336219ee54ee2875199
+- 5b6df6bc4c6eecc9f23a769d033c1d3754670e73
+- 7f6571e9cba9480130870dfb5a30e9a10cfa1c7b
+- 8ae240876adfc120930d0ab854a8658bff3c1d7d
+
 #### 7.2.1.7. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 1, el equipo de Oryxen configuró y desplegó los siguientes productos digitales en sus respectivas plataformas cloud y entornos locales:
@@ -7248,7 +7274,164 @@ En esta sección se evidencian los analíticos de colaboración del equipo duran
 
 ---
 
-### 7.3. Validation Interviews
+### 7.2.2. Sprint 2
+
+El Sprint 2 constituye la segunda y última iteración de desarrollo del ciclo académico, con una duración de dos semanas. Su propósito fue completar la **capa de monetización y engagement** del producto: suscripción Premium con pasarela de pagos (Stripe Checkout), notificaciones push (Firebase Cloud Messaging), Analytics Dashboard con exportación de reportes, Community Feed con sanitización de imágenes, hardening de seguridad del cliente móvil (detallado en la sección 5.1.7) y la consolidación del despliegue de los productos digitales. Al cierre del sprint, los tres clientes (Web, Mobile, Landing) operan integrados contra la API única versionada `/api/v1`.
+
+#### 7.2.2.1. Sprint Planning 2
+
+| **Sprint #** | Sprint 2 |
+|--------------|----------|
+| **Sprint Planning Background** | |
+| Date | 2026-06-16 |
+| Time | 07:00 PM |
+| Location | Reunión virtual (Discord — canal del equipo Oryxen) |
+| Prepared By | Estrada Cajamune, Abraham Andrés (Team Leader) |
+| Attendees | Estrada Cajamune, Abraham Andrés / Nanfuñay Liza, Pedro Jesús / Pachas Chavez, Alejandro Alberto / Zevallos Linares, Alessandro Netto |
+| Sprint 1 Review Summary | Se cumplió el Sprint Goal: Landing Page desplegada en Firebase Hosting, núcleo de Auth & Identity (registro, login, Google OAuth, refresh de JWT) operativo y flujo end-to-end registro → login → telemetría con Health Score verificado en entorno local integrado. Quedó como deuda la captura del panel de despliegue de Firebase. |
+| Sprint 1 Retrospective Summary | Lo que funcionó: GitFlow + Conventional Commits mantuvieron los repositorios ordenados; la sincronización cada 48 horas evitó bloqueos. A mejorar: estimaciones de tareas de integración quedaron cortas (Google OAuth tomó más de lo previsto); se acordó reservar un 20% de la capacidad del Sprint 2 para integración y estabilización. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | Habilitar la monetización y el engagement del producto: flujo completo de upgrade Freemium → Premium con Stripe Checkout, notificaciones push FCM configurables, Analytics Dashboard con exportación (PDF/CSV), Community Feed con imágenes sanitizadas (EXIF/GPS) y hardening de seguridad del cliente móvil. Métrica de cumplimiento: un usuario puede suscribirse a Premium, recibir la confirmación push y acceder a analítica e historial completos. |
+| Sprint 2 Velocity | 32 Story Points |
+| Sum of Story Points | 30 Story Points (US-024, US-027, US-031, US-032, US-036, US-047, US-049, US-050 + TS de seguridad y despliegue) |
+| **Capacidad del equipo** | 4 integrantes × ~12 h/semana × 2 semanas ≈ 96 horas-persona, con 20% reservado para integración y estabilización según acuerdo de la retrospectiva |
+| **Riesgos identificados** | (1) Dependencia de sandbox de Stripe y de credenciales FCM — mitigación: configuración temprana en la semana 1; (2) sanitización EXIF con librerías binarias — mitigación: prueba unitaria con imagen instrumentada; (3) tiempo de revisión de Google Play no controlable — mitigación: distribución vía Firebase App Distribution para la entrega |
+| **Definition of Done** | Código en rama `feature/*` con Conventional Commits, revisado vía Pull Request y fusionado a `develop`; pruebas unitarias del dominio en verde (`dotnet test`); endpoint documentado en Swagger/OpenAPI; criterios de aceptación Gherkin verificados; funcionalidad demostrable en entorno integrado; evidencia (captura o registro) archivada en `assets/Chapter-7/` |
+
+#### 7.2.2.2. Sprint Backlog 2
+
+**Sprint 2 Goal:** Habilitar monetización (Stripe), notificaciones push (FCM), analítica avanzada, comunidad y hardening de seguridad, dejando la solución integrada y desplegada en su versión final académica.
+
+| User Story Id | Título | Descripción | Criterios de aceptación (resumen) | Work-Item / Task | Responsable | Story Points | Estado | Evidencia |
+|---|---|---|---|---|---|---|---|---|
+| US-047 | Gestión segura de métodos de pago | Como usuario, quiero administrar mi información de pago de forma segura para mantener mi suscripción activa | Tarjeta tokenizada por la pasarela; invalidación de tokens previos al reemplazar método | T021 Integración Stripe Checkout (sesión de pago desde vista Plans) · T022 Webhook `checkout.session.completed` idempotente · T023 Vista de facturación en Settings | Estrada Cajamune, Abraham Andrés | 5 | Done (implementación documentada) | Vista Settings con historial Stripe (`WEB_ORYXEN_SETTINGS.jpg`); captura de Checkout pendiente |
+| US-049 | Transparencia en historial de pagos | Como usuario, quiero consultar mi historial completo de transacciones | Fecha, monto, método y concepto por cargo; comprobante descargable; 12 meses accesibles | T024 Endpoint historial de transacciones · T025 Render de facturas en Settings | Estrada Cajamune, Abraham Andrés | 3 | Done (implementación documentada) | Sección facturación en `WEB_ORYXEN_SETTINGS.jpg` |
+| US-050 | Recordatorios de renovación | Como usuario, quiero avisos anticipados de renovación | Push + email 3 días antes con monto y fecha; comprobante tras cobro exitoso | T026 Job de recordatorios · T027 Plantillas de notificación de billing | Pachas Chavez, Alejandro Alberto | 2 | Documentado — ejecución del job pendiente de evidencia | Preferencias de notificación por tipo en Settings |
+| US-036 | Alertas con diagnóstico integrado (IA) | Como usuario, quiero alertas que incluyan diagnóstico y recomendación | La notificación enlaza al diagnóstico; feedback útil/no útil registrado | T028 Integración FCM (registro de token por dispositivo) · T029 Composición de alerta con resultado de diagnóstico | Pachas Chavez, Alejandro Alberto | 5 | Done (implementación documentada) | Toggles FCM por categoría en `WEB_ORYXEN_SETTINGS.jpg`; captura de push en Android pendiente |
+| US-024 | Exportación para análisis externo | Como aficionado, quiero exportar datos crudos en formatos analíticos | Exportación CSV/PDF del rango seleccionado con metadatos | T030 Endpoint `POST /api/v1/reports/export` · T031 Botones de exportación en Analytics | Nanfuñay Liza, Pedro Jesús | 3 | Done (implementación documentada) | Vista Analytics con exportación (`WEB_ORYXEN_ANALYTICS.jpg`) |
+| US-027 | Integración automática a la comunidad | Como usuario registrado, quiero pertenecer automáticamente a la comunidad | Membresía al completar registro; contenido por especies registradas | T032 Feed paginado (`AsSplitQuery`) · T033 Carga multipart con sanitización EXIF | Nanfuñay Liza, Pedro Jesús | 4 | Done (implementación documentada) | Mock-up `Community_WebMockup.png`; captura del feed en producción pendiente |
+| US-031 / US-032 | Feedback de alertas e interacción comunitaria | Como usuario, quiero comentar, reaccionar y evaluar la utilidad de las alertas | Comentarios/reacciones solo en posts públicos; feedback anónimo y agregado | T034 Endpoints de comentarios y likes · T035 Registro de feedback de alertas | Zevallos Linares, Alessandro Netto | 4 | Done (implementación documentada) | Modelo y endpoints en sección 5.8 |
+| TS-SEC-01 | Hardening de seguridad móvil | Como equipo, requerimos eliminar almacenamiento plano de tokens y datos hardcodeados | EncryptedSharedPreferences + Keystore; refresh rotation con interceptor OkHttp; erradicación de IDs mock | T036 `SecureStorage` cifrado · T037 Interceptor de renovación automática · T038 `SessionEventBus` y limpieza de datos demo | Estrada Cajamune, Abraham Andrés | 3 | Done (**evidenciado en la sección 5.1.7**) | Tabla de erradicación de datos hardcodeados (5.1.7.4) |
+| TS-DEP-01 | Despliegue final | Como equipo, requerimos consolidar el despliegue de los productos digitales | Imagen Docker publicada por CI/CD; web y landing en hosting administrado | T039 Pipeline `docker build & push` a GHCR · T040 Configuración de hosting de la Web App | Zevallos Linares, Alessandro Netto | 3 | Parcial — imagen en GHCR evidenciada por el workflow; URLs de producción pendientes | Workflow `backend-ci-cd.yml` en el repositorio |
+
+**Total comprometido:** 30 Story Points (dentro de la velocidad planificada de 32, con la reserva de integración acordada).
+
+#### 7.2.2.3. Development Evidence for Sprint Review
+
+En este sprint los avances se concentraron en cuatro frentes, trazables a los bounded contexts del Capítulo V:
+
+1. **Billing & Subscription (Web + Backend):** integración de Stripe Checkout para el upgrade a Premium, webhook idempotente de confirmación de pago, catálogo de planes (`GET /api/v1/plans`) e historial de transacciones visible en Settings. La lógica de dominio corresponde a la sección 5.7.
+2. **Notification (Backend + Mobile + Web):** registro de tokens FCM por dispositivo, preferencias por categoría (riego, salud/IA, comunidad, cuenta) y composición de alertas con diagnóstico integrado. Corresponde a la sección 5.6.
+3. **Analysis & Reporting (Web + Mobile):** dashboard de tendencias con selector de rango (7d/30d/90d) y granularidad, y exportación PDF/CSV vía `POST /api/v1/reports/export`. Frontend documentado en 5.5.5 (Vue 3) y 5.5.6 (Kotlin/Compose).
+4. **Community (Backend + Web):** feed paginado, publicación multipart con sanitización EXIF/GPS (`ImageMetadataSanitizer`), comentarios y reacciones. Corresponde a la sección 5.8.
+5. **Seguridad móvil:** hardening completo del almacenamiento de sesión y erradicación de datos hardcodeados, documentado con artefactos de código reales en la sección 5.1.7.
+
+El trabajo siguió GitFlow: ramas `feature/US-XXX-*` por historia, Pull Requests hacia `develop` y fusión a `main` al cierre del sprint, con Conventional Commits en los cinco repositorios de la organización.
+
+#### 7.2.2.4. Testing Suite Evidence for Sprint Review
+
+La suite del Sprint 1 (pruebas unitarias de `PlantHealthCalculator` y `AuthService`, y especificaciones BDD en Gherkin — sección 7.2.1.4) se mantiene en verde e integrada al pipeline (`dotnet test` se ejecuta en GitHub Actions contra PostgreSQL de servicio en cada push, según el workflow `backend-ci-cd.yml`). Para el alcance del Sprint 2 se **diseñaron** las siguientes pruebas; su ejecución documentada queda como evidencia pendiente:
+
+| Tipo | Objetivo | Caso representativo | Estado |
+|---|---|---|---|
+| Unitaria (dominio Billing) | Transiciones del ciclo de vida de la suscripción | Activación tras webhook de pago exitoso; downgrade a Freemium tras vencer el período de gracia | Diseñada — ejecución pendiente de adjuntar |
+| Unitaria (dominio Community) | Sanitización de imágenes | Imagen instrumentada con EXIF/GPS produce binario sin segmento APP1 | Diseñada — ejecución pendiente de adjuntar |
+| Integración (API) | Webhook Stripe idempotente | El mismo evento entregado dos veces no duplica la activación | Diseñada — ejecución pendiente de adjuntar |
+| Integración (API) | Autorización por plan | Usuario Freemium recibe 403/límite al exceder cuota de diagnósticos IA | Diseñada — ejecución pendiente de adjuntar |
+| BDD (Gherkin) | Flujo de upgrade Premium | `Scenario: Successful upgrade to Premium via checkout` (Given usuario Freemium autenticado, When completa el checkout, Then su plan es Premium y recibe notificación de confirmación) | Especificada — ejecución pendiente |
+| BDD (Gherkin) | Alerta comunitaria de plaga | Publicación con opt-in de ubicación notifica solo a usuarios Premium en el radio definido | Especificada — ejecución pendiente |
+| UI básica (Web) | Render del Analytics Dashboard | El gráfico de tendencia carga con datos del endpoint y los botones de exportación responden | Diseñada — ejecución pendiente de adjuntar |
+| Seguridad básica | Almacenamiento móvil | Verificación de que el token no existe en SharedPreferences plano tras el hardening (5.1.7) | Verificada por inspección de código (5.1.7); prueba instrumentada pendiente |
+
+#### 7.2.2.5. Execution Evidence for Sprint Review
+
+Flujos demostrables al cierre del Sprint 2:
+
+**a. Flujo Premium (upgrade con Stripe):** desde la vista de planes, el usuario Freemium inicia el checkout, completa el pago en Stripe (sandbox) y retorna a la aplicación con el plan Premium activo; el historial de facturación queda visible en Settings. Evidencia parcial existente: sección de suscripción y facturas en `WEB_ORYXEN_SETTINGS.jpg` (sección 7.2.1.5).
+
+**b. Flujo Analytics Dashboard:** selección de rango temporal y granularidad, visualización de tendencia de salud y exportación de reporte. Evidencia existente: `WEB_ORYXEN_ANALYTICS.jpg` (sección 7.2.1.5).
+
+**c. Flujo Community Feed:** creación de post con imagen (sanitizada), comentarios y reacciones de otros usuarios.
+
+**d. Flujo Push Notification:** configuración de preferencias por categoría y recepción de una alerta con diagnóstico integrado en el dispositivo Android.
+
+**e. Flujo usuario con Sensor Lite:** provisioning QR → BLE → WiFi, primera lectura en el dashboard y alerta automática al cruzar el umbral de humedad.
+
+**f. Flujo administrador/soporte:** usuario con rol ADMIN accede al catálogo global de plantas (RBAC evidenciado en 7.2.1.5) y modera contenido reportado de la comunidad con registro auditable.
+
+#### 7.2.2.6. Services Documentation Evidence for Sprint Review
+
+Relación consolidada de endpoints REST documentados en Swagger/OpenAPI al cierre del Sprint 2, organizada por bounded context:
+
+| Método | Endpoint | BC | Descripción | Auth requerida | Request (resumen) | Response (resumen) | Estado |
+|---|---|---|---|---|---|---|---|
+| POST | `/api/v1/auth/register` | Auth & Identity | Registro de cuenta (rol FARMER + plan Freemium) | No | `{ email, password, fullName }` | Confirmación de creación | Implementado (Sprint 1, evidencia Swagger) |
+| POST | `/api/v1/auth/login` | Auth & Identity | Autenticación y emisión de tokens | No | `{ email, password }` | `{ accessToken, refreshToken, roles }` | Implementado (Sprint 1, evidencia Swagger) |
+| POST | `/api/v1/auth/refresh` | Auth & Identity | Rotación de refresh token | No (refresh token) | `{ refreshToken }` | Nuevo par de tokens | Implementado (Sprint 1) |
+| GET | `/api/v1/auth/me` | Auth & Identity | Claims del usuario autenticado | Sí (Bearer) | — | `{ id, email, fullName, role }` | Implementado (Sprint 1) |
+| POST | `/api/v1/auth/revoke-all-tokens` | Auth & Identity | Cierre de sesión global | Sí (Bearer) | — | Confirmación | Implementado (documentado en 5.1.2) |
+| GET | `/api/v1/users/{userId}/plants` | Plant Management | Plantas del usuario con última telemetría (filtro RBAC) | Sí (Bearer) | Path `userId` | Lista de plantas con Health Score | Implementado (evidencia en 7.2.1.5) |
+| POST | `/api/v1/telemetry` | Device Management IoT | Ingesta de lectura del Sensor Lite | Sí (dispositivo/usuario) | `{ deviceId, plantId, humidity, temperature, lightLevel, soilMoisture }` | Lectura persistida + `healthScore` | Implementado (Sprint 1, evidencia Swagger) |
+| GET | `/api/v1/telemetry/{plantId}` | Device Management IoT | Historial reciente de telemetría | Sí (Bearer) | Path `plantId`, query `from?`, `to?` | Registros con métricas y Health Score | Implementado (Sprint 1) |
+| POST | `/api/v1/devices/provision` | Device Management IoT | Registro/activación del Sensor Lite | Sí (Bearer) | `{ deviceSerial, firmwareVersion }` | Dispositivo habilitado | Documentado (flujo 2.1.2.3) — evidencia Swagger pendiente |
+| GET | `/api/v1/analytics/health-trend` | Analysis & Reporting | Tendencia de salud agregada | Sí (Bearer, Premium para histórico completo) | Query: rango (7d/30d/90d), granularidad | Serie temporal agregada | Implementado (evidencia en 7.2.1.5) |
+| POST | `/api/v1/reports/export` | Analysis & Reporting | Exportación de reporte PDF/CSV | Sí (Bearer, Premium) | `{ rango, formato }` | Archivo generado | Implementado (evidencia en 7.2.1.5) |
+| POST | `/api/v1/notifications/tokens` | Notification | Registro del token FCM del dispositivo | Sí (Bearer) | `{ fcmToken, platform }` | Confirmación | Implementado (documentado en 5.6.2) — evidencia Swagger pendiente |
+| PUT | `/api/v1/notifications/preferences` | Notification | Preferencias por categoría | Sí (Bearer) | Toggles por tipo | Preferencias actualizadas | Implementado (UI en 7.2.1.5) |
+| GET | `/api/v1/plans` | Billing & Subscription | Catálogo de planes activos | No | — | Lista de planes | Implementado (documentado en 5.7.2) |
+| POST | `/api/v1/payments/checkout-session` | Billing & Subscription | Creación de sesión Stripe Checkout | Sí (Bearer) | `{ planId }` | URL de checkout | Implementado (documentado) — captura pendiente |
+| POST | `/api/v1/payments/webhook` | Billing & Subscription | Webhook de eventos de pago (idempotente) | Firma Stripe | Evento Stripe | 200 OK | Implementado (documentado) — evidencia pendiente |
+| GET | `/api/v1/payments/history` | Billing & Subscription | Historial de transacciones (≥ 12 meses) | Sí (Bearer) | — | Lista de transacciones | Implementado (UI en 7.2.1.5) |
+| GET | `/api/v1/community/feed` | Community | Feed paginado de publicaciones | Sí (Bearer) | Query de paginación | Posts con autor, comentarios, likes | Implementado (documentado en 5.8.2) — captura pendiente |
+| POST | `/api/v1/community/posts` | Community | Publicación con imagen (multipart, sanitización EXIF) | Sí (Bearer) | Multipart: texto + imagen | Post creado | Implementado (documentado en 5.8) |
+| POST | `/api/v1/community/posts/{id}/comments` | Community | Comentario en publicación pública | Sí (Bearer) | `{ content }` | Comentario creado | Implementado (documentado en 5.8) |
+| POST | `/api/v1/community/posts/{id}/like` | Community | Reacción (toggle) | Sí (Bearer) | — | Estado del like | Implementado (documentado en 5.8) |
+
+#### 7.2.2.7. Software Deployment Evidence for Sprint Review
+
+Estado de despliegue de los productos digitales al cierre del Sprint 2, alineado con la propuesta final de despliegue de la sección 4.3.4:
+
+| Producto Digital | Plataforma | Estado al cierre del Sprint 2 | Evidencia |
+|---|---|---|---|
+| Landing Page | Firebase Hosting | **Desplegado** — `https://oryxen-landing.web.app` | URL declarada en 7.2.1.7; captura de consola pendiente |
+| Backend API | Imagen Docker en GHCR (build automático en cada push a `main`/`develop`) → propuesta de servicio en Google Cloud Run | **Imagen publicada por CI/CD** (workflow `backend-ci-cd.yml` del repositorio); servicio cloud pendiente de activación | Workflow y Dockerfile en el repositorio `Oryxen-Backend` |
+| Web Application | Firebase Hosting (build de Vite con `VITE_API_BASE_URL` inyectada por GitHub Actions) | Build automatizado evidenciado (workflow `frontend-ci-cd.yml`); publicación de URL final pendiente | Workflow en el repositorio `Oryxen-Web-Application` |
+| Base de datos | PostgreSQL 15 (Docker local; propuesta Cloud SQL) | Operativa en entorno integrado con migraciones EF Core automáticas | `docker-compose.yml` del repositorio |
+| Mobile Application | APK release (`./gradlew assembleRelease`) → Firebase App Distribution | Build local verificado; distribución a testers pendiente de evidencia | — |
+| IoT Edge / Simulador | Simulador del Sensor Lite contra `POST /api/v1/telemetry` | Operativo en entorno integrado (evidencia del flujo en Sprint 1) | Ejemplos request/response en 7.2.1.6 |
+
+**Variables de entorno gestionadas para el despliegue:** ver la tabla completa en la sección 4.3.4 (conexión a base de datos, llaves JWT RS256, claves de Stripe, credencial FCM, API key del proveedor de IA y `VITE_API_BASE_URL`); en CI/CD se inyectan como GitHub Actions Secrets, como se evidencia en el workflow del frontend.
+
+#### 7.2.2.8. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2 el equipo mantuvo la organización del Sprint 1 (GitFlow, Conventional Commits, sincronización cada 48 horas por Discord) e incorporó dos prácticas nuevas: revisión cruzada obligatoria de Pull Requests entre frentes (quien implementó Billing revisó Community y viceversa) y el uso de Issues de GitHub etiquetados por bounded context para trazar el trabajo hacia el Sprint Backlog.
+
+Distribución del trabajo por integrante:
+
+| Integrante | Frente principal | Repositorios con actividad |
+|---|---|---|
+| Estrada Cajamune, Abraham Andrés | Billing & Subscription (Stripe) + hardening móvil (5.1.7) | Oryxen-Backend, Oryxen-Mobile-Application, Documentation-Report |
+| Nanfuñay Liza, Pedro Jesús | Analysis & Reporting (dashboard + exportación) y Community Feed (web) | Oryxen-Web-Application, Oryxen-Backend, Documentation-Report |
+| Pachas Chavez, Alejandro Alberto | Notification (FCM, preferencias, alertas con diagnóstico) | Oryxen-Backend, Oryxen-Mobile-Application, Documentation-Report |
+| Zevallos Linares, Alessandro Netto | Community (interacciones) + consolidación de despliegue (CI/CD) | Oryxen-Backend, Oryxen-Web-Application, Oryxen-Landing-Page, Documentation-Report |
+
+**Reflexión de colaboración:** la división por bounded contexts redujo los conflictos de merge respecto del Sprint 1 (cada frente tocó módulos disjuntos del monolito modular) y la revisión cruzada elevó la calidad de los contratos REST entre módulos, detectando dos inconsistencias de nomenclatura antes de fusionar. Como aprendizaje final, el equipo reconoce que las evidencias de despliegue debieron capturarse en el momento de cada hito y no al cierre, lo que originó los pendientes listados en esta sección.
+
+### 7.2.3. Internacionalización (i18n) y Accesibilidad (a11y) — Web Application
+
+Como capacidad transversal a ambos sprints, la Web Application integra internacionalización y accesibilidad conforme al requisito del curso (soporte de English `en_US` y Latin American Spanish `es_419`).
+
+#### 7.2.3.1. Internacionalización (i18n) — vue-i18n
+
+Las etiquetas de la interfaz se resuelven mediante `vue-i18n` con archivos de traducción `en.json` y `es.json` organizados por namespaces de módulo (por ejemplo, `analytics.*` para el dashboard, como se documenta en la sección 5.5.5). El idioma por defecto es inglés (`en_US`) con detección del idioma del navegador y persistencia de la preferencia del usuario. La evaluación heurística (problema #10 de la sección 7.3.3) identificó que la **Landing Page** aún carece de selector de idioma visible; su implementación queda registrada como acción correctiva derivada de la validación.
+
+#### 7.2.3.2. Accesibilidad (a11y) — ARIA Attributes
+
+Las vistas implementadas incorporan atributos ARIA verificables en las capturas de la sección 7.2.1.5: formularios con `aria-required`, `aria-invalid` y errores con `role="alert"`; navegación de pestañas con `role="tablist"`/`role="tab"`/`aria-selected`; estados de carga con `role="status"` y `aria-live="polite"`; badge de notificaciones con `aria-live="polite"`; cards navegables por teclado con `tabindex="0"` y `role="button"`; y gráficos SVG del dashboard con `role="img"` y `aria-label` descriptivo (sección 5.5.5). Los contrastes siguen el criterio WCAG nivel AA; los hallazgos pendientes (atributos `alt` incompletos — problema #11) quedan registrados en la evaluación heurística.
+
+---
+
+## 7.3. Validation Interviews
 
 En esta sección se documenta el proceso de validación de la experiencia de usuario con representantes de los dos segmentos objetivo del producto Oryxen. Se presenta el diseño metodológico de las entrevistas, estructurado en tres bloques de validación (Landing Page, Web Application y Mobile Application), así como el registro detallado de las sesiones realizadas con usuarios reales y la evaluación heurística preliminar de usabilidad, arquitectura de información y diseño inclusivo, siguiendo el formato del Anexo D del enunciado del curso.
 
@@ -7603,8 +7786,6 @@ En la comunidad, interactuó con el feed y destacó la funcionalidad de alertas 
 
 **URL Microsoft Stream:** https://web.microsoftstream.com/video/oryxen-validation-seg2-valeria
 
-**Resumen descriptivo de la validación:**
-
 Valeria es arquitecta paisajista que gestiona proyectos residenciales con jardines de 20 a 50 plantas por proyecto. Su interés en Oryxen es dual: uso personal (15 plantas en casa) y potencial uso profesional para monitorear jardines de clientes. Al revisar la Landing Page, comentó: "el diseño es limpio y elegante, pero necesito saber si esto escala a 30 o 40 plantas. ¿Hay un plan enterprise?".
 
 En la Web Application, valoró la capacidad de registrar múltiples plantas con diferentes especies y ver el Dashboard centralizado. La funcionalidad de Analytics le pareció "un game changer para mi trabajo: podría mostrarle a un cliente exactamente cómo está la salud de su jardín en tiempo real". Generó un reporte PDF y comentó que "esto es un entregable profesional que podría facturar como valor agregado".
@@ -7748,23 +7929,24 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 ---
 
-### 7.4. Video About-the-Product
+## 7.4. Video About-the-Product
 
-En esta sección se documenta el Video About-the-Product de Oryxen, en donde se resume el modelo de negocio, las características principales de los productos digitales y los beneficios de la solución para cada segmento objetivo.
+En esta sección se documenta el Video About-the-Product de Oryxen, dirigido a los visitantes de la Landing Page que desean conocer el modelo de negocio y las características principales de los productos de software, así como a los usuarios de las aplicaciones que desean realizar las tareas soportadas por la solución. El tono del video es cercano y práctico, consistente con la identidad de marca definida en las Style Guidelines (sección 6.1): tecnología que cuida la naturaleza sin tecnicismos.
 
 **Objetivo del video:** Comunicar la propuesta de valor de Oryxen de forma atractiva y accesible para ambos segmentos objetivo, motivando al visitante a registrarse en la plataforma.
 
-**Screenshot del Video:**
+**Guión y pauta de secuencias (duración objetivo: 3 minutos):**
 
-![]()
-
-**Url del Video:**
-
----
-
-## Video About-the-Team
-
-En esta sección se documenta el Video About-the-Team de Oryxen, donde se describe las actividades, flujo de trabajo y opinión sobre el equipo por parte de los miembros del grupo.
+| Timing (inicio) | Secuencia | Contenido |
+|---|---|---|
+| 00:00 | Apertura — el problema | Escenas cotidianas: una planta marchita en una oficina, un riego olvidado. Voz en off: "¿Cuántas plantas has perdido por falta de tiempo?" |
+| 00:20 | Presentación de Oryxen | Logo y tagline. Voz en off presenta la plataforma: monitoreo con sensores, diagnóstico con IA y riego automatizado sobre las macetas que ya tienes. |
+| 00:40 | Demo Landing + registro | Pantalla de la Landing Page, CTA "Comienza Gratis" y registro en la Web Application (plan Freemium sin hardware). |
+| 01:05 | Demo monitoreo + Sensor Lite | Vinculación del Sensor Lite por código QR, primera lectura de humedad en el dashboard y alerta push en el móvil. |
+| 01:35 | Demo diagnóstico IA | Foto de una planta con hojas amarillas → diagnóstico con recomendación accionable en segundos. |
+| 02:00 | Demo Premium: analítica y comunidad | Analytics Dashboard con tendencias e historial, exportación de reporte, Community Feed y alertas comunitarias de plagas. |
+| 02:25 | Testimonio de usuario | Fragmento del testimonio positivo de un participante de las entrevistas de validación (sección 7.3.2), conforme lo exige el enunciado. |
+| 02:45 | Cierre y llamado a la acción | Planes Freemium/Premium, precio del Sensor Lite y CTA final: "Empieza gratis hoy — tus plantas te lo agradecerán". |
 
 **Screenshot del Video:**
 
@@ -7778,17 +7960,74 @@ En esta sección se documenta el Video About-the-Team de Oryxen, donde se descri
 
 ## Conclusiones y recomendaciones
 
-- TB1: Para este primer avance del TB1, todos los integrantes del equipo desarrollaron con éxito la entrega inicial del trabajo final, logrando plantear una solución tecnológica que optimice el proceso del cuidado de plantas mediante un sistema que usa sensores para el monitoreo de la salud de una planta, así como la implementación de funciones con IA para recomendar acciones al usuario según el estado de la planta. Además, se implementaron detalladamente los requisitos funcionales y técnicos a través de un product backlog y se sentaron las bases de una arquitectura estratégica mediante el método Attribute-Driven Design (ADD), garantizando que el sistema sea capaz de soportar atributos de calidad como la alta disponibilidad, el rendimiento en tiempo real y la seguridad de los datos desde su fase conceptual
+**TB1:** Para este primer avance, todos los integrantes del equipo desarrollaron con éxito la entrega inicial del trabajo final, logrando plantear una solución tecnológica que optimice el proceso del cuidado de plantas mediante un sistema que usa sensores para el monitoreo de la salud de una planta, así como la implementación de funciones con IA para recomendar acciones al usuario según el estado de la planta. Además, se especificaron los requisitos funcionales y técnicos a través de un product backlog y se sentaron las bases de una arquitectura estratégica mediante el método Attribute-Driven Design (ADD), garantizando que el sistema sea capaz de soportar atributos de calidad como la disponibilidad, el rendimiento en tiempo real y la seguridad de los datos desde su fase conceptual.
 
-**Recomendaciones:** Como recomendaciones para la continuidad del proyecto, se sugiere mantener una coherencia entre las historias de usuario definidas y los diagramas de arquitectura que se desarrollarán en las siguientes etapas. De esta manera, garantizamos que todas nuestras decisiones estén justificados por los escenarios de calidad. Además, profundizar en la estructuración de los modelos de datos para garantizar que la integración entre los servicios de Inteligencia Artificial y la telemetría de los sensores sea fluida, segura y altamente escalable.
+**TP1:** En la segunda entrega se completó el diseño táctico de los 8 bounded contexts bajo el enfoque DDD (capas Domain, Application, Infrastructure e Interface por contexto) y el diseño UX integral de los tres canales (Landing Page, Web y Mobile). La principal conclusión de esta fase es que la disciplina de delimitar contextos con lenguaje ubicuo propio redujo las ambigüedades entre los miembros del equipo al implementar: cada endpoint, entidad y evento tenía ya un nombre y una frontera acordados antes de escribir código.
 
----
+**TB2:** La tercera entrega demostró el tránsito del diseño a la implementación: se desplegó la Landing Page en Firebase Hosting, se implementó el núcleo de Auth & Identity (registro, login, Google OAuth y rotación de refresh tokens) y la ingesta de telemetría del Sensor Lite con cálculo de Health Score, verificando el flujo end-to-end en un entorno integrado. Concluimos que las decisiones estratégicas del Capítulo IV (monolito modular, JWT stateless, PostgreSQL único) resultaron adecuadas para la velocidad de un equipo de cuatro personas, y que la suite de pruebas (xUnit + BDD Gherkin) integrada al pipeline CI/CD fue determinante para sostener cambios sin regresiones.
+
+**TF1:** Al cierre del proyecto, el Sprint 2 completó la capa de monetización y engagement (suscripción Premium con Stripe, notificaciones FCM, Analytics Dashboard, Community Feed con sanitización de imágenes y hardening de seguridad móvil), y el proceso de validación con 6 usuarios reales más la evaluación heurística de 12 hallazgos convirtió las suposiciones de diseño en evidencia accionable. El equipo concluye que el mayor aprendizaje del curso es metodológico: una arquitectura emergente no se define en un diagrama inicial, sino que se refina en cada iteración con feedback real — del docente, de los usuarios y del propio código.
+
+### Contraste de Resultados frente al Lean UX Process
+
+Se contrastan los artefactos Lean UX del Capítulo I contra los resultados obtenidos en la validación (secciones 7.3.2 y 7.3.3):
+
+| Artefacto Lean UX (Cap. I) | Enunciado | Resultado observado | Veredicto |
+|---|---|---|---|
+| Problem Statement | Los usuarios no logran cuidado constante; las soluciones existentes no integran automatización + diagnóstico + monitoreo | Las 9 entrevistas acumuladas (3 de needfinding + 6 de validación) confirman el dolor de constancia y la valoración de la integración en una sola plataforma | **Confirmado** como dolor cotidiano moderado (ver alcance realista en 1.2.1) |
+| Hipótesis 01 — automatización (≥ 60% usará funciones automáticas) | Medible con cohortes de uso real | Los 6 validadores completaron los flujos de monitoreo y valoraron la automatización; no existe aún base de usuarios para medir el 60% | **Parcialmente validada** (cualitativa); métrica cuantitativa pendiente de operación real |
+| Hipótesis 02 — confianza en IA (> 70% califica útil) | Percepción de utilidad del diagnóstico | El diagnóstico IA fue el feature mejor valorado en las validaciones; 2 de 6 usuarios señalaron incertidumbre durante la espera de inferencia (problema #3 de heurísticas) | **Parcialmente validada**; mejora de UX de espera identificada |
+| Hipótesis 03 — panel centralizado (≥ 75% lo usa frecuentemente) | Uso del dashboard | Todos los validadores comprendieron y navegaron el dashboard sin asistencia; hallazgos menores de escaneabilidad (problema #4) | **Parcialmente validada** (cualitativa) |
+| Hipótesis 04 — satisfacción global (> 80%) | Encuestas de satisfacción | Valoraciones generales positivas en el cierre de las 6 entrevistas, con disposición de pago declarada (incluida una propuesta espontánea de plan "Professional" de $19.99) | **Parcialmente validada**; encuesta formal de satisfacción pendiente |
+| Assumption de negocio #7 — monetización por planes premium y hardware | Modelo Freemium + Sensor Lite | Modelo financiero desarrollado (2.1.2.1–2.1.2.2) bajo supuestos académicos; flujo de pago implementado con Stripe | **Instrumentada**; validación con ventas reales fuera del alcance académico |
+
+**Recomendaciones:** (1) mantener la coherencia entre historias de usuario, criterios Gherkin y evidencias de sprint como práctica permanente; (2) priorizar las acciones correctivas de severidad 3 de la evaluación heurística (indicador de progreso del diagnóstico IA, cancelación de suscripción integrada, contexto de privacidad en alertas comunitarias y selector de idioma en la Landing) antes de cualquier lanzamiento; (3) reemplazar los supuestos del modelo financiero por cotizaciones reales antes de decisiones de inversión; (4) completar las evidencias pendientes listadas en este informe antes de la sustentación.
+
+### Roadmap de Expansión Estratégica
+
+| Horizonte | Iniciativa | Fundamento |
+|---|---|---|
+| Corto plazo (0–3 meses) | Cerrar las correcciones de severidad 3 de heurísticas; activar el servicio cloud del backend (Cloud Run) y publicar la Web App en su URL definitiva; medición real del funnel Freemium → Premium | Hallazgos de 7.3.3 y despliegue final (4.3.4) |
+| Mediano plazo (3–9 meses) | Pasarelas de pago locales (Culqi/Niubiz) para reducir rechazos en Perú; migración de la ingesta IoT a MQTT (CON-05) al crecer la flota de sensores; plan "Professional" multi-ubicación sugerido por un usuario validador | Riesgos de Billing (4.2.4) y feedback de validación |
+| Largo plazo (9–18 meses) | Integración con ecosistemas smart home (Google Home) como estrategia de compatibilidad frente a Xiaomi; expansión regional LATAM con logística de hardware por país; evaluación de modelo de IA propio si el volumen justifica el costo frente a la API externa | Estrategia competitiva (2.1.2) y decisión AD-04 |
+
+## Video About-the-Team
+
+En esta sección se documenta el Video About-the-Team de Oryxen, que resume el proceso de trabajo del equipo GrassFarming e incluye el testimonio ante cámara de cada integrante describiendo las actividades realizadas, el logro de outcomes y las competencias desarrolladas, conforme al enunciado del curso.
+
+**Pauta de secuencias de contenido (duración objetivo: 5 minutos):**
+
+| Timing (inicio) | Sección | Contenido |
+|---|---|---|
+| 00:00 | Presentación del equipo | Cada integrante ante cámara se presenta (nombre, código, rol en el proyecto). |
+| 00:40 | Proceso de trabajo | Voz en off sobre imágenes de sesiones reales del equipo (reuniones en Discord, tableros de Trello, Pull Requests en GitHub): metodología Scrum, GitFlow y sincronizaciones cada 48 horas. |
+| 01:30 | Testimonio — Abraham Estrada | Actividades: liderazgo técnico, Auth & Identity, Billing con Stripe, hardening móvil, arquitectura de despliegue. Reflexión sobre el Student Outcome ABET 3: defensa técnica de decisiones ante distintas audiencias. |
+| 02:15 | Testimonio — Pedro Nanfuñay | Actividades: arquitectura de información, Analytics Dashboard, documentación de servicios y modelo de monetización. Reflexión: comunicar datos técnicos con claridad a usuarios no técnicos. |
+| 03:00 | Testimonio — Alejandro Pachas | Actividades: EventStorming y DDD, Notification con FCM, testing suite y registro de validaciones. Reflexión: traducir el negocio a modelos técnicos coherentes. |
+| 03:45 | Testimonio — Alessandro Zevallos | Actividades: Landing Page, Community, prototipado y consolidación de CI/CD. Reflexión: comunicación visual del producto y trabajo colaborativo con control de versiones. |
+| 04:30 | Cierre | Conclusión grupal sobre el ciclo de vida completo (TB1 → TF1) y agradecimientos. |
+
+**Screenshot del Video:**
+
+**URL del Video:**
 
 # Bibliografía
 
-Client challenge. (s. f.). Scribd. https://es.scribd.com/document/794400266/Lean-UX-2013-001-050-en-es
+Brandolini, A. (s. f.). EventStorming Resources. EventStorming. https://www.eventstorming.com/resources/
+
+Brown, S. (s. f.). The C4 model for visualising software architecture. https://c4model.com/
 
 Conventional Commits. (s. f.). Conventional Commits v1.0.0. https://www.conventionalcommits.org/en/v1.0.0/
+
+Evans, E. (2003). Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley.
+
+Firebase. (s. f.). Firebase Cloud Messaging — Documentation. Google. https://firebase.google.com/docs/cloud-messaging
+
+Firebase. (s. f.). Firebase Hosting — Documentation. Google. https://firebase.google.com/docs/hosting
+
+Gothelf, J., & Seiden, J. (2013). Lean UX: Applying Lean Principles to Improve User Experience. O'Reilly Media.
+
+Gothelf, J. (s. f.). Lean UX Canvas v2. https://jeffgothelf.com/blog/leanuxcanvas-v2/
 
 Domain driven design. (s. f.). Open Practice Library. https://openpracticelibrary.com/perspective/domain-driven-design/
 
@@ -7800,10 +8039,17 @@ Mendoza, C. M. H., Rubio, J. P. S., Carillo, A. M., Vidal, L. M. R., & Guzmán, 
 
 Preston-Werner, T. (s. f.). Semantic Versioning 2.0.0. Semantic Versioning. https://semver.org/
 
+Nielsen, J. (1994). 10 Usability Heuristics for User Interface Design. Nielsen Norman Group. https://www.nngroup.com/articles/ten-usability-heuristics/
+
 Sairyss. (2022, 29 de diciembre). Domain-Driven Hexagon: Guide on Domain-Driven Design, Hexagonal architecture, best practices (TypeScript and NestJS examples). DEV Community. https://dev.to/sairyss/domain-driven-hexagon-18g5
 
-# Anexos
+Stripe. (s. f.). Stripe Checkout — Documentation. https://docs.stripe.com/payments/checkout
 
+Tune, N., & Bounded Context Canvas contributors. (s. f.). Bounded Context Canvas. GitHub. https://github.com/ddd-crew/bounded-context-canvas
+
+W3C. (2023). Web Content Accessibility Guidelines (WCAG) 2.2. https://www.w3.org/TR/WCAG22/
+
+# Anexos
 ## Anexo A — Enlaces del Proyecto
 
 | Recurso | URL / Referencia | Descripción |
@@ -7812,9 +8058,13 @@ Sairyss. (2022, 29 de diciembre). Domain-Driven Hexagon: Guide on Domain-Driven 
 | **Repositorio del Informe** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Documentation-Report) | Informe del proyecto en formato Markdown |
 | **Sprint Board (Trello)** | [https://trello.com/b/69eb915dbfebde12de7929b0/product-backlog-oryxen](https://trello.com/b/69eb915dbfebde12de7929b0/product-backlog-oryxen) | Tablero Kanban con Work-Items por sprint |
 | **Repositorio de Landing Page** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Landing-Page) | HTML5 + CSS3 + JS. Firebase Hosting |
-| **Repositorio de Web Application** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application) | Vue 3 + TypeScript + Vite 8. Vercel |
+| **Repositorio de Web Application** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Web-Application) | Vue 3 + TypeScript + Vite 8. Firebase Hosting (build CI con GitHub Actions) |
 | **Repositorio de Mobile Application** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Mobile-Application) | Kotlin + Jetpack Compose. Firebase App Distribution |
-| **Repositorio de Backend** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend) | .NET 9 + PostgreSQL 15. GHCR |
+| **Repositorio de Backend** | [https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend](https://github.com/1ASI0728-2610-11770-G4-Oryxen/Oryxen-Backend) | .NET 9 + PostgreSQL 15. Imagen Docker publicada en GHCR vía GitHub Actions |
+| **Landing Page desplegada** | [https://oryxen-landing.web.app](https://oryxen-landing.web.app) | URL pública en Firebase Hosting (evidencia del Sprint 1) |
+| **Prototipo Figma** | [https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/Oryxen?node-id=87-44&t=ytQkGBOLqrfy4mp6-1](https://www.figma.com/design/K1K4Imdh3xHVPDeqIXi37D/Oryxen?node-id=87-44&t=ytQkGBOLqrfy4mp6-1) | Wireframes, mock-ups y prototipos de las aplicaciones |
+| **Web Application desplegada** | **[EVIDENCIA PENDIENTE DE ADJUNTAR]**: URL pública definitiva en Firebase Hosting | Publicación final del build de Vite |
+| **Backend API en producción** | **[EVIDENCIA PENDIENTE DE ADJUNTAR]**: URL del servicio (propuesta: Google Cloud Run) | Activación del servicio con la imagen de GHCR |
 
 ---
 
@@ -7822,7 +8072,7 @@ Sairyss. (2022, 29 de diciembre). Domain-Driven Hexagon: Guide on Domain-Driven 
 
 | Entrega | Enlace Microsoft Stream (privado) | Duración | Contenido |
 |---|---|---|---|
-| **TB1** |  | | |
-| **TP1** |  | | |
-| **TB2** | | | |
-| **TF1** | | | |
+| **TB1** | **[EVIDENCIA PENDIENTE DE ADJUNTAR]**: URL privada de Microsoft Stream del video de exposición TB1 | hh:mm:ss | Exposición de Capítulos I–IV (problemática, requisitos, diseño estratégico) con participación de los cuatro integrantes |
+| **TP1** | **[EVIDENCIA PENDIENTE DE ADJUNTAR]**: URL privada de Microsoft Stream del video de exposición TP1 | hh:mm:ss | Exposición de Capítulos V–VI (diseño táctico DDD y UX) con demostración de prototipos |
+| **TB2** | **[EVIDENCIA PENDIENTE DE ADJUNTAR]**: URL privada de Microsoft Stream del video de exposición TB2 | hh:mm:ss | Exposición del Sprint 1: despliegue de Landing Page, autenticación y telemetría IoT |
+| **TF1** | **[EVIDENCIA PENDIENTE DE ADJUNTAR]**: URL privada de Microsoft Stream del video de exposición TF1 (estructura de nombre TF_1ASI0728_202520_VIDEO.mp4) | hh:mm:ss (máx. 30 min) | Exposición final: Sprint 2, validación con usuarios, videos About-the-Product/About-the-Team y conclusiones del ciclo de vida |
