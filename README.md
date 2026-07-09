@@ -240,6 +240,9 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
       - [4.1.2.1. Primary Functionality (Primary User Stories)](#4121-primary-functionality-primary-user-stories)
       - [4.1.2.2. Quality attribute Scenarios](#4122-quality-attribute-scenarios)
       - [4.1.2.3. Constraints](#4123-constraints)
+    - [4.1.3. Architectural Drivers Backlog](#413-architectural-drivers-backlog)
+    - [4.1.4. Architectural Design Decisions](#414-architectural-design-decisions)
+    - [4.1.5. Quality Attribute Scenario Refinements](#415-quality-attribute-scenario-refinements)
   - [4.2.	Strategic-Level Domain-Driven Design](#42strategic-level-domain-driven-design)
     - [4.2.1. EventStorming](#421-eventstorming)
     - [4.2.2. Candidate Context Discovery](#422-candidate-context-discovery)
@@ -252,7 +255,7 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
       - [4. Aplicación de buenas prácticas en los context maps](#4-aplicación-de-buenas-prácticas-en-los-context-maps)
       - [Evidencia gráfica](#evidencia-gráfica)
   - [4.3.	Software Architecture](#43software-architecture)
-    - [4.3.1.	Software Architecture System Landscape Diagram](#431software-architecture-system-landscape-diagram)
+    - [4.3.1. Software Architecture System Landscape Diagram](#431-software-architecture-system-landscape-diagram)
     - [4.3.2.	Software Architecture Context Level Diagrams](#432software-architecture-context-level-diagrams)
     - [4.3.3.	Software Architecture Container Level Diagrams](#433software-architecture-container-level-diagrams)
     - [4.3.4.	Software Architecture Deployment Diagrams](#434software-architecture-deployment-diagrams)
@@ -1754,13 +1757,58 @@ A continuación, se presentan los constraints representados mediante Technical S
 | **CON-01** | Backend Framework | Como Arquitecto de Software, requiero que el desarrollo del backend se realice utilizando el framework .NET con C#, para garantizar un alto rendimiento en el procesamiento de datos concurrentes y estandarizar el código. | **Escenario 01: Verificación de tecnología backend**<br>Dado que un desarrollador debe crear un nuevo microservicio para Oryxen,<br>Cuando se selecciona el stack tecnológico,<br>Entonces se debe utilizar C# sobre el framework .NET 8 o superior.<br><br>**Escenario 02: Implementación de la persistencia**<br>Dado que el sistema requiere almacenar datos de telemetría,<br>Cuando se define la capa de acceso a datos,<br>Entonces se debe implementar Entity Framework Core como ORM oficial. | |
 | **CON-02** | Frontend Framework | Como Líder Técnico, requiero que las aplicaciones web se desarrollen utilizando el framework Vue.js, para asegurar una experiencia de usuario reactiva y cumplir con los lineamientos tecnológicos del proyecto. | **Escenario 01: Implementación del Dashboard Web**<br>Dado que un desarrollador frontend inicia la construcción del panel de control,<br>Cuando se define la estructura del proyecto web,<br>Entonces se debe utilizar Vue 3 para gestionar los componentes de la interfaz.<br><br>**Escenario 02: Integración de componentes UI**<br>Dado que el equipo de diseño requiere una interfaz responsiva,<br>Cuando se integran bibliotecas de componentes,<br>Entonces se deben utilizar PrimeVue o Vuetify compatibles con Vue.js. | |
 | **CON-03** | Mobile Native Strategy | Como Desarrollador Móvil, requiero que las aplicaciones móviles se construyan con tecnologías nativas (Kotlin para Android, Swift para iOS), para evitar cuellos de botella en rendimiento y aprovechar al máximo el hardware del dispositivo. | **Escenario 01: Desarrollo del módulo Android**<br>Dado que se inicia el desarrollo de la aplicación para smartphones Android,<br>Cuando se selecciona el lenguaje de programación en el IDE,<br>Entonces se debe utilizar estrictamente Kotlin.<br><br>**Escenario 02: Desarrollo del módulo iOS**<br>Dado que se inicia el desarrollo de la aplicación para dispositivos Apple,<br>Cuando se compila el código fuente móvil,<br>Entonces se debe utilizar Swift, descartando cualquier framework de desarrollo híbrido. | |
-| **CON-04** | Cloud Deployment | Como Ingeniero DevOps, requiero que la infraestructura se despliegue en contenedores dentro de una plataforma de nube pública, para garantizar la disponibilidad, el auto-escalado y la fácil gestión de los picos de tráfico. | **Escenario 01: Contenerización de microservicios**<br>Dado que el código de un servicio ha pasado las pruebas de integración,<br>Cuando se inicia el flujo de despliegue continuo,<br>Entonces el sistema debe empaquetar el servicio en una imagen Docker.<br><br>**Escenario 02: Orquestación en Nube Pública**<br>Dado que las imágenes de los contenedores están listas en el registro,<br>Cuando se realiza el despliegue a producción,<br>Entonces se deben alojar exclusivamente en servicios administrados de Amazon Web Services (AWS)||
+| **CON-04** | Cloud Deployment | Como Ingeniero DevOps, requiero que la infraestructura se despliegue en contenedores dentro de una plataforma de nube pública, para garantizar la disponibilidad, el auto-escalado y la fácil gestión de los picos de tráfico. | **Escenario 01: Contenerización de microservicios**<br>Dado que el código de un servicio ha pasado las pruebas de integración,<br>Cuando se inicia el flujo de despliegue continuo,<br>Entonces el sistema debe empaquetar el servicio en una imagen Docker.<br><br>**Escenario 02: Orquestación en Nube Pública**<br>Dado que las imágenes de los contenedores están listas en el registro,<br>Cuando se realiza el despliegue a producción,<br>Entonces se deben alojar en servicios administrados de contenedores de una nube pública (la propuesta final del proyecto utiliza Google Cloud Run con imágenes publicadas en GitHub Container Registry — ver sección 4.3.4). *Nota TF1: esta constraint se formuló inicialmente sobre AWS; se actualiza para reflejar la plataforma efectivamente adoptada por el equipo, manteniendo el requisito esencial de contenedores administrados en nube pública.*||
 | **CON-05** | IoT Communication Protocol | Como Ingeniero IoT, requiero que la comunicación entre los sensores físicos y la nube utilice el protocolo MQTT, para asegurar una transmisión de telemetría ligera y estable. | **Escenario 01: Envío de telemetría desde sensores**<br>Dado que un sensor IoT detecta un cambio en la humedad del suelo,<br>Cuando el dispositivo intenta enviar la información a la nube,<br>Entonces el mensaje debe publicarse a través de un tópico MQTT hacia el Broker central.<br><br>**Escenario 02: Recepción de comandos de riego**<br>Dado que el sistema decide activar una bomba de agua autónoma,<br>Cuando se envía la orden desde el backend,<br>Entonces el dispositivo debe recibir el comando mediante una suscripción activa al protocolo MQTT. ||
 | **CON-06** | Authentication Standard | Como Arquitecto de Seguridad, requiero que la autenticación y autorización de usuarios se gestione mediante el estándar OAuth 2.0 y tokens JWT, para asegurar un acceso sin estado (stateless) seguro entre microservicios. | **Escenario 01: Generación de token seguro**<br>Dado que un usuario ingresa credenciales válidas en el login,<br>Cuando el servidor de identidad procesa la solicitud,<br>Entonces el sistema debe emitir un token JWT firmado criptográficamente con una expiración definida.<br><br>**Escenario 02: Acceso a rutas protegidas**<br>Dado que un cliente (Web o Móvil) intenta consumir un endpoint protegido,<br>Cuando envía la solicitud HTTP,<br>Entonces debe incluir el token JWT en el header de Autorización (Bearer) para que el API Gateway permita el paso. | |
 | **CON-07** | API Documentation | Como Desarrollador Frontend/Móvil, requiero que todas las APIs RESTful expuestas por el backend estén documentadas bajo la especificación OpenAPI (Swagger), para garantizar un contrato claro y facilitar la integración entre equipos. | **Escenario 01: Exposición del contrato API**<br>Dado que el equipo backend despliega un nuevo microservicio,<br>Cuando el servicio se inicia en el entorno de desarrollo,<br>Entonces debe autogenerar y exponer una interfaz Swagger accesible vía navegador.<br><br>**Escenario 02: Consumo por parte del cliente**<br>Dado que un desarrollador frontend necesita integrar la vista de "Mis Plantas",<br>Cuando consulta la documentación de la API,<br>Entonces debe visualizar claramente los schemas exactos de los request y responses esperados. | |
 | **CON-08** | Data Privacy & Sanitization | Como Oficial de Privacidad (DPO), requiero que todas las imágenes compartidas en la comunidad pasen por un proceso automatizado de sanitización para eliminar metadatos, garantizando la privacidad y ubicación de los usuarios. | **Escenario 01: Sanitización de imágenes**<br>Dado que un usuario sube la foto de su planta para pedir consejos,<br>Cuando el backend recibe el archivo binario,<br>Entonces debe eliminar automáticamente todos los datos EXIF (incluyendo coordenadas GPS) antes de guardarlo en el Storage.<br><br>**Escenario 02: Protección de datos sensibles**<br>Dado que el sistema requiere registrar nuevos usuarios,<br>Cuando se guarda el registro en la base de datos,<br>Entonces la contraseña debe almacenarse utilizando un algoritmo de hashing robusto (como BCrypt) con un factor de trabajo adecuado. | |
 | **CON-09** | Code Versioning Strategy | Como Líder Técnico / Scrum Master, requiero que el control de código fuente siga estrictamente el modelo GitFlow y el estándar de Conventional Commits, para mantener un historial trazable y facilitar integraciones continuas (CI/CD). | **Escenario 01: Creación de ramas de trabajo**<br>Dado que un desarrollador comienza a trabajar en una nueva historia de usuario,<br>Cuando crea su rama local desde el repositorio base,<br>Entonces debe utilizar la nomenclatura estándar (ej. `feature/US-042-vincular-sensor`).<br><br>**Escenario 02: Registro de cambios (Commits)**<br>Dado que un desarrollador finaliza un bloque de código,<br>Cuando realiza el commit en la terminal,<br>Entonces debe usar la sintaxis de Conventional Commits (ej. `feat(iot): add QR scanning capability`). | |
 | **CON-10** | External AI Integration | Como Ingeniero de Software, requiero que el motor de diagnóstico inteligente se implemente consumiendo APIs de modelos de IA de terceros (ej. OpenAI, Gemini) en lugar de entrenar modelos locales, para optimizar costos de infraestructura en la etapa de startup. | **Escenario 01: Delegación de inferencia**<br>Dado que el sistema detecta una anomalía compleja en las métricas de una planta,<br>Cuando se requiere generar un diagnóstico en texto natural,<br>Entonces el backend debe enviar el contexto mediante un prompt seguro a la API de IA externa para procesar la respuesta.<br><br>**Escenario 02: Protección de credenciales (API Keys)**<br>Dado que el sistema se conecta a un proveedor de IA,<br>Cuando se realiza la petición HTTP al modelo,<br>Entonces la llave de acceso (API Key) debe ser inyectada exclusivamente desde las variables de entorno del servidor, nunca expuesta en el código cliente. | |
+
+### 4.1.3. Architectural Drivers Backlog
+
+Los drivers arquitectónicos consolidan y priorizan las entradas del proceso ADD (funcionalidad primaria, atributos de calidad y restricciones) para guiar las iteraciones de diseño. La prioridad combina la importancia para el negocio y el impacto sobre la arquitectura (H = High, M = Medium, L = Low).
+
+| Driver ID | Título del Driver | Descripción | Importancia para stakeholders | Impacto en la arquitectura |
+|---|---|---|---|---|
+| AD-01 | Ingesta continua de telemetría IoT | El sistema debe recibir y procesar lecturas periódicas de humedad, temperatura y luz de múltiples Sensor Lite por usuario (US-044, QA-02) | H | H — define el protocolo (MQTT/HTTPS), el modelo de datos de series temporales y los índices de lectura |
+| AD-02 | Aprovisionamiento seguro de dispositivos | Vinculación QR + BLE + registro en backend con identidad única por dispositivo (US-042, QA-04) | H | H — exige un flujo de provisioning dedicado en Device Management IoT y validación de seriales |
+| AD-03 | Autenticación y autorización stateless | OAuth 2.0 / JWT RS256 con roles FARMER, ADMIN y SUPPORT_TECHNICIAN (CON-06) | H | H — transversal a todos los bounded contexts; define el API Gateway y los filtros de seguridad |
+| AD-04 | Diagnóstico con IA externa | Delegación de inferencia visual y conversacional a APIs de terceros (CON-10, US-036) | H | M — introduce un Anti-Corruption Layer hacia el proveedor de IA y gestión de credenciales |
+| AD-05 | Riego autónomo confiable | Comunicación bidireccional nube → actuador con lógica de seguridad en el borde (US-051, QA-05) | H | H — obliga a diseñar comandos idempotentes y contingencia en el dispositivo (Edge) |
+| AD-06 | Privacidad de imágenes de comunidad | Sanitización EXIF/GPS automática antes de publicar (CON-08, QA-03) | M | M — componente de procesamiento binario en el pipeline de carga de Community |
+| AD-07 | Monetización por suscripción | Ciclo de vida de planes Freemium/Premium con pasarela de pagos externa | H | M — bounded context Billing & Subscription con ACL hacia Stripe y webhooks |
+| AD-08 | Escalabilidad del despliegue | Contenedores administrados en nube pública con CI/CD (CON-04, CON-09) | M | M — empaquetado Docker, registro de imágenes y pipeline de promoción |
+| AD-09 | Disponibilidad percibida del monitoreo | Detección de dispositivos offline y notificación < 60 s (QA-01) | M | M — heartbeats de dispositivos y motor de notificaciones desacoplado |
+| AD-10 | Experiencia multiplataforma consistente | Web (Vue 3), Mobile nativo (Kotlin) y Landing consumiendo la misma API versionada (CON-02, CON-03, CON-07) | M | M — contrato OpenAPI único y versionamiento `/api/v1` |
+
+### 4.1.4. Architectural Design Decisions
+
+A partir de los drivers priorizados, el equipo registró las decisiones de diseño arquitectónico. Cada decisión documenta las alternativas evaluadas y la justificación de la opción seleccionada.
+
+| Decisión | Driver(s) | Alternativas evaluadas | Decisión adoptada | Justificación |
+|---|---|---|---|---|
+| Estilo arquitectónico del backend | AD-01, AD-08 | (a) Microservicios independientes por BC; (b) Monolito modular con límites por bounded context | **(b) Monolito modular** (ASP.NET Core con capas Domain/Application/Infrastructure/Interface por BC) | Con un equipo de 4 personas y una etapa de validación, los microservicios agregan costo operativo sin beneficio; los límites DDD del Cap. V preservan la opción de extraer servicios en el futuro |
+| Protocolo de ingesta IoT | AD-01, AD-05 | (a) MQTT con broker dedicado; (b) HTTPS REST directo del dispositivo | **HTTPS REST en la versión actual; MQTT como evolución declarada (CON-05)** | El Sensor Lite reporta a intervalos (no streaming continuo); HTTPS simplifica el despliegue académico. La constraint CON-05 mantiene MQTT como objetivo para producción a escala |
+| Identidad y sesiones | AD-03 | (a) Sesiones con estado en servidor; (b) JWT stateless con refresh token rotativo | **(b) JWT + refresh rotation** | Permite escalar horizontalmente sin sticky sessions y habilita clientes móviles; la rotación de refresh tokens mitiga el robo de tokens |
+| Motor de IA | AD-04 | (a) Modelo propio entrenado; (b) API de IA de terceros (Gemini/OpenAI) | **(b) API externa** | CON-10: costo de infraestructura y tiempo de entrenamiento inviables para una startup académica; el ACL aísla el proveedor |
+| Base de datos | AD-01, AD-07 | (a) PostgreSQL único; (b) PostgreSQL + base de series temporales dedicada | **(a) PostgreSQL 15 único** con índices `{PlantId, RecordedAt}` | El volumen estimado (1–20 plantas por usuario, lecturas periódicas) no justifica una TSDB dedicada; la partición futura queda abierta |
+| Pasarela de pagos | AD-07 | (a) Stripe; (b) pasarelas locales (Culqi/Niubiz) | **(a) Stripe** (documentada; ver 7.2.2) | Documentación, sandbox y webhooks maduros para el alcance académico; las pasarelas locales se evalúan como evolución para métodos de pago peruanos |
+| Notificaciones push | AD-09 | (a) Firebase Cloud Messaging; (b) WebPush/VAPID propio | **(a) FCM** | Integración nativa con Android (cliente Kotlin) y SDK web; costo cero en el volumen del proyecto |
+| Despliegue | AD-08 | (a) VMs autoadministradas; (b) contenedores administrados (Cloud Run) + hosting estático (Firebase Hosting) | **(b) Contenedores administrados + hosting estático** | Elimina administración de servidores, escala a cero (costo académico) y se integra con el pipeline GitHub Actions → GHCR ya operativo |
+
+### 4.1.5. Quality Attribute Scenario Refinements
+
+Se refinan los escenarios de atributos de calidad de la sección 4.1.2.2, asignando a cada uno la táctica arquitectónica concreta y el mecanismo de verificación.
+
+| QA | Escenario refinado | Táctica arquitectónica | Verificación |
+|---|---|---|---|
+| QA-01 Disponibilidad | Un Sensor Lite deja de reportar telemetría; el backend detecta la ausencia de heartbeat al superar 2 intervalos de reporte y publica `DeviceOfflineEvent`; Notification envía push al usuario en < 60 s | Heartbeat + monitor de última lectura (`LastSeenAt`); publicación de eventos de dominio desacoplada | Prueba de integración apagando el simulador del Sensor Lite y midiendo el tiempo hasta la notificación |
+| QA-02 Rendimiento | 500 dispositivos reportan en la misma ventana de 30 s; el endpoint `POST /api/v1/telemetry` mantiene p95 < 2 s y los dashboards reflejan la lectura al siguiente polling | Endpoints asíncronos (async/await), consultas limitadas a 500 registros con orden descendente, índice compuesto `{PlantId, RecordedAt}` | Prueba de carga sobre el endpoint de telemetría midiendo latencia p95 *(diseñada; ejecución pendiente de adjuntar)* |
+| QA-03 Seguridad | Un usuario publica una foto con coordenadas GPS en EXIF; el `ImageMetadataSanitizer` elimina el segmento APP1 antes de persistir en Storage; ninguna imagen pública conserva metadatos | Pipeline de sanitización binaria en el flujo de carga de Community (patrón *intercepting filter*) | Prueba unitaria con imagen instrumentada con EXIF/GPS verificando el binario resultante |
+| QA-04 Usabilidad | Un usuario sin experiencia IoT completa la vinculación QR → BLE → WiFi → primera lectura en < 30 s guiado por la app | Flujo de provisioning por pasos con validación temprana del serial y feedback visual (LED + UI) | Pruebas de usabilidad con usuarios reales en las Validation Interviews (sección 7.3) |
+| QA-05 Confiabilidad | El motor de reglas decide un riego; antes de accionar la bomba cruza lectura de humedad actual, pronóstico climático y última acción registrada; si los datos son inconsistentes, aborta y notifica | Validación de consistencia previa a comandos de actuación; comandos idempotentes con registro de auditoría; lógica de seguridad replicada en el firmware (Edge) | Especificación BDD del escenario de riego + simulación de lecturas inconsistentes |
+
 ## 4.2.	Strategic-Level Domain-Driven Design
 
 ### 4.2.1. EventStorming
@@ -1841,7 +1889,7 @@ Detección de agrupaciones naturales: Identificamos patrones y agrupaciones natu
 
  [![Event-Storming-oryxen-6.jpg](https://i.postimg.cc/pVhGzh2f/Event-Storming-plantcare-6.jpg)](https://postimg.cc/G9Rx1pTt)
 
- Una vez relacionado todo el event storming hacemos la agrupacion para infetificar y aplicar el contexto de los bouded context 
+ Una vez relacionado todo el EventStorming, realizamos la agrupación para identificar y delimitar los bounded contexts.
 
  **1. Start-with-Value**
 
@@ -1851,7 +1899,7 @@ Comenzamos identificando las áreas core del dominio, es decir, aquellas con may
 
 - Supporting: Auth & Identity Integration, Subscription, Notification.
 
-- generic: , Community.
+- Generic: Community.
 
 **2.- Start-with-Simple**
 
@@ -1870,7 +1918,7 @@ Identificamos eventos clave que marcaban transiciones entre subsistemas. Ejemplo
 
 
 __Primer agrupamiento__ 
-Se delimitaron los contextos básicos de Auth & Identity Integration y Device Management (IoT). Estos responden a responsabilidades claras: integración con el proveedor externo de IAM para autenticación y autorización de usuarios, junto con la administración de hardware. 
+Se delimitaron los contextos básicos de Auth & Identity Integration y Device Management (IoT). Estos responden a responsabilidades claras: integración con el proveedor externo de IAM para autenticación y autorización de usuarios, junto con la administración de hardware.  
 
 [![Event-Storming-oryxen-9.jpg](https://i.postimg.cc/DyCPN7yv/Event-Storming-plantcare-9.jpg)](https://postimg.cc/qz3KhV3S)
 
@@ -1888,24 +1936,25 @@ Se añadieron los contextos complementarios: Notification y Community, encargado
 
 [![Event-Storming-oryxen-32.jpg](https://i.postimg.cc/XY5mv6jP/Event-Storming-plantcare-32.jpg)](https://postimg.cc/bZz36M20)
 
-Consolidación final
-El resultado fue un mapa de 8 bounded contexts:
+**Consolidación final**
+
+El resultado inicial de la sesión fue un mapa de 8 bounded contexts candidatos: Auth & Identity Integration, Device Management (IoT), Subscription, Plant Management, Data Telemetry, Analysis & Reporting, Notification y Community.
+
+Durante el diseño táctico (Capítulo V), este mapa evolucionó con dos ajustes justificados:
+
+- **Data Telemetry fue absorbido por Device Management (IoT):** la ingesta y persistencia de lecturas comparte agregados, ciclo de vida y equipo con la gestión del dispositivo que las produce; mantenerlos separados generaba una frontera artificial con acoplamiento total.
+- **Subscription se consolidó como Billing & Subscription**, incorporando facturación y pagos, y **Artificial Intelligence (AI)** se elevó a bounded context propio, dado que el diagnóstico multimodal posee lenguaje ubicuo, modelos y proveedor externo diferenciados.
+
+El mapa definitivo de 8 bounded contexts, desarrollado en el Capítulo V, es:
 
 - Auth & Identity Integration
-
-- Device Management (IoT)
-
-- Subscription
-
 - Plant Management
-
-- Data Telemetry
-
+- Device Management (IoT) — incluye la telemetría
+- Artificial Intelligence (AI)
 - Analysis & Reporting
-
-- Notification 
-
-- Community 
+- Notification
+- Billing & Subscription
+- Community
 
 Cada uno de ellos tiene responsabilidades y fronteras bien definidas, reduciendo la complejidad y facilitando la futura arquitectura basada en microservicios o módulos independientes.
 
@@ -1939,6 +1988,152 @@ Cada uno de ellos tiene responsabilidades y fronteras bien definidas, reduciendo
  [![Event-Storming-oryxen-19.jpg](https://i.postimg.cc/CL23jPW4/Event-Storming-plantcare-19.jpg)](https://postimg.cc/SJW14rQX)
 
  <img src="https://i.postimg.cc/Hk7f30m1/Event-Storming-plantcare-20.jpg" alt="Event Storming Oryxen" width="480"/>
+
+ Complementando la evidencia gráfica del taller, se documenta a continuación el **canvas textual de cada uno de los 8 bounded contexts** de la solución, siguiendo la plantilla de Bounded Context Canvas (Tune & Brandolini). Esta versión responde al feedback docente de TB1, que solicitó canvases explícitos para Billing & Subscription, Community, Analysis & Reporting y Notification.
+
+**Canvas 1 — Auth & Identity Integration**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Auth & Identity Integration |
+| **Purpose** | Autenticar usuarios, emitir y rotar tokens, y controlar el acceso basado en roles (FARMER, ADMIN, SUPPORT_TECHNICIAN) para todo el ecosistema |
+| **Strategic classification** | Supporting (necesario, no diferenciador; se apoya en estándares) |
+| **Domain roles** | *Gateway context / Execution context*: guardián de identidad para el resto de contextos |
+| **Inbound communication** | Commands: `RegisterUserCommand`, `LoginCommand`, `RefreshTokenCommand`, `ChangePasswordCommand`, `RevokeAllTokensCommand` (desde Web/Mobile). Queries: `GetCurrentUserQuery` |
+| **Outbound communication** | Eventos: `UserRegisteredEvent`, `PasswordChangedEvent`. Provee validación JWT a todos los BCs (Open-Host Service) |
+| **Ubiquitous Language** | UserAccount, Credential, AccessToken, RefreshToken, Role, Session, Claim, Provider (Google OAuth) |
+| **Business decisions** | Registro crea rol FARMER + suscripción Freemium por defecto; bloqueo tras 5 intentos fallidos; expiración de sesión a 24 h de inactividad |
+| **Policies** | Al cambiar contraseña se revocan todos los refresh tokens; los tokens se firman RS256; contraseñas con BCrypt |
+| **Assumptions** | El proveedor externo (Google/Firebase) mantiene disponibilidad; los clientes almacenan tokens de forma segura (EncryptedSharedPreferences en móvil) |
+| **Risks** | Robo de refresh tokens; dependencia del IdP externo. Mitigación: rotación de tokens y flujo de revocación global |
+| **Metrics** | Tasa de logins exitosos/fallidos, tiempo de emisión de token, tokens revocados |
+| **Dependencies** | Google OAuth (upstream); todos los demás BCs son downstream (Conformist) |
+
+**Canvas 2 — Plant Management**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Plant Management |
+| **Purpose** | Gestionar el catálogo de plantas del usuario: registro, perfiles, umbrales de cuidado y estado de salud consolidado |
+| **Strategic classification** | Core (es el objeto de valor central del producto) |
+| **Domain roles** | *Execution context*: mantiene el agregado principal del negocio (Plant) |
+| **Inbound communication** | Commands: crear/editar/eliminar planta, configurar umbrales. Queries: listado y detalle de plantas con última telemetría |
+| **Outbound communication** | Eventos: `PlantRegisteredEvent`, `PlantStatusChangedEvent` (consumidos por Notification y Analysis & Reporting) |
+| **Ubiquitous Language** | Plant, Plant Profile, Species, Location, Watering Threshold, PlantStatus (Healthy/Warning/Critical), Health Score |
+| **Business decisions** | Plan Freemium limita a 3 plantas; el estado se recalcula con cada lectura de telemetría |
+| **Policies** | Eliminación lógica (soft delete); una planta pertenece a un único UserAccount y puede tener a lo sumo un Device vinculado |
+| **Assumptions** | El usuario clasifica correctamente la especie; los umbrales por defecto por especie son razonables |
+| **Risks** | Datos de especie incorrectos degradan el diagnóstico. Mitigación: sugerencias del BC AI |
+| **Metrics** | Plantas registradas por usuario, distribución de estados de salud, plantas con sensor vinculado |
+| **Dependencies** | Auth (identidad), Device Management IoT (telemetría), AI (diagnósticos), Analysis & Reporting (consumidor) |
+
+**Canvas 3 — Device Management IoT**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Device Management IoT (incluye Data Telemetry) |
+| **Purpose** | Aprovisionar, vincular y supervisar los Sensor Lite, e ingerir su telemetría (humedad, temperatura, luz, humedad de suelo) |
+| **Strategic classification** | Core (habilita la automatización, promesa central del producto) |
+| **Domain roles** | *Execution context* con frontera hacia el hardware físico |
+| **Inbound communication** | `ProvisionDeviceCommand` (QR + serial), `IngestTelemetryCommand` (`POST /api/v1/telemetry`), comandos de vinculación/desvinculación |
+| **Outbound communication** | Eventos: `DeviceActivatedEvent`, `TelemetryRecordedEvent`, `DeviceOfflineEvent` (Published Language hacia Analysis, Notification y Plant Management) |
+| **Ubiquitous Language** | Device, Serial Number, Provisioning, Pairing (BLE), Telemetry Reading, Heartbeat, Firmware (OTA), Health Score |
+| **Business decisions** | Un serial solo puede registrarse una vez; Freemium admite 1 dispositivo, Premium hasta 10 |
+| **Policies** | Ausencia de heartbeat por 2 intervalos ⇒ `DeviceOfflineEvent`; lecturas limitadas a 500 registros por consulta |
+| **Assumptions** | Red WiFi 2.4 GHz disponible en el hogar; el firmware aplica la lógica de seguridad de riego en el borde |
+| **Risks** | Pérdida de conectividad prolongada; descalibración de sensores. Mitigación: alertas de offline y RMA (sección 2.1.2.3) |
+| **Metrics** | Dispositivos activos, tasa de lecturas recibidas vs. esperadas, tiempo de provisioning |
+| **Dependencies** | Auth (JWT del usuario en provisioning), Plant Management (vinculación planta-dispositivo), Partnership con el firmware del Sensor Lite |
+
+**Canvas 4 — Artificial Intelligence (AI)**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Artificial Intelligence (AI) |
+| **Purpose** | Generar diagnósticos multimodales de salud vegetal (imagen + telemetría) y recomendaciones conversacionales personalizadas |
+| **Strategic classification** | Core (diferenciador frente a apps de recordatorios y sensores sin interpretación) |
+| **Domain roles** | *Analysis context* con ACL hacia el proveedor externo de modelos |
+| **Inbound communication** | `RequestDiagnosisCommand` (foto + contexto de planta), consultas del chatbot |
+| **Outbound communication** | `DiagnosisCompletedEvent` (consumido por Notification y Plant Management); recomendaciones al cliente |
+| **Ubiquitous Language** | Diagnosis, Confidence Score, Recommendation, Prompt Context, Vision Model, Inference |
+| **Business decisions** | Freemium: 2 diagnósticos/mes; Premium ilimitado; la inferencia se delega a API externa (CON-10) |
+| **Policies** | El prompt incluye especie, telemetría reciente y clima; las API keys viven solo en variables de entorno del servidor |
+| **Assumptions** | La calidad del modelo externo es suficiente para diagnósticos domésticos; latencia de inferencia aceptable (5–12 s) |
+| **Risks** | Cambios de pricing o deprecación del proveedor; alucinaciones del modelo. Mitigación: ACL que permite sustituir proveedor y disclaimers de recomendación |
+| **Metrics** | Diagnósticos por usuario, percepción de utilidad (feedback US-031), latencia de inferencia |
+| **Dependencies** | Proveedor de IA externo (upstream, Conformist con ACL); Plant Management y Device Management (contexto de entrada) |
+
+**Canvas 5 — Analysis & Reporting**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Analysis & Reporting |
+| **Purpose** | Transformar la telemetría histórica en dashboards de tendencias, comparativas y reportes exportables (CSV/PDF) para decisiones de cuidado |
+| **Strategic classification** | Core para el segmento aficionados (motiva el upgrade Premium); Supporting para el flujo básico |
+| **Domain roles** | *Analysis context* de solo lectura sobre datos de otros contextos |
+| **Inbound communication** | Queries: `GetHealthTrendQuery` (rango 7d/30d/90d, granularidad hora/día/semana), `ListReportsQuery`; Command: `GenerateReportCommand` (`POST /api/v1/reports/export`) |
+| **Outbound communication** | Reportes generados; no publica eventos de dominio (consumidor puro — Customer/Supplier con Telemetry y Plant) |
+| **Ubiquitous Language** | Health Trend, Aggregation, Granularity, Time Range, Report, Export, Baseline |
+| **Business decisions** | El historial completo y la exportación son exclusivos Premium; Freemium ve solo 7 días |
+| **Policies** | Agregaciones en memoria sobre máximo 500 registros por consulta; una consulta independiente por planta |
+| **Assumptions** | Volumen por usuario acotado (1–20 plantas); el índice `{PlantId, RecordedAt}` sostiene el rendimiento de lectura |
+| **Risks** | Crecimiento del historial degrada consultas. Mitigación: límites por consulta y partición futura de la tabla de telemetría |
+| **Metrics** | Uso del dashboard (DAU del módulo), reportes exportados, latencia de agregación |
+| **Dependencies** | Device Management IoT (telemetría, upstream), Plant Management (catálogo, upstream), Auth (autorización) |
+
+**Canvas 6 — Notification**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Notification |
+| **Purpose** | Entregar alertas y comunicaciones contextuales (riego, salud, comunidad, cuenta y facturación) por push (FCM) y correo, respetando las preferencias del usuario |
+| **Strategic classification** | Supporting (imprescindible para la promesa de "no revisar la app", pero construido sobre servicios genéricos) |
+| **Domain roles** | *Execution context* reactivo: escucha eventos del resto del sistema |
+| **Inbound communication** | Eventos suscritos: `PlantStatusChangedEvent`, `DeviceOfflineEvent`, `DiagnosisCompletedEvent`, `SubscriptionRenewedEvent`, interacciones de Community. Commands: configurar preferencias, registrar token FCM |
+| **Outbound communication** | Push FCM, correos transaccionales; `NotificationDeliveredEvent` para auditoría |
+| **Ubiquitous Language** | Notification, Channel (Push/Email), Preference, Delivery, Quiet Hours, Criticality |
+| **Business decisions** | Sin notificaciones entre 22:00 y 07:00 hora local salvo críticas; Freemium máximo 3/día; las críticas ignoran el modo silencioso |
+| **Policies** | Confirmación de lectura para notificaciones críticas; recordatorio de renovación 3 días antes del cobro |
+| **Assumptions** | El usuario concede permiso de notificaciones; FCM disponible en el dispositivo |
+| **Risks** | Fatiga de notificaciones ⇒ desinstalación. Mitigación: agrupación por relevancia y feedback de utilidad (US-031) |
+| **Metrics** | Tasa de entrega, tasa de apertura, opt-outs por categoría, feedback útil/no útil |
+| **Dependencies** | FCM (proveedor externo), todos los BCs emisores de eventos (upstream), Auth (identidad del destinatario) |
+
+**Canvas 7 — Billing & Subscription**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Billing & Subscription |
+| **Purpose** | Gestionar el ciclo de vida completo de planes y suscripciones (activación, renovación, cancelación), métodos de pago tokenizados e historial de transacciones |
+| **Strategic classification** | Supporting con criticidad alta (captura el valor; no diferencia al producto) |
+| **Domain roles** | *Execution context* con ACL hacia la pasarela de pagos |
+| **Inbound communication** | Commands: `SubscribeCommand`, `CancelSubscriptionCommand`, `UpdatePaymentMethodCommand`; Webhooks de la pasarela (pago exitoso/fallido). Queries: `GET /api/v1/plans`, historial de pagos |
+| **Outbound communication** | Eventos: `SubscriptionActivatedEvent`, `SubscriptionRenewedEvent`, `PaymentFailedEvent` (consumidos por Notification y por los BCs que aplican límites de plan) |
+| **Ubiquitous Language** | Plan (Freemium/Premium), Subscription, Billing Cycle, Invoice, Payment Method (tokenizado), Checkout, Webhook, Grace Period |
+| **Business decisions** | Los datos de tarjeta nunca se almacenan (tokenización en la pasarela); el historial conserva mínimo 12 meses; la compra del Sensor Lite incluye 3 meses Premium |
+| **Policies** | Renovación notificada 3 días antes; tras `PaymentFailedEvent` se otorga período de gracia antes del downgrade a Freemium; comprobante digital inmediato tras cobro |
+| **Assumptions** | Stripe como pasarela documentada (ver 7.2.2); tipo de cambio y precios en USD para el modelo académico |
+| **Risks** | Rechazos de pago en LATAM y contracargos; dependencia del proveedor. Mitigación: reintentos programados, período de gracia y ACL que permite añadir pasarelas locales |
+| **Metrics** | MRR, churn mensual, tasa de renovación exitosa, pagos fallidos recuperados |
+| **Dependencies** | Stripe (upstream, ACL — patrón ya declarado en Context Mapping), Auth (identidad), Notification (downstream) |
+
+**Canvas 8 — Community**
+
+| Elemento | Descripción |
+|---|---|
+| **Name** | Community |
+| **Purpose** | Habilitar el intercambio de conocimiento entre usuarios (posts, comentarios, reacciones) y las alertas comunitarias de plagas geolocalizadas |
+| **Strategic classification** | Generic en su mecánica (foro), **estratégico en su efecto**: retención y conversión (ver 2.1.2.5) |
+| **Domain roles** | *Engagement context*: genera contenido y señales sociales |
+| **Inbound communication** | Commands: crear post (multipart con imagen), comentar, reaccionar, reportar contenido, publicar alerta de plaga (opt-in de ubicación) |
+| **Outbound communication** | Eventos: `PostPublishedEvent`, `PestAlertPublishedEvent` (consumido por Notification para alertar usuarios en radio de 5 km) |
+| **Ubiquitous Language** | CommunityPost, Comment, Like, Feed, Pest Alert, Moderation, EXIF Sanitization |
+| **Business decisions** | Membresía automática al registrarse (US-027); alertas de plagas exclusivas Premium; solo publicaciones públicas admiten interacción |
+| **Policies** | Toda imagen pasa por sanitización EXIF/GPS antes de persistir (CON-08); contenido reportado se prioriza para revisión humana con log auditable |
+| **Assumptions** | Masa crítica inicial alcanzable con los segmentos objetivo; los usuarios aceptan moderación |
+| **Risks** | Comunidad vacía (cold start) o tóxica. Mitigación: contenido semilla del equipo, categorización por especies e integración automática de nuevos usuarios |
+| **Metrics** | Posts activos/semana, tasa de respuestas útiles < 24 h, conversión desde comunidad, reducción de tickets (definidas en 2.1.2.5) |
+| **Dependencies** | Auth (identidad/roles, ACL para `AuthorName`), Cloud Storage (imágenes), Notification (downstream), Shared Kernel acotado con Platform |
 
 ### 4.2.5.	Context Mapping
 
@@ -2002,7 +2197,7 @@ Durante el proceso, el equipo consideró las siguientes buenas prácticas:
 #### Evidencia gráfica
 Al finalizar, los mapas de contexto resultantes se documentaron en forma de diagramas visuales. Estos diagramas muestran tanto los **bounded contexts** como las relaciones entre ellos, junto con los patrones aplicados.  
 
-Aquí se insertará la imagen del diagrama  exportado a formato gráfico:
+El diagrama resultante, exportado a formato gráfico, es el siguiente:
 
 [![Untitled-diagram-Mermaid-Chart-2025-09-18-233901.png](https://i.postimg.cc/VsBHNnbf/Untitled-diagram-Mermaid-Chart-2025-09-18-233901.png)](https://postimg.cc/grjKSwDQ)
 
@@ -2010,7 +2205,7 @@ Aquí se insertará la imagen del diagrama  exportado a formato gráfico:
 ## 4.3.	Software Architecture
 Los diagramas de arquitectura de software nos ayudan a plantear el sistema de nuestro software, basándonos en el enfoque de desarrollo de Domain Driven Design.
 
-### 4.3.1.	Software Architecture System Landscape Diagram
+### 4.3.1. Software Architecture System Landscape Diagram
 
 El System Landscape Diagram presenta una vista general del ecosistema de Oryxen dentro de su entorno tecnológico y de negocio. Se identifican los principales actores que interactúan con la plataforma, así como los sistemas externos integrados, incluyendo servicios de autenticación, pagos, inteligencia artificial y dispositivos IoT. Este diagrama permite comprender cómo Oryxen se posiciona dentro de un ecosistema de jardinería inteligente conectado y orientado a la automatización.
 
@@ -2028,11 +2223,135 @@ El Container Level Diagram presenta la arquitectura interna de Oryxen, mostrando
 
 ![ContainerDiagram_Oryxen](./assets/ContainerDiagram_Oryxen.png)
 
+**Mapeo Bounded Context → Container**
+
+Respondiendo al feedback docente de TB1 (el diagrama de contenedores no explicitaba qué contenedor implementa cada bounded context), se documenta el mapeo completo. El Backend API es un **monolito modular** (decisión registrada en 4.1.4): los 8 bounded contexts conviven en el mismo contenedor ASP.NET Core, separados por namespaces y capas DDD (`GrassFarming.{BoundedContext}.{Layer}`), lo que preserva la opción de extraerlos como microservicios sin reescritura del dominio.
+
+| Bounded Context | Container principal | Containers secundarios | Base de datos / Storage | Servicios externos | Justificación |
+|---|---|---|---|---|---|
+| Auth & Identity Integration | Backend API (módulo Auth) | Web App (formularios de login/registro), Mobile App (login nativo + EncryptedSharedPreferences) | PostgreSQL 15 (tablas `users`, `refresh_tokens`) | Google OAuth 2.0 | La emisión/validación de JWT debe ser única y transversal; los clientes solo consumen el contrato REST |
+| Plant Management | Backend API (módulo Plants) | Web App (vistas Plants/Plant Detail), Mobile App (dashboard de plantas) | PostgreSQL 15 (tabla `plants`) | — | El agregado Plant es el núcleo del dominio; ambos clientes lo consumen vía `/api/v1/users/{userId}/plants` |
+| Device Management IoT | Backend API (módulo Devices/Telemetry) | **IoT Edge App (firmware del Sensor Lite)**, Mobile App (provisioning QR + BLE) | PostgreSQL 15 (tablas `devices`, `telemetry_data` con índice `{PlantId, RecordedAt}`) | — | La frontera física exige un contenedor embebido (Edge) con lógica de seguridad local; la ingesta entra por `POST /api/v1/telemetry` |
+| Artificial Intelligence (AI) | Backend API (módulo AI) | Mobile App y Web App (captura/carga de foto para diagnóstico) | PostgreSQL 15 (historial de diagnósticos) | API de IA externa (visión + conversación, CON-10) | La inferencia se delega al proveedor externo detrás de un ACL; el backend arma el prompt con telemetría y especie |
+| Analysis & Reporting | Backend API (módulo Analytics) | Web App (Analytics con Chart.js), Mobile App (tendencias en Compose) | PostgreSQL 15 (lecturas sobre `telemetry_data`, solo consulta) | — | Contexto de solo lectura; agrega en memoria con límite de 500 registros por consulta |
+| Notification | Backend API (módulo Notifications) | Web App (badge/preferencias), Mobile App (receptor push) | PostgreSQL 15 (preferencias, log de entregas) | **Firebase Cloud Messaging** | El fan-out de push requiere un proveedor especializado; el módulo traduce eventos de dominio a mensajes FCM |
+| Billing & Subscription | Backend API (módulo Billing) | Web App (checkout y historial de facturación) | PostgreSQL 15 (planes, suscripciones, transacciones — datos de tarjeta **no** se almacenan) | **Stripe** (Checkout + Webhooks) | La pasarela externa tokeniza los pagos; el módulo procesa webhooks y publica eventos de suscripción |
+| Community | Backend API (módulo Community) | Web App (Community Feed), Mobile App (feed) | PostgreSQL 15 (posts, comentarios, likes) + **Cloud Storage** (imágenes sanitizadas) | Firebase Cloud Messaging (alertas de plaga vía Notification) | Las imágenes requieren almacenamiento de objetos; la sanitización EXIF corre en el backend antes de persistir |
+
+Lectura del mapeo por contenedor:
+
+- **Landing Page (estático):** no implementa bounded contexts; es el canal de adquisición que enlaza a la Web App.
+- **Web Application (Vue 3 + TypeScript):** consume Auth, Plant Management, Analysis & Reporting, Billing & Subscription, Community y Notification. Es el cliente más completo (incluye checkout y analítica avanzada).
+- **Mobile Application (Kotlin + Jetpack Compose):** consume Auth (con hardening de la sección 5.1.7), Plant Management, Device Management (provisioning BLE), AI (diagnóstico por foto), Analysis & Reporting y Notification (receptor FCM).
+- **IoT Edge App (Sensor Lite):** interactúa exclusivamente con Device Management IoT (telemetría saliente, comandos de riego entrantes) y aplica localmente la lógica de seguridad de riego (QA-05).
+- **Backend API:** implementa los 8 bounded contexts como módulos; único contenedor con acceso a la base de datos.
+- **PostgreSQL 15:** requerido por los 8 módulos; los datos sensibles de pago quedan fuera (tokenizados en Stripe).
+
 ### 4.3.4.	Software Architecture Deployment Diagrams
 
-Describe cómo Oryxen se despliega en producción: servidores en la nube (Web Server, App Server, Database Server), dispositivos móviles de los usuarios y el dispositivo IoT físico. Cada contenedor está ubicado en el nodo correspondiente.
+Esta sección corrige la observación docente de TB1 sobre el uso de nodos genéricos ("Web Server", "App Server", "Database Server"). La topología se documenta ahora con **nodos reales y proveedores concretos**. El entorno evidenciado durante los sprints es local/contenedorizado (sección 7.1.4); la topología cloud que sigue se declara como **propuesta final de despliegue**, coherente con las evidencias existentes: Landing Page ya desplegada en Firebase Hosting y pipeline CI/CD que publica la imagen Docker del backend en GitHub Container Registry (GHCR).
+
+**Diagrama de despliegue (C4 — notación textual):**
+
+```
+[Deployment Node: Google Cloud — proyecto oryxen-prod]
+│
+├── [Node: Firebase Hosting (CDN global, SSL automático)]
+│     ├── Artefacto: oryxen-landing (HTML5/CSS3/JS estático)
+│     └── Artefacto: oryxen-web-app (bundle Vue 3 — dist/ de Vite)
+│
+├── [Node: Google Cloud Run (contenedores administrados, escala a cero)]
+│     └── Contenedor: oryxen-backend  (imagen Docker desde GHCR)
+│           ASP.NET Core 9 · módulos de los 8 Bounded Contexts · /swagger
+│
+├── [Node: Cloud SQL — PostgreSQL 15 (instancia administrada, backups automáticos)]
+│     └── Base de datos: oryxen_db (EF Core migrations)
+│
+├── [Node: Cloud Storage (bucket oryxen-community-media)]
+│     └── Imágenes de Community (post-sanitización EXIF)
+│
+└── [Node: Firebase Cloud Messaging]
+      └── Canal de push hacia Web (SW) y Android
+
+[Deployment Node: GitHub]
+├── [Node: GitHub Actions] — CI/CD: build, test (xUnit + PostgreSQL service), docker build & push
+└── [Node: GitHub Container Registry (GHCR)] — imagen oryxen-backend:{main|develop}
+
+[Deployment Node: Servicios externos SaaS]
+├── [Node: Stripe] — Checkout, suscripciones y webhooks de pago
+└── [Node: Proveedor de IA externa] — inferencia de visión y chat (API Key en variables de entorno)
+
+[Deployment Node: Dispositivo del usuario]
+├── [Node: Navegador web] — consume Firebase Hosting + API Cloud Run
+└── [Node: Android (API 24+)] — APK distribuido vía Firebase App Distribution / Google Play
+      └── Contenedor: Oryxen Mobile App (Kotlin + Jetpack Compose)
+
+[Deployment Node: Hogar del usuario — nodo físico externo]
+└── [Node: Sensor Lite (ESP32-class, WiFi 2.4 GHz + BLE)]
+      └── Contenedor: IoT Edge App (firmware) ──HTTPS──▶ POST /api/v1/telemetry (Cloud Run)
+```
 
 ![DeploymentDiagram.png](./assets/C4-deployment.png)
+
+**Tabla de nodos:**
+
+| Nodo | Tipo | Proveedor | Rol en la topología |
+|---|---|---|---|
+| Firebase Hosting | PaaS estático + CDN | Google | Sirve Landing Page y Web Application con SSL automático |
+| Cloud Run | Contenedores administrados | Google | Ejecuta el Backend API (escala a cero, revisiones inmutables) |
+| Cloud SQL PostgreSQL 15 | Base de datos administrada | Google | Persistencia única de los 8 módulos, backups y HA opcional |
+| Cloud Storage | Almacenamiento de objetos | Google | Imágenes de Community sanitizadas |
+| Firebase Cloud Messaging | Mensajería push | Google | Entrega de notificaciones a Web y Android |
+| GitHub Actions + GHCR | CI/CD + registro de imágenes | GitHub | Build, pruebas y publicación de la imagen del backend (**evidenciado en el repositorio**) |
+| Stripe | Pasarela de pagos SaaS | Stripe | Checkout de suscripciones y webhooks |
+| Proveedor de IA externa | API SaaS | Según CON-10 | Inferencia de diagnóstico multimodal |
+| Dispositivo Android | Nodo cliente | Usuario | Ejecuta la app nativa (API 24+) |
+| Sensor Lite | Nodo físico IoT | GrassFarming (hardware propio) | Captura telemetría y ejecuta riego con lógica de seguridad local |
+
+**Tabla de artefactos desplegados:**
+
+| Artefacto | Origen (repositorio) | Formato | Destino |
+|---|---|---|---|
+| `oryxen-landing` | Oryxen-Landing-Page | Sitio estático | Firebase Hosting (`https://oryxen-landing.web.app` — evidenciado en Sprint 1) |
+| `oryxen-web-app` | Oryxen-Web-Application | `dist/` (Vite build) | Firebase Hosting |
+| `oryxen-backend:{tag}` | Oryxen-Backend | Imagen Docker (GHCR) | Cloud Run |
+| Migraciones EF Core | Oryxen-Backend | Ensamblado .NET | Cloud SQL (aplicadas al arranque) |
+| `app-release.apk` | Oryxen-Mobile-Application | APK firmado | Firebase App Distribution / Google Play |
+| Firmware Sensor Lite | Herramientas del equipo | Binario OTA | Dispositivo físico |
+
+**Tabla de variables de entorno (Backend API en Cloud Run):**
+
+| Variable | Propósito | Origen |
+|---|---|---|
+| `ConnectionStrings__DefaultConnection` | Cadena de conexión a Cloud SQL | Secret Manager |
+| `Jwt__PrivateKey` / `Jwt__PublicKey` | Firma y validación RS256 de tokens | Secret Manager |
+| `Stripe__SecretKey` / `Stripe__WebhookSecret` | Cobros y verificación de webhooks | Secret Manager |
+| `Fcm__ServiceAccountJson` | Credencial de envío push | Secret Manager |
+| `AiProvider__ApiKey` | Acceso al modelo de IA externo (CON-10) | Secret Manager |
+| `Storage__BucketName` | Bucket de imágenes de Community | Configuración de entorno |
+| `ASPNETCORE_ENVIRONMENT` | Perfil de ejecución (`Production`) | Configuración de entorno |
+| `VITE_API_BASE_URL` *(build de Web App)* | URL pública del backend | GitHub Actions secret (evidenciado en el workflow) |
+
+**Flujo de despliegue por producto:**
+
+| Producto | Flujo |
+|---|---|
+| Backend API | Push a `main` → GitHub Actions: `dotnet build` + `dotnet test` (con PostgreSQL de servicio) → `docker build` → push a GHCR → despliegue de la imagen como nueva revisión de Cloud Run |
+| Web Application | Push a `main` → `npm ci` + `npm run build` (inyectando `VITE_API_BASE_URL`) → `firebase deploy --only hosting` |
+| Landing Page | `firebase deploy --only hosting` desde el directorio del proyecto (sin build step) |
+| Mobile Application | `./gradlew assembleRelease` → firma → carga a Firebase App Distribution para testers / release a Google Play |
+| Sensor Lite | Actualización de firmware OTA publicada desde el backend; el dispositivo la aplica en ventana segura (sin riego en curso) |
+
+**Riesgos operativos de la topología propuesta:**
+
+| Riesgo | Impacto | Mitigación propuesta |
+|---|---|---|
+| Cold start de Cloud Run tras escala a cero | Latencia inicial de 2–5 s en la primera petición | Instancia mínima = 1 en horario pico; health checks |
+| Agotamiento de conexiones a Cloud SQL | Errores 500 bajo concurrencia | Pool de conexiones de Npgsql acotado + proxy de Cloud SQL |
+| Webhook de Stripe perdido | Suscripción pagada no activada | Reintentos de Stripe + endpoint idempotente + conciliación diaria programada |
+| Cuotas/costos del proveedor de IA | Degradación del diagnóstico | Límite mensual Freemium, caché de diagnósticos recientes, ACL que permite cambiar de proveedor |
+| Dispositivo IoT sin conectividad prolongada | Pérdida de telemetría y riegos no ejecutados | Lógica de riego de contingencia en el firmware + alerta `DeviceOfflineEvent` |
+| Dependencia total de un solo proveedor cloud | Lock-in operativo | Backend contenedorizado (portable) y datos en PostgreSQL estándar exportable |
 
 ---
 
