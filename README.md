@@ -461,7 +461,6 @@ Con ello, se busca reducir la pérdida de plantas, disminuir la carga del cuidad
 
 | Integrante | Descripción | Conocimientos |
 | ---------- | ----------- | ------------- |
-| **Alejandro Alberto Pachas Chávez - u201917598** <img src="./assets/Chapter-1/perfil_alejandro.png"> | Mi nombre es Alejandro Alberto Pachas Chávez, tengo 24 años y actualmente curso la carrera de Ingeniería de Software. Me describo como una persona creativa, responsable y constante, con una fuerte disposición para colaborar en equipo. Mi objetivo es contribuir positivamente al grupo y alcanzar las metas propuestas. | Cuento con experiencia en lenguajes de programación como JavaScript, TypeScript y Go; además de desarrollo web utilizando frameworks como React y Next.js, y manejo de bases de datos tanto relacionales como no relacionales, incluyendo PostgreSQL y Firebase. |
 | **Pedro Jesús Nanfuñay Liza - u202215462** <img src="./assets/Chapter-1/Perfil_PedroNanfuñay.jpeg"> | Mi nombre es Pedro Jesús Nanfuñay Liza, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Me considero una persona creativa, responsable, perseverante y siempre dispuesto a trabajar en equipo. Espero aportar de manera positiva al equipo y cumplir con los objetivos establecidos. | Tengo conocimientos en lenguajes de programación como C++, Java y Python; en el desarrollo web con frameworks Angular y Primevue, y en base de datos relacionales y no relacionales como SQL y MongoDB. |
 | **Zevallos Linares, Alessandro Netto - u202216035** <img src="https://github.com/user-attachments/assets/6e621406-9662-4f9f-964c-249eb7cb17a1"> | Mi nombre es Alessandro Netto Zevallos Linares, tengo 22 años y soy estudiante de Ingeniería de Software con un fuerte interés en el desarrollo de productos digitales y la tecnología. En mi tiempo libre, me gusta jugar videojuegos. También tengo un interés especial en la música, lo que me ayuda a equilibrar mi vida académica y personal. | Tengo conocimientos en JavaScript, React, Next.js, Angular, Vue, Java, Flutter, Kotlin, y en base de datos como SQL y MongoDB. |
 | **Abraham Andres Estrada Cajamune - U202112164** <img src="./assets/Chapter-1/Abraham.jpg"> | Mi nombre es Abraham Andres Estrada Cajamune, tengo 22 años y soy estudiante de la carrera de Ingeniería de Software, cursando el 9no ciclo. Me califico como una persona responsable, trabajando a presión y con buena disposición en trabajar en equipo. Mi interés está en el desarrollo web y movil. |  A lo largo de mis estudios universitarios he adquirido las bases sólidas en lenguajes de programación como Java, C++, Python, utilizando Frameworks como Angular y Vue y un fuerte conocimiento en el manejo de bases de datos. |
@@ -480,6 +479,23 @@ Con ello, se busca reducir la pérdida de plantas, disminuir la carga del cuidad
 | Who? | ¿Qué llevara a las personas a usar nuestro producto? | Personas que desean mantener un cuidado óptimo de sus plantas con menos esfuerzo y que les permita cumplir con sus otras responsabilidades, con el objetivo de facilitar el proceso de cuidado y disminuir el tiempo necesario. |
 | How? | ¿En qué condiciones los clientes usaran nuestro producto? | Los clientes usarán la aplicación y sensores en entornos con acceso a internet, para monitorear el estado de sus plantas, recibir alertas y automatizar el riego. |
 | How Much? | ¿Con qué frecuencia o en qué cantidad se utilizará nuestro producto? | La frecuencia de uso será diario o semanal según la especie de la planta y estación del año. Las notificaciones pueden activarse varias veces al mes por maceta, y el sistema puede comenzar con pocas plantas y escalar según las necesidades del usuario. |
+
+**Alcance realista del dolor del usuario**
+
+El equipo reconoce de forma explícita que la problemática abordada por Oryxen constituye un **dolor cotidiano de intensidad moderada**, y no un problema económico o social crítico. La pérdida de plantas domésticas genera frustración recurrente, gasto repetido en reposición y abandono del hábito de jardinería, pero no compromete la subsistencia ni la seguridad de los usuarios. En consecuencia, la propuesta de valor del producto no se sustenta en un impacto social crítico, sino en cuatro vectores verificables en las entrevistas registradas en la sección 2.2:
+
+1. **Conveniencia y ahorro de tiempo:** reducir el esfuerzo manual de revisión planta por planta y la carga mental de recordar riegos, valorado especialmente por el segmento de personas ocupadas.
+2. **Prevención de pérdidas recurrentes:** los entrevistados de ambos segmentos declararon haber perdido plantas por exceso o falta de riego y por detección tardía de problemas; la automatización y las alertas reducen ese modo de fallo.
+3. **Bienestar y experiencia:** los entrevistados asocian el cuidado de plantas a la reducción del estrés y a la mejora de sus espacios; sostener ese hábito con menos fricción es en sí mismo el valor.
+4. **Aprendizaje asistido:** el segmento de aficionados valora comprender variables (humedad, luz, temperatura) y mejorar sus técnicas; el diagnóstico por IA y la comunidad habilitan jardinería urbana asistida.
+
+Bajo este marco, el proyecto es válido como caso académico de arquitectura emergente (IoT + IA + SaaS) y como oportunidad de negocio de nicho basada en conveniencia y automatización doméstica, con las limitaciones que se declaran a continuación.
+
+**Limitaciones del problema:**
+
+- No se dispone de estadísticas públicas verificadas sobre la tasa de mortalidad de plantas domésticas en Lima Metropolitana; las afirmaciones de frecuencia del problema se sustentan únicamente en las entrevistas propias registradas en la sección 2.2 (muestra pequeña, no representativa estadísticamente).
+- La disposición de pago declarada en entrevistas es una intención, no una conversión demostrada; el modelo financiero de la sección 2.1.2 se construye **bajo supuestos académicos**.
+- El dolor es evitable con alternativas de costo cero (recordatorios manuales, apps gratuitas); la retención del producto depende de que la automatización demuestre valor superior sostenido.
 
 ### 1.2.2 Lean UX Process
 
