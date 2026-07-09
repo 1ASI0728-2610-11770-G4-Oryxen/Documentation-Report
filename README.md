@@ -278,19 +278,20 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
       - [5.1.7.2 Interceptor OkHttp de Renovación Automática de Token (Refresh Token Rotation)](#5172-interceptor-okhttp-de-renovación-automática-de-token-refresh-token-rotation)
       - [5.1.7.3 SessionEventBus: Señalización de Sesión Expirada](#5173-sessioneventbus-señalización-de-sesión-expirada)
       - [5.1.7.4 Erradicación de Datos Hardcodeados](#5174-erradicación-de-datos-hardcodeados)
+  - [5.2. Bounded Context: Plant Management](#52-bounded-context-plant-management)
     - [5.2.1. Domain Layer](#521-domain-layer)
     - [5.2.2. Interface Layer](#522-interface-layer)
     - [5.2.3. Application Layer](#523-application-layer)
     - [5.2.4. Infrastructure Layer](#524-infrastructure-layer)
     - [5.2.5. Bounded Context Software Architecture Component Level Diagrams](#525-bounded-context-software-architecture-component-level-diagrams)
     - [5.2.6. Bounded Context Software Architecture Code Level Diagrams](#526-bounded-context-software-architecture-code-level-diagrams)
+      - [5.2.6.2. Bounded Context Database Design Diagram](#5262-bounded-context-database-design-diagram)
   - [5.3. Bounded Context: Device Management IoT](#53-bounded-context-device-management-iot)
     - [5.3.1. Domain Layer](#531-domain-layer)
     - [5.3.2. Interface Layer](#532-interface-layer)
     - [5.3.3. Application Layer](#533-application-layer)
     - [5.3.4. Infrastructure Layer](#534-infrastructure-layer)
     - [5.3.5. Bounded Context Software Architecture Component Level Diagrams](#535-bounded-context-software-architecture-component-level-diagrams)
-    - [Incluye:](#incluye)
     - [5.3.6. Bounded Context Software Architecture Code Level Diagrams](#536-bounded-context-software-architecture-code-level-diagrams)
       - [5.3.6.1. Bounded Context Domain Layer Class Diagrams](#5361-bounded-context-domain-layer-class-diagrams)
       - [5.3.6.2. Bounded Context Database Design Diagram](#5362-bounded-context-database-design-diagram)
@@ -318,14 +319,13 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
     - [5.5.9. Especificación BDD (Gherkin)](#559-especificación-bdd-gherkin)
   - [5.6. Bounded Context: Notification](#56-bounded-context-notification)
     - [5.6.1. Domain Layer](#561-domain-layer)
-    - [5.6.1. Domain Layer](#561-domain-layer-1)
     - [5.6.2. Interface Layer (API)](#562-interface-layer-api)
     - [5.6.3. Application Layer](#563-application-layer)
     - [5.6.4. Infrastructure Layer](#564-infrastructure-layer)
     - [5.6.5. Bounded Context Software Architecture Component Level Diagrams](#565-bounded-context-software-architecture-component-level-diagrams)
     - [5.6.6. Bounded Context Software Architecture Code Level Diagrams](#566-bounded-context-software-architecture-code-level-diagrams)
-    - [5.6.6.1. Bounded Context Domain Layer Class Diagram](#5661-bounded-context-domain-layer-class-diagram)
-    - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
+      - [5.6.6.1. Bounded Context Domain Layer Class Diagram](#5661-bounded-context-domain-layer-class-diagram)
+      - [5.6.6.2. Bounded Context Database Design Diagram](#5662-bounded-context-database-design-diagram)
   - [5.7. Bounded Context: Billing and Subscription](#57-bounded-context-billing-and-subscription)
     - [5.7.1. Domain Layer](#571-domain-layer)
     - [5.7.2. Interface Layer](#572-interface-layer)
@@ -360,7 +360,7 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
       - [D. Form and Data Labels](#d-form-and-data-labels)
       - [E. Search and Filter Labels](#e-search-and-filter-labels)
       - [F. Feedback Labels](#f-feedback-labels)
-    - [6.2.3. Searching Systems.](#623-searching-systems)
+    - [6.2.3. Searching Systems](#623-searching-systems)
     - [6.2.4. SEO Tags and Meta Tags](#624-seo-tags-and-meta-tags)
       - [A. Landing Page](#a-landing-page)
       - [B. Web Application](#b-web-application)
@@ -369,9 +369,9 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
       - [A. Landing Page Navigation](#a-landing-page-navigation)
       - [B. Web Application Navigation (Dashboard)](#b-web-application-navigation-dashboard)
       - [C. Mobile Application Navigation](#c-mobile-application-navigation)
-    - [6.3. Landing Page UI Design](#63-landing-page-ui-design)
+  - [6.3. Landing Page UI Design](#63-landing-page-ui-design)
       - [6.3.1. Landing Page Wireframe](#631-landing-page-wireframe)
-      - [6.3.1. Landing Page Mock-up](#631-landing-page-mock-up)
+      - [6.3.2. Landing Page Mock-up](#632-landing-page-mock-up)
   - [6.4. Applications UX/UI Design](#64-applications-uxui-design)
     - [6.4.1. Applications Wireframes](#641-applications-wireframes)
     - [6.4.2. Applications Wireflow Diagrams](#642-applications-wireflow-diagrams)
@@ -3175,6 +3175,8 @@ Los `userId` y `roles` ahora se extraen dinámicamente del claim `sub` del JWT d
 
 ---
 
+## 5.2. Bounded Context: Plant Management
+
 El bounded context de **Plant Management** representa el núcleo encargado de la gestión del catálogo de plantas de los usuarios dentro de la plataforma Oryxen. Este contexto permite registrar nuevas plantas, editar perfiles, definir configuraciones y parámetros esenciales (como umbrales de humedad), y ofrecer una visualización unificada del estado de salud de toda la colección botánica del usuario.
 
 ### 5.2.1. Domain Layer
@@ -3359,7 +3361,7 @@ El diagrama UML del Domain Layer muestra al agregado principal `PlantProfile`, v
 **Diagrama UML de Clases (Domain Layer):**
 ![UML Class Diagram - Plant Management](./assets/Chapter-5/UML_planManagement.png)
 
-**5.2.6.2. Bounded Context Database Design Diagram**
+#### 5.2.6.2. Bounded Context Database Design Diagram
 
 El diagrama de base de datos representa la estructura relacional (ERD) utilizada para almacenar los perfiles y umbrales de humedad.
 
@@ -4272,7 +4274,7 @@ Implementado por los `QueryHandlers`.
 
 Representa el núcleo del dominio.
 
-### Incluye:
+**Incluye:**
 
 - `Device`
 - `Sensor`
@@ -4741,7 +4743,7 @@ Feature: Diagnóstico Multimodal de Salud Vegetal por IA
 ```
 
 ---
-## 5.5. Bounded Context: Analysis &amp; Reporting
+## 5.5. Bounded Context: Analysis & Reporting
 
 El bounded context de **Analysis &amp; Reporting** representa la capa de inteligencia analítica de la plataforma Oryxen. Este contexto ejecuta consultas de agregación SQL en tiempo real sobre la telemetría histórica de sensores IoT (`telemetry_data`), generando dashboards de salud de cultivos, tendencias temporales diarias/semanales/mensuales y reportes exportables en formato CSV y JSON. La implementación sigue el stack oficial del proyecto: ASP.NET Core 9 (Clean Architecture) + EF Core 9 + PostgreSQL 15 en el backend, y Vue 3 + TypeScript + Pinia + Axios en el frontend web, con un cliente Android nativo en Kotlin + Jetpack Compose + Retrofit para la experiencia móvil.
 
@@ -5041,8 +5043,6 @@ El bounded context **Notification** representa la capacidad de Oryxen para envia
 
 ### 5.6.1. Domain Layer
 
-### 5.6.1. Domain Layer
-
 La capa de dominio del bounded context **Notification** contiene las clases que modelan el comportamiento principal relacionado con la generación y gestión de notificaciones dentro de la plataforma. En esta capa se definen las reglas de negocio asociadas a la creación, lectura y tipos de notificación.
 
 **a. Aggregate Root: `Notification`**
@@ -5293,6 +5293,7 @@ El Component Diagram del bounded context **Notification** representa la descompo
 
 **Diagrama de Componentes:**
 
+
 ![ComponentsDiagram_Notification](./assets/Chapter-5/ComponentsDiagram_Notification.png)
 
 **Relaciones entre componentes:**
@@ -5305,7 +5306,7 @@ El Component Diagram del bounded context **Notification** representa la descompo
 
 ### 5.6.6. Bounded Context Software Architecture Code Level Diagrams
 
-### 5.6.6.1. Bounded Context Domain Layer Class Diagram
+#### 5.6.6.1. Bounded Context Domain Layer Class Diagram
 
 El diagrama UML del Domain Layer del contexto `Notification` muestra el aggregate principal `Notification` y sus value objects.
 
@@ -5319,11 +5320,9 @@ El diagrama UML del Domain Layer del contexto `Notification` muestra el aggregat
 - `INotificationRepository` define el contrato de persistencia.
 - `NotificationService` (Application) depende de `INotificationRepository`.
 
-### 5.6.6.2. Bounded Context Database Design Diagram
+#### 5.6.6.2. Bounded Context Database Design Diagram
 
 **Diagrama ERD:**
-
-![ERDDiagram_Notification](./assets/Chapter-5/ERDDiagram_Notification.png)
 
 **Tabla: `notifications`**
 
@@ -6040,6 +6039,7 @@ Se utiliza un sistema de cuadrícula fluida de 12 columnas que se adapta dinámi
 ![Web Style Guidelines - Responsive Grid & Components](assets/1.jpeg)
 
 ![Web Style Guidelines - Responsive Grid & Components](assets/3.jpeg)
+
 #### B. Mobile Style Guidelines (Native iOS & Android)
 
 Dado que la aplicación móvil es el punto de contacto principal para los usuarios del plan básico gratuito y los aficionados, el rendimiento y la naturalidad son críticos. Siguiendo nuestras restricciones arquitectónicas, el desarrollo se realiza de forma **nativa** (Swift para iOS y Kotlin para Android), por lo que las interfaces respetan las guías oficiales de cada plataforma, unificadas por el *branding* de Oryxen.
@@ -6167,7 +6167,7 @@ Las etiquetas de retroalimentación confirman el resultado de una acción o info
 - **No hay resultados disponibles:** Comunica que la búsqueda o filtro aplicado no encontró coincidencias.
 - **Recomendación actualizada:** Indica que el asistente IA generó una nueva sugerencia.
 
-### 6.2.3. Searching Systems.
+### 6.2.3. Searching Systems
 
 Los sistemas de búsqueda permiten a los usuarios localizar información específica de manera rápida y eficiente dentro de la aplicación, optimizando el acceso al contenido y mejorando la experiencia de uso.
 
@@ -6261,7 +6261,7 @@ La aplicación móvil es el canal principal para la gestión diaria. Su navegaci
 
 
 
-### 6.3. Landing Page UI Design
+## 6.3. Landing Page UI Design
 
 El diseño de la interfaz de usuario (UI) de la *Landing Page* de Oryxen tiene un propósito fundamental: **la conversión y educación del cliente**. Al ser un producto innovador que combina software (IA) y hardware (IoT), el diseño visual debe transmitir confianza, simplicidad y accesibilidad, derribando el mito de que la tecnología para el hogar es costosa o difícil de instalar.
 
@@ -6305,8 +6305,7 @@ La estructura secuencial del *wireframe* es la siguiente:
 
 ![Landing Page Wireframe](./assets/Chapter-6/wireframe-landing.png)
 
-
-#### 6.3.1. Landing Page Mock-up
+#### 6.3.2. Landing Page Mock-up
 
 En esta sección se detallan los Mock-ups de la Landing Page de Oryxen, diseñados bajo un enfoque responsive para asegurar una visualización óptima tanto en navegadores web de escritorio como en dispositivos móviles. El diseño busca convertir visitantes en usuarios mediante una narrativa visual clara y una navegación intuitiva.
 
