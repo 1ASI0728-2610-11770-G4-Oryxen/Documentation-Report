@@ -380,7 +380,7 @@ En esta entrega final se completó el Ciclo de Vida Completo del Proyecto con:
       - [A. Flujo 1: Onboarding y Registro Manual de Planta (Plan Básico / Freemium)](#a-flujo-1-onboarding-y-registro-manual-de-planta-plan-básico--freemium)
       - [B. Flujo 2: Vinculación de Hardware "Sensor Lite" (Expansión de la experiencia)](#b-flujo-2-vinculación-de-hardware-sensor-lite-expansión-de-la-experiencia)
       - [C. Flujo 3: Diagnóstico Visual con Inteligencia Artificial (Plan Premium)](#c-flujo-3-diagnóstico-visual-con-inteligencia-artificial-plan-premium)
-    - [6.5. Applications Prototyping](#65-applications-prototyping)
+  - [6.5. Applications Prototyping](#65-applications-prototyping)
 - [Capítulo VII: Product Implementation, Validation \& Deployment](#capítulo-vii-product-implementation-validation--deployment)
   - [7.1. Software Configuration Management](#71-software-configuration-management)
     - [7.1.1. Software Development Environment Configuration](#711-software-development-environment-configuration)
@@ -6352,7 +6352,7 @@ El diseño de las aplicaciones considera los siguientes principios:
 
 ### 6.4.1. Applications Wireframes
 
-Aquí se muestran los wireframes desarrollados para la aplicación web y móvil Oryxen.
+Los wireframes de las aplicaciones definen la estructura de baja fidelidad de la Web Application y de la Mobile Application, priorizando la jerarquía de información sobre el acabado visual. En ambos productos la estructura responde a las decisiones de arquitectura de información de la sección 6.2: navegación lateral persistente en web (Dashboard, Plants, Analytics, Community, Settings) y navegación inferior de 4 destinos en móvil, con el estado de salud de las plantas como información de primer nivel en ambas plataformas. La versión responsive del wireframe web demuestra cómo el grid de cards colapsa a una columna y la navegación lateral se convierte en menú hamburguesa en viewports móviles.
 
 **Wireframes Web Application:**
 
@@ -6392,7 +6392,7 @@ Desde el Dashboard, el usuario accede a la sección Plant Grid y selecciona la o
 
 ![Wireflow Web 2 - Registro de Planta](./assets/Chapter-6/wireflows/wireflow-web-02-planta.png)
 
----
+----
 
 **User goal: Usuario visualiza detalles y métricas de una planta**
 
@@ -6560,7 +6560,7 @@ Este flujo ilustra cómo un usuario interactúa con la característica estrella 
 6.  **Fin (Seguimiento):** El usuario presiona el botón "Aplicar recomendación". El sistema programa automáticamente un recordatorio de seguimiento para evaluar la mejora en 7 días.
 
 
-### 6.5. Applications Prototyping
+## 6.5. Applications Prototyping
 
 [![Protitipo-MOVIL.jpg](https://i.postimg.cc/8c68x7x3/Protitipo-MOVIL.jpg)](https://postimg.cc/YLMyWCrf)
 
