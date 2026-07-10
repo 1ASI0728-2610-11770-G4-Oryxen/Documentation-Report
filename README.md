@@ -16,9 +16,9 @@
 
 <div align="center">
     <h3 align="center">Integrantes:</h3>
-    <p>- Estrada Cajamune, Abraham Andrés (U202112164)</p>
-    <p>- Nanfuñay Liza, Pedro Jesús (U202215462)</p>
-    <p>- Zevallos Linares, Alessandro Netto (U202216035)</p>
+    <p>- u202112164 - Abraham Andrés Estrada Cajamune</p>
+    <p>- u202215462 - Pedro Jesús Nanfuñay Liza</p>
+    <p>- u202216035 - Alessandro Netto Zevallos Linares</p>
 </div>
 
 <br>
