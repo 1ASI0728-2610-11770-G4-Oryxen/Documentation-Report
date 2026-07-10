@@ -2356,7 +2356,7 @@ El Context Level Diagram muestra a Oryxen como un sistema central y explica cóm
 
 El Container Level Diagram presenta la arquitectura interna de Oryxen, mostrando cómo se distribuyen las responsabilidades entre aplicaciones cliente, servicios backend, componentes IoT y la capa de datos. La solución incorpora un API Gateway como punto centralizado de acceso y múltiples servicios especializados alineados a los distintos dominios del negocio, como identidad, gestión de plantas, analíticas, comunidad, notificaciones y suscripciones. Asimismo, se diferencian bases de datos operacionales, analíticas y de telemetría IoT para garantizar escalabilidad y modularidad orientada a la automatización inteligente del cuidado de plantas.
 
-![ContainerDiagram_Oryxen](./assets/ContainerDiagram_Oryxen.png)
+![ContainerDiagram_Oryxen](./assets/Chapter-4/ContainerDiagram-Oryxen.jpg)
 
 **Mapeo Bounded Context → Container**
 
@@ -2386,47 +2386,7 @@ Lectura del mapeo por contenedor:
 
 Esta sección corrige la observación docente de TB1 sobre el uso de nodos genéricos ("Web Server", "App Server", "Database Server"). La topología se documenta ahora con **nodos reales y proveedores concretos**. El entorno evidenciado durante los sprints es local/contenedorizado (sección 7.1.4); la topología cloud que sigue se declara como **propuesta final de despliegue**, coherente con las evidencias existentes: Landing Page ya desplegada en Firebase Hosting y pipeline CI/CD que publica la imagen Docker del backend en GitHub Container Registry (GHCR).
 
-**Diagrama de despliegue (C4 — notación textual):**
-
-```
-[Deployment Node: Google Cloud — proyecto oryxen-prod]
-│
-├── [Node: Firebase Hosting (CDN global, SSL automático)]
-│     ├── Artefacto: oryxen-landing (HTML5/CSS3/JS estático)
-│     └── Artefacto: oryxen-web-app (bundle Vue 3 — dist/ de Vite)
-│
-├── [Node: Google Cloud Run (contenedores administrados, escala a cero)]
-│     └── Contenedor: oryxen-backend  (imagen Docker desde GHCR)
-│           ASP.NET Core 9 · módulos de los 8 Bounded Contexts · /swagger
-│
-├── [Node: Cloud SQL — PostgreSQL 15 (instancia administrada, backups automáticos)]
-│     └── Base de datos: oryxen_db (EF Core migrations)
-│
-├── [Node: Cloud Storage (bucket oryxen-community-media)]
-│     └── Imágenes de Community (post-sanitización EXIF)
-│
-└── [Node: Firebase Cloud Messaging]
-      └── Canal de push hacia Web (SW) y Android
-
-[Deployment Node: GitHub]
-├── [Node: GitHub Actions] — CI/CD: build, test (xUnit + PostgreSQL service), docker build & push
-└── [Node: GitHub Container Registry (GHCR)] — imagen oryxen-backend:{main|develop}
-
-[Deployment Node: Servicios externos SaaS]
-├── [Node: Stripe] — Checkout, suscripciones y webhooks de pago
-└── [Node: Proveedor de IA externa] — inferencia de visión y chat (API Key en variables de entorno)
-
-[Deployment Node: Dispositivo del usuario]
-├── [Node: Navegador web] — consume Firebase Hosting + API Cloud Run
-└── [Node: Android (API 24+)] — APK distribuido vía Firebase App Distribution / Google Play
-      └── Contenedor: Oryxen Mobile App (Kotlin + Jetpack Compose)
-
-[Deployment Node: Hogar del usuario — nodo físico externo]
-└── [Node: Sensor Lite (ESP32-class, WiFi 2.4 GHz + BLE)]
-      └── Contenedor: IoT Edge App (firmware) ──HTTPS──▶ POST /api/v1/telemetry (Cloud Run)
-```
-
-![DeploymentDiagram.png](./assets/C4-deployment.png)
+![DeploymentDiagram-Oryxen](./assets/Chapter-4/DeploymentDiagram-Oryxen.jpg)
 
 **Tabla de nodos:**
 
